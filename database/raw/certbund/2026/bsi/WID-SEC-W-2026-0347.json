@@ -1,0 +1,231 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Keycloak ermöglicht Single Sign-On mit Identity and Access Management für moderne Anwendungen und Dienste.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Red Hat Build of Keycloak ausnutzen, um die Authentifizierung zu umgehen, erweiterte Berechtigungen zu erlangen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu verursachen, beliebigen Code auszuführen oder Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-0347 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-0347.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-0347 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0347"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:2363 vom 2026-02-09",
+        "url": "https://access.redhat.com/errata/RHSA-2026:2363"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:2364 vom 2026-02-09",
+        "url": "https://access.redhat.com/errata/RHSA-2026:2364"
+      },
+      {
+        "category": "external",
+        "summary": "PoC CVE-2025-64720 vom 2026-02-09",
+        "url": "https://github.com/dantsco/CVE-2025-64720-PoC"
+      },
+      {
+        "category": "external",
+        "summary": "PoC CVE-2025-65018 vom 2026-02-09",
+        "url": "https://github.com/Neo-Neo6/CVE-2025-65018-Heap-buffer-overflow-in-libpng-ps4-ps5-"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Red Hat Build of Keycloak: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-02-09T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-02-10T08:57:45.781+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-0347",
+      "initial_release_date": "2026-02-09T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-02-09T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Keycloak <26.2.13",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Keycloak <26.2.13",
+                  "product_id": "T050635"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Keycloak 26.2.13",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Keycloak 26.2.13",
+                  "product_id": "T050635-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:keycloak__26.2.13"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Keycloak Operator <26.2.13",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Keycloak Operator <26.2.13",
+                  "product_id": "T050636"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Keycloak Operator 26.2.13",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Keycloak Operator 26.2.13",
+                  "product_id": "T050636-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:keycloak_operator__26.2.13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-14778",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2025-14778"
+    },
+    {
+      "cve": "CVE-2026-1529",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2026-1529"
+    },
+    {
+      "cve": "CVE-2025-64720",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64720"
+    },
+    {
+      "cve": "CVE-2025-65018",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2025-65018"
+    },
+    {
+      "cve": "CVE-2026-21925",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2026-21925"
+    },
+    {
+      "cve": "CVE-2026-21933",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2026-21933"
+    },
+    {
+      "cve": "CVE-2026-21945",
+      "product_status": {
+        "known_affected": [
+          "T050635",
+          "T050636"
+        ]
+      },
+      "release_date": "2026-02-09T23:00:00.000+00:00",
+      "title": "CVE-2026-21945"
+    }
+  ]
+}
