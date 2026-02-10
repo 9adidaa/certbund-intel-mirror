@@ -1,0 +1,168 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "TIA-Portal ist ein Automatisierungsframework für Steuerungen und andere Automatisierungsgeräte der SIMATIC-Serie.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Siemens TIA Portal ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2093 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2093.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2093 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2093"
+      },
+      {
+        "category": "external",
+        "summary": "SiemensSecurity Advisory by Siemens ProductCERT vom 2024-09-09",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-039007.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Siemens TIA Portal: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-09-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-10T11:04:56.560+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2093",
+      "initial_release_date": "2024-09-09T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-09T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "V16",
+                "product": {
+                  "name": "Siemens TIA Portal V16",
+                  "product_id": "T027140",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:siemens:tia_portal:v16"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V17 Update 8",
+                "product": {
+                  "name": "Siemens TIA Portal <V17 Update 8",
+                  "product_id": "T037396"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "V17 Update 8",
+                "product": {
+                  "name": "Siemens TIA Portal V17 Update 8",
+                  "product_id": "T037396-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:siemens:tia_portal:v17_update_8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "UMC <V2.13.1",
+                "product": {
+                  "name": "Siemens TIA Portal UMC <V2.13.1",
+                  "product_id": "T037406"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "UMC V2.13.1",
+                "product": {
+                  "name": "Siemens TIA Portal UMC V2.13.1",
+                  "product_id": "T037406-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:siemens:tia_portal:umc__v2.13.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIA Portal"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-33698",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Siemens TIA Portal. Die Ursache ist ein Heap-basierter Puffer Überlauf in der User Management Komponente (UMC). Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code auszuführen ."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027140",
+          "T037406",
+          "T037396"
+        ]
+      },
+      "release_date": "2024-09-09T22:00:00.000+00:00",
+      "title": "CVE-2024-33698"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Git ist eine freie Software zur verteilten Versionsverwaltung von Dateien.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in git ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-1197 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2021/wid-sec-w-2022-1197.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-1197 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-1197"
+      },
+      {
+        "category": "external",
+        "summary": "Github Seite des Reseachers vom 2021-05-13",
+        "url": "https://github.com/qzyqzynb/CVE-2020-27955"
+      },
+      {
+        "category": "external",
+        "summary": "Bamboo Security Advisory",
+        "url": "https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2021-04-07-1047552896.html"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit auf ExploitBox vom 2025-11-04",
+        "url": "https://exploitbox.io/vuln/Git-Git-LFS-RCE-Exploit-CVE-2020-27955.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "git: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2025-11-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-05T06:28:23.231+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2022-1197",
+      "initial_release_date": "2021-05-13T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2021-05-13T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-08-25T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates aufgenommen"
+        },
+        {
+          "date": "2025-11-04T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Exploit aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.2.3",
+                "product": {
+                  "name": "Atlassian Bamboo <7.2.3",
+                  "product_id": "T024384"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.2.3",
+                "product": {
+                  "name": "Atlassian Bamboo 7.2.3",
+                  "product_id": "T024384-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:atlassian:bamboo:7.2.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Bamboo"
+          }
+        ],
+        "category": "vendor",
+        "name": "Atlassian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=2.29.2",
+                "product": {
+                  "name": "Open Source git <=2.29.2",
+                  "product_id": "T019348"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.29.2",
+                "product": {
+                  "name": "Open Source git <=2.29.2",
+                  "product_id": "T019348-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "git"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-27955",
+      "product_status": {
+        "known_affected": [
+          "T024384"
+        ],
+        "last_affected": [
+          "T019348"
+        ]
+      },
+      "release_date": "2021-05-13T22:00:00.000+00:00",
+      "title": "CVE-2020-27955"
+    }
+  ]
+}

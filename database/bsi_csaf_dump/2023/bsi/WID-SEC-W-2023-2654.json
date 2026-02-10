@@ -1,0 +1,150 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Open Ticket Request System (OTRS) ist ein Ticketsystem für Help-Desks.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in OTRS ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2654 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2654.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2654 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2654"
+      },
+      {
+        "category": "external",
+        "summary": "OTRS Security Advisory vom 2023-10-15",
+        "url": "https://otrs.com/release-notes/otrs-security-advisory-2023-10/"
+      },
+      {
+        "category": "external",
+        "summary": "OTRS Security Advisory vom 2023-10-15",
+        "url": "https://otrs.com/release-notes/otrs-security-advisory-2023-09/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "OTRS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-10-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:59:54.285+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2654",
+      "initial_release_date": "2023-10-15T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-10-15T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "OTRS OTRS < 7.0.47",
+                "product": {
+                  "name": "OTRS OTRS < 7.0.47",
+                  "product_id": "T030522",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:otrs:otrs:7.0.47"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "OTRS OTRS < 8.0.37",
+                "product": {
+                  "name": "OTRS OTRS < 8.0.37",
+                  "product_id": "T030523",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:otrs:otrs:8.0.37"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OTRS"
+          }
+        ],
+        "category": "vendor",
+        "name": "OTRS"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-5422",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in OTRS. Die Funktion \"SSL_get_verify_result()\" wird nicht verwendet. Dadurch erscheint ein Zertifikat immer vertrauenswürdig, obwohl nicht sichergestellt werden kann, dass das Zertifikat alle erforderlichen Sicherheitsanforderungen erfüllt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "release_date": "2023-10-15T22:00:00.000+00:00",
+      "title": "CVE-2023-5422"
+    },
+    {
+      "cve": "CVE-2023-5421",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In OTRS existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben im CustomerID Feld werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein privilegierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen."
+        }
+      ],
+      "release_date": "2023-10-15T22:00:00.000+00:00",
+      "title": "CVE-2023-5421"
+    }
+  ]
+}

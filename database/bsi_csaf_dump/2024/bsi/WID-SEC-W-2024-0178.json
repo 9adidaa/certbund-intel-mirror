@@ -1,0 +1,424 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Apple iOS (vormals iPhone OS) ist das Betriebssystem für das von Apple entwickelte Smartphone iPhone, iPad und iPod Touch.\r\nDas Apple iPadOS ist das Betriebssystem für das von Apple entwickelte iPad.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter anonymer Angreifer kann mehrere Schwachstellen in Apple iOS und Apple iPadOS ausnutzen, um beliebigen Code auszuführen oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0178 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0178.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0178 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0178"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2024-01-22",
+        "url": "https://support.apple.com/kb/HT214063"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2024-01-22",
+        "url": "https://support.apple.com/kb/HT214059"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple iOS und iPadOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-05-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:04:09.911+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0178",
+      "initial_release_date": "2024-01-22T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-01-22T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-05-09T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE-Nummern ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<16.7.5",
+                "product": {
+                  "name": "Apple iOS <16.7.5",
+                  "product_id": "T032283"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.3",
+                "product": {
+                  "name": "Apple iOS <17.3",
+                  "product_id": "T032285"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iOS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<16.7.5",
+                "product": {
+                  "name": "Apple iPadOS <16.7.5",
+                  "product_id": "T032284"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.3",
+                "product": {
+                  "name": "Apple iPadOS <17.3",
+                  "product_id": "T032286"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iPadOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-38039",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2023-38039"
+    },
+    {
+      "cve": "CVE-2023-38545",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2023-38545"
+    },
+    {
+      "cve": "CVE-2023-38546",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2023-38546"
+    },
+    {
+      "cve": "CVE-2023-42888",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2023-42888"
+    },
+    {
+      "cve": "CVE-2023-42915",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2023-42915"
+    },
+    {
+      "cve": "CVE-2023-42937",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2023-42937"
+    },
+    {
+      "cve": "CVE-2024-23203",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23203"
+    },
+    {
+      "cve": "CVE-2024-23204",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23204"
+    },
+    {
+      "cve": "CVE-2024-23206",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23206"
+    },
+    {
+      "cve": "CVE-2024-23207",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23207"
+    },
+    {
+      "cve": "CVE-2024-23208",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23208"
+    },
+    {
+      "cve": "CVE-2024-23210",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23210"
+    },
+    {
+      "cve": "CVE-2024-23211",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23211"
+    },
+    {
+      "cve": "CVE-2024-23212",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23212"
+    },
+    {
+      "cve": "CVE-2024-23213",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23213"
+    },
+    {
+      "cve": "CVE-2024-23214",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23214"
+    },
+    {
+      "cve": "CVE-2024-23215",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23215"
+    },
+    {
+      "cve": "CVE-2024-23217",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23217"
+    },
+    {
+      "cve": "CVE-2024-23218",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23218"
+    },
+    {
+      "cve": "CVE-2024-23219",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23219"
+    },
+    {
+      "cve": "CVE-2024-23222",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23222"
+    },
+    {
+      "cve": "CVE-2024-23223",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23223"
+    },
+    {
+      "cve": "CVE-2024-23228",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23228"
+    },
+    {
+      "cve": "CVE-2024-23271",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-23271"
+    },
+    {
+      "cve": "CVE-2024-27791",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in WebKit, Safari, Mail Search und anderen Komponenten aufgrund einer unsachgemäßen Speicherbehandlung, einer unsachgemäßen Behandlung von Benutzereinstellungen und einer unsachgemäßen Zugriffsbeschränkung neben anderen sicherheitsrelevanten Problemen, die es beispielsweise ermöglichen, veraltete RSA PKCS#1 v1.5 Chiffriertexte zu entschlüsseln, ohne den privaten Schlüssel zu besitzen, oder die Telefonnummer eines Benutzers in Systemprotokollen anzuzeigen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder um vertrauliche Informationen offenzulegen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-22T23:00:00.000+00:00",
+      "title": "CVE-2024-27791"
+    }
+  ]
+}

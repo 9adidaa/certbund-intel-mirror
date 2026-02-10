@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "AutoCAD ist Teil der CAD (Computer Aided Design) Produktpalette von Autodesk.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Autodesk AutoCAD ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1881 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1881.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1881 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1881"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database CVE-2024-7305 vom 2024-08-19",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7305"
+      },
+      {
+        "category": "external",
+        "summary": "Autodesk Security Advisory adsk-sa-2024-0014 vom 2024-08-19",
+        "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2024-0014"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Autodesk AutoCAD: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-08-20T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-21T08:05:34.557+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1881",
+      "initial_release_date": "2024-08-19T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-08-19T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-08-20T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Updates von Autodesk aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "2025",
+                "product": {
+                  "name": "Autodesk AutoCAD 2025",
+                  "product_id": "T036973",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:autodesk:autocad:2025"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "AutoCAD"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "2025",
+                "product": {
+                  "name": "Autodesk DWG TrueView 2025",
+                  "product_id": "T036974",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:autodesk:dwg_trueview:2025"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "DWG TrueView"
+          }
+        ],
+        "category": "vendor",
+        "name": "Autodesk"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-7305",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Autodesk AutoCAD. Diese ist auf einen Out-of-Bounds-Schreibfehler in \"AdDwfPdk.dll\" zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036973",
+          "T036974"
+        ]
+      },
+      "release_date": "2024-08-19T22:00:00.000+00:00",
+      "title": "CVE-2024-7305"
+    }
+  ]
+}

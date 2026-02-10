@@ -1,0 +1,181 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Firepower ist eine Firewall-Plattform von Cisco",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in Cisco Firepower ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen preiszugeben oder Sicherheitsmaßnahmen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1222 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1222.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1222 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1222"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisories vom 2024-05-22",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sqli-WFFDnNOs"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisories vom 2024-05-22",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-object-bypass-fTH8tDjq"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisories vom 2024-05-22",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-archive-bypass-z4wQjwcN"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Firepower: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-05-22T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:09:28.937+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1222",
+      "initial_release_date": "2024-05-22T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-22T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Management Center Software",
+                "product": {
+                  "name": "Cisco Firepower Management Center Software",
+                  "product_id": "T035030",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:firepower:management_center_software"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Threat Defense Software",
+                "product": {
+                  "name": "Cisco Firepower Threat Defense Software",
+                  "product_id": "T035031",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:firepower:threat_defense_software"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firepower"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20360",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler besteht in der webbasierten Management-Schnittstelle der Cisco Firepower Management Center (FMC) Software aufgrund einer unsachgemäßen Validierung von Benutzereingaben, die zu einem SQL-Injection-Problem führt. Ein entfernter authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder seine Privilegien zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035030"
+        ]
+      },
+      "release_date": "2024-05-22T22:00:00.000+00:00",
+      "title": "CVE-2024-20360"
+    },
+    {
+      "cve": "CVE-2024-20261",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler besteht in der Dateirichtlinienfunktion, die zur Prüfung verschlüsselter Archivdateien der Cisco Firepower Threat Defense (FTD) Software verwendet wird, aufgrund eines Logikfehlers, wenn eine bestimmte Klasse verschlüsselter Archivdateien geprüft wird. Dies ermöglicht es, eine verschlüsselte Archivdatei zu senden, die Malware enthalten könnte und eigentlich blockiert und verworfen werden sollte. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035031"
+        ]
+      },
+      "release_date": "2024-05-22T22:00:00.000+00:00",
+      "title": "CVE-2024-20261"
+    },
+    {
+      "cve": "CVE-2024-20361",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler besteht in der Funktion Objektgruppen für Zugriffskontrolllisten (ACLs) aufgrund einer falschen Bereitstellung, die es ermöglicht, konfigurierte Zugriffskontrollen zu umgehen und Datenverkehr an Geräte zu senden. Ein entfernter, anonymer Angreifer kann die Sicherheitsmaßnahmen umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035030"
+        ]
+      },
+      "release_date": "2024-05-22T22:00:00.000+00:00",
+      "title": "CVE-2024-20361"
+    }
+  ]
+}

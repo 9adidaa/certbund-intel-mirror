@@ -1,0 +1,186 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "xterm ist ein Terminal-Emulator und ein Bestandteil des grafischen X Window Systems",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in xterm ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2063 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2063.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2063 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2063"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Security Advisory - xterm- GHSA-cwvr-vg72-6p6j vom 2023-08-14",
+        "url": "https://github.com/advisories/GHSA-cwvr-vg72-6p6j"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:4438-1 vom 2023-11-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-November/017031.html"
+      },
+      {
+        "category": "external",
+        "summary": "XEROX Security Advisory XRX24-005 vom 2024-03-04",
+        "url": "https://security.business.xerox.com/wp-content/uploads/2024/03/Xerox-Security-Bulletin-XRX24-005-Xerox-FreeFlow%C2%AE-Print-Server-v9_Feb-2024.pdf"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "xterm: Schwachstelle ermöglicht nicht spezifizierten Angriff",
+    "tracking": {
+      "current_release_date": "2024-03-03T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:05.397+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2063",
+      "initial_release_date": "2023-08-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-11-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-03-03T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von XEROX aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 380",
+                "product": {
+                  "name": "Open Source xterm < 380",
+                  "product_id": "T029309"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "xterm"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "v9",
+                "product": {
+                  "name": "Xerox FreeFlow Print Server v9",
+                  "product_id": "T015632",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:xerox:freeflow_print_server:v9"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "FreeFlow Print Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "Xerox"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-40359",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Zeigerüberlauf-Schwachstelle in xterm. ReGIS-Berichte für Zeichensatznamen werden unsachgemäßer Weise unterstützt, auch wenn diese unerwartete Zeichen enthalten, was zu einem Zeiger-/Überlaufproblem führt. Ein Angreifer kann diese Schwachstelle ausnutzen, um nicht spezifizierte Auswirkungen zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002207",
+          "T015632"
+        ]
+      },
+      "release_date": "2023-08-14T22:00:00.000+00:00",
+      "title": "CVE-2023-40359"
+    }
+  ]
+}

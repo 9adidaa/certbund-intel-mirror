@@ -1,0 +1,176 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Confluence ist eine kommerzielle Wiki-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Atlassian Confluence ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1886 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1886.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1886 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1886"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Issue CONFSERVER-97720 vom 2024-08-20",
+        "url": "https://jira.atlassian.com/browse/CONFSERVER-97720"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Atlassian Confluence: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-08-20T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-21T10:39:55.648+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-1886",
+      "initial_release_date": "2024-08-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-08-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<9.0.1",
+                "product": {
+                  "name": "Atlassian Confluence <9.0.1",
+                  "product_id": "T036970"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.0.1",
+                "product": {
+                  "name": "Atlassian Confluence 9.0.1",
+                  "product_id": "T036970-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:atlassian:confluence:9.0.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.5.14",
+                "product": {
+                  "name": "Atlassian Confluence <8.5.14",
+                  "product_id": "T036971"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.5.14",
+                "product": {
+                  "name": "Atlassian Confluence 8.5.14",
+                  "product_id": "T036971-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:atlassian:confluence:8.5.14"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.19.26",
+                "product": {
+                  "name": "Atlassian Confluence <7.19.26",
+                  "product_id": "T036972"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.19.26",
+                "product": {
+                  "name": "Atlassian Confluence 7.19.26",
+                  "product_id": "T036972-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:atlassian:confluence:7.19.26"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Confluence"
+          }
+        ],
+        "category": "vendor",
+        "name": "Atlassian"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-21690",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Atlassian Confluence existiert eine Cross-Site Scripting und Cross-Site Request Forgery Schwachstelle. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036971",
+          "T036972",
+          "T036970"
+        ]
+      },
+      "release_date": "2024-08-20T22:00:00.000+00:00",
+      "title": "CVE-2024-21690"
+    }
+  ]
+}

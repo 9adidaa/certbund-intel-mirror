@@ -1,0 +1,183 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM MQ ist eine Message Oriented Middleware von IBM.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in IBM MQ ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-3171 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-3171.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-3171 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-3171"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin vom 2023-12-18",
+        "url": "https://www.ibm.com/support/pages/node/7091235"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2023-12-18",
+        "url": "https://github.com/advisories/GHSA-2h9m-7wj7-h654"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7107343 vom 2024-01-12",
+        "url": "https://www.ibm.com/support/pages/node/7107343"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM MQ: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2024-01-14T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:02:54.652+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-3171",
+      "initial_release_date": "2023-12-18T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-12-18T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-01-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von IBM aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "IBM DataPower Gateway 10.5.0",
+                "product": {
+                  "name": "IBM DataPower Gateway 10.5.0",
+                  "product_id": "T025693",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:datapower_gateway:10.5.0"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "IBM DataPower Gateway 10.5CD",
+                "product": {
+                  "name": "IBM DataPower Gateway 10.5CD",
+                  "product_id": "T032030",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:datapower_gateway:10.5cd"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "DataPower Gateway"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "IBM MQ Appliance < LTS 9.3.0.15",
+                "product": {
+                  "name": "IBM MQ Appliance < LTS 9.3.0.15",
+                  "product_id": "T031744",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:mq:appliance__lts_9.3.0.15"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "IBM MQ Appliance < CD 9.3.4.1",
+                "product": {
+                  "name": "IBM MQ Appliance < CD 9.3.4.1",
+                  "product_id": "T031745",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:mq:appliance__cd_9.3.4.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-46177",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in IBM MQ. Aufgrund eines Directory Traversal Problems ist es möglich, über eine entsprechend gestaltete URL beliebige Dateien auf dem System anzuzeigen. Ein authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032030",
+          "T025693"
+        ]
+      },
+      "release_date": "2023-12-18T23:00:00.000+00:00",
+      "title": "CVE-2023-46177"
+    }
+  ]
+}

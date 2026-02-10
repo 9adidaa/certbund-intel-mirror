@@ -1,0 +1,227 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Jenkins ist ein erweiterbarer, webbasierter Integration Server zur kontinuierlichen Unterstützung bei Softwareentwicklungen aller Art.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter authentifizierter Angreifer kann mehrere Schwachstellen in Jenkins Plugins ausnutzen, um Informationen offenzulegen, seine Privilegien zu erweitern oder Dateien zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-3030 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-3030.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-3030 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-3030"
+      },
+      {
+        "category": "external",
+        "summary": "Jenkins Security Advisory vom 2023-11-29",
+        "url": "https://www.jenkins.io/security/advisory/2023-11-29/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Jenkins Plugins: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-11-30T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:02:11.335+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-3030",
+      "initial_release_date": "2023-11-29T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-11-29T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-11-30T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Anpassung im Text"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins Google Compute Engine Plugin < 4.551.v5a_4dc98f6962",
+                "product": {
+                  "name": "Jenkins Jenkins Google Compute Engine Plugin < 4.551.v5a_4dc98f6962",
+                  "product_id": "T031394",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:google_compute_engine_plugin__4.551.v5a_4dc98f6962"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins Jira Plugin < 3.12",
+                "product": {
+                  "name": "Jenkins Jenkins Jira Plugin < 3.12",
+                  "product_id": "T031395",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:jira_plugin__3.12"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins MATLAB Plugin < 2.11.1",
+                "product": {
+                  "name": "Jenkins Jenkins MATLAB Plugin < 2.11.1",
+                  "product_id": "T031396",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:matlab_plugin__2.11.1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins NeuVector Vulnerability Scanner Plugin < 2.2",
+                "product": {
+                  "name": "Jenkins Jenkins NeuVector Vulnerability Scanner Plugin < 2.2",
+                  "product_id": "T031397",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:neuvector_vulnerability_scanner_plugin__2.2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Jenkins"
+          }
+        ],
+        "category": "vendor",
+        "name": "Jenkins"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-49674",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im NeuVector Vulnerability Scanner Plugin aufgrund einer fehlenden Berechtigungsprüfung, die es erlaubt, sich mit einem vom Angreifer angegebenen Hostnamen und Port unter Verwendung eines vom Angreifer angegebenen Benutzernamens und Passworts zu verbinden. Ein entfernter, authentifizierter Angreifer mit der Berechtigung Overall/Read kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49674"
+    },
+    {
+      "cve": "CVE-2023-49673",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im NeuVector Vulnerability Scanner Plugin aufgrund einer fehlenden Berechtigungsprüfung, die es erlaubt, sich mit einem vom Angreifer angegebenen Hostnamen und Port unter Verwendung eines vom Angreifer angegebenen Benutzernamens und Passworts zu verbinden. Ein entfernter, authentifizierter Angreifer mit der Berechtigung Overall/Read kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49673"
+    },
+    {
+      "cve": "CVE-2023-49656",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im MATLAB-Plugin, da das Plugin seinen XML-Parser nicht so konfiguriert, dass Angriffe auf XML External Entity (XXE) verhindert werden, was zu einer serverseitigen Request Forgery führt. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Dateien zu manipulieren."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49656"
+    },
+    {
+      "cve": "CVE-2023-49655",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im MATLAB-Plugin, da das Plugin seinen XML-Parser nicht so konfiguriert, dass Angriffe auf XML External Entity (XXE) verhindert werden, was zu einer serverseitigen Request Forgery führt. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Dateien zu manipulieren."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49655"
+    },
+    {
+      "cve": "CVE-2023-49654",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im MATLAB-Plugin, da das Plugin seinen XML-Parser nicht so konfiguriert, dass Angriffe auf XML External Entity (XXE) verhindert werden, was zu einer serverseitigen Request Forgery führt. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Dateien zu manipulieren."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49654"
+    },
+    {
+      "cve": "CVE-2023-49653",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im Google Compute Engine Plugin und im Jira Plugin aufgrund von unsachgemäßen Berechtigungsprüfungen in mehreren HTTP-Endpunkten, die eine Aufzählung von systemübergreifenden Credentials IDs ermöglichen. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49653"
+    },
+    {
+      "cve": "CVE-2023-49652",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Jenkins. Diese Fehler bestehen im Google Compute Engine Plugin und im Jira Plugin aufgrund von unsachgemäßen Berechtigungsprüfungen in mehreren HTTP-Endpunkten, die eine Aufzählung von systemübergreifenden Credentials IDs ermöglichen. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-11-29T23:00:00.000+00:00",
+      "title": "CVE-2023-49652"
+    }
+  ]
+}

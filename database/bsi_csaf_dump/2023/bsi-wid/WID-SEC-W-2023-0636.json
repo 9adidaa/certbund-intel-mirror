@@ -1,0 +1,128 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Docker ist eine Open-Source-Software, die dazu verwendet werden kann, Anwendungen mithilfe von Betriebssystemvirtualisierung in Containern zu isolieren.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in docker ausnutzen, um beliebigen Programmcode auszuführen oder Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0636 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0636.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0636 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0636"
+      },
+      {
+        "category": "external",
+        "summary": "Docker Release Notes vom 2023-03-13",
+        "url": "https://docs.docker.com/desktop/release-notes/#4170"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "docker: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-03-13T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:46:34.082+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0636",
+      "initial_release_date": "2023-03-13T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-13T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source docker < 4.17.0",
+            "product": {
+              "name": "Open Source docker < 4.17.0",
+              "product_id": "T026733",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:docker:docker:4.17.0"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-0629",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in docker. Es ist einem Nutzer ohne Privilegien möglich durch das Anpassen einiger Flags die \"Enhanced Container Isolation (ECI)\" zu umgehen. Ein entfernter, authentisierter Angreifer kann diese Schwachstele ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "release_date": "2023-03-13T23:00:00.000+00:00",
+      "title": "CVE-2023-0629"
+    },
+    {
+      "cve": "CVE-2023-0628",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in docker. Mithilfe einer manipulierten Docker-Url ist es möglich Code in einem bestimmten Container während der Initialisierung auszuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-13T23:00:00.000+00:00",
+      "title": "CVE-2023-0628"
+    }
+  ]
+}

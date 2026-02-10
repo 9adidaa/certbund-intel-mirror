@@ -1,0 +1,638 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Apple iOS (vormals iPhone OS) ist das Betriebssystem für das von Apple entwickelte Smartphone iPhone, iPad und iPod Touch.\r\nDas Apple iPadOS ist das Betriebssystem für das von Apple entwickelte iPad.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer aus dem angrenzenden Netzwerk oder ein entfernter anonymer, lokaler oder physischer Angreifer kann mehrere Schwachstellen in Apple iOS und Apple iPadOS ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen, seine Privilegien zu erweitern und Informationen falsch darzustellen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-0782 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-0782.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-0782 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0782"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2022-07-20",
+        "url": "https://support.apple.com/HT213346"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2025-10-20",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple iOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-10-20T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-10-21T08:23:25.439+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2022-0782",
+      "initial_release_date": "2022-07-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-07-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-07-21T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz aufgenommen"
+        },
+        {
+          "date": "2023-06-21T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE-2022-32860, CVE-2022-32885, CVE-2022-32948, CVE-2022-42805, CVE-2022-48503 ergänzt"
+        },
+        {
+          "date": "2025-10-20T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Aktive Ausnutzung gemeldet"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.6",
+                "product": {
+                  "name": "Apple iOS <15.6",
+                  "product_id": "T024029"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.6",
+                "product": {
+                  "name": "Apple iOS 15.6",
+                  "product_id": "T024029-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:iphone_os:15.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iOS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.6",
+                "product": {
+                  "name": "Apple iPadOS <15.6",
+                  "product_id": "T024030"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.6",
+                "product": {
+                  "name": "Apple iPadOS 15.6",
+                  "product_id": "T024030-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:ipados:15.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iPadOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-2294",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-2294"
+    },
+    {
+      "cve": "CVE-2022-26768",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-26768"
+    },
+    {
+      "cve": "CVE-2022-26981",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-26981"
+    },
+    {
+      "cve": "CVE-2022-32784",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32784"
+    },
+    {
+      "cve": "CVE-2022-32785",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32785"
+    },
+    {
+      "cve": "CVE-2022-32787",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32787"
+    },
+    {
+      "cve": "CVE-2022-32788",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32788"
+    },
+    {
+      "cve": "CVE-2022-32792",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32792"
+    },
+    {
+      "cve": "CVE-2022-32793",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32793"
+    },
+    {
+      "cve": "CVE-2022-32802",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32802"
+    },
+    {
+      "cve": "CVE-2022-32810",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32810"
+    },
+    {
+      "cve": "CVE-2022-32813",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32813"
+    },
+    {
+      "cve": "CVE-2022-32814",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32814"
+    },
+    {
+      "cve": "CVE-2022-32815",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32815"
+    },
+    {
+      "cve": "CVE-2022-32816",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32816"
+    },
+    {
+      "cve": "CVE-2022-32817",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32817"
+    },
+    {
+      "cve": "CVE-2022-32819",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32819"
+    },
+    {
+      "cve": "CVE-2022-32820",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32820"
+    },
+    {
+      "cve": "CVE-2022-32821",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32821"
+    },
+    {
+      "cve": "CVE-2022-32823",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32823"
+    },
+    {
+      "cve": "CVE-2022-32824",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32824"
+    },
+    {
+      "cve": "CVE-2022-32825",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32825"
+    },
+    {
+      "cve": "CVE-2022-32826",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32826"
+    },
+    {
+      "cve": "CVE-2022-32828",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32828"
+    },
+    {
+      "cve": "CVE-2022-32829",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32829"
+    },
+    {
+      "cve": "CVE-2022-32830",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32830"
+    },
+    {
+      "cve": "CVE-2022-32832",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32832"
+    },
+    {
+      "cve": "CVE-2022-32837",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32837"
+    },
+    {
+      "cve": "CVE-2022-32838",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32838"
+    },
+    {
+      "cve": "CVE-2022-32839",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32839"
+    },
+    {
+      "cve": "CVE-2022-32840",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32840"
+    },
+    {
+      "cve": "CVE-2022-32841",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32841"
+    },
+    {
+      "cve": "CVE-2022-32844",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32844"
+    },
+    {
+      "cve": "CVE-2022-32845",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32845"
+    },
+    {
+      "cve": "CVE-2022-32847",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32847"
+    },
+    {
+      "cve": "CVE-2022-32849",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32849"
+    },
+    {
+      "cve": "CVE-2022-32855",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32855"
+    },
+    {
+      "cve": "CVE-2022-32857",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32857"
+    },
+    {
+      "cve": "CVE-2022-32860",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32860"
+    },
+    {
+      "cve": "CVE-2022-32885",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32885"
+    },
+    {
+      "cve": "CVE-2022-32948",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-32948"
+    },
+    {
+      "cve": "CVE-2022-42805",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-42805"
+    },
+    {
+      "cve": "CVE-2022-48503",
+      "product_status": {
+        "known_affected": [
+          "T024030",
+          "T024029"
+        ]
+      },
+      "release_date": "2022-07-20T22:00:00.000+00:00",
+      "title": "CVE-2022-48503"
+    }
+  ]
+}

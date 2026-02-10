@@ -1,0 +1,125 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "lighttpd ist ein Open Source Webserver.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter anonymer Angreifer kann eine Schwachstelle in lighttpd ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1563 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1563.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1563 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1563"
+      },
+      {
+        "category": "external",
+        "summary": "CERT Coordination Center vom 2024-07-09",
+        "url": "https://kb.cert.org/vuls/id/312260"
+      },
+      {
+        "category": "external",
+        "summary": "lighttpd GitHub vom 2024-07-09",
+        "url": "https://github.com/lighttpd/lighttpd1.4/commit/df8e4f95614e476276a55e34da2aa8b00b1148e9"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "lighttpd: Schwachstelle ermöglicht Denial of Service und Informationsoffenlegung",
+    "tracking": {
+      "current_release_date": "2024-07-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:11:04.791+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1563",
+      "initial_release_date": "2024-07-09T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-07-09T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.4.51",
+                "product": {
+                  "name": "Open Source lighttpd <1.4.51",
+                  "product_id": "394843"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "lighttpd"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-25103",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in lighttpd aufgrund eines use-after-free, die es erlaubt, von ungültigen Zeigern im CPU-Speicher zu lesen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen \"Denial of Service\"-Zustand zu erzeugen oder um vertrauliche Informationen wie Prozessspeicheradressen offenzulegen."
+        }
+      ],
+      "release_date": "2024-07-09T22:00:00.000+00:00",
+      "title": "CVE-2018-25103"
+    }
+  ]
+}

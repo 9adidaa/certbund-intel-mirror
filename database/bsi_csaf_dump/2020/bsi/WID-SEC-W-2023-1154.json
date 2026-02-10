@@ -1,0 +1,198 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1154 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2020/wid-sec-w-2023-1154.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1154 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1154"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab CVE-2020-13267 vom 2020-06-08",
+        "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13267.json"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab CVE-2020-13269 vom 2020-06-08",
+        "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13269.json"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab CVE-2020-13271 vom 2020-06-08",
+        "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13271.json"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-05-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:50:27.511+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1154",
+      "initial_release_date": "2020-06-16T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-06-16T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-05-04T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE ergänzt"
+        },
+        {
+          "date": "2023-05-10T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Korrektur Produktzuordnung"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 13.0.1",
+                "product": {
+                  "name": "Open Source GitLab < 13.0.1",
+                  "product_id": "T016608",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:13.0.1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 12.10.7",
+                "product": {
+                  "name": "Open Source GitLab < 12.10.7",
+                  "product_id": "T016609",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:12.10.7"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 12.9.8",
+                "product": {
+                  "name": "Open Source GitLab < 12.9.8",
+                  "product_id": "T016610",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:12.9.8"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-1204",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden im \"Metrics Dashboard\", dem \"Static Site Editor\" und der \"blobs API\" nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung dieser Schwachstellen muss der Angreifer den Benutzer dazu bringen eine modifizierte URL oder Webseite in seinem Webbrowser zu öffnen."
+        }
+      ],
+      "release_date": "2020-06-16T22:00:00.000+00:00",
+      "title": "CVE-2023-1204"
+    },
+    {
+      "cve": "CVE-2020-13271",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden im \"Metrics Dashboard\", dem \"Static Site Editor\" und der \"blobs API\" nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung dieser Schwachstellen muss der Angreifer den Benutzer dazu bringen eine modifizierte URL oder Webseite in seinem Webbrowser zu öffnen."
+        }
+      ],
+      "release_date": "2020-06-16T22:00:00.000+00:00",
+      "title": "CVE-2020-13271"
+    },
+    {
+      "cve": "CVE-2020-13269",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden im \"Metrics Dashboard\", dem \"Static Site Editor\" und der \"blobs API\" nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung dieser Schwachstellen muss der Angreifer den Benutzer dazu bringen eine modifizierte URL oder Webseite in seinem Webbrowser zu öffnen."
+        }
+      ],
+      "release_date": "2020-06-16T22:00:00.000+00:00",
+      "title": "CVE-2020-13269"
+    },
+    {
+      "cve": "CVE-2020-13267",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden im \"Metrics Dashboard\", dem \"Static Site Editor\" und der \"blobs API\" nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung dieser Schwachstellen muss der Angreifer den Benutzer dazu bringen eine modifizierte URL oder Webseite in seinem Webbrowser zu öffnen."
+        }
+      ],
+      "release_date": "2020-06-16T22:00:00.000+00:00",
+      "title": "CVE-2020-13267"
+    }
+  ]
+}

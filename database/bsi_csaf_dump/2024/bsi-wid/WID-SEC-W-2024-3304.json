@@ -1,0 +1,523 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "AutoCAD ist Teil der CAD (Computer Aided Design) Produktpalette von Autodesk.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter anonymer Angreifer kann mehrere Schwachstellen in Autodesk AutoCAD ausnutzen, um beliebigen Code auszuführen, einen 'Denial of Service'-Zustand zu erzeugen, Dateien zu manipulieren oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3304 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3304.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3304 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3304"
+      },
+      {
+        "category": "external",
+        "summary": "Autodesk Security Advisory adsk-sa-2024-0019 vom 2024-10-29",
+        "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2024-0019"
+      },
+      {
+        "category": "external",
+        "summary": "Autodesk Security Advisory adsk-sa-2024-0020 vom 2024-10-29",
+        "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2024-0020"
+      },
+      {
+        "category": "external",
+        "summary": "Autodesk Security Advisory adsk-sa-2024-0021 vom 2024-10-29",
+        "url": "https://www.autodesk.com/trust/security-advisories/adsk-sa-2024-0021"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Autodesk AutoCAD: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-10-29T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-30T12:08:10.411+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3304",
+      "initial_release_date": "2024-10-29T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-29T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2025.1.1",
+                "product": {
+                  "name": "Autodesk AutoCAD <2025.1.1",
+                  "product_id": "T038689"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2025.1.1",
+                "product": {
+                  "name": "Autodesk AutoCAD 2025.1.1",
+                  "product_id": "T038689-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:autodesk:autocad:2025.1.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2024.1.6",
+                "product": {
+                  "name": "Autodesk AutoCAD <2024.1.6",
+                  "product_id": "T038690"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2024.1.6",
+                "product": {
+                  "name": "Autodesk AutoCAD 2024.1.6",
+                  "product_id": "T038690-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:autodesk:autocad:2024.1.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "AutoCAD"
+          }
+        ],
+        "category": "vendor",
+        "name": "Autodesk"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-7991",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-7991"
+    },
+    {
+      "cve": "CVE-2024-7992",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-7992"
+    },
+    {
+      "cve": "CVE-2024-8587",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8587"
+    },
+    {
+      "cve": "CVE-2024-8588",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8588"
+    },
+    {
+      "cve": "CVE-2024-8589",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8589"
+    },
+    {
+      "cve": "CVE-2024-8590",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8590"
+    },
+    {
+      "cve": "CVE-2024-8591",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8591"
+    },
+    {
+      "cve": "CVE-2024-8592",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8592"
+    },
+    {
+      "cve": "CVE-2024-8593",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8593"
+    },
+    {
+      "cve": "CVE-2024-8594",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8594"
+    },
+    {
+      "cve": "CVE-2024-8595",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8595"
+    },
+    {
+      "cve": "CVE-2024-8596",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8596"
+    },
+    {
+      "cve": "CVE-2024-8597",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8597"
+    },
+    {
+      "cve": "CVE-2024-8598",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8598"
+    },
+    {
+      "cve": "CVE-2024-8599",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8599"
+    },
+    {
+      "cve": "CVE-2024-8600",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8600"
+    },
+    {
+      "cve": "CVE-2024-8896",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-8896"
+    },
+    {
+      "cve": "CVE-2024-9489",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-9489"
+    },
+    {
+      "cve": "CVE-2024-9826",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-9826"
+    },
+    {
+      "cve": "CVE-2024-9827",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-9827"
+    },
+    {
+      "cve": "CVE-2024-9996",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-9996"
+    },
+    {
+      "cve": "CVE-2024-9997",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Autodesk AutoCAD. Diese Fehler existieren aufgrund einer unzureichenden Eingabevalidierung und Speicherverwaltungsproblemen in verschiedenen Komponenten, die eine unautorisierte Speichermanipulation ermöglichen. Ein entfernter, nicht authentifizierter Angreifer kann diese Schwachstellen ausnutzen, um Auswirkungen wie Abstürze, die Ausführung von beliebigem Code und den Zugriff auf sensible Daten zu verursachen. Einige dieser Sicherheitslücken erfordern eine Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038690",
+          "T038689"
+        ]
+      },
+      "release_date": "2024-10-29T23:00:00.000+00:00",
+      "title": "CVE-2024-9997"
+    }
+  ]
+}

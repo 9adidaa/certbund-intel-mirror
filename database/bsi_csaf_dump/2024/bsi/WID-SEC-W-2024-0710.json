@@ -1,0 +1,141 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Azure ist eine Cloud Computing-Plattform von Microsoft.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Microsoft Azure ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0710 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0710.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0710 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0710"
+      },
+      {
+        "category": "external",
+        "summary": "Azure GitHub vom 2024-03-25",
+        "url": "https://github.com/Azure/azure-c-shared-utility/security/advisories/GHSA-m8wp-hc7w-x4xg"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Azure: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-11-18T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-19T12:09:57.358+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-0710",
+      "initial_release_date": "2024-03-25T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-03-25T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-18T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Prüfung Produkteintragung"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2024-02-08",
+                "product": {
+                  "name": "Microsoft Azure <2024-02-08",
+                  "product_id": "T033659"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2024-02-08",
+                "product": {
+                  "name": "Microsoft Azure 2024-02-08",
+                  "product_id": "T033659-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:azure:2024-02-08"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Azure"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-29195",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Microsoft Azure. Dieser Fehler besteht in der Komponente azure-c-shared-utility aufgrund von Schwachstellen im Mechanismus zur Parameterüberprüfung, die zu einem Integer-Wraparound- oder Under-Allocation- oder Heap-Buffer-Overflow-Problem führen. Ein entfernter, privilegierter Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033659"
+        ]
+      },
+      "release_date": "2024-03-25T23:00:00.000+00:00",
+      "title": "CVE-2024-29195"
+    }
+  ]
+}

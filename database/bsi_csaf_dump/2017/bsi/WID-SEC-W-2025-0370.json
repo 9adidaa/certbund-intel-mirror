@@ -1,0 +1,2155 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apple Mac OS ist ein Betriebssystem, das auf FreeBSD und Mach basiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstelle in Apple Mac OS ausnutzen, um Code mit Kernel Privilegien auszuführen, Sicherheitsvorkehrungen zu umgehen, einen Denial of Service Angriff durchzuführen oder vertrauliche Daten einzusehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0370 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2017/wid-sec-w-2025-0370.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0370 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0370"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT208144 vom 2017-09-25",
+        "url": "https://support.apple.com/de-de/HT208144"
+      },
+      {
+        "category": "external",
+        "summary": "Updated Apple Security Advisory HT208144 vom 2017-10-31",
+        "url": "https://lists.apple.com/archives/security-announce/2017/Oct/msg00007.html"
+      },
+      {
+        "category": "external",
+        "summary": "Updated Apple Security Advisory HT208144 vom 2017-10-31",
+        "url": "https://lists.apple.com/archives/security-announce/2017/Oct/msg00001.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple Mac OS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-02-13T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-02-14T12:00:12.636+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2025-0370",
+      "initial_release_date": "2017-09-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2017-09-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2017-10-31T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "cve added"
+        },
+        {
+          "date": "2017-10-31T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2017-10-31T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2017-11-21T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "cve added"
+        },
+        {
+          "date": "2017-11-21T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2017-12-13T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2025-02-13T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Korrektur"
+        }
+      ],
+      "status": "final",
+      "version": "8"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<10.13",
+                "product": {
+                  "name": "Apple macOS <10.13",
+                  "product_id": "T010822"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.13",
+                "product": {
+                  "name": "Apple macOS 10.13",
+                  "product_id": "T010822-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:10.13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "macOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2016-0736",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-0736"
+    },
+    {
+      "cve": "CVE-2016-2161",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-2161"
+    },
+    {
+      "cve": "CVE-2016-4736",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-4736"
+    },
+    {
+      "cve": "CVE-2016-5387",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-5387"
+    },
+    {
+      "cve": "CVE-2016-8740",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-8740"
+    },
+    {
+      "cve": "CVE-2016-8743",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-8743"
+    },
+    {
+      "cve": "CVE-2016-9042",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-9042"
+    },
+    {
+      "cve": "CVE-2016-9063",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-9063"
+    },
+    {
+      "cve": "CVE-2016-9840",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-9840"
+    },
+    {
+      "cve": "CVE-2016-9841",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-9841"
+    },
+    {
+      "cve": "CVE-2016-9842",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-9842"
+    },
+    {
+      "cve": "CVE-2016-9843",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2016-9843"
+    },
+    {
+      "cve": "CVE-2017-0381",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-0381"
+    },
+    {
+      "cve": "CVE-2017-1000100",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-1000100"
+    },
+    {
+      "cve": "CVE-2017-1000101",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-1000101"
+    },
+    {
+      "cve": "CVE-2017-1000373",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-1000373"
+    },
+    {
+      "cve": "CVE-2017-10140",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-10140"
+    },
+    {
+      "cve": "CVE-2017-10989",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-10989"
+    },
+    {
+      "cve": "CVE-2017-11103",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-11103"
+    },
+    {
+      "cve": "CVE-2017-11108",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-11108"
+    },
+    {
+      "cve": "CVE-2017-11541",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-11541"
+    },
+    {
+      "cve": "CVE-2017-11542",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-11542"
+    },
+    {
+      "cve": "CVE-2017-11543",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-11543"
+    },
+    {
+      "cve": "CVE-2017-12893",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12893"
+    },
+    {
+      "cve": "CVE-2017-12894",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12894"
+    },
+    {
+      "cve": "CVE-2017-12895",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12895"
+    },
+    {
+      "cve": "CVE-2017-12896",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12896"
+    },
+    {
+      "cve": "CVE-2017-12897",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12897"
+    },
+    {
+      "cve": "CVE-2017-12898",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12898"
+    },
+    {
+      "cve": "CVE-2017-12899",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12899"
+    },
+    {
+      "cve": "CVE-2017-12900",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12900"
+    },
+    {
+      "cve": "CVE-2017-12901",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12901"
+    },
+    {
+      "cve": "CVE-2017-12902",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12902"
+    },
+    {
+      "cve": "CVE-2017-12985",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12985"
+    },
+    {
+      "cve": "CVE-2017-12986",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12986"
+    },
+    {
+      "cve": "CVE-2017-12987",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12987"
+    },
+    {
+      "cve": "CVE-2017-12988",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12988"
+    },
+    {
+      "cve": "CVE-2017-12989",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12989"
+    },
+    {
+      "cve": "CVE-2017-12990",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12990"
+    },
+    {
+      "cve": "CVE-2017-12991",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12991"
+    },
+    {
+      "cve": "CVE-2017-12992",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12992"
+    },
+    {
+      "cve": "CVE-2017-12993",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12993"
+    },
+    {
+      "cve": "CVE-2017-12994",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12994"
+    },
+    {
+      "cve": "CVE-2017-12995",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12995"
+    },
+    {
+      "cve": "CVE-2017-12996",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12996"
+    },
+    {
+      "cve": "CVE-2017-12997",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12997"
+    },
+    {
+      "cve": "CVE-2017-12998",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12998"
+    },
+    {
+      "cve": "CVE-2017-12999",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-12999"
+    },
+    {
+      "cve": "CVE-2017-13000",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13000"
+    },
+    {
+      "cve": "CVE-2017-13001",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13001"
+    },
+    {
+      "cve": "CVE-2017-13002",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13002"
+    },
+    {
+      "cve": "CVE-2017-13003",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13003"
+    },
+    {
+      "cve": "CVE-2017-13004",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13004"
+    },
+    {
+      "cve": "CVE-2017-13005",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13005"
+    },
+    {
+      "cve": "CVE-2017-13006",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13006"
+    },
+    {
+      "cve": "CVE-2017-13007",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13007"
+    },
+    {
+      "cve": "CVE-2017-13008",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13008"
+    },
+    {
+      "cve": "CVE-2017-13009",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13009"
+    },
+    {
+      "cve": "CVE-2017-13010",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13010"
+    },
+    {
+      "cve": "CVE-2017-13011",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13011"
+    },
+    {
+      "cve": "CVE-2017-13012",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13012"
+    },
+    {
+      "cve": "CVE-2017-13013",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13013"
+    },
+    {
+      "cve": "CVE-2017-13014",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13014"
+    },
+    {
+      "cve": "CVE-2017-13015",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13015"
+    },
+    {
+      "cve": "CVE-2017-13016",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13016"
+    },
+    {
+      "cve": "CVE-2017-13017",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13017"
+    },
+    {
+      "cve": "CVE-2017-13018",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13018"
+    },
+    {
+      "cve": "CVE-2017-13019",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13019"
+    },
+    {
+      "cve": "CVE-2017-13020",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13020"
+    },
+    {
+      "cve": "CVE-2017-13021",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13021"
+    },
+    {
+      "cve": "CVE-2017-13022",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13022"
+    },
+    {
+      "cve": "CVE-2017-13023",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13023"
+    },
+    {
+      "cve": "CVE-2017-13024",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13024"
+    },
+    {
+      "cve": "CVE-2017-13025",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13025"
+    },
+    {
+      "cve": "CVE-2017-13026",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13026"
+    },
+    {
+      "cve": "CVE-2017-13027",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13027"
+    },
+    {
+      "cve": "CVE-2017-13028",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13028"
+    },
+    {
+      "cve": "CVE-2017-13029",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13029"
+    },
+    {
+      "cve": "CVE-2017-13030",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13030"
+    },
+    {
+      "cve": "CVE-2017-13031",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13031"
+    },
+    {
+      "cve": "CVE-2017-13032",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13032"
+    },
+    {
+      "cve": "CVE-2017-13033",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13033"
+    },
+    {
+      "cve": "CVE-2017-13034",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13034"
+    },
+    {
+      "cve": "CVE-2017-13035",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13035"
+    },
+    {
+      "cve": "CVE-2017-13036",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13036"
+    },
+    {
+      "cve": "CVE-2017-13037",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13037"
+    },
+    {
+      "cve": "CVE-2017-13038",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13038"
+    },
+    {
+      "cve": "CVE-2017-13039",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13039"
+    },
+    {
+      "cve": "CVE-2017-13040",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13040"
+    },
+    {
+      "cve": "CVE-2017-13041",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13041"
+    },
+    {
+      "cve": "CVE-2017-13042",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13042"
+    },
+    {
+      "cve": "CVE-2017-13043",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13043"
+    },
+    {
+      "cve": "CVE-2017-13044",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13044"
+    },
+    {
+      "cve": "CVE-2017-13045",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13045"
+    },
+    {
+      "cve": "CVE-2017-13046",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13046"
+    },
+    {
+      "cve": "CVE-2017-13047",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13047"
+    },
+    {
+      "cve": "CVE-2017-13048",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13048"
+    },
+    {
+      "cve": "CVE-2017-13049",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13049"
+    },
+    {
+      "cve": "CVE-2017-13050",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13050"
+    },
+    {
+      "cve": "CVE-2017-13051",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13051"
+    },
+    {
+      "cve": "CVE-2017-13052",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13052"
+    },
+    {
+      "cve": "CVE-2017-13053",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13053"
+    },
+    {
+      "cve": "CVE-2017-13054",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13054"
+    },
+    {
+      "cve": "CVE-2017-13055",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13055"
+    },
+    {
+      "cve": "CVE-2017-13077",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13077"
+    },
+    {
+      "cve": "CVE-2017-13078",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13078"
+    },
+    {
+      "cve": "CVE-2017-13080",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13080"
+    },
+    {
+      "cve": "CVE-2017-13687",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13687"
+    },
+    {
+      "cve": "CVE-2017-13688",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13688"
+    },
+    {
+      "cve": "CVE-2017-13689",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13689"
+    },
+    {
+      "cve": "CVE-2017-13690",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13690"
+    },
+    {
+      "cve": "CVE-2017-13725",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13725"
+    },
+    {
+      "cve": "CVE-2017-13782",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13782"
+    },
+    {
+      "cve": "CVE-2017-13786",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13786"
+    },
+    {
+      "cve": "CVE-2017-13799",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13799"
+    },
+    {
+      "cve": "CVE-2017-13800",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13800"
+    },
+    {
+      "cve": "CVE-2017-13801",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13801"
+    },
+    {
+      "cve": "CVE-2017-13804",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13804"
+    },
+    {
+      "cve": "CVE-2017-13807",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13807"
+    },
+    {
+      "cve": "CVE-2017-13808",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13808"
+    },
+    {
+      "cve": "CVE-2017-13809",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13809"
+    },
+    {
+      "cve": "CVE-2017-13810",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13810"
+    },
+    {
+      "cve": "CVE-2017-13811",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13811"
+    },
+    {
+      "cve": "CVE-2017-13812",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13812"
+    },
+    {
+      "cve": "CVE-2017-13813",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13813"
+    },
+    {
+      "cve": "CVE-2017-13814",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13814"
+    },
+    {
+      "cve": "CVE-2017-13815",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13815"
+    },
+    {
+      "cve": "CVE-2017-13816",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13816"
+    },
+    {
+      "cve": "CVE-2017-13817",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13817"
+    },
+    {
+      "cve": "CVE-2017-13818",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13818"
+    },
+    {
+      "cve": "CVE-2017-13819",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13819"
+    },
+    {
+      "cve": "CVE-2017-13820",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13820"
+    },
+    {
+      "cve": "CVE-2017-13821",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13821"
+    },
+    {
+      "cve": "CVE-2017-13822",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13822"
+    },
+    {
+      "cve": "CVE-2017-13823",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13823"
+    },
+    {
+      "cve": "CVE-2017-13824",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13824"
+    },
+    {
+      "cve": "CVE-2017-13825",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13825"
+    },
+    {
+      "cve": "CVE-2017-13826",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13826"
+    },
+    {
+      "cve": "CVE-2017-13827",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13827"
+    },
+    {
+      "cve": "CVE-2017-13828",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13828"
+    },
+    {
+      "cve": "CVE-2017-13829",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13829"
+    },
+    {
+      "cve": "CVE-2017-13830",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13830"
+    },
+    {
+      "cve": "CVE-2017-13831",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13831"
+    },
+    {
+      "cve": "CVE-2017-13832",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13832"
+    },
+    {
+      "cve": "CVE-2017-13833",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13833"
+    },
+    {
+      "cve": "CVE-2017-13834",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13834"
+    },
+    {
+      "cve": "CVE-2017-13836",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13836"
+    },
+    {
+      "cve": "CVE-2017-13837",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13837"
+    },
+    {
+      "cve": "CVE-2017-13838",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13838"
+    },
+    {
+      "cve": "CVE-2017-13839",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13839"
+    },
+    {
+      "cve": "CVE-2017-13840",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13840"
+    },
+    {
+      "cve": "CVE-2017-13841",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13841"
+    },
+    {
+      "cve": "CVE-2017-13842",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13842"
+    },
+    {
+      "cve": "CVE-2017-13843",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13843"
+    },
+    {
+      "cve": "CVE-2017-13846",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13846"
+    },
+    {
+      "cve": "CVE-2017-13851",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13851"
+    },
+    {
+      "cve": "CVE-2017-13854",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-13854"
+    },
+    {
+      "cve": "CVE-2017-3167",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-3167"
+    },
+    {
+      "cve": "CVE-2017-3169",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-3169"
+    },
+    {
+      "cve": "CVE-2017-6451",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6451"
+    },
+    {
+      "cve": "CVE-2017-6452",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6452"
+    },
+    {
+      "cve": "CVE-2017-6455",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6455"
+    },
+    {
+      "cve": "CVE-2017-6458",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6458"
+    },
+    {
+      "cve": "CVE-2017-6459",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6459"
+    },
+    {
+      "cve": "CVE-2017-6460",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6460"
+    },
+    {
+      "cve": "CVE-2017-6462",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6462"
+    },
+    {
+      "cve": "CVE-2017-6463",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6463"
+    },
+    {
+      "cve": "CVE-2017-6464",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-6464"
+    },
+    {
+      "cve": "CVE-2017-7074",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7074"
+    },
+    {
+      "cve": "CVE-2017-7077",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7077"
+    },
+    {
+      "cve": "CVE-2017-7078",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7078"
+    },
+    {
+      "cve": "CVE-2017-7080",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7080"
+    },
+    {
+      "cve": "CVE-2017-7082",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7082"
+    },
+    {
+      "cve": "CVE-2017-7083",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7083"
+    },
+    {
+      "cve": "CVE-2017-7084",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7084"
+    },
+    {
+      "cve": "CVE-2017-7086",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7086"
+    },
+    {
+      "cve": "CVE-2017-7114",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7114"
+    },
+    {
+      "cve": "CVE-2017-7119",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7119"
+    },
+    {
+      "cve": "CVE-2017-7121",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7121"
+    },
+    {
+      "cve": "CVE-2017-7122",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7122"
+    },
+    {
+      "cve": "CVE-2017-7123",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7123"
+    },
+    {
+      "cve": "CVE-2017-7124",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7124"
+    },
+    {
+      "cve": "CVE-2017-7125",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7125"
+    },
+    {
+      "cve": "CVE-2017-7126",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7126"
+    },
+    {
+      "cve": "CVE-2017-7127",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7127"
+    },
+    {
+      "cve": "CVE-2017-7128",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7128"
+    },
+    {
+      "cve": "CVE-2017-7129",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7129"
+    },
+    {
+      "cve": "CVE-2017-7130",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7130"
+    },
+    {
+      "cve": "CVE-2017-7132",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7132"
+    },
+    {
+      "cve": "CVE-2017-7138",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7138"
+    },
+    {
+      "cve": "CVE-2017-7141",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7141"
+    },
+    {
+      "cve": "CVE-2017-7143",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7143"
+    },
+    {
+      "cve": "CVE-2017-7144",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7144"
+    },
+    {
+      "cve": "CVE-2017-7659",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7659"
+    },
+    {
+      "cve": "CVE-2017-7668",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7668"
+    },
+    {
+      "cve": "CVE-2017-7679",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-7679"
+    },
+    {
+      "cve": "CVE-2017-9233",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-9233"
+    },
+    {
+      "cve": "CVE-2017-9788",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-9788"
+    },
+    {
+      "cve": "CVE-2017-9789",
+      "product_status": {
+        "known_affected": [
+          "T010822"
+        ]
+      },
+      "release_date": "2017-09-25T22:00:00.000+00:00",
+      "title": "CVE-2017-9789"
+    }
+  ]
+}

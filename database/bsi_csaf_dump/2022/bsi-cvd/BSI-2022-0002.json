@@ -1,0 +1,151 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "As a content provider, BSI is responsible under general law for its own content distributed for use. However, it remains your responsibility to carefully check usage and/or implementation of information provided with the content.",
+        "title": "Legal disclaimer"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "BSI-2022-0002 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/bsi-2022-0002.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID advisory - WID-SEC-2022-0883",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0883"
+      }
+    ],
+    "title": "Stack Buffer Overflow vulnerability in FastStone Image Viewer 7.5 and earlier",
+    "tracking": {
+      "current_release_date": "2022-08-01T10:00:00.000Z",
+      "generator": {
+        "date": "2022-08-11T07:58:36.374Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "1.14.0"
+        }
+      },
+      "id": "BSI-2022-0002",
+      "initial_release_date": "2022-08-01T10:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-08-01T10:00:00.000Z",
+          "number": "1",
+          "summary": "Initial version."
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "7.6",
+                "product": {
+                  "name": "FastStone Image Viewer 7.6",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.6",
+                "product": {
+                  "name": "FastStone Image Viewer <7.6",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Image Viewer"
+          }
+        ],
+        "category": "vendor",
+        "name": "FastStone"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-36947",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The vulnerability is triggered when the user opens FastStone Image Viewer and navigates to the folder containing the malformed PNG. The vulnerability is also triggered when directly opening the file with FastStone Image Viewer.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0001"
+        ],
+        "known_affected": [
+          "CSAFPID-0002"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "date": "2022-03-31T10:00:00.000Z",
+          "details": "Update to the latest version of the product. At least version 7.6.",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.faststonesoft.net/DN/FSViewerSetup76.exe"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "exploitCodeMaturity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "remediationLevel": "OFFICIAL_FIX",
+            "reportConfidence": "CONFIRMED",
+            "scope": "UNCHANGED",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0002"
+          ]
+        }
+      ],
+      "title": "Unsafe Parsing of a PNG tRNS chunk in FastStone Image Viewer through 7.5 results in a stack buffer overflow"
+    }
+  ]
+}

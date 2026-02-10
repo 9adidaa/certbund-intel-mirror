@@ -1,0 +1,493 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Intel Treiber- und Support-Assistent sucht nach Intel-Produkten und -Treibern am eigenen System und meldet, wenn Updates für das System verfügbar sind.\r\nDell Inc. ist ein Hersteller u. a. von Computern.\r\nHP ist ein Hersteller u. a. von Computern.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Intel Thunderbolt DCH-Treibern ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen oder seine Berechtigungen zu erweitern.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0366 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0366.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0366 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0366"
+      },
+      {
+        "category": "external",
+        "summary": "Intel Security Advisory vom 2024-02-13",
+        "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00851.html"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory vom 2024-02-13",
+        "url": "https://www.dell.com/support/kbdoc/en-us/000219965/dsa-2023-437"
+      },
+      {
+        "category": "external",
+        "summary": "HP Security Advisory vom 2024-02-13",
+        "url": "https://support.hp.com/us-en/document/ish_10143473-10143517-16/hpsbhf03910"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Intel Thunderbolt DCH Drivers: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-13T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:05:10.516+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0366",
+      "initial_release_date": "2024-02-13T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-13T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell Computer",
+            "product": {
+              "name": "Dell Computer",
+              "product_id": "T032783",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:dell:dell_computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "HP Computer",
+            "product": {
+              "name": "HP Computer",
+              "product_id": "T032784",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:hp:computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "HP"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Thunderbolt DCH driver < 88",
+                "product": {
+                  "name": "Intel Driver and Support Assistant Thunderbolt DCH driver < 88",
+                  "product_id": "T032782"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Driver and Support Assistant"
+          }
+        ],
+        "category": "vendor",
+        "name": "Intel"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-27308",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-27308"
+    },
+    {
+      "cve": "CVE-2023-27307",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-27307"
+    },
+    {
+      "cve": "CVE-2023-27303",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-27303"
+    },
+    {
+      "cve": "CVE-2023-27301",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-27301"
+    },
+    {
+      "cve": "CVE-2023-27300",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-27300"
+    },
+    {
+      "cve": "CVE-2023-26596",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-26596"
+    },
+    {
+      "cve": "CVE-2023-26592",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-26592"
+    },
+    {
+      "cve": "CVE-2023-26591",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-26591"
+    },
+    {
+      "cve": "CVE-2023-26585",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-26585"
+    },
+    {
+      "cve": "CVE-2023-25779",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-25779"
+    },
+    {
+      "cve": "CVE-2023-25777",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-25777"
+    },
+    {
+      "cve": "CVE-2023-25769",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-25769"
+    },
+    {
+      "cve": "CVE-2023-24589",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-24589"
+    },
+    {
+      "cve": "CVE-2023-24542",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-24542"
+    },
+    {
+      "cve": "CVE-2023-24481",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-24481"
+    },
+    {
+      "cve": "CVE-2023-24463",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-24463"
+    },
+    {
+      "cve": "CVE-2023-22848",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-22848"
+    },
+    {
+      "cve": "CVE-2023-22390",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-22390"
+    },
+    {
+      "cve": "CVE-2023-22342",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-22342"
+    },
+    {
+      "cve": "CVE-2023-22293",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen im Intel Thunderbolt DCH-Treiber. Dieser Fehler besteht aufgrund mehrerer sicherheitsrelevanter Probleme, wie z.B. einer unsachgemäßen Zugriffskontrolle oder einer unsachgemäßen Eingabevalidierung. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand auszulösen oder seine Privilegien zu erweitern. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032784",
+          "T032783"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-22293"
+    }
+  ]
+}

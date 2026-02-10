@@ -1,0 +1,380 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Webmin ist eine modulare Webanwendung zur Administration eines Unix-basierenden Systems und zur Konfiguration einzelner Dienste.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Webmin ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1925 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1925.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1925 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1925"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38311"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38310"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38309"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38308"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38307"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38306"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38305"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38304"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Database vom 2023-07-31",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38303"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Webmin: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-09-14T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:56:21.744+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1925",
+      "initial_release_date": "2023-07-31T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-07-31T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-08-03T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        },
+        {
+          "date": "2023-09-14T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Webmin 2.021",
+            "product": {
+              "name": "Open Source Webmin 2.021",
+              "product_id": "T028987",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:webmin:webmin:2.021"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-40986",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-40986"
+    },
+    {
+      "cve": "CVE-2023-40985",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-40985"
+    },
+    {
+      "cve": "CVE-2023-40984",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-40984"
+    },
+    {
+      "cve": "CVE-2023-40983",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-40983"
+    },
+    {
+      "cve": "CVE-2023-40982",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-40982"
+    },
+    {
+      "cve": "CVE-2023-38311",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38311"
+    },
+    {
+      "cve": "CVE-2023-38310",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38310"
+    },
+    {
+      "cve": "CVE-2023-38309",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38309"
+    },
+    {
+      "cve": "CVE-2023-38308",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38308"
+    },
+    {
+      "cve": "CVE-2023-38307",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38307"
+    },
+    {
+      "cve": "CVE-2023-38306",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38306"
+    },
+    {
+      "cve": "CVE-2023-38305",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38305"
+    },
+    {
+      "cve": "CVE-2023-38304",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38304"
+    },
+    {
+      "cve": "CVE-2023-38303",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Webmin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028987"
+        ]
+      },
+      "release_date": "2023-07-31T22:00:00.000+00:00",
+      "title": "CVE-2023-38303"
+    }
+  ]
+}

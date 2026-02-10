@@ -1,0 +1,174 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco Internetwork Operating System (IOS) ist ein Betriebssystem, das für Cisco Geräte wie z. B. Router und Switches eingesetzt wird.\r\nCisco Industrial Ethernet Series ist eine Familie von Switches für  eine robuste, einfach zu bedienende, sichere Infrastruktur für raue Umgebungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Cisco IOS und Cisco Industrial Ethernet Switches ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Hardware Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2226 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2226.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2226 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2226"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-09-25",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-repacl-9eXgnBpD"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco IOS: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2024-09-25T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-26T11:11:28.914+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-2226",
+      "initial_release_date": "2024-09-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=15.2(8)E2",
+                "product": {
+                  "name": "Cisco IOS >=15.2(8)E2",
+                  "product_id": "T037830"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": ">=15.2(8)E2",
+                "product": {
+                  "name": "Cisco IOS >=15.2(8)E2",
+                  "product_id": "T037830-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "IOS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "4000",
+                "product": {
+                  "name": "Cisco Industrial Ethernet Switches 4000",
+                  "product_id": "T037827",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:industrial_ethernet_switches:4000"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4010",
+                "product": {
+                  "name": "Cisco Industrial Ethernet Switches 4010",
+                  "product_id": "T037828",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:industrial_ethernet_switches:4010"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5000",
+                "product": {
+                  "name": "Cisco Industrial Ethernet Switches 5000",
+                  "product_id": "T037829",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:industrial_ethernet_switches:5000"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Ethernet Switches"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20465",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco IOS auf Cisco Industrial Ethernet Switches. Dieser Fehler existiert in der ACL-Programmierung (Access Control List) aufgrund der falschen Handhabung von IPv4-ACLs auf geswitchten virtuellen Schnittstellen, wenn das Resilient Ethernet Protocol (REP) aktiviert ist. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um eine konfigurierte ACL zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037827",
+          "T037828",
+          "T037829"
+        ]
+      },
+      "release_date": "2024-09-25T22:00:00.000+00:00",
+      "title": "CVE-2024-20465"
+    }
+  ]
+}

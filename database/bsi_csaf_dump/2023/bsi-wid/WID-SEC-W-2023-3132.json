@@ -1,0 +1,248 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM DB2 ist ein relationales Datenbanksystem (RDBS) von IBM.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in IBM DB2 ausnutzen, um beliebigen Programmcode auszuführen oder einen Denial of Service zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-3132 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-3132.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-3132 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-3132"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Advisory vom 2023-12-12",
+        "url": "https://www.ibm.com/support/pages/node/7095807"
+      },
+      {
+        "category": "external",
+        "summary": "Deell Security Update",
+        "url": "https://www.dell.com/support/kbdoc/en-us/000281732/dsa-2025-075-security-update-for-dell-data-protection-advisor-for-multiple-component-vulnerabilities"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM DB2: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-01-25T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-26T09:22:54.516+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2023-3132",
+      "initial_release_date": "2023-12-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-12-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-01-25T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<19.12",
+                "product": {
+                  "name": "Dell Data Protection Advisor <19.12",
+                  "product_id": "T050283"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.12",
+                "product": {
+                  "name": "Dell Data Protection Advisor 19.12",
+                  "product_id": "T050283-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:data_protection_advisor:19.12"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Data Protection Advisor"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "11.1",
+                "product": {
+                  "name": "IBM DB2 11.1",
+                  "product_id": "342000",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:db2:11.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.5",
+                "product": {
+                  "name": "IBM DB2 11.5",
+                  "product_id": "T015242",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:db2:v11.5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "DB2"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-1471",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-1471"
+    },
+    {
+      "cve": "CVE-2022-25857",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-25857"
+    },
+    {
+      "cve": "CVE-2022-38749",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-38749"
+    },
+    {
+      "cve": "CVE-2022-38750",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-38750"
+    },
+    {
+      "cve": "CVE-2022-38751",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-38751"
+    },
+    {
+      "cve": "CVE-2022-38752",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-38752"
+    },
+    {
+      "cve": "CVE-2022-41854",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "342000",
+          "T015242"
+        ]
+      },
+      "release_date": "2023-12-12T23:00:00.000+00:00",
+      "title": "CVE-2022-41854"
+    }
+  ]
+}

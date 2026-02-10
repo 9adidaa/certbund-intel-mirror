@@ -1,0 +1,167 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "ownCloud ist eine \"on-premise\" Plattform für Dateifreigabe und Zusammenarbeit.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in der ownCloud Android App ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0443 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0443.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0443 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0443"
+      },
+      {
+        "category": "external",
+        "summary": "OwnCloud Security Advsiory oc-sa-2023-002 vom 2023-03-14",
+        "url": "https://owncloud.com/security-advisories/oc-sa-2023-002/"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Vulnerability Database vom 2023-02-21",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23948"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Owncloud Advisory",
+        "url": "https://securitylab.github.com/advisories/GHSL-2022-059_GHSL-2022-060_Owncloud_Android_app/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "ownCloud Android App: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-03-14T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:44:32.570+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0443",
+      "initial_release_date": "2023-02-21T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-02-21T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-03-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von ownCloud aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "ownCloud ownCloud android app 2.21.1",
+                "product": {
+                  "name": "ownCloud ownCloud android app 2.21.1",
+                  "product_id": "T026460",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:owncloud:owncloud:android_app_2.21.1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "ownCloud ownCloud android app 3.0",
+                "product": {
+                  "name": "ownCloud ownCloud android app 3.0",
+                  "product_id": "T026461",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:owncloud:owncloud:android_app_3.0"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "ownCloud ownCloud Android app < 3.0.4",
+                "product": {
+                  "name": "ownCloud ownCloud Android app < 3.0.4",
+                  "product_id": "T026742",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:owncloud:owncloud:3.0.4::android_app"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ownCloud"
+          }
+        ],
+        "category": "vendor",
+        "name": "ownCloud"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-23948",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in der ownCloud Android App. In \"FileContentProvider.kt\" besteht die Möglichkeit einer SQL Injektion. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T026461",
+          "T026460",
+          "T026742"
+        ]
+      },
+      "release_date": "2023-02-21T23:00:00.000+00:00",
+      "title": "CVE-2023-23948"
+    }
+  ]
+}

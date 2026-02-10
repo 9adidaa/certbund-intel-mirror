@@ -1,0 +1,133 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Foxit Reader ist ein PDF Reader.\r\nFoxit PDF Editor ist ein Tool zur Bearbeitung von PDF-Dateien.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Foxit Reader und Foxit PDF Editor ausnutzen, um beliebigen Programmcode mit Benutzerrechten auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2373 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2373.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2373 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2373"
+      },
+      {
+        "category": "external",
+        "summary": "Foxit Security Bulletins vom 2022-12-19",
+        "url": "https://www.foxit.com/support/security-bulletins.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Foxit Reader: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit Benutzerrechten",
+    "tracking": {
+      "current_release_date": "2023-01-22T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:40:14.650+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-2373",
+      "initial_release_date": "2022-12-19T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-12-19T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-01-22T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Foxit PDF Editor < 12.1",
+            "product": {
+              "name": "Foxit PDF Editor < 12.1",
+              "product_id": "T025661",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:foxitsoftware:pdf_editor:12.1"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Foxit Reader < 12.1",
+            "product": {
+              "name": "Foxit Reader < 12.1",
+              "product_id": "T025660",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:foxitsoftware:foxit_reader:12.1"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Foxit"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-43649",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Foxit Reader und Foxit PDF Editor. Wenn bestimmte PDFs geöffnet werden, die JavaScripts mit zu viel Text in bestimmten Steuerelementen enthalten, kommt es unter Umständen zu einem Out-of-Bounds-Write-Problem. Ein Angreifer kann diese Schwachstelle ausnutzen, um Code auszuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2022-12-19T23:00:00.000+00:00",
+      "title": "CVE-2022-43649"
+    }
+  ]
+}

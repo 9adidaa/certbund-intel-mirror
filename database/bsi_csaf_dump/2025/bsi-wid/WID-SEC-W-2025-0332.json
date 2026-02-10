@@ -1,0 +1,170 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Microsoft Surface Hub ist ein digitales Whiteboard für Konferenzräume.\r\nWindows ist ein Betriebssystem von Microsoft.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer aus einem angrenzenden Netzwerk kann eine Schwachstelle in Microsoft Surface Hub und Microsoft Windows ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0332 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-0332.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0332 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0332"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates",
+        "url": "https://msrc.microsoft.com/update-guide/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Surface: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2025-02-11T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-02-12T09:06:32.400+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2025-0332",
+      "initial_release_date": "2025-02-11T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-02-11T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Microsoft Surface Hub",
+                "product": {
+                  "name": "Microsoft Surface Hub",
+                  "product_id": "T041043",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:microsoft:surface_hub:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2S",
+                "product": {
+                  "name": "Microsoft Surface Hub 2S",
+                  "product_id": "T041045",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:microsoft:surface_hub:2s"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3",
+                "product": {
+                  "name": "Microsoft Surface Hub 3",
+                  "product_id": "T041046",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:microsoft:surface_hub:3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Surface Hub"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Surface Dev Kit",
+                "product": {
+                  "name": "Microsoft Windows Surface Dev Kit",
+                  "product_id": "T041044",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows:surface_dev_kit"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-21194",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Microsoft Surface Hub und Microsoft Windows aufgrund einer unsachgemäßen Eingabevalidierung. Ein Angreifer aus einem angrenzenden Netzwerk kann diese Schwachstelle ausnutzen, um die UEFI-Sicherheitsfunktionen zu umgehen und möglicherweise den Hypervisor und den sicheren Kernel zu gefährden. Die Ausnutzung erfordert eine Benutzerinteraktion, insbesondere einen Systemneustart, und hat eine hohe Angriffskomplexität aufgrund mehrerer Bedingungen, die erfüllt sein müssen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T041044",
+          "T041043",
+          "T041046",
+          "T041045"
+        ]
+      },
+      "release_date": "2025-02-11T23:00:00.000+00:00",
+      "title": "CVE-2025-21194"
+    }
+  ]
+}

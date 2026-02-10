@@ -1,0 +1,157 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache Solr ist ein Suchmaschinen-Server für Unternehmen mit einer REST-ähnlichen API.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Apache Solr ausnutzen, um Dateien zu manipulieren oder seine Rechte zu erweitern.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0197 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-0197.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0197 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0197"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Security Mailing List vom 2025-01-26",
+        "url": "https://seclists.org/oss-sec/2025/q1/78"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Security Mailing List vom 2025-01-26",
+        "url": "https://seclists.org/oss-sec/2025/q1/77"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache Solr: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-01-26T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-01-27T13:11:53.516+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2025-0197",
+      "initial_release_date": "2025-01-26T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-01-26T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<9.8.0",
+                "product": {
+                  "name": "Apache Solr <9.8.0",
+                  "product_id": "T040637"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.8.0",
+                "product": {
+                  "name": "Apache Solr 9.8.0",
+                  "product_id": "T040637-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:solr:9.8.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Solr"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-52012",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Apache Solr. Die Sicherheitslücke entsteht durch eine unzureichende Validierung von Eingaben beim Hochladen und Extrahieren von ZIP-Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um beliebige Dateien an unerwarteten Speicherorten im Dateisystem abzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T040637"
+        ]
+      },
+      "release_date": "2025-01-26T23:00:00.000+00:00",
+      "title": "CVE-2024-52012"
+    },
+    {
+      "cve": "CVE-2025-24814",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Apache Solr. Betroffen sind Instanzen, die ohne Authentifizierungs- und Autorisierungsmechanismen betrieben werden. Die Schwachstelle entsteht durch unzureichende Validierung bei der Core-Erstellung. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um seine Rechte zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T040637"
+        ]
+      },
+      "release_date": "2025-01-26T23:00:00.000+00:00",
+      "title": "CVE-2025-24814"
+    }
+  ]
+}

@@ -1,0 +1,1277 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem von Google ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Google Android ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, Code auszuführen und einen Denial-of-Service-Zustand zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0574 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0574.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0574 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0574"
+      },
+      {
+        "category": "external",
+        "summary": "Artikel auf arstechnica.com vom 2023-03-27",
+        "url": "https://arstechnica.com/information-technology/2023/03/android-app-from-china-executed-0-day-exploit-on-millions-of-devices/"
+      },
+      {
+        "category": "external",
+        "summary": "Android Security Bulletin vom 2023-03-06",
+        "url": "https://source.android.com/docs/security/bulletin/2023-03-01"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Android Patchday März 2023",
+    "tracking": {
+      "current_release_date": "2023-06-18T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:46:12.950+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0574",
+      "initial_release_date": "2023-03-06T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-06T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-03-27T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Aktive Ausnutzung gemeldet"
+        },
+        {
+          "date": "2023-06-18T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Korrektur Produktzuordnung Samsung"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Google Android 12L",
+                "product": {
+                  "name": "Google Android 12L",
+                  "product_id": "1185256",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12l"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Google Android 11",
+                "product": {
+                  "name": "Google Android 11",
+                  "product_id": "T017166",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:11"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Google Android 12",
+                "product": {
+                  "name": "Google Android 12",
+                  "product_id": "T020881",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Google Android 13",
+                "product": {
+                  "name": "Google Android 13",
+                  "product_id": "T024488",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Samsung Android",
+            "product": {
+              "name": "Samsung Android",
+              "product_id": "T027059",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:samsung:android:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Samsung"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20966",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20966"
+    },
+    {
+      "cve": "CVE-2023-20964",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20964"
+    },
+    {
+      "cve": "CVE-2023-20963",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20963"
+    },
+    {
+      "cve": "CVE-2023-20962",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20962"
+    },
+    {
+      "cve": "CVE-2023-20960",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20960"
+    },
+    {
+      "cve": "CVE-2023-20959",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20959"
+    },
+    {
+      "cve": "CVE-2023-20958",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20958"
+    },
+    {
+      "cve": "CVE-2023-20957",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20957"
+    },
+    {
+      "cve": "CVE-2023-20956",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20956"
+    },
+    {
+      "cve": "CVE-2023-20955",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20955"
+    },
+    {
+      "cve": "CVE-2023-20954",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20954"
+    },
+    {
+      "cve": "CVE-2023-20953",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20953"
+    },
+    {
+      "cve": "CVE-2023-20952",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20952"
+    },
+    {
+      "cve": "CVE-2023-20951",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20951"
+    },
+    {
+      "cve": "CVE-2023-20947",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20947"
+    },
+    {
+      "cve": "CVE-2023-20936",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20936"
+    },
+    {
+      "cve": "CVE-2023-20931",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20931"
+    },
+    {
+      "cve": "CVE-2023-20929",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20929"
+    },
+    {
+      "cve": "CVE-2023-20926",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20926"
+    },
+    {
+      "cve": "CVE-2023-20917",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20917"
+    },
+    {
+      "cve": "CVE-2023-20911",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20911"
+    },
+    {
+      "cve": "CVE-2023-20910",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20910"
+    },
+    {
+      "cve": "CVE-2023-20906",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20906"
+    },
+    {
+      "cve": "CVE-2023-20623",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20623"
+    },
+    {
+      "cve": "CVE-2023-20621",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20621"
+    },
+    {
+      "cve": "CVE-2023-20620",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20620"
+    },
+    {
+      "cve": "CVE-2022-47462",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-47462"
+    },
+    {
+      "cve": "CVE-2022-47461",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-47461"
+    },
+    {
+      "cve": "CVE-2022-47460",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-47460"
+    },
+    {
+      "cve": "CVE-2022-47459",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-47459"
+    },
+    {
+      "cve": "CVE-2022-4452",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-4452"
+    },
+    {
+      "cve": "CVE-2022-40540",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40540"
+    },
+    {
+      "cve": "CVE-2022-40537",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40537"
+    },
+    {
+      "cve": "CVE-2022-40535",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40535"
+    },
+    {
+      "cve": "CVE-2022-40531",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40531"
+    },
+    {
+      "cve": "CVE-2022-40530",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40530"
+    },
+    {
+      "cve": "CVE-2022-40527",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40527"
+    },
+    {
+      "cve": "CVE-2022-40515",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-40515"
+    },
+    {
+      "cve": "CVE-2022-33309",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33309"
+    },
+    {
+      "cve": "CVE-2022-33278",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33278"
+    },
+    {
+      "cve": "CVE-2022-33272",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33272"
+    },
+    {
+      "cve": "CVE-2022-33256",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33256"
+    },
+    {
+      "cve": "CVE-2022-33254",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33254"
+    },
+    {
+      "cve": "CVE-2022-33250",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33250"
+    },
+    {
+      "cve": "CVE-2022-33244",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33244"
+    },
+    {
+      "cve": "CVE-2022-33242",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33242"
+    },
+    {
+      "cve": "CVE-2022-33213",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-33213"
+    },
+    {
+      "cve": "CVE-2022-25709",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-25709"
+    },
+    {
+      "cve": "CVE-2022-25705",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-25705"
+    },
+    {
+      "cve": "CVE-2022-25694",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-25694"
+    },
+    {
+      "cve": "CVE-2022-25655",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-25655"
+    },
+    {
+      "cve": "CVE-2022-22075",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-22075"
+    },
+    {
+      "cve": "CVE-2022-20499",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-20499"
+    },
+    {
+      "cve": "CVE-2022-20467",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2022-20467"
+    },
+    {
+      "cve": "CVE-2021-33655",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen bezüglich der Komponenten Framework, System, Google Play System Updates, Kernel, MediaTek components, Unisoc components, Qualcomm components und Qualcomm closed-source components. Ein Angreifer kann dadurch seine Privilegien erweitern, vertrauliche Informationen offenlegen, Code ausführen und einen Denial-of-Service-Zustand verursachen. Darüber hinaus existieren mehrere nicht spezifizierte Schwachstellen, die ein Angreifer mit unbekannten Auswirkungen ausnutzen kann. Betroffen sind die in Android verwendeten Komponenten der Hersteller MediaTek, Unisoc und Qualcomm. Das Ausnutzen dieser Schwachstellen erfordert eine Benutzeraktion, z. B. die Verwendung einer in böser Absicht erstellten App."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1185256",
+          "T024488",
+          "T020881",
+          "T027059",
+          "T017166"
+        ]
+      },
+      "release_date": "2023-03-06T23:00:00.000+00:00",
+      "title": "CVE-2021-33655"
+    }
+  ]
+}

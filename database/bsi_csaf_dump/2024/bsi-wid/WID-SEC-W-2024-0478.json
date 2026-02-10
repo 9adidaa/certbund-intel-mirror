@@ -1,0 +1,803 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Der Kernel stellt den Kern des Linux Betriebssystems dar.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen im Linux Kernel ausnutzen, um Informationen offenzulegen, Sicherheitsvorkehrungen zu umgehen oder unbekannte Auswirkungen zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0478 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0478.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0478 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0478"
+      },
+      {
+        "category": "external",
+        "summary": "CVE Announce auf lore.kernel.org vom 2024-02-26",
+        "url": "http://lore.kernel.org/linux-cve-announce/2024022601-CVE-2019-25161-f77d@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "CVE Announce auf lore.kernel.org vom 2024-02-26",
+        "url": "http://lore.kernel.org/linux-cve-announce/2024022602-CVE-2019-25162-70ae@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "CVE Announce auf lore.kernel.org vom 2024-02-26",
+        "url": "http://lore.kernel.org/linux-cve-announce/2024022602-CVE-2020-36775-1cbe@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "CVE Announce auf lore.kernel.org vom 2024-02-26",
+        "url": "http://lore.kernel.org/linux-cve-announce/2024022603-CVE-2021-46906-636c@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "CVE Announce auf lore.kernel.org vom 2024-02-26",
+        "url": "http://lore.kernel.org/linux-cve-announce/2024022620-CVE-2024-26606-64b6@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "CVE Announce auf lore.kernel.org vom 2024-02-26",
+        "url": "http://lore.kernel.org/linux-cve-announce/2024022657-CVE-2019-25160-e487@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0855-1 vom 2024-03-12",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018151.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0856-1 vom 2024-03-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018155.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0857-1 vom 2024-03-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018154.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0858-1 vom 2024-03-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018153.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0900-1 vom 2024-03-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018167.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0900-2 vom 2024-03-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018182.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0910-1 vom 2024-03-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018181.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0926-1 vom 2024-03-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018204.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0975-1 vom 2024-03-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018186.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0925-1 vom 2024-03-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018205.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0976-1 vom 2024-03-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018185.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:0977-1 vom 2024-03-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-March/018210.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6739-1 vom 2024-04-19",
+        "url": "https://ubuntu.com/security/notices/USN-6739-1"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5681 vom 2024-05-06",
+        "url": "https://lists.debian.org/debian-security-announce/2024/msg00090.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6766-1 vom 2024-05-07",
+        "url": "https://ubuntu.com/security/notices/USN-6766-1"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-198 vom 2024-05-08",
+        "url": "https://www.dell.com/support/kbdoc/000224827/dsa-2024-="
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6767-1 vom 2024-05-07",
+        "url": "https://ubuntu.com/security/notices/USN-6767-1"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6767-2 vom 2024-05-14",
+        "url": "https://ubuntu.com/security/notices/USN-6767-2"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1648-1 vom 2024-05-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-May/018524.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1646-1 vom 2024-05-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-May/018526.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1643-1 vom 2024-05-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-May/018529.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6766-2 vom 2024-05-15",
+        "url": "https://ubuntu.com/security/notices/USN-6766-2"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1648-2 vom 2024-05-21",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-May/018572.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6795-1 vom 2024-05-28",
+        "url": "https://ubuntu.com/security/notices/USN-6795-1"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1870-1 vom 2024-05-30",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-May/018634.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:3618 vom 2024-06-05",
+        "url": "https://access.redhat.com/errata/RHSA-2024:3618"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:3627 vom 2024-06-05",
+        "url": "https://access.redhat.com/errata/RHSA-2024:3627"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-3618 vom 2024-06-06",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-3618.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6828-1 vom 2024-06-11",
+        "url": "https://ubuntu.com/security/notices/USN-6828-1"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3842 vom 2024-06-25",
+        "url": "https://lists.debian.org/debian-lts-announce/2024/06/msg00017.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3840 vom 2024-06-27",
+        "url": "https://lists.debian.org/debian-lts-announce/2024/06/msg00020.html"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-022 vom 2024-07-03",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000226633/dsa-2024-022-security-update-for-dell-networker-vproxy-multiple-component-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6895-1 vom 2024-07-12",
+        "url": "https://ubuntu.com/security/notices/USN-6895-1"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6895-2 vom 2024-07-16",
+        "url": "https://ubuntu.com/security/notices/USN-6895-2"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6900-1 vom 2024-07-17",
+        "url": "https://ubuntu.com/security/notices/USN-6900-1"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6895-3 vom 2024-07-19",
+        "url": "https://ubuntu.com/security/notices/USN-6895-3"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7162077 vom 2024-07-31",
+        "url": "https://www.ibm.com/support/pages/node/7162077"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6895-4 vom 2024-08-05",
+        "url": "https://ubuntu.com/security/notices/USN-6895-4"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-348 vom 2024-08-06",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000227573/dsa-2024-348-security-update-for-dell-avamar-dell-networker-virtual-edition-nve-and-dell-powerprotect-dp-series-appliance-dell-integrated-data-protection-appliance-idpa-security-update-for-multiple-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6976-1 vom 2024-08-22",
+        "url": "https://ubuntu.com/security/notices/USN-6976-1"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:9315 vom 2024-11-12",
+        "url": "https://access.redhat.com/errata/RHSA-2024:9315"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-9315 vom 2025-01-13",
+        "url": "https://oss.oracle.com/pipermail/el-errata/2025-January/017000.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:2270 vom 2025-03-05",
+        "url": "https://access.redhat.com/errata/RHSA-2025:2270"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:1912 vom 2025-03-05",
+        "url": "https://access.redhat.com/errata/RHSA-2025:1912"
+      },
+      {
+        "category": "external",
+        "summary": "Kyocera Downloads",
+        "url": "https://www.kyoceradocumentsolutions.us/en/support/downloads.name-L3VzL2VuL3NvZnR3YXJlL0tZT0NFUkFERVZJQ0VNQU5BR0VS.html#tab=application"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Linux Kernel: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-04-29T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-04-30T11:20:22.609+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2024-0478",
+      "initial_release_date": "2024-02-26T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-26T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-03-12T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-03-14T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-03-17T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-03-24T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-04-21T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-05-06T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-05-07T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Ubuntu und Dell aufgenommen"
+        },
+        {
+          "date": "2024-05-13T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-05-14T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-05-15T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-05-21T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-05-28T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-05-30T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-06-04T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-06-06T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-06-11T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-06-25T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-06-27T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-07-02T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2024-07-14T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-07-15T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-07-17T22:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-07-18T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-07-31T22:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-08-04T22:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-08-05T22:00:00.000+00:00",
+          "number": "27",
+          "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2024-08-21T22:00:00.000+00:00",
+          "number": "28",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-12T23:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-01-13T23:00:00.000+00:00",
+          "number": "30",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-03-04T23:00:00.000+00:00",
+          "number": "31",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-04-29T22:00:00.000+00:00",
+          "number": "32",
+          "summary": "Neue Updates aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "32"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Dell NetWorker",
+                "product": {
+                  "name": "Dell NetWorker",
+                  "product_id": "T024663",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "virtual",
+                "product": {
+                  "name": "Dell NetWorker virtual",
+                  "product_id": "T034583",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:virtual"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<19.11",
+                "product": {
+                  "name": "Dell NetWorker <19.11",
+                  "product_id": "T035785"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.11",
+                "product": {
+                  "name": "Dell NetWorker 19.11",
+                  "product_id": "T035785-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:19.11"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetWorker"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "EMC Avamar",
+            "product": {
+              "name": "EMC Avamar",
+              "product_id": "T014381",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:emc:avamar:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "EMC"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Kyocera Printer",
+            "product": {
+              "name": "Kyocera Printer",
+              "product_id": "T015471",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:kyocera:printer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Kyocera"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Linux Kernel",
+            "product": {
+              "name": "Open Source Linux Kernel",
+              "product_id": "T032006",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:linux:linux_kernel:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-25160",
+      "product_status": {
+        "known_affected": [
+          "T015471",
+          "T032006",
+          "T014381",
+          "2951",
+          "T002207",
+          "67646",
+          "T000126",
+          "T024663",
+          "T034583",
+          "T004914",
+          "T035785"
+        ]
+      },
+      "release_date": "2024-02-26T23:00:00.000+00:00",
+      "title": "CVE-2019-25160"
+    },
+    {
+      "cve": "CVE-2019-25161",
+      "product_status": {
+        "known_affected": [
+          "T015471",
+          "T032006",
+          "T014381",
+          "2951",
+          "T002207",
+          "67646",
+          "T000126",
+          "T024663",
+          "T034583",
+          "T004914",
+          "T035785"
+        ]
+      },
+      "release_date": "2024-02-26T23:00:00.000+00:00",
+      "title": "CVE-2019-25161"
+    },
+    {
+      "cve": "CVE-2019-25162",
+      "product_status": {
+        "known_affected": [
+          "T015471",
+          "T032006",
+          "T014381",
+          "2951",
+          "T002207",
+          "67646",
+          "T000126",
+          "T024663",
+          "T034583",
+          "T004914",
+          "T035785"
+        ]
+      },
+      "release_date": "2024-02-26T23:00:00.000+00:00",
+      "title": "CVE-2019-25162"
+    },
+    {
+      "cve": "CVE-2020-36775",
+      "product_status": {
+        "known_affected": [
+          "T015471",
+          "T032006",
+          "T014381",
+          "2951",
+          "T002207",
+          "67646",
+          "T000126",
+          "T024663",
+          "T034583",
+          "T004914",
+          "T035785"
+        ]
+      },
+      "release_date": "2024-02-26T23:00:00.000+00:00",
+      "title": "CVE-2020-36775"
+    },
+    {
+      "cve": "CVE-2021-46906",
+      "product_status": {
+        "known_affected": [
+          "T015471",
+          "T032006",
+          "T014381",
+          "2951",
+          "T002207",
+          "67646",
+          "T000126",
+          "T024663",
+          "T034583",
+          "T004914",
+          "T035785"
+        ]
+      },
+      "release_date": "2024-02-26T23:00:00.000+00:00",
+      "title": "CVE-2021-46906"
+    },
+    {
+      "cve": "CVE-2024-26606",
+      "product_status": {
+        "known_affected": [
+          "T015471",
+          "T032006",
+          "T014381",
+          "2951",
+          "T002207",
+          "67646",
+          "T000126",
+          "T024663",
+          "T034583",
+          "T004914",
+          "T035785"
+        ]
+      },
+      "release_date": "2024-02-26T23:00:00.000+00:00",
+      "title": "CVE-2024-26606"
+    }
+  ]
+}

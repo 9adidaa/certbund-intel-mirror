@@ -1,0 +1,175 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Firepower ist eine Firewall-Plattform von Cisco",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder lokaler Angreifer kann mehrere Schwachstellen in Cisco Firepower ausnutzen, um Sicherheitsvorkehrungen zu umgehen, erhöhte Rechte zu erlangen und einen Denial-of-Service-Zustand zu erzeugen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3265 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3265.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3265 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3265"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-10-23",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-geoip-bypass-MB4zRDu"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-10-23",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-statcred-dFC8tXT5"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-10-23",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-tls-dos-QXYE5Ufy"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-10-23",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd2100-snort-dos-M9HuMt75"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Firepower: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-10-23T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-24T11:11:13.835+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3265",
+      "initial_release_date": "2024-10-23T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-23T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "FTD Software",
+                "product": {
+                  "name": "Cisco Firepower FTD Software",
+                  "product_id": "T038578",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:firepower:ftd_software"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firepower"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20431",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler betrifft die Threat Defense (FTD)-Software aufgrund einer unsachgemäßen Zuweisung von Geolokalisierungsdaten. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um eine Zugriffskontrollrichtlinie zu umgehen, indem er Datenverkehr über ein betroffenes Gerät sendet."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038578"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-20431"
+    },
+    {
+      "cve": "CVE-2024-20412",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Die Schwachstelle betrifft die Threat Defense (FTD) Software für die 1000er, 2100er, 3100er und 4200er Serie aufgrund von statischen Konten mit fest kodierten Passwörtern, was zu nicht autorisiertem Zugriff auf die CLI eines betroffenen Gerätes mit diesen Anmeldeinformationen führt. Ein lokaler Angreifer kann diese Sicherheitsanfälligkeit ausnutzen, um höhere Berechtigungen zu erlangen und auf vertrauliche Informationen zuzugreifen, begrenzte Fehlerbehebungsmaßnahmen durchzuführen, bestimmte Konfigurationsoptionen zu ändern oder das Gerät daran zu hindern, das Betriebssystem zu starten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038578"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-20412"
+    },
+    {
+      "cve": "CVE-2024-20339",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco Firepower. Die Schwachstelle betrifft die TLS-Verarbeitungsfunktion der Threat Defense (FTD)-Software für die Cisco Firepower 2100 Series aufgrund eines Problems bei der Verarbeitung von TLS-Verkehr, das zu einem Neustart des Geräts führt. Ein entfernter, anonymer Angreifer kann diese Sicherheitsanfälligkeit ausnutzen, indem er bestimmten TLS-Verkehr über IPv4 durch ein betroffenes Gerät sendet, um einen Denial-of-Service-Zustand herbeizuführen, der sich auch auf den Verkehr zum und durch das Gerät auswirkt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038578"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-20339"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM DB2 ist ein relationales Datenbanksystem (RDBS) von IBM.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in IBM DB2 REST ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen oder einen Denial-of-Service-Zustand zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1186 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1186.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1186 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1186"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin - 7154484 vom 2024-05-20",
+        "url": "https://www.ibm.com/support/pages/node/7154484"
+      },
+      {
+        "category": "external",
+        "summary": "Deell Security Update",
+        "url": "https://www.dell.com/support/kbdoc/en-us/000281732/dsa-2025-075-security-update-for-dell-data-protection-advisor-for-multiple-component-vulnerabilities"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM DB2 REST: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-01-25T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-26T09:36:00.903+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-1186",
+      "initial_release_date": "2024-05-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-01-25T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<19.12",
+                "product": {
+                  "name": "Dell Data Protection Advisor <19.12",
+                  "product_id": "T050283"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.12",
+                "product": {
+                  "name": "Dell Data Protection Advisor 19.12",
+                  "product_id": "T050283-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:data_protection_advisor:19.12"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Data Protection Advisor"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "REST <1.0.0.304-amd64",
+                "product": {
+                  "name": "IBM DB2 REST <1.0.0.304-amd64",
+                  "product_id": "T034928"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "REST 1.0.0.304-amd64",
+                "product": {
+                  "name": "IBM DB2 REST 1.0.0.304-amd64",
+                  "product_id": "T034928-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:db2:rest__1.0.0.304-amd64"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "DB2"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-19126",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2019-19126"
+    },
+    {
+      "cve": "CVE-2020-10029",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2020-10029"
+    },
+    {
+      "cve": "CVE-2020-1751",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2020-1751"
+    },
+    {
+      "cve": "CVE-2020-1752",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2020-1752"
+    },
+    {
+      "cve": "CVE-2021-35942",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2021-35942"
+    },
+    {
+      "cve": "CVE-2021-3711",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2021-3711"
+    },
+    {
+      "cve": "CVE-2021-3712",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2021-3712"
+    },
+    {
+      "cve": "CVE-2021-3999",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2021-3999"
+    },
+    {
+      "cve": "CVE-2021-4160",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2021-4160"
+    },
+    {
+      "cve": "CVE-2022-0778",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2022-0778"
+    },
+    {
+      "cve": "CVE-2022-1292",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2022-1292"
+    },
+    {
+      "cve": "CVE-2022-2068",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2022-2068"
+    },
+    {
+      "cve": "CVE-2022-2097",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2022-2097"
+    },
+    {
+      "cve": "CVE-2023-48795",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T034928"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2023-48795"
+    }
+  ]
+}

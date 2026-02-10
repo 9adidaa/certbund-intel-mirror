@@ -1,0 +1,154 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Gitea ist ein quelloffener Github-Klon.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Gitea ausnutzen, um falsche Informationen darzustellen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1673 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1673.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1673 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1673"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2023-07-05",
+        "url": "https://github.com/advisories/GHSA-cf6v-9j57-v6r6"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf huntr.dev",
+        "url": "https://huntr.dev/bounties/e335cd18-bc4d-4585-adb7-426c817ed053/"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202312-13 vom 2023-12-24",
+        "url": "https://security.gentoo.org/glsa/202312-13"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Gitea: Schwachstelle ermöglicht Darstellen falscher Informationen",
+    "tracking": {
+      "current_release_date": "2023-12-26T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:54:21.817+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1673",
+      "initial_release_date": "2023-07-05T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-07-05T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-12-26T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Gitea < 1.19.4",
+            "product": {
+              "name": "Open Source Gitea < 1.19.4",
+              "product_id": "T028423",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:gitea:gitea:1.19.4"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-3515",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Gitea. Der Fehler besteht aufgrund einer unsachgemäßen Bereinigung der vom Benutzer bereitgestellten Daten. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Link zu erstellen, der zu einer vertrauenswürdigen Website führt, das Opfer jedoch, wenn es darauf klickt, auf eine beliebige Domain umleitet. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T012167"
+        ]
+      },
+      "release_date": "2023-07-05T22:00:00.000+00:00",
+      "title": "CVE-2023-3515"
+    }
+  ]
+}

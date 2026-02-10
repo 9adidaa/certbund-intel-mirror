@@ -1,0 +1,194 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um einen Denial of Service Angriff und einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3264 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3264.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3264 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3264"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Patch Release vom 2024-10-23",
+        "url": "https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen ermöglichen Denial of Service und Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-10-23T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-24T09:41:18.311+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3264",
+      "initial_release_date": "2024-10-23T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-23T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<17.5.1",
+                "product": {
+                  "name": "Open Source GitLab <17.5.1",
+                  "product_id": "T038558"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.5.1",
+                "product": {
+                  "name": "Open Source GitLab 17.5.1",
+                  "product_id": "T038558-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.5.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.4.3",
+                "product": {
+                  "name": "Open Source GitLab <17.4.3",
+                  "product_id": "T038559"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.4.3",
+                "product": {
+                  "name": "Open Source GitLab 17.4.3",
+                  "product_id": "T038559-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.4.3"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.3.6",
+                "product": {
+                  "name": "Open Source GitLab <17.3.6",
+                  "product_id": "T038560"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.3.6",
+                "product": {
+                  "name": "Open Source GitLab 17.3.6",
+                  "product_id": "T038560-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.3.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-6826",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in GitLab CE/EE aufgrund der unsachgemäßen Handhabung von XML-Manifestdateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen, indem er eine in böser Absicht erstellte XML-Manifestdatei importiert."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038560",
+          "T038559",
+          "T038558"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-6826"
+    },
+    {
+      "cve": "CVE-2024-8312",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden in in das Feld „Globale Suche“ nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038560",
+          "T038559",
+          "T038558"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-8312"
+    }
+  ]
+}

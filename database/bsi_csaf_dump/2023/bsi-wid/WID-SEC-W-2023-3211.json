@@ -1,0 +1,146 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Eset NOD32 Antivirus ist eine Internet Security Lösung.\r\nESET Endpoint Security ist eine mehrschichtige, plattformübergreifende Sicherheitslösung für Clientsysteme.\r\nESET Server Security ist eine Sicherheitslösung für Dateiserver zum Schutz vor z.B. Malware.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in ESET NOD32 Antivirus, ESET Endpoint Security und ESET Server Security ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-3211 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-3211.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-3211 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-3211"
+      },
+      {
+        "category": "external",
+        "summary": "ESET Customer Advisory vom 2023-12-21",
+        "url": "https://support.eset.com/en/ca8562-eset-customer-advisory-improper-following-of-a-certificates-chain-of-trust-in-eset-security-products-fixed"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "ESET Produkte: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2023-12-21T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:03:08.527+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-3211",
+      "initial_release_date": "2023-12-21T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-12-21T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "ESET Endpoint Security",
+            "product": {
+              "name": "ESET Endpoint Security",
+              "product_id": "T029295",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:eset:endpoint_security:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "ESET NOD32 Antivirus",
+            "product": {
+              "name": "ESET NOD32 Antivirus",
+              "product_id": "T029294",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:eset:nod32:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "ESET Server Security",
+            "product": {
+              "name": "ESET Server Security",
+              "product_id": "T029293",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:eset:server_security:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "ESET"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-5594",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in mehreren ESET Produkten. Diese besteht in der Funktion zur Überprüfung des sicheren Datenverkehrs in der SSL/TLS-Protokoll-Scanfunktion. Ein mit dem MD5- oder SHA1-Algorithmus signiertes Zwischenzertifikat wird fälschlicherweise als vertrauenswürdig eingestuft, so dass der Browser auf einem System mit aktivierter ESET-Funktion zur Überprüfung des sicheren Datenverkehrs dazu veranlasst wird, einer mit einem solchen Zertifikat gesicherten Website zu vertrauen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T029295",
+          "T029294",
+          "T029293"
+        ]
+      },
+      "release_date": "2023-12-21T23:00:00.000+00:00",
+      "title": "CVE-2023-5594"
+    }
+  ]
+}

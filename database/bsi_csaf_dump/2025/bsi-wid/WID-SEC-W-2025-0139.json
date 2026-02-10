@@ -1,0 +1,265 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Oracle Datenbank ist ein weit verbreitetes relationales Datenbanksystem.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in Oracle Database Server ausnutzen, um die Vertraulichkeit, Integrität und Verfügbarkeit zu gefährden.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0139 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-0139.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0139 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0139"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Critical Patch Update Advisory - January 2025 - Appendix Oracle Database Server vom 2025-01-21",
+        "url": "https://www.oracle.com/security-alerts/cpujan2025.html#AppendixDB"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Oracle Database Server: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-01-21T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-01-22T09:03:48.441+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2025-0139",
+      "initial_release_date": "2025-01-21T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-01-21T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "19.1",
+                "product": {
+                  "name": "Oracle Database Server 19.1",
+                  "product_id": "1137730",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:oracle:database_server:19.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=23.6",
+                "product": {
+                  "name": "Oracle Database Server <=23.6",
+                  "product_id": "T040427"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=23.6",
+                "product": {
+                  "name": "Oracle Database Server <=23.6",
+                  "product_id": "T040427-fixed"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=19.25",
+                "product": {
+                  "name": "Oracle Database Server <=19.25",
+                  "product_id": "T040428"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=19.25",
+                "product": {
+                  "name": "Oracle Database Server <=19.25",
+                  "product_id": "T040428-fixed"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=21.16",
+                "product": {
+                  "name": "Oracle Database Server <=21.16",
+                  "product_id": "T040429"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=21.16",
+                "product": {
+                  "name": "Oracle Database Server <=21.16",
+                  "product_id": "T040429-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Database Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-26345",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Database Server existieren mehrere Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein entfernter, anonymer oder authentisierter Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"HIGH\" für \"Confidentiality\", \"Integrity\" und \"Availability\" über alle Schwachstellen aggregiert und bewirkt damit eine Bewertung mit dem Wert \"HOCH\" für die Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1137730"
+        ],
+        "last_affected": [
+          "T040429",
+          "T040428",
+          "T040427"
+        ]
+      },
+      "release_date": "2025-01-21T23:00:00.000+00:00",
+      "title": "CVE-2022-26345"
+    },
+    {
+      "cve": "CVE-2023-48795",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Database Server existieren mehrere Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein entfernter, anonymer oder authentisierter Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"HIGH\" für \"Confidentiality\", \"Integrity\" und \"Availability\" über alle Schwachstellen aggregiert und bewirkt damit eine Bewertung mit dem Wert \"HOCH\" für die Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1137730"
+        ],
+        "last_affected": [
+          "T040429",
+          "T040428",
+          "T040427"
+        ]
+      },
+      "release_date": "2025-01-21T23:00:00.000+00:00",
+      "title": "CVE-2023-48795"
+    },
+    {
+      "cve": "CVE-2023-52428",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Database Server existieren mehrere Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein entfernter, anonymer oder authentisierter Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"HIGH\" für \"Confidentiality\", \"Integrity\" und \"Availability\" über alle Schwachstellen aggregiert und bewirkt damit eine Bewertung mit dem Wert \"HOCH\" für die Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1137730"
+        ],
+        "last_affected": [
+          "T040429",
+          "T040428",
+          "T040427"
+        ]
+      },
+      "release_date": "2025-01-21T23:00:00.000+00:00",
+      "title": "CVE-2023-52428"
+    },
+    {
+      "cve": "CVE-2024-21211",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Database Server existieren mehrere Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein entfernter, anonymer oder authentisierter Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"HIGH\" für \"Confidentiality\", \"Integrity\" und \"Availability\" über alle Schwachstellen aggregiert und bewirkt damit eine Bewertung mit dem Wert \"HOCH\" für die Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1137730"
+        ],
+        "last_affected": [
+          "T040429",
+          "T040428",
+          "T040427"
+        ]
+      },
+      "release_date": "2025-01-21T23:00:00.000+00:00",
+      "title": "CVE-2024-21211"
+    },
+    {
+      "cve": "CVE-2025-21553",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Database Server existieren mehrere Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein entfernter, anonymer oder authentisierter Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"HIGH\" für \"Confidentiality\", \"Integrity\" und \"Availability\" über alle Schwachstellen aggregiert und bewirkt damit eine Bewertung mit dem Wert \"HOCH\" für die Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1137730"
+        ],
+        "last_affected": [
+          "T040429",
+          "T040428",
+          "T040427"
+        ]
+      },
+      "release_date": "2025-01-21T23:00:00.000+00:00",
+      "title": "CVE-2025-21553"
+    }
+  ]
+}

@@ -1,0 +1,677 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein anonymer oder lokaler Angreifer kann mehrere Schwachstellen in Google Android ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0758 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0758.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0758 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0758"
+      },
+      {
+        "category": "external",
+        "summary": "Android Patchday April 2024 vom 2024-04-01",
+        "url": "https://source.android.com/docs/security/bulletin/2024-04-01"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Google Android Patchday April 2024: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-04-01T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:07:05.026+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0758",
+      "initial_release_date": "2024-04-01T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-04-01T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "Google Android 12",
+                  "product_id": "T033806",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12L",
+                "product": {
+                  "name": "Google Android 12L",
+                  "product_id": "T033807",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12l"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "13",
+                "product": {
+                  "name": "Google Android 13",
+                  "product_id": "T033808",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:13"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14",
+                "product": {
+                  "name": "Google Android 14",
+                  "product_id": "T033809",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:14"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-21267",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21267"
+    },
+    {
+      "cve": "CVE-2023-28547",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-28547"
+    },
+    {
+      "cve": "CVE-2023-28582",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-28582"
+    },
+    {
+      "cve": "CVE-2023-32890",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-32890"
+    },
+    {
+      "cve": "CVE-2023-33023",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33023"
+    },
+    {
+      "cve": "CVE-2023-33084",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33084"
+    },
+    {
+      "cve": "CVE-2023-33086",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33086"
+    },
+    {
+      "cve": "CVE-2023-33095",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33095"
+    },
+    {
+      "cve": "CVE-2023-33096",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33096"
+    },
+    {
+      "cve": "CVE-2023-33099",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33099"
+    },
+    {
+      "cve": "CVE-2023-33100",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33100"
+    },
+    {
+      "cve": "CVE-2023-33101",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33101"
+    },
+    {
+      "cve": "CVE-2023-33103",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33103"
+    },
+    {
+      "cve": "CVE-2023-33104",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33104"
+    },
+    {
+      "cve": "CVE-2023-33115",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2023-33115"
+    },
+    {
+      "cve": "CVE-2024-0022",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-0022"
+    },
+    {
+      "cve": "CVE-2024-0026",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-0026"
+    },
+    {
+      "cve": "CVE-2024-0027",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-0027"
+    },
+    {
+      "cve": "CVE-2024-0042",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-0042"
+    },
+    {
+      "cve": "CVE-2024-20039",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-20039"
+    },
+    {
+      "cve": "CVE-2024-20040",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-20040"
+    },
+    {
+      "cve": "CVE-2024-21463",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-21463"
+    },
+    {
+      "cve": "CVE-2024-21468",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-21468"
+    },
+    {
+      "cve": "CVE-2024-21472",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-21472"
+    },
+    {
+      "cve": "CVE-2024-23704",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-23704"
+    },
+    {
+      "cve": "CVE-2024-23710",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-23710"
+    },
+    {
+      "cve": "CVE-2024-23712",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-23712"
+    },
+    {
+      "cve": "CVE-2024-23713",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese bestehen im Framework, in Widevine DRM, im System sowie in den MediaTek- und Qualcomm-Komponenten u.a. aufgrund eines Pufferüberlaufs, einer unsachgemäßen Eingabevalidierung oder einer Typumwandlung. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen. Die Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzeraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033806",
+          "T033807",
+          "T033808",
+          "T033809"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-23713"
+    }
+  ]
+}

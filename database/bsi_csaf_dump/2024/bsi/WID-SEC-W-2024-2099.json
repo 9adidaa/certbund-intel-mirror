@@ -1,0 +1,173 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Citrix Workspace App ist eine Client Software, die es ermöglicht von zahlreichen Geräten wie Smartphones, Tablets und PCs auf Dokumente, Applikationen und Desktops zuzugreifen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Citrix Systems Workspace App ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2099 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2099.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2099 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2099"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Security Bulletin CTX691485 vom 2024-09-10",
+        "url": "https://support.citrix.com/s/article/CTX691485-citrix-workspace-app-for-windows-security-bulletin-cve20247889-and-cve20247890?language=en_US"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Citrix Systems Workspace App: Mehrere Schwachstellen ermöglichen Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-09-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-11T08:15:40.410+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2099",
+      "initial_release_date": "2024-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2405",
+                "product": {
+                  "name": "Citrix Systems Workspace App <2405",
+                  "product_id": "T037439"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2405",
+                "product": {
+                  "name": "Citrix Systems Workspace App 2405",
+                  "product_id": "T037439-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:citrix:workspace_app:2405"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2402 LTSR CU1",
+                "product": {
+                  "name": "Citrix Systems Workspace App <2402 LTSR CU1",
+                  "product_id": "T037440"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2402 LTSR CU1",
+                "product": {
+                  "name": "Citrix Systems Workspace App 2402 LTSR CU1",
+                  "product_id": "T037440-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:citrix:workspace_app:2402_ltsr_cu1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Workspace App"
+          }
+        ],
+        "category": "vendor",
+        "name": "Citrix Systems"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-7889",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Citrix Systems Workspace App. Diese Fehler existieren wegen einer unsachgemäßen Verwaltung von Privilegien und einer unsachgemäßen Kontrolle von Ressourcen während der Lebensdauer. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um seine Berechtigungen auf SYSTEM zu erweitern. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037439",
+          "T037440"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-7889"
+    },
+    {
+      "cve": "CVE-2024-7890",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Citrix Systems Workspace App. Diese Fehler existieren wegen einer unsachgemäßen Verwaltung von Privilegien und einer unsachgemäßen Kontrolle von Ressourcen während der Lebensdauer. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um seine Berechtigungen auf SYSTEM zu erweitern. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037439",
+          "T037440"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-7890"
+    }
+  ]
+}

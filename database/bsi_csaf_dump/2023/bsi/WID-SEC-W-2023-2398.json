@@ -1,0 +1,148 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "TeamCity ist ein Continuous Integration und Deployment Tool für Entwickler und DevOps Ingenieure.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in JetBrains TeamCity ausnutzen, um beliebigen Programmcode auszuführen, administrative Rechte zu erlangen oder einen Cross Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2398 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2398.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2398 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2398"
+      },
+      {
+        "category": "external",
+        "summary": "JetBrains Blog vom 2023-10-09",
+        "url": "https://blog.jetbrains.com/teamcity/2023/10/cve-2023-42793-vulnerability-in-teamcity-update/"
+      },
+      {
+        "category": "external",
+        "summary": "Sonar Security Research vom 2023-10-03",
+        "url": "https://www.sonarsource.com/blog/teamcity-vulnerability/"
+      },
+      {
+        "category": "external",
+        "summary": "JetBrains fixed security issues vom 2023-09-19",
+        "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "JetBrains TeamCity: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-10-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:38.510+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2398",
+      "initial_release_date": "2023-09-19T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-19T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-10-03T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Exploit aufgenommen"
+        },
+        {
+          "date": "2023-10-09T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Informationen von JetBrains aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "JetBrains TeamCity < 2023.05.4",
+            "product": {
+              "name": "JetBrains TeamCity < 2023.05.4",
+              "product_id": "T029990",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:jetbrains:teamcity:2023.05.4"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "JetBrains"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-43566",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In JetBrains TeamCity existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden während der Knotenkonfiguration nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein privilegierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-19T22:00:00.000+00:00",
+      "title": "CVE-2023-43566"
+    },
+    {
+      "cve": "CVE-2023-42793",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in JetBrains TeamCity. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Authentisierung zu umgehen und in der Folge beliebigen Code auszuführen und administrative Rechte zu erlangen."
+        }
+      ],
+      "release_date": "2023-09-19T22:00:00.000+00:00",
+      "title": "CVE-2023-42793"
+    }
+  ]
+}

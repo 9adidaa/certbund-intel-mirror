@@ -1,0 +1,165 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Bitbucket ist ein Git-Server zur Sourcecode-Versionskontrolle.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Atlassian Bitbucket ausnutzen, um die Vertraulichkeit und Integrität zu gefährden.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1207 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1207.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1207 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1207"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Security Bulletin May 2024 vom 2024-05-21",
+        "url": "https://confluence.atlassian.com/security/security-bulletin-may-21-2024-1387867145.html"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Vulnerability BAM-25774 vom 2024-05-21",
+        "url": "https://jira.atlassian.com/browse/BSERV-19365"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Vulnerability BAM-25774 vom 2024-05-21",
+        "url": "https://jira.atlassian.com/browse/BSERV-19425"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Atlassian Bitbucket: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-05-21T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:09:25.483+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1207",
+      "initial_release_date": "2024-05-21T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-21T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.19.3",
+                "product": {
+                  "name": "Atlassian Bitbucket <8.19.3",
+                  "product_id": "T034963"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.9.14",
+                "product": {
+                  "name": "Atlassian Bitbucket <8.9.14",
+                  "product_id": "T034964"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.19.1",
+                "product": {
+                  "name": "Atlassian Bitbucket <8.19.1",
+                  "product_id": "T034965"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.9.12",
+                "product": {
+                  "name": "Atlassian Bitbucket <8.9.12",
+                  "product_id": "T034966"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Bitbucket"
+          }
+        ],
+        "category": "vendor",
+        "name": "Atlassian"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-22257",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Atlassian Bitbucket Data und Server existieren mehrere Schwachstellen. Diese betreffen die verwendeten Komponenten \"UriComponentsBuilder\" und \"Spring Security\". Zu den Ursachen gehören eine fehlerhafte Validierung und Fehler in den Zugriffskontrollen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Vertraulichkeit und Integrität zu gefährden und einen Server-Side Request Forgery (SSRF) Angriff durchzuführen. Eine der Schwachstellen erfordert Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "release_date": "2024-05-21T22:00:00.000+00:00",
+      "title": "CVE-2024-22257"
+    },
+    {
+      "cve": "CVE-2024-22262",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Atlassian Bitbucket Data und Server existieren mehrere Schwachstellen. Diese betreffen die verwendeten Komponenten \"UriComponentsBuilder\" und \"Spring Security\". Zu den Ursachen gehören eine fehlerhafte Validierung und Fehler in den Zugriffskontrollen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Vertraulichkeit und Integrität zu gefährden und einen Server-Side Request Forgery (SSRF) Angriff durchzuführen. Eine der Schwachstellen erfordert Benutzerinteraktion, um erfolgreich ausgenutzt zu werden."
+        }
+      ],
+      "release_date": "2024-05-21T22:00:00.000+00:00",
+      "title": "CVE-2024-22262"
+    }
+  ]
+}

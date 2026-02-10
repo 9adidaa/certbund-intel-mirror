@@ -1,0 +1,456 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Ivanti Endpoint Manager ist eine Endpoint Management Software zur zentralen Verwaltung von Benutzerprofilen und -Geräten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Ivanti Endpoint Manager ausnutzen, um beliebigen Programmcode auszuführen, Sicherheitsmaßnahmen zu umgehen, erweiterte Rechte zu erlangen und vertrauliche Informationen preiszugeben.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2109 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2109.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2109 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2109"
+      },
+      {
+        "category": "external",
+        "summary": "Ivanti Security Advisory EPM September 2024 vom 2024-09-10",
+        "url": "https://forums.ivanti.com/s/article/Security-Advisory-EPM-September-2024-for-EPM-2024-and-EPM-2022?language=en_US"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit im Summoning Team Blog",
+        "url": "https://summoning.team/blog/ivanti-epm-cve-2024-29847-deserialization-rce/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Ivanti Endpoint Manager: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-09-16T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-17T10:41:56.491+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2109",
+      "initial_release_date": "2024-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-09-16T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Exploit aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2024 SU1",
+                "product": {
+                  "name": "Ivanti Endpoint Manager <2024 SU1",
+                  "product_id": "T037469"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2024 SU1",
+                "product": {
+                  "name": "Ivanti Endpoint Manager 2024 SU1",
+                  "product_id": "T037469-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ivanti:endpoint_manager:2024_su1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2022 SU6",
+                "product": {
+                  "name": "Ivanti Endpoint Manager <2022 SU6",
+                  "product_id": "T037471"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2022 SU6",
+                "product": {
+                  "name": "Ivanti Endpoint Manager 2022 SU6",
+                  "product_id": "T037471-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ivanti:endpoint_manager:2022_su6"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2024 Security Patch",
+                "product": {
+                  "name": "Ivanti Endpoint Manager <2024 Security Patch",
+                  "product_id": "T037475"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2024 Security Patch",
+                "product": {
+                  "name": "Ivanti Endpoint Manager 2024 Security Patch",
+                  "product_id": "T037475-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ivanti:endpoint_manager:2024_security_patch"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Endpoint Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ivanti"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-29847",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Ivanti Endpoint Manager aufgrund der Deserialisierung von nicht vertrauenswürdigen Daten im Agentenportal. Ein entfernter, anonymer Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-29847"
+    },
+    {
+      "cve": "CVE-2024-32840",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-32840"
+    },
+    {
+      "cve": "CVE-2024-32842",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-32842"
+    },
+    {
+      "cve": "CVE-2024-32843",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-32843"
+    },
+    {
+      "cve": "CVE-2024-32845",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-32845"
+    },
+    {
+      "cve": "CVE-2024-32846",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-32846"
+    },
+    {
+      "cve": "CVE-2024-32848",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-32848"
+    },
+    {
+      "cve": "CVE-2024-34779",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-34779"
+    },
+    {
+      "cve": "CVE-2024-34783",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-34783"
+    },
+    {
+      "cve": "CVE-2024-34785",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-34785"
+    },
+    {
+      "cve": "CVE-2024-8191",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager. Diese Fehler betreffen das 2022 SU6 und das 2024 September Update aufgrund einer nicht spezifizierten SQL Injection. Ein privilegierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-8191"
+    },
+    {
+      "cve": "CVE-2024-8441",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Ivanti Endpoint Manager aufgrund eines unkontrollierten Suchpfads im Agenten. Ein lokaler Angreifer mit administrativen Rechten kann diese Schwachstelle ausnutzen, um seine Rechte auf Systemrechte auszuweiten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-8441"
+    },
+    {
+      "cve": "CVE-2024-8320",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager aufgrund fehlender Authentifizierung. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um die Sicherheitskontrollen zu umgehen, den Network Isolation-Status von verwalteten Geräten zu fälschen und verwaltete Geräte vom Netzwerk zu isolieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-8320"
+    },
+    {
+      "cve": "CVE-2024-8321",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Ivanti Endpoint Manager aufgrund fehlender Authentifizierung. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um die Sicherheitskontrollen zu umgehen, den Network Isolation-Status von verwalteten Geräten zu fälschen und verwaltete Geräte vom Netzwerk zu isolieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-8321"
+    },
+    {
+      "cve": "CVE-2024-8322",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Ivanti Endpoint Manager aufgrund schwacher Authentifizierung. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Zugriffskontrollen zu umgehen und Zugriff auf eingeschränkte Funktionen in der Funktion „Patch Management“ zu erhalten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-8322"
+    },
+    {
+      "cve": "CVE-2024-37397",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Ivanti Endpoint Manager. Dieser Fehler ist auf eine External XML Entity (XXE) Schwachstelle im Provisioning Web Service zurückzuführen, die zur Offenlegung von API-Geheimnissen führt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen preiszugeben."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037471",
+          "T037469",
+          "T037475"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-37397"
+    }
+  ]
+}

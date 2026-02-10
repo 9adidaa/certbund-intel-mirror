@@ -1,0 +1,144 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "FactoryTalk ist eine Software für die industrielle Automatisierung, die zur Maximierung der Effizienz und Steigerung der Anlagenproduktivität entwickelt wurde.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein authentifizierter Angreifer kann mehrere Schwachstellen in Rockwell Automation FactoryTalk ausnutzen, um beliebigen Code auszuführen, Dateien zu manipulieren oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1119 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1119.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1119 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1119"
+      },
+      {
+        "category": "external",
+        "summary": "Rockwell Automation Security Advisory vom 2024-05-14",
+        "url": "https://www.rockwellautomation.com/en-us/support/advisory.SD1670.html"
+      },
+      {
+        "category": "external",
+        "summary": "Rockwell Automation Security Advisory vom 2024-05-14",
+        "url": "https://www.rockwellautomation.com/en-us/support/advisory.SD1671.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Rockwell Automation FactoryTalk: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-05-14T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:08:54.283+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1119",
+      "initial_release_date": "2024-05-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Remote Access (FTRA) <13.6",
+                "product": {
+                  "name": "Rockwell Automation FactoryTalk Remote Access (FTRA) <13.6",
+                  "product_id": "T034802"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "View SE <14",
+                "product": {
+                  "name": "Rockwell Automation FactoryTalk View SE <14",
+                  "product_id": "T034806"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "FactoryTalk"
+          }
+        ],
+        "category": "vendor",
+        "name": "Rockwell Automation"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-3640",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Rockwell Automation FactoryTalk Remote Access. Dieser Fehler besteht aufgrund eines unquotierten Pfads für ausführbare Dateien im betroffenen Produkt, der die Eingabe einer bösartigen ausführbaren Datei während der Ausführung des FTRA-Installationspakets ermöglicht. Ein lokaler Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-05-14T22:00:00.000+00:00",
+      "title": "CVE-2024-3640"
+    },
+    {
+      "cve": "CVE-2024-4609",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Rockwell Automation FactoryTalk View SE. Dieser Fehler besteht in der Datalog-Funktion aufgrund einer unsachgemäßen Neutralisierung von Benutzereingaben, die zu einem SQL-Injection-Problem führt. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um Daten in einer Datenbank zu ändern und zu löschen sowie vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2024-05-14T22:00:00.000+00:00",
+      "title": "CVE-2024-4609"
+    }
+  ]
+}

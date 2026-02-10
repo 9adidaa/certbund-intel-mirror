@@ -1,0 +1,236 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "SonicWall SMA ist ein Secure Access Gateway, mit dem Organisationen Zugang zu geschäftskritischen Unternehmensressourcen bereitstellen können.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in SonicWall SMA ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2781 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2781.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2781 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2781"
+      },
+      {
+        "category": "external",
+        "summary": "Sonicwall Security Advisory vom 2023-10-30",
+        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2023-0015"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "SonicWall SMA: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-10-30T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:00:48.598+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2781",
+      "initial_release_date": "2023-10-30T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-10-30T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "SonicWall SMA Mobile Connect",
+                "product": {
+                  "name": "SonicWall SMA Mobile Connect",
+                  "product_id": "T030840",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:sonicwall:secure_mobile_access:mobile_connect"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SonicWall SMA Connect Tunnel",
+                "product": {
+                  "name": "SonicWall SMA Connect Tunnel",
+                  "product_id": "T030841",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:sonicwall:secure_mobile_access:connect_tunnel"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SonicWall SMA NetExtender",
+                "product": {
+                  "name": "SonicWall SMA NetExtender",
+                  "product_id": "T030842",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:sonicwall:secure_mobile_access:netextender"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SonicWall SMA 1000",
+                "product": {
+                  "name": "SonicWall SMA 1000",
+                  "product_id": "T030843",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:sonicwall:secure_mobile_access:1000"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SonicWall SMA 100",
+                "product": {
+                  "name": "SonicWall SMA 100",
+                  "product_id": "T030844",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:sonicwall:secure_mobile_access:100"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SMA"
+          }
+        ],
+        "category": "vendor",
+        "name": "SonicWall"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-36673",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In SonicWall SMA existieren mehrere Schwachstellen, welche von SonicWall als \"TunnelCrack\"-Schwachstellen zusammengefasst werden. Diese ermöglichen es einem Angreifer, welcher z.B. einen WiFi-Hotspot kontrolliert, unverschlüsselte Daten aus einer VPN-Verbindung mitzulesen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030840",
+          "T030842",
+          "T030841",
+          "T030844",
+          "T030843"
+        ]
+      },
+      "release_date": "2023-10-30T23:00:00.000+00:00",
+      "title": "CVE-2023-36673"
+    },
+    {
+      "cve": "CVE-2023-36672",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In SonicWall SMA existieren mehrere Schwachstellen, welche von SonicWall als \"TunnelCrack\"-Schwachstellen zusammengefasst werden. Diese ermöglichen es einem Angreifer, welcher z.B. einen WiFi-Hotspot kontrolliert, unverschlüsselte Daten aus einer VPN-Verbindung mitzulesen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030840",
+          "T030842",
+          "T030841",
+          "T030844",
+          "T030843"
+        ]
+      },
+      "release_date": "2023-10-30T23:00:00.000+00:00",
+      "title": "CVE-2023-36672"
+    },
+    {
+      "cve": "CVE-2023-36671",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In SonicWall SMA existieren mehrere Schwachstellen, welche von SonicWall als \"TunnelCrack\"-Schwachstellen zusammengefasst werden. Diese ermöglichen es einem Angreifer, welcher z.B. einen WiFi-Hotspot kontrolliert, unverschlüsselte Daten aus einer VPN-Verbindung mitzulesen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030840",
+          "T030842",
+          "T030841",
+          "T030844",
+          "T030843"
+        ]
+      },
+      "release_date": "2023-10-30T23:00:00.000+00:00",
+      "title": "CVE-2023-36671"
+    },
+    {
+      "cve": "CVE-2023-35838",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In SonicWall SMA existieren mehrere Schwachstellen, welche von SonicWall als \"TunnelCrack\"-Schwachstellen zusammengefasst werden. Diese ermöglichen es einem Angreifer, welcher z.B. einen WiFi-Hotspot kontrolliert, unverschlüsselte Daten aus einer VPN-Verbindung mitzulesen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030840",
+          "T030842",
+          "T030841",
+          "T030844",
+          "T030843"
+        ]
+      },
+      "release_date": "2023-10-30T23:00:00.000+00:00",
+      "title": "CVE-2023-35838"
+    }
+  ]
+}

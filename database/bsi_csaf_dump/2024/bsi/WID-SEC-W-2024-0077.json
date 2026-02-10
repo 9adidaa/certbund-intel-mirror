@@ -1,0 +1,194 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um Benutzerrechte zu erlangen, Daten zu manipulieren und um Sicherheitsmaßnahmen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0077 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0077.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0077 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0077"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Critical Security Release: 16.7.2, 16.6.4, 16.5.6 vom 2024-01-11",
+        "url": "https://about.gitlab.com/releases/2024/01/11/critical-security-release-gitlab-16-7-2-released/"
+      },
+      {
+        "category": "external",
+        "summary": "CVE-2023-7028 PoC",
+        "url": "https://twitter.com/h4x0r_dz/status/1745722638809305440"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-01-11T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:03:35.963+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0077",
+      "initial_release_date": "2024-01-11T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-01-11T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 16.7.2",
+                "product": {
+                  "name": "Open Source GitLab < 16.7.2",
+                  "product_id": "T032016",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:16.7.2"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 16.6.4",
+                "product": {
+                  "name": "Open Source GitLab < 16.6.4",
+                  "product_id": "T032017",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:16.6.4"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 16.5.6",
+                "product": {
+                  "name": "Open Source GitLab < 16.5.6",
+                  "product_id": "T032018",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:16.5.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-7028",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GitLab. In der Passwort-Reset Funktion können mehrere E-Mail Adressen per URL Manipulation übergeben werden. Solange eine dieser Adressen zu einem gültigen Benutzerkonto gehört, wird das Passwort-Reset-Token an alle angegebenen Adressen gesendet. Ein entfernter, anonymer Angreifer kann dies ausnutzen, um beliebige Nutzerkonten zu übernehmen, wenn diese nicht mit Mehrfaktor-Authentisierung abgesichert sind."
+        }
+      ],
+      "release_date": "2024-01-11T23:00:00.000+00:00",
+      "title": "CVE-2023-7028"
+    },
+    {
+      "cve": "CVE-2023-5356",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GitLab aufgrund unsachgemäßer Autorisierungsprüfungen bezüglich der Slack/Mattermost Integration. Ein authentisierter Angreifer kann dies ausnutzen, um \"Slash\" Befehle als ein anderer Nutzer auszuführen."
+        }
+      ],
+      "release_date": "2024-01-11T23:00:00.000+00:00",
+      "title": "CVE-2023-5356"
+    },
+    {
+      "cve": "CVE-2023-4812",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GitLab. Die erforderliche CODEOWNERS-Genehmigung kann umgangen werden, indem Änderungen zu einem bereits genehmigten \"Merge Request\" hinzugefügt werden. Ein Angreifer kann dadurch Sicherheitsmechanismen umgehen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-01-11T23:00:00.000+00:00",
+      "title": "CVE-2023-4812"
+    },
+    {
+      "cve": "CVE-2023-6955",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt eine Schwachstelle in GitLab aufgrund einer unsachgemäßen Zugriffskontrolle. Ein Angreifer kann diese umgehen und anschließend einen Arbeitsbereich in einer Gruppe erstellen, der mit einem Agenten aus einer anderen Gruppe verbunden ist."
+        }
+      ],
+      "release_date": "2024-01-11T23:00:00.000+00:00",
+      "title": "CVE-2023-6955"
+    },
+    {
+      "cve": "CVE-2023-2030",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GitLab. Ein Angreifer kann diese ausnutzen, um die Metadaten von signierten Commits zu ändern."
+        }
+      ],
+      "release_date": "2024-01-11T23:00:00.000+00:00",
+      "title": "CVE-2023-2030"
+    }
+  ]
+}

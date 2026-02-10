@@ -1,0 +1,157 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Dell Storage sind Speicherlösungen von Dell\r\nDas Dell Compellent Storage Center, ist eine Produktreihe von Speicherlösungen von Dell.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Dell Storage und Dell Compellent Storage Center ausnutzen, um die Kontrolle über die angeschlossene Virtualisierungsumgebung zu übernehmen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- Hardware Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2071 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2071.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2071 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2071"
+      },
+      {
+        "category": "external",
+        "summary": "Dark Reading vom 2023-08-10",
+        "url": "https://www.darkreading.com/threat-intelligence/dell-credentials-bug-vmware-environments-takeover"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2023-282 vom 2023-08-10",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000216615/dsa-2023-282-security-update-for-dell-storage-integration-tools-for-vmware-dsitv-vulnerabilities"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Dell Storage: Schwachstelle ermöglicht Übernahme der Kontrolle",
+    "tracking": {
+      "current_release_date": "2023-08-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:08.669+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2071",
+      "initial_release_date": "2023-08-15T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-15T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell Compellent Storage Center",
+            "product": {
+              "name": "Dell Compellent Storage Center",
+              "product_id": "T029339",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:dell:compellent_storage_center:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Dell Storage Integration Tools for VMware 06.01.00.016",
+                "product": {
+                  "name": "Dell Storage Integration Tools for VMware 06.01.00.016",
+                  "product_id": "T029337",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:dell:storage:06.01.00.016::dsitv"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Dell Storage SC Series",
+                "product": {
+                  "name": "Dell Storage SC Series",
+                  "product_id": "T029340",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:dell:storage:sc"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Storage"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-39250",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell Storage Integration Tools for VMware besteht eine Schwachstelle aufgrund eines Default-Passworts. Ein lokaler Angreifer kann dies ausnutzen, um einen privaten Schlüssel offenzulegen. Dieser kann in weiteren Angriffen gegen verschiedene Dell Storage Produkte im Kontext einer VMware Virtualisierungsumgebung verwendet werden. In der Folge ist potenziell die Übernahme der Kontrolle über die gesamte Virtualisierungsumgebung möglich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T029340",
+          "T029339",
+          "T029337"
+        ]
+      },
+      "release_date": "2023-08-15T22:00:00.000+00:00",
+      "title": "CVE-2023-39250"
+    }
+  ]
+}

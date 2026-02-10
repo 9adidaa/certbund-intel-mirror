@@ -1,0 +1,168 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "VxWorks ist ein proprietäres Echtzeitbetriebssystem, das von Wind River Systems entwickelt wird.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Wind River VxWorks ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2190 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2023-2190.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2190 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2190"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Energy Cybersecurity Advisory vom 2023-08-29",
+        "url": "https://search.abb.com/library/Download.aspx?DocumentID=8DBD000153-CSAF&LanguageCode=en&DocumentPartId=&Action=Launch"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database vom 2022-03-28",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23937"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Wind River VxWorks: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2023-08-28T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:43.542+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2190",
+      "initial_release_date": "2022-03-28T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-03-28T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-08-28T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Hitachi Energy RTU500",
+            "product": {
+              "name": "Hitachi Energy RTU500",
+              "product_id": "T027844",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:abb:rtu500:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi Energy"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Wind River VxWorks 6.9",
+                "product": {
+                  "name": "Wind River VxWorks 6.9",
+                  "product_id": "464220",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:windriver:vxworks:6.9"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Wind River VxWorks 7",
+                "product": {
+                  "name": "Wind River VxWorks 7",
+                  "product_id": "T022452",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:windriver:vxworks:7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "VxWorks"
+          }
+        ],
+        "category": "vendor",
+        "name": "Wind River"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-23937",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Wind River VxWorks. Der Fehler besteht aufgrund eines Out-of-bounds-Read während eines initialen IKE-Austauschs. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "464220",
+          "T022452",
+          "T027844"
+        ]
+      },
+      "release_date": "2022-03-28T22:00:00.000+00:00",
+      "title": "CVE-2022-23937"
+    }
+  ]
+}

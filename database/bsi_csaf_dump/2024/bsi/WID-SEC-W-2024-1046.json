@@ -1,0 +1,692 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder lokaler Angreifer kann mehrere Schwachstellen in Google Android ausnutzen, um seine Privilegien zu erhöhen oder vertrauliche Informationen offenlegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1046 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1046.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1046 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1046"
+      },
+      {
+        "category": "external",
+        "summary": "Android Patchday May 2024 vom 2024-05-06",
+        "url": "https://source.android.com/docs/security/bulletin/2024-05-01"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2024:14401-1 vom 2024-10-15",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/EWEL2DDPI3THPULGLN7MWENZEFZGVJQW/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Google Android Patchday Mai 2024: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-10-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-16T08:17:13.245+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-1046",
+      "initial_release_date": "2024-05-06T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-06T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-10-15T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "Google Android 12",
+                  "product_id": "T034568",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12L",
+                "product": {
+                  "name": "Google Android 12L",
+                  "product_id": "T034569",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12l"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "13",
+                "product": {
+                  "name": "Google Android 13",
+                  "product_id": "T034570",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:13"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14",
+                "product": {
+                  "name": "Google Android 14",
+                  "product_id": "T034571",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:14"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-32871",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-32871"
+    },
+    {
+      "cve": "CVE-2023-32873",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-32873"
+    },
+    {
+      "cve": "CVE-2023-33119",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-33119"
+    },
+    {
+      "cve": "CVE-2023-43529",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-43529"
+    },
+    {
+      "cve": "CVE-2023-43530",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-43530"
+    },
+    {
+      "cve": "CVE-2023-43531",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-43531"
+    },
+    {
+      "cve": "CVE-2023-4622",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-4622"
+    },
+    {
+      "cve": "CVE-2023-6363",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2023-6363"
+    },
+    {
+      "cve": "CVE-2024-0024",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-0024"
+    },
+    {
+      "cve": "CVE-2024-0025",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-0025"
+    },
+    {
+      "cve": "CVE-2024-0043",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-0043"
+    },
+    {
+      "cve": "CVE-2024-1067",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-1067"
+    },
+    {
+      "cve": "CVE-2024-1395",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-1395"
+    },
+    {
+      "cve": "CVE-2024-20056",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-20056"
+    },
+    {
+      "cve": "CVE-2024-20057",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-20057"
+    },
+    {
+      "cve": "CVE-2024-21471",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-21471"
+    },
+    {
+      "cve": "CVE-2024-21475",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-21475"
+    },
+    {
+      "cve": "CVE-2024-21477",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-21477"
+    },
+    {
+      "cve": "CVE-2024-21480",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-21480"
+    },
+    {
+      "cve": "CVE-2024-23351",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23351"
+    },
+    {
+      "cve": "CVE-2024-23354",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23354"
+    },
+    {
+      "cve": "CVE-2024-23705",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23705"
+    },
+    {
+      "cve": "CVE-2024-23706",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23706"
+    },
+    {
+      "cve": "CVE-2024-23707",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23707"
+    },
+    {
+      "cve": "CVE-2024-23708",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23708"
+    },
+    {
+      "cve": "CVE-2024-23709",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen im Framework, Google Play, Kernel, System sowie in den Komponenten von MediaTek, Arm und Qualcomm. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder vertrauliche Informationen offenzulegen. Das Ausnutzen einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034569",
+          "T034568",
+          "T027843",
+          "T034571",
+          "T034570"
+        ]
+      },
+      "release_date": "2024-05-06T22:00:00.000+00:00",
+      "title": "CVE-2024-23709"
+    }
+  ]
+}

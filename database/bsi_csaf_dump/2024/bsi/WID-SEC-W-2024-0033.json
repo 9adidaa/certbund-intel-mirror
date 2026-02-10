@@ -1,0 +1,117 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Trellix Agent ist eine Client-seitige Komponente, die zur Kommunikation zwischen ePolicy Orchestrator und den verwalteten Produkten dient.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Trellix Agent ausnutzen, um einen Denial of Service Angriff durchzuführen oder seine Rechte zu erweitern.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0033 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0033.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0033 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0033"
+      },
+      {
+        "category": "external",
+        "summary": "Trellix Security Bulletin SB10416 vom 2024-01-09",
+        "url": "https://kcm.trellix.com/corporate/index?page=content&id=SB10416"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Trellix Agent: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-01-09T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:03:22.745+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0033",
+      "initial_release_date": "2024-01-09T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-01-09T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Trellix Agent < 5.8.1",
+            "product": {
+              "name": "Trellix Agent < 5.8.1",
+              "product_id": "T031913",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:trellix:agent:5.8.1"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Trellix"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-0213",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Trellix Agent. Während der Installation wird der Ordner \"/var/McAfee/.msgbus\" erstellt. Dieser wird für die Socket-Kommunikation zwischen Prozessen verwendet. Ein Angreifer, der in diesem Ordner Dateien erstellen kann, kann speziell gestaltete Nachrichten einschleusen, die den Trellix Agent zum Absturz bringen (Denial of Service) oder dem Nutzer erweiterte Rechte geben. Ein erfolgreiches Ausnutzen der Schwachstelle erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-01-09T23:00:00.000+00:00",
+      "title": "CVE-2024-0213"
+    }
+  ]
+}

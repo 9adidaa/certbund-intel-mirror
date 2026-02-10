@@ -1,0 +1,888 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die GNU libc ist die Basis C Bibliothek unter Linux sowie anderen Unix-Betriebssystemen, welche die Systemaufrufe sowie Basisfunktionalität bereitstellt.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in GNU libc ausnutzen, um einen Denial of Service Angriff durchzuführen und um beliebigen Code auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Hardware Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0973 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2016/wid-sec-w-2023-0973.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0973 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0973"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 868550 vom 2023-04-14",
+        "url": "https://www.ibm.com/support/pages/node/868550"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 868518 vom 2023-04-14",
+        "url": "https://www.ibm.com/support/pages/node/868518"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2016:0225 vom 2016-02-16",
+        "url": "https://rhn.redhat.com/errata/RHSA-2016-0225.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2016:0175 vom 2016-02-16",
+        "url": "https://rhn.redhat.com/errata/RHSA-2016-0175.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2016:0176 vom 2016-02-16",
+        "url": "https://rhn.redhat.com/errata/RHSA-2016-0176.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-2900-1 vom 2016-02-16",
+        "url": "http://www.ubuntu.com/usn/usn-2900-1/"
+      },
+      {
+        "category": "external",
+        "summary": "Arista Security Advisory 0017 vom 2016-02-16",
+        "url": "http://www.arista.com/en/support/advisories-notices/security-advisories/1255-security-advisory-17"
+      },
+      {
+        "category": "external",
+        "summary": "Google Online Security Blog vom 2016-02-16",
+        "url": "https://googleonlinesecurity.blogspot.de/2016/02/cve-2015-7547-glibc-getaddrinfo-stack.html"
+      },
+      {
+        "category": "external",
+        "summary": "Proof-of-Concept vom 2016-02-16",
+        "url": "https://github.com/fjserna/CVE-2015-7547"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0470-1 vom 2016-02-16",
+        "url": "http://lists.opensuse.org/opensuse-security-announce/2016-02/msg00036.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0471-1 vom 2016-02-16",
+        "url": "http://lists.opensuse.org/opensuse-security-announce/2016-02/msg00037.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0472-1 vom 2016-02-16",
+        "url": "http://lists.opensuse.org/opensuse-security-announce/2016-02/msg00038.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0473-1 vom 2016-02-16",
+        "url": "http://lists.opensuse.org/opensuse-security-announce/2016-02/msg00039.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-3480-1 vom 2016-02-16",
+        "url": "https://www.debian.org/security/2016/dsa-3480"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-3481-1 vom 2016-02-16",
+        "url": "https://www.debian.org/security/2016/dsa-3481"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Enterprise Linux Security Advisory ELSA-2016-0175 vom 2016-02-16",
+        "url": "http://linux.oracle.com/errata/ELSA-2016-0175.html"
+      },
+      {
+        "category": "external",
+        "summary": "CISCO Security Advisory CISCO-SA-20160218-GLIBC vom 2016-02-19",
+        "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160218-glibc"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Security Advisory CTX206991 vom 2016-02-19",
+        "url": "http://support.citrix.com/article/CTX206991"
+      },
+      {
+        "category": "external",
+        "summary": "BLUECOAT Security Advisory SA114 vom 2016-02-20",
+        "url": "https://bto.bluecoat.com/security-advisory/sa114"
+      },
+      {
+        "category": "external",
+        "summary": "VMware Security Advisory VMSA-2016-0002 vom 2016-02-22",
+        "url": "http://www.vmware.com/security/advisories/VMSA-2016-0002.html"
+      },
+      {
+        "category": "external",
+        "summary": "Fortiguard Info",
+        "url": "http://www.fortiguard.com/advisory/glibc-getaddrinfo-stack-overflow"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 1977801 vom 2016-03-03",
+        "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21977801"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0748-1 vom 2016-03-14",
+        "url": "https://www.suse.com/support/update/announcement/2016/suse-su-20160748-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0778-1 vom 2016-03-15",
+        "url": "https://lists.opensuse.org/opensuse-security-announce/2016-03/msg00051.html"
+      },
+      {
+        "category": "external",
+        "summary": "F5 Security Advisory SOL47098834 vom 2016-02-16",
+        "url": "http://support.f5.com/kb/en-us/solutions/public/k/47/sol47098834.html?ref=rss"
+      },
+      {
+        "category": "external",
+        "summary": "Xerox Mini Bulletin XRX16Q vom 2016-06-30",
+        "url": "https://www.xerox.com/download/security/security-bulletin/36b94-5368284530883/cert_Mini_Security_Bulletin_XRX16Q_for_ConnectKey_R16-05_v1-0.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2016-2573 vom 2016-11-09",
+        "url": "http://linux.oracle.com/errata/ELSA-2016-2573.html"
+      },
+      {
+        "category": "external",
+        "summary": "Juniper Security Advisory JSA11023 vom 2020-07-08",
+        "url": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA11023"
+      },
+      {
+        "category": "external",
+        "summary": "Huawei Security Advisory HUAWEI-SA-20160304-01-GLIBC vom 2020-08-12",
+        "url": "https://www.huawei.com/en/psirt/security-advisories/huawei-sa-20160304-01-glibc-en"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GNU libc: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-04-16T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:48:54.869+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0973",
+      "initial_release_date": "2016-02-16T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2016-02-16T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2016-02-16T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-02-16T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-02-16T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-02-18T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-02-18T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-02-21T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-02-21T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-02-22T23:00:00.000+00:00",
+          "number": "9",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-02-22T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-02-25T23:00:00.000+00:00",
+          "number": "11",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-03-03T23:00:00.000+00:00",
+          "number": "12",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-03-03T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-03-14T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-03-15T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-03-15T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-04-28T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-04-28T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-04-28T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-07-03T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-07-03T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-11-09T23:00:00.000+00:00",
+          "number": "22",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2020-07-08T22:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Juniper aufgenommen"
+        },
+        {
+          "date": "2020-08-11T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Huawei aufgenommen"
+        },
+        {
+          "date": "2023-04-16T22:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von IBM aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "25"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Arista EOS",
+            "product": {
+              "name": "Arista EOS",
+              "product_id": "T007065",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:arista:arista_eos:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Arista"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco ACE",
+            "product": {
+              "name": "Cisco ACE",
+              "product_id": "T004631",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:application_control_engine_software:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco AnyConnect Secure Mobility Solution",
+            "product": {
+              "name": "Cisco AnyConnect Secure Mobility Solution",
+              "product_id": "T001830",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:anyconnect_secure_mobility_client:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Application Networking Manager",
+            "product": {
+              "name": "Cisco Application Networking Manager",
+              "product_id": "T000614",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:application_networking_manager:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco IP Communicator",
+            "product": {
+              "name": "Cisco IP Communicator",
+              "product_id": "2065",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:ip_communicator:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Intrusion Prevention System (IPS)",
+            "product": {
+              "name": "Cisco Intrusion Prevention System (IPS)",
+              "product_id": "2056",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:intrusion_prevention_system:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco IronPort Security Management Appliance",
+            "product": {
+              "name": "Cisco IronPort Security Management Appliance",
+              "product_id": "T004399",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:ironport_security_management_appliance:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Prime Collaboration",
+            "product": {
+              "name": "Cisco Prime Collaboration",
+              "product_id": "T003257",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:prime_collaboration:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Prime Data Center Network Manager (DCNM)",
+            "product": {
+              "name": "Cisco Prime Data Center Network Manager (DCNM)",
+              "product_id": "T001134",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:prime_data_center_network_manager:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Router",
+            "product": {
+              "name": "Cisco Router",
+              "product_id": "T003258",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:router:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Security Manager (CSM)",
+            "product": {
+              "name": "Cisco Security Manager (CSM)",
+              "product_id": "95918",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:security_manager:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco TelePresence",
+            "product": {
+              "name": "Cisco TelePresence",
+              "product_id": "188586",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:telepresence_video_communication_server:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Unified Computing System (UCS)",
+            "product": {
+              "name": "Cisco Unified Computing System (UCS)",
+              "product_id": "163824",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:unified_computing_system:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Unified Provisioning Manager",
+            "product": {
+              "name": "Cisco Unified Provisioning Manager",
+              "product_id": "190830",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:unified_provisioning_manager:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco WebEx",
+            "product": {
+              "name": "Cisco WebEx",
+              "product_id": "T001747",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:webex:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco WebEx Node for MCS",
+            "product": {
+              "name": "Cisco WebEx Node for MCS",
+              "product_id": "T001162",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:webex_node_for_mcs:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Wireless LAN Controllers",
+            "product": {
+              "name": "Cisco Wireless LAN Controllers",
+              "product_id": "T002195",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:wireless_lan_controllers:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "F5 BIG-IP",
+            "product": {
+              "name": "F5 BIG-IP",
+              "product_id": "T001663",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:big-ip:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "F5"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Huawei OceanStor",
+            "product": {
+              "name": "Huawei OceanStor",
+              "product_id": "T017101",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:huawei:oceanstor_uds:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Huawei"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM BladeCenter",
+            "product": {
+              "name": "IBM BladeCenter",
+              "product_id": "T004333",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:ibm:bladecenter:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Security Identity Manager 7.0",
+            "product": {
+              "name": "IBM Security Identity Manager 7.0",
+              "product_id": "T004583",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:security_identity_manager:7.0"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Juniper Junos Space < 20.1R1",
+            "product": {
+              "name": "Juniper Junos Space < 20.1R1",
+              "product_id": "T016874",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:juniper:junos_space:20.1r1"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Juniper"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source CentOS",
+            "product": {
+              "name": "Open Source CentOS",
+              "product_id": "1727",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:centos:centos:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source GNU libc >= 2.9",
+            "product": {
+              "name": "Open Source GNU libc >= 2.9",
+              "product_id": "126337",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:gnu:glibc:2.9"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux Enterprise Desktop",
+            "product": {
+              "name": "SUSE Linux Enterprise Desktop",
+              "product_id": "72893",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:linux_enterprise_desktop:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "SUSE Linux Enterprise Server",
+            "product": {
+              "name": "SUSE Linux Enterprise Server",
+              "product_id": "T002247",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:linux_enterprise_server:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "VMware ESXi 5.5",
+                "product": {
+                  "name": "VMware ESXi 5.5",
+                  "product_id": "228240",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:vmware:esxi:5.5"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "VMware ESXi 6.0",
+                "product": {
+                  "name": "VMware ESXi 6.0",
+                  "product_id": "328679",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:vmware:esxi:6.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ESXi"
+          }
+        ],
+        "category": "vendor",
+        "name": "VMware"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Xerox WorkCentre",
+            "product": {
+              "name": "Xerox WorkCentre",
+              "product_id": "T000855",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:xerox:workcentre:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Xerox"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2015-5229",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Denial of Service Schwachstelle in GNU libc in der \"calloc\" Implementierung. Ein Angreifer kann dadurch ein unerwartetes Anwendungsverhalten, wie z.B. \"Aufhänger\" oder \"Abstürze\" hervorrufen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002195",
+          "T004333",
+          "T004399",
+          "T004631",
+          "67646",
+          "2056",
+          "72893",
+          "T004914",
+          "T000614",
+          "T001747",
+          "T000855",
+          "T001663",
+          "190830",
+          "228240",
+          "328679",
+          "T007065",
+          "T001162",
+          "T004583",
+          "163824",
+          "T003257",
+          "T003258",
+          "2065",
+          "188586",
+          "T017101",
+          "2951",
+          "T000126",
+          "T001830",
+          "95918",
+          "T002247",
+          "T001134",
+          "1727"
+        ]
+      },
+      "release_date": "2016-02-16T23:00:00.000+00:00",
+      "title": "CVE-2015-5229"
+    },
+    {
+      "cve": "CVE-2015-7547",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GNU libc in der DNS Resolver-Funktion \"getaddrinfo\". Bei der Verarbeitung von DNS Anfragen des Typs \"AF_UNSPEC\" kann ein Stack-basierter Pufferüberlauf entstehen und dadurch beliebiger Code zur Ausführung kommen. Diese DNS Anfragen kommen beispielsweise bei paralleler Nutzung von IPv4 und IPv6 vor. Ein Angreifer, der einen DNS Server kontrolliert, kann durch speziell gestaltete DNS Antworten beliebigen Code auf dem betroffenen System zur Ausführung bringen. Zur erfolgreichen Ausnutzung dieser Schwachstelle muss der Angreifer den Benutzer dazu bringen eine Netzwerkverbindung zu öffnen, die einem manipulierten DNS Server verwendet."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002195",
+          "T004333",
+          "T004399",
+          "T004631",
+          "67646",
+          "2056",
+          "72893",
+          "T004914",
+          "T000614",
+          "T001747",
+          "190830",
+          "T007065",
+          "T001162",
+          "163824",
+          "T003257",
+          "T003258",
+          "2065",
+          "188586",
+          "2951",
+          "T000126",
+          "T001830",
+          "95918",
+          "T002247",
+          "T001134",
+          "1727"
+        ]
+      },
+      "release_date": "2016-02-16T23:00:00.000+00:00",
+      "title": "CVE-2015-7547"
+    }
+  ]
+}

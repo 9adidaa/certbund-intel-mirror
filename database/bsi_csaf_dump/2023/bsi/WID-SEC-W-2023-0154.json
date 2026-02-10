@@ -1,0 +1,132 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco Internetwork Operating System (IOS) ist ein Betriebssystem, das für Cisco Geräte wie z. B. Router und Switches eingesetzt wird.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Cisco IOS und Cisco IOS XE ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0154 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0154.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0154 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0154"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory cisco-sa-npe-hardening-Dkel83jP vom 2023-01-18",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-npe-hardening-Dkel83jP"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco IOS: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-01-18T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:42:00.316+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0154",
+      "initial_release_date": "2023-01-18T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-18T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco IOS",
+            "product": {
+              "name": "Cisco IOS",
+              "product_id": "T016652",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:cisco:ios:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco IOS XE",
+            "product": {
+              "name": "Cisco IOS XE",
+              "product_id": "T016791",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:cisco:ios_xe:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco IOS und Cisco IOS XE. Wird vom \"universalk9\" image auf das \"universalk9_npe\" image gewechselt, stehen bestimmte Funktionen bezüglich starker Verschlüsselung nicht mehr zur Verfügung. Die mit diesen Funktionen verbundenen Informationen (Crypto-Konfiguration) werden jedoch nicht gelöscht und werden unter bestimmten Voraussetzungen in Fehlermeldungen auf der Kommandozeile offengelegt. Ein Angreifer mit Zugriff auf die lokale Kommandozeile kann dadurch vertrauliche Informationen offenlegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016791",
+          "T016652"
+        ]
+      },
+      "release_date": "2023-01-18T23:00:00.000+00:00"
+    }
+  ]
+}

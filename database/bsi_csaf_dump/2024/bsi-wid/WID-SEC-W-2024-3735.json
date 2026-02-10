@@ -1,0 +1,183 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Sophos Firewall ist die Firewall-Software für Sophos Appliances.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in der Sophos Firewall ausnutzen, um beliebigen Code auszuführen oder seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3735 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3735.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3735 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3735"
+      },
+      {
+        "category": "external",
+        "summary": "Sophos Security Advisory sophos-sa-20241219-sfos-rce vom 2024-12-19",
+        "url": "https://www.sophos.com/en-us/security-advisories/sophos-sa-20241219-sfos-rce"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Database",
+        "url": "https://github.com/advisories/GHSA-wj5c-255p-6pwh"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Database",
+        "url": "https://github.com/advisories/GHSA-6r4g-xxf8-49wf"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Database",
+        "url": "https://github.com/advisories/GHSA-vf9g-3qff-2rx6"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Sophos Firewall: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-12-19T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-20T09:12:17.783+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3735",
+      "initial_release_date": "2024-12-19T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-19T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<21 MR1",
+                "product": {
+                  "name": "Sophos Firewall <21 MR1",
+                  "product_id": "T039957"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "21 MR1",
+                "product": {
+                  "name": "Sophos Firewall 21 MR1",
+                  "product_id": "T039957-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:sophos:firewall:21_mr1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firewall"
+          }
+        ],
+        "category": "vendor",
+        "name": "Sophos"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-12727",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Sophos Firewall. Dieser Fehler existiert wegen einer Pre-Auth-SQL-Injection in der E-Mail-Schutzfunktion, die den Zugriff auf die Reporting-Datenbank ermöglicht. Unter bestimmten Umständen kann ein entfernter, anonymer Angreifer diese Schwachstelle ausnutzen, um beliebigen Code auszuführen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039957"
+        ]
+      },
+      "release_date": "2024-12-19T23:00:00.000+00:00",
+      "title": "CVE-2024-12727"
+    },
+    {
+      "cve": "CVE-2024-12729",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in der Sophos Firewall. Dieser Fehler existiert wegen einer Pre-Auth-SQL-Injection im Benutzerportal. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039957"
+        ]
+      },
+      "release_date": "2024-12-19T23:00:00.000+00:00",
+      "title": "CVE-2024-12729"
+    },
+    {
+      "cve": "CVE-2024-12728",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in der Sophos Firewall. Dieser Fehler existiert wegen schwacher Anmeldeinformationen während der SSH-Authentifizierung. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um privilegierten Systemzugriff zu erhalten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039957"
+        ]
+      },
+      "release_date": "2024-12-19T23:00:00.000+00:00",
+      "title": "CVE-2024-12728"
+    }
+  ]
+}

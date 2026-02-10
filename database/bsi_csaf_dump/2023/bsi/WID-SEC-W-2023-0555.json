@@ -1,0 +1,143 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "SonicOS ist das Betriebssystem von SonicWall Firewall-Produkten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in SonicWall SonicOS ausnutzen, um einen Denial of Service Angriff durchzuführen oder nicht spezifizierte Auswirkungen zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0555 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0555.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0555 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0555"
+      },
+      {
+        "category": "external",
+        "summary": "PoC CVE-2023-0656 vom 2023-04-03",
+        "url": "https://ssd-disclosure.com/ssd-advisory-sonicwall-ssl-vpn-out-of-bounds-write-dos/"
+      },
+      {
+        "category": "external",
+        "summary": "Sonicwall Security Advisory vom 2023-03-02",
+        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2023-0005"
+      },
+      {
+        "category": "external",
+        "summary": "Sonicwall Security Advisory vom 2023-03-02",
+        "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2023-0004"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "SonicWall SonicOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-04-03T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:46:04.731+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0555",
+      "initial_release_date": "2023-03-02T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-02T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-04-03T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC für CVE-2023-0656 aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SonicWall SonicOS < 7.0.1-5111",
+            "product": {
+              "name": "SonicWall SonicOS < 7.0.1-5111",
+              "product_id": "T026607",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:sonicwall:sonicos:7.0.1-5111"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SonicWall"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-1101",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in SonicWall SonicOS in der \"SSLVPN\" Komponente. Aufgrund von fehlenden Restriktionen von Versuchen bei der Multifaktorauthentisierung kann eine große Anzahl an MFA-Codes verbraucht werden. Ein entfernter, anonymer Angreifer kann dies ausnutzen, um unbekannte Auswirkungen zu verursachen."
+        }
+      ],
+      "release_date": "2023-03-02T23:00:00.000+00:00",
+      "title": "CVE-2023-1101"
+    },
+    {
+      "cve": "CVE-2023-0656",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in SonicWall SonicOS bezüglich der \"web management\" Schnittstelle. Diese ist auf einen stapelbasierten Pufferüberlauf zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "release_date": "2023-03-02T23:00:00.000+00:00",
+      "title": "CVE-2023-0656"
+    }
+  ]
+}

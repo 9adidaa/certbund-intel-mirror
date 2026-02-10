@@ -1,0 +1,783 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache Tomcat ist ein Web-Applikationsserver für verschiedene Plattformen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Apache Tomcat ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2182 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2182.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2182 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2182"
+      },
+      {
+        "category": "external",
+        "summary": "Apache Tomcat 8.5.93 Changelog vom 2023-08-27",
+        "url": "https://tomcat.apache.org/security-8.html"
+      },
+      {
+        "category": "external",
+        "summary": "Apache Tomcat 9.0.80 Changelog vom 2023-08-27",
+        "url": "https://tomcat.apache.org/security-9.html"
+      },
+      {
+        "category": "external",
+        "summary": "Apache Tomcat 10.1.13 Changelog vom 2023-08-27",
+        "url": "https://tomcat.apache.org/security-10.html"
+      },
+      {
+        "category": "external",
+        "summary": "Apache Tomcat 11.0.0-M11 (alpha) Changelog vom 2023-08-27",
+        "url": "https://tomcat.apache.org/security-11.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASTOMCAT9-2023-009 vom 2023-09-27",
+        "url": "https://alas.aws.amazon.com/AL2/ALASTOMCAT9-2023-009.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASTOMCAT8.5-2023-015 vom 2023-09-27",
+        "url": "https://alas.aws.amazon.com/AL2/ALASTOMCAT8.5-2023-015.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:3987-1 vom 2023-10-05",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-October/016556.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5522 vom 2023-10-11",
+        "url": "https://www.debian.org/security/2023/dsa-5522"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5521 vom 2023-10-11",
+        "url": "https://www.debian.org/security/2023/dsa-5521"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3617 vom 2023-10-13",
+        "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00020.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:4129-1 vom 2023-10-19",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-October/016747.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:5946 vom 2023-10-20",
+        "url": "https://access.redhat.com/errata/RHSA-2023:5946"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7055552 vom 2023-10-20",
+        "url": "https://www.ibm.com/support/pages/node/7055552"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-1861 vom 2023-10-25",
+        "url": "https://alas.aws.amazon.com/ALAS-2023-1861.html"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Securi+y Advisory",
+        "url": "https://www.ibm.com/support/pages/node/7058363"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7063721 vom 2023-10-31",
+        "url": "https://www.ibm.com/support/pages/node/7063721"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:4423-1 vom 2023-11-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-November/017018.html"
+      },
+      {
+        "category": "external",
+        "summary": "Camunda Security Notice 97 vom 2023-11-13",
+        "url": "https://docs.camunda.org/security/notices/"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7623 vom 2023-12-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7623"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7622 vom 2023-12-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7622"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7099297 vom 2023-12-18",
+        "url": "https://www.ibm.com/support/pages/node/7099297"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0125 vom 2024-01-10",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0125"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-0125 vom 2024-01-11",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-0125.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-0474 vom 2024-01-25",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-0474.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0474 vom 2024-01-25",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0474"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:1324 vom 2024-03-18",
+        "url": "https://access.redhat.com/errata/RHSA-2024:1324"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:1325 vom 2024-03-18",
+        "url": "https://access.redhat.com/errata/RHSA-2024:1325"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:4631 vom 2024-07-18",
+        "url": "https://access.redhat.com/errata/RHSA-2024:4631"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7106-1 vom 2024-11-18",
+        "url": "https://ubuntu.com/security/notices/USN-7106-1"
+      },
+      {
+        "category": "external",
+        "summary": "Deell Security Update",
+        "url": "https://www.dell.com/support/kbdoc/en-us/000281732/dsa-2025-075-security-update-for-dell-data-protection-advisor-for-multiple-component-vulnerabilities"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache Tomcat: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2026-01-25T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-26T09:22:24.968+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2023-2182",
+      "initial_release_date": "2023-08-27T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-27T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-09-27T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-10-05T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-10-10T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2023-10-15T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2023-10-18T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-10-19T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-10-24T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-10-31T23:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2023-11-13T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-12-07T23:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-12-18T23:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-01-10T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-01-11T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-01-25T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Oracle Linux und Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-03-18T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-07-18T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-11-17T23:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2026-01-25T23:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "19"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<11.0.0-M11",
+                "product": {
+                  "name": "Apache Tomcat <11.0.0-M11",
+                  "product_id": "T029578"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.0.0-M11",
+                "product": {
+                  "name": "Apache Tomcat 11.0.0-M11",
+                  "product_id": "T029578-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:11.0.0-m11"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<10.1.13",
+                "product": {
+                  "name": "Apache Tomcat <10.1.13",
+                  "product_id": "T029579"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.1.13",
+                "product": {
+                  "name": "Apache Tomcat 10.1.13",
+                  "product_id": "T029579-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:10.1.13"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<9.0.80",
+                "product": {
+                  "name": "Apache Tomcat <9.0.80",
+                  "product_id": "T029580"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.0.80",
+                "product": {
+                  "name": "Apache Tomcat 9.0.80",
+                  "product_id": "T029580-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:9.0.80"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.5.93",
+                "product": {
+                  "name": "Apache Tomcat <8.5.93",
+                  "product_id": "T029581"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.5.93",
+                "product": {
+                  "name": "Apache Tomcat 8.5.93",
+                  "product_id": "T029581-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:8.5.93"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Tomcat"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<19.12",
+                "product": {
+                  "name": "Dell Data Protection Advisor <19.12",
+                  "product_id": "T050283"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.12",
+                "product": {
+                  "name": "Dell Data Protection Advisor 19.12",
+                  "product_id": "T050283-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:data_protection_advisor:19.12"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Data Protection Advisor"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "10.1-10.1.0.1",
+                "product": {
+                  "name": "IBM Integration Bus 10.1-10.1.0.1",
+                  "product_id": "T028402",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:integration_bus:10.1_-_10.1.0.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Integration Bus"
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Operational Decision Manager",
+            "product": {
+              "name": "IBM Operational Decision Manager",
+              "product_id": "T005180",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:operational_decision_manager:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "7.5",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5",
+                  "product_id": "T022954",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.0.0.24",
+                "product": {
+                  "name": "IBM Rational Build Forge <8.0.0.24",
+                  "product_id": "T030689"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.0.0.24",
+                "product": {
+                  "name": "IBM Rational Build Forge 8.0.0.24",
+                  "product_id": "T030689-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:rational_build_forge:8.0.0.24"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Rational Build Forge"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.21.0-alpha1",
+                "product": {
+                  "name": "Open Source Camunda <7.21.0-alpha1",
+                  "product_id": "T031061"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.21.0-alpha1",
+                "product": {
+                  "name": "Open Source Camunda 7.21.0-alpha1",
+                  "product_id": "T031061-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.21.0-alpha1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.20.1",
+                "product": {
+                  "name": "Open Source Camunda <7.20.1",
+                  "product_id": "T031062"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.20.1",
+                "product": {
+                  "name": "Open Source Camunda 7.20.1",
+                  "product_id": "T031062-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.20.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.19.8",
+                "product": {
+                  "name": "Open Source Camunda <7.19.8",
+                  "product_id": "T031063"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.19.8",
+                "product": {
+                  "name": "Open Source Camunda 7.19.8",
+                  "product_id": "T031063-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.19.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.18.12",
+                "product": {
+                  "name": "Open Source Camunda <7.18.12",
+                  "product_id": "T031064"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.18.12",
+                "product": {
+                  "name": "Open Source Camunda 7.18.12",
+                  "product_id": "T031064-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.18.12"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "RPA Bridge <1.1.10",
+                "product": {
+                  "name": "Open Source Camunda RPA Bridge <1.1.10",
+                  "product_id": "T031065"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "RPA Bridge 1.1.10",
+                "product": {
+                  "name": "Open Source Camunda RPA Bridge 1.1.10",
+                  "product_id": "T031065-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:rpa_bridge__1.1.10"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Camunda"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.7.7",
+                "product": {
+                  "name": "Red Hat JBoss Web Server <5.7.7",
+                  "product_id": "T031508"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.7.7",
+                "product": {
+                  "name": "Red Hat JBoss Web Server 5.7.7",
+                  "product_id": "T031508-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:jboss_enterprise_web_server:5.7.7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "JBoss Web Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-41080",
+      "product_status": {
+        "known_affected": [
+          "T050283",
+          "T029581",
+          "67646",
+          "T029580",
+          "T030689",
+          "T031061",
+          "T031063",
+          "T031062",
+          "T004914",
+          "T031065",
+          "T031064",
+          "T022954",
+          "2951",
+          "T002207",
+          "T000126",
+          "T005180",
+          "398363",
+          "T028402",
+          "T031508",
+          "T029579",
+          "T029578"
+        ]
+      },
+      "release_date": "2023-08-27T22:00:00.000+00:00",
+      "title": "CVE-2023-41080"
+    }
+  ]
+}

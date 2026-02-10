@@ -1,0 +1,552 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Firmware ist eine in die Geräte fest eingebettete Software, die dort grundlegende Funktionen leistet.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Intel NUC Firmware ausnutzen, um seine Privilegien zu erhöhen oder einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-1987 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-1987.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-1987 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-1987"
+      },
+      {
+        "category": "external",
+        "summary": "Intel Security Advisory INTEL-SA-00752 vom 2022-11-08",
+        "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00752.html"
+      },
+      {
+        "category": "external",
+        "summary": "Intel Security Advisory INTEL-SA-00747 vom 2022-11-08",
+        "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00747.html"
+      },
+      {
+        "category": "external",
+        "summary": "Intel Security Advisory INTEL-SA-00689 vom 2022-11-08",
+        "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00689.html"
+      },
+      {
+        "category": "external",
+        "summary": "Lenovo Security Advisory LEN-164067 vom 2024-08-14",
+        "url": "https://support.lenovo.com/us/en/product_security/LEN-164067"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-455 vom 2024-12-16",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000260794/dsa-2024-455-security-update-for-dell-powerscale-onefs-for-multiple-security-vulnerabilities"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Intel NUC Firmware: Mehrere Schwachstellen ermöglichen Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-12-16T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-17T09:16:21.331+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2022-1987",
+      "initial_release_date": "2022-11-08T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-11-08T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-08-13T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von LENOVO aufgenommen"
+        },
+        {
+          "date": "2024-12-16T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<12.4.1",
+                "product": {
+                  "name": "Dell PowerScale <12.4.1",
+                  "product_id": "T039868"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12.4.1",
+                "product": {
+                  "name": "Dell PowerScale 12.4.1",
+                  "product_id": "T039868-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:powerscale_onefs:12.4.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PowerScale"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "NUC",
+                "product": {
+                  "name": "Intel Firmware NUC",
+                  "product_id": "T023142",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:intel:firmware:nuc"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<NUC kit wireless adapter 22.40",
+                "product": {
+                  "name": "Intel Firmware <NUC kit wireless adapter 22.40",
+                  "product_id": "T025249"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "NUC kit wireless adapter 22.40",
+                "product": {
+                  "name": "Intel Firmware NUC kit wireless adapter 22.40",
+                  "product_id": "T025249-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:intel:firmware:nuc_kit_wireless_adapter_22.40"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<NUC HDMI firmware update tool 1.78.2.0.7",
+                "product": {
+                  "name": "Intel Firmware <NUC HDMI firmware update tool 1.78.2.0.7",
+                  "product_id": "T025250"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "NUC HDMI firmware update tool 1.78.2.0.7",
+                "product": {
+                  "name": "Intel Firmware NUC HDMI firmware update tool 1.78.2.0.7",
+                  "product_id": "T025250-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:intel:firmware:nuc_hdmi_firmware_update_tool_1.78.2.0.7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Intel"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Lenovo Computer",
+            "product": {
+              "name": "Lenovo Computer",
+              "product_id": "T036869",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:lenovo:computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Lenovo"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-33164",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2021-33164"
+    },
+    {
+      "cve": "CVE-2022-21794",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-21794"
+    },
+    {
+      "cve": "CVE-2022-26124",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-26124"
+    },
+    {
+      "cve": "CVE-2022-32569",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-32569"
+    },
+    {
+      "cve": "CVE-2022-33176",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-33176"
+    },
+    {
+      "cve": "CVE-2022-34152",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-34152"
+    },
+    {
+      "cve": "CVE-2022-35276",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-35276"
+    },
+    {
+      "cve": "CVE-2022-36349",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36349"
+    },
+    {
+      "cve": "CVE-2022-36370",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36370"
+    },
+    {
+      "cve": "CVE-2022-36789",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36789"
+    },
+    {
+      "cve": "CVE-2022-37334",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-37334"
+    },
+    {
+      "cve": "CVE-2022-37345",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-37345"
+    },
+    {
+      "cve": "CVE-2022-38099",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Firmware existieren mehrere Schwachstellen. Diese sind auf unzureichende Eingabevalidierung, fehlerhafte Zugriffskontrollen, fehlerhafte Speicherbegrenzungen, Fehler bei der Authentisierung sowie Fehler bei der Initialisierung zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T023142"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-38099"
+    },
+    {
+      "cve": "CVE-2022-26024",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Im Intel NUC HDMI Firmware Update Tool existiert eine Schwachstelle. Diese ist auf eine fehlerhafte Zugriffskontrolle zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T025250",
+          "T039868"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-26024"
+    },
+    {
+      "cve": "CVE-2022-36377",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Kit Wireless Adapter Firmware existieren mehrere Schwachstellen. Diese sind auf verschiedene Fehler hinsichtlich unkontrollierter Suchpfade, Path-Traversal-Verwundbarkeiten sowie Fehler bei den Standard-Berechtigungen zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T025249"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36377"
+    },
+    {
+      "cve": "CVE-2022-36380",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Kit Wireless Adapter Firmware existieren mehrere Schwachstellen. Diese sind auf verschiedene Fehler hinsichtlich unkontrollierter Suchpfade, Path-Traversal-Verwundbarkeiten sowie Fehler bei den Standard-Berechtigungen zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T025249"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36380"
+    },
+    {
+      "cve": "CVE-2022-36384",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Kit Wireless Adapter Firmware existieren mehrere Schwachstellen. Diese sind auf verschiedene Fehler hinsichtlich unkontrollierter Suchpfade, Path-Traversal-Verwundbarkeiten sowie Fehler bei den Standard-Berechtigungen zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T025249"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36384"
+    },
+    {
+      "cve": "CVE-2022-36400",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Intel NUC Kit Wireless Adapter Firmware existieren mehrere Schwachstellen. Diese sind auf verschiedene Fehler hinsichtlich unkontrollierter Suchpfade, Path-Traversal-Verwundbarkeiten sowie Fehler bei den Standard-Berechtigungen zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T039868",
+          "T025249"
+        ]
+      },
+      "release_date": "2022-11-08T23:00:00.000+00:00",
+      "title": "CVE-2022-36400"
+    }
+  ]
+}

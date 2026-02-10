@@ -1,0 +1,804 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Der Kernel stellt den Kern des Linux Betriebssystems dar.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen im Linux Kernel ausnutzen, um seine Privilegien zu erhöhen und um einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-0959 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2018/wid-sec-w-2022-0959.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-0959 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0959"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-1091 vom 2023-03-08",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-1091.html"
+      },
+      {
+        "category": "external",
+        "summary": "CentOS Security Advisory CESA-2023:1091 vom 2023-03-08",
+        "url": "https://lists.centos.org/pipermail/centos-announce/2023-March/086390.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:1091 vom 2023-03-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:1091"
+      },
+      {
+        "category": "external",
+        "summary": "Eintrag auf mitre.org vom 2018-07-08",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13406"
+      },
+      {
+        "category": "external",
+        "summary": "Eintrag auf mitre.org vom 2018-07-08",
+        "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2051-1 vom 2018-07-25",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182051-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2092-1 vom 2018-07-28",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182092-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2150-1 vom 2018-08-01",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182150-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2222-1 vom 2018-08-07",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182222-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-4266 vom 2018-08-07",
+        "url": "https://www.debian.org/security/2018/dsa-4266"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2332-1 vom 2018-08-15",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182332-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-1466 vom 2018-08-16",
+        "url": "https://security-tracker.debian.org/tracker/DLA-1466-1"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2362-1 vom 2018-08-16",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182362-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2366-1 vom 2018-08-16",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182366-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2344-1 vom 2018-08-16",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182344-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2384-1 vom 2018-08-17",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182384-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2018-4208 vom 2018-09-04",
+        "url": "http://linux.oracle.com/errata/ELSA-2018-4208.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2018:2637-1 vom 2018-09-06",
+        "url": "https://www.suse.com/support/update/announcement/2018/suse-su-20182637-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2018-4211 vom 2018-09-10",
+        "url": "http://linux.oracle.com/errata/ELSA-2018-4211.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2018-4250 vom 2018-10-13",
+        "url": "http://linux.oracle.com/errata/ELSA-2018-4250.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2018:2948 vom 2018-10-31",
+        "url": "https://access.redhat.com/errata/RHSA-2018:2948"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2018:3096 vom 2018-10-31",
+        "url": "https://access.redhat.com/errata/RHSA-2018:3096"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2018:3083 vom 2018-10-31",
+        "url": "https://access.redhat.com/errata/RHSA-2018:3083"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2018-3083 vom 2018-11-06",
+        "url": "http://linux.oracle.com/errata/ELSA-2018-3083.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:0717 vom 2019-04-09",
+        "url": "https://access.redhat.com/errata/RHSA-2019:0717"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2019-0717 vom 2019-04-11",
+        "url": "http://linux.oracle.com/errata/ELSA-2019-0717.html"
+      },
+      {
+        "category": "external",
+        "summary": "CentOS Security Advisory CESA-2019:0717 vom 2019-04-12",
+        "url": "http://centos-announce.2309468.n4.nabble.com/CentOS-announce-CESA-2019-0717-Important-CentOS-6-kernel-Security-Update-tp4645505.html"
+      },
+      {
+        "category": "external",
+        "summary": "F5 Security Advisory K00854051 vom 2019-05-09",
+        "url": "https://support.f5.com/csp/article/K00854051"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:2476 vom 2019-08-14",
+        "url": "https://access.redhat.com/errata/RHSA-2019:2476"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:2566-01 vom 2019-08-27",
+        "url": "https://access.redhat.com/errata/RHSA-2019:2566"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:2696 vom 2019-09-10",
+        "url": "https://access.redhat.com/errata/RHSA-2019:2696"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:2730 vom 2019-09-11",
+        "url": "https://access.redhat.com/errata/RHSA-2019:2730"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:4164 vom 2019-12-10",
+        "url": "https://access.redhat.com/errata/RHSA-2019:4164"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2019:4159 vom 2019-12-10",
+        "url": "https://access.redhat.com/errata/RHSA-2019:4159"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3641-1 vom 2021-11-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009709.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3642-1 vom 2021-11-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009708.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3640-1 vom 2021-11-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009710.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3655-1 vom 2021-11-11",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009720.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3658-1 vom 2021-11-11",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009719.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3675-1 vom 2021-11-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009734.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3723-1 vom 2021-11-17",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009737.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3748-1 vom 2021-11-19",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009756.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3754-1 vom 2021-11-20",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-November/009757.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3876-1 vom 2021-12-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-December/009810.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3935-1 vom 2021-12-06",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-December/009856.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3929-1 vom 2021-12-06",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-December/009844.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4835 vom 2022-05-31",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4835"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4829 vom 2022-05-31",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4829"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:3972-1 vom 2021-12-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-December/009872.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:0759 vom 2022-03-07",
+        "url": "https://access.redhat.com/errata/RHSA-2022:0759"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:0886 vom 2022-03-15",
+        "url": "https://access.redhat.com/errata/RHSA-2022:0886"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2022-0886 vom 2022-03-16",
+        "url": "http://linux.oracle.com/errata/ELSA-2022-0886.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:0971 vom 2022-03-21",
+        "url": "https://access.redhat.com/errata/RHSA-2022:0971"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:0973 vom 2022-03-21",
+        "url": "https://access.redhat.com/errata/RHSA-2022:0973"
+      },
+      {
+        "category": "external",
+        "summary": "AVAYA Security Advisory ASA-2022-032 vom 2022-03-22",
+        "url": "https://downloads.avaya.com/css/P8/documents/101080967"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2022-050 vom 2022-04-22",
+        "url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-050.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:1988 vom 2022-05-10",
+        "url": "https://access.redhat.com/errata/RHSA-2022:1988"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:1975 vom 2022-05-10",
+        "url": "https://access.redhat.com/errata/RHSA-2022:1975"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:5937 vom 2022-08-09",
+        "url": "https://access.redhat.com/errata/RHSA-2022:5937"
+      },
+      {
+        "category": "external",
+        "summary": "CentOS Security Advisory CESA-2022:5937 vom 2022-08-15",
+        "url": "https://lists.centos.org/pipermail/centos-announce/2022-August/073632.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASKERNEL-5.10-2022-021 vom 2022-10-25",
+        "url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.10-2022-021.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Linux Kernel: Mehrere Schwachstellen ermöglichen Privilegieneskalation und Denial of Service",
+    "tracking": {
+      "current_release_date": "2023-03-08T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:32:59.094+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-0959",
+      "initial_release_date": "2018-07-08T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2018-07-08T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2018-07-08T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2018-07-11T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Added references"
+        },
+        {
+          "date": "2018-07-29T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-08-01T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-08-06T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-08-15T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-08-15T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-08-16T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-08-16T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2018-08-16T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2018-09-04T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-09-06T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-09-10T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-10-14T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-10-30T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2018-11-05T23:00:00.000+00:00",
+          "number": "17",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2019-04-09T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2019-04-11T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2019-04-14T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von CentOS aufgenommen"
+        },
+        {
+          "date": "2019-05-09T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von F5 aufgenommen"
+        },
+        {
+          "date": "2019-08-13T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2019-08-26T22:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2019-09-10T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2019-12-09T23:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2019-12-09T23:00:00.000+00:00",
+          "number": "26",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2021-11-09T23:00:00.000+00:00",
+          "number": "27",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-11-11T23:00:00.000+00:00",
+          "number": "28",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-11-16T23:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-11-17T23:00:00.000+00:00",
+          "number": "30",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-11-21T23:00:00.000+00:00",
+          "number": "31",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-12-02T23:00:00.000+00:00",
+          "number": "32",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-12-06T23:00:00.000+00:00",
+          "number": "33",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-12-08T23:00:00.000+00:00",
+          "number": "34",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2022-03-07T23:00:00.000+00:00",
+          "number": "35",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-03-15T23:00:00.000+00:00",
+          "number": "36",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-03-16T23:00:00.000+00:00",
+          "number": "37",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2022-03-20T23:00:00.000+00:00",
+          "number": "38",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-03-23T23:00:00.000+00:00",
+          "number": "39",
+          "summary": "Neue Updates von AVAYA aufgenommen"
+        },
+        {
+          "date": "2022-04-24T22:00:00.000+00:00",
+          "number": "40",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2022-05-10T22:00:00.000+00:00",
+          "number": "41",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-05-31T22:00:00.000+00:00",
+          "number": "42",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-08-09T22:00:00.000+00:00",
+          "number": "43",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-08-22T22:00:00.000+00:00",
+          "number": "44",
+          "summary": "Neue Updates von CentOS aufgenommen"
+        },
+        {
+          "date": "2022-10-25T22:00:00.000+00:00",
+          "number": "45",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-03-07T23:00:00.000+00:00",
+          "number": "46",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-03-08T23:00:00.000+00:00",
+          "number": "47",
+          "summary": "Neue Updates von CentOS und Oracle Linux aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "47"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "F5 BIG-IP",
+            "product": {
+              "name": "F5 BIG-IP",
+              "product_id": "T001663",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:big-ip:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "F5 Enterprise Manager",
+            "product": {
+              "name": "F5 Enterprise Manager",
+              "product_id": "T000125",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:enterprise_manager:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "F5"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source CentOS",
+            "product": {
+              "name": "Open Source CentOS",
+              "product_id": "1727",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:centos:centos:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source Linux Kernel < 4.17.4",
+            "product": {
+              "name": "Open Source Linux Kernel < 4.17.4",
+              "product_id": "T012472",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:linux:linux_kernel:4.17.4"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-13405",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle im Linux Kernel im Zusammenhang mit der \"inode_init_owner()\" Funktion in [fs/inode.c]. Ein angemeldeter, lokaler Angreifer kann eine Design-Schwäche in der Implementierung ausnutzen, um sich als Teil einer Benutzergruppe auszugeben."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T002207",
+          "67646",
+          "T000125",
+          "T001663",
+          "398363",
+          "1727",
+          "T004914"
+        ]
+      },
+      "release_date": "2018-07-08T22:00:00.000+00:00",
+      "title": "CVE-2018-13405"
+    },
+    {
+      "cve": "CVE-2018-13406",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle im Linux Kernel in der \"inode_init_owner()\" Funktion in [drivers/video/fbdev/uvesafb.c]. Ein angemeldeter, lokaler Angreifer kann eine Schwachstelle ausnutzen, um einen Denial of Service Zustand herbeizuführen oder möglicherweise um seine Rechte zu erhöhen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T002207",
+          "67646",
+          "398363",
+          "1727",
+          "T004914"
+        ]
+      },
+      "release_date": "2018-07-08T22:00:00.000+00:00",
+      "title": "CVE-2018-13406"
+    }
+  ]
+}

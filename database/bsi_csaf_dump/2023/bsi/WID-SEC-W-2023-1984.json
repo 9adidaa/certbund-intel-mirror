@@ -1,0 +1,1137 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Google Android ausnutzen, um seine Privilegien zu erhöhen, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1984 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1984.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1984 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1984"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6383-1 vom 2023-09-19",
+        "url": "https://ubuntu.com/security/notices/USN-6383-1"
+      },
+      {
+        "category": "external",
+        "summary": "Pixel Patchday August 2023 vom 2023-08-07",
+        "url": "https://source.android.com/docs/security/bulletin/pixel/2023-08-01"
+      },
+      {
+        "category": "external",
+        "summary": "Android Patchday August 2023 vom 2023-08-07",
+        "url": "https://source.android.com/docs/security/bulletin/2023-08-01"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Google Android: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-09-19T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:56:40.270+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1984",
+      "initial_release_date": "2023-08-07T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-07T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-09-19T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Google Android 11",
+                "product": {
+                  "name": "Google Android 11",
+                  "product_id": "T019739",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:11"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Google Android 12",
+                "product": {
+                  "name": "Google Android 12",
+                  "product_id": "T020881",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Google Android 13",
+                "product": {
+                  "name": "Google Android 13",
+                  "product_id": "T024488",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:13"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Google Android 12L",
+                "product": {
+                  "name": "Google Android 12L",
+                  "product_id": "T029115",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12l"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28555",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-28555"
+    },
+    {
+      "cve": "CVE-2023-28537",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-28537"
+    },
+    {
+      "cve": "CVE-2023-22666",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-22666"
+    },
+    {
+      "cve": "CVE-2023-21650",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21650"
+    },
+    {
+      "cve": "CVE-2023-21649",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21649"
+    },
+    {
+      "cve": "CVE-2023-21648",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21648"
+    },
+    {
+      "cve": "CVE-2023-21647",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21647"
+    },
+    {
+      "cve": "CVE-2023-21627",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21627"
+    },
+    {
+      "cve": "CVE-2023-21626",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21626"
+    },
+    {
+      "cve": "CVE-2023-21292",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21292"
+    },
+    {
+      "cve": "CVE-2023-21290",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21290"
+    },
+    {
+      "cve": "CVE-2023-21289",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21289"
+    },
+    {
+      "cve": "CVE-2023-21288",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21288"
+    },
+    {
+      "cve": "CVE-2023-21287",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21287"
+    },
+    {
+      "cve": "CVE-2023-21286",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21286"
+    },
+    {
+      "cve": "CVE-2023-21285",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21285"
+    },
+    {
+      "cve": "CVE-2023-21284",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21284"
+    },
+    {
+      "cve": "CVE-2023-21283",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21283"
+    },
+    {
+      "cve": "CVE-2023-21282",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21282"
+    },
+    {
+      "cve": "CVE-2023-21281",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21281"
+    },
+    {
+      "cve": "CVE-2023-21280",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21280"
+    },
+    {
+      "cve": "CVE-2023-21279",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21279"
+    },
+    {
+      "cve": "CVE-2023-21278",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21278"
+    },
+    {
+      "cve": "CVE-2023-21277",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21277"
+    },
+    {
+      "cve": "CVE-2023-21276",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21276"
+    },
+    {
+      "cve": "CVE-2023-21275",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21275"
+    },
+    {
+      "cve": "CVE-2023-21274",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21274"
+    },
+    {
+      "cve": "CVE-2023-21273",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21273"
+    },
+    {
+      "cve": "CVE-2023-21272",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21272"
+    },
+    {
+      "cve": "CVE-2023-21271",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21271"
+    },
+    {
+      "cve": "CVE-2023-21270",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21270"
+    },
+    {
+      "cve": "CVE-2023-21269",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21269"
+    },
+    {
+      "cve": "CVE-2023-21268",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21268"
+    },
+    {
+      "cve": "CVE-2023-21267",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21267"
+    },
+    {
+      "cve": "CVE-2023-21265",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21265"
+    },
+    {
+      "cve": "CVE-2023-21264",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21264"
+    },
+    {
+      "cve": "CVE-2023-21242",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21242"
+    },
+    {
+      "cve": "CVE-2023-21175",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21175"
+    },
+    {
+      "cve": "CVE-2023-21142",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21142"
+    },
+    {
+      "cve": "CVE-2023-21140",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21140"
+    },
+    {
+      "cve": "CVE-2023-21134",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21134"
+    },
+    {
+      "cve": "CVE-2023-21133",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21133"
+    },
+    {
+      "cve": "CVE-2023-21132",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-21132"
+    },
+    {
+      "cve": "CVE-2023-20965",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-20965"
+    },
+    {
+      "cve": "CVE-2023-20780",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2023-20780"
+    },
+    {
+      "cve": "CVE-2022-40510",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2022-40510"
+    },
+    {
+      "cve": "CVE-2022-34830",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2022-34830"
+    },
+    {
+      "cve": "CVE-2020-29374",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Google Android existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Android Runtime\", \"Framework\", \"Media Framework\", \"System\", \"Google Play system updates\", \"Kernel\", \"ARM components\", \"MediaTek components\", \"Qualcomm closed-source components\" sowie \"Qualcomm components\". Ein Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Für die Ausnutzung einiger dieser Schwachstellen ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T019739",
+          "T024488",
+          "T020881",
+          "T029115"
+        ]
+      },
+      "release_date": "2023-08-07T22:00:00.000+00:00",
+      "title": "CVE-2020-29374"
+    }
+  ]
+}

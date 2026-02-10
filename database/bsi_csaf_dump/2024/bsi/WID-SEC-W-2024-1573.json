@@ -1,0 +1,200 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Joomla ist ein freies Content-Management-System, basierend auf der Scriptsprache PHP und einer SQL-Datenbank. Über zahlreiche Extensions kann der Funktionsumfang der Core-Installation individuell erweitert werden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Joomla ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1573 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1573.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1573 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1573"
+      },
+      {
+        "category": "external",
+        "summary": "Joomla Security Centre 20240701 vom 2024-07-09",
+        "url": "https://developer.joomla.org/security-centre/935-20240701-core-xss-in-accessible-media-selection-field.html"
+      },
+      {
+        "category": "external",
+        "summary": "Joomla Security Centre 20240702 vom 2024-07-09",
+        "url": "https://developer.joomla.org/security-centre/936-20240702-core-self-xss-in-fancyselect-list-field-layout.html"
+      },
+      {
+        "category": "external",
+        "summary": "Joomla Security Centre 20240703 vom 2024-07-09",
+        "url": "https://developer.joomla.org/security-centre/937-20240703-core-xss-in-stringhelper-truncate-method.html"
+      },
+      {
+        "category": "external",
+        "summary": "Joomla Security Centre 20240704 vom 2024-07-09",
+        "url": "https://developer.joomla.org/security-centre/938-20240704-core-xss-in-wrapper-extensions.html"
+      },
+      {
+        "category": "external",
+        "summary": "Joomla Security Centre 20240705 vom 2024-07-09",
+        "url": "https://developer.joomla.org/security-centre/939-20240705-core-xss-in-com-fields-default-field-value.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Joomla: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-07-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:11:07.374+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1573",
+      "initial_release_date": "2024-07-09T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-07-09T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.10.16-elts",
+                "product": {
+                  "name": "Open Source Joomla <3.10.16-elts",
+                  "product_id": "T036066"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<5.1.2",
+                "product": {
+                  "name": "Open Source Joomla <5.1.2",
+                  "product_id": "T036067"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<4.4.6",
+                "product": {
+                  "name": "Open Source Joomla <4.4.6",
+                  "product_id": "T036068"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Joomla"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-21729",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Joomla bestehen mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-07-09T22:00:00.000+00:00",
+      "title": "CVE-2024-21729"
+    },
+    {
+      "cve": "CVE-2024-21730",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Joomla bestehen mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-07-09T22:00:00.000+00:00",
+      "title": "CVE-2024-21730"
+    },
+    {
+      "cve": "CVE-2024-21731",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Joomla bestehen mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-07-09T22:00:00.000+00:00",
+      "title": "CVE-2024-21731"
+    },
+    {
+      "cve": "CVE-2024-26278",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Joomla bestehen mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-07-09T22:00:00.000+00:00",
+      "title": "CVE-2024-26278"
+    },
+    {
+      "cve": "CVE-2024-26279",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Joomla bestehen mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-07-09T22:00:00.000+00:00",
+      "title": "CVE-2024-26279"
+    }
+  ]
+}

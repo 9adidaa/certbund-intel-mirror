@@ -1,0 +1,165 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Mitel SIP Phone bezeichnet Festnetz-Tischtelefone.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Mitel SIP Phone ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen oder beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1325 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1325.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1325 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1325"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-06-09",
+        "url": "https://github.com/advisories/GHSA-mp92-8wvj-jphh"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub",
+        "url": "https://github.com/kwburns/CVE/blob/main/Mitel/5.0.0.1018/code/exploit-provis.py"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub",
+        "url": "https://github.com/kwburns/CVE/blob/main/Mitel/5.0.0.1018/code/exploit-firmware.py"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Advisory vom 2024-06-09",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-37570"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Mitel SIP Phone: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-06-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:09:58.083+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1325",
+      "initial_release_date": "2024-06-09T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-06-09T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=4.5.0.41",
+                "product": {
+                  "name": "Mitel SIP Phone <=4.5.0.41",
+                  "product_id": "T035265"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=5.0.0.1018",
+                "product": {
+                  "name": "Mitel SIP Phone <=5.0.0.1018",
+                  "product_id": "T035266"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIP Phone"
+          }
+        ],
+        "category": "vendor",
+        "name": "Mitel"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-37569",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Mitel SIP Phone. Diese ist auf eine Anfälligkeit für eine Command-Injection zurückzuführen, welche aufgrund einer fehlenden Bereinigung von Eingaben besteht. Es ist möglich für einen entfernten, authentisierten Angreifer beliebigen Programmcode mit Administratorrechte auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T035265",
+          "T035266"
+        ]
+      },
+      "release_date": "2024-06-09T22:00:00.000+00:00",
+      "title": "CVE-2024-37569"
+    },
+    {
+      "cve": "CVE-2024-37570",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Mitel SIP Phone. Diese ist auf eine fehlende Bereinigung von Eingaben bei Benutzernamen und Pfaden zurückzuführen. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T035265"
+        ]
+      },
+      "release_date": "2024-06-09T22:00:00.000+00:00",
+      "title": "CVE-2024-37570"
+    }
+  ]
+}

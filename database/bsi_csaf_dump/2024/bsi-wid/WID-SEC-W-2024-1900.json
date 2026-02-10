@@ -1,0 +1,186 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Drupal ist ein freies Content-Management-System, basierend auf der Scriptsprache PHP und einer SQL-Datenbank. Über zahlreiche Extensions kann der Funktionsumfang der Core-Installation individuell erweitert werden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in verschiedenen Drupal Modulen ausnutzen, um Sicherheitsvorkehrungen zu umgehen, um beliebigen Code auszuführen oder einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1900 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1900.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1900 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1900"
+      },
+      {
+        "category": "external",
+        "summary": "Drupal Security-news - SA-CONTRIB-2024-030 vom 2024-08-21",
+        "url": "https://www.drupal.org/sa-contrib-2024-030"
+      },
+      {
+        "category": "external",
+        "summary": "Drupal Security-news - SA-CONTRIB-2024-031 vom 2024-08-21",
+        "url": "https://www.drupal.org/sa-contrib-2024-031"
+      },
+      {
+        "category": "external",
+        "summary": "Drupal Security-news - SA-CONTRIB-2024-032 vom 2024-08-21",
+        "url": "https://www.drupal.org/sa-contrib-2024-032"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Drupal Module: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-01-09T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-01-10T12:47:16.893+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-1900",
+      "initial_release_date": "2024-08-21T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-08-21T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-01-09T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Opigno",
+                "product": {
+                  "name": "Open Source Drupal Opigno",
+                  "product_id": "T037018",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:drupal:drupal:opigno"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Responsive and off-canvas menu",
+                "product": {
+                  "name": "Open Source Drupal Responsive and off-canvas menu",
+                  "product_id": "T037019",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:drupal:drupal:responsive_and_off-canvas_menu"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Drupal"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-13266",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Drupal. Dieser Fehler betrifft das Responsive- und Off-Canvas-Menü-Modul aufgrund einer unsachgemäßen Durchsetzung von Zugriffsbeschränkungen für benutzerdefinierte Knoten. Ein Angreifer kann diese Schwachstelle ausnutzen, um die Zugriffskontrollmaßnahmen zu umgehen. Nur Sites mit Modulen, die hook_ENTITY_TYPE_access implementieren, um den Zugriff auf Knoten zu beschränken, sind davon betroffen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037019"
+        ]
+      },
+      "release_date": "2024-08-21T22:00:00.000+00:00",
+      "title": "CVE-2024-13266"
+    },
+    {
+      "cve": "CVE-2024-13267",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Drupal, die das Opigno-Modul betreffen. Diese Fehler bestehen aufgrund einer unsachgemäßen Validierung von hochgeladenen Dateien, wodurch beliebige Dateien hochgeladen werden können. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037018"
+        ]
+      },
+      "release_date": "2024-08-21T22:00:00.000+00:00",
+      "title": "CVE-2024-13267"
+    },
+    {
+      "cve": "CVE-2024-13268",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Drupal, die das Opigno-Modul betreffen. Diese Fehler bestehen aufgrund einer unsachgemäßen Validierung von hochgeladenen Dateien, wodurch beliebige Dateien hochgeladen werden können. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037018"
+        ]
+      },
+      "release_date": "2024-08-21T22:00:00.000+00:00",
+      "title": "CVE-2024-13268"
+    }
+  ]
+}

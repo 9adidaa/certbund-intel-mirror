@@ -1,0 +1,192 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Red Hat OpenShift ist eine \"Platform as a Service\" (PaaS) Lösung zur Bereitstellung von Applikationen in der Cloud.\r\nApache Camel ist ein Integrations-Framework, das Enterprise Integration Patterns implementiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Red Hat OpenShift und Apache Camel ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0351 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0351.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0351 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0351"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory  vom 2024-02-12",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0792"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory & POC",
+        "url": "https://github.com/json-path/JsonPath/issues/973"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2256063",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2256063"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:2707 vom 2024-05-06",
+        "url": "https://access.redhat.com/errata/RHSA-2024:2707"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:3527 vom 2024-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2024:3527"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Red Hat OpenShift und Apache Camel: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2024-05-30T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:05:06.953+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0351",
+      "initial_release_date": "2024-02-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-05-06T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-05-30T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.0",
+                "product": {
+                  "name": "Apache Camel <4.0",
+                  "product_id": "T028461"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<3.20.5",
+                "product": {
+                  "name": "Apache Camel <3.20.5",
+                  "product_id": "T032694"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Camel"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Red Hat OpenShift",
+            "product": {
+              "name": "Red Hat OpenShift",
+              "product_id": "T032693",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:redhat:openshift:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-51074",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Red Hat OpenShift und Apache Camel. Dieser Fehler besteht in der Methode Criteria.parse in json-path aufgrund einer unkontrollierten Rekursion, die zu einem stapelbasierten Pufferüberlauf führt. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T032693"
+        ]
+      },
+      "release_date": "2024-02-12T23:00:00.000+00:00",
+      "title": "CVE-2023-51074"
+    }
+  ]
+}

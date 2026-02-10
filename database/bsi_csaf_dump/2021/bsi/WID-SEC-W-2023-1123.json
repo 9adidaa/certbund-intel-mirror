@@ -1,0 +1,289 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Red Hat Enterprise Linux (RHEL) ist eine populäre Linux-Distribution.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Red Hat Enterprise Linux libwebp ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1123 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2021/wid-sec-w-2023-1123.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1123 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1123"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-1748 vom 2023-05-24",
+        "url": "https://alas.aws.amazon.com/ALAS-2023-1748.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-2048 vom 2023-05-17",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2048.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-2031 vom 2023-05-03",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2031.html"
+      },
+      {
+        "category": "external",
+        "summary": "RedHat Security Advisory vom 2021-11-09",
+        "url": "https://access.redhat.com/errata/RHSA-2021:4231"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Red Hat Enterprise Linux (libwebp): Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-05-23T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:50:14.746+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1123",
+      "initial_release_date": "2021-11-09T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2021-11-09T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-05-02T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-05-16T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-05-23T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-25009",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2018-25009"
+    },
+    {
+      "cve": "CVE-2018-25010",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2018-25010"
+    },
+    {
+      "cve": "CVE-2018-25012",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2018-25012"
+    },
+    {
+      "cve": "CVE-2018-25013",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2018-25013"
+    },
+    {
+      "cve": "CVE-2018-25014",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2018-25014"
+    },
+    {
+      "cve": "CVE-2020-36330",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2020-36330"
+    },
+    {
+      "cve": "CVE-2020-36331",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2020-36331"
+    },
+    {
+      "cve": "CVE-2020-36332",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der libwebp Komponente in Red Hat Enterprise Linux existieren mehrere Schwachstellen. Diese basieren auf \"out-of-bounds-read\" Fehlern und einer uninitialierten Variablen in der \"ReadSymbol\" Funktion. Ein entfernter anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen oder Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "398363"
+        ]
+      },
+      "release_date": "2021-11-09T23:00:00.000+00:00",
+      "title": "CVE-2020-36332"
+    }
+  ]
+}

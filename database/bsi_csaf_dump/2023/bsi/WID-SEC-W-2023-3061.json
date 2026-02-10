@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "FreeBSD ist ein Open Source Betriebssystem aus der BSD Familie und gehört damit zu den Unix Derivaten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in FreeBSD OS ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-3061 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-3061.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-3061 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-3061"
+      },
+      {
+        "category": "external",
+        "summary": "FreeBSD Security Advisory FreeBSD-SA-23:17.pf vom 2023-12-05",
+        "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-23:17.pf.asc"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "FreeBSD OS: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2023-12-05T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:02:22.918+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-3061",
+      "initial_release_date": "2023-12-05T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-12-05T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "FreeBSD Project FreeBSD OS < stable/14-n265915",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS < stable/14-n265915",
+                  "product_id": "T031481",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:freebsd:freebsd:stable14-n265915"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "FreeBSD Project FreeBSD OS < releng/14.0-n265395",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS < releng/14.0-n265395",
+                  "product_id": "T031482",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:freebsd:freebsd:releng14.0-n265395"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "FreeBSD Project FreeBSD OS < stable/13-n256844",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS < stable/13-n256844",
+                  "product_id": "T031483",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:freebsd:freebsd:stable13-n256844"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "FreeBSD Project FreeBSD OS < releng/13.2-n254647",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS < releng/13.2-n254647",
+                  "product_id": "T031484",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:freebsd:freebsd:releng13.2-n254647"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "FreeBSD OS"
+          }
+        ],
+        "category": "vendor",
+        "name": "FreeBSD Project"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-6534",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle im FreeBSD OS. Dieser Fehler besteht in der Komponente pf aufgrund einer fehlenden Implementierung der Sequenznummernüberprüfung, die es erlaubt, Pakete in den TCP-Stream einzuschleusen, die für einen Host hinter einer pf-Firewall bestimmt sind. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "release_date": "2023-12-05T23:00:00.000+00:00",
+      "title": "CVE-2023-6534"
+    }
+  ]
+}

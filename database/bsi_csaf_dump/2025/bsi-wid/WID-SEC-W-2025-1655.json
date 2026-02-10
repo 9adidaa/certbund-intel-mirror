@@ -1,0 +1,187 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM Informix ist ein Datenbankmanagementsystem (DBMS) von IBM.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in IBM Informix ausnutzen, um Sicherheitsmaßnahmen zu umgehen und einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1655 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1655.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1655 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1655"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin vom 2025-07-27",
+        "url": "https://www.ibm.com/support/pages/node/7240777"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM Informix Dynamic Server: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-07-28T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-07-29T08:05:07.042+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1655",
+      "initial_release_date": "2025-07-27T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-07-27T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-07-28T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2024-54827, EUVD-2024-54828"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "HQ <3.0.0",
+                "product": {
+                  "name": "IBM Informix HQ <3.0.0",
+                  "product_id": "T045698"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "HQ 3.0.0",
+                "product": {
+                  "name": "IBM Informix HQ 3.0.0",
+                  "product_id": "T045698-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:informix:hq__3.0.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Dynamic Server <12.10.xC16W2",
+                "product": {
+                  "name": "IBM Informix Dynamic Server <12.10.xC16W2",
+                  "product_id": "T045699"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Dynamic Server 12.10.xC16W2",
+                "product": {
+                  "name": "IBM Informix Dynamic Server 12.10.xC16W2",
+                  "product_id": "T045699-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:informix:dynamic_server__12.10.xc16w2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Dynamic Server <14.10.xC11W1",
+                "product": {
+                  "name": "IBM Informix Dynamic Server <14.10.xC11W1",
+                  "product_id": "T045700"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Dynamic Server 14.10.xC11W1",
+                "product": {
+                  "name": "IBM Informix Dynamic Server 14.10.xC11W1",
+                  "product_id": "T045700-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:informix:dynamic_server__14.10.xc11w1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Informix"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-49342",
+      "product_status": {
+        "known_affected": [
+          "T045699",
+          "T045698",
+          "T045700"
+        ]
+      },
+      "release_date": "2025-07-27T22:00:00.000+00:00",
+      "title": "CVE-2024-49342"
+    },
+    {
+      "cve": "CVE-2024-49343",
+      "product_status": {
+        "known_affected": [
+          "T045699",
+          "T045698",
+          "T045700"
+        ]
+      },
+      "release_date": "2025-07-27T22:00:00.000+00:00",
+      "title": "CVE-2024-49343"
+    }
+  ]
+}

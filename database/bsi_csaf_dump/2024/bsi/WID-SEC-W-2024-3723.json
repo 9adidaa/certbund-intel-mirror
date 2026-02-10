@@ -1,0 +1,166 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "BeyondTrust Privileged Remote Access (PRA) bietet privilegierten Benutzern und externen Anbietern sicheren, überwachten Zugriff auf kritische Systeme und IT-Infrastrukturen.\r\nBeyondTrust Remote Support (RS) ermöglicht IT-Teams und Dienstleistern sicheren, interaktiven Fernzugriff zur Unterstützung von Endbenutzern",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in BeyondTrust Privileged Remote Access und BeyondTrust Remote Support ausnutzen, um beliebigen Programmcode mit Benutzerrechten auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3723 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3723.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3723 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3723"
+      },
+      {
+        "category": "external",
+        "summary": "Beyontrust Security Advisory vom 2024-12-17",
+        "url": "https://www.beyondtrust.com/trust-center/security-advisories/bt24-10"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2024-12-19",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "BeyondTrust Privileged Remote Access und Remote Support: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit Benutzerrechten",
+    "tracking": {
+      "current_release_date": "2024-12-19T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-20T09:12:24.187+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3723",
+      "initial_release_date": "2024-12-17T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-17T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-12-19T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Schwachstelle wird ausgenutzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24.3.1",
+                "product": {
+                  "name": "BeyondTrust Privileged Remote Access <=24.3.1",
+                  "product_id": "T039912"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=24.3.1",
+                "product": {
+                  "name": "BeyondTrust Privileged Remote Access <=24.3.1",
+                  "product_id": "T039912-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Privileged Remote Access"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24.3.1",
+                "product": {
+                  "name": "BeyondTrust Remote Support <=24.3.1",
+                  "product_id": "T039913"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=24.3.1",
+                "product": {
+                  "name": "BeyondTrust Remote Support <=24.3.1",
+                  "product_id": "T039913-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Remote Support"
+          }
+        ],
+        "category": "vendor",
+        "name": "BeyondTrust"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-12356",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in BeyondTrust Privileged Remote Access und BeyondTrust Remote Support. Dieser Fehler existiert wegen eines Befehlsinjektionsproblems. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebige zugrundeliegende Betriebssystembefehle im Kontext des Benutzers der Website auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T039913",
+          "T039912"
+        ]
+      },
+      "release_date": "2024-12-17T23:00:00.000+00:00",
+      "title": "CVE-2024-12356"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "PgBouncer ist ein leichtgewichtiger Connection-Pooler für PostgreSQL",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in PgBouncer ausnutzen, um einen SQL-Injection Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2734 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2734.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2734 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2734"
+      },
+      {
+        "category": "external",
+        "summary": "PgBouncer Release 1.25.1 vom 2025-12-03",
+        "url": "https://www.pgbouncer.org/2025/12/pgbouncer-1.25-1"
+      },
+      {
+        "category": "external",
+        "summary": "PgBouncer changelog vom 2025-12-03",
+        "url": "https://www.pgbouncer.org/changelog.html"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates vom 2025-12-09",
+        "url": "https://msrc.microsoft.com/update-guide/"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4422 vom 2025-12-27",
+        "url": "https://lists.debian.org/debian-lts-announce/2025/12/msg00033.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "PgBouncer: Schwachstelle ermöglicht SQL injection",
+    "tracking": {
+      "current_release_date": "2025-12-28T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-12-29T08:50:07.294+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2734",
+      "initial_release_date": "2025-12-03T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-12-03T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-12-09T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates aufgenommen"
+        },
+        {
+          "date": "2025-12-28T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Debian aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "azl3",
+                "product": {
+                  "name": "Microsoft Azure Linux azl3",
+                  "product_id": "T049210",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:azure_linux:azl3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Azure Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.25.1",
+                "product": {
+                  "name": "Open Source PgBouncer <1.25.1",
+                  "product_id": "T049073"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.25.1",
+                "product": {
+                  "name": "Open Source PgBouncer 1.25.1",
+                  "product_id": "T049073-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:pgbouncer:1.25.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PgBouncer"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-12819",
+      "product_status": {
+        "known_affected": [
+          "T049073",
+          "2951",
+          "T049210"
+        ]
+      },
+      "release_date": "2025-12-03T23:00:00.000+00:00",
+      "title": "CVE-2025-12819"
+    }
+  ]
+}

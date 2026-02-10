@@ -1,0 +1,310 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Jenkins ist ein erweiterbarer, webbasierter Integration Server zur kontinuierlichen Unterstützung bei Softwareentwicklungen aller Art.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Jenkins ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1471 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1471.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1471 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1471"
+      },
+      {
+        "category": "external",
+        "summary": "Jenkins Security Advisory 2023-06-14  vom 2023-06-14",
+        "url": "https://www.jenkins.io/security/advisory/2023-06-14/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Jenkins Core und Jenkins Plugins: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-06-14T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:52:34.781+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1471",
+      "initial_release_date": "2023-06-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-06-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins Plugins",
+                "product": {
+                  "name": "Jenkins Jenkins Plugins",
+                  "product_id": "T013614",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:plugins"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins weekly < 2.400",
+                "product": {
+                  "name": "Jenkins Jenkins weekly < 2.400",
+                  "product_id": "T028134",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:weekly__2.400"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins LTS < 2.401.1",
+                "product": {
+                  "name": "Jenkins Jenkins LTS < 2.401.1",
+                  "product_id": "T028135",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:lts__2.401.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Jenkins"
+          }
+        ],
+        "category": "vendor",
+        "name": "Jenkins"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-35149",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35149"
+    },
+    {
+      "cve": "CVE-2023-35148",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35148"
+    },
+    {
+      "cve": "CVE-2023-35147",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35147"
+    },
+    {
+      "cve": "CVE-2023-35146",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35146"
+    },
+    {
+      "cve": "CVE-2023-35145",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35145"
+    },
+    {
+      "cve": "CVE-2023-35144",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35144"
+    },
+    {
+      "cve": "CVE-2023-35143",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35143"
+    },
+    {
+      "cve": "CVE-2023-35142",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35142"
+    },
+    {
+      "cve": "CVE-2023-35141",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-35141"
+    },
+    {
+      "cve": "CVE-2023-32262",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-32262"
+    },
+    {
+      "cve": "CVE-2023-32261",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins Core und Jenkins Plugins. Die Fehler bestehen in den Plugins AWS CodeCommit Trigger, Checkmarx, Digital.ai App Management Publisher, Dimensions, Maven Repository Server, Sonargraph Integration, Team Concert, Template Workflows u.a. aufgrund mehrerer Cross-Site-Request-Forgeries, einer unsachgemäßen SSL/TLS-Zertifikatsvalidierung, fehlender Berechtigungsprüfungen und dem Lesen beliebiger Dateien. Ein entfernter, authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-06-14T22:00:00.000+00:00",
+      "title": "CVE-2023-32261"
+    }
+  ]
+}

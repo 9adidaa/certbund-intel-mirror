@@ -1,0 +1,804 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache Tomcat ist ein Web-Applikationsserver für verschiedene Plattformen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Apache Tomcat ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- NetApp Appliance\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3744 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3744.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3744 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3744"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Security Mailing List vom 2024-12-22",
+        "url": "https://seclists.org/oss-sec/2024/q4/164"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla vom 2024-12-22",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2333521"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-12-22",
+        "url": "https://github.com/advisories/GHSA-27hp-xhwr-wr2m"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20250103-0002 vom 2025-01-03",
+        "url": "https://security.netapp.com/advisory/ntap-20250103-0002/"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7180700 vom 2025-01-10",
+        "url": "https://www.ibm.com/support/pages/node/7180700"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4017 vom 2025-01-17",
+        "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00009.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5845 vom 2025-01-17",
+        "url": "https://lists.debian.org/debian-security-announce/2025/msg00007.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASTOMCAT9-2025-015 vom 2025-01-24",
+        "url": "https://alas.aws.amazon.com/AL2/ALASTOMCAT9-2025-015.html"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Security Bulletin",
+        "url": "https://confluence.atlassian.com/security/security-bulletin-february-18-2025-1510670627.html"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7183584 vom 2025-02-18",
+        "url": "https://www.ibm.com/support/pages/node/7183584"
+      },
+      {
+        "category": "external",
+        "summary": "ATOSS Security News vom 2025-02-21",
+        "url": "https://www.atoss.ch/de-ch/sicherheit/security-news"
+      },
+      {
+        "category": "external",
+        "summary": "Camunda Security Notice vom 2025-03-10",
+        "url": "https://docs.camunda.org/security/notices/#notice-130"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2025:14896-1 vom 2025-03-16",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/WQRQ6JSFISH4LSDOH7IDJHNYPKMGUF5X/"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2025:14897-1 vom 2025-03-16",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/7OKLY4MUG7KKGPWMJ2OO7BLP5MD4C3UC/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1024-1 vom 2025-03-26",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-March/020602.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1126-1 vom 2025-04-03",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/BWB3ONW7PC4GFVVAWTBQCRXXSFFEFAZL/"
+      },
+      {
+        "category": "external",
+        "summary": "NetX Release Notes abgerufen am 2025-05-09",
+        "url": "https://support.netx.net/hc/en-us/articles/4410091740695-NetX-Release-Notes"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:4521 vom 2025-05-08",
+        "url": "https://access.redhat.com/errata/RHSA-2025:4521"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:4522 vom 2025-05-08",
+        "url": "https://access.redhat.com/errata/RHSA-2025:4522"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS2TOMCAT9-2025-015 vom 2025-07-01",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS2TOMCAT9-2025-015.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:11335 vom 2025-07-16",
+        "url": "https://access.redhat.com/errata/RHSA-2025:11335"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-11335 vom 2025-07-17",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-11335.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:11334 vom 2025-07-16",
+        "url": "https://access.redhat.com/errata/RHSA-2025:11334"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:11333 vom 2025-07-16",
+        "url": "https://access.redhat.com/errata/RHSA-2025:11333"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-11333 vom 2025-07-17",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-11333.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:11332 vom 2025-07-16",
+        "url": "https://access.redhat.com/errata/RHSA-2025:11332"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:11381 vom 2025-07-17",
+        "url": "https://access.redhat.com/errata/RHSA-2025:11381"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:11382 vom 2025-07-17",
+        "url": "https://access.redhat.com/errata/RHSA-2025:11382"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-11332 vom 2025-07-17",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-11332.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache Tomcat: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2025-07-17T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-07-18T08:27:51.080+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-3744",
+      "initial_release_date": "2024-12-22T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-22T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-12-23T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Anpassung der Produkt-Versionen"
+        },
+        {
+          "date": "2025-01-02T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von NetApp aufgenommen"
+        },
+        {
+          "date": "2025-01-12T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-01-16T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2025-01-19T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2025-01-26T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2025-02-18T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-02-23T23:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates aufgenommen"
+        },
+        {
+          "date": "2025-03-10T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates aufgenommen"
+        },
+        {
+          "date": "2025-03-16T23:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2025-03-26T23:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-04-03T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-05-08T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Update von NetX aufgenommen"
+        },
+        {
+          "date": "2025-06-30T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2025-07-16T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Red Hat und Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-07-17T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "17"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "ATOSS Staff Efficiency Suite",
+            "product": {
+              "name": "ATOSS Staff Efficiency Suite",
+              "product_id": "T041371",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:atoss:staff_efficiency_suite:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "ATOSS"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<11.0.2",
+                "product": {
+                  "name": "Apache Tomcat <11.0.2",
+                  "product_id": "T039886"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.0.2",
+                "product": {
+                  "name": "Apache Tomcat 11.0.2",
+                  "product_id": "T039886-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:11.0.2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<10.1.34",
+                "product": {
+                  "name": "Apache Tomcat <10.1.34",
+                  "product_id": "T039887"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.1.34",
+                "product": {
+                  "name": "Apache Tomcat 10.1.34",
+                  "product_id": "T039887-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:10.1.34"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<9.0.98",
+                "product": {
+                  "name": "Apache Tomcat <9.0.98",
+                  "product_id": "T039888"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.0.98",
+                "product": {
+                  "name": "Apache Tomcat 9.0.98",
+                  "product_id": "T039888-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:tomcat:9.0.98"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Tomcat"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Data Center and Server <9.2.1",
+                "product": {
+                  "name": "Atlassian Confluence Data Center and Server <9.2.1",
+                  "product_id": "T041273"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Data Center and Server 9.2.1",
+                "product": {
+                  "name": "Atlassian Confluence Data Center and Server 9.2.1",
+                  "product_id": "T041273-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:atlassian:confluence:data_center_and_server__9.2.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Data Center and Server <8.5.19",
+                "product": {
+                  "name": "Atlassian Confluence Data Center and Server <8.5.19",
+                  "product_id": "T041274"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Data Center and Server 8.5.19",
+                "product": {
+                  "name": "Atlassian Confluence Data Center and Server 8.5.19",
+                  "product_id": "T041274-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:atlassian:confluence:data_center_and_server__8.5.19"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Confluence"
+          }
+        ],
+        "category": "vendor",
+        "name": "Atlassian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM Integration Bus",
+            "product": {
+              "name": "IBM Integration Bus",
+              "product_id": "T039654",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:integration_bus:for_zos"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.5.0 UP11 IF01",
+                "product": {
+                  "name": "IBM QRadar SIEM <7.5.0 UP11 IF01",
+                  "product_id": "T041270"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.5.0 UP11 IF01",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5.0 UP11 IF01",
+                  "product_id": "T041270-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5.0_up11_if01"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "for Linux",
+                "product": {
+                  "name": "NetApp ActiveIQ Unified Manager for Linux",
+                  "product_id": "T023548",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_linux"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "for VMware vSphere",
+                "product": {
+                  "name": "NetApp ActiveIQ Unified Manager for VMware vSphere",
+                  "product_id": "T025152",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_vmware_vsphere"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "for Microsoft Windows",
+                "product": {
+                  "name": "NetApp ActiveIQ Unified Manager for Microsoft Windows",
+                  "product_id": "T025631",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_microsoft_windows"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ActiveIQ Unified Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<11.12.4",
+                "product": {
+                  "name": "NetX NetX <11.12.4",
+                  "product_id": "T043517"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.12.4",
+                "product": {
+                  "name": "NetX NetX 11.12.4",
+                  "product_id": "T043517-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netx:netx:11.12.4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetX"
+          }
+        ],
+        "category": "vendor",
+        "name": "NetX"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.20.11",
+                "product": {
+                  "name": "Open Source Camunda <7.20.11",
+                  "product_id": "T041688"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.20.11",
+                "product": {
+                  "name": "Open Source Camunda 7.20.11",
+                  "product_id": "T041688-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.20.11"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.21.8",
+                "product": {
+                  "name": "Open Source Camunda <7.21.8",
+                  "product_id": "T041689"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.21.8",
+                "product": {
+                  "name": "Open Source Camunda 7.21.8",
+                  "product_id": "T041689-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.21.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.22.3",
+                "product": {
+                  "name": "Open Source Camunda <7.22.3",
+                  "product_id": "T041690"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.22.3",
+                "product": {
+                  "name": "Open Source Camunda 7.22.3",
+                  "product_id": "T041690-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.22.3"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.23.0-alpha4",
+                "product": {
+                  "name": "Open Source Camunda <7.23.0-alpha4",
+                  "product_id": "T041691"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.23.0-alpha4",
+                "product": {
+                  "name": "Open Source Camunda 7.23.0-alpha4",
+                  "product_id": "T041691-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:camunda:camunda:7.23.0-alpha4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Camunda"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.8.4",
+                "product": {
+                  "name": "Red Hat JBoss Web Server <5.8.4",
+                  "product_id": "T043515"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.8.4",
+                "product": {
+                  "name": "Red Hat JBoss Web Server 5.8.4",
+                  "product_id": "T043515-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:jboss_enterprise_web_server:5.8.4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "JBoss Web Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-56337",
+      "product_status": {
+        "known_affected": [
+          "T025152",
+          "67646",
+          "T039887",
+          "T043517",
+          "T039886",
+          "T039888",
+          "T004914",
+          "T039654",
+          "T023548",
+          "T041274",
+          "T041273",
+          "T041691",
+          "T041371",
+          "T041690",
+          "2951",
+          "T002207",
+          "T041270",
+          "T043515",
+          "T025631",
+          "T027843",
+          "T041689",
+          "398363",
+          "T041688"
+        ]
+      },
+      "release_date": "2024-12-22T23:00:00.000+00:00",
+      "title": "CVE-2024-56337"
+    }
+  ]
+}

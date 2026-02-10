@@ -1,0 +1,176 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Checkmk ist eine IT-Monitoring-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Checkmk ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Appliance\n- Linux\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2149 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2149.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2149 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2149"
+      },
+      {
+        "category": "external",
+        "summary": "checkmk Werk #17094 vom 2024-09-15",
+        "url": "https://checkmk.com/werk/17094"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Checkmk: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-09-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-16T11:31:55.867+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2149",
+      "initial_release_date": "2024-09-15T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-15T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2.4.0b1",
+                "product": {
+                  "name": "Checkmk Checkmk <2.4.0b1",
+                  "product_id": "T037644"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.4.0b1",
+                "product": {
+                  "name": "Checkmk Checkmk 2.4.0b1",
+                  "product_id": "T037644-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:checkmk:checkmk:2.4.0b1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.3.0p16",
+                "product": {
+                  "name": "Checkmk Checkmk <2.3.0p16",
+                  "product_id": "T037645"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.3.0p16",
+                "product": {
+                  "name": "Checkmk Checkmk 2.3.0p16",
+                  "product_id": "T037645-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:checkmk:checkmk:2.3.0p16"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.2.0p34",
+                "product": {
+                  "name": "Checkmk Checkmk <2.2.0p34",
+                  "product_id": "T037646"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.2.0p34",
+                "product": {
+                  "name": "Checkmk Checkmk 2.2.0p34",
+                  "product_id": "T037646-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:checkmk:checkmk:2.2.0p34"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Checkmk"
+          }
+        ],
+        "category": "vendor",
+        "name": "Checkmk"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-38860",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Checkmk existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden auf der SAML-Login-Seite nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037646",
+          "T037644",
+          "T037645"
+        ]
+      },
+      "release_date": "2024-09-15T22:00:00.000+00:00",
+      "title": "CVE-2024-38860"
+    }
+  ]
+}

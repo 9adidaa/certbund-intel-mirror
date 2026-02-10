@@ -1,0 +1,186 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "WinCC (Windows Control Center) ist ein PC-basiertes Prozessvisualisierungssystem von Siemens.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein anonymer Angreifer im angrenzenden Netzbereich kann mehrere Schwachstellen in Siemens SIMATIC WinCC ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0356 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0356.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0356 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0356"
+      },
+      {
+        "category": "external",
+        "summary": "Siemens Security Advisory vom 2024-02-12",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-753746.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Siemens SIMATIC WinCC: Mehrere Schwachstellen ermöglichen Denial of Service",
+    "tracking": {
+      "current_release_date": "2024-02-12T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:05:08.144+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0356",
+      "initial_release_date": "2024-02-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "7.4",
+                "product": {
+                  "name": "Siemens SIMATIC WinCC 7.4",
+                  "product_id": "721799",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:siemens:simatic_wincc:7.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 7.5 SP2 Update 15",
+                "product": {
+                  "name": "Siemens SIMATIC WinCC < 7.5 SP2 Update 15",
+                  "product_id": "T032708"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 8.0 SP4",
+                "product": {
+                  "name": "Siemens SIMATIC WinCC < 8.0 SP4",
+                  "product_id": "T032709"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Runtime Professional V19",
+                "product": {
+                  "name": "Siemens SIMATIC WinCC Runtime Professional V19",
+                  "product_id": "T032710",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:siemens:simatic_wincc:runtime_professional_v19"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Runtime Professional V18",
+                "product": {
+                  "name": "Siemens SIMATIC WinCC Runtime Professional V18",
+                  "product_id": "T032711",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:siemens:simatic_wincc:runtime_professional_v18"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-48364",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Siemens SIMATIC WinCC. Dieser Fehler besteht im RPC (Remote Procedure Call)-Kommunikationsprotokoll aufgrund einer fehlerhaften Behandlung bestimmter RPC-Meldungen. Ein anonymer Angreifer im angrenzenden Netzbereich kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032710",
+          "721799",
+          "T032711"
+        ]
+      },
+      "release_date": "2024-02-12T23:00:00.000+00:00",
+      "title": "CVE-2023-48364"
+    },
+    {
+      "cve": "CVE-2023-48363",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Siemens SIMATIC WinCC. Dieser Fehler besteht im RPC (Remote Procedure Call)-Kommunikationsprotokoll aufgrund einer fehlerhaften Behandlung bestimmter RPC-Meldungen. Ein anonymer Angreifer im angrenzenden Netzbereich kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032710",
+          "721799",
+          "T032711"
+        ]
+      },
+      "release_date": "2024-02-12T23:00:00.000+00:00",
+      "title": "CVE-2023-48363"
+    }
+  ]
+}

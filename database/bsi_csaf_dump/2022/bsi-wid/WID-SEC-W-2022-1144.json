@@ -1,0 +1,152 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Mit Xpdf können PDF-Dokumente betrachtet werden. Dieser PDF-Betrachter ist zudem auch für Microsoft Windows verfügbar.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in xpdf ausnutzen, um beliebigen Programmcode auszuführen oder einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-1144 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-1144.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-1144 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-1144"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla - Bug 2120439 vom 2022-08-22",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2120439"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202405-18 vom 2024-05-07",
+        "url": "https://security.gentoo.org/glsa/202405-18"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "xpdf: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-05-06T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:33:48.594+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-1144",
+      "initial_release_date": "2022-08-22T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-08-22T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-05-06T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.04",
+                "product": {
+                  "name": "Open Source xpdf <4.04",
+                  "product_id": "T022953"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "xpdf"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-38171",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in xpdf. Diese ist auf einen Integer Überlauf im \"JBIG2 decoder\" zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T012167"
+        ]
+      },
+      "release_date": "2022-08-22T22:00:00.000+00:00",
+      "title": "CVE-2022-38171"
+    }
+  ]
+}

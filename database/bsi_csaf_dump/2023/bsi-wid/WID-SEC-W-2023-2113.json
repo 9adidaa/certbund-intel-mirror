@@ -1,0 +1,180 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Perl ist eine freie, plattformunabhängige und interpretierte Programmiersprache (Skriptsprache).",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann eine Schwachstelle in Perl ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2113 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2113.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2113 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2113"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Security Advisory GHSA-96cv-gp7m-9r39 vom 2023-08-22",
+        "url": "https://github.com/advisories/GHSA-96cv-gp7m-9r39"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6517-1 vom 2023-11-27",
+        "url": "https://ubuntu.com/security/notices/USN-6517-1"
+      },
+      {
+        "category": "external",
+        "summary": "IGEL Security Notice ISN-2023-34 vom 2023-12-19",
+        "url": "https://kb.igel.com/securitysafety/en/isn-2023-34-perl-vulnerabilities-108345317.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Perl: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2023-12-18T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:18.318+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2113",
+      "initial_release_date": "2023-08-22T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-22T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-11-27T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2023-12-18T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von IGEL aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IGEL OS < 11.09.160",
+            "product": {
+              "name": "IGEL OS < 11.09.160",
+              "product_id": "T031752",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:igel:os:11.09.160"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IGEL"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Perl <= 5.34.0",
+            "product": {
+              "name": "Open Source Perl <= 5.34.0",
+              "product_id": "T029450",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:perl:perl:5.34.0"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-48522",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Perl. Dieser Fehler besteht in der Funktion S_find_uninit_var in sv.c aufgrund eines Stack-basierten Absturzes. Ein Angreifer kann diese Schwachstelle ausnutzen, um seine Privilegien zu erweitern oder beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T031752",
+          "T000126"
+        ],
+        "last_affected": [
+          "T029450"
+        ]
+      },
+      "release_date": "2023-08-22T22:00:00.000+00:00",
+      "title": "CVE-2022-48522"
+    }
+  ]
+}

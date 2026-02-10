@@ -1,0 +1,169 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Zoom Rooms ist ein softwarebasiertes Raumsystem, das integrierte Audiokonferenzen, drahtlose Bildschirmfreigabe und Videokonferenzen ermöglicht.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Zoom Video Communications Rooms ausnutzen, um seine Privilegien zu erhöhen und vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2797 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2797.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2797 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2797"
+      },
+      {
+        "category": "external",
+        "summary": "Zoom Security Bulletin ZSB-25050 vom 2025-12-09",
+        "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-25050/"
+      },
+      {
+        "category": "external",
+        "summary": "Zoom Security Bulletin ZSB-25051 vom 2025-12-09",
+        "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-25051/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Zoom Video Communications Rooms: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-12-10T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-12-11T09:45:32.994+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2797",
+      "initial_release_date": "2025-12-09T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-12-09T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-12-10T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2025-202605, EUVD-2025-202604"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Windows <6.6.0",
+                "product": {
+                  "name": "Zoom Video Communications Rooms Windows <6.6.0",
+                  "product_id": "T049281"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Windows 6.6.0",
+                "product": {
+                  "name": "Zoom Video Communications Rooms Windows 6.6.0",
+                  "product_id": "T049281-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zoom:rooms:windows__6.6.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "macOS <6.6.0",
+                "product": {
+                  "name": "Zoom Video Communications Rooms macOS <6.6.0",
+                  "product_id": "T049283"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "macOS 6.6.0",
+                "product": {
+                  "name": "Zoom Video Communications Rooms macOS 6.6.0",
+                  "product_id": "T049283-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zoom:rooms:macos__6.6.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Rooms"
+          }
+        ],
+        "category": "vendor",
+        "name": "Zoom Video Communications"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-67460",
+      "product_status": {
+        "known_affected": [
+          "T049281"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-67460"
+    },
+    {
+      "cve": "CVE-2025-67461",
+      "product_status": {
+        "known_affected": [
+          "T049283"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-67461"
+    }
+  ]
+}

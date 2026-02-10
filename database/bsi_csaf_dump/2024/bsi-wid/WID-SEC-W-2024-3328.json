@@ -1,0 +1,1018 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Google Android ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3328 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3328.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3328 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3328"
+      },
+      {
+        "category": "external",
+        "summary": "Android Security Bulletin November 2024 vom 2024-11-04",
+        "url": "https://source.android.com/docs/security/bulletin/2024-11-01"
+      },
+      {
+        "category": "external",
+        "summary": "Samsung Mobile Security Updates",
+        "url": "https://security.samsungmobile.com/securityUpdate.smsb"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Android Patchday November 2024",
+    "tracking": {
+      "current_release_date": "2024-11-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-05T10:40:07.128+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3328",
+      "initial_release_date": "2024-11-04T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-04T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "Google Android 12",
+                  "product_id": "T020881",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "13",
+                "product": {
+                  "name": "Google Android 13",
+                  "product_id": "T024488",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:13"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14",
+                "product": {
+                  "name": "Google Android 14",
+                  "product_id": "T035732",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:14"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15",
+                "product": {
+                  "name": "Google Android 15",
+                  "product_id": "T038021",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:15"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12L",
+                "product": {
+                  "name": "Google Android 12L",
+                  "product_id": "T038759",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:12l"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Samsung Android",
+            "product": {
+              "name": "Samsung Android",
+              "product_id": "T032526",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:samsung:android:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Samsung"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-35659",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2023-35659"
+    },
+    {
+      "cve": "CVE-2023-35686",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2023-35686"
+    },
+    {
+      "cve": "CVE-2024-20104",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-20104"
+    },
+    {
+      "cve": "CVE-2024-20106",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-20106"
+    },
+    {
+      "cve": "CVE-2024-21455",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-21455"
+    },
+    {
+      "cve": "CVE-2024-23385",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-23385"
+    },
+    {
+      "cve": "CVE-2024-23715",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-23715"
+    },
+    {
+      "cve": "CVE-2024-29779",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-29779"
+    },
+    {
+      "cve": "CVE-2024-31337",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-31337"
+    },
+    {
+      "cve": "CVE-2024-34719",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-34719"
+    },
+    {
+      "cve": "CVE-2024-34729",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-34729"
+    },
+    {
+      "cve": "CVE-2024-34747",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-34747"
+    },
+    {
+      "cve": "CVE-2024-36978",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-36978"
+    },
+    {
+      "cve": "CVE-2024-38402",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38402"
+    },
+    {
+      "cve": "CVE-2024-38403",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38403"
+    },
+    {
+      "cve": "CVE-2024-38405",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38405"
+    },
+    {
+      "cve": "CVE-2024-38408",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38408"
+    },
+    {
+      "cve": "CVE-2024-38415",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38415"
+    },
+    {
+      "cve": "CVE-2024-38421",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38421"
+    },
+    {
+      "cve": "CVE-2024-38422",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38422"
+    },
+    {
+      "cve": "CVE-2024-38423",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38423"
+    },
+    {
+      "cve": "CVE-2024-38424",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-38424"
+    },
+    {
+      "cve": "CVE-2024-40660",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-40660"
+    },
+    {
+      "cve": "CVE-2024-40661",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-40661"
+    },
+    {
+      "cve": "CVE-2024-40671",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-40671"
+    },
+    {
+      "cve": "CVE-2024-43047",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43047"
+    },
+    {
+      "cve": "CVE-2024-43080",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43080"
+    },
+    {
+      "cve": "CVE-2024-43081",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43081"
+    },
+    {
+      "cve": "CVE-2024-43082",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43082"
+    },
+    {
+      "cve": "CVE-2024-43083",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43083"
+    },
+    {
+      "cve": "CVE-2024-43084",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43084"
+    },
+    {
+      "cve": "CVE-2024-43085",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43085"
+    },
+    {
+      "cve": "CVE-2024-43086",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43086"
+    },
+    {
+      "cve": "CVE-2024-43087",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43087"
+    },
+    {
+      "cve": "CVE-2024-43088",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43088"
+    },
+    {
+      "cve": "CVE-2024-43089",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43089"
+    },
+    {
+      "cve": "CVE-2024-43090",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43090"
+    },
+    {
+      "cve": "CVE-2024-43091",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43091"
+    },
+    {
+      "cve": "CVE-2024-43093",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-43093"
+    },
+    {
+      "cve": "CVE-2024-46740",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Google Android. Diese Fehler bestehen in verschiedenen Komponenten und Subsystemen wie dem MediaProvider, der Documents UI oder den MediaTek-Komponenten. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen. Um die Schwachstelle erfolgreich auszunutzen, muss ein Benutzer mit einer bösartigen Anwendung interagieren oder auf einen manipulierten Link klicken, der vom Angreifer übermittelt wurde."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038021",
+          "T035732",
+          "T032526",
+          "T038759",
+          "T024488",
+          "T020881"
+        ]
+      },
+      "release_date": "2024-11-04T23:00:00.000+00:00",
+      "title": "CVE-2024-46740"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "TeamViewer ist eine Fernzugriffs- und Fernsteuerungssoftware, die die Wartung von Computern und anderen Geräten ermöglicht.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in TeamViewer ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2222 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2222.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2222 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2222"
+      },
+      {
+        "category": "external",
+        "summary": "TeamViewer Security Bulletin vom 2024-09-25",
+        "url": "https://www.teamviewer.com/en-us/resources/trust-center/security-bulletins/tv-2024-1006/"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7481"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7479"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub vom 2024-10-07",
+        "url": "https://github.com/PeterGabaldon/CVE-2024-7479_CVE-2024-7481"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "TeamViewer: Mehrere Schwachstellen ermöglichen Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-10-07T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-08T09:09:27.678+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-2222",
+      "initial_release_date": "2024-09-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-10-07T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.58.4",
+                "product": {
+                  "name": "TeamViewer TeamViewer <15.58.4",
+                  "product_id": "T037835"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.58.4",
+                "product": {
+                  "name": "TeamViewer TeamViewer 15.58.4",
+                  "product_id": "T037835-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:teamviewer:teamviewer:15.58.4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TeamViewer"
+          }
+        ],
+        "category": "vendor",
+        "name": "TeamViewer"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-7479",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In TeamViewer bestehen mehrere Schwachstellen. Diese Fehler existieren wegen einer unsachgemäßen Überprüfung der kryptographischen Signatur während der Installation eines Printer-Treibers. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen und Treiber zu installieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037835"
+        ]
+      },
+      "release_date": "2024-09-25T22:00:00.000+00:00",
+      "title": "CVE-2024-7479"
+    },
+    {
+      "cve": "CVE-2024-7481",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In TeamViewer bestehen mehrere Schwachstellen. Diese Fehler existieren wegen einer unsachgemäßen Überprüfung der kryptographischen Signatur während der Installation eines Printer-Treibers. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen und Treiber zu installieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037835"
+        ]
+      },
+      "release_date": "2024-09-25T22:00:00.000+00:00",
+      "title": "CVE-2024-7481"
+    }
+  ]
+}

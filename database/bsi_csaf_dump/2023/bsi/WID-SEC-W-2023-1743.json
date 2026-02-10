@@ -1,0 +1,562 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Jenkins ist ein erweiterbarer, webbasierter Integration Server zur kontinuierlichen Unterstützung bei Softwareentwicklungen aller Art.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in Jenkins Plugins ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1743 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1743.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1743 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1743"
+      },
+      {
+        "category": "external",
+        "summary": "Jenkins Security Advisory vom 2023-07-12",
+        "url": "https://www.jenkins.io/security/advisory/2023-07-12/"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0775 vom 2024-02-12",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0775"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0776 vom 2024-02-12",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0776"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0778 vom 2024-02-12",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0778"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0777 vom 2024-02-12",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0777"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Jenkins Plugins: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-11T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:55:30.712+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1743",
+      "initial_release_date": "2023-07-12T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-07-12T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-02-11T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "plugins",
+                "product": {
+                  "name": "Jenkins Jenkins plugins",
+                  "product_id": "T013614",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:plugins"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Jenkins"
+          }
+        ],
+        "category": "vendor",
+        "name": "Jenkins"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-37965",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37965"
+    },
+    {
+      "cve": "CVE-2023-37964",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37964"
+    },
+    {
+      "cve": "CVE-2023-37963",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37963"
+    },
+    {
+      "cve": "CVE-2023-37962",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37962"
+    },
+    {
+      "cve": "CVE-2023-37961",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37961"
+    },
+    {
+      "cve": "CVE-2023-37960",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37960"
+    },
+    {
+      "cve": "CVE-2023-37959",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37959"
+    },
+    {
+      "cve": "CVE-2023-37958",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37958"
+    },
+    {
+      "cve": "CVE-2023-37957",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37957"
+    },
+    {
+      "cve": "CVE-2023-37956",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37956"
+    },
+    {
+      "cve": "CVE-2023-37955",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37955"
+    },
+    {
+      "cve": "CVE-2023-37954",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37954"
+    },
+    {
+      "cve": "CVE-2023-37953",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37953"
+    },
+    {
+      "cve": "CVE-2023-37952",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37952"
+    },
+    {
+      "cve": "CVE-2023-37951",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37951"
+    },
+    {
+      "cve": "CVE-2023-37950",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37950"
+    },
+    {
+      "cve": "CVE-2023-37949",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37949"
+    },
+    {
+      "cve": "CVE-2023-37948",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37948"
+    },
+    {
+      "cve": "CVE-2023-37947",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37947"
+    },
+    {
+      "cve": "CVE-2023-37946",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37946"
+    },
+    {
+      "cve": "CVE-2023-37945",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37945"
+    },
+    {
+      "cve": "CVE-2023-37944",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37944"
+    },
+    {
+      "cve": "CVE-2023-37943",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37943"
+    },
+    {
+      "cve": "CVE-2023-37942",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Jenkins Plugins Active Directory, Assembla Auth, Benchmark Evaluator, Datadog, ElasticBox CI, External Monitor Job Type, mabl, MathWorks Polyspace, OpenShift Login, Oracle Cloud Infrastructure Compute, Orka by MacStadium, Pipeline restFul API, Rebuilder, SAML Single Sign On(SSO), Sumologic Publisher und Test Results Aggregator. Die Fehler bestehen unter anderem durch einen XML external entity Angriff, eine Passwortübertragung im Klartext, fehlende Berechtigungen, einen open redirect Fehler und mehrere Cross Side Request Forgeries. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und Daten zu manipulieren. Die erfolgreiche Ausnutzung dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-12T22:00:00.000+00:00",
+      "title": "CVE-2023-37942"
+    }
+  ]
+}

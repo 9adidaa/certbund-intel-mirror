@@ -1,0 +1,696 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die GNU libc ist die Basis C Bibliothek unter Linux sowie anderen Unix-Betriebssystemen, welche die Systemaufrufe sowie Basisfunktionalität bereitstellt.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in GNU libc ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1089 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1089.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1089 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1089"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2025-05-18",
+        "url": "https://github.com/advisories/GHSA-8mm9-c4mg-vfjh"
+      },
+      {
+        "category": "external",
+        "summary": "European Union Vulnerability Database vom 2025-05-18",
+        "url": "https://euvd.enisa.europa.eu/enisa/EUVD-2025-15553"
+      },
+      {
+        "category": "external",
+        "summary": "glibc Advisory vom 2025-05-18",
+        "url": "https://sourceware.org/cgit/glibc/tree/advisories/GLIBC-SA-2025-0002"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:01702-1 vom 2025-05-26",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-May/020901.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4181 vom 2025-05-27",
+        "url": "https://lists.debian.org/debian-lts-announce/2025/05/msg00033.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7541-1 vom 2025-05-28",
+        "url": "https://ubuntu.com/security/notices/USN-7541-1"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:20332-1 vom 2025-05-29",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-May/020974.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:01784-1 vom 2025-05-30",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-May/020998.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:20361-1 vom 2025-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-June/021012.html"
+      },
+      {
+        "category": "external",
+        "summary": "IGEL Security Notice ISN-2025-21 vom 2025-06-03",
+        "url": "https://kb.igel.com/security-safety/current/isn-2025-21-glibc-vulnerability"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:01702-2 vom 2025-06-04",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-June/021079.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:8655 vom 2025-06-09",
+        "url": "https://access.redhat.com/errata/RHSA-2025:8655"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:8686 vom 2025-06-09",
+        "url": "https://access.redhat.com/errata/RHSA-2025:8686"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-8655 vom 2025-06-10",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-8655.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-8686 vom 2025-06-11",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-8686.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:9028 vom 2025-06-12",
+        "url": "https://access.redhat.com/errata/RHSA-2025:9028"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-20375 vom 2025-06-18",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-20375.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:9336 vom 2025-06-23",
+        "url": "https://access.redhat.com/errata/RHSA-2025:9336"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20250627-0010 vom 2025-06-27",
+        "url": "https://security.netapp.com/advisory/NTAP-20250627-0010"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:9750 vom 2025-07-01",
+        "url": "https://access.redhat.com/errata/RHSA-2025:9750"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:9725 vom 2025-07-02",
+        "url": "https://access.redhat.com/errata/RHSA-2025:9725"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:9765 vom 2025-07-02",
+        "url": "https://access.redhat.com/errata/RHSA-2025:9765"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:10219 vom 2025-07-02",
+        "url": "https://access.redhat.com/errata/RHSA-2025:10219"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:10220 vom 2025-07-02",
+        "url": "https://access.redhat.com/errata/RHSA-2025:10220"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:10294 vom 2025-07-09",
+        "url": "https://access.redhat.com/errata/RHSA-2025:10294"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7240431 vom 2025-07-23",
+        "url": "https://www.ibm.com/support/pages/node/7240431"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7241589 vom 2025-08-06",
+        "url": "https://www.ibm.com/support/pages/node/7241589"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7241565 vom 2025-08-06",
+        "url": "https://www.ibm.com/support/pages/node/7241565"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-10219 vom 2025-08-26",
+        "url": "http://linux.oracle.com/errata/ELSA-2025-10219.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-10219 vom 2025-08-26",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-10219.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-20596 vom 2025-09-17",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-20596.html"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202509-04 vom 2025-09-18",
+        "url": "https://security.gentoo.org/glsa/202509-04"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-28054 vom 2025-12-18",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-28054.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:0934 vom 2026-01-22",
+        "url": "https://access.redhat.com/errata/RHSA-2026:0934"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GNU libc: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2026-01-21T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-22T08:54:49.383+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1089",
+      "initial_release_date": "2025-05-18T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-05-18T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-05-19T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Korrektur Angriffsvektor + Bewertung"
+        },
+        {
+          "date": "2025-05-25T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-05-27T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2025-05-29T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Ubuntu und SUSE aufgenommen"
+        },
+        {
+          "date": "2025-06-01T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-06-02T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-06-03T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von IGEL aufgenommen"
+        },
+        {
+          "date": "2025-06-09T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Red Hat und Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-06-11T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-06-12T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-06-17T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-06-22T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-06-29T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von NetApp aufgenommen"
+        },
+        {
+          "date": "2025-06-30T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-07-01T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-07-02T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-07-08T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-07-23T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-08-06T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-08-25T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-09-17T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von Oracle Linux und Gentoo aufgenommen"
+        },
+        {
+          "date": "2025-12-18T23:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-01-21T23:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "24"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<LTS 12.0.14",
+                "product": {
+                  "name": "IBM App Connect Enterprise <LTS 12.0.14",
+                  "product_id": "T045928"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "LTS 12.0.14",
+                "product": {
+                  "name": "IBM App Connect Enterprise LTS 12.0.14",
+                  "product_id": "T045928-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:app_connect_enterprise:lts_12.0.14"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "App Connect Enterprise"
+          },
+          {
+            "category": "product_name",
+            "name": "IBM MQ",
+            "product": {
+              "name": "IBM MQ",
+              "product_id": "T021398",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:mq:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.5.0 UP13",
+                "product": {
+                  "name": "IBM QRadar SIEM <7.5.0 UP13",
+                  "product_id": "T045828"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.5.0 UP13",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5.0 UP13",
+                  "product_id": "T045828-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5.0_up13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IGEL OS",
+            "product": {
+              "name": "IGEL OS",
+              "product_id": "T017865",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:igel:os:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IGEL"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "for VMware vSphere",
+                "product": {
+                  "name": "NetApp ActiveIQ Unified Manager for VMware vSphere",
+                  "product_id": "T025152",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_vmware_vsphere"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ActiveIQ Unified Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2.39",
+                "product": {
+                  "name": "Open Source GNU libc <2.39",
+                  "product_id": "T043910"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.39",
+                "product": {
+                  "name": "Open Source GNU libc 2.39",
+                  "product_id": "T043910-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gnu:glibc:2.39"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GNU libc"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.16.43",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.16.43",
+                  "product_id": "T044983"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.16.43",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.16.43",
+                  "product_id": "T044983-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.16.43"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.18.19",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.18.19",
+                  "product_id": "T044985"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.18.19",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.18.19",
+                  "product_id": "T044985-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.18.19"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.17.35",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.17.35",
+                  "product_id": "T045266"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.17.35",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.17.35",
+                  "product_id": "T045266-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.17.35"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenShift"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-4802",
+      "product_status": {
+        "known_affected": [
+          "T025152",
+          "67646",
+          "T045828",
+          "T012167",
+          "T045928",
+          "T004914",
+          "T044983",
+          "T044985",
+          "2951",
+          "T002207",
+          "T017865",
+          "T043910",
+          "T000126",
+          "T021398",
+          "T045266"
+        ]
+      },
+      "release_date": "2025-05-18T22:00:00.000+00:00",
+      "title": "CVE-2025-4802"
+    }
+  ]
+}

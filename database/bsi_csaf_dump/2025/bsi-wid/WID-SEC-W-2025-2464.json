@@ -1,0 +1,165 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "OpenSMTPD ist ein freier Mail-Server, der im Rahmen des OpenBSD-Projekts entwickelt wurde.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in OpenSMTP ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2464 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2464.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2464 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2464"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Security Mailing List vom 2025-11-02",
+        "url": "https://seclists.org/oss-sec/2025/q4/109"
+      },
+      {
+        "category": "external",
+        "summary": "Tenable Plugin vom 2025-11-02",
+        "url": "https://www.tenable.com/plugins/nessus/272160"
+      },
+      {
+        "category": "external",
+        "summary": "OpenSMTPD GitHub vom 2025-11-02",
+        "url": "https://github.com/OpenSMTPD/OpenSMTPD/commit/653abf00f5283a2d3247eb9aabf8987d1b2f0510"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2025:15700-1 vom 2025-11-05",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/K7VQPIUFZBFSBXJUNPWQZLOJZBK25A76/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "OpenSMTP: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2025-11-20T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-21T08:12:13.476+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2464",
+      "initial_release_date": "2025-11-02T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-11-02T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-11-05T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2025-11-20T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Referenz(en) aufgenommen: EUVD-2025-198303"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "7.7.0",
+                "product": {
+                  "name": "OpenBSD OpenSMTPD 7.7.0",
+                  "product_id": "T048268",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:openbsd:opensmtpd:7.7.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenSMTPD"
+          }
+        ],
+        "category": "vendor",
+        "name": "OpenBSD"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-62875",
+      "product_status": {
+        "known_affected": [
+          "T027843",
+          "T048268"
+        ]
+      },
+      "release_date": "2025-11-02T23:00:00.000+00:00",
+      "title": "CVE-2025-62875"
+    }
+  ]
+}

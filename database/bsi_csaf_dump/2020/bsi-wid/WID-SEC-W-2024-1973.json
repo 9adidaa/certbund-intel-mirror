@@ -1,0 +1,815 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "QEMU ist eine freie Virtualisierungssoftware, die die gesamte Hardware eines Computers emuliert.\r\nXen ist ein Virtueller-Maschinen-Monitor (VMM), der Hardware (x86, IA-64, PowerPC) für die darauf laufenden Systeme (Domains) paravirtualisiert.\r\nCitrix Hypervisor ist eine Plattform für Desktop-, Server- und Cloud-Virtualisierungsinfrastrukturen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in QEMU, Xen und Citrix Hypervisor ausnutzen, um einen Denial of Service Angriff durchzuführen oder möglicherweise beliebigen Programmcode mit den Rechten des Dienstes auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1973 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2020/wid-sec-w-2024-1973.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1973 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1973"
+      },
+      {
+        "category": "external",
+        "summary": "Huawei Security Advisory",
+        "url": "https://www.huawei.com/en/psirt/security-advisories/2020/huawei-sa-20200930-01-qemu-en"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1837-1 vom 2021-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008916.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1829-1 vom 2021-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008910.html"
+      },
+      {
+        "category": "external",
+        "summary": "Xen Security Advisory XSA-335 vom 2020-08-24",
+        "url": "https://xenbits.xen.org/xsa/advisory-335.html"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Hypervisor Security Update CTX280451 vom 2020-08-25",
+        "url": "https://support.citrix.com/article/CTX280451"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Hypervisor Security Update CTX280210 vom 2020-08-25",
+        "url": "https://support.citrix.com/article/CTX280210"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Hypervisor Security Update CTX280212 vom 2020-08-25",
+        "url": "https://support.citrix.com/article/CTX280212"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Hypervisor Security Update CTX280213 vom 2020-08-25",
+        "url": "https://support.citrix.com/article/CTX280213"
+      },
+      {
+        "category": "external",
+        "summary": "Citrix Hypervisor Security Update CTX280214 vom 2020-08-25",
+        "url": "https://support.citrix.com/article/CTX280214"
+      },
+      {
+        "category": "external",
+        "summary": "ORACLE OVMSA-2020-0038 vom 2020-08-27",
+        "url": "https://oss.oracle.com/pipermail/oraclevm-errata/2020-August/000994.html"
+      },
+      {
+        "category": "external",
+        "summary": "ORACLE OVMSA-2020-0039 vom 2020-08-27",
+        "url": "https://oss.oracle.com/pipermail/oraclevm-errata/2020-August/000995.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-4760 vom 2020-09-07",
+        "url": "http://www.debian.org/security/2020/dsa-4760"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1918-1 vom 2021-06-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008972.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1947-1 vom 2021-06-10",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008990.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1942-1 vom 2021-06-10",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008986.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-2373 vom 2020-09-13",
+        "url": "https://lists.debian.org/debian-lts-announce/2020/debian-lts-announce-202009/msg00013.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-4511-1 vom 2020-09-17",
+        "url": "https://usn.ubuntu.com/4511-1/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:2743-1 vom 2020-09-24",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007481.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4054 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4054"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4051 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4051"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4050 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4050"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4049 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4049"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4059 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4059"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4047 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4047"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4048 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4048"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4058 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4058"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4055 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4055"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4078 vom 2020-09-30",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4078"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:2786-1 vom 2020-09-29",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007498.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:2787-1 vom 2020-09-29",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007501.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:2788-1 vom 2020-09-29",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007504.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4052 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4052"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4053 vom 2020-09-29",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4053"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202009-14 vom 2020-09-29",
+        "url": "https://security.gentoo.org/glsa/202009-14"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4111 vom 2020-09-30",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4111"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4115 vom 2020-09-30",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4115"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4162 vom 2020-10-01",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4162"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:2822-1 vom 2020-10-01",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-October/007511.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4167 vom 2020-10-05",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4167"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4172 vom 2020-10-05",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4172"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4176 vom 2020-10-05",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4176"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4056 vom 2020-10-07",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4056"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:2877-1 vom 2020-10-07",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-October/007532.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4290 vom 2020-10-20",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4290"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:4291 vom 2020-10-20",
+        "url": "https://access.redhat.com/errata/RHSA-2020:4291"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2020:14521-1 vom 2020-10-22",
+        "url": "http://lists.suse.com/pipermail/sle-security-updates/2020-October/007611.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1245-1 vom 2021-04-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008647.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1244-1 vom 2021-04-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008650.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1241-1 vom 2021-04-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008649.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1240-1 vom 2021-04-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008648.html"
+      },
+      {
+        "category": "external",
+        "summary": "CentOS Security Advisory CESA-2020:4056 vom 2020-11-09",
+        "url": "http://centos-announce.2309468.n4.nabble.com/CentOS-announce-CESA-2020-4056-Important-CentOS-6-qemu-kvm-Security-Update-tp4646015.html"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202011-09 vom 2020-11-11",
+        "url": "https://security.gentoo.org/glsa/202011-09"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:14704-1 vom 2021-04-20",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008660.html"
+      },
+      {
+        "category": "external",
+        "summary": "F5 Security Advisory K09081535 vom 2020-12-15",
+        "url": "https://support.f5.com/csp/article/K09081535"
+      },
+      {
+        "category": "external",
+        "summary": "Arch Linux Security Advisory ASA-202012-26 vom 2020-12-17",
+        "url": "https://security.archlinux.org/ASA-202012-26/generate"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1305-1 vom 2021-04-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008671.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:14706-1 vom 2021-04-23",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008673.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2021-9034 vom 2021-02-05",
+        "url": "https://linux.oracle.com/errata/ELSA-2021-9034.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1895-1 vom 2021-06-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008959.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1894-1 vom 2021-06-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008954.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1893-1 vom 2021-06-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008949.html"
+      },
+      {
+        "category": "external",
+        "summary": "Juniper Security Advisory JSA11206 vom 2021-07-14",
+        "url": "https://kb.juniper.net/InfoCenter/index?page=content&id=JSA11206&cat=SIRT_1"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12605 vom 2024-09-02",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12605.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12604 vom 2024-09-02",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12604.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "QEMU, Xen und Citrix Hypervisor: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit den Rechten des Dienstes",
+    "tracking": {
+      "current_release_date": "2024-09-02T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-03T08:16:01.750+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-1973",
+      "initial_release_date": "2020-08-24T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-08-24T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2020-08-26T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: FEDORA-2020-3689B67B53, FEDORA-2020-EEB29955ED"
+        },
+        {
+          "date": "2020-08-27T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von ORACLE aufgenommen"
+        },
+        {
+          "date": "2020-09-06T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2020-09-13T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2020-09-17T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2020-09-24T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2020-09-28T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2020-09-29T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Red Hat, SUSE und Gentoo aufgenommen"
+        },
+        {
+          "date": "2020-10-01T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Red Hat und SUSE aufgenommen"
+        },
+        {
+          "date": "2020-10-04T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2020-10-05T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2020-10-07T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Red Hat und SUSE aufgenommen"
+        },
+        {
+          "date": "2020-10-19T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2020-10-22T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2020-11-09T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von CentOS aufgenommen"
+        },
+        {
+          "date": "2020-11-10T23:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        },
+        {
+          "date": "2020-12-15T23:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Informationen von F5 aufgenommen"
+        },
+        {
+          "date": "2020-12-16T23:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Arch Linux aufgenommen"
+        },
+        {
+          "date": "2021-02-07T23:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2021-03-23T23:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von Huawei aufgenommen"
+        },
+        {
+          "date": "2021-04-18T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-04-20T22:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-04-22T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-04-25T22:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-06-03T22:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-06-08T22:00:00.000+00:00",
+          "number": "27",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-06-09T22:00:00.000+00:00",
+          "number": "28",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-06-10T22:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2021-07-14T22:00:00.000+00:00",
+          "number": "30",
+          "summary": "Neue Updates von Juniper aufgenommen"
+        },
+        {
+          "date": "2024-09-02T22:00:00.000+00:00",
+          "number": "31",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "31"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Citrix Systems Hypervisor",
+            "product": {
+              "name": "Citrix Systems Hypervisor",
+              "product_id": "T016872",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:citrix:hypervisor:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Citrix Systems"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "F5 BIG-IP",
+            "product": {
+              "name": "F5 BIG-IP",
+              "product_id": "T001663",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:big-ip:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "F5"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Huawei OceanStor",
+            "product": {
+              "name": "Huawei OceanStor",
+              "product_id": "516536",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:huawei:oceanstor_uds:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Huawei"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Juniper JUNOS",
+            "product": {
+              "name": "Juniper JUNOS",
+              "product_id": "5930",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:juniper:junos:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Juniper"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Arch Linux",
+            "product": {
+              "name": "Open Source Arch Linux",
+              "product_id": "T013312",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:archlinux:archlinux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source CentOS",
+            "product": {
+              "name": "Open Source CentOS",
+              "product_id": "1727",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:centos:centos:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source QEMU",
+            "product": {
+              "name": "Open Source QEMU",
+              "product_id": "T007150",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:qemu:qemu:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source Xen",
+            "product": {
+              "name": "Open Source Xen",
+              "product_id": "T015690",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:xen:xen:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Oracle VM",
+            "product": {
+              "name": "Oracle VM",
+              "product_id": "T011119",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:oracle:vm:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-14364",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in QEMU, wie es in Citrix Hypervisor und Xen verwendet wird. Sie befindet sich im USB Emulator und beruht auf einem \"Out-of-Bounds\" Schreib-/Lesezugriff. Ein Angreifer aus einem Gast System kann dieses nutzen und einen Denial of Service Angriff durchführen und möglicherweise Code mit den Privilegien des QEMU Host-Prozesses zur Ausführung bringen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T011119",
+          "516536",
+          "67646",
+          "T013312",
+          "T012167",
+          "T004914",
+          "T016872",
+          "T015690",
+          "2951",
+          "T002207",
+          "T000126",
+          "5930",
+          "T001663",
+          "T007150",
+          "1727"
+        ]
+      },
+      "release_date": "2020-08-24T22:00:00.000+00:00",
+      "title": "CVE-2020-14364"
+    }
+  ]
+}

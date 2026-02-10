@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco Expressway ermöglicht die Nutzung verschiedener Intranetdienste aus dem Internet, ohne ein VPN zu benötigen.\r\nDie Cisco TelePresence Lösungen erlauben die weltweite Zusammenarbeit und Kommunikation von Kollegen, Partnern und Beobachtern.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Cisco Expressway und Cisco TelePresence ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1400 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1400.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1400 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1400"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-06-08",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-expressway-priv-esc-Ls2B9t7b"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Expressway: Mehrere Schwachstellen ermöglichen Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2023-06-11T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:52:07.042+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1400",
+      "initial_release_date": "2023-06-08T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-06-08T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-06-11T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Schreibfehler korrigiert"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco Expressway",
+            "product": {
+              "name": "Cisco Expressway",
+              "product_id": "T022201",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:expressway_software:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco TelePresence",
+            "product": {
+              "name": "Cisco TelePresence",
+              "product_id": "T018121",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:telepresence:video_communication_server"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20192",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco Expressway und Cisco TelePresence. Diese ist auf eine fehlerhafte Implementierung von Benutzerrollenberechtigungen zurückzuführen. Ein lokaler Angreifer mit Nur-Lese-CLI-Zugangsdaten auf Administrator-Ebene kann diese Schwachstelle ausnutzen, um seine Rechte auf Administrator-Zugangsdaten mit Lese- und Schreibrechten zu erhöhen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T022201",
+          "T018121"
+        ]
+      },
+      "release_date": "2023-06-08T22:00:00.000+00:00",
+      "title": "CVE-2023-20192"
+    },
+    {
+      "cve": "CVE-2023-20105",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco Expressway und Cisco TelePresence. Diese ist auf eine fehlerhafte Behandlung von Kennwortänderungsanfragen in der Funktion zum Ändern von Passwörtern zurückzuführen. Ein Angreifer mit nur-lese-Rechten kann das ausnutzen, um seine Rechte zum Administrator mit Lese- und Schreibzugangsdaten zu erhöhen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T022201",
+          "T018121"
+        ]
+      },
+      "release_date": "2023-06-08T22:00:00.000+00:00",
+      "title": "CVE-2023-20105"
+    }
+  ]
+}

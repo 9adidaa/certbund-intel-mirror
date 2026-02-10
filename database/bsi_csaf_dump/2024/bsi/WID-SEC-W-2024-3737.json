@@ -1,0 +1,174 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "XWiki ist eine Open-Source-Wiki-Software-Plattform, für die Erstellung und Verwaltung von Wikis und Knowledge-Management-Systemen",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in xwiki ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3737 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3737.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3737 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3737"
+      },
+      {
+        "category": "external",
+        "summary": "Zero Day Initiative vom 2024-12-19",
+        "url": "https://www.zerodayinitiative.com/advisories/ZDI-24-1697/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "xwiki: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-12-19T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-20T09:12:23.290+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3737",
+      "initial_release_date": "2024-12-19T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-19T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.10.11",
+                "product": {
+                  "name": "Open Source xwiki <15.10.11",
+                  "product_id": "T039950"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.10.11",
+                "product": {
+                  "name": "Open Source xwiki 15.10.11",
+                  "product_id": "T039950-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:15.10.11"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<16.4.1",
+                "product": {
+                  "name": "Open Source xwiki <16.4.1",
+                  "product_id": "T039951"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "16.4.1",
+                "product": {
+                  "name": "Open Source xwiki 16.4.1",
+                  "product_id": "T039951-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:16.4.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<16.5.0RC1",
+                "product": {
+                  "name": "Open Source xwiki <16.5.0RC1",
+                  "product_id": "T039952"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "16.5.0RC1",
+                "product": {
+                  "name": "Open Source xwiki 16.5.0RC1",
+                  "product_id": "T039952-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:16.5.0rc1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "xwiki"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in xwiki. Dieser Fehler existiert wegen der unsachgemäßen Behandlung des Textparameters im SolrSearchMacros-Endpunkt, bevor die Eingaben an einen Systemaufruf weitergegeben werden. Ein entfernter, anonymer Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039952",
+          "T039951",
+          "T039950"
+        ]
+      },
+      "release_date": "2024-12-19T23:00:00.000+00:00"
+    }
+  ]
+}

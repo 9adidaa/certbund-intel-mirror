@@ -1,0 +1,166 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apple macOS ist ein Betriebssystem, das auf FreeBSD und Mach basiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Apple macOS ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2289 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2289.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2289 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2289"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213915 vom 2023-09-11",
+        "url": "https://support.apple.com/en-us/HT213915"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213914 vom 2023-09-11",
+        "url": "https://support.apple.com/en-us/HT213914"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213906 vom 2023-09-07",
+        "url": "https://support.apple.com/en-us/HT213906"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple macOS: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2023-09-11T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:09.823+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2289",
+      "initial_release_date": "2023-09-07T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-07T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-09-11T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Apple aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Apple macOS < Ventura 13.5.2",
+                "product": {
+                  "name": "Apple macOS < Ventura 13.5.2",
+                  "product_id": "T029755",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:ventura_13.5.2"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Apple macOS < 12.6.9",
+                "product": {
+                  "name": "Apple macOS < 12.6.9",
+                  "product_id": "T029772",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:12.6.9"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Apple macOS < 11.7.10",
+                "product": {
+                  "name": "Apple macOS < 11.7.10",
+                  "product_id": "T029773",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:11.7.10"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "macOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-41064",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Apple macOS. Die Schwachstelle besteht in der Komponente \"ImageIO\" und ist auf einen Buffer Overflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen. Bei einer Ausnutzung z.B. über den iMessage Dienst ist keine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T029772",
+          "T029773"
+        ]
+      },
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41064"
+    }
+  ]
+}

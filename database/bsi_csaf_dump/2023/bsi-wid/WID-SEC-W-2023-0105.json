@@ -1,0 +1,792 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in GitLab und Git ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0105 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0105.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0105 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0105"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Critical Security Release: 15.7.5, 15.6.6, and 15.5.9 vom 2023-01-17",
+        "url": "https://about.gitlab.com/releases/2023/01/17/critical-security-release-gitlab-15-7-5-released/"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5810-1 vom 2023-01-17",
+        "url": "https://ubuntu.com/security/notices/USN-5810-1"
+      },
+      {
+        "category": "external",
+        "summary": "Gitea Release Notes",
+        "url": "https://blog.gitea.io/2023/01/gitea-1.18.2-is-released/"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5810-2 vom 2023-01-19",
+        "url": "https://ubuntu.com/security/notices/USN-5810-2"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:0109-1 vom 2023-01-20",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-January/013487.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:0110-1 vom 2023-01-20",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-January/013486.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:0108-1 vom 2023-01-20",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-January/013489.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3282 vom 2023-01-26",
+        "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00022.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5332 vom 2023-01-29",
+        "url": "https://lists.debian.org/debian-security-announce/2023/msg00022.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-1679 vom 2023-02-06",
+        "url": "https://alas.aws.amazon.com/ALAS-2023-1679.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0596 vom 2023-02-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0596"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0597 vom 2023-02-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0597"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0599 vom 2023-02-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0599"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0609 vom 2023-02-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0609"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0610 vom 2023-02-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0610"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0611 vom 2023-02-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0611"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-1923 vom 2023-02-06",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2023-1923.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-0610 vom 2023-02-07",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-0610.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-0611 vom 2023-02-07",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-0611.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0628 vom 2023-02-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0628"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5810-3 vom 2023-02-07",
+        "url": "https://ubuntu.com/security/notices/USN-5810-3"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0627 vom 2023-02-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0627"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Multiple Products Security Advisory",
+        "url": "https://confluence.atlassian.com/security/multiple-products-security-advisory-git-buffer-overflow-cve-2022-41903-cve-2022-23521-1189805967.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0698 vom 2023-02-15",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0698"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0633 vom 2023-02-15",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0633"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0803 vom 2023-02-17",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0803"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0802 vom 2023-02-17",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0802"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0804 vom 2023-02-17",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0804"
+      },
+      {
+        "category": "external",
+        "summary": "Atlassian Multiple Products Security Advisory vom 2023-02-20",
+        "url": "https://confluence.atlassian.com/security/multiple-products-security-advisory-git-buffer-overflow-cve-2022-41903-cve-2022-23521-1189805967.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0769 vom 2023-02-21",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0769"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0774 vom 2023-02-22",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0774"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-0978 vom 2023-02-28",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-0978.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0895 vom 2023-02-28",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0895"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0977 vom 2023-02-28",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0977"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:0978 vom 2023-02-28",
+        "url": "https://access.redhat.com/errata/RHSA-2023:0978"
+      },
+      {
+        "category": "external",
+        "summary": "CentOS Security Advisory CESA-2023:0978 vom 2023-03-01",
+        "url": "https://lists.centos.org/pipermail/centos-announce/2023-March/086377.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:1158 vom 2023-03-14",
+        "url": "https://access.redhat.com/errata/RHSA-2023:1158"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:1677 vom 2023-04-15",
+        "url": "https://access.redhat.com/errata/RHSA-2023:1677"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7010099 vom 2023-07-06",
+        "url": "https://www.ibm.com/support/pages/node/7010099"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202312-15 vom 2023-12-27",
+        "url": "https://security.gentoo.org/glsa/202312-15"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-282 vom 2024-01-23",
+        "url": "https://alas.aws.amazon.com/AL2022/ALAS-2023-282.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab und Git: Mehrere Schwachstellen ermöglichen Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-01-22T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:41:36.061+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0105",
+      "initial_release_date": "2023-01-17T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-17T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-01-18T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Produkte ergänzt"
+        },
+        {
+          "date": "2023-01-19T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2023-01-22T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-01-26T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2023-01-29T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2023-02-06T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Amazon, Red Hat und Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-02-07T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Red Hat und Ubuntu aufgenommen"
+        },
+        {
+          "date": "2023-02-15T23:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-02-16T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-02-19T23:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates aufgenommen"
+        },
+        {
+          "date": "2023-02-20T23:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-02-21T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-02-28T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Oracle Linux und Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-03-05T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von CentOS aufgenommen"
+        },
+        {
+          "date": "2023-03-14T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-04-16T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-07-06T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2023-12-27T23:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        },
+        {
+          "date": "2024-01-22T23:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "20"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Atlassian Bamboo",
+            "product": {
+              "name": "Atlassian Bamboo",
+              "product_id": "T021265",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:atlassian:bamboo:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Atlassian Bitbucket",
+            "product": {
+              "name": "Atlassian Bitbucket",
+              "product_id": "T021356",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:atlassian:bitbucket:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Atlassian Crucible",
+            "product": {
+              "name": "Atlassian Crucible",
+              "product_id": "T021266",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:atlassian:crucible:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Atlassian Fisheye",
+            "product": {
+              "name": "Atlassian Fisheye",
+              "product_id": "T021267",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:atlassian:fisheye:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Atlassian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM QRadar SIEM 7.5",
+            "product": {
+              "name": "IBM QRadar SIEM 7.5",
+              "product_id": "T022954",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:qradar_siem:7.5"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source CentOS",
+            "product": {
+              "name": "Open Source CentOS",
+              "product_id": "1727",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:centos:centos:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 15.7.5",
+                "product": {
+                  "name": "Open Source GitLab < 15.7.5",
+                  "product_id": "T025937",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:15.7.5"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 15.6.6",
+                "product": {
+                  "name": "Open Source GitLab < 15.6.6",
+                  "product_id": "T025938",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:15.6.6"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 15.5.9",
+                "product": {
+                  "name": "Open Source GitLab < 15.5.9",
+                  "product_id": "T025939",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:15.5.9"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source Gitea < 1.18.2.",
+            "product": {
+              "name": "Open Source Gitea < 1.18.2.",
+              "product_id": "T025973",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:gitea:gitea:1.18.2."
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Open Source git",
+            "product": {
+              "name": "Open Source git",
+              "product_id": "T015510",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:open_source:git:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Red Hat OpenShift",
+                "product": {
+                  "name": "Red Hat OpenShift",
+                  "product_id": "T008027",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:-"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Red Hat OpenShift Container Platform",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform",
+                  "product_id": "T025202",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Red Hat OpenShift Container Platform 4.11",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.11",
+                  "product_id": "T025990",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform_4.11"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Red Hat OpenShift Container Platform 4.12",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.12",
+                  "product_id": "T026435",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform_4.12"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Red Hat OpenShift Data Science 1",
+                "product": {
+                  "name": "Red Hat OpenShift Data Science 1",
+                  "product_id": "T026555",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:data_science_1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenShift"
+          },
+          {
+            "category": "product_name",
+            "name": "Red Hat Virtualization 4",
+            "product": {
+              "name": "Red Hat Virtualization 4",
+              "product_id": "T026451",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:redhat:virtualization:4"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-23521",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab und Git existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund von mehreren Integer-Überläufen, die zu beliebigen Heap-Schreibvorgängen und beliebigen Heap-Lesevorgängen führen können. Ein entfernter authentisierter Angreifer kann diese Schwachstellen durch die Verarbeitung spezieller Auffülloperatoren oder beim Parsen von Git-Attributen ausnutzen, um beliebigen Code auszuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T008027",
+          "67646",
+          "T012167",
+          "T015510",
+          "T004914",
+          "T022954",
+          "T021356",
+          "T021267",
+          "2951",
+          "T002207",
+          "T000126",
+          "T025202",
+          "T026555",
+          "398363",
+          "T025973",
+          "T026435",
+          "1727",
+          "T021266",
+          "T025990",
+          "T021265",
+          "T026451"
+        ]
+      },
+      "release_date": "2023-01-17T23:00:00.000+00:00",
+      "title": "CVE-2022-23521"
+    },
+    {
+      "cve": "CVE-2022-41903",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GitLab und Git existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund von mehreren Integer-Überläufen, die zu beliebigen Heap-Schreibvorgängen und beliebigen Heap-Lesevorgängen führen können. Ein entfernter authentisierter Angreifer kann diese Schwachstellen durch die Verarbeitung spezieller Auffülloperatoren oder beim Parsen von Git-Attributen ausnutzen, um beliebigen Code auszuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T008027",
+          "67646",
+          "T012167",
+          "T015510",
+          "T004914",
+          "T022954",
+          "T021356",
+          "T021267",
+          "2951",
+          "T002207",
+          "T000126",
+          "T025202",
+          "T026555",
+          "398363",
+          "T025973",
+          "T026435",
+          "1727",
+          "T021266",
+          "T025990",
+          "T021265",
+          "T026451"
+        ]
+      },
+      "release_date": "2023-01-17T23:00:00.000+00:00",
+      "title": "CVE-2022-41903"
+    }
+  ]
+}

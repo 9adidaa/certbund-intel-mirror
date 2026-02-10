@@ -1,0 +1,247 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Proxmox Virtual Environment (PVE) ist eine Virtualisierungsplattform für Server.\r\nProxmox Backup Server ist eine Enterprise-Backup-Lösung zur Sicherung und Wiederherstellung von VMs, Containern und physischen Hosts.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Proxmox Virtual Environment und Proxmox Backup Server ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1835 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1835.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1835 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1835"
+      },
+      {
+        "category": "external",
+        "summary": "Proxmox Security Advisory psa-2025-00014-1 vom 2025-08-13",
+        "url": "https://forum.proxmox.com/threads/proxmox-backup-server-security-advisories.149332/#-subject-psa-2025-00014-1-stored-xss-in-config-values"
+      },
+      {
+        "category": "external",
+        "summary": "Proxmox Security Advisory psa-2025-00013-1 vom 2025-08-13",
+        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-security-advisories.149331/page-2#-subject-psa-2025-00013-1-stored-xss-in-config-values"
+      },
+      {
+        "category": "external",
+        "summary": "EU Vulnerability Database EUVD-2025-27389 vom 2025-09-09",
+        "url": "https://euvd.enisa.europa.eu/enisa/EUVD-2025-27389"
+      },
+      {
+        "category": "external",
+        "summary": "EU Vulnerability Database EUVD-2025-27406 vom 2025-09-09",
+        "url": "https://euvd.enisa.europa.eu/enisa/EUVD-2025-27406"
+      },
+      {
+        "category": "external",
+        "summary": "EU Vulnerability Database EUVD-2025-27408 vom 2025-09-09",
+        "url": "https://euvd.enisa.europa.eu/enisa/EUVD-2025-27408"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Proxmox Virtual Environment und Backup Server: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2025-09-09T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-09-10T04:46:08.974+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1835",
+      "initial_release_date": "2025-08-13T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-08-13T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-09-09T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC und Referenzen aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.0.14-1",
+                "product": {
+                  "name": "Proxmox Backup Server <4.0.14-1",
+                  "product_id": "T046255"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.0.14-1",
+                "product": {
+                  "name": "Proxmox Backup Server 4.0.14-1",
+                  "product_id": "T046255-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:proxmox:backup_server:4.0.14-1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<3.4.6-1",
+                "product": {
+                  "name": "Proxmox Backup Server <3.4.6-1",
+                  "product_id": "T046256"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.4.6-1",
+                "product": {
+                  "name": "Proxmox Backup Server 3.4.6-1",
+                  "product_id": "T046256-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:proxmox:backup_server:3.4.6-1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Backup Server"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "pve-manager <9.0.5",
+                "product": {
+                  "name": "Proxmox Virtual Environment pve-manager <9.0.5",
+                  "product_id": "T046253"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "pve-manager 9.0.5",
+                "product": {
+                  "name": "Proxmox Virtual Environment pve-manager 9.0.5",
+                  "product_id": "T046253-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:proxmox:virtual_environment:pve-manager__9.0.5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "pve-manager <8.4.11",
+                "product": {
+                  "name": "Proxmox Virtual Environment pve-manager <8.4.11",
+                  "product_id": "T046254"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "pve-manager 8.4.11",
+                "product": {
+                  "name": "Proxmox Virtual Environment pve-manager 8.4.11",
+                  "product_id": "T046254-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:proxmox:virtual_environment:pve-manager__8.4.11"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Virtual Environment"
+          }
+        ],
+        "category": "vendor",
+        "name": "Proxmox"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-57538",
+      "product_status": {
+        "known_affected": [
+          "T046253",
+          "T046254",
+          "T046255",
+          "T046256"
+        ]
+      },
+      "release_date": "2025-08-13T22:00:00.000+00:00",
+      "title": "CVE-2025-57538"
+    },
+    {
+      "cve": "CVE-2025-57539",
+      "product_status": {
+        "known_affected": [
+          "T046253",
+          "T046254",
+          "T046255",
+          "T046256"
+        ]
+      },
+      "release_date": "2025-08-13T22:00:00.000+00:00",
+      "title": "CVE-2025-57539"
+    },
+    {
+      "cve": "CVE-2025-57540",
+      "product_status": {
+        "known_affected": [
+          "T046253",
+          "T046254",
+          "T046255",
+          "T046256"
+        ]
+      },
+      "release_date": "2025-08-13T22:00:00.000+00:00",
+      "title": "CVE-2025-57540"
+    }
+  ]
+}

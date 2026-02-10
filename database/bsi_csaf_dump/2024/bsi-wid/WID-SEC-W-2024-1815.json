@@ -1,0 +1,168 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM Virtual I/O Server (VIOS) bietet Virtualisierungsfunktionen.\r\nAIX ist ein Unix Betriebssystem von IBM.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer oder ein Angreifer aus einem angrenzenden Netzwerk kann mehrere Schwachstellen in IBM VIOS und IBM AIX ausnutzen, um Informationen offenzulegen oder um beliebigen Code auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1815 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1815.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1815 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1815"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Advisory vom 2024-08-12",
+        "url": "https://aix.software.ibm.com/aix/efixes/security/python_advisory11.asc"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin vom 2024-08-12",
+        "url": "https://www.ibm.com/support/pages/node/7165344"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM VIOS und AIX: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-08-12T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:12:10.538+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1815",
+      "initial_release_date": "2024-08-12T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-08-12T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "7.3",
+                "product": {
+                  "name": "IBM AIX 7.3",
+                  "product_id": "T036728",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:ibm:aix:7.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "AIX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "4.1",
+                "product": {
+                  "name": "IBM VIOS 4.1",
+                  "product_id": "T036727",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:vios:4.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "VIOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-45803",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM VIOS und IBM AIX. Dieser Fehler besteht in der Komponente urllib3 aufgrund einer unsachgemäßen Behandlung von HTTP-Umleitungen in urllib3, bei der der HTTP-Anfragekörper nicht entfernt wird, wenn eine Umleitungsantwort mit Status 303 verarbeitet wird. Durch Senden einer speziell gestalteten HTTP-Anfrage kann ein Angreifer aus einem angrenzenden Netzwerk diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036727",
+          "T036728"
+        ]
+      },
+      "release_date": "2024-08-12T22:00:00.000+00:00",
+      "title": "CVE-2023-45803"
+    },
+    {
+      "cve": "CVE-2024-6345",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM VIOS und IBM AIX. Dieser Fehler besteht in den pypa/setuptools aufgrund eines Fehlers im package_index-Modul. Indem ein Benutzer dazu gebracht wird, auf eine speziell gestaltete URL zu klicken, kann ein entfernter, anonymer Angreifer diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T036727",
+          "T036728"
+        ]
+      },
+      "release_date": "2024-08-12T22:00:00.000+00:00",
+      "title": "CVE-2024-6345"
+    }
+  ]
+}

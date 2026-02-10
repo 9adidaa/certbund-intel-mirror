@@ -1,0 +1,185 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco Secure Firewall Threat Defense ist eine Sicherheitslösung, die Funktionen wie Firewall, Intrusion Prevention und erweiterten Malware-Schutz in einer einzigen Appliance integriert.\r\nCisco Internetwork Operating System (IOS) ist ein Betriebssystem, das für Cisco Geräte wie z. B. Router und Switches eingesetzt wird.\r\nDie Cisco Meraki MX-Serie sind cloudverwaltete Sicherheits- und SD-WAN-Appliances\r\nSnort ist ein freies Network Intrusion Prevention System (NIPS) und ein Network Intrusion Detection System (NIDS) der Firma Sourcefire.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Cisco Secure Firewall Threat Defense, Cisco IOS XE, Cisco Meraki MX und Snort ausnutzen, um einen Denial of Service Angriff durchzuführen, und um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2312 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2312.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2312 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2312"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Bulletin vom 2025-10-15",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-mime-vulns-tTL8PgVH"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Mehrere Produkte: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-10-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-10-16T08:58:25.113+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2312",
+      "initial_release_date": "2025-10-15T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-15T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco IOS XE",
+            "product": {
+              "name": "Cisco IOS XE",
+              "product_id": "T047716",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:cisco:ios_xe:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Meraki MX",
+            "product": {
+              "name": "Cisco Meraki MX",
+              "product_id": "T047717",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:meraki_mx:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Secure Firewall Threat Defense",
+            "product": {
+              "name": "Cisco Secure Firewall Threat Defense",
+              "product_id": "T047715",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:secure_firewall_threat_defense:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.9.3.0",
+                "product": {
+                  "name": "Open Source Snort <3.9.3.0",
+                  "product_id": "T047718"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.9.3.0",
+                "product": {
+                  "name": "Open Source Snort 3.9.3.0",
+                  "product_id": "T047718-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:snort:snort:3.9.3.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Snort"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-20359",
+      "product_status": {
+        "known_affected": [
+          "T047717",
+          "T047718",
+          "T047715",
+          "T047716"
+        ]
+      },
+      "release_date": "2025-10-15T22:00:00.000+00:00",
+      "title": "CVE-2025-20359"
+    },
+    {
+      "cve": "CVE-2025-20360",
+      "product_status": {
+        "known_affected": [
+          "T047717",
+          "T047718",
+          "T047715",
+          "T047716"
+        ]
+      },
+      "release_date": "2025-10-15T22:00:00.000+00:00",
+      "title": "CVE-2025-20360"
+    }
+  ]
+}

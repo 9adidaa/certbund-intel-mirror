@@ -1,0 +1,554 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.\r\nExynos ist der Markenname für Samsung-Mobilfunk-Chipsätze und Prozessoren.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Samsung Android und Samsung Exynos ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android\n- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1117 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1117.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1117 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1117"
+      },
+      {
+        "category": "external",
+        "summary": "Known Exploited Vulnerabilities Catalog vom 2023-05-21",
+        "url": "https://www.cisa.gov/news-events/alerts/2023/05/19/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "category": "external",
+        "summary": "Samsung Mobile Security - Security Updates vom 2023-05-01",
+        "url": "https://security.samsungmobile.com/securityUpdate.smsb"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Samsung Android und Samsung Exynos: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-05-21T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:50:12.803+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1117",
+      "initial_release_date": "2023-05-01T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-05-01T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-05-21T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Aktive Ausnutzung gemeldet"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Samsung Android 11",
+                "product": {
+                  "name": "Samsung Android 11",
+                  "product_id": "T027557",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:samsung:android:11"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Samsung Android 12",
+                "product": {
+                  "name": "Samsung Android 12",
+                  "product_id": "T027558",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:samsung:android:12"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Samsung Android 13",
+                "product": {
+                  "name": "Samsung Android 13",
+                  "product_id": "T027559",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:samsung:android:13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          },
+          {
+            "category": "product_name",
+            "name": "Samsung Exynos CP chipsets",
+            "product": {
+              "name": "Samsung Exynos CP chipsets",
+              "product_id": "T027561",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:samsung:exynos:cp_chipsets"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Samsung"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-21504",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21504"
+    },
+    {
+      "cve": "CVE-2023-21503",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21503"
+    },
+    {
+      "cve": "CVE-2023-21502",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21502"
+    },
+    {
+      "cve": "CVE-2023-21501",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21501"
+    },
+    {
+      "cve": "CVE-2023-21500",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21500"
+    },
+    {
+      "cve": "CVE-2023-21499",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21499"
+    },
+    {
+      "cve": "CVE-2023-21498",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21498"
+    },
+    {
+      "cve": "CVE-2023-21497",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21497"
+    },
+    {
+      "cve": "CVE-2023-21496",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21496"
+    },
+    {
+      "cve": "CVE-2023-21495",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21495"
+    },
+    {
+      "cve": "CVE-2023-21494",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21494"
+    },
+    {
+      "cve": "CVE-2023-21493",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21493"
+    },
+    {
+      "cve": "CVE-2023-21492",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21492"
+    },
+    {
+      "cve": "CVE-2023-21491",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21491"
+    },
+    {
+      "cve": "CVE-2023-21490",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21490"
+    },
+    {
+      "cve": "CVE-2023-21489",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21489"
+    },
+    {
+      "cve": "CVE-2023-21488",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21488"
+    },
+    {
+      "cve": "CVE-2023-21487",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21487"
+    },
+    {
+      "cve": "CVE-2023-21486",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21486"
+    },
+    {
+      "cve": "CVE-2023-21485",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21485"
+    },
+    {
+      "cve": "CVE-2023-21484",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Samsung Android und Samsung Exynos existieren mehrere Schwachstellen. Die Fehler bestehen u.a. aufgrund unsachgemäßer Eingabevalidierung, unsachgemäßer Zugriffskontrolle und Pufferüberläufe. Ein entfernter, anonymer, lokaler oder physischer Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung der Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027561",
+          "T027559",
+          "T027557",
+          "T027558"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-21484"
+    }
+  ]
+}

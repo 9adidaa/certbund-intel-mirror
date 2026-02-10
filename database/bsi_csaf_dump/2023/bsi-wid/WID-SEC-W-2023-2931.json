@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco AnyConnect Secure Mobility Solution bietet eine mobile VPN Lösung für PCs und Smartphones.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Cisco AnyConnect Secure Mobility Solution ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows\n- Android\n- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2931 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2931.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2931 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2931"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-11-15",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-accsc-dos-9SLzkZ8"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco AnyConnect Secure Mobility Solution: Mehrere Schwachstellen ermöglichen Denial of Service",
+    "tracking": {
+      "current_release_date": "2023-11-15T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:01:42.430+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2931",
+      "initial_release_date": "2023-11-15T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-11-15T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Cisco AnyConnect Secure Mobility Solution < 4.10 MR8",
+                "product": {
+                  "name": "Cisco AnyConnect Secure Mobility Solution < 4.10 MR8",
+                  "product_id": "T031199",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:anyconnect_secure_mobility_client:4.10_mr8"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco AnyConnect Secure Mobility Solution < 5.0 MR5 (5.0.05040)",
+                "product": {
+                  "name": "Cisco AnyConnect Secure Mobility Solution < 5.0 MR5 (5.0.05040)",
+                  "product_id": "T031200",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:anyconnect_secure_mobility_client:5.0_mr5_%285.0.05040%29"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco AnyConnect Secure Mobility Solution < 5.1",
+                "product": {
+                  "name": "Cisco AnyConnect Secure Mobility Solution < 5.1",
+                  "product_id": "T031201",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:anyconnect_secure_mobility_client:5.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "AnyConnect Secure Mobility Solution"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20241",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in der Cisco AnyConnect Secure Mobility Solution. Diese Fehler bestehen aufgrund eines Out-of-Bounds-Memory-Read, der es ermöglicht, den VPN-Agent-Dienst zum Absturz zu bringen, wodurch er für alle Benutzer des Systems nicht mehr verfügbar ist. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, indem er sich bei einem betroffenen Gerät anmeldet, während ein anderer Benutzer auf demselben System auf den Cisco Secure Client zugreift, und dann manipulierte Pakete an einen Port auf diesem lokalen Host sendet, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "release_date": "2023-11-15T23:00:00.000+00:00",
+      "title": "CVE-2023-20241"
+    },
+    {
+      "cve": "CVE-2023-20240",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in der Cisco AnyConnect Secure Mobility Solution. Diese Fehler bestehen aufgrund eines Out-of-Bounds-Memory-Read, der es ermöglicht, den VPN-Agent-Dienst zum Absturz zu bringen, wodurch er für alle Benutzer des Systems nicht mehr verfügbar ist. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, indem er sich bei einem betroffenen Gerät anmeldet, während ein anderer Benutzer auf demselben System auf den Cisco Secure Client zugreift, und dann manipulierte Pakete an einen Port auf diesem lokalen Host sendet, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "release_date": "2023-11-15T23:00:00.000+00:00",
+      "title": "CVE-2023-20240"
+    }
+  ]
+}

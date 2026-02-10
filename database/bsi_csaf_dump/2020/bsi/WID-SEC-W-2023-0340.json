@@ -1,0 +1,180 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Snort ist ein freies Network Intrusion Prevention System (NIPS) und ein Network Intrusion Detection System (NIDS) der Firma Sourcefire.\r\nFirepower ist eine Firewall-Plattform von Cisco\r\nRouter sind Geräte aus dem Bereich Computernetzwerke, Telekommunikation und Internet, die mehrere Rechnernetze miteinander verbinden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in der Snort Detection Engine in verschiedenen Cisco Produkten ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0340 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2020/wid-sec-w-2023-0340.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0340 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0340"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3317 vom 2023-02-11",
+        "url": "https://lists.debian.org/debian-lts-announce/2023/02/msg00011.html"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory cisco-sa-ftd-bypass-3eCfd24j vom 2020-10-21",
+        "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-bypass-3eCfd24j"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Verschiedene Cisco Produkte: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2023-02-12T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:43:24.294+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0340",
+      "initial_release_date": "2020-10-21T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-10-21T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-02-12T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Debian aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco Firepower",
+            "product": {
+              "name": "Cisco Firepower",
+              "product_id": "T011337",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:firepower:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco Router",
+            "product": {
+              "name": "Cisco Router",
+              "product_id": "T003258",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:router:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Snort",
+            "product": {
+              "name": "Open Source Snort",
+              "product_id": "10334",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:snort:snort:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-3299",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in der Snort Detection Engine, wie sie in verschiedenen Cisco Produkten verwendet wird. Sie beruht auf einem Fehler bei der Entdeckung von modifizierten HTTP Paketen in fragmentierten Antwortpaketen. Ein Angreifer kann dieses nutzen und Sicherheitsmechanismen umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T003258",
+          "T011337",
+          "10334"
+        ]
+      },
+      "release_date": "2020-10-21T22:00:00.000+00:00",
+      "title": "CVE-2020-3299"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Redis ist ein In-Memory-Datenstrukturspeicher, der als Datenbank, Cache und Message Broker verwendet wird. \r\nredis-py ist der zugehörige Python-Client.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein  Angreifer kann mehrere Schwachstellen in redis-py ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0772 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0772.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0772 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0772"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2182057 vom 2023-03-27",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2182057"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2182058 vom 2023-03-27",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2182058"
+      },
+      {
+        "category": "external",
+        "summary": "redis-py GitHub Issue #2665",
+        "url": "https://github.com/redis/redis-py/issues/2665"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1639-1 vom 2024-05-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-May/018532.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:1639-2 vom 2024-07-01",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-July/018833.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "redis-py: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2024-07-01T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:47:25.169+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0772",
+      "initial_release_date": "2023-03-27T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-27T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-05-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-07-01T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Python Client <=4.5.3",
+                "product": {
+                  "name": "Open Source Redis Python Client <=4.5.3",
+                  "product_id": "T026943"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Redis"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28858",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Im Python Client für Redis (redis-py) existieren mehrere Schwachstellen. Wird ein \"async Redis command\" zu einem bestimmten Zeitpunkt abgebrochen, bleibt die Verbindung zum Redis Server offen. Ein Angreifer kann dies ausnutzen, um Informationen offenzulegen. CVE-2023-28859 beschreibt den unvollständigen Fix für die Schwachstelle CVE-2023-28858."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002207"
+        ],
+        "last_affected": [
+          "T026943"
+        ]
+      },
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28858"
+    },
+    {
+      "cve": "CVE-2023-28859",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Im Python Client für Redis (redis-py) existieren mehrere Schwachstellen. Wird ein \"async Redis command\" zu einem bestimmten Zeitpunkt abgebrochen, bleibt die Verbindung zum Redis Server offen. Ein Angreifer kann dies ausnutzen, um Informationen offenzulegen. CVE-2023-28859 beschreibt den unvollständigen Fix für die Schwachstelle CVE-2023-28858."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002207"
+        ],
+        "last_affected": [
+          "T026943"
+        ]
+      },
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28859"
+    }
+  ]
+}

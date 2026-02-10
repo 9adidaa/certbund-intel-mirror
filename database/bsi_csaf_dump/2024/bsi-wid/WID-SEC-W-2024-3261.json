@@ -1,0 +1,143 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Cisco ASA Appliance bietet Funktionen zur Sicherung von Anwendungssoftware, wie beispielsweise Firewall oder VPN.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter oder anonymer Angreifer kann mehrere Schwachstellen in Cisco ASA (Adaptive Security Appliance) ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen und einen Denial-of-Service-Zustand zu erzeugen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3261 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3261.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3261 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3261"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-10-23",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ssh-dos-eEDWu5RM"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-10-23",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ssh-rce-gRAuPEUF"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco ASA (Adaptive Security Appliance): Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-10-23T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-24T09:41:17.597+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3261",
+      "initial_release_date": "2024-10-23T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-23T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco ASA (Adaptive Security Appliance)",
+            "product": {
+              "name": "Cisco ASA (Adaptive Security Appliance)",
+              "product_id": "T038564",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:adaptive_security_appliance:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20329",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco ASA (Adaptive Security Appliance). Dieser Fehler betrifft das SSH-Subsystem aufgrund einer unzureichenden Validierung von Benutzereingaben. Ein entfernter, authentisierter Angreifer mit eingeschränkten Benutzerrechten kann diese Schwachstelle ausnutzen, um Betriebssystembefehle als root auszuführen, indem er bei der Ausführung von Remote-CLI-Befehlen über SSH manipulierte Eingaben übermittelt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038564"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-20329"
+    },
+    {
+      "cve": "CVE-2024-20526",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco ASA (Adaptive Security Appliance). Dieser Fehler betrifft den SSH-Server aufgrund eines Logikfehlers beim Aufbau einer SSH-Sitzung, wodurch die verfügbaren SSH-Ressourcen erschöpft werden können. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen, indem er manipulierte SSH-Nachrichten an ein betroffenes Gerät sendet."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038564"
+        ]
+      },
+      "release_date": "2024-10-23T22:00:00.000+00:00",
+      "title": "CVE-2024-20526"
+    }
+  ]
+}

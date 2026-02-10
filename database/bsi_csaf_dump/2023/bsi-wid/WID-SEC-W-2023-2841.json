@@ -1,0 +1,837 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in Samsung Android ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2841 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2841.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2841 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2841"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2023-12-05",
+        "url": "https://www.cisa.gov/news-events/alerts/2023/12/05/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "category": "external",
+        "summary": "Samsung Security Update vom 2023-11-06",
+        "url": "https://security.samsungmobile.com/securityUpdate.smsb"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Samsung Android: Mehrere Schwachstellen ermöglichen",
+    "tracking": {
+      "current_release_date": "2023-12-05T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:01:12.771+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2841",
+      "initial_release_date": "2023-11-06T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-11-06T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-12-05T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Aktive Ausnutzung gemeldet"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Samsung Android < 11 SMR Nov-2023 Release 1",
+                "product": {
+                  "name": "Samsung Android < 11 SMR Nov-2023 Release 1",
+                  "product_id": "T030954",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:samsung:android:11_smr_nov-2023_release_1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Samsung Android < 12 SMR Nov-2023 Release 1",
+                "product": {
+                  "name": "Samsung Android < 12 SMR Nov-2023 Release 1",
+                  "product_id": "T030955",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:samsung:android:12_smr_nov-2023_release_1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Samsung Android < 13 SMR Nov-2023 Release 1",
+                "product": {
+                  "name": "Samsung Android < 13 SMR Nov-2023 Release 1",
+                  "product_id": "T030956",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:samsung:android:13_smr_nov-2023_release_1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Samsung"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-41112",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-41112"
+    },
+    {
+      "cve": "CVE-2023-41111",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-41111"
+    },
+    {
+      "cve": "CVE-2023-40638",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40638"
+    },
+    {
+      "cve": "CVE-2023-40124",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40124"
+    },
+    {
+      "cve": "CVE-2023-40115",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40115"
+    },
+    {
+      "cve": "CVE-2023-40114",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40114"
+    },
+    {
+      "cve": "CVE-2023-40113",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40113"
+    },
+    {
+      "cve": "CVE-2023-40112",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40112"
+    },
+    {
+      "cve": "CVE-2023-40111",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40111"
+    },
+    {
+      "cve": "CVE-2023-40110",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40110"
+    },
+    {
+      "cve": "CVE-2023-40109",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40109"
+    },
+    {
+      "cve": "CVE-2023-40107",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40107"
+    },
+    {
+      "cve": "CVE-2023-40106",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40106"
+    },
+    {
+      "cve": "CVE-2023-40105",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40105"
+    },
+    {
+      "cve": "CVE-2023-40104",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40104"
+    },
+    {
+      "cve": "CVE-2023-40100",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-40100"
+    },
+    {
+      "cve": "CVE-2023-34970",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-34970"
+    },
+    {
+      "cve": "CVE-2023-33200",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33200"
+    },
+    {
+      "cve": "CVE-2023-33107",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33107"
+    },
+    {
+      "cve": "CVE-2023-33106",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33106"
+    },
+    {
+      "cve": "CVE-2023-33063",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33063"
+    },
+    {
+      "cve": "CVE-2023-33035",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33035"
+    },
+    {
+      "cve": "CVE-2023-33034",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33034"
+    },
+    {
+      "cve": "CVE-2023-33029",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33029"
+    },
+    {
+      "cve": "CVE-2023-33028",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33028"
+    },
+    {
+      "cve": "CVE-2023-33027",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33027"
+    },
+    {
+      "cve": "CVE-2023-33026",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-33026"
+    },
+    {
+      "cve": "CVE-2023-32820",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-32820"
+    },
+    {
+      "cve": "CVE-2023-32819",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-32819"
+    },
+    {
+      "cve": "CVE-2023-30739",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-30739"
+    },
+    {
+      "cve": "CVE-2023-28540",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-28540"
+    },
+    {
+      "cve": "CVE-2023-24855",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24855"
+    },
+    {
+      "cve": "CVE-2023-24853",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24853"
+    },
+    {
+      "cve": "CVE-2023-24850",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24850"
+    },
+    {
+      "cve": "CVE-2023-24849",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24849"
+    },
+    {
+      "cve": "CVE-2023-24848",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24848"
+    },
+    {
+      "cve": "CVE-2023-24847",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24847"
+    },
+    {
+      "cve": "CVE-2023-24844",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24844"
+    },
+    {
+      "cve": "CVE-2023-24843",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-24843"
+    },
+    {
+      "cve": "CVE-2023-22385",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-22385"
+    },
+    {
+      "cve": "CVE-2023-21673",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-21673"
+    },
+    {
+      "cve": "CVE-2023-21234",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-21234"
+    },
+    {
+      "cve": "CVE-2023-21111",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-21111"
+    },
+    {
+      "cve": "CVE-2023-21103",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-21103"
+    },
+    {
+      "cve": "CVE-2023-20819",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-20819"
+    },
+    {
+      "cve": "CVE-2022-28348",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2022-28348"
+    },
+    {
+      "cve": "CVE-2022-22071",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2022-22071"
+    },
+    {
+      "cve": "CVE-2021-44828",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2021-44828"
+    },
+    {
+      "cve": "CVE-2020-29374",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2020-29374"
+    },
+    {
+      "cve": "CVE-2023-4863",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-4863"
+    },
+    {
+      "cve": "CVE-2023-42538",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42538"
+    },
+    {
+      "cve": "CVE-2023-42537",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42537"
+    },
+    {
+      "cve": "CVE-2023-42536",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42536"
+    },
+    {
+      "cve": "CVE-2023-42535",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42535"
+    },
+    {
+      "cve": "CVE-2023-42534",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42534"
+    },
+    {
+      "cve": "CVE-2023-42533",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42533"
+    },
+    {
+      "cve": "CVE-2023-42532",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42532"
+    },
+    {
+      "cve": "CVE-2023-42531",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42531"
+    },
+    {
+      "cve": "CVE-2023-42530",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42530"
+    },
+    {
+      "cve": "CVE-2023-42529",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42529"
+    },
+    {
+      "cve": "CVE-2023-42528",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42528"
+    },
+    {
+      "cve": "CVE-2023-42527",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-42527"
+    },
+    {
+      "cve": "CVE-2023-4211",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Samsung Android. Diese Fehler bestehen in mehreren Komponenten wie SecSettings, SmsController oder der USB-Gadget-Schnittstelle aufgrund einer unsachgemäßen Eingabe- und Zertifikatsvalidierung, unsachgemäßer Zugriffskontrolle und anderen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen oder Dateien zu manipulieren. Einige der Schwachstellen erfordern eine Benutzerinteraktion, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-06T23:00:00.000+00:00",
+      "title": "CVE-2023-4211"
+    }
+  ]
+}

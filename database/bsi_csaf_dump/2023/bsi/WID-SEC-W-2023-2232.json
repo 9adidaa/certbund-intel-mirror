@@ -1,0 +1,241 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Usermin ist eine modulare Webanwendung zur Administration eines Unix-basierenden Systems und zur Konfiguration einzelner Dienste.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Usermin ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2232 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2232.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2232 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2232"
+      },
+      {
+        "category": "external",
+        "summary": "Nattional Vulnerability Database CVE-2023-41161 vom 2023-09-07",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-41161"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Security Advisory - Webmin - GHSA-fgpx-5352-x7c3 vom 2023-08-30",
+        "url": "https://github.com/advisories/GHSA-fgpx-5352-x7c3"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Usermin: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-09-17T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:54.415+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2232",
+      "initial_release_date": "2023-08-30T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-30T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-09-07T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE-2023-41161 ergänzt, Beschreibung angepasst"
+        },
+        {
+          "date": "2023-09-13T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE's ergänzt"
+        },
+        {
+          "date": "2023-09-14T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "CVE ergänzt"
+        },
+        {
+          "date": "2023-09-17T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "CVE ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Webmin < 2.001",
+            "product": {
+              "name": "Open Source Webmin < 2.001",
+              "product_id": "1328461",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:webmin:webmin:2.001"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-41163",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41163"
+    },
+    {
+      "cve": "CVE-2023-41162",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41162"
+    },
+    {
+      "cve": "CVE-2023-41161",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41161"
+    },
+    {
+      "cve": "CVE-2023-41160",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41160"
+    },
+    {
+      "cve": "CVE-2023-41158",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41158"
+    },
+    {
+      "cve": "CVE-2023-41157",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41157"
+    },
+    {
+      "cve": "CVE-2023-41156",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41156"
+    },
+    {
+      "cve": "CVE-2023-41155",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41155"
+    },
+    {
+      "cve": "CVE-2023-41154",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41154"
+    },
+    {
+      "cve": "CVE-2023-41152",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Usermin existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in verschiedenen Komponenten nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-09-07T22:00:00.000+00:00",
+      "title": "CVE-2023-41152"
+    }
+  ]
+}

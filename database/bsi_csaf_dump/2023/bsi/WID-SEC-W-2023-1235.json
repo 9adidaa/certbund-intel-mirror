@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Checkmk ist eine IT-Monitoring-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in tribe29 checkmk ausnutzen, um beliebige Livestatus-Kommandos auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1235 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1235.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1235 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1235"
+      },
+      {
+        "category": "external",
+        "summary": "CheckMK Werk 15191 vom 2023-05-16",
+        "url": "https://checkmk.com/werk/15191"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "tribe29 checkmk: Schwachstelle ermöglicht Kommando-Injektion",
+    "tracking": {
+      "current_release_date": "2023-05-16T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:51:02.581+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1235",
+      "initial_release_date": "2023-05-16T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-05-16T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.3.0b1",
+                "product": {
+                  "name": "tribe29 checkmk < 2.3.0b1",
+                  "product_id": "T026591",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.3.0b1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.2.0b8",
+                "product": {
+                  "name": "tribe29 checkmk < 2.2.0b8",
+                  "product_id": "T027756",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.2.0b8"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.1.0p28",
+                "product": {
+                  "name": "tribe29 checkmk < 2.1.0p28",
+                  "product_id": "T027757",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.1.0p28"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.0.0p36",
+                "product": {
+                  "name": "tribe29 checkmk < 2.0.0p36",
+                  "product_id": "T027758",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.0.0p36"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "checkmk"
+          }
+        ],
+        "category": "vendor",
+        "name": "tribe29"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-31208",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in tribe29 checkmk. Alle RestAPI Endpunkte, die \"Livestatus\" Filter verwenden, ermöglichen die Injektion von \"Livestatus\"-Kommandos. Ein authentisierter Angreifer kann dadurch beliebige \"Livestatus\"-Kommandos ausführen."
+        }
+      ],
+      "release_date": "2023-05-16T22:00:00.000+00:00",
+      "title": "CVE-2023-31208"
+    }
+  ]
+}

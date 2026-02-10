@@ -1,0 +1,139 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Veritas NetBackup ist eine Lösung zur Datensicherung von IT-Systemen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Veritas NetBackup ausnutzen, um Dateien zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0674 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0674.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0674 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0674"
+      },
+      {
+        "category": "external",
+        "summary": "Veritas Security Advisory VTS23-003 vom 2023-03-14",
+        "url": "https://www.veritas.com/content/support/en_US/security/VTS23-003"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Veritas NetBackup: Schwachstelle ermöglicht Manipulation von Dateien",
+    "tracking": {
+      "current_release_date": "2023-03-22T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:46:49.954+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0674",
+      "initial_release_date": "2023-03-16T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-16T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-03-22T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Veritas NetBackup < 9.0",
+                "product": {
+                  "name": "Veritas NetBackup < 9.0",
+                  "product_id": "1163776",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:veritas:netbackup:9.0"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Veritas NetBackup < 8.3.0.2",
+                "product": {
+                  "name": "Veritas NetBackup < 8.3.0.2",
+                  "product_id": "1163777",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:veritas:netbackup:8.3.0.2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetBackup"
+          }
+        ],
+        "category": "vendor",
+        "name": "Veritas"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28758",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Veritas NetBackup Master Server. Die Komponente \"BPCD\" ermöglicht die Angabe beliebiger Protokolldateipfade mit einem NetBackup-Befehl. Ein lokaler Angreifer mit geringen Rechten kann dies ausnutzen, um bestehende Dateien zu überschreiben."
+        }
+      ],
+      "release_date": "2023-03-16T23:00:00.000+00:00",
+      "title": "CVE-2023-28758"
+    }
+  ]
+}

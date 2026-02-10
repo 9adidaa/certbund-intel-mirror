@@ -1,0 +1,136 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "UniFi ist Ubiquiti's End-to-End-Netzwerk-Ökosystem für Unternehmen und Smart Homes.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Ubiquiti UniFi ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2039 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2039.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2039 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2039"
+      },
+      {
+        "category": "external",
+        "summary": "Ubiquiti Security Advisory Bulletin vom 2024-09-03",
+        "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-042-042/c4f68b56-cdc4-4128-b2cb-5870209d1704"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Ubiquiti UniFi: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-09-03T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-04T10:08:17.375+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2039",
+      "initial_release_date": "2024-09-03T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-03T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.4.59",
+                "product": {
+                  "name": "Ubiquiti UniFi <8.4.59",
+                  "product_id": "T037248"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.4.59",
+                "product": {
+                  "name": "Ubiquiti UniFi 8.4.59",
+                  "product_id": "T037248-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ubnt:unifi:8.4.59"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "UniFi"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubiquiti"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-42025",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in der Ubiquiti UniFi Network Application unter Linux. Diese Fehler besteht aufgrund einer unsachgemäßen Validierung von Benutzereingaben, die eine Befehlsinjektion ermöglicht. Ein lokaler Angreifer mit Zugriff auf die UniFi-Benutzer-Shell könnte diese Schwachstelle ausnutzen, um die Rechte auf root zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037248"
+        ]
+      },
+      "release_date": "2024-09-03T22:00:00.000+00:00",
+      "title": "CVE-2024-42025"
+    }
+  ]
+}

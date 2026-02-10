@@ -1,0 +1,288 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "ProLiant ist eine Serverfamilie von Hewlett Packard Enterprise.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in HPE ProLiant und AMD EPYC Prozessoren ausnutzen, um Sicherheitsvorkehrungen zu umgehen oder Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2292 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2292.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2292 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2292"
+      },
+      {
+        "category": "external",
+        "summary": "HPE Security Bulletin HPESBHF04952 rev.1 vom 2025-10-14",
+        "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbhf04952en_us&docLocale=en_US"
+      },
+      {
+        "category": "external",
+        "summary": "HPE Security Bulletin HPESBHF04956 rev.1 vom 2025-10-14",
+        "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbhf04956en_us&docLocale=en_US"
+      },
+      {
+        "category": "external",
+        "summary": "AMD Security Bulletin AMD-SB-3020 vom 2025-10-14",
+        "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-3020.html"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2025-352 vom 2025-10-16",
+        "url": "https://www.dell.com/support/kbdoc/000379661"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "HPE ProLiant und AMD EPYC Prozessoren: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-10-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-10-16T09:43:29.693+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2292",
+      "initial_release_date": "2025-10-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-10-15T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "EPYC Series",
+                "product": {
+                  "name": "AMD Prozessor EPYC Series",
+                  "product_id": "T047707",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:amd:amd_processor:epyc_series"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Prozessor"
+          }
+        ],
+        "category": "vendor",
+        "name": "AMD"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "server",
+                "product": {
+                  "name": "Dell PowerEdge server",
+                  "product_id": "T040783",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:dell:poweredge:server"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PowerEdge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "RL300 Gen11 Server bIOS <V1.78",
+                "product": {
+                  "name": "HPE ProLiant RL300 Gen11 Server bIOS <V1.78",
+                  "product_id": "T047702"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "RL300 Gen11 Server bIOS V1.78",
+                "product": {
+                  "name": "HPE ProLiant RL300 Gen11 Server bIOS V1.78",
+                  "product_id": "T047702-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:hp:proliant:rl300_gen11_server_bios__v1.78"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Gen10 Plus BIOS <3.90_10-03-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen10 Plus BIOS <3.90_10-03-2025",
+                  "product_id": "T047703"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Gen10 Plus BIOS 3.90_10-03-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen10 Plus BIOS 3.90_10-03-2025",
+                  "product_id": "T047703-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:hp:proliant:gen10_plus_bios__3.90_10-03-2025"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Gen11 BIOS <2.82_10-03-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen11 BIOS <2.82_10-03-2025",
+                  "product_id": "T047704"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Gen11 BIOS 2.82_10-03-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen11 BIOS 2.82_10-03-2025",
+                  "product_id": "T047704-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:hp:proliant:gen11_bios__2.82_10-03-2025"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Gen11 BIOS <1.72_10-03-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen11 BIOS <1.72_10-03-2025",
+                  "product_id": "T047705"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Gen11 BIOS 1.72_10-03-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen11 BIOS 1.72_10-03-2025",
+                  "product_id": "T047705-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:hp:proliant:gen11_bios__1.72_10-03-2025"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Gen12 BIOS <1.20_07-11-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen12 BIOS <1.20_07-11-2025",
+                  "product_id": "T047706"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Gen12 BIOS 1.20_07-11-2025",
+                "product": {
+                  "name": "HPE ProLiant Gen12 BIOS 1.20_07-11-2025",
+                  "product_id": "T047706-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:hp:proliant:gen12_bios__1.20_07-11-2025"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ProLiant"
+          }
+        ],
+        "category": "vendor",
+        "name": "HPE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-0033",
+      "product_status": {
+        "known_affected": [
+          "T047703",
+          "T047706",
+          "T047707",
+          "T047704",
+          "T047705",
+          "T040783"
+        ]
+      },
+      "release_date": "2025-10-14T22:00:00.000+00:00",
+      "title": "CVE-2025-0033"
+    },
+    {
+      "cve": "CVE-2025-37149",
+      "product_status": {
+        "known_affected": [
+          "T047702",
+          "T040783"
+        ]
+      },
+      "release_date": "2025-10-14T22:00:00.000+00:00",
+      "title": "CVE-2025-37149"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Firepower ist eine Firewall-Plattform von Cisco",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in Cisco Firepower Management Center ausnutzen, um einen Cross-Site-Scripting-Angriff zu starten, beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen und vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2811 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2811.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2811 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2811"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-11-01",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-xss-sK2gkfvJ"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-11-01",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-logview-dos-AYJdeX55"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-11-01",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-file-download-7js4ug2J"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-11-01",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-cmdinj-bTEgufOX"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-11-01",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-cmd-inj-29MP49hN"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Firepower Management Center: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-11-01T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:00:58.549+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2811",
+      "initial_release_date": "2023-11-01T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-11-01T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco Firepower Management Center",
+            "product": {
+              "name": "Cisco Firepower Management Center",
+              "product_id": "T016458",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:firepower:management_center"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20155",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler besteht in der Protokollierungs-API in der Management Center Software aufgrund einer fehlenden Ratenbegrenzung von Anfragen, die an eine bestimmte API gesendet werden, die sich auf ein FMC-Protokoll bezieht, was dazu führt, dass das Gerät nicht mehr reagiert oder ein unerwartetes Neuladen auslösen und Systemprotokolldateien lesen kann. Durch das Senden einer hohen Rate von HTTP-Anfragen an die API kann ein Angreifer diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20155"
+    },
+    {
+      "cve": "CVE-2023-20114",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler besteht in der Funktion zum Herunterladen von Dateien aufgrund einer fehlenden Eingabesanierung, die es ermöglicht, beliebige Dateien von einem betroffenen System herunterzuladen. Durch das Senden einer manipulierten HTTPS-Anfrage kann ein entfernter, authentifizierter Angreifer diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20114"
+    },
+    {
+      "cve": "CVE-2023-20220",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Cisco Firepower. Dieser Fehler besteht in der webbasierten Verwaltungsoberfläche der Management Center Software aufgrund einer unzureichenden Validierung der vom Benutzer bereitgestellten Eingaben für bestimmte Konfigurationsoptionen. Durch die Verwendung von manipulierten Eingaben innerhalb der Gerätekonfigurations-GUI kann ein entfernter, authentifizierter Angreifer mit gültigen Geräteanmeldedaten diese Schwachstelle ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20220"
+    },
+    {
+      "cve": "CVE-2023-20219",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Cisco Firepower. Dieser Fehler besteht in der webbasierten Verwaltungsoberfläche der Management Center Software aufgrund einer unzureichenden Validierung der vom Benutzer bereitgestellten Eingaben für bestimmte Konfigurationsoptionen. Durch die Verwendung von manipulierten Eingaben innerhalb der Gerätekonfigurations-GUI kann ein entfernter, authentifizierter Angreifer mit gültigen Geräteanmeldedaten diese Schwachstelle ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20219"
+    },
+    {
+      "cve": "CVE-2023-20048",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Firepower. Dieser Fehler besteht in der Management Center Software aufgrund einer unzureichenden Autorisierung von Konfigurationsbefehlen, die über die Web-Service-Schnittstelle gesendet werden. Durch die Authentifizierung an der FMC-Webdienstschnittstelle und das Senden einer manipulierten HTTP-Anfrage an ein betroffenes Gerät kann ein entfernter, authentifizierter Angreifer mit gültigen Anmeldeinformationen auf der FMC-Software diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20048"
+    },
+    {
+      "cve": "CVE-2023-20206",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cisco Firepower existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in webbasierte Verwaltungsoberfläche der Cisco Firepower Management Center (FMC) Software nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20206"
+    },
+    {
+      "cve": "CVE-2023-20074",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cisco Firepower existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in webbasierte Verwaltungsoberfläche der Cisco Firepower Management Center (FMC) Software nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20074"
+    },
+    {
+      "cve": "CVE-2023-20041",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cisco Firepower existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in webbasierte Verwaltungsoberfläche der Cisco Firepower Management Center (FMC) Software nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20041"
+    },
+    {
+      "cve": "CVE-2023-20005",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cisco Firepower existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in webbasierte Verwaltungsoberfläche der Cisco Firepower Management Center (FMC) Software nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016458"
+        ]
+      },
+      "release_date": "2023-11-01T23:00:00.000+00:00",
+      "title": "CVE-2023-20005"
+    }
+  ]
+}

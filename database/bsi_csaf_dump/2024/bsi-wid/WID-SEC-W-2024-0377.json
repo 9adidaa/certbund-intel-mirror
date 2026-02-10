@@ -1,0 +1,168 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Intel stellt Chipsätze her, die auf Mainboards zur Ansteuerung der Intel Prozessoren eingesetzt werden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen im Intel Chipsatz-Treiber ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0377 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0377.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0377 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0377"
+      },
+      {
+        "category": "external",
+        "summary": "Intel Security Advisory INTEL-SA-00928 vom 2024-02-13",
+        "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00928.html"
+      },
+      {
+        "category": "external",
+        "summary": "Lenovo Security Advisory LEN-150692 vom 2024-02-14",
+        "url": "https://support.lenovo.com/us/en/product_security/LEN-150692"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Intel Chipsatz-Treiber: Mehrere Schwachstellen ermöglichen Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-02-14T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:05:12.975+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0377",
+      "initial_release_date": "2024-02-13T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-13T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-02-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von LENOVO aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Driver < 10.1.19444.8378",
+                "product": {
+                  "name": "Intel Chipset Driver < 10.1.19444.8378",
+                  "product_id": "T032686"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Chipset"
+          }
+        ],
+        "category": "vendor",
+        "name": "Intel"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Lenovo Computer",
+            "product": {
+              "name": "Lenovo Computer",
+              "product_id": "T030470",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:lenovo:computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Lenovo"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28739",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Im Intel Chipsatz-Treiber existieren mehrere Schwachstellen. Diese sind auf Fehler hinsichtlich Berechtigungen und Berechtigungsvergabe zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030470"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-28739"
+    },
+    {
+      "cve": "CVE-2023-25174",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Im Intel Chipsatz-Treiber existieren mehrere Schwachstellen. Diese sind auf Fehler hinsichtlich Berechtigungen und Berechtigungsvergabe zurückzuführen. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030470"
+        ]
+      },
+      "release_date": "2024-02-13T23:00:00.000+00:00",
+      "title": "CVE-2023-25174"
+    }
+  ]
+}

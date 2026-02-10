@@ -1,0 +1,229 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "BigFix ist eine Lösung zum Erkennen und Verwalten von physischen und virtuellen Endpunkten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in HCL BigFix ausnutzen, um Informationen offenzulegen eine URL Redirection durchzuführen oder Code auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2366 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2366.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2366 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2366"
+      },
+      {
+        "category": "external",
+        "summary": "HCL Article KB0102172 vom 2022-12-19",
+        "url": "https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0102172"
+      },
+      {
+        "category": "external",
+        "summary": "HCL Security Bulletin vom 2022-04-24",
+        "url": "https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0097778"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "HCL BigFix: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2022-12-19T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:40:11.795+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-2366",
+      "initial_release_date": "2022-04-24T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-04-24T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-12-19T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von HCL aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "HCL BigFix",
+            "product": {
+              "name": "HCL BigFix",
+              "product_id": "T017494",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:hcltech:bigfix:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "HCL Domino",
+            "product": {
+              "name": "HCL Domino",
+              "product_id": "777623",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:hcltech:domino:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "HCL"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-27764",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in HCL BigFix. \"NUMBER\"-Cookies werden ohne \"Secure\"- oder \"HTTPOnly\"-Flag gesetzt. Ein Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "777623",
+          "T017494"
+        ]
+      },
+      "release_date": "2022-04-24T22:00:00.000+00:00",
+      "title": "CVE-2021-27764"
+    },
+    {
+      "cve": "CVE-2021-44906",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in HCL BigFix. Diese besteht aufgrund einer möglichen Prototype Pollution über die Funktion \"setKey()\" in \"index.js\". Ein entfernter anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "777623",
+          "T017494"
+        ]
+      },
+      "release_date": "2022-04-24T22:00:00.000+00:00",
+      "title": "CVE-2021-44906"
+    },
+    {
+      "cve": "CVE-2022-0122",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in HCL BigFix. Ein Problem in \"Forge\" ermöglicht eine URL Redirection zu nicht vertrauenswürdigen Sites."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "777623",
+          "T017494"
+        ]
+      },
+      "release_date": "2022-04-24T22:00:00.000+00:00",
+      "title": "CVE-2022-0122"
+    },
+    {
+      "cve": "CVE-2022-0155",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in HCL BigFix. Die Ursache ist ein Problem mit \"follow-redirects\". Ein Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzuelgen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "777623",
+          "T017494"
+        ]
+      },
+      "release_date": "2022-04-24T22:00:00.000+00:00",
+      "title": "CVE-2022-0155"
+    },
+    {
+      "cve": "CVE-2022-0235",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in HCL BigFix. Ein Angreifer kann dieses Problem in \"node-fetch\" ausnutzen, um Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "777623",
+          "T017494"
+        ]
+      },
+      "release_date": "2022-04-24T22:00:00.000+00:00",
+      "title": "CVE-2022-0235"
+    },
+    {
+      "cve": "CVE-2022-0355",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in HCL BigFix. Ein Angreifer kann dieses Problem in \"simple-get\" ausnutzen, um Informationen offenzuelgen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "777623",
+          "T017494"
+        ]
+      },
+      "release_date": "2022-04-24T22:00:00.000+00:00",
+      "title": "CVE-2022-0355"
+    }
+  ]
+}

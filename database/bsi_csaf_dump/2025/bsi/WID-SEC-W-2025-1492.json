@@ -1,0 +1,170 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Azure Service Fabric ist eine Plattform für verteilte Systeme zur Paketierung, Bereitstellung und Verwaltung von Microservices und Containern. \r\nAzure ist eine Cloud Computing-Plattform von Microsoft.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Microsoft Azure Service Fabric und Microsoft Azure Monitor Agent ausnutzen, um seine Privilegien zu erhöhen, und um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1492 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1492.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1492 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1492"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates",
+        "url": "https://msrc.microsoft.com/update-guide/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Azure Service Fabric und Monitor Agent: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-07-13T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-07-14T04:44:41.276+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1492",
+      "initial_release_date": "2025-07-08T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-07-08T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-07-13T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "interne Referenzierungen überprüft"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Monitor Agent <1.35.1",
+                "product": {
+                  "name": "Microsoft Azure Monitor Agent <1.35.1",
+                  "product_id": "T045165"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Monitor Agent 1.35.1",
+                "product": {
+                  "name": "Microsoft Azure Monitor Agent 1.35.1",
+                  "product_id": "T045165-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:azure:monitor_agent__1.35.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Azure"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<10.1 Cumulative Update",
+                "product": {
+                  "name": "Microsoft Azure Service Fabric <10.1 Cumulative Update",
+                  "product_id": "T045164"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.1 Cumulative Update",
+                "product": {
+                  "name": "Microsoft Azure Service Fabric 10.1 Cumulative Update",
+                  "product_id": "T045164-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:azure_service_fabric:10.1_cumulative_update"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Azure Service Fabric"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-21195",
+      "product_status": {
+        "known_affected": [
+          "T045164"
+        ]
+      },
+      "release_date": "2025-07-08T22:00:00.000+00:00",
+      "title": "CVE-2025-21195"
+    },
+    {
+      "cve": "CVE-2025-47988",
+      "product_status": {
+        "known_affected": [
+          "T045165"
+        ]
+      },
+      "release_date": "2025-07-08T22:00:00.000+00:00",
+      "title": "CVE-2025-47988"
+    }
+  ]
+}

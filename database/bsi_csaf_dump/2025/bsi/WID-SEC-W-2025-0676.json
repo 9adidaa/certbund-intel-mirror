@@ -1,0 +1,188 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "VMware Aria Operations bietet eine einheitliche Plattform für das IT-Betriebsmanagement in Private-, Hybrid- und Multi-Cloud-Umgebungen.\r\nVMware Cloud Foundation ist eine Hybrid Cloud-Plattform für VM-Management und Container-Orchestrierung.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in VMware Aria Operations und VMware Cloud Foundation ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0676 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-0676.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0676 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0676"
+      },
+      {
+        "category": "external",
+        "summary": "VMware Security Advisory VMSA-2025-0006 vom 2025-04-01",
+        "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/25541"
+      },
+      {
+        "category": "external",
+        "summary": "Google Cloud Platform Security Bulletin GCP-2025-029 vom 2025-05-23",
+        "url": "https://cloud.google.com/support/bulletins#gcp-2025-029"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "VMware Aria Operations: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2025-05-25T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-05-26T06:56:04.342+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2025-0676",
+      "initial_release_date": "2025-04-01T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-04-01T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-05-25T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Google aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Google Cloud Platform",
+            "product": {
+              "name": "Google Cloud Platform",
+              "product_id": "393401",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:google:cloud_platform:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.18 HF 5",
+                "product": {
+                  "name": "VMware Aria Operations <8.18 HF 5",
+                  "product_id": "T042273"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.18 HF 5",
+                "product": {
+                  "name": "VMware Aria Operations 8.18 HF 5",
+                  "product_id": "T042273-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:vmware:aria_operations:8.18_hf_5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Aria Operations"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "4.x",
+                "product": {
+                  "name": "VMware Cloud Foundation 4.x",
+                  "product_id": "T042288",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:vmware:cloud_foundation:4.x"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.x",
+                "product": {
+                  "name": "VMware Cloud Foundation 5.x",
+                  "product_id": "T042289",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:vmware:cloud_foundation:5.x"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cloud Foundation"
+          }
+        ],
+        "category": "vendor",
+        "name": "VMware"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-22231",
+      "product_status": {
+        "known_affected": [
+          "T042288",
+          "T042289",
+          "393401",
+          "T042273"
+        ]
+      },
+      "release_date": "2025-04-01T22:00:00.000+00:00",
+      "title": "CVE-2025-22231"
+    }
+  ]
+}

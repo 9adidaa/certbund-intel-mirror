@@ -1,0 +1,179 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cacti ist ein grafisches Frontend zur Visualisierung von statistischen Daten, erfasst durch die Round Robin Database rrdtool.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Cacti RRDtool ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3632 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2021/wid-sec-w-2024-3632.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3632 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3632"
+      },
+      {
+        "category": "external",
+        "summary": "Cacti Github Seite vom 2021-07-05",
+        "url": "https://github.com/Cacti/cacti/releases/tag/release/1.2.18"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202412-02 vom 2024-12-07",
+        "url": "https://security.gentoo.org/glsa/202412-02"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cacti RRDtool: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-12-08T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-09T09:22:04.900+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3632",
+      "initial_release_date": "2021-07-05T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2021-07-05T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-12-08T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2.18",
+                "product": {
+                  "name": "Open Source Cacti <2.18",
+                  "product_id": "T019715"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.18",
+                "product": {
+                  "name": "Open Source Cacti 2.18",
+                  "product_id": "T019715-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cacti:cacti:2.18"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cacti"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-14424",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cacti RRDtool existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T019715",
+          "T012167"
+        ]
+      },
+      "release_date": "2021-07-05T22:00:00.000+00:00",
+      "title": "CVE-2020-14424"
+    },
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cacti RRDtool existiert eine Schwachstelle, welche auf eine unzureichende Bereinigung der Session-IDs nach dem Beenden einer Session zurückzuführen ist. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T019715",
+          "T012167"
+        ]
+      },
+      "release_date": "2021-07-05T22:00:00.000+00:00"
+    }
+  ]
+}

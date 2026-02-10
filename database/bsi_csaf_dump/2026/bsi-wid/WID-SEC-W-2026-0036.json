@@ -1,0 +1,167 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "OpenLDAP ist eine frei verfügbare Implementierung des Verzeichnisdienstes LDAP.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in OpenLDAP ausnutzen, um einen Denial of Service Angriff durchzuführen und um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-0036 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-0036.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-0036 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0036"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugtracker vom 2026-01-08",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2427679"
+      },
+      {
+        "category": "external",
+        "summary": "VulnCheck Advisory vom 2026-01-07",
+        "url": "https://www.vulncheck.com/advisories/openldap-lmdb-mdb-load-heap-buffer-underflow-in-readline"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:0256-1 vom 2026-01-23",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/UYFNDOSSETICMMZE3P2PBWVHTSTGBRVZ/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "OpenLDAP: Schwachstelle ermöglicht Denial of Service und Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2026-01-22T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-23T09:21:31.064+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-0036",
+      "initial_release_date": "2026-01-07T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-01-07T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-01-08T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2026-1169"
+        },
+        {
+          "date": "2026-01-22T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=2.6.10",
+                "product": {
+                  "name": "Open Source OpenLDAP <=2.6.10",
+                  "product_id": "T049763"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.6.10",
+                "product": {
+                  "name": "Open Source OpenLDAP <=2.6.10",
+                  "product_id": "T049763-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenLDAP"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-22185",
+      "product_status": {
+        "known_affected": [
+          "T002207"
+        ],
+        "last_affected": [
+          "T049763"
+        ]
+      },
+      "release_date": "2026-01-07T23:00:00.000+00:00",
+      "title": "CVE-2026-22185"
+    }
+  ]
+}

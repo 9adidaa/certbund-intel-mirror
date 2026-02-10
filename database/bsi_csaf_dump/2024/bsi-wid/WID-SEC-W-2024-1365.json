@@ -1,0 +1,136 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Vault ist ein identitätsbasiertes System zur Verwaltung von Geheimnissen und Verschlüsselung.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer mit hohen Privilegien kann eine Schwachstelle in Hashicorp Vault ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1365 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1365.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1365 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1365"
+      },
+      {
+        "category": "external",
+        "summary": "Hashicorp Security Advisory vom 2024-06-12",
+        "url": "https://discuss.hashicorp.com/t/hcsec-2024-11-vault-incorrectly-validated-json-web-tokens-jwt-audience-claims/67770"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Hashicorp Vault: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2024-06-12T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:10:09.136+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1365",
+      "initial_release_date": "2024-06-12T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-06-12T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.17.0",
+                "product": {
+                  "name": "Hashicorp Vault <1.17.0",
+                  "product_id": "T035412"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<1.16.3",
+                "product": {
+                  "name": "Hashicorp Vault <1.16.3",
+                  "product_id": "T035413"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<1.15.9",
+                "product": {
+                  "name": "Hashicorp Vault <1.15.9",
+                  "product_id": "T035414"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Vault"
+          }
+        ],
+        "category": "vendor",
+        "name": "Hashicorp"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-5798",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Hashicorp Vault. Dieser Fehler besteht aufgrund einer unsachgemäßen Validierung von JSON Web Token, die dazu führt, dass eine ungültige Anmeldung erfolgreich ist. Ein entfernter Angreifer mit hohen Privilegien kann diese Schwachstelle ausnutzen, um die Authentifizierung zu umgehen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2024-06-12T22:00:00.000+00:00",
+      "title": "CVE-2024-5798"
+    }
+  ]
+}

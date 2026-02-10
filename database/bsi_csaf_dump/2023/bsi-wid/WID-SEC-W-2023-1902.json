@@ -1,0 +1,262 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Jenkins ist ein erweiterbarer, webbasierter Integration Server zur kontinuierlichen Unterstützung bei Softwareentwicklungen aller Art.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in Jenkins ausnutzen, um Sicherheitsvorkehrungen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1902 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1902.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1902 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1902"
+      },
+      {
+        "category": "external",
+        "summary": "Jenkins Security Advisory 2023-07-26 vom 2023-07-26",
+        "url": "https://www.jenkins.io/security/advisory/2023-07-26/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Jenkins: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-07-26T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:56:16.372+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1902",
+      "initial_release_date": "2023-07-26T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-07-26T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins Plugins",
+                "product": {
+                  "name": "Jenkins Jenkins Plugins",
+                  "product_id": "T013614",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:plugins"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins Weekly < 2.416",
+                "product": {
+                  "name": "Jenkins Jenkins Weekly < 2.416",
+                  "product_id": "T028913",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:weekly__2.416"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Jenkins Jenkins LTS < 2.401.3",
+                "product": {
+                  "name": "Jenkins Jenkins LTS < 2.401.3",
+                  "product_id": "T028914",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:lts__2.401.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Jenkins"
+          }
+        ],
+        "category": "vendor",
+        "name": "Jenkins"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-39156",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-39156"
+    },
+    {
+      "cve": "CVE-2023-39155",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-39155"
+    },
+    {
+      "cve": "CVE-2023-39154",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-39154"
+    },
+    {
+      "cve": "CVE-2023-39153",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-39153"
+    },
+    {
+      "cve": "CVE-2023-39152",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-39152"
+    },
+    {
+      "cve": "CVE-2023-39151",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-39151"
+    },
+    {
+      "cve": "CVE-2023-3442",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-3442"
+    },
+    {
+      "cve": "CVE-2023-3414",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in Jenkins und mehreren Jenkins Plugins. Die betroffenen Plugins sind: Bazaar, Chef Identity, GitLab Authentication, Gradle, Qualys Web App Scanning Connector und ServiceNow DevOps. Die Fehler bestehen unter anderem aufgrund mehrerer Cross Site Request Forgeries, eines fehlerhaften Kontrollflusses und einer fehlerhaften Übermittlungsprüfung. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen und einen Cross-Site-Scripting-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013614"
+        ]
+      },
+      "release_date": "2023-07-26T22:00:00.000+00:00",
+      "title": "CVE-2023-3414"
+    }
+  ]
+}

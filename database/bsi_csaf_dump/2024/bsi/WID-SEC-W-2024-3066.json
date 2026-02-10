@@ -1,0 +1,717 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Redis ist ein In-Memory-Datenstrukturspeicher, der als Datenbank, Cache und Message Broker verwendet wird.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Redis ausnutzen, um einen Denial of Service Angriff durchzuführen oder Code auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3066 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3066.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3066 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3066"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASREDIS6-2024-010 vom 2024-10-03",
+        "url": "https://alas.aws.amazon.com/AL2/ALASREDIS6-2024-010.html"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora redis-7.2.6-1.fc39 vom 2024-10-03",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2024-68f9c0741f"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora redis-7.2.6-1.fc40 vom 2024-10-03",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2024-5d4eb04e76"
+      },
+      {
+        "category": "external",
+        "summary": "redis Release 6.2.15 vom 2024-10-03",
+        "url": "https://github.com/redis/redis/releases/tag/6.2.15"
+      },
+      {
+        "category": "external",
+        "summary": "redis Release 7.2.6 vom 2024-10-03",
+        "url": "https://github.com/redis/redis/releases/tag/7.2.6"
+      },
+      {
+        "category": "external",
+        "summary": "redis Release 7.4.1 vom 2024-10-03",
+        "url": "https://github.com/redis/redis/releases/tag/7.4.1"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:3535-1 vom 2024-10-07",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/2MJL2HZRU6V7OSHIIZY5KVTL665ORYEI/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:3537-1 vom 2024-10-07",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/4OPBXFKXUIKFXXTVL4VRGZVTZPCFZ76M/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:3537-1 vom 2024-10-07",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/4OPBXFKXUIKFXXTVL4VRGZVTZPCFZ76M/"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2024-845B92EE3F vom 2024-10-07",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2024-845b92ee3f"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2024-E717420659 vom 2024-10-07",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2024-e717420659"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2024-8A9A692906 vom 2024-10-07",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2024-8a9a692906"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:3549-1 vom 2024-10-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-October/019564.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:3575-1 vom 2024-10-09",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/M6BZ6HQOKHNHPGES54RAPLD2UWSUSZQP/"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2024:14412-1 vom 2024-10-19",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/FC3R4QUTZLEWJMAPH3UHB3OKNYMNYUZM/"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3973 vom 2024-11-28",
+        "url": "https://lists.debian.org/debian-lts-announce/2024/11/msg00031.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:10869 vom 2024-12-05",
+        "url": "https://access.redhat.com/errata/RHSA-2024:10869"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-10869 vom 2024-12-07",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-10869.html"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2025-57DF67C36A vom 2025-01-08",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2025-57df67c36a"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2025-86E34A5C90 vom 2025-01-08",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2025-86e34a5c90"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2025-D6C0319427 vom 2025-01-08",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2025-d6c0319427"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2025-282DF7372B vom 2025-01-08",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2025-282df7372b"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:0081-1 vom 2025-01-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-January/020099.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:0595 vom 2025-01-22",
+        "url": "https://access.redhat.com/errata/RHSA-2025:0595"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-0595 vom 2025-01-24",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-0595.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:0693 vom 2025-01-27",
+        "url": "https://access.redhat.com/errata/RHSA-2025:0693"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-0693 vom 2025-01-29",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-0693.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:1249 vom 2025-02-10",
+        "url": "https://access.redhat.com/errata/RHSA-2025:1249"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2025:0595 vom 2025-02-13",
+        "url": "https://errata.build.resf.org/RLSA-2025:0595"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7321-1 vom 2025-03-05",
+        "url": "https://ubuntu.com/security/notices/USN-7321-1"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2025:15293-1 vom 2025-07-05",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/7UB35TLFHFPDDQZN236SKMZKWTI6NBJO/"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202511-05 vom 2025-11-25",
+        "url": "https://security.gentoo.org/glsa/202511-05"
+      },
+      {
+        "category": "external",
+        "summary": "Juniper Security Advisory JSA106013 vom 2025-01-14",
+        "url": "https://supportportal.juniper.net/s/article/2026-01-Security-Bulletin-Junos-Space-Multiple-vulnerabilities-resolved-in-24-1R5-release"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Redis: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-01-14T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-15T10:56:03.206+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-3066",
+      "initial_release_date": "2024-10-03T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-03T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-10-07T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE und Fedora aufgenommen"
+        },
+        {
+          "date": "2024-10-08T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-10-09T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-10-20T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2024-11-28T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-12-05T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-12-08T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-01-08T23:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Fedora aufgenommen"
+        },
+        {
+          "date": "2025-01-13T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-01-21T23:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-01-23T23:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-01-26T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-01-29T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-02-10T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-02-13T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
+        },
+        {
+          "date": "2025-03-05T23:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2025-07-06T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2025-11-24T23:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        },
+        {
+          "date": "2026-01-14T23:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Juniper aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "20"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "T028903",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Fedora Linux",
+                "product": {
+                  "name": "Fedora Linux",
+                  "product_id": "74185",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:fedoraproject:fedora:-"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Fedora Linux",
+                "product": {
+                  "name": "Fedora Linux",
+                  "product_id": "T033781",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:fedoraproject:fedora:-"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<24.1R5",
+                "product": {
+                  "name": "Juniper Junos Space <24.1R5",
+                  "product_id": "T049957"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "24.1R5",
+                "product": {
+                  "name": "Juniper Junos Space 24.1R5",
+                  "product_id": "T049957-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:juniper:junos_space:24.1r5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Junos Space"
+          }
+        ],
+        "category": "vendor",
+        "name": "Juniper"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.4.1",
+                "product": {
+                  "name": "Open Source Redis <7.4.1",
+                  "product_id": "T037942"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.4.1",
+                "product": {
+                  "name": "Open Source Redis 7.4.1",
+                  "product_id": "T037942-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redislabs:redis:7.4.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.2.6",
+                "product": {
+                  "name": "Open Source Redis <7.2.6",
+                  "product_id": "T037943"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.2.6",
+                "product": {
+                  "name": "Open Source Redis 7.2.6",
+                  "product_id": "T037943-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redislabs:redis:7.2.6"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<6.2.16",
+                "product": {
+                  "name": "Open Source Redis <6.2.16",
+                  "product_id": "T037945"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.2.16",
+                "product": {
+                  "name": "Open Source Redis 6.2.16",
+                  "product_id": "T037945-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redislabs:redis:6.2.16"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Redis"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Red Hat Enterprise Linux",
+                "product": {
+                  "name": "Red Hat Enterprise Linux",
+                  "product_id": "67646",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Discovery",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Discovery",
+                  "product_id": "T040951",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:discovery"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-31227",
+      "product_status": {
+        "known_affected": [
+          "T037943",
+          "67646",
+          "T037945",
+          "T012167",
+          "T037942",
+          "T004914",
+          "T032255",
+          "74185",
+          "T033781",
+          "T049957",
+          "2951",
+          "T002207",
+          "T028903",
+          "T000126",
+          "T027843",
+          "T040951"
+        ]
+      },
+      "release_date": "2024-10-03T22:00:00.000+00:00",
+      "title": "CVE-2024-31227"
+    },
+    {
+      "cve": "CVE-2024-31228",
+      "product_status": {
+        "known_affected": [
+          "T037943",
+          "67646",
+          "T037945",
+          "T012167",
+          "T037942",
+          "T004914",
+          "T032255",
+          "74185",
+          "T033781",
+          "T049957",
+          "2951",
+          "T002207",
+          "T028903",
+          "T000126",
+          "T027843",
+          "T040951"
+        ]
+      },
+      "release_date": "2024-10-03T22:00:00.000+00:00",
+      "title": "CVE-2024-31228"
+    },
+    {
+      "cve": "CVE-2024-31449",
+      "product_status": {
+        "known_affected": [
+          "T037943",
+          "67646",
+          "T037945",
+          "T012167",
+          "T037942",
+          "T004914",
+          "T032255",
+          "74185",
+          "T033781",
+          "T049957",
+          "2951",
+          "T002207",
+          "T028903",
+          "T000126",
+          "T027843",
+          "T040951"
+        ]
+      },
+      "release_date": "2024-10-03T22:00:00.000+00:00",
+      "title": "CVE-2024-31449"
+    }
+  ]
+}

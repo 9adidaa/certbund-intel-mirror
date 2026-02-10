@@ -1,0 +1,155 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Keycloak ermöglicht Single Sign-On mit Identity and Access Management für moderne Anwendungen und Dienste.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Keycloak ausnutzen, um Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0034 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0034.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0034 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0034"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Software Vulnerability Information hitachi-sec-2023-116 vom 2023-05-23",
+        "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2023-116/index.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla - Bug 2158585 vom 2023-01-05",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2158585"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Keycloak: Schwachstelle ermöglicht Manipulation von Daten",
+    "tracking": {
+      "current_release_date": "2023-05-22T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:40:54.247+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0034",
+      "initial_release_date": "2023-01-05T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-05T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-01-26T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE-2023-0091 ergänzt"
+        },
+        {
+          "date": "2023-05-22T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von HITACHI aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Hitachi Ops Center",
+            "product": {
+              "name": "Hitachi Ops Center",
+              "product_id": "T017562",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:hitachi:ops_center:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Keycloak",
+            "product": {
+              "name": "Open Source Keycloak",
+              "product_id": "T024196",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:keycloak:keycloak:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-0091",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Keycloak. Der Fehler besteht aufgrund einer unsachgemäßen Überprüfung von widerrufenen Client-Tokens im Client Credential Flow. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um auf potenziell vertrauliche Informationen zuzugreifen oder diese zu ändern. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T024196",
+          "T017562"
+        ]
+      },
+      "release_date": "2023-01-05T23:00:00.000+00:00",
+      "title": "CVE-2023-0091"
+    }
+  ]
+}

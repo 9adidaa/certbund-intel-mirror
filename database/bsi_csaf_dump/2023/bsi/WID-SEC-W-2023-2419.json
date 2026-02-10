@@ -1,0 +1,237 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Router der Firma D-LINK enthalten eine Firewall und in der Regel eine WLAN-Schnittstelle. Die Geräte sind hauptsächlich für private Anwender und Kleinunternehmen konzipiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in D-Link DI-7200GV2 Geräten ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2419 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2419.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2419 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2419"
+      },
+      {
+        "category": "external",
+        "summary": "D-Link Security Notification vom 2023-09-20",
+        "url": "https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10284"
+      },
+      {
+        "category": "external",
+        "summary": "Proof of Concept (PoC)",
+        "url": "https://github.com/Archerber/bug_submit/tree/main/D-Link/DI-7200GV2"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory für CVE-2023-43197",
+        "url": "https://github.com/advisories/GHSA-w48x-979p-wxjg"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory für CVE-2023-43201",
+        "url": "https://github.com/advisories/GHSA-rwjg-9m86-4g9r"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory für CVE-2023-43200",
+        "url": "https://github.com/advisories/GHSA-rjv4-rhw4-4c39"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory für CVE-2023-43198",
+        "url": "https://github.com/advisories/GHSA-j9gm-fv4g-hgm8"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory für CVE-2023-43196",
+        "url": "https://github.com/advisories/GHSA-hfjj-3gmc-g9hw"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory für CVE-2023-43199",
+        "url": "https://github.com/advisories/GHSA-9fwm-7gfc-cxf8"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "D-Link DI-7200GV2: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-09-20T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:44.552+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2419",
+      "initial_release_date": "2023-09-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "D-LINK Router DI-7200GV E1 <= 21.04.09E1",
+            "product": {
+              "name": "D-LINK Router DI-7200GV E1 <= 21.04.09E1",
+              "product_id": "T030014",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:d-link:router:di-7200gv_e1__21.04.09e1"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "D-LINK"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-43201",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Funktionen H5/login.cgi, arp_sys.asp, H5/hi_block.asp, yyxz.data, qos_ext.asp und tgfile.asp von D-Link DI-7200GV2 Devices aufgrund von mehreren Stack-basierten Überläufen. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstellen ausnutzen, um Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T030014"
+        ]
+      },
+      "release_date": "2023-09-20T22:00:00.000+00:00",
+      "title": "CVE-2023-43201"
+    },
+    {
+      "cve": "CVE-2023-43200",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Funktionen H5/login.cgi, arp_sys.asp, H5/hi_block.asp, yyxz.data, qos_ext.asp und tgfile.asp von D-Link DI-7200GV2 Devices aufgrund von mehreren Stack-basierten Überläufen. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstellen ausnutzen, um Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T030014"
+        ]
+      },
+      "release_date": "2023-09-20T22:00:00.000+00:00",
+      "title": "CVE-2023-43200"
+    },
+    {
+      "cve": "CVE-2023-43199",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Funktionen H5/login.cgi, arp_sys.asp, H5/hi_block.asp, yyxz.data, qos_ext.asp und tgfile.asp von D-Link DI-7200GV2 Devices aufgrund von mehreren Stack-basierten Überläufen. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstellen ausnutzen, um Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T030014"
+        ]
+      },
+      "release_date": "2023-09-20T22:00:00.000+00:00",
+      "title": "CVE-2023-43199"
+    },
+    {
+      "cve": "CVE-2023-43198",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Funktionen H5/login.cgi, arp_sys.asp, H5/hi_block.asp, yyxz.data, qos_ext.asp und tgfile.asp von D-Link DI-7200GV2 Devices aufgrund von mehreren Stack-basierten Überläufen. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstellen ausnutzen, um Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T030014"
+        ]
+      },
+      "release_date": "2023-09-20T22:00:00.000+00:00",
+      "title": "CVE-2023-43198"
+    },
+    {
+      "cve": "CVE-2023-43197",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Funktionen H5/login.cgi, arp_sys.asp, H5/hi_block.asp, yyxz.data, qos_ext.asp und tgfile.asp von D-Link DI-7200GV2 Devices aufgrund von mehreren Stack-basierten Überläufen. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstellen ausnutzen, um Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T030014"
+        ]
+      },
+      "release_date": "2023-09-20T22:00:00.000+00:00",
+      "title": "CVE-2023-43197"
+    },
+    {
+      "cve": "CVE-2023-43196",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in den Funktionen H5/login.cgi, arp_sys.asp, H5/hi_block.asp, yyxz.data, qos_ext.asp und tgfile.asp von D-Link DI-7200GV2 Devices aufgrund von mehreren Stack-basierten Überläufen. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstellen ausnutzen, um Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T030014"
+        ]
+      },
+      "release_date": "2023-09-20T22:00:00.000+00:00",
+      "title": "CVE-2023-43196"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Edge ist ein Web Browser von Microsoft.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Microsoft Edge ausnutzen, um falsche Informationen darzustellen oder Code auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0329 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0329.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0329 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0329"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202309-17 vom 2023-09-30",
+        "url": "https://security.gentoo.org/glsa/202309-17"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Edge Release Notes vom 2023-02-09",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Edge: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-10-01T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:43:21.184+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0329",
+      "initial_release_date": "2023-02-09T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-02-09T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-10-01T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Microsoft Edge < 110.0.1587.41",
+            "product": {
+              "name": "Microsoft Edge < 110.0.1587.41",
+              "product_id": "T026212",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:microsoft:edge:110.0.1587.41"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-21794",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Microsoft Edge. Vom Nutzer eingegebene Daten werden unsachgemäß verarbeitet. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um dem Nutzer eine gefälschte Webseite anzuzeigen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T012167"
+        ]
+      },
+      "release_date": "2023-02-09T23:00:00.000+00:00",
+      "title": "CVE-2023-21794"
+    },
+    {
+      "cve": "CVE-2023-23374",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Microsoft Edge. Diese besteht aufgrund eines Begrenzungsfehlers bei der Verarbeitung von HTML-Inhalten. Ein entfernter anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code zur Ausführung zu bringen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T012167"
+        ]
+      },
+      "release_date": "2023-02-09T23:00:00.000+00:00",
+      "title": "CVE-2023-23374"
+    }
+  ]
+}

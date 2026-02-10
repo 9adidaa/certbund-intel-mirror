@@ -1,0 +1,220 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Palo Alto Expedition ist eine Next-Generation-Firewall (NGFW)-Plattform",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in PaloAlto Networks Expedition ausnutzen, um beliebigen Code mit administrativen Rechten auszuführen, Daten zu manipulieren, einen Cross-Site-Scripting-Angriff durchzuführen und vertrauliche Informationen preiszugeben.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3146 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3146.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3146 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3146"
+      },
+      {
+        "category": "external",
+        "summary": "Palo Alto Networks Security Advisories vom 2024-10-10",
+        "url": "https://security.paloaltonetworks.com/PAN-SA-2024-0010"
+      },
+      {
+        "category": "external",
+        "summary": "Horion3 Attack Blog vom 2024-10-10",
+        "url": "https://www.horizon3.ai/attack-research/palo-alto-expedition-from-n-day-to-full-compromise/"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub",
+        "url": "https://github.com/horizon3ai/CVE-2024-9465"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub",
+        "url": "https://github.com/horizon3ai/CVE-2024-9464"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "PaloAlto Networks Expedition: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-11-14T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-15T10:39:41.011+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3146",
+      "initial_release_date": "2024-10-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Aktive Ausnutzung gemeldet"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.2.96",
+                "product": {
+                  "name": "PaloAlto Networks Expedition <1.2.96",
+                  "product_id": "T038271"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.2.96",
+                "product": {
+                  "name": "PaloAlto Networks Expedition 1.2.96",
+                  "product_id": "T038271-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:paloaltonetworks:expedition:1.2.96"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Expedition"
+          }
+        ],
+        "category": "vendor",
+        "name": "PaloAlto Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-9463",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In PaloAlto Networks Expedition bestehen mehrere Schwachstellen, die auf eine unzureichende Bereinigung von Eingaben zurückzuführen sind. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Betriebssystembefehle einzuschleusen und mit Root-Rechten auszuführen, was zur Offenlegung sensibler Daten wie Benutzernamen, Klartextpasswörtern, Gerätekonfigurationen und API-Schlüsseln von PAN-OS-Firewalls führt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038271"
+        ]
+      },
+      "release_date": "2024-10-10T22:00:00.000+00:00",
+      "title": "CVE-2024-9463"
+    },
+    {
+      "cve": "CVE-2024-9464",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In PaloAlto Networks Expedition bestehen mehrere Schwachstellen, die auf eine unzureichende Bereinigung von Eingaben zurückzuführen sind. Ein entfernter, anonymer oder authentisierter Angreifer kann diese Schwachstellen ausnutzen, um Betriebssystembefehle einzuschleusen und mit Root-Rechten auszuführen, was zur Offenlegung sensibler Daten wie Benutzernamen, Klartextpasswörtern, Gerätekonfigurationen und API-Schlüsseln von PAN-OS-Firewalls führt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038271"
+        ]
+      },
+      "release_date": "2024-10-10T22:00:00.000+00:00",
+      "title": "CVE-2024-9464"
+    },
+    {
+      "cve": "CVE-2024-9465",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in PaloAlto Networks Expedition aufgrund unzureichender Bereinigung, die zu SQL-Injection führt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um das System zu manipulieren, beliebige Dateien zu erstellen oder zu lesen und vertrauliche Informationen wie Passwort-Hashes, Benutzernamen und Konfigurationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038271"
+        ]
+      },
+      "release_date": "2024-10-10T22:00:00.000+00:00",
+      "title": "CVE-2024-9465"
+    },
+    {
+      "cve": "CVE-2024-9466",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in PaloAlto Networks Expedition da vertrauliche Informationen im Klartext gespeichert werden. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um Firewall-Benutzernamen, Passwörter und API-Schlüssel, die mit diesen Anmeldeinformationen erstellt wurden, offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038271"
+        ]
+      },
+      "release_date": "2024-10-10T22:00:00.000+00:00",
+      "title": "CVE-2024-9466"
+    },
+    {
+      "cve": "CVE-2024-9467",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In PaloAlto Networks Expedition existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038271"
+        ]
+      },
+      "release_date": "2024-10-10T22:00:00.000+00:00",
+      "title": "CVE-2024-9467"
+    }
+  ]
+}

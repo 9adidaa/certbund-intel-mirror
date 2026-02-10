@@ -1,0 +1,988 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "PostgreSQL ist eine frei verfügbare Datenbank für unterschiedliche Betriebssysteme.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in PostgreSQL ausnutzen, um beliebigen Programmcode auszuführen oder Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1203 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1203.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1203 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1203"
+      },
+      {
+        "category": "external",
+        "summary": "Postgres Release Notes vom 2023-05-11",
+        "url": "https://www.postgresql.org/about/news/postgresql-153-148-1311-1215-and-1120-released-2637/"
+      },
+      {
+        "category": "external",
+        "summary": "Postgres Security Advisory vom 2023-05-11",
+        "url": "https://www.postgresql.org/support/security/CVE-2023-2454/"
+      },
+      {
+        "category": "external",
+        "summary": "Postgres Security Advisory vom 2023-05-11",
+        "url": "https://www.postgresql.org/support/security/CVE-2023-2455/"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5401 vom 2023-05-13",
+        "url": "https://www.debian.org/security/2023/dsa-5401"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3422 vom 2023-05-15",
+        "url": "https://lists.debian.org/debian-lts-announce/2023/05/msg00014.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2201-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014890.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2198-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014893.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2199-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014892.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2200-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014891.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2207-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014885.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2206-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014886.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2205-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014887.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2202-1 vom 2023-05-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014889.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2219-1 vom 2023-05-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014900.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6104-1 vom 2023-05-24",
+        "url": "https://ubuntu.com/security/notices/USN-6104-1"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2023-1759 vom 2023-06-09",
+        "url": "https://alas.aws.amazon.com/ALAS-2023-1759.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-3714 vom 2023-06-22",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-3714.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3714 vom 2023-06-21",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3714"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6230-1 vom 2023-07-13",
+        "url": "https://ubuntu.com/security/notices/USN-6230-1"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:4313 vom 2023-07-27",
+        "url": "https://access.redhat.com/errata/RHSA-2023:4313"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:4327 vom 2023-07-31",
+        "url": "https://access.redhat.com/errata/RHSA-2023:4327"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-4327 vom 2023-08-02",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-4327.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:4539 vom 2023-08-08",
+        "url": "https://access.redhat.com/errata/RHSA-2023:4539"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:4527 vom 2023-08-08",
+        "url": "https://access.redhat.com/errata/RHSA-2023:4527"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:4535 vom 2023-08-08",
+        "url": "https://access.redhat.com/errata/RHSA-2023:4535"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-4535 vom 2023-08-10",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-4535.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-4527 vom 2023-08-10",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-4527.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-4539 vom 2023-08-11",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-4539.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:5269 vom 2023-09-19",
+        "url": "https://access.redhat.com/errata/RHSA-2023:5269"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-5269 vom 2023-09-20",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-5269.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL14-2023-001 vom 2023-09-28",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL14-2023-001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL13-2023-001 vom 2023-09-28",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL13-2023-001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL12-2023-001 vom 2023-09-28",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL12-2023-001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL11-2023-001 vom 2023-09-28",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL11-2023-001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Vulnerability Information HITACHI-SEC-2023-143 vom 2023-10-03",
+        "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2023-143/index.html"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Vulnerability Information HITACHI-SEC-2023-144 vom 2023-10-03",
+        "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2023-144/index.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7545 vom 2023-11-28",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7545"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7580 vom 2023-11-29",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7580"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7667 vom 2023-12-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7667"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7666 vom 2023-12-06",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7666"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7695 vom 2023-12-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7695"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7694 vom 2023-12-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:7694"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:7772 vom 2023-12-13",
+        "url": "http://access.redhat.com/errata/RHSA-2023:7772"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2024-2462 vom 2024-02-19",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2462.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-6020 vom 2024-08-30",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-6020.html"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2024:14360-1 vom 2024-09-24",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/RSHH7GG3JERRES4WX7FTBWO2TZCAMJMP/"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-10788 vom 2024-12-05",
+        "url": "https://oss.oracle.com/pipermail/el-errata/2024-December/016821.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-10831 vom 2024-12-06",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-10831.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL14-2024-015 vom 2024-12-19",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL14-2024-015.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL13-2024-008 vom 2024-12-19",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL13-2024-008.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASPOSTGRESQL14-2024-014 vom 2024-12-19",
+        "url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL14-2024-014.html"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7181893 vom 2025-01-29",
+        "url": "https://www.ibm.com/support/pages/node/7181893"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7182335 vom 2025-02-03",
+        "url": "https://www.ibm.com/support/pages/node/7182335"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-1741 vom 2025-02-21",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-1741.html"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2025:15580-1 vom 2025-09-27",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/7QPCD3EONCYVJYVNWDDYBVCSCFPKGZ23/"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2023-268 vom 2025-11-06",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000216397/dsa-2023-268-security-update-for-dell-avamar-dell-networker-virtual-edition-nve-and-dell-powerprotect-dp-series-appliance-dell-integrated-data-protection-appliance-idpa-security-update-for-multiple-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:5269 vom 2026-01-04",
+        "url": "https://errata.build.resf.org/RLSA-2023:5269"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "PostgreSQL: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-01-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-05T08:35:33.273+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2023-1203",
+      "initial_release_date": "2023-05-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-05-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-05-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2023-05-15T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-05-16T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-05-24T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2023-06-08T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-06-21T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Oracle Linux und Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-07-13T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2023-07-27T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-07-31T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-08-01T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-08-08T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-08-09T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-08-13T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-09-19T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-09-20T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-09-27T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-10-03T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von HITACHI aufgenommen"
+        },
+        {
+          "date": "2023-11-28T23:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-11-29T23:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-12-06T23:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-12-12T23:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-02-19T23:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2024-09-01T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-09-23T22:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2024-12-05T23:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-12-08T23:00:00.000+00:00",
+          "number": "27",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-12-19T23:00:00.000+00:00",
+          "number": "28",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2025-01-28T23:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-02-03T23:00:00.000+00:00",
+          "number": "30",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-02-23T23:00:00.000+00:00",
+          "number": "31",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-09-28T22:00:00.000+00:00",
+          "number": "32",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2025-11-06T23:00:00.000+00:00",
+          "number": "33",
+          "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2026-01-04T23:00:00.000+00:00",
+          "number": "34",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "34"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell Avamar",
+            "product": {
+              "name": "Dell Avamar",
+              "product_id": "T039664",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:dell:avamar:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Virtual Edition",
+                "product": {
+                  "name": "Dell NetWorker Virtual Edition",
+                  "product_id": "T048226",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:virtual_edition"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetWorker"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<Common Services 10.9.3-00",
+                "product": {
+                  "name": "Hitachi Ops Center <Common Services 10.9.3-00",
+                  "product_id": "T030195"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Common Services 10.9.3-00",
+                "product": {
+                  "name": "Hitachi Ops Center Common Services 10.9.3-00",
+                  "product_id": "T030195-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hitachi:ops_center:common_services_10.9.3-00"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<Analyzer 10.9.3-00",
+                "product": {
+                  "name": "Hitachi Ops Center <Analyzer 10.9.3-00",
+                  "product_id": "T030196"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Analyzer 10.9.3-00",
+                "product": {
+                  "name": "Hitachi Ops Center Analyzer 10.9.3-00",
+                  "product_id": "T030196-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hitachi:ops_center:analyzer_10.9.3-00"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<Viewpoint 10.9.3-00",
+                "product": {
+                  "name": "Hitachi Ops Center <Viewpoint 10.9.3-00",
+                  "product_id": "T030197"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Viewpoint 10.9.3-00",
+                "product": {
+                  "name": "Hitachi Ops Center Viewpoint 10.9.3-00",
+                  "product_id": "T030197-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hitachi:ops_center:viewpoint_10.9.3-00"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Ops Center"
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.5.0 UP11",
+                "product": {
+                  "name": "IBM QRadar SIEM <7.5.0 UP11",
+                  "product_id": "T040749"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.5.0 UP11",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5.0 UP11",
+                  "product_id": "T040749-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5.0_up11"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<6.1.0.27",
+                "product": {
+                  "name": "IBM Sterling Connect:Direct <6.1.0.27",
+                  "product_id": "T040672"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.1.0.27",
+                "product": {
+                  "name": "IBM Sterling Connect:Direct 6.1.0.27",
+                  "product_id": "T040672-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:sterling_connect%3adirect:6.1.0.27"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Sterling Connect:Direct"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.3",
+                "product": {
+                  "name": "Open Source PostgreSQL <15.3",
+                  "product_id": "T027706"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.3",
+                "product": {
+                  "name": "Open Source PostgreSQL 15.3",
+                  "product_id": "T027706-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:postgresql:postgresql:15.3"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<14.8",
+                "product": {
+                  "name": "Open Source PostgreSQL <14.8",
+                  "product_id": "T027707"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14.8",
+                "product": {
+                  "name": "Open Source PostgreSQL 14.8",
+                  "product_id": "T027707-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:postgresql:postgresql:14.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<13.11",
+                "product": {
+                  "name": "Open Source PostgreSQL <13.11",
+                  "product_id": "T027708"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "13.11",
+                "product": {
+                  "name": "Open Source PostgreSQL 13.11",
+                  "product_id": "T027708-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:postgresql:postgresql:13.11"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<12.15",
+                "product": {
+                  "name": "Open Source PostgreSQL <12.15",
+                  "product_id": "T027709"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12.15",
+                "product": {
+                  "name": "Open Source PostgreSQL 12.15",
+                  "product_id": "T027709-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:postgresql:postgresql:12.15"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<11.20",
+                "product": {
+                  "name": "Open Source PostgreSQL <11.20",
+                  "product_id": "T027710"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.2",
+                "product": {
+                  "name": "Open Source PostgreSQL 11.20",
+                  "product_id": "T027710-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:postgresql:postgresql:11.20"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PostgreSQL"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-2454",
+      "product_status": {
+        "known_affected": [
+          "T040749",
+          "67646",
+          "T004914",
+          "T030196",
+          "T030195",
+          "T032255",
+          "T030197",
+          "T039664",
+          "T027708",
+          "T027709",
+          "T027706",
+          "T027707",
+          "2951",
+          "T002207",
+          "T000126",
+          "T027843",
+          "398363",
+          "T027710",
+          "T048226",
+          "T040672"
+        ]
+      },
+      "release_date": "2023-05-11T22:00:00.000+00:00",
+      "title": "CVE-2023-2454"
+    },
+    {
+      "cve": "CVE-2023-2455",
+      "product_status": {
+        "known_affected": [
+          "T040749",
+          "67646",
+          "T004914",
+          "T030196",
+          "T030195",
+          "T032255",
+          "T030197",
+          "T039664",
+          "T027708",
+          "T027709",
+          "T027706",
+          "T027707",
+          "2951",
+          "T002207",
+          "T000126",
+          "T027843",
+          "398363",
+          "T027710",
+          "T048226",
+          "T040672"
+        ]
+      },
+      "release_date": "2023-05-11T22:00:00.000+00:00",
+      "title": "CVE-2023-2455"
+    }
+  ]
+}

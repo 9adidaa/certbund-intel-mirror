@@ -1,0 +1,207 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache CloudStack ist eine Sofwareplattform zum Verwalten großer Netzwerke von virtuellen Maschienen als eine hoch verfügbare, hoch skalierbare Infrastructure as a Service (IaaS) Cloud Computing Plattform. CloudStack wurde von Citrix entwicklet und anschließend über Apache als Open Source Software zur Verfügung gestellt.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in Apache CloudStack ausnutzen, um Dateien zu manipulieren, Sicherheitsmaßnahmen zu umgehen oder seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3204 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3204.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3204 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3204"
+      },
+      {
+        "category": "external",
+        "summary": "CloudStack Security Advisory vom 2024-10-15",
+        "url": "https://cloudstack.apache.org/blog/security-release-advisory-4.18.2.4-4.19.1.2"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache CloudStack: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-10-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-16T11:15:02.699+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3204",
+      "initial_release_date": "2024-10-15T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-15T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.18.2.4",
+                "product": {
+                  "name": "Apache CloudStack <4.18.2.4",
+                  "product_id": "T038464"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.18.2.4",
+                "product": {
+                  "name": "Apache CloudStack 4.18.2.4",
+                  "product_id": "T038464-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:cloudstack:4.18.2.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<4.19.1.2",
+                "product": {
+                  "name": "Apache CloudStack <4.19.1.2",
+                  "product_id": "T038465"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.19.1.2",
+                "product": {
+                  "name": "Apache CloudStack 4.19.1.2",
+                  "product_id": "T038465-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:cloudstack:4.19.1.2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CloudStack"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-45219",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Apache CloudStack. Dieser Fehler existiert wegen fehlender Validierungsprüfungen für KVM-kompatible Vorlagen oder Volumes in der Vorlagen- und Volume-Registrierungskomponente, was einen unzulässigen Zugriff auf Host-Dateisysteme ermöglicht. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um bösartige Instanzen bereitzustellen oder kompromittierte Volumes anzuhängen, was zu einer Beeinträchtigung von Ressourcen, Datenverlust, einer Dienstverweigerung und einer möglichen Verletzung der Integrität und Vertraulichkeit in KVM-basierten Infrastrukturen führt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038464",
+          "T038465"
+        ]
+      },
+      "release_date": "2024-10-15T22:00:00.000+00:00",
+      "title": "CVE-2024-45219"
+    },
+    {
+      "cve": "CVE-2024-45461",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Apache CloudStack. Dieser Fehler existiert wegen fehlender Zugriffsprüfungen in der Quota-Funktion, die einen nicht autorisierten Zugriff auf Quota-bezogene Konfigurationen und Daten ermöglicht. Ein entfernter, authentifizierter Angreifer mit nicht-administrativen Rechten kann diese Schwachstelle ausnutzen, um Quota-Einstellungen und -Konfigurationen zu ändern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038464",
+          "T038465"
+        ]
+      },
+      "release_date": "2024-10-15T22:00:00.000+00:00",
+      "title": "CVE-2024-45461"
+    },
+    {
+      "cve": "CVE-2024-45462",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Apache CloudStack. Dieser Fehler existiert wegen einer unvollständigen Sitzungsinvalidierung in der Abmeldefunktion der Weboberfläche, die es ermöglicht, dass eine aktive Session solange gültig bleibt, bis sie zeitlich abläuft oder der Backend-Dienst neu gestartet wird. Ein entfernter, anonymer Angreifer mit Zugriff auf den Browser eines Benutzers kann diese Schwachstelle ausnutzen, um die nicht abgelaufene Session wieder zu verwenden und unbefugten Zugriff auf Ressourcen zu erhalten, die dem abgemeldeten Benutzerkonto gehören. Zur erfolgreichen Ausnutzung ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038464",
+          "T038465"
+        ]
+      },
+      "release_date": "2024-10-15T22:00:00.000+00:00",
+      "title": "CVE-2024-45462"
+    },
+    {
+      "cve": "CVE-2024-45693",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Apache CloudStack. Dieser Fehler existiert wegen der fehlenden Validierung der Anforderungsherkunft in der Weboberfläche, was Cross-Site Request Forgery (CSRF)-Angriffe ermöglicht. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um angemeldete Benutzer dazu zu bringen, bösartige Anfragen zu stellen, was zu einer Ausweitung der Rechte, einem nicht autorisierten Zugriff auf Ressourcen und einer Übernahme des Kontos führen kann. Zur erfolgreichen Ausnutzung ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038464",
+          "T038465"
+        ]
+      },
+      "release_date": "2024-10-15T22:00:00.000+00:00",
+      "title": "CVE-2024-45693"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "pfSense ist eine Software-Edge-Firewall mit Router- und VPN-Funktionalität.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter oder anonymer Angreifer kann mehrere Schwachstellen in Netgate pfSense ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen, beliebige Dateien zu schreiben, Kommandos auszuführen und um Sicherheitsmechanismen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Applicance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0403 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0403.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0403 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0403"
+      },
+      {
+        "category": "external",
+        "summary": "pfSense Security Advisory vom 2023-02-15",
+        "url": "https://docs.netgate.com/downloads/pfSense-SA-23_05.sshguard.asc"
+      },
+      {
+        "category": "external",
+        "summary": "pfSense Security Advisory vom 2023-02-15",
+        "url": "https://docs.netgate.com/downloads/pfSense-SA-23_05.webgui.asc"
+      },
+      {
+        "category": "external",
+        "summary": "pfSense Security Advisory vom 2023-02-15",
+        "url": "https://docs.netgate.com/downloads/pfSense-SA-23_04.webgui.asc"
+      },
+      {
+        "category": "external",
+        "summary": "pfSense Security Advisory vom 2023-02-15",
+        "url": "https://docs.netgate.com/downloads/pfSense-SA-23_03.webgui.asc"
+      },
+      {
+        "category": "external",
+        "summary": "pfSense Security Advisory vom 2023-02-15",
+        "url": "https://docs.netgate.com/downloads/pfSense-SA-23_02.webgui.asc"
+      },
+      {
+        "category": "external",
+        "summary": "pfSense Security Advisory vom 2023-02-15",
+        "url": "https://docs.netgate.com/downloads/pfSense-SA-23_01.webgui.asc"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Netgate pfSense: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-02-15T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:43:52.869+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0403",
+      "initial_release_date": "2023-02-15T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-02-15T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Netgate pfSense Plus <= 22.05.1",
+                "product": {
+                  "name": "Netgate pfSense Plus <= 22.05.1",
+                  "product_id": "T026381",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netgate:pfsense:22.05.1::plus"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Netgate pfSense CE <= 2.6.0",
+                "product": {
+                  "name": "Netgate pfSense CE <= 2.6.0",
+                  "product_id": "T026382",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netgate:pfsense:2.6.0::ce"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "pfSense"
+          }
+        ],
+        "category": "vendor",
+        "name": "Netgate"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Netgate pfSense bezüglich der Komponente \"sshguard\". Bei einem fehlgeschlagenen Anmeldeversuch protokolliert das System zu viele unterschiedliche Informationen neben der IP-Adresse des Benutzers, was die Brute-Force-Schutzkomponente verwirrt. Ein entfernter anonymer Angreifer kann dies ausnutzen, um den Brute-Force-Schutz zu umgehen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T026382",
+          "T026381"
+        ]
+      },
+      "release_date": "2023-02-15T23:00:00.000+00:00"
+    },
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Netgate pfSense in der Komponente \"status.php\". Wenn das System eine Datei namens \"/tmp/rules.packages.|<command>|.txt\" enthält und \"status.php\" aufgerufen wird, führt die GUI \"<command>\" aus. Ein authentifizierter Angreifer kann dies ausnutzen, um beliebige Betriebssystembefehle auszuführen."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T026382",
+          "T026381"
+        ]
+      },
+      "release_date": "2023-02-15T23:00:00.000+00:00"
+    },
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Netgate pfSense bezüglich der Seite \"URL table aliases\" der WebGUI. Benutzereingaben werden nicht richtig nach ungültigen Komponenten wie \"../\", \"|\" und anderen Zeichen gefiltert. Ein authentifizierter Angreifer kann dies ausnutzen, um beliebige Dateien in das Dateisystem eines betroffenen Geräts zu schreiben."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T026382",
+          "T026381"
+        ]
+      },
+      "release_date": "2023-02-15T23:00:00.000+00:00"
+    },
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Netgate pfSense existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der WebGUI nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T026382",
+          "T026381"
+        ]
+      },
+      "release_date": "2023-02-15T23:00:00.000+00:00"
+    }
+  ]
+}

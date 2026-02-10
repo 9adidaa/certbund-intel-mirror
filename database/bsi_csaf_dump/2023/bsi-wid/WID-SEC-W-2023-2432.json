@@ -1,0 +1,188 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Red Hat OpenStack ist eine Sammlung von Diensten, um Cloud-Computing in Form von Infrastructure as a Service (IaaS) bereitstellen zu können.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Red Hat OpenStack ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2432 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2432.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2432 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2432"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:6231 vom 2023-11-09",
+        "url": "https://access.redhat.com/errata/RHSA-2023:6231"
+      },
+      {
+        "category": "external",
+        "summary": "OpenStack Security Advisories vom 2023-09-24",
+        "url": "https://github.com/advisories/GHSA-6rx9-c2rh-3qv4"
+      },
+      {
+        "category": "external",
+        "summary": "OpenStack Security Advisories vom 2023-09-24",
+        "url": "https://github.com/advisories/GHSA-6qqp-4vm3-359v"
+      },
+      {
+        "category": "external",
+        "summary": "OpenStack Security Advisories vom 2023-09-24",
+        "url": "https://github.com/advisories/GHSA-5836-grcc-8j89"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Red Hat OpenStack: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-11-08T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:47.194+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2432",
+      "initial_release_date": "2023-09-24T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-24T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-11-08T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Red Hat OpenStack",
+            "product": {
+              "name": "Red Hat OpenStack",
+              "product_id": "T030057",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:redhat:openstack:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-1636",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Red Hat OpenStack. Dieser Fehler besteht in den Barbican-Containern und wird durch eine unvollständige Container-Isolierung verursacht, da die Container denselben CGROUP-, USER- und NET-Namensraum mit dem Host-System und anderen Diensten teilen. Ein entfernter authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030057",
+          "67646"
+        ]
+      },
+      "release_date": "2023-09-24T22:00:00.000+00:00",
+      "title": "CVE-2023-1636"
+    },
+    {
+      "cve": "CVE-2023-1633",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Red Hat OpenStack. Dieser Fehler besteht in der Barbican-Komponente, da die Konfigurationsdatei auf \"world-readable\" gesetzt ist. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030057",
+          "67646"
+        ]
+      },
+      "release_date": "2023-09-24T22:00:00.000+00:00",
+      "title": "CVE-2023-1633"
+    },
+    {
+      "cve": "CVE-2023-1625",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Red Hat OpenStack. Dieser Fehler besteht in der Heat-Komponente, die es ermöglicht, mit dem Befehl \"stack show\" Parameter offenzulegen, die eigentlich verborgen bleiben sollten. Ein entfernter authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T030057",
+          "67646"
+        ]
+      },
+      "release_date": "2023-09-24T22:00:00.000+00:00",
+      "title": "CVE-2023-1625"
+    }
+  ]
+}

@@ -1,0 +1,1173 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apple macOS ist ein Betriebssystem, das auf FreeBSD und Mach basiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann mehrere Schwachstellen in Apple macOS ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-1057 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-1057.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-1057 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-1057"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2022-05-16",
+        "url": "https://support.apple.com/en-us/HT213255"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2022-05-16",
+        "url": "https://support.apple.com/en-us/HT213256"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2022-05-16",
+        "url": "https://support.apple.com/en-us/HT213257"
+      },
+      {
+        "category": "external",
+        "summary": "PoC CVE-2022-26726",
+        "url": "https://github.com/acheong08/CVE-2022-26726-POC"
+      },
+      {
+        "category": "external",
+        "summary": "CISA: Apple Releases Security Updates",
+        "url": "https://www.cisa.gov/uscert/ncas/current-activity/2022/04/01/apple-releases-security-updates-0"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3118 vom 2022-09-22",
+        "url": "https://lists.debian.org/debian-lts-announce/2022/09/msg00028.html"
+      },
+      {
+        "category": "external",
+        "summary": "Wojciech Regula blogpost vom 2022-11-21",
+        "url": "https://wojciechregula.blog/post/macos-sandbox-escape-via-terminal/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple macOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-06-21T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:33:27.405+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-1057",
+      "initial_release_date": "2022-05-16T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-05-16T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-08-16T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE ergänzt"
+        },
+        {
+          "date": "2022-09-20T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE Nummern CVE-2022-32790 und CVE-2022-32882 ergänzt"
+        },
+        {
+          "date": "2022-09-22T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2022-09-25T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Korrektur bzgl. fehlerhaft eingetragenem Debian Update"
+        },
+        {
+          "date": "2022-11-21T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Exploit aufgenommen"
+        },
+        {
+          "date": "2023-06-21T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "CVE-2022-32794 ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "7"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Apple macOS Catalina < 2022-004",
+                "product": {
+                  "name": "Apple macOS Catalina < 2022-004",
+                  "product_id": "T023230",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:catalina__2022-004"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Apple macOS Big Sur < 11.6.6",
+                "product": {
+                  "name": "Apple macOS Big Sur < 11.6.6",
+                  "product_id": "T023231",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:big_sur__11.6.6"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Apple macOS Monterey < 12.4",
+                "product": {
+                  "name": "Apple macOS Monterey < 12.4",
+                  "product_id": "T023232",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:mac_os:monterey__12.4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "macOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-32882",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-32882"
+    },
+    {
+      "cve": "CVE-2022-32794",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-32794"
+    },
+    {
+      "cve": "CVE-2022-32790",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-32790"
+    },
+    {
+      "cve": "CVE-2022-26776",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26776"
+    },
+    {
+      "cve": "CVE-2022-26775",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26775"
+    },
+    {
+      "cve": "CVE-2022-26772",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26772"
+    },
+    {
+      "cve": "CVE-2022-26770",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26770"
+    },
+    {
+      "cve": "CVE-2022-26769",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26769"
+    },
+    {
+      "cve": "CVE-2022-26768",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26768"
+    },
+    {
+      "cve": "CVE-2022-26767",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26767"
+    },
+    {
+      "cve": "CVE-2022-26766",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26766"
+    },
+    {
+      "cve": "CVE-2022-26765",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26765"
+    },
+    {
+      "cve": "CVE-2022-26764",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26764"
+    },
+    {
+      "cve": "CVE-2022-26763",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26763"
+    },
+    {
+      "cve": "CVE-2022-26762",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26762"
+    },
+    {
+      "cve": "CVE-2022-26761",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26761"
+    },
+    {
+      "cve": "CVE-2022-26757",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26757"
+    },
+    {
+      "cve": "CVE-2022-26756",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26756"
+    },
+    {
+      "cve": "CVE-2022-26755",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26755"
+    },
+    {
+      "cve": "CVE-2022-26754",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26754"
+    },
+    {
+      "cve": "CVE-2022-26753",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26753"
+    },
+    {
+      "cve": "CVE-2022-26752",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26752"
+    },
+    {
+      "cve": "CVE-2022-26751",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26751"
+    },
+    {
+      "cve": "CVE-2022-26750",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26750"
+    },
+    {
+      "cve": "CVE-2022-26749",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26749"
+    },
+    {
+      "cve": "CVE-2022-26748",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26748"
+    },
+    {
+      "cve": "CVE-2022-26746",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26746"
+    },
+    {
+      "cve": "CVE-2022-26745",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26745"
+    },
+    {
+      "cve": "CVE-2022-26743",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26743"
+    },
+    {
+      "cve": "CVE-2022-26742",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26742"
+    },
+    {
+      "cve": "CVE-2022-26741",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26741"
+    },
+    {
+      "cve": "CVE-2022-26740",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26740"
+    },
+    {
+      "cve": "CVE-2022-26739",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26739"
+    },
+    {
+      "cve": "CVE-2022-26738",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26738"
+    },
+    {
+      "cve": "CVE-2022-26737",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26737"
+    },
+    {
+      "cve": "CVE-2022-26736",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26736"
+    },
+    {
+      "cve": "CVE-2022-26731",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26731"
+    },
+    {
+      "cve": "CVE-2022-26728",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26728"
+    },
+    {
+      "cve": "CVE-2022-26727",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26727"
+    },
+    {
+      "cve": "CVE-2022-26726",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26726"
+    },
+    {
+      "cve": "CVE-2022-26725",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26725"
+    },
+    {
+      "cve": "CVE-2022-26723",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26723"
+    },
+    {
+      "cve": "CVE-2022-26722",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26722"
+    },
+    {
+      "cve": "CVE-2022-26721",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26721"
+    },
+    {
+      "cve": "CVE-2022-26720",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26720"
+    },
+    {
+      "cve": "CVE-2022-26719",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26719"
+    },
+    {
+      "cve": "CVE-2022-26718",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26718"
+    },
+    {
+      "cve": "CVE-2022-26717",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26717"
+    },
+    {
+      "cve": "CVE-2022-26716",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26716"
+    },
+    {
+      "cve": "CVE-2022-26715",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26715"
+    },
+    {
+      "cve": "CVE-2022-26714",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26714"
+    },
+    {
+      "cve": "CVE-2022-26712",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26712"
+    },
+    {
+      "cve": "CVE-2022-26711",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26711"
+    },
+    {
+      "cve": "CVE-2022-26710",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26710"
+    },
+    {
+      "cve": "CVE-2022-26709",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26709"
+    },
+    {
+      "cve": "CVE-2022-26708",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26708"
+    },
+    {
+      "cve": "CVE-2022-26706",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26706"
+    },
+    {
+      "cve": "CVE-2022-26704",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26704"
+    },
+    {
+      "cve": "CVE-2022-26701",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26701"
+    },
+    {
+      "cve": "CVE-2022-26700",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26700"
+    },
+    {
+      "cve": "CVE-2022-26698",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26698"
+    },
+    {
+      "cve": "CVE-2022-26697",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26697"
+    },
+    {
+      "cve": "CVE-2022-26696",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26696"
+    },
+    {
+      "cve": "CVE-2022-26694",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26694"
+    },
+    {
+      "cve": "CVE-2022-26693",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-26693"
+    },
+    {
+      "cve": "CVE-2022-23308",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-23308"
+    },
+    {
+      "cve": "CVE-2022-22721",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22721"
+    },
+    {
+      "cve": "CVE-2022-22720",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22720"
+    },
+    {
+      "cve": "CVE-2022-22719",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22719"
+    },
+    {
+      "cve": "CVE-2022-22677",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22677"
+    },
+    {
+      "cve": "CVE-2022-22675",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22675"
+    },
+    {
+      "cve": "CVE-2022-22674",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22674"
+    },
+    {
+      "cve": "CVE-2022-22665",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22665"
+    },
+    {
+      "cve": "CVE-2022-22663",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22663"
+    },
+    {
+      "cve": "CVE-2022-22589",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-22589"
+    },
+    {
+      "cve": "CVE-2022-0778",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-0778"
+    },
+    {
+      "cve": "CVE-2022-0530",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-0530"
+    },
+    {
+      "cve": "CVE-2022-0128",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2022-0128"
+    },
+    {
+      "cve": "CVE-2021-46059",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-46059"
+    },
+    {
+      "cve": "CVE-2021-45444",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-45444"
+    },
+    {
+      "cve": "CVE-2021-44790",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-44790"
+    },
+    {
+      "cve": "CVE-2021-44224",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-44224"
+    },
+    {
+      "cve": "CVE-2021-4193",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-4193"
+    },
+    {
+      "cve": "CVE-2021-4192",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-4192"
+    },
+    {
+      "cve": "CVE-2021-4187",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-4187"
+    },
+    {
+      "cve": "CVE-2021-4173",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-4173"
+    },
+    {
+      "cve": "CVE-2021-4166",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-4166"
+    },
+    {
+      "cve": "CVE-2021-4136",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2021-4136"
+    },
+    {
+      "cve": "CVE-2018-25032",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple macOS existieren mehrere Schwachstellen. Die Fehler bestehen in den Komponenten AMD, apache, AppKit, AppleAVD, AppleGraphicsControl, AppleScript, AVEVideoEncoder, Contacts, CoreTypes, CVMS, DriverKit, Graphics Drivers, ImageIO, Intel Graphics Drivers, IOKit, IOMobileFrameBuffer, Kernel, LaunchServices, libresolv, LibreSSL, libxml2, OpenSSL, PackageKit, Vorschau, Drucken, Safari Private Browsing, Sicherheit, SMB, SoftwareUpdate, Spotlight, TCC, Tcl, Vim, WebKit, WebRTC, Wi-Fi, zip, zlib und zsh. Ein entfernter, anonymer, authentisierter oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen und im schlimmsten Fall das System zu kompromittieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "release_date": "2022-05-16T22:00:00.000+00:00",
+      "title": "CVE-2018-25032"
+    }
+  ]
+}

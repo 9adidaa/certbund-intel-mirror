@@ -1,0 +1,176 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Red Hat Enterprise Linux (RHEL) ist eine populäre Linux-Distribution.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentifizierter Angreifer kann eine Schwachstelle in Red Hat Enterprise Linux ausnutzen, um beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3327 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3327.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3327 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3327"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2243426 vom 2024-11-03",
+        "url": "https://access.redhat.com/errata/RHSA-2024:8795"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-8795 vom 2024-11-21",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-8795.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Red Hat Enterprise Linux (xerces-c): Schwachstelle ermöglicht Codeausführung, Offenlegung von Informationen oder DoS",
+    "tracking": {
+      "current_release_date": "2024-11-21T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-22T09:09:01.295+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3327",
+      "initial_release_date": "2024-11-03T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-03T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-21T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "7",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 7",
+                  "product_id": "T038742",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:7"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "xerces-c <3.2.4",
+                "product": {
+                  "name": "Red Hat Enterprise Linux xerces-c <3.2.4",
+                  "product_id": "T038743"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "xerces-c 3.2.4",
+                "product": {
+                  "name": "Red Hat Enterprise Linux xerces-c 3.2.4",
+                  "product_id": "T038743-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:xerces-c__3.2.4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-37536",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Red Hat Enterprise Linux. Dieser Fehler existiert in Apache Xerces-C++ wegen eines Integer-Überlaufs in der HTTP-Request-Handling-Komponente, der einen Out-of-Bounds-Speicherzugriff ermöglicht. Durch das Senden einer speziell gestalteten HTTP-Anfrage- Payload kann ein entfernter, authentifizierter Angreifer diese Schwachstelle ausnutzen, um einen Out-of-Bound-Zugriff zu verursachen, was zu einer potenziell entfernten Codeausführung, einer Offenlegung von Informationen oder einem Denial-of-Service-Zustand führen kann."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038743",
+          "T038742",
+          "T004914"
+        ]
+      },
+      "release_date": "2024-11-03T23:00:00.000+00:00",
+      "title": "CVE-2023-37536"
+    }
+  ]
+}

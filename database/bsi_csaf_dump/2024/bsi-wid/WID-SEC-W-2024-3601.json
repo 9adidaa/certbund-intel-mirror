@@ -1,0 +1,141 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Dell NetWorker stellt zentralisiert Backup- und Recovery-Dienste bereit.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Dell NetWorker Runtime Environment ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3601 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3601.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3601 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3601"
+      },
+      {
+        "category": "external",
+        "summary": "Security Update for Dell NetWorker Runtime Environment vom 2024-12-03",
+        "url": "https://www.dell.com/support/kbdoc/en-us/000255884/dsa-2024-477-security-update-for-dell-networker-runtime-environment-nre-multiple-component-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-12-03",
+        "url": "https://github.com/advisories/GHSA-7g2h-2mgx-vhpc"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Dell NetWorker Runtime Environment: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-12-03T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-04T11:46:03.903+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3601",
+      "initial_release_date": "2024-12-03T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-03T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Runtime Environment <8.0.23",
+                "product": {
+                  "name": "Dell NetWorker Runtime Environment <8.0.23",
+                  "product_id": "T039555"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Runtime Environment 8.0.23",
+                "product": {
+                  "name": "Dell NetWorker Runtime Environment 8.0.23",
+                  "product_id": "T039555-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:runtime_environment__8.0.23"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetWorker"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-47476",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Dell NetWorker Runtime Environment. Dieser Fehler existiert in der Komponente Management Console wegen einer nicht ordnungsgemäßen Überprüfung der kryptografischen Signatur. Ein entfernter, anonymer Angreifer mit lokalem Zugriff kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen. Zur erfolgreichen Ausnutzung ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039555"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-47476"
+    }
+  ]
+}

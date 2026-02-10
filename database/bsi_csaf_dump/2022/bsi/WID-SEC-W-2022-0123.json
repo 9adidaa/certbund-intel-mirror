@@ -1,0 +1,753 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "rsyslog ist ein erweiterter, multithread syslog Dämon der MySQL, syslog/TCP, RFC 3195, \"permitted sender\" Listen, Filterfunktionen für einzelne Nachrichtenteile und eine fein granulierte Steuerung des Ausgabeformates bietet.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in rsyslog ausnutzen, um beliebigen Programmcode auszuführen oder einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-0123 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-0123.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-0123 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0123"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2022-4803 vom 2022-06-01",
+        "url": "http://linux.oracle.com/errata/ELSA-2022-4803.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4808 vom 2022-05-31",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4808"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2022-4799 vom 2022-06-01",
+        "url": "http://linux.oracle.com/errata/ELSA-2022-4799.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2022-075 vom 2022-05-20",
+        "url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-075.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS2-2022-1803 vom 2022-06-07",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1803.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4896 vom 2022-06-03",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4896"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3016 vom 2022-05-21",
+        "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00028.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2022:1817-1 vom 2022-05-23",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-May/011136.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5404-2 vom 2022-05-25",
+        "url": "https://ubuntu.com/security/notices/USN-5404-2"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2022-1594 vom 2022-06-10",
+        "url": "https://alas.aws.amazon.com/ALAS-2022-1594.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5150 vom 2022-05-28",
+        "url": "https://lists.debian.org/debian-security-announce/2022/msg00118.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4801 vom 2022-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4801"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4802 vom 2022-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4802"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4803 vom 2022-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4803"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4795 vom 2022-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4795"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4799 vom 2022-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4799"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:4800 vom 2022-05-30",
+        "url": "https://access.redhat.com/errata/RHSA-2022:4800"
+      },
+      {
+        "category": "external",
+        "summary": "Github Security Advisory GHSA-ggw7-xr6h-mmr8 vom 2022-05-05",
+        "url": "https://github.com/rsyslog/rsyslog/security/advisories/GHSA-ggw7-xr6h-mmr8"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5404-1 vom 2022-05-06",
+        "url": "https://ubuntu.com/security/notices/USN-5404-1"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2022:1583-1 vom 2022-05-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-May/010971.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2022:5439 vom 2022-07-01",
+        "url": "https://access.redhat.com/errata/RHSA-2022:5439"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2022-4795 vom 2022-07-01",
+        "url": "http://linux.oracle.com/errata/ELSA-2022-4795.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2022:2314-1 vom 2022-07-07",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-July/011439.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2022:2331-1 vom 2022-07-07",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-July/011474.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2022:2333-1 vom 2022-07-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-July/011484.html"
+      },
+      {
+        "category": "external",
+        "summary": "AVAYA Security Advisory ASA-2022-076 vom 2022-07-21",
+        "url": "https://downloads.avaya.com/css/P8/documents/101082851"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2022-9783 vom 2022-09-15",
+        "url": "http://linux.oracle.com/errata/ELSA-2022-9783.html"
+      },
+      {
+        "category": "external",
+        "summary": "Brocade Security Advisory BSA-2022-2127 vom 2022-11-09",
+        "url": "https://www.broadcom.com/support/fibre-channel-networking/security-advisories/brocade-security-advisory-2022-2127"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20221111-0002 vom 2022-11-11",
+        "url": "https://security.netapp.com/advisory/ntap-20221111-0002/"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS-2022-211 vom 2022-12-09",
+        "url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-211.html"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 6855297 vom 2023-01-13",
+        "url": "https://www.ibm.com/support/pages/node/6855297"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7007815 vom 2023-06-28",
+        "url": "https://www.ibm.com/support/pages/node/7007815"
+      },
+      {
+        "category": "external",
+        "summary": "ORACLE OVMSA-2023-0010 vom 2023-08-17",
+        "url": "https://oss.oracle.com/pipermail/oraclevm-errata/2023-August/001081.html"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202408-28 vom 2024-08-11",
+        "url": "https://security.gentoo.org/glsa/202408-28"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "rsyslog: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-08-11T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:26:42.033+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-0123",
+      "initial_release_date": "2022-05-05T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-05-05T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-05-08T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2022-05-09T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Fedora und SUSE aufgenommen"
+        },
+        {
+          "date": "2022-05-19T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2022-05-22T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2022-05-23T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2022-05-24T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2022-05-29T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Debian und Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-05-30T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-05-31T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Oracle Linux und Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-06-06T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-06-07T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2022-06-09T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2022-06-22T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von AVAYA aufgenommen"
+        },
+        {
+          "date": "2022-06-30T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2022-07-03T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2022-07-06T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2022-07-07T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2022-07-10T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2022-07-24T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von AVAYA aufgenommen"
+        },
+        {
+          "date": "2022-07-25T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Produkt Avaya Breeze Platform aufgenommen; Avaya Produktversionen ergänzt"
+        },
+        {
+          "date": "2022-09-14T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2022-11-09T23:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von BROCADE aufgenommen"
+        },
+        {
+          "date": "2022-11-10T23:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von NetApp aufgenommen"
+        },
+        {
+          "date": "2022-12-11T23:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2023-01-12T23:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2023-06-28T22:00:00.000+00:00",
+          "number": "27",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2023-08-17T22:00:00.000+00:00",
+          "number": "28",
+          "summary": "Neue Updates von ORACLE aufgenommen"
+        },
+        {
+          "date": "2024-08-11T22:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "29"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.0.x",
+                "product": {
+                  "name": "Avaya Aura Application Enablement Services 8.0.x",
+                  "product_id": "T024069",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:avaya:aura_application_enablement_services:8.0.x"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.1.x",
+                "product": {
+                  "name": "Avaya Aura Application Enablement Services 8.1.x",
+                  "product_id": "T024074",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:avaya:aura_application_enablement_services:8.1.x"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Aura Application Enablement Services"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.x",
+                "product": {
+                  "name": "Avaya Aura Communication Manager 8.x",
+                  "product_id": "T024070",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:avaya:communication_manager:8.x"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Aura Communication Manager"
+          },
+          {
+            "category": "product_name",
+            "name": "Avaya Aura Experience Portal",
+            "product": {
+              "name": "Avaya Aura Experience Portal",
+              "product_id": "T015519",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:avaya:aura_experience_portal:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.x",
+                "product": {
+                  "name": "Avaya Aura Session Manager 8.x",
+                  "product_id": "T024071",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:avaya:session_manager:8.x"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Aura Session Manager"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.x",
+                "product": {
+                  "name": "Avaya Aura System Manager 8.x",
+                  "product_id": "T024072",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:avaya:aura_system_manager:8.x"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Aura System Manager"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "3.3.0.0",
+                "product": {
+                  "name": "Avaya Breeze Platform 3.3.0.0",
+                  "product_id": "T024073",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:avaya:breeze_platform:3.3.0.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Breeze Platform"
+          }
+        ],
+        "category": "vendor",
+        "name": "Avaya"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2.2.1",
+                "product": {
+                  "name": "Broadcom Brocade SANnav <2.2.1",
+                  "product_id": "T024158"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Brocade SANnav"
+          }
+        ],
+        "category": "vendor",
+        "name": "Broadcom"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<10.0.5-ISS-ISVA-FP000",
+                "product": {
+                  "name": "IBM Security Verify Access <10.0.5-ISS-ISVA-FP000",
+                  "product_id": "T025829"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Security Verify Access"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "NetApp ActiveIQ Unified Manager",
+            "product": {
+              "name": "NetApp ActiveIQ Unified Manager",
+              "product_id": "658714",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:netapp:active_iq_unified_manager:-::~~~vmware_vsphere~~"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.2204.1",
+                "product": {
+                  "name": "Open Source rsyslog <8.2204.1",
+                  "product_id": "T023113"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "rsyslog"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "3",
+                "product": {
+                  "name": "Oracle VM 3",
+                  "product_id": "T019617",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:oracle:vm:3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "VM"
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-24903",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in rsyslog. Der Fehler ist auf einen Pufferüberlauf zurückzuführen, der in verschiedenen Modulen auftreten kann. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen oder einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T024072",
+          "T024071",
+          "T015519",
+          "T024074",
+          "T024073",
+          "67646",
+          "T024070",
+          "T012167",
+          "658714",
+          "T004914",
+          "T025829",
+          "2951",
+          "T002207",
+          "T000126",
+          "T024069",
+          "T019617",
+          "398363",
+          "T024158"
+        ]
+      },
+      "release_date": "2022-05-05T22:00:00.000+00:00",
+      "title": "CVE-2022-24903"
+    }
+  ]
+}

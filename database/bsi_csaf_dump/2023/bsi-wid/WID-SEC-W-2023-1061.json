@@ -1,0 +1,138 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "VMware Aria Operations for Logs (ehemals vRealize Log Insight) ist ein Protokollanalysetool.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in VMware Aria Operations for Logs ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1061 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1061.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1061 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1061"
+      },
+      {
+        "category": "external",
+        "summary": "VMware Security Advisory VMSA-2023-0007.1 vom 2023-07-10",
+        "url": "https://www.vmware.com/security/advisories/VMSA-2023-0007.html"
+      },
+      {
+        "category": "external",
+        "summary": "VMware Security Advisory VMSA-2023-0007 vom 2023-04-20",
+        "url": "https://www.vmware.com/security/advisories/VMSA-2023-0007.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "VMware Aria Operations for Logs: Mehrere Schwachstellen ermöglichen Ausführen von beliebigem Programmcode mit Administratorrechten",
+    "tracking": {
+      "current_release_date": "2023-07-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:49:54.418+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1061",
+      "initial_release_date": "2023-04-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-04-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-07-10T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Exploit-Hinweis für CVE-2023-20864 aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "VMware Aria Operations for Logs < 8.12",
+            "product": {
+              "name": "VMware Aria Operations for Logs < 8.12",
+              "product_id": "T027482",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:vmware:aria_operations_for_logs:8.12"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "VMware"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20865",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Command-Injection Schwachstelle in VMware Aria Operations for Logs. Ein Angreifer mit bestimmten Rechten kann dies ausnutzen, um Code mit \"Root\"-Rechten auszuführen."
+        }
+      ],
+      "release_date": "2023-04-20T22:00:00.000+00:00",
+      "title": "CVE-2023-20865"
+    },
+    {
+      "cve": "CVE-2023-20864",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in VMware Aria Operations for Logs aufgrund einer unsicheren Deserialisierung. Ein entfernter, anonymer Angreifer kann dies ausnutzen, um beliebigen Code mit \"Root\" Rechten auszuführen."
+        }
+      ],
+      "release_date": "2023-04-20T22:00:00.000+00:00",
+      "title": "CVE-2023-20864"
+    }
+  ]
+}

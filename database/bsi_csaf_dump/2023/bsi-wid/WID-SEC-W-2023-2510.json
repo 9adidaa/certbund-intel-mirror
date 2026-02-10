@@ -1,0 +1,166 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco Internetwork Operating System (IOS) ist ein Betriebssystem, das für Cisco Geräte wie z. B. Router und Switches eingesetzt wird.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Cisco IOS und Cisco IOS XE ausnutzen, um seine Rechte zu erweitern, einen Denial of Service zu verursachen, Dateien zu manipulieren oder Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2510 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2510.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2510 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2510"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2023-10-10",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-09-27",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-getvpn-rce-g8qR68sx"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-09-27",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aaascp-Tyj4fEJm"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco IOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-10-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:59:12.376+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2510",
+      "initial_release_date": "2023-09-27T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-27T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-10-10T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Exploit-Hinweis für CVE-2023-20109 aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco IOS",
+            "product": {
+              "name": "Cisco IOS",
+              "product_id": "T018699",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:cisco:ios:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Cisco IOS XE",
+            "product": {
+              "name": "Cisco IOS XE",
+              "product_id": "T001605",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:cisco:ios_xe:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20186",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco IOS und Cisco IOS XE in der Authentifizierungs-, Autorisierungs- und Accounting-Funktion (AAA). Eine fehlerhafte Verarbeitung von SCP-Befehlen bei AAA-Befehlsautorisierungsprüfungen ist die Ursache dieser Schwachstelle. Ein authentisierter Angreifer kann das ausnutzen, um die Konfiguration des betroffenen Geräts zu lesen oder zu ändern und Dateien auf dem betroffenen Gerät zu schreiben oder zu lesen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T001605",
+          "T018699"
+        ]
+      },
+      "release_date": "2023-09-27T22:00:00.000+00:00",
+      "title": "CVE-2023-20186"
+    },
+    {
+      "cve": "CVE-2023-20109",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco IOS und Cisco IOS XE. Diese ist auf eine unzureichende Validierung von Attributen in den Protokollen Group Domain of Interpretation (GDOI) und G-IKEv2 der GET VPN-Funktion zurückzuführen. Ein Angreifer, der administrative Kontrolle über ein Gruppenmitglied oder einen Schlüsselserver hat kann diese Schwachstelle ausnutzen, um beliebigen Code auszuführen und die vollständige Kontrolle über das betroffene System zu erlangen, oder einen Denial of Service zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T001605",
+          "T018699"
+        ]
+      },
+      "release_date": "2023-09-27T22:00:00.000+00:00",
+      "title": "CVE-2023-20109"
+    }
+  ]
+}

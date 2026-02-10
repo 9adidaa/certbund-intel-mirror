@@ -1,0 +1,136 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Red Hat OpenShift ist eine \"Platform as a Service\" (PaaS) Lösung zur Bereitstellung von Applikationen in der Cloud.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Red Hat OpenShift ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3370 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3370.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3370 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3370"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:8697 vom 2024-11-07",
+        "url": "https://access.redhat.com/errata/RHSA-2024:8697"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Red Hat OpenShift: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2024-11-07T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-08T09:03:29.326+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3370",
+      "initial_release_date": "2024-11-07T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-07T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.14.40",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.14.40",
+                  "product_id": "T038847"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.14.40",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.14.40",
+                  "product_id": "T038847-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.14.40"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenShift"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-29401",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Red Hat OpenShift Container Platform. Dieser Fehler existiert im \"Gin-Gonic Gin Web Framework\" wegen einer unsachgemäßen Eingabevalidierung durch den Parameter \"filename\" der Funktion \"Context.FileAttachment\". Durch die Verwendung eines speziell gestalteten Dateinamens für einen Anhang kann ein entfernter, anonymer Angreifer diese Schwachstelle ausnutzen, um den \"Content-Disposition\" Header zu ändern und so die Sicherheitsmaßnahmen zu umgehen. Zur erfolgreichen Ausnutzung ist eine Benutzerinteraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038847"
+        ]
+      },
+      "release_date": "2024-11-07T23:00:00.000+00:00",
+      "title": "CVE-2023-29401"
+    }
+  ]
+}

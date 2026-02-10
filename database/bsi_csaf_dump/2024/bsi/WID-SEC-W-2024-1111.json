@@ -1,0 +1,202 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Siemens SICAM ist eine Produktfamilie von SCADA-Systemen für den Betrieb von industriellen Prozessen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in Siemens SICAM ausnutzen, um beliebigen Programmcode auszuführen und um um vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1111 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1111.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1111 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1111"
+      },
+      {
+        "category": "external",
+        "summary": "Siemens Security Advisory by Siemens ProductCERT vom 2024-05-13",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-871704.html"
+      },
+      {
+        "category": "external",
+        "summary": "Siemens Security Advisory SSA-620338 vom 2024-06-11",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-620338.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Siemens SICAM: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-06-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:08:52.371+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1111",
+      "initial_release_date": "2024-05-13T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-13T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-06-10T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Siemens aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "CPC80 Central <V16.41",
+                "product": {
+                  "name": "Siemens SICAM CPC80 Central <V16.41",
+                  "product_id": "T034735"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "CPCI85 Central <V5.30",
+                "product": {
+                  "name": "Siemens SICAM CPCI85 Central <V5.30",
+                  "product_id": "T034736"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "OPUPI0 AMQP/MQTT <V5.30",
+                "product": {
+                  "name": "Siemens SICAM OPUPI0 AMQP/MQTT <V5.30",
+                  "product_id": "T034737"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "SICORE Base <V1.3.0",
+                "product": {
+                  "name": "Siemens SICAM SICORE Base <V1.3.0",
+                  "product_id": "T034738"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "AK3",
+                "product": {
+                  "name": "Siemens SICAM AK3",
+                  "product_id": "T035309",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:siemens:sicam:ak3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-31484",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Siemens SICAM. Dieser Fehler betrifft die CPC80 Central Processing/Communication und die CPCI85 Central Processing/Communication Firmware aufgrund eines fehlerhaften Null-Termination-Problem. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Code im Kontext des aktuellen Prozesses auszuführen oder einen Denial-of-Service-Zustand zu erzeugen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035309"
+        ]
+      },
+      "release_date": "2024-05-13T22:00:00.000+00:00",
+      "title": "CVE-2024-31484"
+    },
+    {
+      "cve": "CVE-2024-31485",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Siemens SICAM. Dieser Fehler betrifft die CPCI85 Central Processing/Communication und die SICORE Base System Firmware aufgrund fehlender Server-seitiger Eingabeüberprüfung, was zu einer Command-Injection-Schwachstelle führt. Ein authentifizierter, privilegierter entfernter Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code mit Root-Rechten auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035309"
+        ]
+      },
+      "release_date": "2024-05-13T22:00:00.000+00:00",
+      "title": "CVE-2024-31485"
+    },
+    {
+      "cve": "CVE-2024-31486",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Siemens SICAM. Dieser Fehler betrifft die Firmware OPUPI0 AMQP/MQTT aufgrund eines unzureichenden Schutzmechanismus für MQTT-Client-Passwörter. Ein authentifizierter, entfernter Angreifer mit Shell-Zugriff oder physischem Zugriff kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035309"
+        ]
+      },
+      "release_date": "2024-05-13T22:00:00.000+00:00",
+      "title": "CVE-2024-31486"
+    }
+  ]
+}

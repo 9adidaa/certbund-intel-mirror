@@ -1,0 +1,204 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitHub ist ein netzbasierter Dienst zur Versionsverwaltung für Software-Entwicklungsprojekte.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Microsoft GitHub Enterprise ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0675 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0675.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0675 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0675"
+      },
+      {
+        "category": "external",
+        "summary": "Enterprise Server 3.8 release notes vom 2024-03-20",
+        "url": "https://docs.github.com/en/enterprise-server@3.12/admin/release-notes#3.12.1"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-03-20",
+        "url": "https://github.com/advisories/GHSA-4c84-c2x6-wwjv"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-03-20",
+        "url": "https://github.com/advisories/GHSA-v7f6-g4pv-2qgj"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-03-20",
+        "url": "https://github.com/advisories/GHSA-2c64-xxfm-j63g"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft GitHub Enterprise: Mehrere Schwachstellen ermöglichen Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2024-11-18T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-19T11:34:57.925+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-0675",
+      "initial_release_date": "2024-03-20T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-03-20T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-18T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Prüfung Produkteintragung"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.12.1",
+                "product": {
+                  "name": "Microsoft GitHub Enterprise <3.12.1",
+                  "product_id": "T033581"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.12.1",
+                "product": {
+                  "name": "Microsoft GitHub Enterprise 3.12.1",
+                  "product_id": "T033581-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:github_enterprise:3.12.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitHub Enterprise"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-2440",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Microsoft GitHub Enterprise. Diese ist auf einen Fehler in der Komponente GraphQL zurückzuführen, die zu einer Race Condition führt. In Folge ist es möglich, dass ein entfernter, authentisierter Angreifer Sicherheitsvorkehrungen umgeht."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033581"
+        ]
+      },
+      "release_date": "2024-03-20T23:00:00.000+00:00",
+      "title": "CVE-2024-2440"
+    },
+    {
+      "cve": "CVE-2024-2443",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Microsoft GitHub Enterprise. Diese ist auf einen Fehler in der Management Konsole zurückzuführen. Ein entfernter, authentisierter Angreifer der die GeoJSON-Einstellungen manipuliert kann Sicherheitsvorkehrungen umgehen um einen SSH Zugang zu erhalten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033581"
+        ]
+      },
+      "release_date": "2024-03-20T23:00:00.000+00:00",
+      "title": "CVE-2024-2443"
+    },
+    {
+      "cve": "CVE-2024-2469",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Microsoft GitHub Enterprise. Ein Nutzer, der über Adminrechte verfügt, kann Code auszuführen, der ihm einen SSH-Root.-Zugang verschafft. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033581"
+        ]
+      },
+      "release_date": "2024-03-20T23:00:00.000+00:00",
+      "title": "CVE-2024-2469"
+    },
+    {
+      "cve": "CVE-2024-2748",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Microsoft GitHub Enterprise. Diese ist auf einen Fehler im Umgang mit GraphQL Mutations zurückzuführen. Dadurch besteht eine Anfälligkeit für einen CSRF-Angriff. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033581"
+        ]
+      },
+      "release_date": "2024-03-20T23:00:00.000+00:00",
+      "title": "CVE-2024-2748"
+    }
+  ]
+}

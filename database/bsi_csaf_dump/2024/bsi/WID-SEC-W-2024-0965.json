@@ -1,0 +1,194 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Cisco ASA Appliance bietet Funktionen zur Sicherung von Anwendungssoftware, wie beispielsweise Firewall oder VPN.\r\nFirepower ist eine Firewall-Plattform von Cisco",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Cisco ASA (Adaptive Security Appliance) und Cisco Firepower ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen oder beliebigen Code mit den Rechten des Systems auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0965 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0965.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0965 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0965"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-04-24",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-cmd-inj-ZJV8Wysm"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-04-24",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-rce-FLsNXF4h"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2024-04-24",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-websrvs-dos-X8gNucD2"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Talos Article vom 2024-04-24",
+        "url": "https://blog.talosintelligence.com/arcanedoor-new-espionage-focused-campaign-found-targeting-perimeter-network-devices/"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Event Response vom 2024-04-24",
+        "url": "https://sec.cloudapps.cisco.com/security/center/resources/asa_ftd_attacks_event_response"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco ASA (Adaptive Security Appliance) und Firepower: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-04-24T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:08:09.707+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0965",
+      "initial_release_date": "2024-04-24T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-04-24T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Cisco ASA (Adaptive Security Appliance)",
+                "product": {
+                  "name": "Cisco ASA (Adaptive Security Appliance)",
+                  "product_id": "T034384",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:adaptive_security_appliance:-"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Firepower",
+                "product": {
+                  "name": "Cisco Firepower",
+                  "product_id": "T034385",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:adaptive_security_appliance:-"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ASA (Adaptive Security Appliance)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20353",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco ASA (Adaptive Security Appliance) und Cisco Firepower. Dieser Fehler besteht in mehreren Komponenten wie dem AnyConnect IKEv2 Remote Access oder der REST API, unter anderem aufgrund einer unvollständigen Fehlerprüfung beim Parsen eines HTTP-Headers. Durch das Senden einer manipulierten HTTP-Anfrage an einen gezielten Webserver kann ein entfernter, anonymer Angreifer diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034385",
+          "T034384"
+        ]
+      },
+      "release_date": "2024-04-24T22:00:00.000+00:00",
+      "title": "CVE-2024-20353"
+    },
+    {
+      "cve": "CVE-2024-20358",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco ASA (Adaptive Security Appliance) und Cisco Firepower. Dieser Fehler besteht in der Wiederherstellungsfunktion, da der Inhalt einer Sicherungsdatei zum Zeitpunkt der Wiederherstellung nicht ordnungsgemäß bereinigt wird. Durch die Wiederherstellung einer manipulierten Sicherungsdatei kann ein lokaler, privilegierter Angreifer diese Schwachstelle ausnutzen, um beliebige Befehle auf dem zugrunde liegenden Betriebssystem mit Root-Rechten auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034385",
+          "T034384"
+        ]
+      },
+      "release_date": "2024-04-24T22:00:00.000+00:00",
+      "title": "CVE-2024-20358"
+    },
+    {
+      "cve": "CVE-2024-20359",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco ASA (Adaptive Security Appliance) und Cisco Firepower. Dieser Fehler besteht in einer Legacy-Fähigkeit aufgrund einer unsachgemäßen Validierung von Dateien beim Lesen aus dem System-Flash-Speicher. Durch das Kopieren einer manipulierten Datei in das disk0: Dateisystem kann ein lokaler, privilegierter Angreifer diese Schwachstelle ausnutzen, um beliebige Befehle auf dem zugrunde liegenden Betriebssystem mit Root-Rechten auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034385",
+          "T034384"
+        ]
+      },
+      "release_date": "2024-04-24T22:00:00.000+00:00",
+      "title": "CVE-2024-20359"
+    }
+  ]
+}

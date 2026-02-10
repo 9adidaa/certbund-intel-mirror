@@ -1,0 +1,222 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM InfoSphere Information Server ist eine Softwareplattform zur Integration heterogener Daten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in IBM InfoSphere Information Server ausnutzen, um Informationen offenzulegen, Sicherheitsmaßnahmen zu umgehen oder einen Denial of Service zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2102 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2102.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2102 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2102"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7167750 vom 2024-09-10",
+        "url": "https://www.ibm.com/support/pages/node/7167750"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7167750 vom 2024-09-10",
+        "url": "https://www.ibm.com/support/pages/node/7167753"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7167750 vom 2024-09-10",
+        "url": "https://www.ibm.com/support/pages/node/7167752"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7167750 vom 2024-09-10",
+        "url": "https://www.ibm.com/support/pages/node/7166639"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM InfoSphere Information Server: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-09-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-11T08:15:48.322+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2102",
+      "initial_release_date": "2024-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<11.7.1.0",
+                "product": {
+                  "name": "IBM InfoSphere Information Server <11.7.1.0",
+                  "product_id": "T037437"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.7.1.0",
+                "product": {
+                  "name": "IBM InfoSphere Information Server 11.7.1.0",
+                  "product_id": "T037437-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_information_server:11.7.1.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<11.7.1.5",
+                "product": {
+                  "name": "IBM InfoSphere Information Server <11.7.1.5",
+                  "product_id": "T037438"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.7.1.5",
+                "product": {
+                  "name": "IBM InfoSphere Information Server 11.7.1.5",
+                  "product_id": "T037438-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_information_server:11.7.1.5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "InfoSphere Information Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-37891",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM InfoSphere Information Server. Dieser Fehler existiert in der urllib3, da der Proxy-Authorization-Header bei herkunftsübergreifenden Umleitungen nicht entfernt wird. Durch das Senden einer speziell gestalteten HTTP-Anfrage kann ein entfernter, authentifizierter Angreifer diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037437",
+          "T037438"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-37891"
+    },
+    {
+      "cve": "CVE-2024-39689",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in IBM InfoSphere Information Server. Certifi python-certifi bietet durch die Verwendung des GLOBALTRUST-Root-Zertifikats unter Umständen eine schwächere Sicherheit als erwartet. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037437",
+          "T037438"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-39689"
+    },
+    {
+      "cve": "CVE-2024-5569",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in IBM InfoSphere Information Server. Diese wird durch eine Endlosschleife im Path-Modul verursacht. Ein lokaler Angreifer kann das ausnutzen, um einen Denial of Service zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037437",
+          "T037438"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-5569"
+    },
+    {
+      "cve": "CVE-2024-6162",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in IBM InfoSphere Information Server. Durch einen Fehler bei der Verarbeitung von URL-kodierten Anfrage-Pfad-Informationen können gleichzeitige Anfragen auf den ajp-listener generiert werden. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037437",
+          "T037438"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-6162"
+    }
+  ]
+}

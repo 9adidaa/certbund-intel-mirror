@@ -1,0 +1,580 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "PowerEdge ist der Markenname für Server des Herstellers Dell.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen im BIOS von Dell PowerEdge Systemen ausnutzen, um Daten in UEFI Variablen zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1507 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1507.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1507 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1507"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2023-099 vom 2023-06-15",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000212204/dsa-2023-099-dell-client-bios-security-update-for-multiple-improper-input-validation-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2023-204 vom 2023-06-19",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000214910/dsa-2023-204-security-update-for-dell-poweredge-t30-t40-mini-tower-server-for-multiple-memory-leak-vulnerability"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Dell PowerEdge BIOS: Mehrere Schwachstellen ermöglichen Manipulation von Daten",
+    "tracking": {
+      "current_release_date": "2023-06-25T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:52:46.351+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1507",
+      "initial_release_date": "2023-06-19T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-06-19T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-06-25T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell BIOS",
+            "product": {
+              "name": "Dell BIOS",
+              "product_id": "T016637",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:dell:bios:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Dell Computer",
+            "product": {
+              "name": "Dell Computer",
+              "product_id": "T006498",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:dell:dell_computer:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Dell PowerEdge BIOS < 1.11.0",
+            "product": {
+              "name": "Dell PowerEdge BIOS < 1.11.0",
+              "product_id": "T028212",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:dell:poweredge:bios_1.11.0"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28061",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28061"
+    },
+    {
+      "cve": "CVE-2023-28060",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28060"
+    },
+    {
+      "cve": "CVE-2023-28059",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28059"
+    },
+    {
+      "cve": "CVE-2023-28058",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28058"
+    },
+    {
+      "cve": "CVE-2023-28054",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28054"
+    },
+    {
+      "cve": "CVE-2023-28052",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28052"
+    },
+    {
+      "cve": "CVE-2023-28050",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28050"
+    },
+    {
+      "cve": "CVE-2023-28044",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28044"
+    },
+    {
+      "cve": "CVE-2023-28042",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28042"
+    },
+    {
+      "cve": "CVE-2023-28041",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28041"
+    },
+    {
+      "cve": "CVE-2023-28040",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28040"
+    },
+    {
+      "cve": "CVE-2023-28039",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28039"
+    },
+    {
+      "cve": "CVE-2023-28036",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28036"
+    },
+    {
+      "cve": "CVE-2023-28035",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28035"
+    },
+    {
+      "cve": "CVE-2023-28034",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28034"
+    },
+    {
+      "cve": "CVE-2023-28033",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28033"
+    },
+    {
+      "cve": "CVE-2023-28032",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28032"
+    },
+    {
+      "cve": "CVE-2023-28031",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28031"
+    },
+    {
+      "cve": "CVE-2023-28030",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28030"
+    },
+    {
+      "cve": "CVE-2023-28029",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28029"
+    },
+    {
+      "cve": "CVE-2023-28028",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28028"
+    },
+    {
+      "cve": "CVE-2023-28027",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28027"
+    },
+    {
+      "cve": "CVE-2023-28026",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-28026"
+    },
+    {
+      "cve": "CVE-2023-25938",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-25938"
+    },
+    {
+      "cve": "CVE-2023-25937",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-25937"
+    },
+    {
+      "cve": "CVE-2023-25936",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell PowerEdge existieren mehrere Schwachstellen. Diese sind auf Fehler in BIOS-Komponenten zurückzuführen und basieren auf einer unzureichenden Prüfung der Eingaben. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um UEFI Variablen zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T006498",
+          "T016637"
+        ]
+      },
+      "release_date": "2023-06-19T22:00:00.000+00:00",
+      "title": "CVE-2023-25936"
+    }
+  ]
+}

@@ -1,0 +1,2896 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Adobe Experience Manager (AEM) ist eine Content-Management-Lösung für die Erstellung von Websites, mobilen Anwendungen und Formularen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Adobe Experience Manager ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen oder Sicherheitsmaßnahmen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1351 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1351.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1351 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1351"
+      },
+      {
+        "category": "external",
+        "summary": "Adobe Security Update vom 2024-06-11",
+        "url": "https://helpx.adobe.com/security/products/experience-manager/apsb24-28.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Adobe Experience Manager: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-10-07T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-08T08:12:19.118+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-1351",
+      "initial_release_date": "2024-06-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-06-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-06-24T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE-Nummern ergänzt"
+        },
+        {
+          "date": "2024-07-23T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE's ergänzt"
+        },
+        {
+          "date": "2024-08-25T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "CVE-Nummern ergänzt"
+        },
+        {
+          "date": "2024-10-07T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "CVE ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<AEM Cloud Service Release 2024.5",
+                "product": {
+                  "name": "Adobe Experience Manager <AEM Cloud Service Release 2024.5",
+                  "product_id": "T035356"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "AEM Cloud Service Release 2024.5",
+                "product": {
+                  "name": "Adobe Experience Manager AEM Cloud Service Release 2024.5",
+                  "product_id": "T035356-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:experience_manager:aem_cloud_service_release_2024.5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<6.5.21",
+                "product": {
+                  "name": "Adobe Experience Manager <6.5.21",
+                  "product_id": "T035357"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.5.21",
+                "product": {
+                  "name": "Adobe Experience Manager 6.5.21",
+                  "product_id": "T035357-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:experience_manager:6.5.21"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Experience Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "Adobe"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20769",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-20769"
+    },
+    {
+      "cve": "CVE-2024-20784",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-20784"
+    },
+    {
+      "cve": "CVE-2024-26036",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26036"
+    },
+    {
+      "cve": "CVE-2024-26037",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26037"
+    },
+    {
+      "cve": "CVE-2024-26039",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26039"
+    },
+    {
+      "cve": "CVE-2024-26049",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26049"
+    },
+    {
+      "cve": "CVE-2024-26053",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26053"
+    },
+    {
+      "cve": "CVE-2024-26054",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26054"
+    },
+    {
+      "cve": "CVE-2024-26055",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26055"
+    },
+    {
+      "cve": "CVE-2024-26057",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26057"
+    },
+    {
+      "cve": "CVE-2024-26058",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26058"
+    },
+    {
+      "cve": "CVE-2024-26060",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26060"
+    },
+    {
+      "cve": "CVE-2024-26066",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26066"
+    },
+    {
+      "cve": "CVE-2024-26068",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26068"
+    },
+    {
+      "cve": "CVE-2024-26070",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26070"
+    },
+    {
+      "cve": "CVE-2024-26071",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26071"
+    },
+    {
+      "cve": "CVE-2024-26072",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26072"
+    },
+    {
+      "cve": "CVE-2024-26074",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26074"
+    },
+    {
+      "cve": "CVE-2024-26075",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26075"
+    },
+    {
+      "cve": "CVE-2024-26077",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26077"
+    },
+    {
+      "cve": "CVE-2024-26078",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26078"
+    },
+    {
+      "cve": "CVE-2024-26081",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26081"
+    },
+    {
+      "cve": "CVE-2024-26082",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26082"
+    },
+    {
+      "cve": "CVE-2024-26083",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26083"
+    },
+    {
+      "cve": "CVE-2024-26085",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26085"
+    },
+    {
+      "cve": "CVE-2024-26086",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26086"
+    },
+    {
+      "cve": "CVE-2024-26088",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26088"
+    },
+    {
+      "cve": "CVE-2024-26089",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26089"
+    },
+    {
+      "cve": "CVE-2024-2609",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-2609"
+    },
+    {
+      "cve": "CVE-2024-26090",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26090"
+    },
+    {
+      "cve": "CVE-2024-26091",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26091"
+    },
+    {
+      "cve": "CVE-2024-26092",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26092"
+    },
+    {
+      "cve": "CVE-2024-26093",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26093"
+    },
+    {
+      "cve": "CVE-2024-26095",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26095"
+    },
+    {
+      "cve": "CVE-2024-26110",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26110"
+    },
+    {
+      "cve": "CVE-2024-26111",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26111"
+    },
+    {
+      "cve": "CVE-2024-26113",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26113"
+    },
+    {
+      "cve": "CVE-2024-26114",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26114"
+    },
+    {
+      "cve": "CVE-2024-26115",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26115"
+    },
+    {
+      "cve": "CVE-2024-26116",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26116"
+    },
+    {
+      "cve": "CVE-2024-26117",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26117"
+    },
+    {
+      "cve": "CVE-2024-26121",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26121"
+    },
+    {
+      "cve": "CVE-2024-26123",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26123"
+    },
+    {
+      "cve": "CVE-2024-26126",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26126"
+    },
+    {
+      "cve": "CVE-2024-26127",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26127"
+    },
+    {
+      "cve": "CVE-2024-34119",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-34119"
+    },
+    {
+      "cve": "CVE-2024-34120",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-34120"
+    },
+    {
+      "cve": "CVE-2024-34128",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-34128"
+    },
+    {
+      "cve": "CVE-2024-34141",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-34141"
+    },
+    {
+      "cve": "CVE-2024-34142",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-34142"
+    },
+    {
+      "cve": "CVE-2024-36141",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36141"
+    },
+    {
+      "cve": "CVE-2024-36142",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36142"
+    },
+    {
+      "cve": "CVE-2024-36143",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36143"
+    },
+    {
+      "cve": "CVE-2024-36144",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36144"
+    },
+    {
+      "cve": "CVE-2024-36146",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36146"
+    },
+    {
+      "cve": "CVE-2024-36147",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36147"
+    },
+    {
+      "cve": "CVE-2024-36148",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36148"
+    },
+    {
+      "cve": "CVE-2024-36149",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36149"
+    },
+    {
+      "cve": "CVE-2024-36150",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36150"
+    },
+    {
+      "cve": "CVE-2024-36151",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36151"
+    },
+    {
+      "cve": "CVE-2024-36152",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36152"
+    },
+    {
+      "cve": "CVE-2024-36153",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36153"
+    },
+    {
+      "cve": "CVE-2024-36154",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36154"
+    },
+    {
+      "cve": "CVE-2024-36155",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36155"
+    },
+    {
+      "cve": "CVE-2024-36156",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36156"
+    },
+    {
+      "cve": "CVE-2024-36157",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36157"
+    },
+    {
+      "cve": "CVE-2024-36158",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36158"
+    },
+    {
+      "cve": "CVE-2024-36159",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36159"
+    },
+    {
+      "cve": "CVE-2024-36160",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36160"
+    },
+    {
+      "cve": "CVE-2024-36161",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36161"
+    },
+    {
+      "cve": "CVE-2024-36162",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36162"
+    },
+    {
+      "cve": "CVE-2024-36163",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36163"
+    },
+    {
+      "cve": "CVE-2024-36164",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36164"
+    },
+    {
+      "cve": "CVE-2024-36165",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36165"
+    },
+    {
+      "cve": "CVE-2024-36166",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36166"
+    },
+    {
+      "cve": "CVE-2024-36167",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36167"
+    },
+    {
+      "cve": "CVE-2024-36168",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36168"
+    },
+    {
+      "cve": "CVE-2024-36169",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36169"
+    },
+    {
+      "cve": "CVE-2024-36170",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36170"
+    },
+    {
+      "cve": "CVE-2024-36171",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36171"
+    },
+    {
+      "cve": "CVE-2024-36172",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36172"
+    },
+    {
+      "cve": "CVE-2024-36173",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36173"
+    },
+    {
+      "cve": "CVE-2024-36174",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36174"
+    },
+    {
+      "cve": "CVE-2024-36175",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36175"
+    },
+    {
+      "cve": "CVE-2024-36176",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36176"
+    },
+    {
+      "cve": "CVE-2024-36177",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36177"
+    },
+    {
+      "cve": "CVE-2024-36178",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36178"
+    },
+    {
+      "cve": "CVE-2024-36179",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36179"
+    },
+    {
+      "cve": "CVE-2024-36180",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36180"
+    },
+    {
+      "cve": "CVE-2024-36181",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36181"
+    },
+    {
+      "cve": "CVE-2024-36182",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36182"
+    },
+    {
+      "cve": "CVE-2024-36183",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36183"
+    },
+    {
+      "cve": "CVE-2024-36184",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36184"
+    },
+    {
+      "cve": "CVE-2024-36185",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36185"
+    },
+    {
+      "cve": "CVE-2024-36186",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36186"
+    },
+    {
+      "cve": "CVE-2024-36187",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36187"
+    },
+    {
+      "cve": "CVE-2024-36188",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36188"
+    },
+    {
+      "cve": "CVE-2024-36189",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36189"
+    },
+    {
+      "cve": "CVE-2024-36190",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36190"
+    },
+    {
+      "cve": "CVE-2024-36191",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36191"
+    },
+    {
+      "cve": "CVE-2024-36192",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36192"
+    },
+    {
+      "cve": "CVE-2024-36193",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36193"
+    },
+    {
+      "cve": "CVE-2024-36194",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36194"
+    },
+    {
+      "cve": "CVE-2024-36195",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36195"
+    },
+    {
+      "cve": "CVE-2024-36196",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36196"
+    },
+    {
+      "cve": "CVE-2024-36197",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36197"
+    },
+    {
+      "cve": "CVE-2024-36198",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36198"
+    },
+    {
+      "cve": "CVE-2024-36199",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36199"
+    },
+    {
+      "cve": "CVE-2024-36200",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36200"
+    },
+    {
+      "cve": "CVE-2024-36201",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36201"
+    },
+    {
+      "cve": "CVE-2024-36202",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36202"
+    },
+    {
+      "cve": "CVE-2024-36203",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36203"
+    },
+    {
+      "cve": "CVE-2024-36204",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36204"
+    },
+    {
+      "cve": "CVE-2024-36205",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36205"
+    },
+    {
+      "cve": "CVE-2024-36206",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36206"
+    },
+    {
+      "cve": "CVE-2024-36207",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36207"
+    },
+    {
+      "cve": "CVE-2024-36208",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36208"
+    },
+    {
+      "cve": "CVE-2024-36209",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36209"
+    },
+    {
+      "cve": "CVE-2024-36210",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36210"
+    },
+    {
+      "cve": "CVE-2024-36211",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36211"
+    },
+    {
+      "cve": "CVE-2024-36212",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36212"
+    },
+    {
+      "cve": "CVE-2024-36213",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36213"
+    },
+    {
+      "cve": "CVE-2024-36214",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36214"
+    },
+    {
+      "cve": "CVE-2024-36215",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36215"
+    },
+    {
+      "cve": "CVE-2024-36216",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36216"
+    },
+    {
+      "cve": "CVE-2024-36217",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36217"
+    },
+    {
+      "cve": "CVE-2024-36218",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36218"
+    },
+    {
+      "cve": "CVE-2024-36219",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36219"
+    },
+    {
+      "cve": "CVE-2024-36220",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36220"
+    },
+    {
+      "cve": "CVE-2024-36221",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36221"
+    },
+    {
+      "cve": "CVE-2024-36222",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36222"
+    },
+    {
+      "cve": "CVE-2024-36223",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36223"
+    },
+    {
+      "cve": "CVE-2024-36224",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36224"
+    },
+    {
+      "cve": "CVE-2024-36225",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36225"
+    },
+    {
+      "cve": "CVE-2024-36227",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36227"
+    },
+    {
+      "cve": "CVE-2024-36228",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36228"
+    },
+    {
+      "cve": "CVE-2024-36229",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36229"
+    },
+    {
+      "cve": "CVE-2024-36230",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36230"
+    },
+    {
+      "cve": "CVE-2024-36231",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36231"
+    },
+    {
+      "cve": "CVE-2024-36232",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36232"
+    },
+    {
+      "cve": "CVE-2024-36233",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36233"
+    },
+    {
+      "cve": "CVE-2024-36234",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36234"
+    },
+    {
+      "cve": "CVE-2024-36235",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36235"
+    },
+    {
+      "cve": "CVE-2024-36236",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36236"
+    },
+    {
+      "cve": "CVE-2024-36238",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36238"
+    },
+    {
+      "cve": "CVE-2024-36239",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36239"
+    },
+    {
+      "cve": "CVE-2024-41841",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41841"
+    },
+    {
+      "cve": "CVE-2024-41842",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41842"
+    },
+    {
+      "cve": "CVE-2024-41843",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41843"
+    },
+    {
+      "cve": "CVE-2024-41844",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41844"
+    },
+    {
+      "cve": "CVE-2024-41845",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41845"
+    },
+    {
+      "cve": "CVE-2024-41846",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41846"
+    },
+    {
+      "cve": "CVE-2024-41847",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41847"
+    },
+    {
+      "cve": "CVE-2024-41848",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41848"
+    },
+    {
+      "cve": "CVE-2024-41849",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41849"
+    },
+    {
+      "cve": "CVE-2024-41875",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41875"
+    },
+    {
+      "cve": "CVE-2024-41876",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41876"
+    },
+    {
+      "cve": "CVE-2024-45153",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-45153"
+    },
+    {
+      "cve": "CVE-2024-26029",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Schwachstellen. Diese sind auf Fehler bei der Zugriffskontrolle und Fehler bei der Überprüfung von Eingaben zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-26029"
+    },
+    {
+      "cve": "CVE-2024-36226",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Schwachstellen. Diese sind auf Fehler bei der Zugriffskontrolle und Fehler bei der Überprüfung von Eingaben zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-36226"
+    },
+    {
+      "cve": "CVE-2024-41839",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Experience Manager existieren mehrere Schwachstellen. Diese sind auf Fehler bei der Zugriffskontrolle und Fehler bei der Überprüfung von Eingaben zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035357",
+          "T035356"
+        ]
+      },
+      "release_date": "2024-06-11T22:00:00.000+00:00",
+      "title": "CVE-2024-41839"
+    }
+  ]
+}

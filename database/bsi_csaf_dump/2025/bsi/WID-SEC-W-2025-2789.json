@@ -1,0 +1,1615 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Adobe Experience Manager (AEM) ist eine Content-Management-Lösung für die Erstellung von Websites, mobilen Anwendungen und Formularen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Adobe Experience Manager ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen, und um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2789 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2789.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2789 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2789"
+      },
+      {
+        "category": "external",
+        "summary": "Adobe Security Bulletin APSB25-115 vom 2025-12-09",
+        "url": "https://helpx.adobe.com/security/products/experience-manager/apsb25-115.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Adobe Experience Manager: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-12-10T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-12-11T09:45:31.868+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2789",
+      "initial_release_date": "2025-12-09T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-12-09T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-12-10T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Cloud Service Release <2025.12",
+                "product": {
+                  "name": "Adobe Experience Manager Cloud Service Release <2025.12",
+                  "product_id": "T049274"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Cloud Service Release 2025.12",
+                "product": {
+                  "name": "Adobe Experience Manager Cloud Service Release 2025.12",
+                  "product_id": "T049274-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:experience_manager:cloud_service_release__2025.12"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<6.5 LTS SP1",
+                "product": {
+                  "name": "Adobe Experience Manager <6.5 LTS SP1",
+                  "product_id": "T049276"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.5 LTS SP1",
+                "product": {
+                  "name": "Adobe Experience Manager 6.5 LTS SP1",
+                  "product_id": "T049276-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:experience_manager:6.5_lts_sp1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<6.5.24",
+                "product": {
+                  "name": "Adobe Experience Manager <6.5.24",
+                  "product_id": "T049278"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.5.24",
+                "product": {
+                  "name": "Adobe Experience Manager 6.5.24",
+                  "product_id": "T049278-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:experience_manager:6.5.24"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Experience Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "Adobe"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-64537",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64537"
+    },
+    {
+      "cve": "CVE-2025-64538",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64538"
+    },
+    {
+      "cve": "CVE-2025-64539",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64539"
+    },
+    {
+      "cve": "CVE-2025-64541",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64541"
+    },
+    {
+      "cve": "CVE-2025-64542",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64542"
+    },
+    {
+      "cve": "CVE-2025-64543",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64543"
+    },
+    {
+      "cve": "CVE-2025-64544",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64544"
+    },
+    {
+      "cve": "CVE-2025-64545",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64545"
+    },
+    {
+      "cve": "CVE-2025-64546",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64546"
+    },
+    {
+      "cve": "CVE-2025-64547",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64547"
+    },
+    {
+      "cve": "CVE-2025-64548",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64548"
+    },
+    {
+      "cve": "CVE-2025-64549",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64549"
+    },
+    {
+      "cve": "CVE-2025-64550",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64550"
+    },
+    {
+      "cve": "CVE-2025-64551",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64551"
+    },
+    {
+      "cve": "CVE-2025-64552",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64552"
+    },
+    {
+      "cve": "CVE-2025-64553",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64553"
+    },
+    {
+      "cve": "CVE-2025-64554",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64554"
+    },
+    {
+      "cve": "CVE-2025-64555",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64555"
+    },
+    {
+      "cve": "CVE-2025-64556",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64556"
+    },
+    {
+      "cve": "CVE-2025-64557",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64557"
+    },
+    {
+      "cve": "CVE-2025-64558",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64558"
+    },
+    {
+      "cve": "CVE-2025-64559",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64559"
+    },
+    {
+      "cve": "CVE-2025-64560",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64560"
+    },
+    {
+      "cve": "CVE-2025-64562",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64562"
+    },
+    {
+      "cve": "CVE-2025-64563",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64563"
+    },
+    {
+      "cve": "CVE-2025-64564",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64564"
+    },
+    {
+      "cve": "CVE-2025-64565",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64565"
+    },
+    {
+      "cve": "CVE-2025-64566",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64566"
+    },
+    {
+      "cve": "CVE-2025-64569",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64569"
+    },
+    {
+      "cve": "CVE-2025-64572",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64572"
+    },
+    {
+      "cve": "CVE-2025-64574",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64574"
+    },
+    {
+      "cve": "CVE-2025-64575",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64575"
+    },
+    {
+      "cve": "CVE-2025-64576",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64576"
+    },
+    {
+      "cve": "CVE-2025-64577",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64577"
+    },
+    {
+      "cve": "CVE-2025-64578",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64578"
+    },
+    {
+      "cve": "CVE-2025-64579",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64579"
+    },
+    {
+      "cve": "CVE-2025-64580",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64580"
+    },
+    {
+      "cve": "CVE-2025-64581",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64581"
+    },
+    {
+      "cve": "CVE-2025-64582",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64582"
+    },
+    {
+      "cve": "CVE-2025-64583",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64583"
+    },
+    {
+      "cve": "CVE-2025-64585",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64585"
+    },
+    {
+      "cve": "CVE-2025-64586",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64586"
+    },
+    {
+      "cve": "CVE-2025-64590",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64590"
+    },
+    {
+      "cve": "CVE-2025-64591",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64591"
+    },
+    {
+      "cve": "CVE-2025-64592",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64592"
+    },
+    {
+      "cve": "CVE-2025-64593",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64593"
+    },
+    {
+      "cve": "CVE-2025-64594",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64594"
+    },
+    {
+      "cve": "CVE-2025-64596",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64596"
+    },
+    {
+      "cve": "CVE-2025-64597",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64597"
+    },
+    {
+      "cve": "CVE-2025-64598",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64598"
+    },
+    {
+      "cve": "CVE-2025-64599",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64599"
+    },
+    {
+      "cve": "CVE-2025-64600",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64600"
+    },
+    {
+      "cve": "CVE-2025-64601",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64601"
+    },
+    {
+      "cve": "CVE-2025-64602",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64602"
+    },
+    {
+      "cve": "CVE-2025-64603",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64603"
+    },
+    {
+      "cve": "CVE-2025-64604",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64604"
+    },
+    {
+      "cve": "CVE-2025-64605",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64605"
+    },
+    {
+      "cve": "CVE-2025-64606",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64606"
+    },
+    {
+      "cve": "CVE-2025-64607",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64607"
+    },
+    {
+      "cve": "CVE-2025-64609",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64609"
+    },
+    {
+      "cve": "CVE-2025-64610",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64610"
+    },
+    {
+      "cve": "CVE-2025-64611",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64611"
+    },
+    {
+      "cve": "CVE-2025-64612",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64612"
+    },
+    {
+      "cve": "CVE-2025-64613",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64613"
+    },
+    {
+      "cve": "CVE-2025-64614",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64614"
+    },
+    {
+      "cve": "CVE-2025-64615",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64615"
+    },
+    {
+      "cve": "CVE-2025-64616",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64616"
+    },
+    {
+      "cve": "CVE-2025-64619",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64619"
+    },
+    {
+      "cve": "CVE-2025-64620",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64620"
+    },
+    {
+      "cve": "CVE-2025-64622",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64622"
+    },
+    {
+      "cve": "CVE-2025-64623",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64623"
+    },
+    {
+      "cve": "CVE-2025-64626",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64626"
+    },
+    {
+      "cve": "CVE-2025-64627",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64627"
+    },
+    {
+      "cve": "CVE-2025-64789",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64789"
+    },
+    {
+      "cve": "CVE-2025-64790",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64790"
+    },
+    {
+      "cve": "CVE-2025-64791",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64791"
+    },
+    {
+      "cve": "CVE-2025-64792",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64792"
+    },
+    {
+      "cve": "CVE-2025-64793",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64793"
+    },
+    {
+      "cve": "CVE-2025-64794",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64794"
+    },
+    {
+      "cve": "CVE-2025-64796",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64796"
+    },
+    {
+      "cve": "CVE-2025-64797",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64797"
+    },
+    {
+      "cve": "CVE-2025-64799",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64799"
+    },
+    {
+      "cve": "CVE-2025-64800",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64800"
+    },
+    {
+      "cve": "CVE-2025-64801",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64801"
+    },
+    {
+      "cve": "CVE-2025-64802",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64802"
+    },
+    {
+      "cve": "CVE-2025-64803",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64803"
+    },
+    {
+      "cve": "CVE-2025-64804",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64804"
+    },
+    {
+      "cve": "CVE-2025-64808",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64808"
+    },
+    {
+      "cve": "CVE-2025-64814",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64814"
+    },
+    {
+      "cve": "CVE-2025-64817",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64817"
+    },
+    {
+      "cve": "CVE-2025-64820",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64820"
+    },
+    {
+      "cve": "CVE-2025-64821",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64821"
+    },
+    {
+      "cve": "CVE-2025-64822",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64822"
+    },
+    {
+      "cve": "CVE-2025-64823",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64823"
+    },
+    {
+      "cve": "CVE-2025-64825",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64825"
+    },
+    {
+      "cve": "CVE-2025-64826",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64826"
+    },
+    {
+      "cve": "CVE-2025-64827",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64827"
+    },
+    {
+      "cve": "CVE-2025-64829",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64829"
+    },
+    {
+      "cve": "CVE-2025-64833",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64833"
+    },
+    {
+      "cve": "CVE-2025-64839",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64839"
+    },
+    {
+      "cve": "CVE-2025-64840",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64840"
+    },
+    {
+      "cve": "CVE-2025-64841",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64841"
+    },
+    {
+      "cve": "CVE-2025-64845",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64845"
+    },
+    {
+      "cve": "CVE-2025-64847",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64847"
+    },
+    {
+      "cve": "CVE-2025-64850",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64850"
+    },
+    {
+      "cve": "CVE-2025-64852",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64852"
+    },
+    {
+      "cve": "CVE-2025-64853",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64853"
+    },
+    {
+      "cve": "CVE-2025-64857",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64857"
+    },
+    {
+      "cve": "CVE-2025-64858",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64858"
+    },
+    {
+      "cve": "CVE-2025-64860",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64860"
+    },
+    {
+      "cve": "CVE-2025-64861",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64861"
+    },
+    {
+      "cve": "CVE-2025-64863",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64863"
+    },
+    {
+      "cve": "CVE-2025-64869",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64869"
+    },
+    {
+      "cve": "CVE-2025-64872",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64872"
+    },
+    {
+      "cve": "CVE-2025-64873",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64873"
+    },
+    {
+      "cve": "CVE-2025-64874",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64874"
+    },
+    {
+      "cve": "CVE-2025-64875",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64875"
+    },
+    {
+      "cve": "CVE-2025-64881",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64881"
+    },
+    {
+      "cve": "CVE-2025-64887",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64887"
+    },
+    {
+      "cve": "CVE-2025-64888",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64888"
+    },
+    {
+      "cve": "CVE-2025-64540",
+      "product_status": {
+        "known_affected": [
+          "T049274",
+          "T049278",
+          "T049276"
+        ]
+      },
+      "release_date": "2025-12-09T23:00:00.000+00:00",
+      "title": "CVE-2025-64540"
+    }
+  ]
+}

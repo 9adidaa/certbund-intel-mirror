@@ -1,0 +1,167 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Android Betriebssystem ist eine quelloffene Plattform für mobile Geräte. Die Basis bildet der Linux-Kernel.\r\nDas Fast Pair Bluetooth Protokoll wird zum schnellen Koppeln von Audiozubehör wie Kopfhörern und Lautsprechern verwendet.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer in Bluetooth Reichweite kann eine Schwachstelle im Google Fast Pair Bluetooth Protokoll ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-0135 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-0135.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-0135 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0135"
+      },
+      {
+        "category": "external",
+        "summary": "WhisperPair Webseite vom 2026-01-15",
+        "url": "https://whisperpair.eu/"
+      },
+      {
+        "category": "external",
+        "summary": "Google Pixel Update vom 2026-01-15",
+        "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-01-01"
+      },
+      {
+        "category": "external",
+        "summary": "9to5google Bericht vom 2026-01-15",
+        "url": "https://9to5google.com/2026/01/15/google-fast-pair-devices-exploit-whisperpair/"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Vulnerability Database",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-36911"
+      },
+      {
+        "category": "external",
+        "summary": "WhisperPair Research Tool \"Whisper\" + PoC",
+        "url": "https://github.com/ekomsSavior/whisper"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Google Fast Pair Bluetooth Protokoll: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2026-01-20T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-21T05:39:24.365+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-0135",
+      "initial_release_date": "2026-01-15T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-01-15T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-01-20T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Google Android",
+                "product": {
+                  "name": "Google Android",
+                  "product_id": "132177",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Pixel <2026-01-05",
+                "product": {
+                  "name": "Google Android Pixel <2026-01-05",
+                  "product_id": "T049911"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Pixel 2026-01-05",
+                "product": {
+                  "name": "Google Android Pixel 2026-01-05",
+                  "product_id": "T049911-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:google:android:pixel__2026-01-05"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Android"
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-36911",
+      "product_status": {
+        "known_affected": [
+          "132177",
+          "T049911"
+        ]
+      },
+      "release_date": "2026-01-15T23:00:00.000+00:00",
+      "title": "CVE-2025-36911"
+    }
+  ]
+}

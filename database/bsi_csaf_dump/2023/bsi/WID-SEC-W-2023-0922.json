@@ -1,0 +1,315 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Adobe Acrobat ist ein Programm für die Erstellung und Betrachtung von Dokumenten im Adobe Portable Document Format (PDF).\r\nAcrobat Reader ist ein Programm für die Anzeige von Dokumenten im Adobe Portable Document Format (PDF).\r\nAdobe Reader ist ein Programm für die Anzeige von Dokumenten im Adobe Portable Document Format (PDF).",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Adobe Acrobat DC, Adobe Acrobat Reader DC, Adobe Acrobat und Adobe Acrobat Reader ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0922 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0922.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0922 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0922"
+      },
+      {
+        "category": "external",
+        "summary": "Adobe Security Bulletin vom 2023-04-11",
+        "url": "https://helpx.adobe.com/security/products/acrobat/apsb23-24.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Adobe PDF Produkte: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-04-11T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:48:31.192+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0922",
+      "initial_release_date": "2023-04-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-04-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Adobe Acrobat < 20.005.30467",
+            "product": {
+              "name": "Adobe Acrobat < 20.005.30467",
+              "product_id": "T027189",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:adobe:acrobat:20.005.30467"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Adobe Acrobat DC < 23.001.20143",
+            "product": {
+              "name": "Adobe Acrobat DC < 23.001.20143",
+              "product_id": "T027187",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:adobe:acrobat_dc:23.001.20143"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Adobe Acrobat Reader < 20.005.30467",
+            "product": {
+              "name": "Adobe Acrobat Reader < 20.005.30467",
+              "product_id": "T027190",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:adobe:acrobat_reader:20.005.30467"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Adobe Acrobat Reader DC < 23.001.20143",
+            "product": {
+              "name": "Adobe Acrobat Reader DC < 23.001.20143",
+              "product_id": "T027188",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:adobe:acrobat_reader_dc:23.001.20143"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Adobe"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-26425",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26425"
+    },
+    {
+      "cve": "CVE-2023-26424",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26424"
+    },
+    {
+      "cve": "CVE-2023-26423",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26423"
+    },
+    {
+      "cve": "CVE-2023-26422",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26422"
+    },
+    {
+      "cve": "CVE-2023-26421",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26421"
+    },
+    {
+      "cve": "CVE-2023-26420",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26420"
+    },
+    {
+      "cve": "CVE-2023-26419",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26419"
+    },
+    {
+      "cve": "CVE-2023-26418",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26418"
+    },
+    {
+      "cve": "CVE-2023-26417",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26417"
+    },
+    {
+      "cve": "CVE-2023-26408",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26408"
+    },
+    {
+      "cve": "CVE-2023-26407",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26407"
+    },
+    {
+      "cve": "CVE-2023-26406",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26406"
+    },
+    {
+      "cve": "CVE-2023-26405",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26405"
+    },
+    {
+      "cve": "CVE-2023-26397",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26397"
+    },
+    {
+      "cve": "CVE-2023-26396",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26396"
+    },
+    {
+      "cve": "CVE-2023-26395",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Adobe Acrobat und Adobe Acrobat Reader existieren mehrere Schwachstellen. Diese sind auf mehrere Out-of-Bounds-Lese und Schreibfehler, mehrere Use-after-Free-Fehler, Fehler im sicheren Software-Design, Fehler in der Zugriffskontrolle sowie einem Integer Underflow zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Privilegien zu erweitern, beliebigen Programmcode auszuführen, Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-04-11T22:00:00.000+00:00",
+      "title": "CVE-2023-26395"
+    }
+  ]
+}

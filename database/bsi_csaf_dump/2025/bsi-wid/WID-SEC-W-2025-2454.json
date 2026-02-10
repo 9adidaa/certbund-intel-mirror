@@ -1,0 +1,144 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "pfSense ist eine Software-Edge-Firewall mit Router- und VPN-Funktionalität.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Netgate pfSense (Suricata und Snort) ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Hardware Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2454 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2454.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2454 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2454"
+      },
+      {
+        "category": "external",
+        "summary": "ZDI Advisory vom 2025-10-30",
+        "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-979/"
+      },
+      {
+        "category": "external",
+        "summary": "pfsense commit vom 2025-10-30",
+        "url": "https://github.com/pfsense/FreeBSD-ports/commit/36b2303dfca35a1183d76f26bcc6ce26d4ea682d"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Netgate pfSense (Suricata und Snort): Schwachstelle ermöglicht Codeausführung.",
+    "tracking": {
+      "current_release_date": "2025-11-06T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-07T08:42:35.826+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2454",
+      "initial_release_date": "2025-10-30T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-30T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-11-06T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2025-38174"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Snort",
+                "product": {
+                  "name": "Netgate pfSense Snort",
+                  "product_id": "T048233",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netgate:pfsense:snort"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Suricata",
+                "product": {
+                  "name": "Netgate pfSense Suricata",
+                  "product_id": "T048234",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netgate:pfsense:suricata"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "pfSense"
+          }
+        ],
+        "category": "vendor",
+        "name": "Netgate"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-12490",
+      "product_status": {
+        "known_affected": [
+          "T048234",
+          "T048233"
+        ]
+      },
+      "release_date": "2025-10-30T23:00:00.000+00:00",
+      "title": "CVE-2025-12490"
+    }
+  ]
+}

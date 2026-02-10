@@ -1,0 +1,209 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die SIMATIC S7 ist eine Serie von SPS (Speicherprogrammierbare Steuerungen) für Automatisierungsanwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Siemens SIMATIC S7 ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2297 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2297.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2297 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2297"
+      },
+      {
+        "category": "external",
+        "summary": "Siemens Security Advisory vom 2022-12-12",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-382653.pdf"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Siemens SIMATIC S7: Mehrere Schwachstellen ermöglichen Denial of Service",
+    "tracking": {
+      "current_release_date": "2022-12-12T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:39:43.990+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-2297",
+      "initial_release_date": "2022-12-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-12-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Siemens SIMATIC S7 1200 < 4.6.0",
+                "product": {
+                  "name": "Siemens SIMATIC S7 1200 < 4.6.0",
+                  "product_id": "T025553",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:siemens:simatic_s7:1200__4.6.0"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Siemens SIMATIC S7 1500 < 3.0.1",
+                "product": {
+                  "name": "Siemens SIMATIC S7 1500 < 3.0.1",
+                  "product_id": "T025554",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:siemens:simatic_s7:1500__3.0.1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Siemens SIMATIC S7 PLCSIM < 5.0",
+                "product": {
+                  "name": "Siemens SIMATIC S7 PLCSIM < 5.0",
+                  "product_id": "T025555",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:siemens:simatic_s7:plcsim__5.0"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Siemens SIMATIC S7 1500 Software Controller",
+                "product": {
+                  "name": "Siemens SIMATIC S7 1500 Software Controller",
+                  "product_id": "T025556",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:siemens:simatic_s7:1500_software_controller"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-44695",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in verschiedenen Siemens SIMATIC S7 Produkten. Die Fehler bestehen aufgrund mehrerer nicht korrekter Eingabevalidierungen. Ein entfernter, authentisierter Angreifer mit bestimmten Rechten kann diese Schwachstellen ausnutzen, indem er speziell gestaltete Pakete an Port 102/tcp sendet, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T025556"
+        ]
+      },
+      "release_date": "2022-12-12T23:00:00.000+00:00",
+      "title": "CVE-2021-44695"
+    },
+    {
+      "cve": "CVE-2021-44694",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in verschiedenen Siemens SIMATIC S7 Produkten. Die Fehler bestehen aufgrund mehrerer nicht korrekter Eingabevalidierungen. Ein entfernter, authentisierter Angreifer mit bestimmten Rechten kann diese Schwachstellen ausnutzen, indem er speziell gestaltete Pakete an Port 102/tcp sendet, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T025556"
+        ]
+      },
+      "release_date": "2022-12-12T23:00:00.000+00:00",
+      "title": "CVE-2021-44694"
+    },
+    {
+      "cve": "CVE-2021-44693",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existieren mehrere Schwachstellen in verschiedenen Siemens SIMATIC S7 Produkten. Die Fehler bestehen aufgrund mehrerer nicht korrekter Eingabevalidierungen. Ein entfernter, authentisierter Angreifer mit bestimmten Rechten kann diese Schwachstellen ausnutzen, indem er speziell gestaltete Pakete an Port 102/tcp sendet, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T025556"
+        ]
+      },
+      "release_date": "2022-12-12T23:00:00.000+00:00",
+      "title": "CVE-2021-44693"
+    },
+    {
+      "cve": "CVE-2021-40365",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in verschiedenen Siemens SIMATIC S7 Produkten. Der Fehler besteht aufgrund einer unsachgemäßen Eingabevalidierung. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, indem er speziell gestaltete Pakete an Port 102/tcp sendet, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T025556"
+        ]
+      },
+      "release_date": "2022-12-12T23:00:00.000+00:00",
+      "title": "CVE-2021-40365"
+    }
+  ]
+}

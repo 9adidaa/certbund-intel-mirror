@@ -1,0 +1,356 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um Informationen offenzulegen, einen Denial of Service zu verursachen, einen Cross-Site Scripting Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potentiell andere Accounts zu übernehmen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3683 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3683.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3683 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3683"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Patch Release: 17.6.2, 17.5.4, 17.4.6 vom 2024-12-10",
+        "url": "https://about.gitlab.com/releases/2024/12/11/patch-release-gitlab-17-6-2-released/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-12-10T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-11T12:41:56.220+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3683",
+      "initial_release_date": "2024-12-10T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-10T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<17.6.2",
+                "product": {
+                  "name": "Open Source GitLab <17.6.2",
+                  "product_id": "T039796"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.6.2",
+                "product": {
+                  "name": "Open Source GitLab 17.6.2",
+                  "product_id": "T039796-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.6.2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.5.4",
+                "product": {
+                  "name": "Open Source GitLab <17.5.4",
+                  "product_id": "T039797"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.5.4",
+                "product": {
+                  "name": "Open Source GitLab 17.5.4",
+                  "product_id": "T039797-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.5.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.4.6",
+                "product": {
+                  "name": "Open Source GitLab <17.4.6",
+                  "product_id": "T039798"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.4.6",
+                "product": {
+                  "name": "Open Source GitLab 17.4.6",
+                  "product_id": "T039798-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.4.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-10043",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-10043"
+    },
+    {
+      "cve": "CVE-2024-11274",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-11274"
+    },
+    {
+      "cve": "CVE-2024-12292",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-12292"
+    },
+    {
+      "cve": "CVE-2024-8116",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-8116"
+    },
+    {
+      "cve": "CVE-2024-8179",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-8179"
+    },
+    {
+      "cve": "CVE-2024-8233",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-8233"
+    },
+    {
+      "cve": "CVE-2024-8647",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-8647"
+    },
+    {
+      "cve": "CVE-2024-8650",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-8650"
+    },
+    {
+      "cve": "CVE-2024-9367",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-9367"
+    },
+    {
+      "cve": "CVE-2024-9387",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-9387"
+    },
+    {
+      "cve": "CVE-2024-9633",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt mehrere Schwachstellen in GitLab. Diese existieren in mehreren Komponenten wie z.B. Kubernetes Proxy Response, CI_JOB_TOKEN, API Endpoints, Harbor und anderen. Die Ursachen sind unter anderem unzureichende Eingabeüberprüfungen, Injection- und Cross-Site-Scripting-Probleme, unkontrollierter Ressourcenverbrauch und ungeeignete Zugriffsbeschränkungen. Ein Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen, einen Denial-of-Service zu verursachen, einen Cross-Site-Scripting-Angriff durchzuführen oder Sicherheitsvorkehrungen zu umgehen und potenziell die Kontrolle über andere Konten zu übernehmen. Einige dieser Schwachstellen erfordern eine Benutzerinteraktion oder Anmeldung."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039798",
+          "T039797",
+          "T039796"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-9633"
+    }
+  ]
+}

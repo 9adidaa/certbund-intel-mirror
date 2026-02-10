@@ -1,0 +1,2205 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Windows ist ein Betriebssystem von Microsoft.\r\nMicrosoft Windows RT ist eine Version des Windows-Betriebssystems von Microsoft für Geräte basierend auf der ARM-Architektur, wie beispielsweise Tablet-Computer.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Microsoft Windows und Microsoft Windows Server ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, seine Privilegien zu erweitern und einen Denial-of-Service-Zustand auszulösen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0055 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0055.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0055 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0055"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates vom 2023-01-10",
+        "url": "https://msrc.microsoft.com/update-guide"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Vulnerability Information HITACHI-SEC-2023-301 vom 2023-02-01",
+        "url": "https://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2023/01.html"
+      },
+      {
+        "category": "external",
+        "summary": "PoC für CVE-2023-21563 vom 2025-05-13",
+        "url": "https://blog.compass-security.com/2025/05/bypassing-bitlocker-encryption-bitpixie-poc-and-winpe-edition/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Windows und Microsoft Windows Server: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-05-14T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-05-15T11:39:23.656+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2023-0055",
+      "initial_release_date": "2023-01-10T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-10T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-01-31T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von HITACHI aufgenommen"
+        },
+        {
+          "date": "2025-05-14T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "PoC aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Hitachi Storage",
+            "product": {
+              "name": "Hitachi Storage",
+              "product_id": "T009295",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:hitachi:storage:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Version 1607",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 1607",
+                  "product_id": "T011520",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_1607"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 1809",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 1809",
+                  "product_id": "T019780",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_1809"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 20H2",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 20H2",
+                  "product_id": "T020373",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_20h2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 21H2",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 21H2",
+                  "product_id": "T021306",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_21h2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 22H2",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 22H2",
+                  "product_id": "T025256",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_22h2"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Microsoft Windows 10",
+                "product": {
+                  "name": "Microsoft Windows 10",
+                  "product_id": "T025566",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:windows_terminal"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows 10"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Version 22H2",
+                "product": {
+                  "name": "Microsoft Windows 11 Version 22H2",
+                  "product_id": "T024880",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_11:version_22h2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "version 21H2",
+                "product": {
+                  "name": "Microsoft Windows 11 version 21H2",
+                  "product_id": "T025777"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows 11"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "SP1",
+                "product": {
+                  "name": "Microsoft Windows 7 SP1",
+                  "product_id": "1078655",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_7:-:sp1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows 7 x64 Edition Service Pack 1"
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows 8.1",
+            "product": {
+              "name": "Microsoft Windows 8.1",
+              "product_id": "T005302",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_8.1:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows RT 8.1",
+            "product": {
+              "name": "Microsoft Windows RT 8.1",
+              "product_id": "T002137",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_rt_8.1:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "SP1",
+                "product": {
+                  "name": "Microsoft Windows Server 2008 R2 SP1",
+                  "product_id": "T013769",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_server_2008_r2:sp_1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows Server 2008 R2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "SP2",
+                "product": {
+                  "name": "Microsoft Windows Server 2008 SP2",
+                  "product_id": "T009650",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_server_2008:sp2:x64"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows Server 2008 Service Pack 2"
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2012",
+            "product": {
+              "name": "Microsoft Windows Server 2012",
+              "product_id": "T005923",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2012:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2012 R2",
+            "product": {
+              "name": "Microsoft Windows Server 2012 R2",
+              "product_id": "T014786",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2012_r2:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2016",
+            "product": {
+              "name": "Microsoft Windows Server 2016",
+              "product_id": "T008880",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2016:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2019",
+            "product": {
+              "name": "Microsoft Windows Server 2019",
+              "product_id": "T012979",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2019:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2022",
+            "product": {
+              "name": "Microsoft Windows Server 2022",
+              "product_id": "T020315",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2022:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-21524",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21524"
+    },
+    {
+      "cve": "CVE-2023-21525",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21525"
+    },
+    {
+      "cve": "CVE-2023-21527",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21527"
+    },
+    {
+      "cve": "CVE-2023-21532",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21532"
+    },
+    {
+      "cve": "CVE-2023-21535",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21535"
+    },
+    {
+      "cve": "CVE-2023-21536",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21536"
+    },
+    {
+      "cve": "CVE-2023-21537",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21537"
+    },
+    {
+      "cve": "CVE-2023-21539",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21539"
+    },
+    {
+      "cve": "CVE-2023-21540",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21540"
+    },
+    {
+      "cve": "CVE-2023-21541",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21541"
+    },
+    {
+      "cve": "CVE-2023-21542",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21542"
+    },
+    {
+      "cve": "CVE-2023-21543",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21543"
+    },
+    {
+      "cve": "CVE-2023-21546",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21546"
+    },
+    {
+      "cve": "CVE-2023-21547",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21547"
+    },
+    {
+      "cve": "CVE-2023-21548",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21548"
+    },
+    {
+      "cve": "CVE-2023-21549",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21549"
+    },
+    {
+      "cve": "CVE-2023-21550",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21550"
+    },
+    {
+      "cve": "CVE-2023-21551",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21551"
+    },
+    {
+      "cve": "CVE-2023-21552",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21552"
+    },
+    {
+      "cve": "CVE-2023-21555",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21555"
+    },
+    {
+      "cve": "CVE-2023-21556",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21556"
+    },
+    {
+      "cve": "CVE-2023-21557",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21557"
+    },
+    {
+      "cve": "CVE-2023-21558",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21558"
+    },
+    {
+      "cve": "CVE-2023-21559",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21559"
+    },
+    {
+      "cve": "CVE-2023-21560",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21560"
+    },
+    {
+      "cve": "CVE-2023-21561",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21561"
+    },
+    {
+      "cve": "CVE-2023-21563",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21563"
+    },
+    {
+      "cve": "CVE-2023-21674",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21674"
+    },
+    {
+      "cve": "CVE-2023-21675",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21675"
+    },
+    {
+      "cve": "CVE-2023-21676",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21676"
+    },
+    {
+      "cve": "CVE-2023-21677",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21677"
+    },
+    {
+      "cve": "CVE-2023-21678",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21678"
+    },
+    {
+      "cve": "CVE-2023-21679",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21679"
+    },
+    {
+      "cve": "CVE-2023-21680",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21680"
+    },
+    {
+      "cve": "CVE-2023-21681",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21681"
+    },
+    {
+      "cve": "CVE-2023-21682",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21682"
+    },
+    {
+      "cve": "CVE-2023-21683",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21683"
+    },
+    {
+      "cve": "CVE-2023-21724",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21724"
+    },
+    {
+      "cve": "CVE-2023-21726",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21726"
+    },
+    {
+      "cve": "CVE-2023-21728",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21728"
+    },
+    {
+      "cve": "CVE-2023-21730",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21730"
+    },
+    {
+      "cve": "CVE-2023-21732",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21732"
+    },
+    {
+      "cve": "CVE-2023-21733",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21733"
+    },
+    {
+      "cve": "CVE-2023-21739",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21739"
+    },
+    {
+      "cve": "CVE-2023-21746",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21746"
+    },
+    {
+      "cve": "CVE-2023-21747",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21747"
+    },
+    {
+      "cve": "CVE-2023-21748",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21748"
+    },
+    {
+      "cve": "CVE-2023-21749",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21749"
+    },
+    {
+      "cve": "CVE-2023-21750",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21750"
+    },
+    {
+      "cve": "CVE-2023-21752",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21752"
+    },
+    {
+      "cve": "CVE-2023-21753",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21753"
+    },
+    {
+      "cve": "CVE-2023-21754",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21754"
+    },
+    {
+      "cve": "CVE-2023-21755",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21755"
+    },
+    {
+      "cve": "CVE-2023-21757",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21757"
+    },
+    {
+      "cve": "CVE-2023-21758",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21758"
+    },
+    {
+      "cve": "CVE-2023-21759",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21759"
+    },
+    {
+      "cve": "CVE-2023-21760",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21760"
+    },
+    {
+      "cve": "CVE-2023-21765",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21765"
+    },
+    {
+      "cve": "CVE-2023-21766",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21766"
+    },
+    {
+      "cve": "CVE-2023-21767",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21767"
+    },
+    {
+      "cve": "CVE-2023-21768",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21768"
+    },
+    {
+      "cve": "CVE-2023-21771",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21771"
+    },
+    {
+      "cve": "CVE-2023-21772",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21772"
+    },
+    {
+      "cve": "CVE-2023-21773",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21773"
+    },
+    {
+      "cve": "CVE-2023-21774",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21774"
+    },
+    {
+      "cve": "CVE-2023-21776",
+      "product_status": {
+        "known_affected": [
+          "T012979",
+          "T013769",
+          "T005302",
+          "T005923",
+          "T014786",
+          "T011520",
+          "T019780",
+          "1078655",
+          "T021306",
+          "T025777",
+          "T020315",
+          "T002137",
+          "T025256",
+          "T009295",
+          "T025566",
+          "T008880",
+          "T020373",
+          "T009650",
+          "T024880"
+        ]
+      },
+      "release_date": "2023-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-21776"
+    }
+  ]
+}

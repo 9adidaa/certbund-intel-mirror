@@ -1,0 +1,160 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "QEMU ist eine freie Virtualisierungssoftware, die die gesamte Hardware eines Computers emuliert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in QEMU ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2350 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2350.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2350 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2350"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:6368 vom 2023-11-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:6368"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2203387 vom 2023-09-13",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2680"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2203387 vom 2023-09-13",
+        "url": "https://access.redhat.com/security/cve/CVE-2023-2680"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla – Bug 2203387 vom 2023-09-13",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2203387"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "QEMU: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2023-11-07T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:25.874+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2350",
+      "initial_release_date": "2023-09-13T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-13T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-11-07T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source QEMU",
+            "product": {
+              "name": "Open Source QEMU",
+              "product_id": "T029878",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:qemu:qemu:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-2680",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in QEMU. Dieser Fehler ist spezifisch für die qemu-kvm-Pakete aufgrund eines DMA-Rentrancy-Problems (unvollständiger Fix für CVE-2021-3750). Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T029878"
+        ]
+      },
+      "release_date": "2023-09-13T22:00:00.000+00:00",
+      "title": "CVE-2023-2680"
+    }
+  ]
+}

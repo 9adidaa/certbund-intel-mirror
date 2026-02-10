@@ -1,0 +1,122 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Grafana ist eine Open-Source Analyse- und Visualisierungssoftware.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Grafana ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2751 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2751.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2751 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2751"
+      },
+      {
+        "category": "external",
+        "summary": "Grafana Security Advisory vom 2023-10-25",
+        "url": "https://grafana.com/security/security-advisories/cve-2023-3010/"
+      },
+      {
+        "category": "external",
+        "summary": "Grafana Security Advisory vom 2023-10-25",
+        "url": "https://github.com/advisories/GHSA-5vw8-jcpr-5wmv"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Grafana: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-10-25T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:00:37.026+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2751",
+      "initial_release_date": "2023-10-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-10-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Grafana < 1.0.4",
+            "product": {
+              "name": "Open Source Grafana < 1.0.4",
+              "product_id": "T030774",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:grafana:grafana:1.0.4"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-3010",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Grafana existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden im WorldMap panel plugin nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-3010"
+    }
+  ]
+}

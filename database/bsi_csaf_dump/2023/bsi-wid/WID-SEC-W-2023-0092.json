@@ -1,0 +1,183 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "MediaWiki ist ein freies Wiki, das ursprünglich für den Einsatz auf Wikipedia entwickelt wurde.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in MediaWiki ausnutzen, um Informationen offenzulegen, Sicherheitsmaßnahmen zu umgehen und einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0092 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0092.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0092 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0092"
+      },
+      {
+        "category": "external",
+        "summary": "MediaWiki Extensions and Skins Security Release Supplement (1.35.9/1.38.4/1.39.1) vom 2023-01-12",
+        "url": "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/thread/EWRDVJWBOECYCD73PIW52CA76UO62J3M/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "MediaWiki: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-01-19T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:41:24.909+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0092",
+      "initial_release_date": "2023-01-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-01-19T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: FEDORA-2023-30A7A812F0"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source MediaWiki < 1.38.4",
+                "product": {
+                  "name": "Open Source MediaWiki < 1.38.4",
+                  "product_id": "T024768",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:mediawiki:mediawiki:1.38.4"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source MediaWiki < 1.39.1",
+                "product": {
+                  "name": "Open Source MediaWiki < 1.39.1",
+                  "product_id": "T025705",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:mediawiki:mediawiki:1.39.1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source MediaWiki < 1.35.9",
+                "product": {
+                  "name": "Open Source MediaWiki < 1.35.9",
+                  "product_id": "T025707",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:mediawiki:mediawiki:1.35.9"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MediaWiki"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-22945",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In MediaWiki existieren mehrere Schwachstellen. Die Fehler bestehen, weil sich blockierte Benutzer aufgrund von \"Action=growthmanagementorlist\" als Mentoren anmelden können und weil der CheckUser TokenManager unsichere AES-CTR-Verschlüsselung mit wiederholter Nonce verwendet. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um die Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "release_date": "2023-01-12T23:00:00.000+00:00",
+      "title": "CVE-2023-22945"
+    },
+    {
+      "cve": "CVE-2023-22912",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In MediaWiki existieren mehrere Schwachstellen. Die Fehler bestehen, weil sich blockierte Benutzer aufgrund von \"Action=growthmanagementorlist\" als Mentoren anmelden können und weil der CheckUser TokenManager unsichere AES-CTR-Verschlüsselung mit wiederholter Nonce verwendet. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um die Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "release_date": "2023-01-12T23:00:00.000+00:00",
+      "title": "CVE-2023-22912"
+    },
+    {
+      "cve": "CVE-2023-22910",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In MediaWiki existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden in der Wikibase Datumsformatierung nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-01-12T23:00:00.000+00:00",
+      "title": "CVE-2023-22910"
+    },
+    {
+      "cve": "CVE-2022-39193",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in MediaWiki. Der Fehler besteht, weil Bearbeitungen, bei denen der Ausführende unterdrückt wurde, den Ausführenden in den Ergebnissen der CheckUser-Erweiterung immer noch anzeigen, weil Investigate unterdrückte Informationen in Prüfergebnissen aufdecken können und die CheckUser-API den unterdrückten Ausführenden aufdecken kann. Ein entfernter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-01-12T23:00:00.000+00:00",
+      "title": "CVE-2022-39193"
+    }
+  ]
+}

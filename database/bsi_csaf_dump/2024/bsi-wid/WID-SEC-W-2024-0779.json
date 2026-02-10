@@ -1,0 +1,183 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Cisco Identity Services Engine (ISE) bietet eine attributbasierte Zugangs-Kontroll-Lösung.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter oder anonymer Angreifer kann mehrere Schwachstellen in Cisco Identity Services Engine (ISE) ausnutzen, um Dateien zu manipulieren oder beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0779 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0779.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0779 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0779"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory cisco-sa-ise-csrf-NfAKXrp5 vom 2024-04-03",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-csrf-NfAKXrp5"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory cisco-sa-ise-ssrf-FtSTh5Oz vom 2024-04-03",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-ssrf-FtSTh5Oz"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Identity Services Engine (ISE): Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-11-27T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-28T11:39:08.110+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-0779",
+      "initial_release_date": "2024-04-03T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-04-03T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-27T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Produktzuordnung überprüft"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.2P5",
+                "product": {
+                  "name": "Cisco Identity Services Engine (ISE) <3.2P5",
+                  "product_id": "T033874"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2P5",
+                "product": {
+                  "name": "Cisco Identity Services Engine (ISE) 3.2P5",
+                  "product_id": "T033874-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:identity_services_engine_software:3.2p5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<3.3P2",
+                "product": {
+                  "name": "Cisco Identity Services Engine (ISE) <3.3P2",
+                  "product_id": "T033875"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.3P2",
+                "product": {
+                  "name": "Cisco Identity Services Engine (ISE) 3.3P2",
+                  "product_id": "T033875-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:identity_services_engine_software:3.3p2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Identity Services Engine (ISE)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20332",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco Identity Services Engine (ISE). Diese ist auf einen Fehler bei der Validierung von Eingaben zurückzuführen wodurch eine Anfälligkeit für einen SSRF-Angriff besteht. Ein entfernter, authentisierter Angreifer mit \"SuperAdmin\" Berechtigung kann diese Schwachstelle ausnutzen, um Daten zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033875",
+          "T033874"
+        ]
+      },
+      "release_date": "2024-04-03T22:00:00.000+00:00",
+      "title": "CVE-2024-20332"
+    },
+    {
+      "cve": "CVE-2024-20368",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco Identity Services Engine (ISE) aufgrund eines unzureichenden Schutzes gegen CSRF-Angriffe. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Rechten des Nutzers auszuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033875",
+          "T033874"
+        ]
+      },
+      "release_date": "2024-04-03T22:00:00.000+00:00",
+      "title": "CVE-2024-20368"
+    }
+  ]
+}

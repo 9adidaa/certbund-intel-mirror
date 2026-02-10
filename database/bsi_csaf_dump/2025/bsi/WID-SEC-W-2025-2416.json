@@ -1,0 +1,159 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Proxmox Backup Server ist eine Enterprise-Backup-Lösung zur Sicherung und Wiederherstellung von VMs, Containern und physischen Hosts.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Proxmox Backup Server ausnutzen, um Informationen offenzulegen oder Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2416 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2416.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2416 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2416"
+      },
+      {
+        "category": "external",
+        "summary": "Proxmox Security Advisory vom 2025-10-26",
+        "url": "https://forum.proxmox.com/threads/proxmox-backup-server-security-advisories.149332/#-subject-psa-2025-00019-1-race-condition-during-long-running-garbage-collection-and-pruning-of-recent-snapshots-may-lead-to-back-up-corruption-before-proxmox-backup-server-3-4"
+      },
+      {
+        "category": "external",
+        "summary": "Proxmox Security Advisory vom 2025-10-26",
+        "url": "https://forum.proxmox.com/threads/proxmox-backup-server-security-advisories.149332/#-subject-psa-2025-00020-1-missing-protections-against-malicious-backup-clients-with-s3-backed-datastores"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Proxmox Backup Server: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-11-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-05T06:03:28.112+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2416",
+      "initial_release_date": "2025-10-26T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-10-26T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-11-04T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Korrektur Angriffsvektor"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=4.0.18-1",
+                "product": {
+                  "name": "Proxmox Backup Server >=4.0.18-1",
+                  "product_id": "T048150"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": ">=4.0.18-1",
+                "product": {
+                  "name": "Proxmox Backup Server >=4.0.18-1",
+                  "product_id": "T048150-fixed"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<3.4.1-1.",
+                "product": {
+                  "name": "Proxmox Backup Server <3.4.1-1.",
+                  "product_id": "T048155"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<3.4.1-1.",
+                "product": {
+                  "name": "Proxmox Backup Server <3.4.1-1.",
+                  "product_id": "T048155-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Backup Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "Proxmox"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "product_status": {
+        "known_affected": [
+          "T048150"
+        ]
+      },
+      "release_date": "2025-10-26T23:00:00.000+00:00"
+    },
+    {
+      "product_status": {
+        "known_affected": [
+          "T048155"
+        ]
+      },
+      "release_date": "2025-10-26T23:00:00.000+00:00"
+    }
+  ]
+}

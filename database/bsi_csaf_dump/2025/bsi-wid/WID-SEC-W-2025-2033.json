@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Zoom Workplace ist eine Plattform, die Videokonferenz-, Chat-, Telefon- und Collaboration-Tools integriert, um Remote- und Hybrid-Arbeitsumgebungen in Unternehmen zu unterstützen.\r\nZoom Rooms ist ein softwarebasiertes Raumsystem, das integrierte Audiokonferenzen, drahtlose Bildschirmfreigabe und Videokonferenzen ermöglicht.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Zoom Video Communications Workplace und Zoom Video Communications Rooms ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2033 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2033.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2033 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2033"
+      },
+      {
+        "category": "external",
+        "summary": "Zoom Security Bulletin vom 2025-09-10",
+        "url": "https://www.zoom.com/en/trust/security-bulletin/zsb-25031/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Zoom Video Communications Workplace: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2025-09-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-09-11T10:11:08.112+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2033",
+      "initial_release_date": "2025-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<6.5.0",
+                "product": {
+                  "name": "Zoom Video Communications Rooms <6.5.0",
+                  "product_id": "T046921"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.5.0",
+                "product": {
+                  "name": "Zoom Video Communications Rooms 6.5.0",
+                  "product_id": "T046921-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zoom:rooms:6.5.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Rooms"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<6.5.0",
+                "product": {
+                  "name": "Zoom Video Communications Workplace <6.5.0",
+                  "product_id": "T046920"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.5.0",
+                "product": {
+                  "name": "Zoom Video Communications Workplace 6.5.0",
+                  "product_id": "T046920-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zoom:workplace:6.5.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Workplace"
+          }
+        ],
+        "category": "vendor",
+        "name": "Zoom Video Communications"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-49458",
+      "product_status": {
+        "known_affected": [
+          "T046921",
+          "T046920"
+        ]
+      },
+      "release_date": "2025-09-10T22:00:00.000+00:00",
+      "title": "CVE-2025-49458"
+    }
+  ]
+}

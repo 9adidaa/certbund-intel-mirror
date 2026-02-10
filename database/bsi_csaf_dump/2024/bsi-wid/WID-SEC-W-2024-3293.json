@@ -1,0 +1,161 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache Nifi ist ein System zur Verarbeitung und Verteilung von Daten. Es unterstützt skalierbare gerichtete Graphen der Datenweiterleitung, -transformation und Systemvermittlungslogik.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Apache Nifi ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3293 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3293.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3293 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3293"
+      },
+      {
+        "category": "external",
+        "summary": "Apache Nifi Security Advisories vom 2024-10-28",
+        "url": "https://nifi.apache.org/security.html"
+      },
+      {
+        "category": "external",
+        "summary": "Mailing List OSS Security vom 2024-10-28",
+        "url": "https://seclists.org/oss-sec/2024/q4/41"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache Nifi: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-10-28T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-29T10:08:41.791+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3293",
+      "initial_release_date": "2024-10-28T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-28T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.28.0",
+                "product": {
+                  "name": "Apache Nifi <1.28.0",
+                  "product_id": "T038628"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.28.0",
+                "product": {
+                  "name": "Apache Nifi 1.28.0",
+                  "product_id": "T038628-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:nifi:1.28.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.0.0-M4",
+                "product": {
+                  "name": "Apache Nifi <2.0.0-M4",
+                  "product_id": "T038629"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.0.0-M4",
+                "product": {
+                  "name": "Apache Nifi 2.0.0-M4",
+                  "product_id": "T038629-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:nifi:2.0.0-m4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nifi"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-45477",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apache Nifi existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden in Parameter Description nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038629",
+          "T038628"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-45477"
+    }
+  ]
+}

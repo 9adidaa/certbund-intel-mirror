@@ -1,0 +1,163 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Shibboleth ist eine Open-Source Identity Management Lösung. Der Service Provider dient der Anbindung von Single Sign-On und Webanwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Shibboleth Service Provider ausnutzen, um eine SQL Injection durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2031 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2031.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2031 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2031"
+      },
+      {
+        "category": "external",
+        "summary": "Shibboleth Service Provider Security Advisory vom 2025-09-10",
+        "url": "https://shibboleth.net/community/advisories/secadv_20250903.txt"
+      },
+      {
+        "category": "external",
+        "summary": "CVERecord vom 2025-09-10",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2025-9943"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4300 vom 2025-09-14",
+        "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00015.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Shibboleth Service Provider: Schwachstelle ermöglicht SQL Injection",
+    "tracking": {
+      "current_release_date": "2025-09-14T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-09-15T07:41:51.173+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2031",
+      "initial_release_date": "2025-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-09-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Debian aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.5.1",
+                "product": {
+                  "name": "Shibboleth Service Provider <3.5.1",
+                  "product_id": "T046893"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.5.1",
+                "product": {
+                  "name": "Shibboleth Service Provider 3.5.1",
+                  "product_id": "T046893-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:shibboleth:shibboleth-sp:3.5.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Service Provider"
+          }
+        ],
+        "category": "vendor",
+        "name": "Shibboleth"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-9943",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T046893"
+        ]
+      },
+      "release_date": "2025-09-10T22:00:00.000+00:00",
+      "title": "CVE-2025-9943"
+    }
+  ]
+}

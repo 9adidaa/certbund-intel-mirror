@@ -1,0 +1,222 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Aruba ClearPass ist eine Netzwerk-Zugangskontrolllösung.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Aruba ClearPass Policy Manager ausnutzen, um seine Privilegien zu erhöhen, beliebigen Programmcode auszuführen, Informationen offenzulegen oder einen Cross-Site-Scripting-Angriff auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1450 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2020/wid-sec-w-2024-1450.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1450 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1450"
+      },
+      {
+        "category": "external",
+        "summary": "Aruba Product Security Advisory: PSA-2020-004 vom 2020-04-14",
+        "url": "https://www.arubanetworks.com/assets/alert/ARUBA-PSA-2020-004.txt"
+      },
+      {
+        "category": "external",
+        "summary": "Aruba Product Security Advisory ARUBA-PSA-2020-004 vom 2024-06-25",
+        "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw04016en_us&docLocale=en_US"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Aruba ClearPass Policy Manager: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-11-11T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-12T10:06:31.844+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-1450",
+      "initial_release_date": "2020-04-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-04-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-06-25T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Aruba aufgenommen"
+        },
+        {
+          "date": "2024-11-11T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Prüfung Produkteintragung"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<6.8.4",
+                "product": {
+                  "name": "Aruba ClearPass Policy Manager <6.8.4",
+                  "product_id": "T016291"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.8.4",
+                "product": {
+                  "name": "Aruba ClearPass Policy Manager 6.8.4",
+                  "product_id": "T016291-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:arubanetworks:clearpass_policy_manager:6.8.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<6.7.13",
+                "product": {
+                  "name": "Aruba ClearPass Policy Manager <6.7.13",
+                  "product_id": "T016292"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.7.13",
+                "product": {
+                  "name": "Aruba ClearPass Policy Manager 6.7.13",
+                  "product_id": "T016292-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:arubanetworks:clearpass_policy_manager:6.7.13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ClearPass Policy Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "Aruba"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-7114",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Aruba ClearPass Policy Manager, wenn sich Angreifer im gleichen Netzwerksegment wie das Management-Interface befinden. Durch bestimmte HTTP-Requests können Änderungen an der Datenbanken vorgenommen werden. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um seine Privilegien zu erhöhen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016292",
+          "T016291"
+        ]
+      },
+      "release_date": "2020-04-14T22:00:00.000+00:00",
+      "title": "CVE-2020-7114"
+    },
+    {
+      "cve": "CVE-2020-7111",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine serverseitige Injection-Schwachstelle in Aruba ClearPass Policy Manager. Ein authentisierter Angreifer, der über Administratorrechte verfügt, kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016292",
+          "T016291"
+        ]
+      },
+      "release_date": "2020-04-14T22:00:00.000+00:00",
+      "title": "CVE-2020-7111"
+    },
+    {
+      "cve": "CVE-2020-7113",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Aruba ClearPass Policy Manager. Während der Kommunikation mit dem Management-Interface können Parameter in den HTTP-Paketen angepasst werden. Ein entfernter, authentisierter Angreifer kann dies ausnutzen, um Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016292",
+          "T016291"
+        ]
+      },
+      "release_date": "2020-04-14T22:00:00.000+00:00",
+      "title": "CVE-2020-7113"
+    },
+    {
+      "cve": "CVE-2020-7110",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Aruba ClearPass Policy Manager existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter authentisierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung dieser Schwachstelle muss der Angreifer den Benutzer dazu bringen eine modifizierte URL oder Webseite in seinem Webbrowser zu öffnen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T016292",
+          "T016291"
+        ]
+      },
+      "release_date": "2020-04-14T22:00:00.000+00:00",
+      "title": "CVE-2020-7110"
+    }
+  ]
+}

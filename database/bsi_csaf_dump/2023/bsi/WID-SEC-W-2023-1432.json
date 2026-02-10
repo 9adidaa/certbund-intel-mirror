@@ -1,0 +1,2671 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die SIMATIC S7 ist eine Serie von SPS (Speicherprogrammierbare Steuerungen) für Automatisierungsanwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer aus dem angrenzenden Netzwerk oder ein entfernter, anonymer, authentisierter, physischer oder lokaler Angreifer kann mehrere Schwachstellen in Siemens SIMATIC S7 ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1432 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1432.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1432 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1432"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6187-1 vom 2023-06-22",
+        "url": "https://ubuntu.com/security/notices/USN-6187-1"
+      },
+      {
+        "category": "external",
+        "summary": "Siemens Security Advisory vom 2023-06-12",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-831302.html"
+      },
+      {
+        "category": "external",
+        "summary": "Siemens Security Advisory vom 2023-06-12",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-794697.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Siemens SIMATIC S7: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-06-22T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:52:18.956+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1432",
+      "initial_release_date": "2023-06-12T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-06-12T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-06-22T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Siemens SIMATIC S7 1500 TM MFP",
+            "product": {
+              "name": "Siemens SIMATIC S7 1500 TM MFP",
+              "product_id": "T028071",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:siemens:simatic_s7:1500_tm_mfp"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-26607",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-26607"
+    },
+    {
+      "cve": "CVE-2023-23559",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-23559"
+    },
+    {
+      "cve": "CVE-2023-23455",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-23455"
+    },
+    {
+      "cve": "CVE-2023-23454",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-23454"
+    },
+    {
+      "cve": "CVE-2023-1095",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-1095"
+    },
+    {
+      "cve": "CVE-2023-1077",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-1077"
+    },
+    {
+      "cve": "CVE-2023-1073",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-1073"
+    },
+    {
+      "cve": "CVE-2023-0590",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0590"
+    },
+    {
+      "cve": "CVE-2023-0466",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0466"
+    },
+    {
+      "cve": "CVE-2023-0465",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0465"
+    },
+    {
+      "cve": "CVE-2023-0464",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0464"
+    },
+    {
+      "cve": "CVE-2023-0394",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0394"
+    },
+    {
+      "cve": "CVE-2023-0286",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0286"
+    },
+    {
+      "cve": "CVE-2023-0215",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0215"
+    },
+    {
+      "cve": "CVE-2023-0179",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2023-0179"
+    },
+    {
+      "cve": "CVE-2022-47946",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-47946"
+    },
+    {
+      "cve": "CVE-2022-47929",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-47929"
+    },
+    {
+      "cve": "CVE-2022-47520",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-47520"
+    },
+    {
+      "cve": "CVE-2022-47518",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-47518"
+    },
+    {
+      "cve": "CVE-2022-4662",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4662"
+    },
+    {
+      "cve": "CVE-2022-4450",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4450"
+    },
+    {
+      "cve": "CVE-2022-4378",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4378"
+    },
+    {
+      "cve": "CVE-2022-43750",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-43750"
+    },
+    {
+      "cve": "CVE-2022-4304",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4304"
+    },
+    {
+      "cve": "CVE-2022-42896",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42896"
+    },
+    {
+      "cve": "CVE-2022-42895",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42895"
+    },
+    {
+      "cve": "CVE-2022-42722",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42722"
+    },
+    {
+      "cve": "CVE-2022-42721",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42721"
+    },
+    {
+      "cve": "CVE-2022-42720",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42720"
+    },
+    {
+      "cve": "CVE-2022-42719",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42719"
+    },
+    {
+      "cve": "CVE-2022-42703",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42703"
+    },
+    {
+      "cve": "CVE-2022-42432",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42432"
+    },
+    {
+      "cve": "CVE-2022-42329",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42329"
+    },
+    {
+      "cve": "CVE-2022-42328",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-42328"
+    },
+    {
+      "cve": "CVE-2022-41850",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-41850"
+    },
+    {
+      "cve": "CVE-2022-41849",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-41849"
+    },
+    {
+      "cve": "CVE-2022-41674",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-41674"
+    },
+    {
+      "cve": "CVE-2022-4139",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4139"
+    },
+    {
+      "cve": "CVE-2022-4129",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4129"
+    },
+    {
+      "cve": "CVE-2022-41222",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-41222"
+    },
+    {
+      "cve": "CVE-2022-41218",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-41218"
+    },
+    {
+      "cve": "CVE-2022-4095",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-4095"
+    },
+    {
+      "cve": "CVE-2022-40768",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-40768"
+    },
+    {
+      "cve": "CVE-2022-40307",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-40307"
+    },
+    {
+      "cve": "CVE-2022-39190",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-39190"
+    },
+    {
+      "cve": "CVE-2022-39188",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-39188"
+    },
+    {
+      "cve": "CVE-2022-36946",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-36946"
+    },
+    {
+      "cve": "CVE-2022-36879",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-36879"
+    },
+    {
+      "cve": "CVE-2022-3649",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3649"
+    },
+    {
+      "cve": "CVE-2022-3646",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3646"
+    },
+    {
+      "cve": "CVE-2022-3635",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3635"
+    },
+    {
+      "cve": "CVE-2022-3633",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3633"
+    },
+    {
+      "cve": "CVE-2022-3629",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3629"
+    },
+    {
+      "cve": "CVE-2022-36280",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-36280"
+    },
+    {
+      "cve": "CVE-2022-3628",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3628"
+    },
+    {
+      "cve": "CVE-2022-3625",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3625"
+    },
+    {
+      "cve": "CVE-2022-3621",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3621"
+    },
+    {
+      "cve": "CVE-2022-36123",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-36123"
+    },
+    {
+      "cve": "CVE-2022-3606",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3606"
+    },
+    {
+      "cve": "CVE-2022-3594",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3594"
+    },
+    {
+      "cve": "CVE-2022-3586",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3586"
+    },
+    {
+      "cve": "CVE-2022-3565",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3565"
+    },
+    {
+      "cve": "CVE-2022-3564",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3564"
+    },
+    {
+      "cve": "CVE-2022-3545",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3545"
+    },
+    {
+      "cve": "CVE-2022-3534",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3534"
+    },
+    {
+      "cve": "CVE-2022-3524",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3524"
+    },
+    {
+      "cve": "CVE-2022-3521",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3521"
+    },
+    {
+      "cve": "CVE-2022-34918",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-34918"
+    },
+    {
+      "cve": "CVE-2022-3435",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3435"
+    },
+    {
+      "cve": "CVE-2022-3303",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3303"
+    },
+    {
+      "cve": "CVE-2022-32296",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-32296"
+    },
+    {
+      "cve": "CVE-2022-32250",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-32250"
+    },
+    {
+      "cve": "CVE-2022-3169",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3169"
+    },
+    {
+      "cve": "CVE-2022-3115",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3115"
+    },
+    {
+      "cve": "CVE-2022-3104",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3104"
+    },
+    {
+      "cve": "CVE-2022-3028",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-3028"
+    },
+    {
+      "cve": "CVE-2022-30065",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-30065"
+    },
+    {
+      "cve": "CVE-2022-2978",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2978"
+    },
+    {
+      "cve": "CVE-2022-2959",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2959"
+    },
+    {
+      "cve": "CVE-2022-2905",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2905"
+    },
+    {
+      "cve": "CVE-2022-28391",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-28391"
+    },
+    {
+      "cve": "CVE-2022-2663",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2663"
+    },
+    {
+      "cve": "CVE-2022-26373",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-26373"
+    },
+    {
+      "cve": "CVE-2022-2602",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2602"
+    },
+    {
+      "cve": "CVE-2022-2588",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2588"
+    },
+    {
+      "cve": "CVE-2022-2586",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2586"
+    },
+    {
+      "cve": "CVE-2022-2585",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2585"
+    },
+    {
+      "cve": "CVE-2022-2503",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2503"
+    },
+    {
+      "cve": "CVE-2022-2327",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2327"
+    },
+    {
+      "cve": "CVE-2022-23219",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-23219"
+    },
+    {
+      "cve": "CVE-2022-23218",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-23218"
+    },
+    {
+      "cve": "CVE-2022-2274",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2274"
+    },
+    {
+      "cve": "CVE-2022-2153",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2153"
+    },
+    {
+      "cve": "CVE-2022-21505",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-21505"
+    },
+    {
+      "cve": "CVE-2022-21233",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-21233"
+    },
+    {
+      "cve": "CVE-2022-21166",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-21166"
+    },
+    {
+      "cve": "CVE-2022-21125",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-21125"
+    },
+    {
+      "cve": "CVE-2022-21123",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-21123"
+    },
+    {
+      "cve": "CVE-2022-2097",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2097"
+    },
+    {
+      "cve": "CVE-2022-2078",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2078"
+    },
+    {
+      "cve": "CVE-2022-2068",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-2068"
+    },
+    {
+      "cve": "CVE-2022-20572",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-20572"
+    },
+    {
+      "cve": "CVE-2022-20566",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-20566"
+    },
+    {
+      "cve": "CVE-2022-20422",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-20422"
+    },
+    {
+      "cve": "CVE-2022-20421",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-20421"
+    },
+    {
+      "cve": "CVE-2022-1882",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1882"
+    },
+    {
+      "cve": "CVE-2022-1852",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1852"
+    },
+    {
+      "cve": "CVE-2022-1679",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1679"
+    },
+    {
+      "cve": "CVE-2022-1473",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1473"
+    },
+    {
+      "cve": "CVE-2022-1462",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1462"
+    },
+    {
+      "cve": "CVE-2022-1434",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1434"
+    },
+    {
+      "cve": "CVE-2022-1343",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1343"
+    },
+    {
+      "cve": "CVE-2022-1292",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1292"
+    },
+    {
+      "cve": "CVE-2022-1184",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1184"
+    },
+    {
+      "cve": "CVE-2022-1012",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-1012"
+    },
+    {
+      "cve": "CVE-2022-0171",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2022-0171"
+    },
+    {
+      "cve": "CVE-2021-42386",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42386"
+    },
+    {
+      "cve": "CVE-2021-42385",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42385"
+    },
+    {
+      "cve": "CVE-2021-42384",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42384"
+    },
+    {
+      "cve": "CVE-2021-42383",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42383"
+    },
+    {
+      "cve": "CVE-2021-42382",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42382"
+    },
+    {
+      "cve": "CVE-2021-42381",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42381"
+    },
+    {
+      "cve": "CVE-2021-42380",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42380"
+    },
+    {
+      "cve": "CVE-2021-42379",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42379"
+    },
+    {
+      "cve": "CVE-2021-42378",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42378"
+    },
+    {
+      "cve": "CVE-2021-42377",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42377"
+    },
+    {
+      "cve": "CVE-2021-42376",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42376"
+    },
+    {
+      "cve": "CVE-2021-42375",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42375"
+    },
+    {
+      "cve": "CVE-2021-42374",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42374"
+    },
+    {
+      "cve": "CVE-2021-42373",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-42373"
+    },
+    {
+      "cve": "CVE-2021-4037",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-4037"
+    },
+    {
+      "cve": "CVE-2021-3999",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-3999"
+    },
+    {
+      "cve": "CVE-2021-3998",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-3998"
+    },
+    {
+      "cve": "CVE-2021-38604",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-38604"
+    },
+    {
+      "cve": "CVE-2021-3759",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-3759"
+    },
+    {
+      "cve": "CVE-2021-35942",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-35942"
+    },
+    {
+      "cve": "CVE-2021-33655",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-33655"
+    },
+    {
+      "cve": "CVE-2021-33574",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-33574"
+    },
+    {
+      "cve": "CVE-2021-3326",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-3326"
+    },
+    {
+      "cve": "CVE-2021-28831",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-28831"
+    },
+    {
+      "cve": "CVE-2021-27645",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-27645"
+    },
+    {
+      "cve": "CVE-2021-20269",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2021-20269"
+    },
+    {
+      "cve": "CVE-2020-29562",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2020-29562"
+    },
+    {
+      "cve": "CVE-2020-27618",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2020-27618"
+    },
+    {
+      "cve": "CVE-2020-1752",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2020-1752"
+    },
+    {
+      "cve": "CVE-2020-10029",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2020-10029"
+    },
+    {
+      "cve": "CVE-2019-25013",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2019-25013"
+    },
+    {
+      "cve": "CVE-2018-13405",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2018-13405"
+    },
+    {
+      "cve": "CVE-2016-10228",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Siemens SIMATIC S7 existieren mehrere Schwachstellen. Die Fehler bestehen unter anderem aufgrund von unzulässigen Einschränkungen, Pufferüberläufen, fehlenden Freigaben und use-after-free-Problemen. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand herbeizuführen, seine Privilegien zu erweitern und Daten zu manipulieren. Die erfolgreiche Ausnutzung einiger dieser Schwachstellen erfordert eine Benutzerinteraktion oder erhöhte Privilegien."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T000126",
+          "T028071"
+        ]
+      },
+      "release_date": "2023-06-12T22:00:00.000+00:00",
+      "title": "CVE-2016-10228"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Drupal ist ein freies Content-Management-System, basierend auf der Scriptsprache PHP und einer SQL-Datenbank. Über zahlreiche Extensions kann der Funktionsumfang der Core-Installation individuell erweitert werden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in verschiedenen Drupal Extensions ausnutzen, um Sicherheitsmaßnahmen zu umgehen oder einen Cross-Site Scripting (XSS)-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0060 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0060.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0060 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0060"
+      },
+      {
+        "category": "external",
+        "summary": "Drupal Security-news SA-CONTRIB-2024-001 vom 2024-01-10",
+        "url": "https://www.drupal.org/sa-contrib-2024-001"
+      },
+      {
+        "category": "external",
+        "summary": "Drupal Security-news SA-CONTRIB-2024-002 vom 2024-01-10",
+        "url": "https://www.drupal.org/sa-contrib-2024-002"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Drupal Extensions: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-01-09T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-01-10T12:17:31.705+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-0060",
+      "initial_release_date": "2024-01-10T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-01-10T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-01-09T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "File Entity <7.x-2.38",
+                "product": {
+                  "name": "Open Source Drupal File Entity <7.x-2.38",
+                  "product_id": "T031979"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "File Entity 7.x-2.38",
+                "product": {
+                  "name": "Open Source Drupal File Entity 7.x-2.38",
+                  "product_id": "T031979-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:drupal:drupal:file_entity__7.x-2.38"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Typogrify <8.x-1.3",
+                "product": {
+                  "name": "Open Source Drupal Typogrify <8.x-1.3",
+                  "product_id": "T031980"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Typogrify 8.x-1.3",
+                "product": {
+                  "name": "Open Source Drupal Typogrify 8.x-1.3",
+                  "product_id": "T031980-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:drupal:drupal:typogrify__8.x-1.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Drupal"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-13237",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in der Drupal \"File Entity\" Extension. Diese erlaubt es, Dateien ohne Zugriffsrechte zu ersetzen, was zu einem persistenten Cross Site Scripting oder anderen sicherheitsrelevanten Problemen führen kann. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T031979"
+        ]
+      },
+      "release_date": "2024-01-10T23:00:00.000+00:00",
+      "title": "CVE-2024-13237"
+    },
+    {
+      "cve": "CVE-2024-13238",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In der Drupal Extension \"Typogrify\" existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden in Typogrify Twig filter nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T031980"
+        ]
+      },
+      "release_date": "2024-01-10T23:00:00.000+00:00",
+      "title": "CVE-2024-13238"
+    }
+  ]
+}

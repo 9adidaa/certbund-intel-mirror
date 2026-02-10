@@ -1,0 +1,160 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Fabasoft Folio ist eine Software für Content- und Dokumentenmanagement.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer aus einem angrenzenden Netzwerk kann eine Schwachstelle in Fabasoft Folio ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1605 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1605.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1605 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1605"
+      },
+      {
+        "category": "external",
+        "summary": "Fabasoft Folio Vulnerabilities vom 2024-07-11",
+        "url": "https://help.supportservices.fabasoft.com/index.php?topic=doc/Vulnerabilities-Fabasoft-Folio/vulnerabilities-2024.htm"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit DB #52273 vom 2025-04-22",
+        "url": "https://www.exploit-db.com/exploits/52273"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Fabasoft Folio: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2025-04-22T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-04-23T08:10:18.320+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2024-1605",
+      "initial_release_date": "2024-07-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-07-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-04-22T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "eGov-Suite <2024 Update Rollup 1",
+                "product": {
+                  "name": "Fabasoft Folio eGov-Suite <2024 Update Rollup 1",
+                  "product_id": "T036123"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "eGov-Suite 2024 Update Rollup 1",
+                "product": {
+                  "name": "Fabasoft Folio eGov-Suite 2024 Update Rollup 1",
+                  "product_id": "T036123-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:fabasoft:folio:egov-suite__2024_update_rollup_1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Mindbreeze Enterprise <24.3.0.268",
+                "product": {
+                  "name": "Fabasoft Folio Mindbreeze Enterprise <24.3.0.268",
+                  "product_id": "T036124"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Mindbreeze Enterprise 24.3.0.268",
+                "product": {
+                  "name": "Fabasoft Folio Mindbreeze Enterprise 24.3.0.268",
+                  "product_id": "T036124-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:fabasoft:folio:mindbreeze_enterprise__24.3.0.268"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Folio"
+          }
+        ],
+        "category": "vendor",
+        "name": "Fabasoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-4367",
+      "product_status": {
+        "known_affected": [
+          "T036124",
+          "T036123"
+        ]
+      },
+      "release_date": "2024-07-11T22:00:00.000+00:00",
+      "title": "CVE-2024-4367"
+    }
+  ]
+}

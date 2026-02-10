@@ -1,0 +1,136 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM DB2 ist ein relationales Datenbanksystem (RDBS) von IBM.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in IBM DB2 ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3536 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3536.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3536 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3536"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin vom 2024-11-24",
+        "url": "https://www.ibm.com/support/pages/node/7176947"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM DB2: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2024-11-24T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-25T10:12:52.042+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3536",
+      "initial_release_date": "2024-11-24T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-24T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Big SQL <7.7.0",
+                "product": {
+                  "name": "IBM DB2 Big SQL <7.7.0",
+                  "product_id": "T039415"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Big SQL 7.7.0",
+                "product": {
+                  "name": "IBM DB2 Big SQL 7.7.0",
+                  "product_id": "T039415-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:db2:big_sql__7.7.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "DB2"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-35160",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM DB2. Dieser Fehler existiert in der Big SQL-Komponente wegen eines unzureichenden Sitzungsablaufs. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039415"
+        ]
+      },
+      "release_date": "2024-11-24T23:00:00.000+00:00",
+      "title": "CVE-2024-35160"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Elasticsearch ist eine Open Source, verteilte Echtzeit-Suche und Analyse-Engine.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Elasticsearch ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0759 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0759.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0759 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0759"
+      },
+      {
+        "category": "external",
+        "summary": "Elasticsearch 8.11.1 Security Update ESA-2024-05 vom 2024-04-01",
+        "url": "https://discuss.elastic.co/t/elasticsearch-8-11-1-security-update-esa-2024-05/356458"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Elasticsearch: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2024-11-27T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-28T11:39:16.094+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-0759",
+      "initial_release_date": "2024-04-01T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-04-01T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-27T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Produktzuordnung überprüft"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.11.1",
+                "product": {
+                  "name": "Open Source Elasticsearch <8.11.1",
+                  "product_id": "T033793"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.11.1",
+                "product": {
+                  "name": "Open Source Elasticsearch 8.11.1",
+                  "product_id": "T033793-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:elasticsearch:elasticsearch:8.11.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Elasticsearch"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-23449",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Elasticsearch. Diese tritt auf wenn mit dem \"attachment processor\" verschlüsselte PDF-Dateien verarbeitet werden und ist auf eine nicht abgefangene Exception zurückzuführen. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service Zustand herbeizuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033793"
+        ]
+      },
+      "release_date": "2024-04-01T22:00:00.000+00:00",
+      "title": "CVE-2024-23449"
+    }
+  ]
+}

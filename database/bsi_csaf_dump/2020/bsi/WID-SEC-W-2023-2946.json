@@ -1,0 +1,755 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Oracle Fusion Middleware bündelt mehrere Produkte zur Erstellung, Betrieb und Management von intelligenten Business Anwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in Oracle Fusion Middleware ausnutzen, um die Verfügbarkeit, Vertraulichkeit und Integrität zu gefährden.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2946 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2020/wid-sec-w-2023-2946.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2946 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2946"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2023-11-16",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Critical Patch Update Advisory - January 2020 vom 2020-01-14",
+        "url": "https://www.oracle.com/security-alerts/cpujan2020.html#AppendixFMW"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2020:2113 vom 2020-05-12",
+        "url": "https://access.redhat.com/errata/RHSA-2020:2113"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Oracle Fusion Middleware: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-11-16T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:01:46.461+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2946",
+      "initial_release_date": "2020-01-14T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2020-01-14T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2020-05-12T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-11-16T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Exploit-Hinweis für CVE-2020-2551 aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Fusion Middleware",
+            "product": {
+              "name": "Oracle Fusion Middleware",
+              "product_id": "T006198",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:oracle:fusion_middleware:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2017-12626",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2017-12626"
+    },
+    {
+      "cve": "CVE-2018-8032",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2018-8032"
+    },
+    {
+      "cve": "CVE-2019-0227",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2019-0227"
+    },
+    {
+      "cve": "CVE-2019-10246",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2019-10246"
+    },
+    {
+      "cve": "CVE-2019-10247",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2019-10247"
+    },
+    {
+      "cve": "CVE-2019-12415",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2019-12415"
+    },
+    {
+      "cve": "CVE-2019-1559",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2019-1559"
+    },
+    {
+      "cve": "CVE-2019-17359",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2019-17359"
+    },
+    {
+      "cve": "CVE-2020-2519",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2519"
+    },
+    {
+      "cve": "CVE-2020-2530",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2530"
+    },
+    {
+      "cve": "CVE-2020-2531",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2531"
+    },
+    {
+      "cve": "CVE-2020-2533",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2533"
+    },
+    {
+      "cve": "CVE-2020-2534",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2534"
+    },
+    {
+      "cve": "CVE-2020-2535",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2535"
+    },
+    {
+      "cve": "CVE-2020-2536",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2536"
+    },
+    {
+      "cve": "CVE-2020-2537",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2537"
+    },
+    {
+      "cve": "CVE-2020-2538",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2538"
+    },
+    {
+      "cve": "CVE-2020-2539",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2539"
+    },
+    {
+      "cve": "CVE-2020-2540",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2540"
+    },
+    {
+      "cve": "CVE-2020-2541",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2541"
+    },
+    {
+      "cve": "CVE-2020-2542",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2542"
+    },
+    {
+      "cve": "CVE-2020-2543",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2543"
+    },
+    {
+      "cve": "CVE-2020-2544",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2544"
+    },
+    {
+      "cve": "CVE-2020-2545",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2545"
+    },
+    {
+      "cve": "CVE-2020-2546",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2546"
+    },
+    {
+      "cve": "CVE-2020-2547",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2547"
+    },
+    {
+      "cve": "CVE-2020-2548",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2548"
+    },
+    {
+      "cve": "CVE-2020-2549",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2549"
+    },
+    {
+      "cve": "CVE-2020-2550",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2550"
+    },
+    {
+      "cve": "CVE-2020-2551",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2551"
+    },
+    {
+      "cve": "CVE-2020-2552",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2552"
+    },
+    {
+      "cve": "CVE-2020-2555",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2555"
+    },
+    {
+      "cve": "CVE-2020-2576",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2576"
+    },
+    {
+      "cve": "CVE-2020-2728",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2728"
+    },
+    {
+      "cve": "CVE-2020-2729",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-2729"
+    },
+    {
+      "cve": "CVE-2020-6950",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere Schwachstellen in den Produkten Identity Manager, Oracle Big Data Discovery, Oracle Business Intelligence Enterprise Edition, Oracle Coherence, Oracle Endeca Information Discovery Integrator, Oracle Endeca Information Discovery Studio, Oracle Enterprise Repository, Oracle HTTP Server, Oracle Outside In Technology, Oracle Reports Developer, Oracle Security Service, Oracle Tuxedo, Oracle WebCenter Sites und Oracle WebLogic Server. Durch Ausnutzung dieser Schwachstellen kann ein entfernter Angreifer die Verfügbarkeit, Vertraulichkeit und Integrität gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Benutzerinteraktion und keine Authentisierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Availability\", \"Confidentiality\" und \"Integrity\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T006198"
+        ]
+      },
+      "release_date": "2020-01-14T23:00:00.000+00:00",
+      "title": "CVE-2020-6950"
+    }
+  ]
+}

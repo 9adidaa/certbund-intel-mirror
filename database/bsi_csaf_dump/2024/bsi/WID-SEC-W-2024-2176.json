@@ -1,0 +1,199 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "XWiki ist eine Open-Source-Wiki-Software-Plattform, für die Erstellung und Verwaltung von Wikis und Knowledge-Management-Systemen",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in xwiki ausnutzen, um Dateien zu manipulieren oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2176 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2176.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2176 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2176"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-09-18",
+        "url": "https://github.com/advisories/GHSA-pg4m-3gp6-hw4w"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-09-18",
+        "url": "https://github.com/advisories/GHSA-r95w-889q-x2gx"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "xwiki: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-09-18T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-19T08:04:37.308+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-2176",
+      "initial_release_date": "2024-09-18T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-18T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<14.10.21",
+                "product": {
+                  "name": "Open Source xwiki <14.10.21",
+                  "product_id": "T037739"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14.10.21",
+                "product": {
+                  "name": "Open Source xwiki 14.10.21",
+                  "product_id": "T037739-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:14.10.21"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<15.5.5",
+                "product": {
+                  "name": "Open Source xwiki <15.5.5",
+                  "product_id": "T037740"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.5.5",
+                "product": {
+                  "name": "Open Source xwiki 15.5.5",
+                  "product_id": "T037740-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:15.5.5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<15.10.1",
+                "product": {
+                  "name": "Open Source xwiki <15.10.1",
+                  "product_id": "T037741"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.10.1",
+                "product": {
+                  "name": "Open Source xwiki 15.10.1",
+                  "product_id": "T037741-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:15.10.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "xwiki"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-46978",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in xwiki. Dieser Fehler existiert wegen der falschen Verwendung von privilegierten APIs, die es erlauben, Benachrichtigungen eines anderen Benutzers zu aktivieren/deaktivieren oder zu löschen. Ein entfernter authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um Daten zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037739",
+          "T037741",
+          "T037740"
+        ]
+      },
+      "release_date": "2024-09-18T22:00:00.000+00:00",
+      "title": "CVE-2024-46978"
+    },
+    {
+      "cve": "CVE-2024-46979",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in xwiki. Dieser Fehler existiert in der Benachrichtigungs-UI, die den Zugriff auf die Benachrichtigungsfilter eines beliebigen Benutzers über eine bestimmte URL ermöglicht. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037739",
+          "T037741",
+          "T037740"
+        ]
+      },
+      "release_date": "2024-09-18T22:00:00.000+00:00",
+      "title": "CVE-2024-46979"
+    }
+  ]
+}

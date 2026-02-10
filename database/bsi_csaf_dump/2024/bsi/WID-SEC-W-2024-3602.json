@@ -1,0 +1,248 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Veeam Backup & Replication ist eine Datensicherungslösung für VMware vSphere- und Microsoft Hyper-V-Umgebungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Veeam Backup & Replication ausnutzen, um seine Rechte zu erweitern, vertrauliche Informationen preiszugeben und Dateien zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3602 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3602.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3602 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3602"
+      },
+      {
+        "category": "external",
+        "summary": "Veeam Support Knowledge Base vom 2024-12-03",
+        "url": "https://www.veeam.com/kb4693"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Veeam Backup & Replication: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-12-03T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-04T11:46:04.114+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3602",
+      "initial_release_date": "2024-12-03T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-03T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<12.3",
+                "product": {
+                  "name": "Veeam Backup & Replication <12.3",
+                  "product_id": "T039554"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12.3",
+                "product": {
+                  "name": "Veeam Backup & Replication 12.3",
+                  "product_id": "T039554-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:veeam:backup_and_replication:12.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Backup & Replication"
+          }
+        ],
+        "category": "vendor",
+        "name": "Veeam"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-40717",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Veeam Backup & Replication. Diese Fehler sind auf eine unzureichende Privilegienvalidierung, die fehlende Einschränkung von Privilegien für den Zugriff auf kritische Methoden und auf unzureichende Autorisierungsprüfungen zurückzuführen. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um erhöhte Privilegien zu erlangen. Mit erhöhten Rechten kann der Angreifer Skripte als LocalSystem ausführen, Dateien auf angeschlossene ESXi-Hosts hochladen, die Konfiguration angeschlossener virtueller Infrastruktur-Hosts kontrollieren und ändern sowie Zugriff auf privilegierte Methoden erhalten und kritische Dienste kontrollieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-40717"
+    },
+    {
+      "cve": "CVE-2024-42452",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Veeam Backup & Replication. Diese Fehler sind auf eine unzureichende Privilegienvalidierung, die fehlende Einschränkung von Privilegien für den Zugriff auf kritische Methoden und auf unzureichende Autorisierungsprüfungen zurückzuführen. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um erhöhte Privilegien zu erlangen. Mit erhöhten Rechten kann der Angreifer Skripte als LocalSystem ausführen, Dateien auf angeschlossene ESXi-Hosts hochladen, die Konfiguration angeschlossener virtueller Infrastruktur-Hosts kontrollieren und ändern sowie Zugriff auf privilegierte Methoden erhalten und kritische Dienste kontrollieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-42452"
+    },
+    {
+      "cve": "CVE-2024-42453",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Veeam Backup & Replication. Diese Fehler sind auf eine unzureichende Privilegienvalidierung, die fehlende Einschränkung von Privilegien für den Zugriff auf kritische Methoden und auf unzureichende Autorisierungsprüfungen zurückzuführen. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um erhöhte Privilegien zu erlangen. Mit erhöhten Rechten kann der Angreifer Skripte als LocalSystem ausführen, Dateien auf angeschlossene ESXi-Hosts hochladen, die Konfiguration angeschlossener virtueller Infrastruktur-Hosts kontrollieren und ändern sowie Zugriff auf privilegierte Methoden erhalten und kritische Dienste kontrollieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-42453"
+    },
+    {
+      "cve": "CVE-2024-42456",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Veeam Backup & Replication. Diese Fehler sind auf eine unzureichende Privilegienvalidierung, die fehlende Einschränkung von Privilegien für den Zugriff auf kritische Methoden und auf unzureichende Autorisierungsprüfungen zurückzuführen. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um erhöhte Privilegien zu erlangen. Mit erhöhten Rechten kann der Angreifer Skripte als LocalSystem ausführen, Dateien auf angeschlossene ESXi-Hosts hochladen, die Konfiguration angeschlossener virtueller Infrastruktur-Hosts kontrollieren und ändern sowie Zugriff auf privilegierte Methoden erhalten und kritische Dienste kontrollieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-42456"
+    },
+    {
+      "cve": "CVE-2024-42451",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Veeam Backup & Replication bestehen mehrere Schwachstellen, die auf eine unsachgemäße oder unzureichende Zugriffskontrolle für gespeicherte Anmeldeinformationen und in der Remote-Verwaltungsschnittstelle sowie auf falsche Berechtigungen bei der Handhabung von Anmeldeinformationen zurückzuführen sind. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um vertrauliche Informationen, insbesondere Anmeldedaten und NTLM-Hashes, offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-42451"
+    },
+    {
+      "cve": "CVE-2024-42457",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Veeam Backup & Replication bestehen mehrere Schwachstellen, die auf eine unsachgemäße oder unzureichende Zugriffskontrolle für gespeicherte Anmeldeinformationen und in der Remote-Verwaltungsschnittstelle sowie auf falsche Berechtigungen bei der Handhabung von Anmeldeinformationen zurückzuführen sind. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um vertrauliche Informationen, insbesondere Anmeldedaten und NTLM-Hashes, offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-42457"
+    },
+    {
+      "cve": "CVE-2024-45204",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Veeam Backup & Replication bestehen mehrere Schwachstellen, die auf eine unsachgemäße oder unzureichende Zugriffskontrolle für gespeicherte Anmeldeinformationen und in der Remote-Verwaltungsschnittstelle sowie auf falsche Berechtigungen bei der Handhabung von Anmeldeinformationen zurückzuführen sind. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diese Schwachstellen ausnutzen, um vertrauliche Informationen, insbesondere Anmeldedaten und NTLM-Hashes, offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-45204"
+    },
+    {
+      "cve": "CVE-2024-42455",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Veeam Backup & Replication aufgrund einer unsicheren Deserialisierung von temporären Dateien. Ein entfernter, authentisierter Angreifer mit einer zugewiesenen Rolle kann diesen Fehler ausnutzen, um sich mit entfernten Diensten zu verbinden und beliebige Dateien auf dem System mit Dienstkontorechten zu löschen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039554"
+        ]
+      },
+      "release_date": "2024-12-03T23:00:00.000+00:00",
+      "title": "CVE-2024-42455"
+    }
+  ]
+}

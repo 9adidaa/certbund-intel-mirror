@@ -1,0 +1,150 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "libarchive ist eine C Bibliothek und ein Kommandozeilen-Tool zum Lesen und Bearbeiten von tar, cpio, zip, ISO und anderen Formaten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in libarchive ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2497 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2497.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2497 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2497"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugtracker vom 2025-11-05",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2412648"
+      },
+      {
+        "category": "external",
+        "summary": "libarcive GitHub vom 2025-11-05 mit PoC",
+        "url": "https://github.com/libarchive/libarchive/issues/2725"
+      },
+      {
+        "category": "external",
+        "summary": "libarcive GitHub Advisory vom 2025-11-05",
+        "url": "https://github.com/advisories/GHSA-qm3h-46xc-w7w4"
+      },
+      {
+        "category": "external",
+        "summary": "libarcive NIST Advisory vom 2025-11-05",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60753"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub vom 2025-11-05 mit PoC",
+        "url": "https://github.com/Papya-j/CVE/tree/main/CVE-2025-60753"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "libarchive: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2025-11-05T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-06T10:12:00.310+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2497",
+      "initial_release_date": "2025-11-05T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-11-05T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "bsdtar <3.8.1",
+                "product": {
+                  "name": "Open Source libarchive bsdtar <3.8.1",
+                  "product_id": "T048329"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "bsdtar 3.8.1",
+                "product": {
+                  "name": "Open Source libarchive bsdtar 3.8.1",
+                  "product_id": "T048329-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:libarchive:libarchive:bsdtar__3.8.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "libarchive"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-60753",
+      "product_status": {
+        "known_affected": [
+          "T048329"
+        ]
+      },
+      "release_date": "2025-11-05T23:00:00.000+00:00",
+      "title": "CVE-2025-60753"
+    }
+  ]
+}

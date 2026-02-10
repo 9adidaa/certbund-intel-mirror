@@ -1,0 +1,199 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM QRadar Security Information and Event Management (SIEM) bietet Unterstützung bei der Erkennung und Priorisierung von Sicherheitsbedrohungen im Unternehmen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein anonymer Angreifer kann mehrere Schwachstellen in IBM QRadar SIEM ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2356 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2356.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2356 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2356"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-5362 vom 2023-09-28",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-5362.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-5363 vom 2023-09-28",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-5363.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:5379 vom 2023-09-28",
+        "url": "https://access.redhat.com/errata/RHSA-2023:5379"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin - 7032220 vom 2023-09-14",
+        "url": "https://www.ibm.com/support/pages/node/7032220"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM QRadar SIEM: Mehre Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-09-28T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:27.416+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2356",
+      "initial_release_date": "2023-09-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-09-27T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat und Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-09-28T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM QRadar SIEM < 2.2.11",
+            "product": {
+              "name": "IBM QRadar SIEM < 2.2.11",
+              "product_id": "T029904",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:qradar_siem:2.2.11"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-26115",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in IBM QRadar SIEM. Dieser Fehler besteht in den Komponenten des Node.js-Pakets semver und des Moduls word-wrap aufgrund eines Denial-of-Service-Fehlers durch reguläre Ausdrücke. Durch die Bereitstellung speziell gestalteter Regex-Eingaben kann ein entfernter Angreifer diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T004914"
+        ]
+      },
+      "release_date": "2023-09-14T22:00:00.000+00:00",
+      "title": "CVE-2023-26115"
+    },
+    {
+      "cve": "CVE-2022-25883",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in IBM QRadar SIEM. Dieser Fehler besteht in den Komponenten des Node.js-Pakets semver und des Moduls word-wrap aufgrund eines Denial-of-Service-Fehlers durch reguläre Ausdrücke. Durch die Bereitstellung speziell gestalteter Regex-Eingaben kann ein entfernter Angreifer diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T004914"
+        ]
+      },
+      "release_date": "2023-09-14T22:00:00.000+00:00",
+      "title": "CVE-2022-25883"
+    }
+  ]
+}

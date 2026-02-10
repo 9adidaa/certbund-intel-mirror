@@ -1,0 +1,366 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM QRadar Security Information and Event Management (SIEM) bietet Unterstützung bei der Erkennung und Priorisierung von Sicherheitsbedrohungen im Unternehmen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in IBM QRadar SIEM ausnutzen, um beliebigen Programmcode auszuführen, einen Denial of Service Zustand zu erzeugen, um Dateien zu manipulieren und um nicht nächer spezifizierte Auswirkungen zu erzielen..",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2043 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2043.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2043 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2043"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7244784 vom 2025-09-12",
+        "url": "https://www.ibm.com/support/pages/node/7244784"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7244786 vom 2025-09-12",
+        "url": "https://www.ibm.com/support/pages/node/7244786"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:17161 vom 2025-10-01",
+        "url": "https://access.redhat.com/errata/RHSA-2025:17161"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM QRadar SIEM: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-10-01T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-10-02T08:18:55.515+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2043",
+      "initial_release_date": "2025-09-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-09-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-09-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2025-29120"
+        },
+        {
+          "date": "2025-10-01T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.5.0 UP13 IF02",
+                "product": {
+                  "name": "IBM QRadar SIEM <7.5.0 UP13 IF02",
+                  "product_id": "T046961"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.5.0 UP13 IF02",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5.0 UP13 IF02",
+                  "product_id": "T046961-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5.0:up13_if02"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-47670",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2021-47670"
+    },
+    {
+      "cve": "CVE-2023-49083",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2023-49083"
+    },
+    {
+      "cve": "CVE-2024-56644",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2024-56644"
+    },
+    {
+      "cve": "CVE-2025-21727",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-21727"
+    },
+    {
+      "cve": "CVE-2025-21759",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-21759"
+    },
+    {
+      "cve": "CVE-2025-22058",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-22058"
+    },
+    {
+      "cve": "CVE-2025-22097",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-22097"
+    },
+    {
+      "cve": "CVE-2025-37914",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-37914"
+    },
+    {
+      "cve": "CVE-2025-38085",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-38085"
+    },
+    {
+      "cve": "CVE-2025-38159",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-38159"
+    },
+    {
+      "cve": "CVE-2025-38200",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-38200"
+    },
+    {
+      "cve": "CVE-2025-38250",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-38250"
+    },
+    {
+      "cve": "CVE-2025-38380",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-38380"
+    },
+    {
+      "cve": "CVE-2025-5914",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-5914"
+    },
+    {
+      "cve": "CVE-2025-5994",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-5994"
+    },
+    {
+      "cve": "CVE-2025-6020",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-6020"
+    },
+    {
+      "cve": "CVE-2025-6032",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-6032"
+    },
+    {
+      "cve": "CVE-2025-8194",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-8194"
+    },
+    {
+      "cve": "CVE-2025-0164",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T046961"
+        ]
+      },
+      "release_date": "2025-09-11T22:00:00.000+00:00",
+      "title": "CVE-2025-0164"
+    }
+  ]
+}

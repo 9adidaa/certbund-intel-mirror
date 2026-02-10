@@ -1,0 +1,128 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "MinIO ist ein S3-kompatibler Objektspeicher, der für groß angelegte KI/ML-, Data Lake- und Datenbank-Workloads entwickelt wurde. Er läuft \"on-premise\" und in jeder Cloud.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in MinIO ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2261 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2261.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2261 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2261"
+      },
+      {
+        "category": "external",
+        "summary": "MinIO Security Notification vom 2023-09-04",
+        "url": "https://thehackernews.com/2023/09/hackers-exploit-minio-storage-system.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "MinIO: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-09-04T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:02.058+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2261",
+      "initial_release_date": "2023-09-04T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-04T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source MinIO < RELEASE.2023-03-20T20-16-18Z",
+            "product": {
+              "name": "Open Source MinIO < RELEASE.2023-03-20T20-16-18Z",
+              "product_id": "T029711",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:minio:minio:release.2023-03-20t20-16-18z"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28434",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in MinIO. Dieser Fehler besteht aufgrund einer unsachgemäßen Rechteverwaltung und Inkonsequenz zwischen der Prüfung für das Routing von Post-Policy-Anforderungen und der Verhinderung des Zugriffs auf reservierte Buckets. Ein Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen und seine Privilegien zu erweitern, indem er manipulierte Anfragen verwendet, um die Überprüfung des Metadaten-Bucket-Namens zu umgehen und ein Objekt in einen beliebigen Bucket zu legen, während er PostPolicyBucket verarbeitet."
+        }
+      ],
+      "release_date": "2023-09-04T22:00:00.000+00:00",
+      "title": "CVE-2023-28434"
+    },
+    {
+      "cve": "CVE-2023-28432",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in MinIO. Dieser Fehler besteht in einem Cluster-Einsatz, da das System alle Umgebungsvariablen zurückgibt. Ein Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-09-04T22:00:00.000+00:00",
+      "title": "CVE-2023-28432"
+    }
+  ]
+}

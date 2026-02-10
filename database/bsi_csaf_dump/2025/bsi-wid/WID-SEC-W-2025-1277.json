@@ -1,0 +1,1783 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Windows ist ein Betriebssystem von Microsoft.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in verschiedenen Versionen von Microsoft Windows und Microsoft Windows Server ausnutzen, um seine Privilegien zu erhöhen, um einen Denial of Service Angriff durchzuführen, um beliebigen Programmcode auszuführen, um Informationen offenzulegen, um Sicherheitsvorkehrungen zu umgehen, und um falsche Informationen darzustellen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1277 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1277.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1277 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1277"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates",
+        "url": "https://msrc.microsoft.com/update-guide/"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Vulnerability Information HITACHI-SEC-2025-307 vom 2025-07-24",
+        "url": "https://www.hitachi.com/products/it/storage-solutions/sec_info/2025/06.html"
+      },
+      {
+        "category": "external",
+        "summary": "PoC CVE-2025-32724",
+        "url": "https://github.com/SafeBreach-Labs/Win-DoS"
+      },
+      {
+        "category": "external",
+        "summary": "Insyde Security Advisory INSYDE-SA-2025006 vom 2025-08-12",
+        "url": "https://www.insyde.com/security-pledge/sa-2025006/"
+      },
+      {
+        "category": "external",
+        "summary": "Known Exploited Vulnerabilities Catalog vom 2025-10-20",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Windows: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-10-20T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-10-21T08:48:23.827+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1277",
+      "initial_release_date": "2025-06-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-06-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-07-23T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von HITACHI aufgenommen"
+        },
+        {
+          "date": "2025-08-11T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "PoC aufgenommen"
+        },
+        {
+          "date": "2025-08-12T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Insyde aufgenommen"
+        },
+        {
+          "date": "2025-10-20T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Aktive Ausnutzung gemeldet"
+        }
+      ],
+      "status": "final",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Hitachi Storage",
+            "product": {
+              "name": "Hitachi Storage",
+              "product_id": "T009295",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:hitachi:storage:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Insyde UEFI Firmware",
+            "product": {
+              "name": "Insyde UEFI Firmware",
+              "product_id": "T033442",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:insyde:uefi:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Insyde"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Security App",
+                "product": {
+                  "name": "Microsoft Windows Security App",
+                  "product_id": "T021063",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows:update_assistant"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Remote Desktop client for Desktop",
+                "product": {
+                  "name": "Microsoft Windows Remote Desktop client for Desktop",
+                  "product_id": "T042605",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows:remote_desktop_client_for_desktop"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "App Client for Desktop",
+                "product": {
+                  "name": "Microsoft Windows App Client for Desktop",
+                  "product_id": "T042613",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows:app_client_for_desktop"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Microsoft Windows 10",
+                "product": {
+                  "name": "Microsoft Windows 10",
+                  "product_id": "T042599",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 1607",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 1607",
+                  "product_id": "T042601",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_1607"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 1809",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 1809",
+                  "product_id": "T042602",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_1809"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 21H2",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 21H2",
+                  "product_id": "T042606",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_21h2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 22H2",
+                "product": {
+                  "name": "Microsoft Windows 10 Version 22H2",
+                  "product_id": "T042608",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_10:version_22h2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows 10"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Version 22H2",
+                "product": {
+                  "name": "Microsoft Windows 11 Version 22H2",
+                  "product_id": "T042607",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_11:version_22h2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 23H2",
+                "product": {
+                  "name": "Microsoft Windows 11 Version 23H2",
+                  "product_id": "T042609",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_11:version_23h2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Version 24H2",
+                "product": {
+                  "name": "Microsoft Windows 11 Version 24H2",
+                  "product_id": "T042611",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_11:version_24h2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows 11"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "2008 SP2",
+                "product": {
+                  "name": "Microsoft Windows Server 2008 SP2",
+                  "product_id": "T042596",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_server:2008_sp2"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2008 R2 SP1",
+                "product": {
+                  "name": "Microsoft Windows Server 2008 R2 SP1",
+                  "product_id": "T043719",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_server:2008_r2_sp1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows Server"
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2012",
+            "product": {
+              "name": "Microsoft Windows Server 2012",
+              "product_id": "T043730",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2012:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2012 R2",
+            "product": {
+              "name": "Microsoft Windows Server 2012 R2",
+              "product_id": "T043731",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2012_r2:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2016",
+            "product": {
+              "name": "Microsoft Windows Server 2016",
+              "product_id": "T042600",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2016:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2019",
+            "product": {
+              "name": "Microsoft Windows Server 2019",
+              "product_id": "T042603",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2019:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Microsoft Windows Server 2022",
+                "product": {
+                  "name": "Microsoft Windows Server 2022",
+                  "product_id": "T041082",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_server_2022:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "23H2 Edition",
+                "product": {
+                  "name": "Microsoft Windows Server 2022 23H2 Edition",
+                  "product_id": "T042610",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:microsoft:windows_server_2022:23h2_edition"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Windows Server 2022"
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Windows Server 2025",
+            "product": {
+              "name": "Microsoft Windows Server 2025",
+              "product_id": "T044507",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:microsoft:windows_server_2025:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-32712",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32712"
+    },
+    {
+      "cve": "CVE-2025-32713",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32713"
+    },
+    {
+      "cve": "CVE-2025-32714",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32714"
+    },
+    {
+      "cve": "CVE-2025-32716",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32716"
+    },
+    {
+      "cve": "CVE-2025-32718",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32718"
+    },
+    {
+      "cve": "CVE-2025-32721",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32721"
+    },
+    {
+      "cve": "CVE-2025-33067",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33067"
+    },
+    {
+      "cve": "CVE-2025-33070",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33070"
+    },
+    {
+      "cve": "CVE-2025-33073",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33073"
+    },
+    {
+      "cve": "CVE-2025-33075",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33075"
+    },
+    {
+      "cve": "CVE-2025-47955",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-47955"
+    },
+    {
+      "cve": "CVE-2025-32724",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32724"
+    },
+    {
+      "cve": "CVE-2025-32725",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32725"
+    },
+    {
+      "cve": "CVE-2025-33050",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33050"
+    },
+    {
+      "cve": "CVE-2025-33056",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33056"
+    },
+    {
+      "cve": "CVE-2025-33057",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33057"
+    },
+    {
+      "cve": "CVE-2025-33068",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33068"
+    },
+    {
+      "cve": "CVE-2025-29828",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-29828"
+    },
+    {
+      "cve": "CVE-2025-32710",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32710"
+    },
+    {
+      "cve": "CVE-2025-33053",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33053"
+    },
+    {
+      "cve": "CVE-2025-33064",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33064"
+    },
+    {
+      "cve": "CVE-2025-33066",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33066"
+    },
+    {
+      "cve": "CVE-2025-33071",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33071"
+    },
+    {
+      "cve": "CVE-2025-24065",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-24065"
+    },
+    {
+      "cve": "CVE-2025-24068",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-24068"
+    },
+    {
+      "cve": "CVE-2025-24069",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-24069"
+    },
+    {
+      "cve": "CVE-2025-32715",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32715"
+    },
+    {
+      "cve": "CVE-2025-32719",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32719"
+    },
+    {
+      "cve": "CVE-2025-32720",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32720"
+    },
+    {
+      "cve": "CVE-2025-32722",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-32722"
+    },
+    {
+      "cve": "CVE-2025-33052",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33052"
+    },
+    {
+      "cve": "CVE-2025-33055",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33055"
+    },
+    {
+      "cve": "CVE-2025-33058",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33058"
+    },
+    {
+      "cve": "CVE-2025-33059",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33059"
+    },
+    {
+      "cve": "CVE-2025-33060",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33060"
+    },
+    {
+      "cve": "CVE-2025-33061",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33061"
+    },
+    {
+      "cve": "CVE-2025-33062",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33062"
+    },
+    {
+      "cve": "CVE-2025-33063",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33063"
+    },
+    {
+      "cve": "CVE-2025-33065",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33065"
+    },
+    {
+      "cve": "CVE-2025-47969",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-47969"
+    },
+    {
+      "cve": "CVE-2025-3052",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-3052"
+    },
+    {
+      "cve": "CVE-2025-33069",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-33069"
+    },
+    {
+      "cve": "CVE-2025-47160",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-47160"
+    },
+    {
+      "cve": "CVE-2025-47956",
+      "product_status": {
+        "known_affected": [
+          "T042605",
+          "T044507",
+          "T042606",
+          "T042607",
+          "T033442",
+          "T042608",
+          "T043719",
+          "T042609",
+          "T042596",
+          "T043730",
+          "T043731",
+          "T042599",
+          "T042610",
+          "T042600",
+          "T042611",
+          "T042601",
+          "T041082",
+          "T042602",
+          "T042613",
+          "T042603",
+          "T021063",
+          "T009295"
+        ]
+      },
+      "release_date": "2025-06-10T22:00:00.000+00:00",
+      "title": "CVE-2025-47956"
+    }
+  ]
+}

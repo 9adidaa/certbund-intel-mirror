@@ -1,0 +1,140 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Zoom bietet Kommunikationssoftware, die Videokonferenzen, Online-Besprechungen, Chat und mobile Zusammenarbeit kombiniert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Zoom Video Communications Zoom Client ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1607 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1607.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1607 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1607"
+      },
+      {
+        "category": "external",
+        "summary": "Zoom Security Bulletin vom 2023-06-29",
+        "url": "https://explore.zoom.us/en/trust/security/security-bulletin/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Zoom Video Communications Zoom Client: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-06-29T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:53:57.912+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1607",
+      "initial_release_date": "2023-06-29T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-06-29T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Zoom Video Communications Zoom Client 5.15.0",
+                "product": {
+                  "name": "Zoom Video Communications Zoom Client 5.15.0",
+                  "product_id": "T028375",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zoom:zoom_client:5.15.0"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Zoom Video Communications Zoom Client windows 5.15.1",
+                "product": {
+                  "name": "Zoom Video Communications Zoom Client windows 5.15.1",
+                  "product_id": "T028376",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zoom:zoom_client:windows_5.15.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Zoom Client"
+          }
+        ],
+        "category": "vendor",
+        "name": "Zoom Video Communications"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-36539",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Zoom Video Communications Zoom Client. In-Meeting-Chat-Nachrichten werden mit einem separaten Schlüssel pro Meeting verschlüsselt und dann zwischen Benutzergeräten und Zoom mit TLS-Verschlüsselung übertragen. Bei den betroffenen Produkten wird außerdem eine Kopie jeder Chat-Nachricht während eines Meetings nur mit TLS und nicht mit dem Schlüssel pro Meeting verschlüsselt gesendet. Ein Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T028375",
+          "T028376"
+        ]
+      },
+      "release_date": "2023-06-29T22:00:00.000+00:00",
+      "title": "CVE-2023-36539"
+    }
+  ]
+}

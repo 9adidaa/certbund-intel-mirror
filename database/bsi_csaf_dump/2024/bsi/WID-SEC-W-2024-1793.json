@@ -1,0 +1,184 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "FreeBSD ist ein Open Source Betriebssystem aus der BSD Familie und gehört damit zu den Unix Derivaten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in FreeBSD Project FreeBSD OS ausnutzen, um Sicherheitsvorkehrungen zu umgehen, vertrauliche Informationen preiszugeben, Dateien zu verändern und beliebigen Code als root auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1793 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1793.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1793 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1793"
+      },
+      {
+        "category": "external",
+        "summary": "FreeBSD Security Advisory vom 2024-08-07",
+        "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-24:05.pf.asc"
+      },
+      {
+        "category": "external",
+        "summary": "FreeBSD Security Advisory vom 2024-08-07",
+        "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-24:06.ktrace.asc"
+      },
+      {
+        "category": "external",
+        "summary": "FreeBSD Security Advisory vom 2024-08-07",
+        "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-24:07.nfsclient.asc"
+      },
+      {
+        "category": "external",
+        "summary": "FreeBSD Security Advisory vom 2024-08-07",
+        "url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-24:08.openssh.asc"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "FreeBSD Project FreeBSD OS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-08-07T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:12:05.239+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1793",
+      "initial_release_date": "2024-08-07T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-08-07T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<14.0",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS <14.0",
+                  "product_id": "T036669"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<14.1",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS <14.1",
+                  "product_id": "T036670"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<13.3",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS <13.3",
+                  "product_id": "T036671"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "FreeBSD OS"
+          }
+        ],
+        "category": "vendor",
+        "name": "FreeBSD Project"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-6640",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle im FreeBSD Project FreeBSD OS, die durch die unsachgemäße Behandlung von ICMPv6 Neighbor Discovery (ND) Paketen in der pf (Packet Filter) Firewall verursacht wird. Ein Angreifer kann diese Schwachstelle ausnutzen, um Firewall-Regeln zu umgehen."
+        }
+      ],
+      "release_date": "2024-08-07T22:00:00.000+00:00",
+      "title": "CVE-2024-6640"
+    },
+    {
+      "cve": "CVE-2024-6759",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle im FreeBSD Project FreeBSD OS. Dieser Fehler ist auf eine unsachgemäße Validierung von Dateinamen in der NFS-Implementierung zurückzuführen, wodurch Dateinamen mit zusätzlichen Pfad-Trennzeichen (\"/\") zurückgegeben werden können. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Informationen zu erlangen und Dateien zu modifizieren."
+        }
+      ],
+      "release_date": "2024-08-07T22:00:00.000+00:00",
+      "title": "CVE-2024-6759"
+    },
+    {
+      "cve": "CVE-2024-6760",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle im FreeBSD Project FreeBSD OS. Die Schwachstelle wird durch einen Logikfehler im Dienstprogramm ktrace verursacht, das die Kernelverfolgung für Setuid-Programme nicht korrekt deaktiviert. Ein Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen, wie z.B. die lokale Passwortdatenbank, offenzulegen."
+        }
+      ],
+      "release_date": "2024-08-07T22:00:00.000+00:00",
+      "title": "CVE-2024-6760"
+    },
+    {
+      "cve": "CVE-2024-7589",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle im FreeBSD Project FreeBSD OS. Dieser Fehler besteht aufgrund einer unsachgemäßen Behandlung eines Signalhandlers in sshd(8), was zu einer Race Condition führt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code als root auszuführen."
+        }
+      ],
+      "release_date": "2024-08-07T22:00:00.000+00:00",
+      "title": "CVE-2024-7589"
+    }
+  ]
+}

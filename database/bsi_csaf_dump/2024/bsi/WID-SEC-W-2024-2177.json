@@ -1,0 +1,210 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "CoreDNS ist ein DNS server.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in CoreDNS ausnutzen, um einen Denial of Service Angriff durchzuführen oder ein DNS-Cache-Poisoning durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2177 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2177.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2177 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2177"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-09-18",
+        "url": "https://github.com/advisories/GHSA-hfmw-7g3m-gj6q"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-09-18",
+        "url": "https://github.com/advisories/GHSA-h92q-fgpp-qhrq"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2024:0319-1 vom 2024-09-27",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/2JLUFKCHWHJJ2MQ6XRREF7D4OOWB23V2/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "CoreDNS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-09-29T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-30T08:14:39.152+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-2177",
+      "initial_release_date": "2024-09-18T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-18T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-09-19T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Anpassung im Text"
+        },
+        {
+          "date": "2024-09-29T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.11.0",
+                "product": {
+                  "name": "Open Source CoreDNS <1.11.0",
+                  "product_id": "T037737"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.11.0",
+                "product": {
+                  "name": "Open Source CoreDNS 1.11.0",
+                  "product_id": "T037737-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:coredns:coredns:1.11.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=1.10.1",
+                "product": {
+                  "name": "Open Source CoreDNS <=1.10.1",
+                  "product_id": "T037738"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=1.10.1",
+                "product": {
+                  "name": "Open Source CoreDNS <=1.10.1",
+                  "product_id": "T037738-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CoreDNS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-28452",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in CoreDNS. Dieser Fehler existiert in der DNS-Auflösungssoftware und führt dazu, dass gültige Antworten ignoriert werden. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037738",
+          "T037737",
+          "T027843"
+        ]
+      },
+      "release_date": "2024-09-18T22:00:00.000+00:00",
+      "title": "CVE-2023-28452"
+    },
+    {
+      "cve": "CVE-2023-30464",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in CoreDNS. Dieser Fehler ermöglicht es, gefälschte Antworten über einen Geburtstagsangriff zu injizieren. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen DNS-Cache-Poisoning-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027843"
+        ],
+        "last_affected": [
+          "T037738"
+        ]
+      },
+      "release_date": "2024-09-18T22:00:00.000+00:00",
+      "title": "CVE-2023-30464"
+    }
+  ]
+}

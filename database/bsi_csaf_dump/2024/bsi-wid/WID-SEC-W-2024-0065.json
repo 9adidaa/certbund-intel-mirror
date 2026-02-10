@@ -1,0 +1,177 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Checkmk ist eine IT-Monitoring-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein authentifizierter Angreifer kann mehrere Schwachstellen in tribe29 checkmk ausnutzen, um Sicherheitsmaßnahmen zu umgehen oder seine Privilegien zu erweitern.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0065 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0065.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0065 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0065"
+      },
+      {
+        "category": "external",
+        "summary": "CheckMK Werk #16163 vom 2024-01-10",
+        "url": "https://checkmk.com/werk/16163"
+      },
+      {
+        "category": "external",
+        "summary": "CheckMK Werk #16227 vom 2024-01-10",
+        "url": "https://checkmk.com/werk/16227"
+      },
+      {
+        "category": "external",
+        "summary": "CheckMK Werk #16273 vom 2024-01-10",
+        "url": "https://checkmk.com/werk/16273"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "tribe29 checkmk: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-01-10T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:03:32.019+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0065",
+      "initial_release_date": "2024-01-10T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-01-10T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.3.0b1",
+                "product": {
+                  "name": "tribe29 checkmk < 2.3.0b1",
+                  "product_id": "T031987",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.3.0b1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.2.0p18",
+                "product": {
+                  "name": "tribe29 checkmk < 2.2.0p18",
+                  "product_id": "T031988",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.2.0p18"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.1.0p38",
+                "product": {
+                  "name": "tribe29 checkmk < 2.1.0p38",
+                  "product_id": "T031989",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.1.0p38"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "checkmk"
+          }
+        ],
+        "category": "vendor",
+        "name": "tribe29"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-31211",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in tribe29 checkmk. Dieser Fehler besteht aufgrund einer fehlenden Authentifizierungsprüfung, die es erlaubt, sich mit einem deaktivierten Konto anzumelden. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "release_date": "2024-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-31211"
+    },
+    {
+      "cve": "CVE-2023-6735",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in tribe29 checkmk. Dieser Fehler besteht im Agent-Plugin 'mk_tsm' aufgrund einer unzureichenden Quotierung bei der Verwendung von ksh's eval, um die erforderliche Umgebung zu erstellen. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um seine Privilegien zu erweitern, indem er einen bösartigen Befehl erstellt, der dann in der Ausgabe von ps users des überwachten Hosts auftaucht."
+        }
+      ],
+      "release_date": "2024-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-6735"
+    },
+    {
+      "cve": "CVE-2023-6740",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in tribe29 checkmk. Dieser Fehler besteht darin, dass das jar_signature agent plugin das jarsigner Binary durch ein anderes Skript ersetzt und in das JAVA_HOME Verzeichnis gelegt werden kann. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "release_date": "2024-01-10T23:00:00.000+00:00",
+      "title": "CVE-2023-6740"
+    }
+  ]
+}

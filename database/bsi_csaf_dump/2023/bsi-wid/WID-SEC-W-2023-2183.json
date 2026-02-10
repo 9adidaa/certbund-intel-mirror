@@ -1,0 +1,215 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "7-Zip ist ein Extraktionsdienstprogramm für Archive, die im ZIP-Format komprimiert sind.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in 7-Zip ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2183 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2183.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2183 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2183"
+      },
+      {
+        "category": "external",
+        "summary": "7-Zip Security Advisory vom 2023-08-27",
+        "url": "https://www.zerodayinitiative.com/advisories/ZDI-23-1164/"
+      },
+      {
+        "category": "external",
+        "summary": "7-Zip Security Advisory vom 2023-08-27",
+        "url": "https://www.zerodayinitiative.com/advisories/ZDI-23-1165/"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20231110-0007 vom 2023-11-10",
+        "url": "https://security.netapp.com/advisory/ntap-20231110-0007/"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-379 vom 2024-09-03",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000228289/dsa-2024-379-security-update-for-dell-idrac-service-module-7-zip-vulnerability"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "7-Zip: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-09-03T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-04T09:11:51.044+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2023-2183",
+      "initial_release_date": "2023-08-27T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-27T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-11-12T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von NetApp aufgenommen"
+        },
+        {
+          "date": "2024-09-03T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell integrated Dell Remote Access Controller",
+            "product": {
+              "name": "Dell integrated Dell Remote Access Controller",
+              "product_id": "T015300",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:dell:idrac:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "NetApp ActiveIQ Unified Manager",
+            "product": {
+              "name": "NetApp ActiveIQ Unified Manager",
+              "product_id": "T025153",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_windows"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<23.0",
+                "product": {
+                  "name": "Open Source 7-Zip <23.0",
+                  "product_id": "T029577"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "23",
+                "product": {
+                  "name": "Open Source 7-Zip 23.0",
+                  "product_id": "T029577-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:7-zip:7-zip:23.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "7-Zip"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-31102",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in 7-Zip. Diese Fehler bestehen beim Parsen von SQFS- oder 7Z-Dateien aufgrund eines Out-Of-Bounds Write und eines Integer Underflow. Ein Angreifer kann diese Schwachstellen zur Ausführung von beliebigem Code ausnutzen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T015300",
+          "T025153",
+          "T029577"
+        ]
+      },
+      "release_date": "2023-08-27T22:00:00.000+00:00",
+      "title": "CVE-2023-31102"
+    },
+    {
+      "cve": "CVE-2023-40481",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in 7-Zip. Diese Fehler bestehen beim Parsen von SQFS- oder 7Z-Dateien aufgrund eines Out-Of-Bounds Write und eines Integer Underflow. Ein Angreifer kann diese Schwachstellen zur Ausführung von beliebigem Code ausnutzen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T015300",
+          "T025153",
+          "T029577"
+        ]
+      },
+      "release_date": "2023-08-27T22:00:00.000+00:00",
+      "title": "CVE-2023-40481"
+    }
+  ]
+}

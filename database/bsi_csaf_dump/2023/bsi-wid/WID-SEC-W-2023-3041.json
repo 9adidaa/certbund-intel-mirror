@@ -1,0 +1,282 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Berechtigungen zu erweitern oder XSS-Angriffe durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-3041 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-3041.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-3041 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-3041"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Security Release vom 2023-11-30",
+        "url": "https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-12-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:02:14.935+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-3041",
+      "initial_release_date": "2023-11-30T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-11-30T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-12-04T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Anpassung CVSS Score"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 16.6.1",
+                "product": {
+                  "name": "Open Source GitLab < 16.6.1",
+                  "product_id": "T031430",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:16.6.1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 16.5.3",
+                "product": {
+                  "name": "Open Source GitLab < 16.5.3",
+                  "product_id": "T031431",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:16.5.3"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GitLab < 16.4.3",
+                "product": {
+                  "name": "Open Source GitLab < 16.4.3",
+                  "product_id": "T031432",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:16.4.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-6396",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-6396"
+    },
+    {
+      "cve": "CVE-2023-6033",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-6033"
+    },
+    {
+      "cve": "CVE-2023-5995",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-5995"
+    },
+    {
+      "cve": "CVE-2023-5226",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-5226"
+    },
+    {
+      "cve": "CVE-2023-4912",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-4912"
+    },
+    {
+      "cve": "CVE-2023-4658",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-4658"
+    },
+    {
+      "cve": "CVE-2023-4317",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-4317"
+    },
+    {
+      "cve": "CVE-2023-3964",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-3964"
+    },
+    {
+      "cve": "CVE-2023-3949",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-3949"
+    },
+    {
+      "cve": "CVE-2023-39417",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-39417"
+    },
+    {
+      "cve": "CVE-2023-3443",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-3443"
+    },
+    {
+      "cve": "CVE-2023-3401",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2023-3401"
+    },
+    {
+      "cve": "CVE-2022-41409",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler bestehen in mehreren Komponenten wie der Benutzeroberfläche oder der Jira-Integrationskonfiguration, unter anderem aufgrund mehrerer Sicherheitsprobleme wie der unsachgemäßen Neutralisierung von Eingaben oder der unsachgemäßen Überprüfung von Berechtigungen. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenzulegen, Dateien zu manipulieren, seine Privilegien zu erweitern oder XSS-Angriffe durchzuführen. Einige der Schwachstellen erfordern eine Interaktion des Benutzers, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "release_date": "2023-11-30T23:00:00.000+00:00",
+      "title": "CVE-2022-41409"
+    }
+  ]
+}

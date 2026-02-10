@@ -1,0 +1,144 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Icinga ist ein Monitoring System.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Icinga ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0411 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0411.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0411 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0411"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Icinga vom 2024-02-18",
+        "url": "https://github.com/Icinga/icingaweb2-module-director/security/advisories/GHSA-3mwp-5p5v-j6q3"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Icinga: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-02-18T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:05:22.079+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0411",
+      "initial_release_date": "2024-02-18T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-18T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 1.8.2",
+                "product": {
+                  "name": "Open Source Icinga < 1.8.2",
+                  "product_id": "188674"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 1.9.2",
+                "product": {
+                  "name": "Open Source Icinga < 1.9.2",
+                  "product_id": "228972"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 1.10.3",
+                "product": {
+                  "name": "Open Source Icinga < 1.10.3",
+                  "product_id": "252253"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 1.11.1",
+                "product": {
+                  "name": "Open Source Icinga < 1.11.1",
+                  "product_id": "445616"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Icinga"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-24820",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Icinga existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden aufgrund eines unzureichenden CSRF-Schutzes nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, authentisierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2024-02-18T23:00:00.000+00:00",
+      "title": "CVE-2024-24820"
+    }
+  ]
+}

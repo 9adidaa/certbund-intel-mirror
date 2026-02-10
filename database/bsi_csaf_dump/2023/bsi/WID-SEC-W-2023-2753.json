@@ -1,0 +1,854 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apple macOS ist ein Betriebssystem, das auf FreeBSD und Mach basiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Apple macOS ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- MacOS X",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2753 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2753.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2753 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2753"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213983 vom 2023-10-25",
+        "url": "https://support.apple.com/en-us/HT213983"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213984 vom 2023-10-25",
+        "url": "https://support.apple.com/en-us/HT213984"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213985 vom 2023-10-25",
+        "url": "https://support.apple.com/en-us/HT213985"
+      },
+      {
+        "category": "external",
+        "summary": "PoC CVE-2023-42942 vom 2024-03-01",
+        "url": "https://jhftss.github.io/CVE-2023-42942-xpcroleaccountd-Root-Privilege-Escalation/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple macOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-29T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:00:37.567+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2753",
+      "initial_release_date": "2023-10-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-10-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-02-22T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        },
+        {
+          "date": "2024-02-29T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "PoC für CVE-2023-42942 aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Monterey < 12.7.1",
+                "product": {
+                  "name": "Apple macOS Monterey < 12.7.1",
+                  "product_id": "T030770"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Sonoma < 14.1",
+                "product": {
+                  "name": "Apple macOS Sonoma < 14.1",
+                  "product_id": "T030771"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Ventura < 13.6.1",
+                "product": {
+                  "name": "Apple macOS Ventura < 13.6.1",
+                  "product_id": "T030772"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "macOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-4781",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4781"
+    },
+    {
+      "cve": "CVE-2023-4752",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4752"
+    },
+    {
+      "cve": "CVE-2023-4751",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4751"
+    },
+    {
+      "cve": "CVE-2023-4750",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4750"
+    },
+    {
+      "cve": "CVE-2023-4738",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4738"
+    },
+    {
+      "cve": "CVE-2023-4736",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4736"
+    },
+    {
+      "cve": "CVE-2023-4735",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4735"
+    },
+    {
+      "cve": "CVE-2023-4734",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4734"
+    },
+    {
+      "cve": "CVE-2023-4733",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-4733"
+    },
+    {
+      "cve": "CVE-2023-42952",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42952"
+    },
+    {
+      "cve": "CVE-2023-42942",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42942"
+    },
+    {
+      "cve": "CVE-2023-42889",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42889"
+    },
+    {
+      "cve": "CVE-2023-42877",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42877"
+    },
+    {
+      "cve": "CVE-2023-42873",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42873"
+    },
+    {
+      "cve": "CVE-2023-42861",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42861"
+    },
+    {
+      "cve": "CVE-2023-42860",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42860"
+    },
+    {
+      "cve": "CVE-2023-42859",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42859"
+    },
+    {
+      "cve": "CVE-2023-42858",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42858"
+    },
+    {
+      "cve": "CVE-2023-42857",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42857"
+    },
+    {
+      "cve": "CVE-2023-42856",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42856"
+    },
+    {
+      "cve": "CVE-2023-42854",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42854"
+    },
+    {
+      "cve": "CVE-2023-42853",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42853"
+    },
+    {
+      "cve": "CVE-2023-42852",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42852"
+    },
+    {
+      "cve": "CVE-2023-42850",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42850"
+    },
+    {
+      "cve": "CVE-2023-42849",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42849"
+    },
+    {
+      "cve": "CVE-2023-42848",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42848"
+    },
+    {
+      "cve": "CVE-2023-42847",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42847"
+    },
+    {
+      "cve": "CVE-2023-42845",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42845"
+    },
+    {
+      "cve": "CVE-2023-42844",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42844"
+    },
+    {
+      "cve": "CVE-2023-42843",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42843"
+    },
+    {
+      "cve": "CVE-2023-42842",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42842"
+    },
+    {
+      "cve": "CVE-2023-42841",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42841"
+    },
+    {
+      "cve": "CVE-2023-42840",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42840"
+    },
+    {
+      "cve": "CVE-2023-42838",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42838"
+    },
+    {
+      "cve": "CVE-2023-42836",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42836"
+    },
+    {
+      "cve": "CVE-2023-42835",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42835"
+    },
+    {
+      "cve": "CVE-2023-42834",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42834"
+    },
+    {
+      "cve": "CVE-2023-42823",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42823"
+    },
+    {
+      "cve": "CVE-2023-42438",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42438"
+    },
+    {
+      "cve": "CVE-2023-41997",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41997"
+    },
+    {
+      "cve": "CVE-2023-41989",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41989"
+    },
+    {
+      "cve": "CVE-2023-41988",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41988"
+    },
+    {
+      "cve": "CVE-2023-41983",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41983"
+    },
+    {
+      "cve": "CVE-2023-41982",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41982"
+    },
+    {
+      "cve": "CVE-2023-41977",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41977"
+    },
+    {
+      "cve": "CVE-2023-41976",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41976"
+    },
+    {
+      "cve": "CVE-2023-41975",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41975"
+    },
+    {
+      "cve": "CVE-2023-41254",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41254"
+    },
+    {
+      "cve": "CVE-2023-41077",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41077"
+    },
+    {
+      "cve": "CVE-2023-41072",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41072"
+    },
+    {
+      "cve": "CVE-2023-40449",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40449"
+    },
+    {
+      "cve": "CVE-2023-40447",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40447"
+    },
+    {
+      "cve": "CVE-2023-40444",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40444"
+    },
+    {
+      "cve": "CVE-2023-40425",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40425"
+    },
+    {
+      "cve": "CVE-2023-40423",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40423"
+    },
+    {
+      "cve": "CVE-2023-40421",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40421"
+    },
+    {
+      "cve": "CVE-2023-40416",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40416"
+    },
+    {
+      "cve": "CVE-2023-40413",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40413"
+    },
+    {
+      "cve": "CVE-2023-40408",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40408"
+    },
+    {
+      "cve": "CVE-2023-40405",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40405"
+    },
+    {
+      "cve": "CVE-2023-40404",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40404"
+    },
+    {
+      "cve": "CVE-2023-40401",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40401"
+    },
+    {
+      "cve": "CVE-2023-38403",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-38403"
+    },
+    {
+      "cve": "CVE-2023-30774",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple macOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen aufgrund von unsachgemäßer Speicher- oder Cache-Verarbeitung, unsachgemäßer Zustandsverwaltung und anderen Fehlern. Ein Angreifer kann diese Schwachstellen ausnutzen, um Root-Rechte zu erlangen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-30774"
+    }
+  ]
+}

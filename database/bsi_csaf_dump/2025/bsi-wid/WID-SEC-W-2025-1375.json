@@ -1,0 +1,160 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "WinRAR ist ein Dateiarchivierungsprogramm zum Erstellen und Entpacken von Archiven im RAR oder ZIP Datenformat.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in WinRAR ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1375 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1375.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1375 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1375"
+      },
+      {
+        "category": "external",
+        "summary": "Zero Day Initiative Advisory ZDI-25-409 vom 2025-06-19",
+        "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-409/"
+      },
+      {
+        "category": "external",
+        "summary": "WinRAR Release Notes",
+        "url": "https://www.win-rar.com/singlenewsview.html?L=0"
+      },
+      {
+        "category": "external",
+        "summary": "PoC vom 2025-06-27",
+        "url": "https://github.com/speinador/CVE-2025-6218_WinRAR"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2025-12-09",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "WinRAR: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2025-12-09T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-12-09T19:55:01.306+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1375",
+      "initial_release_date": "2025-06-23T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-06-23T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-06-26T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC aufgenommen"
+        },
+        {
+          "date": "2025-06-29T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Korrektur im Text"
+        },
+        {
+          "date": "2025-12-09T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Schwachstelle wird ausgenutzt"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<7.11",
+                "product": {
+                  "name": "win.rar WinRAR <7.11",
+                  "product_id": "T042325"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.11",
+                "product": {
+                  "name": "win.rar WinRAR 7.11",
+                  "product_id": "T042325-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:rarlab:winrar:7.11"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "WinRAR"
+          }
+        ],
+        "category": "vendor",
+        "name": "win.rar"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-6218",
+      "product_status": {
+        "known_affected": [
+          "T042325"
+        ]
+      },
+      "release_date": "2025-06-23T22:00:00.000+00:00",
+      "title": "CVE-2025-6218"
+    }
+  ]
+}

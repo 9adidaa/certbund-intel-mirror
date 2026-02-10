@@ -1,0 +1,517 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Apple iOS (vormals iPhone OS) ist das Betriebssystem für das von Apple entwickelte Smartphone iPhone, iPad und iPod Touch.\r\nDas Apple iPadOS ist das Betriebssystem für das von Apple entwickelte iPad.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Apple iOS und Apple iPadOS ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2754 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2754.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2754 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2754"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213981 vom 2023-10-25",
+        "url": "https://support.apple.com/en-us/HT213981"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory HT213982 vom 2023-10-25",
+        "url": "https://support.apple.com/en-us/HT213982"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple iOS und Apple iPadOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-22T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:00:37.922+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2754",
+      "initial_release_date": "2023-10-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-10-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-02-19T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE ergänzt"
+        },
+        {
+          "date": "2024-02-22T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE's ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 16.7.2",
+                "product": {
+                  "name": "Apple iOS < 16.7.2",
+                  "product_id": "T030764"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 17.1",
+                "product": {
+                  "name": "Apple iOS < 17.1",
+                  "product_id": "T030766"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iOS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 16.7.2",
+                "product": {
+                  "name": "Apple iPadOS < 16.7.2",
+                  "product_id": "T030765"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "< 17.1",
+                "product": {
+                  "name": "Apple iPadOS < 17.1",
+                  "product_id": "T030767"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iPadOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-42953",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42953"
+    },
+    {
+      "cve": "CVE-2023-42952",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42952"
+    },
+    {
+      "cve": "CVE-2023-42951",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42951"
+    },
+    {
+      "cve": "CVE-2023-42946",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42946"
+    },
+    {
+      "cve": "CVE-2023-42942",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42942"
+    },
+    {
+      "cve": "CVE-2023-42939",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42939"
+    },
+    {
+      "cve": "CVE-2023-42928",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42928"
+    },
+    {
+      "cve": "CVE-2023-42878",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42878"
+    },
+    {
+      "cve": "CVE-2023-42873",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42873"
+    },
+    {
+      "cve": "CVE-2023-42857",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42857"
+    },
+    {
+      "cve": "CVE-2023-42855",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42855"
+    },
+    {
+      "cve": "CVE-2023-42852",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42852"
+    },
+    {
+      "cve": "CVE-2023-42849",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42849"
+    },
+    {
+      "cve": "CVE-2023-42847",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42847"
+    },
+    {
+      "cve": "CVE-2023-42846",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42846"
+    },
+    {
+      "cve": "CVE-2023-42845",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42845"
+    },
+    {
+      "cve": "CVE-2023-42841",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-42841"
+    },
+    {
+      "cve": "CVE-2023-41997",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41997"
+    },
+    {
+      "cve": "CVE-2023-41988",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41988"
+    },
+    {
+      "cve": "CVE-2023-41983",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41983"
+    },
+    {
+      "cve": "CVE-2023-41982",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41982"
+    },
+    {
+      "cve": "CVE-2023-41977",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41977"
+    },
+    {
+      "cve": "CVE-2023-41976",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41976"
+    },
+    {
+      "cve": "CVE-2023-41254",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41254"
+    },
+    {
+      "cve": "CVE-2023-41072",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-41072"
+    },
+    {
+      "cve": "CVE-2023-40449",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40449"
+    },
+    {
+      "cve": "CVE-2023-40447",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40447"
+    },
+    {
+      "cve": "CVE-2023-40445",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40445"
+    },
+    {
+      "cve": "CVE-2023-40423",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40423"
+    },
+    {
+      "cve": "CVE-2023-40416",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40416"
+    },
+    {
+      "cve": "CVE-2023-40413",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40413"
+    },
+    {
+      "cve": "CVE-2023-40408",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-40408"
+    },
+    {
+      "cve": "CVE-2023-32359",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in Apple iOS und Apple iPadOS. Diese Fehler bestehen in CoreAnimation, Find My, ImageIO, Safari, Siri und anderen Komponenten und Modulen, u. a. durch unsachgemäße Speicher- oder Cache-Verarbeitung und unsachgemäße Zustandsverwaltung. Ein Angreifer kann diese Schwachstellen ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen, Sicherheitsmaßnahmen zu umgehen oder vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2023-10-25T22:00:00.000+00:00",
+      "title": "CVE-2023-32359"
+    }
+  ]
+}

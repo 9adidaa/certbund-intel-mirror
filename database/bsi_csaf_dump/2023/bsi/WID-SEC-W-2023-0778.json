@@ -1,0 +1,698 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Apple iOS (vormals iPhone OS) ist das Betriebssystem für das von Apple entwickelte Smartphone iPhone, iPad und iPod Touch.\r\nDas Apple iPadOS ist das Betriebssystem für das von Apple entwickelte iPad.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Apple iOS und Apple iPadOS ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0778 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0778.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0778 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0778"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2023-03-27",
+        "url": "https://support.apple.com/en-us/HT213673"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security Advisory vom 2023-03-27",
+        "url": "https://support.apple.com/HT213676"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple iOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-07-18T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:47:27.132+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0778",
+      "initial_release_date": "2023-03-27T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-27T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-05-08T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        },
+        {
+          "date": "2023-06-21T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE-2023-23536,CVE-2023-32435 ergänzt"
+        },
+        {
+          "date": "2024-07-18T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "CVE's ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.7.4",
+                "product": {
+                  "name": "Apple iOS <15.7.4",
+                  "product_id": "T026949"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<16.4",
+                "product": {
+                  "name": "Apple iOS <16.4",
+                  "product_id": "T026952"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iOS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<15.7.4",
+                "product": {
+                  "name": "Apple iPadOS <15.7.4",
+                  "product_id": "T026950"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<16.4",
+                "product": {
+                  "name": "Apple iPadOS <16.4",
+                  "product_id": "T026951"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iPadOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-23494",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23494"
+    },
+    {
+      "cve": "CVE-2023-23523",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23523"
+    },
+    {
+      "cve": "CVE-2023-23525",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23525"
+    },
+    {
+      "cve": "CVE-2023-23526",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23526"
+    },
+    {
+      "cve": "CVE-2023-23527",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23527"
+    },
+    {
+      "cve": "CVE-2023-23528",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23528"
+    },
+    {
+      "cve": "CVE-2023-23529",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23529"
+    },
+    {
+      "cve": "CVE-2023-23532",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23532"
+    },
+    {
+      "cve": "CVE-2023-23535",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23535"
+    },
+    {
+      "cve": "CVE-2023-23536",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23536"
+    },
+    {
+      "cve": "CVE-2023-23537",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23537"
+    },
+    {
+      "cve": "CVE-2023-23540",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23540"
+    },
+    {
+      "cve": "CVE-2023-23541",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23541"
+    },
+    {
+      "cve": "CVE-2023-23543",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-23543"
+    },
+    {
+      "cve": "CVE-2023-27928",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27928"
+    },
+    {
+      "cve": "CVE-2023-27929",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27929"
+    },
+    {
+      "cve": "CVE-2023-27931",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27931"
+    },
+    {
+      "cve": "CVE-2023-27932",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27932"
+    },
+    {
+      "cve": "CVE-2023-27933",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27933"
+    },
+    {
+      "cve": "CVE-2023-27936",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27936"
+    },
+    {
+      "cve": "CVE-2023-27937",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27937"
+    },
+    {
+      "cve": "CVE-2023-27941",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27941"
+    },
+    {
+      "cve": "CVE-2023-27942",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27942"
+    },
+    {
+      "cve": "CVE-2023-27943",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27943"
+    },
+    {
+      "cve": "CVE-2023-27946",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27946"
+    },
+    {
+      "cve": "CVE-2023-27949",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27949"
+    },
+    {
+      "cve": "CVE-2023-27954",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27954"
+    },
+    {
+      "cve": "CVE-2023-27955",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27955"
+    },
+    {
+      "cve": "CVE-2023-27956",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27956"
+    },
+    {
+      "cve": "CVE-2023-27959",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27959"
+    },
+    {
+      "cve": "CVE-2023-27961",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27961"
+    },
+    {
+      "cve": "CVE-2023-27963",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27963"
+    },
+    {
+      "cve": "CVE-2023-27969",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27969"
+    },
+    {
+      "cve": "CVE-2023-27970",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-27970"
+    },
+    {
+      "cve": "CVE-2023-28178",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28178"
+    },
+    {
+      "cve": "CVE-2023-28181",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28181"
+    },
+    {
+      "cve": "CVE-2023-28182",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28182"
+    },
+    {
+      "cve": "CVE-2023-28194",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28194"
+    },
+    {
+      "cve": "CVE-2023-28201",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-28201"
+    },
+    {
+      "cve": "CVE-2023-32358",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-32358"
+    },
+    {
+      "cve": "CVE-2023-32366",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-32366"
+    },
+    {
+      "cve": "CVE-2023-32370",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-32370"
+    },
+    {
+      "cve": "CVE-2023-32424",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-32424"
+    },
+    {
+      "cve": "CVE-2023-32435",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-32435"
+    },
+    {
+      "cve": "CVE-2023-40398",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-40398"
+    },
+    {
+      "cve": "CVE-2023-41075",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-41075"
+    },
+    {
+      "cve": "CVE-2023-42830",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-42830"
+    },
+    {
+      "cve": "CVE-2023-42862",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-42862"
+    },
+    {
+      "cve": "CVE-2023-42865",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS existieren mehrere Schwachstellen. Diese bestehen in den Komponenten \"Accessibility, Apple Neural Engine, AppleMobileFileIntegrity, Calendar, Camera, CommCenter, CarPlay, ColorSync, Core Bluetooth, CoreCapture, Find My, FontParser, Foundation, iCloud, Identity Services, ImageIO, Kernel, LaunchServices, Model I/O, NetworkExtension, Photos, Podcasts, Safari, Sandbox, Shortcuts, TCC sowie WebKit. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, beliebigen Programmcode auszuführen, seine Privilegien erweitern, Informationen offenzulegen, Dateien zu manipulieren, Sicherheitsvorkehrungen zu umgehen oder einen Denial of Service Zustand zu verursachen. Zur erfolgreichen Ausnutzung einiger dieser Schwachstellen ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-03-27T22:00:00.000+00:00",
+      "title": "CVE-2023-42865"
+    }
+  ]
+}

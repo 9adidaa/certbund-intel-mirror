@@ -1,0 +1,350 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Fabian Bäumer",
+          "Marcus Brinkmann"
+        ],
+        "organization": "Ruhr University Bochum",
+        "summary": "finding and reporting the vulnerability"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "As a content provider, BSI is responsible under general law for its own content distributed for use. However, it remains your responsibility to carefully check usage and/or implementation of information provided with the content.",
+        "title": "Legal disclaimer"
+      },
+      {
+        "category": "summary",
+        "text": "The PuTTY client and all related components generate heavily biased ECDSA nonces in the case of NIST P-521. This allows for full secret key recovery in roughly 60 signatures by using state-of-the-art techniques. These signatures can either be harvested by a malicious server (machine-in-the-middle attacks are not possible given that clients do not transmit their signature in the clear) or from any other source, e.g. signed git commits through forwarded agents.",
+        "title": "Summary"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "BSI-2024-0001 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/bsi-2024-0001.json"
+      }
+    ],
+    "title": "Secret Key Recovery of NIST P-521 Private Keys through biased ECDSA nonces in PuTTY client",
+    "tracking": {
+      "current_release_date": "2024-04-15T19:00:00.000Z",
+      "generator": {
+        "date": "2024-04-15T06:53:52.394Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.2"
+        }
+      },
+      "id": "BSI-2024-0001",
+      "initial_release_date": "2024-04-15T19:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-04-15T19:00:00.000Z",
+          "number": "1",
+          "summary": "Initial version."
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=0.68|<=0.80",
+                "product": {
+                  "name": "PuTTY client 0.68 - 0.80",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "0.81",
+                "product": {
+                  "name": "PuTTY client 0.81",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PuTTY"
+          }
+        ],
+        "category": "vendor",
+        "name": "PuTTY"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=3.24.1|<=3.66.5",
+                "product": {
+                  "name": "FileZilla Client 3.24.1 - 3.66.5",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.67.0",
+                "product": {
+                  "name": "FileZilla Client 3.67.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "FileZilla Client"
+          }
+        ],
+        "category": "vendor",
+        "name": "FileZilla"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=5.9.5|<=6.3.2",
+                "product": {
+                  "name": "WinSCP 5.9.5 - 6.3.2",
+                  "product_id": "CSAFPID-0005"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.3.3",
+                "product": {
+                  "name": "WinSCP 6.3.3",
+                  "product_id": "CSAFPID-0010"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "WinSCP"
+          }
+        ],
+        "category": "vendor",
+        "name": "WinSCP"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=2.4.0.2|<=2.15.0.0",
+                "product": {
+                  "name": "TortoiseGit 2.4.0.2 - 2.15.0.0",
+                  "product_id": "CSAFPID-0006"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.15.0.1",
+                "product": {
+                  "name": "TortoiseGit 2.15.0.1",
+                  "product_id": "CSAFPID-0007"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TortoiseGit"
+          }
+        ],
+        "category": "vendor",
+        "name": "TortoiseGit"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=1.10.0|<=1.14.6",
+                "product": {
+                  "name": "TortoiseSVN 1.10.0 - 1.14.6",
+                  "product_id": "CSAFPID-0008"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.14.7",
+                "product": {
+                  "name": "TortoiseSVN 1.14.7",
+                  "product_id": "CSAFPID-0009"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TortoiseSVN"
+          }
+        ],
+        "category": "vendor",
+        "name": "TortoiseSVN"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-31497",
+      "cwe": {
+        "id": "CWE-334",
+        "name": "Small Space of Random Values"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "The PuTTY client and all related components generate heavily biased ECDSA nonces in the case of NIST P-521. This allows for full secret key recovery in roughly 60 signatures by using state-of-the-art techniques. These signatures can either be harvested by a malicious server (machine-in-the-middle attacks are not possible given that clients do not transmit their signature in the clear) or from any other source, e.g. signed git commits through forwarded agents.",
+          "title": "CVE description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004",
+          "CSAFPID-0010",
+          "CSAFPID-0007",
+          "CSAFPID-0009"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003",
+          "CSAFPID-0005",
+          "CSAFPID-0006",
+          "CSAFPID-0008"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "CVE Record",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2024-31497"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "date": "2024-04-15T19:00:00.000Z",
+          "details": "Update to the latest version of the product. At least version 0.61.\nAdditionally, any key material using NIST P-521 must be revoke/discard and new keys have to be generated.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html"
+        },
+        {
+          "category": "vendor_fix",
+          "date": "2024-04-15T19:00:00.000Z",
+          "details": "Update to the latest version of the product. At least version 3.67.0.",
+          "product_ids": [
+            "CSAFPID-0003"
+          ],
+          "url": "https://filezilla-project.org/download.php?type=client"
+        },
+        {
+          "category": "vendor_fix",
+          "date": "2024-04-15T19:00:00.000Z",
+          "details": "Update to the latest version of the product. At least version 6.3.3.",
+          "product_ids": [
+            "CSAFPID-0005"
+          ],
+          "url": "https://winscp.net/eng/download.php"
+        },
+        {
+          "category": "vendor_fix",
+          "date": "2024-04-15T19:00:00.000Z",
+          "details": "Update to the latest version of the product. At least version 2.15.0.1.",
+          "product_ids": [
+            "CSAFPID-0006"
+          ],
+          "url": "https://tortoisegit.org/download/"
+        },
+        {
+          "category": "workaround",
+          "date": "2024-04-15T19:00:00.000Z",
+          "details": "As long as there is no official patch available: Configure TortoiseSVN to use PuTTY's latest plink.exe instead of the included exe. ",
+          "product_ids": [
+            "CSAFPID-0008"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 10,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 10,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "temporalScore": 10,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.3,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "CHANGED",
+            "temporalScore": 8.2,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0003",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0008"
+          ]
+        }
+      ],
+      "title": "Secret Key Recovery of NIST P-521 Private Keys through biased ECDSA nonces in PuTTY client"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Docker Desktop ist ein GUI-Tool rund um die Open-Source-Docker-Engine, mit dem sich containerisierte Anwendungen auf einem lokalen Rechner erstellen, teilen und ausführen lassen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Docker Desktop ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, Daten zu manipulieren oder einen Denial-of-Service-Zustand zu erzeugen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3129 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3129.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3129 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3129"
+      },
+      {
+        "category": "external",
+        "summary": "Docker Docs Release notes vom 2024-10-09",
+        "url": "https://docs.docker.com/desktop/release-notes/#4343"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:4187-1 vom 2025-11-24",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/2H3NES7EQEQIIW643QWEZ5WYCITZJQZY/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Docker Desktop: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-11-24T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-25T09:12:28.333+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-3129",
+      "initial_release_date": "2024-10-09T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-09T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-10-29T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Produktzuordnung korrigiert - Docker Desktop statt Open Source docker"
+        },
+        {
+          "date": "2025-11-24T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.34.3",
+                "product": {
+                  "name": "Docker Desktop <4.34.3",
+                  "product_id": "T038650"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.34.3",
+                "product": {
+                  "name": "Docker Desktop 4.34.3",
+                  "product_id": "T038650-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:docker:desktop:4.34.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desktop"
+          }
+        ],
+        "category": "vendor",
+        "name": "Docker"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-0132",
+      "product_status": {
+        "known_affected": [
+          "T002207",
+          "T038650"
+        ]
+      },
+      "release_date": "2024-10-09T22:00:00.000+00:00",
+      "title": "CVE-2024-0132"
+    },
+    {
+      "cve": "CVE-2024-0133",
+      "product_status": {
+        "known_affected": [
+          "T002207",
+          "T038650"
+        ]
+      },
+      "release_date": "2024-10-09T22:00:00.000+00:00",
+      "title": "CVE-2024-0133"
+    },
+    {
+      "cve": "CVE-2024-9348",
+      "product_status": {
+        "known_affected": [
+          "T002207",
+          "T038650"
+        ]
+      },
+      "release_date": "2024-10-09T22:00:00.000+00:00",
+      "title": "CVE-2024-9348"
+    }
+  ]
+}

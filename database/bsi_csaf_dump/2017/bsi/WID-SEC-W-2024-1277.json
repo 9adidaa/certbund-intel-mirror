@@ -1,0 +1,992 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Oracle Fusion Middleware bündelt mehrere Produkte zur Erstellung, Betrieb und Management von intelligenten Business Anwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Oracle Fusion Middleware ausnutzen, um dadurch die Integrität, Vertraulichkeit und Verfügbarkeit zu gefährden.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1277 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2017/wid-sec-w-2024-1277.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1277 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1277"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Critical Patch Update Advisory - April 2017 - Oracle Fusion Middleware vom 2017-04-18",
+        "url": "http://www.oracle.com/technetwork/security-advisory/cpuapr2017-3236618.html#AppendixFMW"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2024-06-03",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Oracle Fusion Middleware: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-11-11T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-12T10:06:32.931+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-1277",
+      "initial_release_date": "2017-04-18T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2017-04-18T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2017-04-18T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "n"
+        },
+        {
+          "date": "2017-04-18T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2024-06-03T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Aktive Ausnutzung gemeldet"
+        },
+        {
+          "date": "2024-11-11T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Korrektur"
+        }
+      ],
+      "status": "final",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Fusion Middleware",
+            "product": {
+              "name": "Oracle Fusion Middleware",
+              "product_id": "T006198",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:oracle:fusion_middleware:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Oracle WebCenter Sites",
+            "product": {
+              "name": "Oracle WebCenter Sites",
+              "product_id": "T009734",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:oracle:webcenter_sites:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2012-1007",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2012-1007"
+    },
+    {
+      "cve": "CVE-2014-0114",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2014-0114"
+    },
+    {
+      "cve": "CVE-2015-5351",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2015-5351"
+    },
+    {
+      "cve": "CVE-2015-7501",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2015-7501"
+    },
+    {
+      "cve": "CVE-2016-0706",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-0706"
+    },
+    {
+      "cve": "CVE-2016-0714",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-0714"
+    },
+    {
+      "cve": "CVE-2016-0763",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-0763"
+    },
+    {
+      "cve": "CVE-2016-1181",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-1181"
+    },
+    {
+      "cve": "CVE-2016-1182",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-1182"
+    },
+    {
+      "cve": "CVE-2016-2177",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2177"
+    },
+    {
+      "cve": "CVE-2016-2178",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2178"
+    },
+    {
+      "cve": "CVE-2016-2179",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2179"
+    },
+    {
+      "cve": "CVE-2016-2180",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2180"
+    },
+    {
+      "cve": "CVE-2016-2181",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2181"
+    },
+    {
+      "cve": "CVE-2016-2182",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2182"
+    },
+    {
+      "cve": "CVE-2016-2183",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-2183"
+    },
+    {
+      "cve": "CVE-2016-6302",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6302"
+    },
+    {
+      "cve": "CVE-2016-6303",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6303"
+    },
+    {
+      "cve": "CVE-2016-6304",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6304"
+    },
+    {
+      "cve": "CVE-2016-6305",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6305"
+    },
+    {
+      "cve": "CVE-2016-6306",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6306"
+    },
+    {
+      "cve": "CVE-2016-6307",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6307"
+    },
+    {
+      "cve": "CVE-2016-6308",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6308"
+    },
+    {
+      "cve": "CVE-2016-6309",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-6309"
+    },
+    {
+      "cve": "CVE-2016-7052",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2016-7052"
+    },
+    {
+      "cve": "CVE-2017-3230",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3230"
+    },
+    {
+      "cve": "CVE-2017-3499",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3499"
+    },
+    {
+      "cve": "CVE-2017-3506",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3506"
+    },
+    {
+      "cve": "CVE-2017-3507",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3507"
+    },
+    {
+      "cve": "CVE-2017-3531",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3531"
+    },
+    {
+      "cve": "CVE-2017-3540",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3540"
+    },
+    {
+      "cve": "CVE-2017-3541",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3541"
+    },
+    {
+      "cve": "CVE-2017-3542",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3542"
+    },
+    {
+      "cve": "CVE-2017-3543",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3543"
+    },
+    {
+      "cve": "CVE-2017-3545",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3545"
+    },
+    {
+      "cve": "CVE-2017-3553",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3553"
+    },
+    {
+      "cve": "CVE-2017-3554",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3554"
+    },
+    {
+      "cve": "CVE-2017-3591",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3591"
+    },
+    {
+      "cve": "CVE-2017-3593",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3593"
+    },
+    {
+      "cve": "CVE-2017-3594",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3594"
+    },
+    {
+      "cve": "CVE-2017-3595",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3595"
+    },
+    {
+      "cve": "CVE-2017-3596",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3596"
+    },
+    {
+      "cve": "CVE-2017-3597",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3597"
+    },
+    {
+      "cve": "CVE-2017-3598",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3598"
+    },
+    {
+      "cve": "CVE-2017-3601",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3601"
+    },
+    {
+      "cve": "CVE-2017-3602",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3602"
+    },
+    {
+      "cve": "CVE-2017-3603",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3603"
+    },
+    {
+      "cve": "CVE-2017-3625",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3625"
+    },
+    {
+      "cve": "CVE-2017-3626",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-3626"
+    },
+    {
+      "cve": "CVE-2017-5638",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Oracle Fusion Middleware existieren mehrere nicht näher beschriebene Schwachstellen. Durch Ausnutzung dieser Schwachstellen kann ein Angreifer die Vertraulichkeit, Integrität und Verfügbarkeit gefährden. Für die Ausnutzung einiger dieser Schwachstellen ist keine Authentifizierung notwendig. Oracle veröffentlicht keine weiteren Details zu diesen Schwachstellen (außer der Information in der Risiko Matrix im Oracle Advisory zum Critical Patch Update, siehe Link unten in diesem Advisory). Aufgrund der knappen Informationslage erfolgt die Bewertung der Schadenshöhe ausschließlich auf Basis der CVSS Impact Matrix. Der Maximalwert für diese Produkte ist \"High\" für \"Integrity\", \"Confidentiality\" und \"Availability\" und bewirkt damit eine \"hohe\" Schadenshöhe."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T009734",
+          "T006198"
+        ]
+      },
+      "release_date": "2017-04-18T22:00:00.000+00:00",
+      "title": "CVE-2017-5638"
+    }
+  ]
+}

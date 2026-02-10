@@ -1,0 +1,127 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "vBulletin Connect ist eine Software für Online-Foren.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in vBulletin Connect ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2374 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2374.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2374 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2374"
+      },
+      {
+        "category": "external",
+        "summary": "Proof of Concept (PoC)",
+        "url": "https://gist.github.com/GiongfNef/8fe658dce4c7fcf3a7b4e6387e50141c"
+      },
+      {
+        "category": "external",
+        "summary": "NIST Advisory vom 2023-09-17",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-39777"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "vBulletin Connect: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-09-17T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:32.510+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2374",
+      "initial_release_date": "2023-09-17T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-17T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "vBulletin Connect <= 6.0.0",
+            "product": {
+              "name": "vBulletin Connect <= 6.0.0",
+              "product_id": "T029922",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:vbulletin:connect:6.0.0"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "vBulletin"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-39777",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In vBulletin Connect existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden in Admin Control Panel nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "last_affected": [
+          "T029922"
+        ]
+      },
+      "release_date": "2023-09-17T22:00:00.000+00:00",
+      "title": "CVE-2023-39777"
+    }
+  ]
+}

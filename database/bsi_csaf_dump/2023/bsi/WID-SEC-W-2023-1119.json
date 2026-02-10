@@ -1,0 +1,127 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Checkmk ist eine IT-Monitoring-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in tribe29 checkmk ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1119 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1119.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1119 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1119"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-31207"
+      },
+      {
+        "category": "external",
+        "summary": "Checkmk Security Advisory vom 2023-05-01",
+        "url": "https://checkmk.com/werk/15189"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "tribe29 checkmk: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-05-01T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:50:13.595+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1119",
+      "initial_release_date": "2023-05-01T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-05-01T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "tribe29 checkmk 2.1.0p27",
+            "product": {
+              "name": "tribe29 checkmk 2.1.0p27",
+              "product_id": "T027572",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:tribe29:checkmk:2.1.0p27"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "tribe29"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-31207",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in tribe29 checkmk. Aufgrund einer unsachgemäßen Übermittlung von Anmeldeinformationen in Abfrageparametern wird unter Umständen das Geheimnis des Automatisierungsbenutzers in das Apache-Zugriffsprotokoll der Website geschrieben. Ein privilegierter Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T027572"
+        ]
+      },
+      "release_date": "2023-05-01T22:00:00.000+00:00",
+      "title": "CVE-2023-31207"
+    }
+  ]
+}

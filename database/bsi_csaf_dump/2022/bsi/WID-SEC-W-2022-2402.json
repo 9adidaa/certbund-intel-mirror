@@ -1,0 +1,127 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Der Kernel stellt den Kern des Linux Betriebssystems dar.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann eine Schwachstelle im Linux Kernel ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2402 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2402.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2402 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2402"
+      },
+      {
+        "category": "external",
+        "summary": "RedHat Bugzilla vom 2022-12-22",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2155840"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Linux Kernel: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2022-12-26T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:40:33.683+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-2402",
+      "initial_release_date": "2022-12-22T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-12-22T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-12-26T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE-2022-47946 ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Linux Kernel 5.10.y - v5.10.154",
+            "product": {
+              "name": "Open Source Linux Kernel 5.10.y - v5.10.154",
+              "product_id": "T025710",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:linux:linux_kernel:5.10.y_-_v5.10.154"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-47946",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle im Linux Kernel. In \"io_sqpoll_wait_sq()\" in [fs/io_uring.c] besteht ein Use-after-free-Problem. Ein Angreifer kann diese Schwachstelle ausnutzen, um den Kernel zum Absturz zu bringen, was zu einem Denial of Service führt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T025710"
+        ]
+      },
+      "release_date": "2022-12-22T23:00:00.000+00:00",
+      "title": "CVE-2022-47946"
+    }
+  ]
+}

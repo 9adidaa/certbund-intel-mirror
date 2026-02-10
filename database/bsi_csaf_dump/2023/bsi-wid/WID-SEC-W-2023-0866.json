@@ -1,0 +1,482 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Cisco Small Business Produktfamilie beinhaltet Netzwerk-, Kommunikations-, WLAN- und Sicherheitsprodukte, sowie Router und Switche.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in verschiedenen Cisco Small Business Produkten ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0866 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0866.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0866 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0866"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-04-05",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-rv-stored-xss-vqz7gC8W"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Small Business: Mehrere Schwachstellen ermöglichen Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2023-04-05T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:48:11.598+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0866",
+      "initial_release_date": "2023-04-05T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-04-05T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Cisco Small Business RV320",
+                "product": {
+                  "name": "Cisco Small Business RV320",
+                  "product_id": "T013513",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:small_business:rv320"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Small Business RV325",
+                "product": {
+                  "name": "Cisco Small Business RV325",
+                  "product_id": "T013514",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:small_business:rv325"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Small Business RV016",
+                "product": {
+                  "name": "Cisco Small Business RV016",
+                  "product_id": "T015317",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:small_business:rv016"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Small Business RV042",
+                "product": {
+                  "name": "Cisco Small Business RV042",
+                  "product_id": "T015318",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:small_business:rv042"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Small Business RV042G",
+                "product": {
+                  "name": "Cisco Small Business RV042G",
+                  "product_id": "T015319",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:small_business:rv042g"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Small Business RV082",
+                "product": {
+                  "name": "Cisco Small Business RV082",
+                  "product_id": "T015320",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:cisco:small_business:rv082"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Small Business"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20151",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20151"
+    },
+    {
+      "cve": "CVE-2023-20150",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20150"
+    },
+    {
+      "cve": "CVE-2023-20149",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20149"
+    },
+    {
+      "cve": "CVE-2023-20148",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20148"
+    },
+    {
+      "cve": "CVE-2023-20147",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20147"
+    },
+    {
+      "cve": "CVE-2023-20146",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20146"
+    },
+    {
+      "cve": "CVE-2023-20145",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20145"
+    },
+    {
+      "cve": "CVE-2023-20144",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20144"
+    },
+    {
+      "cve": "CVE-2023-20143",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20143"
+    },
+    {
+      "cve": "CVE-2023-20142",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20142"
+    },
+    {
+      "cve": "CVE-2023-20141",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20141"
+    },
+    {
+      "cve": "CVE-2023-20140",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20140"
+    },
+    {
+      "cve": "CVE-2023-20139",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20139"
+    },
+    {
+      "cve": "CVE-2023-20138",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20138"
+    },
+    {
+      "cve": "CVE-2023-20137",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In verschiedenen Produkten der Cisco Small Business Reihe existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T013514",
+          "T015319",
+          "T015318",
+          "T015317",
+          "T013513",
+          "T015320"
+        ]
+      },
+      "release_date": "2023-04-05T22:00:00.000+00:00",
+      "title": "CVE-2023-20137"
+    }
+  ]
+}

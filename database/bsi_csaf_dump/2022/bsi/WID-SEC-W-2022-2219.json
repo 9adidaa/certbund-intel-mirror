@@ -1,0 +1,205 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "H2 ist eine in Java geschriebene, einbettbare Datenbank.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in H2 ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2219 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2219.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2219 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2219"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Security Advisory GHSA-22wj-vf5f-wrvj vom 2022-11-30",
+        "url": "https://github.com/advisories/GHSA-22wj-vf5f-wrvj"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Knowledge Base Article",
+        "url": "https://www.dell.com/support/kbdoc/en-us/000221474/dsa-2024-059-security-update-for-dell-networker-multiple-components-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Vulnerability Information HITACHI-SEC-2024-150 vom 2024-12-17",
+        "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2024-150/index.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "H2: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-12-17T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-18T10:29:18.603+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2022-2219",
+      "initial_release_date": "2022-12-01T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-12-01T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-01-25T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2024-12-17T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von HITACHI aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<19.10",
+                "product": {
+                  "name": "Dell NetWorker <19.10",
+                  "product_id": "T032354"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.1",
+                "product": {
+                  "name": "Dell NetWorker 19.10",
+                  "product_id": "T032354-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:19.10"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetWorker"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Hitachi Ops Center",
+            "product": {
+              "name": "Hitachi Ops Center",
+              "product_id": "T038840",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:hitachi:ops_center:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=2.1.214",
+                "product": {
+                  "name": "Open Source H2 <=2.1.214",
+                  "product_id": "T025466"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.1.214",
+                "product": {
+                  "name": "Open Source H2 <=2.1.214",
+                  "product_id": "T025466-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "H2"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-45868",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in H2. Die Web-basierte Administratorkonsole unterstützt die Übergabe des Administratorpassworts auf der Kommandozeile. Wird diese Option von einem Administrator verwendet, erscheint prinzipbedingt das Passwort in der Prozessliste, die durch jeden lokalen Benutzer einsehbar ist. Ein lokaler Angreifer kann dadurch das Administratorpasswort der H2 Datenbank offenlegen und seine Privilegien dadurch erweitern. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T032354",
+          "T038840"
+        ],
+        "last_affected": [
+          "T025466"
+        ]
+      },
+      "release_date": "2022-12-01T23:00:00.000+00:00",
+      "title": "CVE-2022-45868"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Ivanti CSA (Cloud Services Appliance) ist eine Sicherheitslösung für den Fernzugriff auf Ivanti-Umgebungen",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter anonymer Angreifer kann mehrere Schwachstellen in Ivanti Cloud Services Appliance ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen und beliebige SQL-Anweisungen auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3653 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3653.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3653 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3653"
+      },
+      {
+        "category": "external",
+        "summary": "Ivanti Security Advisory vom 2024-12-10",
+        "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Cloud-Services-Application-CSA-CVE-2024-11639-CVE-2024-11772-CVE-2024-11773?language=en_US"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Ivanti Cloud Services Appliance: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-12-10T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-11T10:41:59.791+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3653",
+      "initial_release_date": "2024-12-10T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-10T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.0.3",
+                "product": {
+                  "name": "Ivanti Cloud Services Appliance <5.0.3",
+                  "product_id": "T039683"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.0.3",
+                "product": {
+                  "name": "Ivanti Cloud Services Appliance 5.0.3",
+                  "product_id": "T039683-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ivanti:cloud_service_appliance:5.0.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cloud Services Appliance"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ivanti"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-11639",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in der Ivanti Cloud Services Appliance, die auf eine Umgehung der Authentifizierung in der Adminweb-Konsole zurückzuführen ist. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um administrative Rechte zu erlangen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039683"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-11639"
+    },
+    {
+      "cve": "CVE-2024-11772",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Ivanti Cloud Services Appliance aufgrund einer Befehlsinjektion in der Admin-Webkonsole. Ein entfernter, authentisierter Angreifer mit Admin-Rechten kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039683"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-11772"
+    },
+    {
+      "cve": "CVE-2024-11773",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Ivanti Cloud Services Appliance aufgrund einer SQL-Injection. Ein entfernter, authentisierter Angreifer mit administrativen Rechten kann über die Admin-Webkonsole beliebige SQL-Anweisungen in der Datenbank ausführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039683"
+        ]
+      },
+      "release_date": "2024-12-10T23:00:00.000+00:00",
+      "title": "CVE-2024-11773"
+    }
+  ]
+}

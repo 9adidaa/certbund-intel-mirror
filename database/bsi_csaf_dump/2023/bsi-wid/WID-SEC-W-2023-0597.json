@@ -1,0 +1,176 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Veeam Backup & Replication ist eine Datensicherungslösung für VMware vSphere- und Microsoft Hyper-V-Umgebungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Veeam Backup & Replication ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0597 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0597.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0597 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0597"
+      },
+      {
+        "category": "external",
+        "summary": "Veeam Support Knowledge Base vom 2023-03-07",
+        "url": "https://www.veeam.com/kb4424"
+      },
+      {
+        "category": "external",
+        "summary": "Poc auf GitHub  vom 2023-03-23",
+        "url": "https://github.com/horizon3ai/CVE-2023-27532"
+      },
+      {
+        "category": "external",
+        "summary": "Bleeping Computer vom 2023-03-23",
+        "url": "https://www.bleepingcomputer.com/news/security/akira-and-fog-ransomware-now-exploiting-critical-veeam-rce-flaw/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Veeam Backup & Replication: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2024-10-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-11T08:13:10.279+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2023-0597",
+      "initial_release_date": "2023-03-07T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-07T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-03-23T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC aufgenommen"
+        },
+        {
+          "date": "2024-10-10T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Aktive Ausnutzung gemeldet"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<12.0.0.1420 P20230223",
+                "product": {
+                  "name": "Veeam Backup & Replication <12.0.0.1420 P20230223",
+                  "product_id": "T026679"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12.0.0.1420 P20230223",
+                "product": {
+                  "name": "Veeam Backup & Replication 12.0.0.1420 P20230223",
+                  "product_id": "T026679-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:veeam:backup_and_replication:12.0.0.1420_p20230223"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<11.0.1.1261 P20230227",
+                "product": {
+                  "name": "Veeam Backup & Replication <11.0.1.1261 P20230227",
+                  "product_id": "T026680"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.0.1.1261 P20230227",
+                "product": {
+                  "name": "Veeam Backup & Replication 11.0.1.1261 P20230227",
+                  "product_id": "T026680-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:veeam:backup_and_replication:11.0.1.1261_p20230227"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Backup & Replication"
+          }
+        ],
+        "category": "vendor",
+        "name": "Veeam"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-27532",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Veeam Backup & Replication. Über den Prozess Veeam.Backup.Service.exe (TCP 9401), ist es möglich verschlüsselte Anmeldeinformationen anzufordern. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um sich Zugang zu den Hosts der Backup-Infrastruktur zu verschaffen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T026680",
+          "T026679"
+        ]
+      },
+      "release_date": "2023-03-07T23:00:00.000+00:00",
+      "title": "CVE-2023-27532"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Kubernetes ist ein Werkzeug zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von containerisierten Anwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Kubernetes ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2303 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2303.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2303 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2303"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Security Advisory GHSA-m4hf-6vgr-75r2 vom 2023-09-11",
+        "url": "https://github.com/advisories/GHSA-m4hf-6vgr-75r2"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Kubernetes: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2023-09-11T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:58:12.988+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2303",
+      "initial_release_date": "2023-09-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-09-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source Kubernetes < 1.24.17",
+                "product": {
+                  "name": "Open Source Kubernetes < 1.24.17",
+                  "product_id": "T029781",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:1.24.17"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source Kubernetes < 1.25.13",
+                "product": {
+                  "name": "Open Source Kubernetes < 1.25.13",
+                  "product_id": "T029782",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:1.25.13"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source Kubernetes < 1.26.8",
+                "product": {
+                  "name": "Open Source Kubernetes < 1.26.8",
+                  "product_id": "T029783",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:1.26.8"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source Kubernetes < 1.27.5",
+                "product": {
+                  "name": "Open Source Kubernetes < 1.27.5",
+                  "product_id": "T029784",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:1.27.5"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source Kubernetes < 1.28.1",
+                "product": {
+                  "name": "Open Source Kubernetes < 1.28.1",
+                  "product_id": "T029786",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:1.28.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Kubernetes"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-32187",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Kubernetes. Dieser Fehler besteht aufgrund einer fehlenden ordnungsgemäßen Validierung und Größenbeschränkung der Subject Alternative Name (SAN)-Liste bei der TLS-Zertifikatsbehandlung von K3s. Durch das kontinuierliche Hinzufügen von Einträgen zur SAN-Liste während eines TLS-Handshakes, bis das Zertifikat übermäßig groß wird, kann ein entfernter, anonymer Angreifer diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "release_date": "2023-09-11T22:00:00.000+00:00",
+      "title": "CVE-2023-32187"
+    }
+  ]
+}

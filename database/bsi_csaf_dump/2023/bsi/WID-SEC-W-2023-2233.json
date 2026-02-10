@@ -1,0 +1,145 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Cisco Unity Connection ist ein umfangreiches Voicemail und Integrated-Messaging- Produkt. Mit Cisco Unity Connection können Benutzer mit dem Cisco Unified Personal Communicator auf ihre Sprachnachrichten zugreifen, das Display ihres Cisco Unified IP-Telefons nutzen, um Sprachnachrichten anzuzeigen, zu sortieren und wiederzugeben, und sogar die Sprachsteuerung von Cisco Unity Connection verwenden, um auf Cisco Unified MeetingPlace Express Meetings zuzugreifen.\r\nDer Cisco Unified Communications Manager (CUCM) (ehemals CallManager) dient zur Gesprächsvermittlung in IP-Telefonie-Netzen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Cisco Unity Connection und Cisco Unified Communications Manager (CUCM) ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2233 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2233.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2233 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2233"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory - cisco-sa-cucm-priv-esc-D8Bky5eg vom 2023-08-30",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-priv-esc-D8Bky5eg"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Unity Connection and Cisco Unified Communications Manager (CUCM): Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2023-08-30T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:54.672+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2233",
+      "initial_release_date": "2023-08-30T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-30T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco Unified Communications Manager (CUCM) < 12.5.1SU8a",
+            "product": {
+              "name": "Cisco Unified Communications Manager (CUCM) < 12.5.1SU8a",
+              "product_id": "T029639",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:cisco:unified_communications_manager:12.5.1su8a"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Cisco Unity Connection < 12.5.1SU8a",
+                "product": {
+                  "name": "Cisco Unity Connection < 12.5.1SU8a",
+                  "product_id": "T029637",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:unity_connection:12.5.1su8a"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Cisco Unity Connection < 14SU3a",
+                "product": {
+                  "name": "Cisco Unity Connection < 14SU3a",
+                  "product_id": "T029638",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:unity_connection:14su3a"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Unity Connection"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20266",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Cisco Unity Connection und Cisco Unified Communications Manager (CUCM). Dieser Fehler besteht, weil die Anwendung die Dateien, die für Upgrades verwendet werden, nicht ordnungsgemäß einschränkt. Durch die Bereitstellung einer manipulierten Upgrade-Datei kann ein entfernter authentifizierter Angreifer diese Schwachstelle ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "release_date": "2023-08-30T22:00:00.000+00:00",
+      "title": "CVE-2023-20266"
+    }
+  ]
+}

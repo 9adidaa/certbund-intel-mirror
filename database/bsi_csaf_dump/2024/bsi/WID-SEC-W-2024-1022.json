@@ -1,0 +1,200 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "MediaWiki ist ein freies Wiki, das ursprünglich für den Einsatz auf Wikipedia entwickelt wurde.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in MediaWiki ausnutzen, um einen Cross-Site-Scripting-Angriff zu starten, einen Denial-of-Service-Zustand zu verursachen oder Dateien zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1022 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1022.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1022 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1022"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla vom 2024-05-05",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2279229"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla vom 2024-05-05",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2279231"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla vom 2024-05-05",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2279233"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla vom 2024-05-05",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2279237"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "MediaWiki: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-05-05T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:08:28.700+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1022",
+      "initial_release_date": "2024-05-05T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-05T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.39.7",
+                "product": {
+                  "name": "Open Source MediaWiki <1.39.7",
+                  "product_id": "T034533"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<1.40.3",
+                "product": {
+                  "name": "Open Source MediaWiki <1.40.3",
+                  "product_id": "T034534"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<1.40.2",
+                "product": {
+                  "name": "Open Source MediaWiki <1.40.2",
+                  "product_id": "T034542"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<1.41.1",
+                "product": {
+                  "name": "Open Source MediaWiki <1.41.1",
+                  "product_id": "T034543"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<1.39.6",
+                "product": {
+                  "name": "Open Source MediaWiki <1.39.6",
+                  "product_id": "T034544"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MediaWiki"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-34500",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In MediaWiki existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der UnlinkedWikibase und CommentParser.php nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen."
+        }
+      ],
+      "release_date": "2024-05-05T22:00:00.000+00:00",
+      "title": "CVE-2024-34500"
+    },
+    {
+      "cve": "CVE-2024-34507",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In MediaWiki existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden in der UnlinkedWikibase und CommentParser.php nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen."
+        }
+      ],
+      "release_date": "2024-05-05T22:00:00.000+00:00",
+      "title": "CVE-2024-34507"
+    },
+    {
+      "cve": "CVE-2024-34502",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in MediaWiki. Dieser Fehler besteht in der Komponente MergeLexemes aufgrund einer unsachgemäßen Zugriffskontrolle, die es erlaubt, GET-Anfragen ohne Edit-Token zu bearbeiten. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um den Netzwerkverkehr zu manipulieren."
+        }
+      ],
+      "release_date": "2024-05-05T22:00:00.000+00:00",
+      "title": "CVE-2024-34502"
+    },
+    {
+      "cve": "CVE-2024-34506",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in MediaWiki. Dieser Fehler besteht in der Komponente SpecialMovePage.php aufgrund eines unkontrollierten Ressourcenverbrauchs während des Verschiebens von Seiten. Ein entfernter authentifizierter Angreifer mit Rechten zum Verschieben der Seite kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "release_date": "2024-05-05T22:00:00.000+00:00",
+      "title": "CVE-2024-34506"
+    }
+  ]
+}

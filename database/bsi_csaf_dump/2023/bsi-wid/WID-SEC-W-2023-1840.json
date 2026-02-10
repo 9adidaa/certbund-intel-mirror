@@ -1,0 +1,138 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Cisco Small Business Produktfamilie beinhaltet Netzwerk-, Kommunikations-, WLAN- und Sicherheitsprodukte, sowie Router und Switche.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Cisco Small Business SPA500 Series IP Phones. ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen und Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- CISCO Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1840 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1840.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1840 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1840"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory vom 2023-07-19",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-spa-web-multi-7kvPmu2F"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Cisco Small Business SPA500 Series IP Phones.: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-07-19T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:55:59.833+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1840",
+      "initial_release_date": "2023-07-19T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-07-19T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Cisco Small Business SPA500",
+            "product": {
+              "name": "Cisco Small Business SPA500",
+              "product_id": "T014681",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:cisco:small_business:spa500_ip_phones"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-20218",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Cisco Small Business SPA500 Series IP Phones. Der Fehler besteht aufgrund einer unzureichenden Validierung der vom Benutzer bereitgestellten Eingaben durch die webbasierte Verwaltungsschnittstelle. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um den Inhalt einer Webseite zu ändern und einen Benutzer auf potenziell bösartige Websites umzuleiten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014681"
+        ]
+      },
+      "release_date": "2023-07-19T22:00:00.000+00:00",
+      "title": "CVE-2023-20218"
+    },
+    {
+      "cve": "CVE-2023-20181",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Cisco Small Business SPA500 Series IP Phones existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden in der webbasierte Verwaltungsschnittstelle nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014681"
+        ]
+      },
+      "release_date": "2023-07-19T22:00:00.000+00:00",
+      "title": "CVE-2023-20181"
+    }
+  ]
+}

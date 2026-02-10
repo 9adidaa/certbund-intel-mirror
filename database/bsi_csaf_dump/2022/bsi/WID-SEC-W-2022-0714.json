@@ -1,0 +1,369 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Dell  BSAFE ist eine Sicherheitssoftware, die Entwicklern ermöglicht weitreichende Sicherheitsziele ihrer Applikationen zu erreichen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Dell BSAFE ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-0714 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-0714.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-0714 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0714"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2020-286 vom 2022-07-18",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000181115/dsa-2020-286-dell-bsafe-crypto-c-micro-edition-4-1-5-and-dell-bsafe-micro-edition-suite-4-6-multiple-security-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-070 vom 2024-02-03",
+        "url": "https://www.dell.com/support/kbdoc/000221770/dsa-2024-="
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Dell BSAFE: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:31:49.544+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-0714",
+      "initial_release_date": "2022-07-18T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-07-18T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-02-04T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Dell BSAFE < 4.1.5",
+                "product": {
+                  "name": "Dell BSAFE < 4.1.5",
+                  "product_id": "T023891",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:bsafe:4.1.5"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Dell BSAFE < 4.5.2",
+                "product": {
+                  "name": "Dell BSAFE < 4.5.2",
+                  "product_id": "T023892",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:bsafe:4.5.2"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Dell BSAFE < 4.6",
+                "product": {
+                  "name": "Dell BSAFE < 4.6",
+                  "product_id": "T023893",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:bsafe:4.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "BSAFE"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "EMC Avamar",
+            "product": {
+              "name": "EMC Avamar",
+              "product_id": "T014381",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:emc:avamar:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "EMC"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-29504",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-29504"
+    },
+    {
+      "cve": "CVE-2020-29505",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-29505"
+    },
+    {
+      "cve": "CVE-2020-29506",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-29506"
+    },
+    {
+      "cve": "CVE-2020-29507",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-29507"
+    },
+    {
+      "cve": "CVE-2020-29508",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-29508"
+    },
+    {
+      "cve": "CVE-2020-35163",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35163"
+    },
+    {
+      "cve": "CVE-2020-35164",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35164"
+    },
+    {
+      "cve": "CVE-2020-35165",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35165"
+    },
+    {
+      "cve": "CVE-2020-35166",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35166"
+    },
+    {
+      "cve": "CVE-2020-35167",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35167"
+    },
+    {
+      "cve": "CVE-2020-35168",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35168"
+    },
+    {
+      "cve": "CVE-2020-35169",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2020-35169"
+    },
+    {
+      "cve": "CVE-2021-21575",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Dell BSAFE existieren mehrere Schwachstellen. Es bestehen Fehler hinsichtlich der Eingabevalidierung, unvollständiger Ausführung von Krypto-Operationen, Fehler mit dem Schlüsselmanagement sowie mehrere Fehler die Timing-Angriffe ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Informationen offenzulegen oder Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2022-07-18T22:00:00.000+00:00",
+      "title": "CVE-2021-21575"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "WordPress ist ein PHP basiertes Open Source Blog-System.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in WordPress ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0023 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0023.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0023 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0023"
+      },
+      {
+        "category": "external",
+        "summary": "WordPress Developer Resources",
+        "url": "https://developer.wordpress.org/plugins/cron/hooking-wp-cron-into-the-system-task-scheduler/"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory Database vom 2023-01-04",
+        "url": "https://github.com/advisories/GHSA-pmh6-cq54-943m"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database - CVE-2023-22622 vom 2023-01-04",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22622"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "WordPress: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2023-01-05T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:40:48.321+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0023",
+      "initial_release_date": "2023-01-04T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-01-04T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-01-05T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Workaround aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source WordPress <= 6.1.1",
+            "product": {
+              "name": "Open Source WordPress <= 6.1.1",
+              "product_id": "T025632",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:wordpress:wordpress:6.1.1"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-22622",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in WordPress. Der Fehler besteht, weil die Ausführung von wp-cron.php und damit die Installation von Sicherheitsupdates von unvorhersehbaren Client-Besuchen abhängt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T025632"
+        ]
+      },
+      "release_date": "2023-01-04T23:00:00.000+00:00",
+      "title": "CVE-2023-22622"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Firefox ist ein Open Source Web Browser.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Mozilla Firefox ausnutzen, um falsche Informationen darzustellen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0050 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-0050.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0050 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0050"
+      },
+      {
+        "category": "external",
+        "summary": "Mozilla Security Advisory vom 2025-01-12",
+        "url": "https://www.mozilla.org/en-US/security/advisories/mfsa2025-06/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Mozilla Firefox: Mehrere Schwachstellen ermöglichen das Darstellen falscher Informationen",
+    "tracking": {
+      "current_release_date": "2025-01-14T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-01-15T10:43:21.079+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2025-0050",
+      "initial_release_date": "2025-01-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-01-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-01-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Korrektur CVSS Bewertung"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "ios <134",
+                "product": {
+                  "name": "Mozilla Firefox ios <134",
+                  "product_id": "T040118"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "ios 134",
+                "product": {
+                  "name": "Mozilla Firefox ios 134",
+                  "product_id": "T040118-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:mozilla:firefox:ios_134"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firefox"
+          }
+        ],
+        "category": "vendor",
+        "name": "Mozilla"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-23108",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Mozilla Firefox. Diese ermöglicht es Angreifern, durch URL-Spoofing in der Firefox iOS-App falsche Adressen in neuen Tabs anzuzeigen und so Nutzer zu täuschen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Nutzer auf gefälschte Websites leiten, um sensible Daten wie Passwörter oder Zahlungsinformationen zu stehlen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T040118"
+        ]
+      },
+      "release_date": "2025-01-12T23:00:00.000+00:00",
+      "title": "CVE-2025-23108"
+    },
+    {
+      "cve": "CVE-2025-23109",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Mozilla Firefox. Diese nutzt lange Hostnamen in URLs, um den echten Host der Website zu verschleiern oder die Adresse einer vertrauenswürdigen Website zu fälschen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um den tatsächlichen Host der Website zu verschleiern oder die Website-Adresse zu fälschen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T040118"
+        ]
+      },
+      "release_date": "2025-01-12T23:00:00.000+00:00",
+      "title": "CVE-2025-23109"
+    }
+  ]
+}

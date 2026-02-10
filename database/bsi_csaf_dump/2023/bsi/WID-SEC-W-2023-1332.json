@@ -1,0 +1,161 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Symantec Advanced Secure Gateway ist eine Web-Gateway Sicherheitslösung.\r\nSymantec Content Analysis bietet erweiterten Schutz vor Bedrohungen sowohl am Gateway als auch an Endpunkten und kann in mehrere Symantec-Sicherheitslösungen integriert werden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Symantec Advanced Secure Gateway und Symantec Content Analysis ausnutzen, um beliebigen Code auszuführen, seine Privilegien zu erhöhen, einen Cross-Site-Scripting-Angriff durchzuführen und die Integrität zu gefährden.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1332 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1332.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1332 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1332"
+      },
+      {
+        "category": "external",
+        "summary": "Broadcom Security Advisory vom 2023-05-31",
+        "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/22217"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Symantec Advanced Secure Gateway und Content Analysis: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-05-31T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:51:38.124+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-1332",
+      "initial_release_date": "2023-05-31T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-05-31T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Symantec Advanced Secure Gateway < 7.3.13.1",
+            "product": {
+              "name": "Symantec Advanced Secure Gateway < 7.3.13.1",
+              "product_id": "T027920",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:symantec:advanced_secure_gateway:7.3.13.1"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Symantec Content Analysis < 3.1.6.0",
+            "product": {
+              "name": "Symantec Content Analysis < 3.1.6.0",
+              "product_id": "T027921",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:symantec:content_analysis:3.1.6.0"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Symantec"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-23955",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Symantec Advanced Secure Gateway und Symantec Content Analysis. Hierbei handelt es sich um ein Server-Side-Request-Forgery Problem. Ein privilegierter Angreifer kann diese Schwachstelle ausnutzen, um die Integrität zu gefährden."
+        }
+      ],
+      "release_date": "2023-05-31T22:00:00.000+00:00",
+      "title": "CVE-2023-23955"
+    },
+    {
+      "cve": "CVE-2023-23954",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Symantec Advanced Secure Gateway und Symantec Content Analysis existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein privilegierter Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2023-05-31T22:00:00.000+00:00",
+      "title": "CVE-2023-23954"
+    },
+    {
+      "cve": "CVE-2023-23953",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Symantec Advanced Secure Gateway und Symantec Content Analysis. Ein lokal angemeldeter Angreifer kann diese, nicht näher beschriebene Schwachstelle ausnutzen, um seine Rechte zu erweitern."
+        }
+      ],
+      "release_date": "2023-05-31T22:00:00.000+00:00",
+      "title": "CVE-2023-23953"
+    },
+    {
+      "cve": "CVE-2023-23952",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Symantec Advanced Secure Gateway und Symantec Content Analysis. Hierbei handelt es sich um ein Command Injection Problem. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Code auszuführen."
+        }
+      ],
+      "release_date": "2023-05-31T22:00:00.000+00:00",
+      "title": "CVE-2023-23952"
+    }
+  ]
+}

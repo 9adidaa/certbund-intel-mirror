@@ -1,0 +1,165 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "DrayTek Vigor ist eine Serie von Netzwerkgeräten, die von der Firma DrayTek hergestellt wird",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in DrayTek Vigor ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3757 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3757.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3757 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3757"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-12-29",
+        "url": "https://github.com/advisories/GHSA-3mp3-6fg3-7hxj"
+      },
+      {
+        "category": "external",
+        "summary": "PoC vom 2024-12-29",
+        "url": "https://netsecfish.notion.site/Command-Injection-in-apmcfgupload-endpoint-for-DrayTek-Gateway-Devices-1676b683e67c8040b7f1f0ffe29ce18f"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2025-05-15",
+        "url": "https://www.cisa.gov/news-events/alerts/2025/05/15/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "DrayTek Vigor: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2025-05-15T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-05-16T04:49:15.445+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2024-3757",
+      "initial_release_date": "2024-12-29T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-12-29T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-05-15T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Schwachstelle wird ausgenutzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "2960 <1.5.1.5",
+                "product": {
+                  "name": "DrayTek Vigor 2960 <1.5.1.5",
+                  "product_id": "T039978"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2960 1.5.1.5",
+                "product": {
+                  "name": "DrayTek Vigor 2960 1.5.1.5",
+                  "product_id": "T039978-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:draytek:vigor:2960__1.5.1.5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "300B <1.5.1.5",
+                "product": {
+                  "name": "DrayTek Vigor 300B <1.5.1.5",
+                  "product_id": "T039979"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "300B 1.5.1.5",
+                "product": {
+                  "name": "DrayTek Vigor 300B 1.5.1.5",
+                  "product_id": "T039979-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:draytek:vigor:300b__1.5.1.5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Vigor"
+          }
+        ],
+        "category": "vendor",
+        "name": "DrayTek"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-12987",
+      "product_status": {
+        "known_affected": [
+          "T039979",
+          "T039978"
+        ]
+      },
+      "release_date": "2024-12-29T23:00:00.000+00:00",
+      "title": "CVE-2024-12987"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache Lucene ist eine Programmbibliothek zur Volltextsuche.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Apache Lucene ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3313 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3313.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3313 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3313"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Security Mailing List vom 2024-10-30",
+        "url": "https://seclists.org/oss-sec/2024/q4/49"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache Lucene: Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2024-10-30T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-10-31T10:44:04.571+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3313",
+      "initial_release_date": "2024-10-30T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-30T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Net.Replicator <4.8.0-beta00017",
+                "product": {
+                  "name": "Apache Lucene Net.Replicator <4.8.0-beta00017",
+                  "product_id": "T038704"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Net.Replicator 4.8.0-beta00017",
+                "product": {
+                  "name": "Apache Lucene Net.Replicator 4.8.0-beta00017",
+                  "product_id": "T038704-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:lucene:net.replicator__4.8.0-beta00017"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Lucene"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-43383",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Apache Lucene. Dieser Fehler existiert in der Net.Replicator-Komponente wegen der Deserialisierung von nicht vertrauenswürdigen Daten. Ein entfernter, anonymer Angreifer, der den Datenverkehr zwischen einem Replikations-Client und -Server abfangen oder die URL des Ziel-Replikationsknotens kontrollieren kann, ist in der Lage, diese Schwachstelle auszunutzen, um beliebigen Code auszuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038704"
+        ]
+      },
+      "release_date": "2024-10-30T23:00:00.000+00:00",
+      "title": "CVE-2024-43383"
+    }
+  ]
+}

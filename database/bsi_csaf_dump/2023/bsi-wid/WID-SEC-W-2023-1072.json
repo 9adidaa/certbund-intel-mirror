@@ -1,0 +1,932 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Git ist eine freie Software zur verteilten Versionsverwaltung von Dateien.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in git ausnutzen, um Sicherheitsvorkehrungen zu umgehen, Daten zu manipulieren und seine Privilegien zu erweitern.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-1072 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-1072.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-1072 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-1072"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Seclist.org Vulnerability Description vom 2023-04-25",
+        "url": "https://seclists.org/oss-sec/2023/q2/104"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2038-1 vom 2023-04-26",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-April/014591.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2062-1 vom 2023-04-28",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-April/014673.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6050-1 vom 2023-05-01",
+        "url": "https://ubuntu.com/security/notices/USN-6050-1"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2038-2 vom 2023-05-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014719.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:2081-1 vom 2023-05-08",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-May/014775.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6050-2 vom 2023-05-17",
+        "url": "https://ubuntu.com/security/notices/USN-6050-2"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3192 vom 2023-05-17",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3192"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3248 vom 2023-05-22",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3248"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3247 vom 2023-05-22",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3247"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3246 vom 2023-05-22",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3246"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3245 vom 2023-05-22",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3245"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3243 vom 2023-05-22",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3243"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-3245 vom 2023-05-23",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-3245.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3263 vom 2023-05-23",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3263"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3280 vom 2023-05-23",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3280"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-3263 vom 2023-05-24",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-3263.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-3246 vom 2023-05-26",
+        "url": "http://linux.oracle.com/errata/ELSA-2023-3246.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3287 vom 2023-06-03",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3287"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3382 vom 2023-06-03",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3382"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3362 vom 2023-06-07",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3363"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS2-2023-2072 vom 2023-06-08",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2072.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:3410 vom 2023-06-08",
+        "url": "https://access.redhat.com/errata/RHSA-2023:3410"
+      },
+      {
+        "category": "external",
+        "summary": "CentOS Security Advisory CESA-2023:3263 vom 2023-07-28",
+        "url": "https://lists.centos.org/pipermail/centos-announce/2023-July/086408.html"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202312-15 vom 2023-12-27",
+        "url": "https://security.gentoo.org/glsa/202312-15"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2023-317 vom 2023-11-13",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000219148/dsa-2023-317-security-update-for-dell-networker-vproxy-multiple-linux-packages-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2023-2C851F43BA vom 2023-11-14",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2023-2c851f43ba"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3844 vom 2024-06-26",
+        "url": "https://lists.debian.org/debian-lts-announce/2024/06/msg00018.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3867 vom 2024-09-03",
+        "url": "https://lists.debian.org/debian-lts-announce/2024/09/msg00009.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5769 vom 2024-09-13",
+        "url": "https://lists.debian.org/debian-security-announce/2024/msg00182.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7023-1 vom 2024-09-19",
+        "url": "https://ubuntu.com/security/notices/USN-7023-1"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "git: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-09-18T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-19T08:06:57.498+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2023-1072",
+      "initial_release_date": "2023-04-25T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-04-25T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-04-26T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-05-01T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE und Ubuntu aufgenommen"
+        },
+        {
+          "date": "2023-05-02T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-05-08T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-05-18T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Ubuntu und Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-05-21T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-05-23T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Oracle Linux und Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-05-25T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2023-06-04T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2023-06-08T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat und Amazon aufgenommen"
+        },
+        {
+          "date": "2023-07-30T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von CentOS aufgenommen"
+        },
+        {
+          "date": "2023-11-12T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2023-11-14T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Fedora aufgenommen"
+        },
+        {
+          "date": "2023-12-27T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Gentoo aufgenommen"
+        },
+        {
+          "date": "2024-06-25T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-09-02T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-09-15T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2024-09-18T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "19"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<vproxy 19.9.0.2",
+                "product": {
+                  "name": "Dell NetWorker <vproxy 19.9.0.2",
+                  "product_id": "T030173"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "vproxy 19.9.0.2",
+                "product": {
+                  "name": "Dell NetWorker vproxy 19.9.0.2",
+                  "product_id": "T030173-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:vproxy_19.9.0.2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<vproxy 19.8.0.3",
+                "product": {
+                  "name": "Dell NetWorker <vproxy 19.8.0.3",
+                  "product_id": "T030174"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "vproxy 19.8.0.3",
+                "product": {
+                  "name": "Dell NetWorker vproxy 19.8.0.3",
+                  "product_id": "T030174-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:networker:vproxy_19.8.0.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NetWorker"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Fedora Linux",
+            "product": {
+              "name": "Fedora Linux",
+              "product_id": "74185",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:fedoraproject:fedora:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T012167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source CentOS",
+            "product": {
+              "name": "Open Source CentOS",
+              "product_id": "1727",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:centos:centos:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2.40.1",
+                "product": {
+                  "name": "Open Source git <2.40.1",
+                  "product_id": "T027504"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.40.1",
+                "product": {
+                  "name": "Open Source git 2.40.1",
+                  "product_id": "T027504-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.40.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.39.3",
+                "product": {
+                  "name": "Open Source git <2.39.3",
+                  "product_id": "T027505"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.39.3",
+                "product": {
+                  "name": "Open Source git 2.39.3",
+                  "product_id": "T027505-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.39.3"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.38.5",
+                "product": {
+                  "name": "Open Source git <2.38.5",
+                  "product_id": "T027506"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.38.5",
+                "product": {
+                  "name": "Open Source git 2.38.5",
+                  "product_id": "T027506-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.38.5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.37.7",
+                "product": {
+                  "name": "Open Source git <2.37.7",
+                  "product_id": "T027507"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.37.7",
+                "product": {
+                  "name": "Open Source git 2.37.7",
+                  "product_id": "T027507-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.37.7"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.36.6",
+                "product": {
+                  "name": "Open Source git <2.36.6",
+                  "product_id": "T027508"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.36.6",
+                "product": {
+                  "name": "Open Source git 2.36.6",
+                  "product_id": "T027508-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.36.6"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.35.8",
+                "product": {
+                  "name": "Open Source git <2.35.8",
+                  "product_id": "T027509"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.35.8",
+                "product": {
+                  "name": "Open Source git 2.35.8",
+                  "product_id": "T027509-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.35.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.34.8",
+                "product": {
+                  "name": "Open Source git <2.34.8",
+                  "product_id": "T027510"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.34.8",
+                "product": {
+                  "name": "Open Source git 2.34.8",
+                  "product_id": "T027510-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.34.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.33.8",
+                "product": {
+                  "name": "Open Source git <2.33.8",
+                  "product_id": "T027511"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.33.8",
+                "product": {
+                  "name": "Open Source git 2.33.8",
+                  "product_id": "T027511-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.33.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.32.7",
+                "product": {
+                  "name": "Open Source git <2.32.7",
+                  "product_id": "T027512"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.32.7",
+                "product": {
+                  "name": "Open Source git 2.32.7",
+                  "product_id": "T027512-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.32.7"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.31.8",
+                "product": {
+                  "name": "Open Source git <2.31.8",
+                  "product_id": "T027513"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.31.8",
+                "product": {
+                  "name": "Open Source git 2.31.8",
+                  "product_id": "T027513-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.31.8"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.30.9",
+                "product": {
+                  "name": "Open Source git <2.30.9",
+                  "product_id": "T027514"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.30.9",
+                "product": {
+                  "name": "Open Source git 2.30.9",
+                  "product_id": "T027514-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:git:2.30.9"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "git"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-29012",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in git. Der Fehler besteht aufgrund einer unsicheren Implementierung der Git CMD-Funktion. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, indem er eine bösartige Datei platziert und das Opfer dazu bringt, den CMD-Befehl in dem Verzeichnis auszuführen, um die Sicherheitsmaßnahmen zu umgehen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T012167",
+          "T004914",
+          "T030174",
+          "T030173",
+          "74185",
+          "T027508",
+          "T027509",
+          "2951",
+          "T002207",
+          "T027506",
+          "T027507",
+          "T000126",
+          "T027504",
+          "T027505",
+          "T027513",
+          "T027514",
+          "398363",
+          "T027511",
+          "T027512",
+          "1727",
+          "T027510"
+        ]
+      },
+      "release_date": "2023-04-25T22:00:00.000+00:00",
+      "title": "CVE-2023-29012"
+    },
+    {
+      "cve": "CVE-2023-25815",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In git existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund einer unzureichenden Eingabevalidierung im \"git submodule deinit\" und in der Art und Weise, wie Git lokalisierte Nachrichten verarbeitet. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um die Git-Konfiguration zu manipulieren oder dem Benutzer eine bösartige Nachricht anzuzeigen. Das erfolgreiche Ausnutzen einer dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T012167",
+          "T004914",
+          "T030174",
+          "T030173",
+          "74185",
+          "T027508",
+          "T027509",
+          "2951",
+          "T002207",
+          "T027506",
+          "T027507",
+          "T000126",
+          "T027504",
+          "T027505",
+          "T027513",
+          "T027514",
+          "398363",
+          "T027511",
+          "T027512",
+          "1727",
+          "T027510"
+        ]
+      },
+      "release_date": "2023-04-25T22:00:00.000+00:00",
+      "title": "CVE-2023-25815"
+    },
+    {
+      "cve": "CVE-2023-29007",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In git existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund einer unzureichenden Eingabevalidierung im \"git submodule deinit\" und in der Art und Weise, wie Git lokalisierte Nachrichten verarbeitet. Ein entfernter, anonymer oder lokaler Angreifer kann diese Schwachstellen ausnutzen, um die Git-Konfiguration zu manipulieren oder dem Benutzer eine bösartige Nachricht anzuzeigen. Das erfolgreiche Ausnutzen einer dieser Schwachstellen erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T012167",
+          "T004914",
+          "T030174",
+          "T030173",
+          "74185",
+          "T027508",
+          "T027509",
+          "2951",
+          "T002207",
+          "T027506",
+          "T027507",
+          "T000126",
+          "T027504",
+          "T027505",
+          "T027513",
+          "T027514",
+          "398363",
+          "T027511",
+          "T027512",
+          "1727",
+          "T027510"
+        ]
+      },
+      "release_date": "2023-04-25T22:00:00.000+00:00",
+      "title": "CVE-2023-29007"
+    },
+    {
+      "cve": "CVE-2023-25652",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In git existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund eines Symlink-Following-Problems in \"git apply --reject\" und der Verwendung eines fest kodierten Suchpfads für die connect.exe-Binärdatei, die zur Ausführung des SOCKS5-Proxys verwendet wird. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T012167",
+          "T004914",
+          "T030174",
+          "T030173",
+          "74185",
+          "T027508",
+          "T027509",
+          "2951",
+          "T002207",
+          "T027506",
+          "T027507",
+          "T000126",
+          "T027504",
+          "T027505",
+          "T027513",
+          "T027514",
+          "398363",
+          "T027511",
+          "T027512",
+          "1727",
+          "T027510"
+        ]
+      },
+      "release_date": "2023-04-25T22:00:00.000+00:00",
+      "title": "CVE-2023-25652"
+    },
+    {
+      "cve": "CVE-2023-29011",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In git existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund eines Symlink-Following-Problems in \"git apply --reject\" und der Verwendung eines fest kodierten Suchpfads für die connect.exe-Binärdatei, die zur Ausführung des SOCKS5-Proxys verwendet wird. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T012167",
+          "T004914",
+          "T030174",
+          "T030173",
+          "74185",
+          "T027508",
+          "T027509",
+          "2951",
+          "T002207",
+          "T027506",
+          "T027507",
+          "T000126",
+          "T027504",
+          "T027505",
+          "T027513",
+          "T027514",
+          "398363",
+          "T027511",
+          "T027512",
+          "1727",
+          "T027510"
+        ]
+      },
+      "release_date": "2023-04-25T22:00:00.000+00:00",
+      "title": "CVE-2023-29011"
+    }
+  ]
+}

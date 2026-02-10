@@ -1,0 +1,185 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM Storwize ist ein virtualisiertes Speichersystem für virtualisierte Serverumgebungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in IBM Storwize ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Hardware Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2704 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2014/wid-sec-w-2023-2704.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2704 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2704"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 865990 vom 2023-10-18",
+        "url": "https://www.ibm.com/support/pages/node/865990"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Support Document #S1004846 vom 2014-08-28",
+        "url": "http://www-01.ibm.com/support/docview.wss?uid=ssg1S1004846"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM Storwize: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2023-10-17T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:00:14.697+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2704",
+      "initial_release_date": "2014-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2014-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2014-09-10T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2023-10-17T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von IBM aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM SAN Volume Controller < 7.2.0.8",
+            "product": {
+              "name": "IBM SAN Volume Controller < 7.2.0.8",
+              "product_id": "T030670",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:san_volume_controller:7.2.0.8"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Storwize V3500",
+            "product": {
+              "name": "IBM Storwize V3500",
+              "product_id": "T002778",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:ibm:storwize_v3500:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Storwize V3700",
+            "product": {
+              "name": "IBM Storwize V3700",
+              "product_id": "T002779",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:ibm:storwize_v3700:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Storwize V5000",
+            "product": {
+              "name": "IBM Storwize V5000",
+              "product_id": "T002780",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:ibm:storwize_v5000:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Storwize V7000",
+            "product": {
+              "name": "IBM Storwize V7000",
+              "product_id": "T002781",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:ibm:storwize_v7000:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2014-4811",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In IBM Storwize besteht eine Schwachstelle, welche zur Erweiterung von Privilegien ausgenutzt werden kann. Diese Schwachstelle wird dadurch verursacht, dass das \"administrator superuser\" Passwort ohne vorherige Authentisierung auf den Standartwert zurückgesetzt werden kann. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002780",
+          "T002781",
+          "T002778",
+          "T002779",
+          "T030670"
+        ]
+      },
+      "release_date": "2014-09-10T22:00:00.000+00:00",
+      "title": "CVE-2014-4811"
+    }
+  ]
+}

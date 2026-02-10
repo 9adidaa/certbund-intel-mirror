@@ -1,0 +1,241 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "RSA BSAFE ist eine Sicherheitssoftware, die Entwicklern ermöglicht weitreichende Sicherheitsziele ihrer Applikationen zu erreichen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in RSA BSAFE ausnutzen, um einen Denial of Service Angriff durchzuführen, vertrauliche Daten einzusehen oder die Kryptographie zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0283 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2018/wid-sec-w-2024-0283.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0283 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0283"
+      },
+      {
+        "category": "external",
+        "summary": "Meldung auf der fulldisclosure Mailing Liste vom 2018-08-28",
+        "url": "http://seclists.org/fulldisclosure/2018/Aug/46"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-070 vom 2024-02-03",
+        "url": "https://www.dell.com/support/kbdoc/000221770/dsa-2024-="
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "RSA BSAFE: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:04:48.803+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0283",
+      "initial_release_date": "2018-08-28T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2018-08-28T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2024-02-04T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "EMC Avamar",
+            "product": {
+              "name": "EMC Avamar",
+              "product_id": "T014381",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:emc:avamar:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "EMC"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "RSA BSAFE < 4.0.5.3",
+                "product": {
+                  "name": "RSA BSAFE < 4.0.5.3",
+                  "product_id": "T012686",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:rsa:bsafe_micro_edition_suite:4.0.5.3"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "RSA BSAFE < 4.0.11",
+                "product": {
+                  "name": "RSA BSAFE < 4.0.11",
+                  "product_id": "T012687",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:rsa:bsafe_micro_edition_suite:4.0.11"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "RSA BSAFE < 4.1.6.1",
+                "product": {
+                  "name": "RSA BSAFE < 4.1.6.1",
+                  "product_id": "T012688",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:rsa:bsafe_micro_edition_suite:4.1.6.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "BSAFE"
+          }
+        ],
+        "category": "vendor",
+        "name": "RSA"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-11054",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Integer Überlauf Schwachstelle in RSA BSAFE. Ein entfernter anonymer Angreifer kann speziell bearbeitete ASN.1-Daten an ein betroffenes System übermitteln, um einen Denial of Service zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2018-08-28T22:00:00.000+00:00",
+      "title": "CVE-2018-11054"
+    },
+    {
+      "cve": "CVE-2018-11055",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in RSA BSAFE im Zusammenhang mit dem unsachgemäßen Löschen von Heap-Speicher vor der Freigabe ('Heap Inspection'). Ein lokaler Angreifer kann dies Schwachstelle ausnutzen, um Zugriff auf nicht autorisierte Daten zu erhalten."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2018-08-28T22:00:00.000+00:00",
+      "title": "CVE-2018-11055"
+    },
+    {
+      "cve": "CVE-2018-11056",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in RSA BSAFE beim Parsen von ASN.1-Daten. Ein entfernter anonymer Angreifer kann mit Hilfe speziell bearbeiteter ASN.1-Daten den Stackspeicher komplett auslasten und somit einen Denial of Service verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2018-08-28T22:00:00.000+00:00",
+      "title": "CVE-2018-11056"
+    },
+    {
+      "cve": "CVE-2018-11057",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in RSA BSAFE. Ein entfernter anonymer Angreifer kann eine Covert Timing Channel-Schwachstelle während der RSA-Entschlüsselung ausnutzen, um den RSA-Schlüssel zu rekonstruieren (Bleichenbacher-Angriff)."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2018-08-28T22:00:00.000+00:00",
+      "title": "CVE-2018-11057"
+    },
+    {
+      "cve": "CVE-2018-11058",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in RSA BSAFE. Ein entfernter anonymer Angreifer kann diese Buffer Over-Read-Schwachstelle beim Parsen von ASN.1 Daten ausnutzen, um einen Denial of Service zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381"
+        ]
+      },
+      "release_date": "2018-08-28T22:00:00.000+00:00",
+      "title": "CVE-2018-11058"
+    }
+  ]
+}

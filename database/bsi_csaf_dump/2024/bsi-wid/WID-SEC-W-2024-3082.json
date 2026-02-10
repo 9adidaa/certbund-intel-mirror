@@ -1,0 +1,912 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Apache Commons ist ein Apache-Projekt, das alle Aspekte der wiederverwendbaren Java-Komponenten behandelt.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Apache Commons IO ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3082 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3082.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3082 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3082"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-10-03",
+        "url": "https://github.com/advisories/GHSA-78wr-2p64-hpwj"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugtracker #2316271 vom 2024-10-03",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2316271"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2024-5D581B2365 vom 2024-10-04",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2024-5d581b2365"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7172522 vom 2024-10-08",
+        "url": "https://www.ibm.com/support/pages/node/7172522"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2024:14387-1 vom 2024-10-09",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/JRY5QEEISAVBMYG363PQWMMY2EMLEE5E/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:3596-1 vom 2024-10-11",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-October/019590.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:9571 vom 2024-11-13",
+        "url": "https://access.redhat.com/errata/RHSA-2024:9571"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7176463 vom 2024-11-19",
+        "url": "https://www.ibm.com/support/pages/node/7176463"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7176963 vom 2024-11-22",
+        "url": "https://www.ibm.com/support/pages/node/7176963"
+      },
+      {
+        "category": "external",
+        "summary": "HCL Article KB0117576 vom 2024-12-04",
+        "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0117576"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7176903 vom 2024-12-05",
+        "url": "https://www.ibm.com/support/pages/node/7176903"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7178253 vom 2024-12-09",
+        "url": "https://www.ibm.com/support/pages/node/7178253"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7179125 vom 2024-12-17",
+        "url": "https://www.ibm.com/support/pages/node/7179125"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7181897 vom 2025-01-29",
+        "url": "https://www.ibm.com/support/pages/node/7181897"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20250131-0010 vom 2025-01-31",
+        "url": "https://security.netapp.com/advisory/ntap-20250131-0010/"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7182808 vom 2025-02-07",
+        "url": "https://www.ibm.com/support/pages/node/7182808"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7183676 vom 2025-02-27",
+        "url": "https://www.ibm.com/support/pages/node/7183676"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2025:2416 vom 2025-03-05",
+        "url": "https://access.redhat.com/errata/RHSA-2025:2416"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7230121 vom 2025-04-04",
+        "url": "https://www.ibm.com/support/pages/node/7230121"
+      },
+      {
+        "category": "external",
+        "summary": "Trellix 2025 Update 5 Release Notes vom 2025-06-25",
+        "url": "https://docs.trellix.com/bundle/epolicy-orchestrator-saas-release-notes/page/UUID-bdfa33f8-426e-ec2b-a46a-a50c7743b530.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS2-2025-2927 vom 2025-07-10",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS2-2025-2927.html"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7241589 vom 2025-08-06",
+        "url": "https://www.ibm.com/support/pages/node/7241589"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7248128 vom 2025-10-16",
+        "url": "https://www.ibm.com/support/pages/node/7248128"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7249276 vom 2025-10-27",
+        "url": "https://www.ibm.com/support/pages/node/7249276"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7252914 vom 2025-11-27",
+        "url": "https://www.ibm.com/support/pages/node/7252914"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-047 vom 2026-01-17",
+        "url": "https://www.dell.com/support/kbdoc/000415880"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apache Commons IO: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2026-01-18T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-01-19T10:47:44.831+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-3082",
+      "initial_release_date": "2024-10-03T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-03T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-10-07T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-10-09T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2024-10-13T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-11-13T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-11-18T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-11-24T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-12-04T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von HCL aufgenommen"
+        },
+        {
+          "date": "2024-12-05T23:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-12-09T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-12-16T23:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-01-28T23:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-02-02T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von NetApp aufgenommen"
+        },
+        {
+          "date": "2025-02-09T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von IBM und IBM-APAR aufgenommen"
+        },
+        {
+          "date": "2025-02-27T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-03-05T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2025-04-03T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-06-24T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates aufgenommen"
+        },
+        {
+          "date": "2025-07-10T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2025-07-13T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Doppelte Eintragung bereinigt"
+        },
+        {
+          "date": "2025-08-06T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-10-16T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-10-27T23:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-11-27T23:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-12-17T23:00:00.000+00:00",
+          "number": "25",
+          "summary": "Referenz(en) aufgenommen:"
+        },
+        {
+          "date": "2026-01-18T23:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "26"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "IO <2.14.0",
+                "product": {
+                  "name": "Apache Commons IO <2.14.0",
+                  "product_id": "T037949"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "IO 2.14.0",
+                "product": {
+                  "name": "Apache Commons IO 2.14.0",
+                  "product_id": "T037949-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:commons:io__2.14.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "IO >=2.0",
+                "product": {
+                  "name": "Apache Commons IO >=2.0",
+                  "product_id": "T037950"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "IO >=2.0",
+                "product": {
+                  "name": "Apache Commons IO >=2.0",
+                  "product_id": "T037950-fixed"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Commons"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apache"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.2.0.0",
+                "product": {
+                  "name": "Dell ECS <4.2.0.0",
+                  "product_id": "T050081"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.2.0.0",
+                "product": {
+                  "name": "Dell ECS 4.2.0.0",
+                  "product_id": "T050081-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:dell:ecs:4.2.0.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ECS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Fedora Linux",
+            "product": {
+              "name": "Fedora Linux",
+              "product_id": "74185",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:fedoraproject:fedora:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<9.1.17.0",
+                "product": {
+                  "name": "HCL Commerce <9.1.17.0",
+                  "product_id": "T039584"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.1.17.0",
+                "product": {
+                  "name": "HCL Commerce 9.1.17.0",
+                  "product_id": "T039584-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hcltechsw:commerce:9.1.17.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Commerce"
+          }
+        ],
+        "category": "vendor",
+        "name": "HCL"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM App Connect Enterprise",
+            "product": {
+              "name": "IBM App Connect Enterprise",
+              "product_id": "T032495",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:app_connect_enterprise:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<24.0.0-IF004",
+                "product": {
+                  "name": "IBM Business Automation Workflow <24.0.0-IF004",
+                  "product_id": "T040915"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "24.0.0-IF004",
+                "product": {
+                  "name": "IBM Business Automation Workflow 24.0.0-IF004",
+                  "product_id": "T040915-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:business_automation_workflow:24.0.0-if004"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<21.0.3-IF039",
+                "product": {
+                  "name": "IBM Business Automation Workflow <21.0.3-IF039",
+                  "product_id": "T040916"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "21.0.3-IF039",
+                "product": {
+                  "name": "IBM Business Automation Workflow 21.0.3-IF039",
+                  "product_id": "T040916-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:business_automation_workflow:21.0.3-if039"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Business Automation Workflow"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<12.0.4 IF2",
+                "product": {
+                  "name": "IBM Cognos Analytics <12.0.4 IF2",
+                  "product_id": "T041469"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12.0.4 IF2",
+                "product": {
+                  "name": "IBM Cognos Analytics 12.0.4 IF2",
+                  "product_id": "T041469-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:cognos_analytics:12.0.4_if2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<11.2.4 IF4",
+                "product": {
+                  "name": "IBM Cognos Analytics <11.2.4 IF4",
+                  "product_id": "T041470"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.2.4 IF4",
+                "product": {
+                  "name": "IBM Cognos Analytics 11.2.4 IF4",
+                  "product_id": "T041470-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:cognos_analytics:11.2.4_if4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cognos Analytics"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "9",
+                "product": {
+                  "name": "IBM InfoSphere Identity Insight 9.0",
+                  "product_id": "723109",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_identity_insight:9.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.1",
+                "product": {
+                  "name": "IBM InfoSphere Identity Insight 9.1",
+                  "product_id": "T024310",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_identity_insight:9.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10",
+                "product": {
+                  "name": "IBM InfoSphere Identity Insight 10.0",
+                  "product_id": "T024311",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_identity_insight:10.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "InfoSphere Identity Insight"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "11.7",
+                "product": {
+                  "name": "IBM InfoSphere Information Server 11.7",
+                  "product_id": "444803",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_information_server:11.7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "InfoSphere Information Server"
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Integration Bus",
+            "product": {
+              "name": "IBM Integration Bus",
+              "product_id": "T039654",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:integration_bus:for_zos"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Operational Decision Manager",
+            "product": {
+              "name": "IBM Operational Decision Manager",
+              "product_id": "T005180",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:operational_decision_manager:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "IBM QRadar SIEM",
+                "product": {
+                  "name": "IBM QRadar SIEM",
+                  "product_id": "T021415",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<7.5.0 UP13",
+                "product": {
+                  "name": "IBM QRadar SIEM <7.5.0 UP13",
+                  "product_id": "T045828"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.5.0 UP13",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5.0 UP13",
+                  "product_id": "T045828-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5.0_up13"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8.5",
+                "product": {
+                  "name": "IBM SPSS 8.5",
+                  "product_id": "T038507",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:spss:8.5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SPSS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "IBM Tivoli Netcool/OMNIbus",
+                "product": {
+                  "name": "IBM Tivoli Netcool/OMNIbus",
+                  "product_id": "T004181",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:tivoli_netcool%2fomnibus:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "WebGUI <8.1.0 Fix Pack 34",
+                "product": {
+                  "name": "IBM Tivoli Netcool/OMNIbus WebGUI <8.1.0 Fix Pack 34",
+                  "product_id": "T039247"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "WebGUI 8.1.0 Fix Pack 34",
+                "product": {
+                  "name": "IBM Tivoli Netcool/OMNIbus WebGUI 8.1.0 Fix Pack 34",
+                  "product_id": "T039247-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:tivoli_netcool%2fomnibus:webgui__8.1.0_fix_pack_34"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Tivoli Netcool/OMNIbus"
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Tivoli Network Manager",
+            "product": {
+              "name": "IBM Tivoli Network Manager",
+              "product_id": "T012578",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:tivoli_network_manager:ip_edition"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "NetApp ActiveIQ Unified Manager",
+            "product": {
+              "name": "NetApp ActiveIQ Unified Manager",
+              "product_id": "T016960",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:netapp:active_iq_unified_manager:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Streams 2",
+                "product": {
+                  "name": "Red Hat JBoss A-MQ Streams 2",
+                  "product_id": "T041596",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:jboss_amq:streams_2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "JBoss A-MQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2025 Update 5",
+                "product": {
+                  "name": "Trellix ePolicy Orchestrator <2025 Update 5",
+                  "product_id": "T044835"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2025 Update 5",
+                "product": {
+                  "name": "Trellix ePolicy Orchestrator 2025 Update 5",
+                  "product_id": "T044835-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:trellix:epolicy_orchestrator:2025_update_5"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ePolicy Orchestrator"
+          }
+        ],
+        "category": "vendor",
+        "name": "Trellix"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-47554",
+      "product_status": {
+        "known_affected": [
+          "67646",
+          "T012578",
+          "T038507",
+          "T039654",
+          "T021415",
+          "T044835",
+          "T005180",
+          "T041469",
+          "398363",
+          "T040916",
+          "T040915",
+          "T037949",
+          "T050081",
+          "T045828",
+          "T016960",
+          "74185",
+          "T039247",
+          "T032495",
+          "723109",
+          "T039584",
+          "T041470",
+          "T002207",
+          "444803",
+          "T024311",
+          "T027843",
+          "T024310",
+          "T004181",
+          "T041596"
+        ]
+      },
+      "release_date": "2024-10-03T22:00:00.000+00:00",
+      "title": "CVE-2024-47554"
+    }
+  ]
+}

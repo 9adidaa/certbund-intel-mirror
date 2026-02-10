@@ -1,0 +1,185 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "WithSecure Endpoint Protection bezeichnet eine Produktfamilie von Sicherheitslösungen für Endpoints verschiedener Betriebssysteme.\r\nF-Secure ist ein Hersteller einer Vielzahl von Antivirusprodukten für Client und Server.\r\nInternet Gatekeeper ist eine Anti-Virus Lösung für Internetgateways und E-Mail-Server.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer oder lokaler Angreifer kann mehrere Schwachstellen in WithSecure Endpoint Protection, F-Secure Linux Security und F-Secure Internet Gatekeeper ausnutzen, um einen Denial of Service Angriff durchzuführen oder seine Rechte zu erweitern.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0606 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0606.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0606 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0606"
+      },
+      {
+        "category": "external",
+        "summary": "WithSecure Security Advisory vom 2023-03-08",
+        "url": "https://www.withsecure.com/en/support/security-advisories/cve-2023-nnn4"
+      },
+      {
+        "category": "external",
+        "summary": "WithSecure Security Advisory vom 2023-03-08",
+        "url": "https://www.withsecure.com/en/support/security-advisories/cve-2023-nnn3"
+      },
+      {
+        "category": "external",
+        "summary": "WithSecure Security Advisory vom 2023-03-08",
+        "url": "https://www.withsecure.com/en/support/security-advisories/cve-2023-nnn1"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "WithSecure Produkte: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-09-21T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:46:23.415+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0606",
+      "initial_release_date": "2023-03-08T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-08T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-09-21T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE's ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "F-Secure Internet Gatekeeper",
+            "product": {
+              "name": "F-Secure Internet Gatekeeper",
+              "product_id": "T020553",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f-secure:internet_gatekeeper:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "F-Secure Linux Security",
+            "product": {
+              "name": "F-Secure Linux Security",
+              "product_id": "T004062",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f-secure:linux_security:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "F-Secure"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "WithSecure Endpoint Protection",
+            "product": {
+              "name": "WithSecure Endpoint Protection",
+              "product_id": "T026237",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:withsecure:endpoint_protection:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "WithSecure"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-43766",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in WithSecure Endpoint Protection, F-Secure Linux Security und F-Secure Internet Gatekeeper. Ein Problem im \"lhz archive unpack Handler\" ermöglicht die Umgehung einer Schutzfunktion. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um seine Rechte zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T020553",
+          "T026237",
+          "T004062"
+        ]
+      },
+      "release_date": "2023-03-08T23:00:00.000+00:00",
+      "title": "CVE-2023-43766"
+    },
+    {
+      "cve": "CVE-2023-43767",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in WithSecure Endpoint Protection, F-Secure Linux Security und F-Secure Internet Gatekeeper. Unter bestimmten Umständen kann der \"aerdl.dll unpacker Handler\" oder der \"aepack archive unpack Handler\" zum Absturz gebracht werden. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T020553",
+          "T026237",
+          "T004062"
+        ]
+      },
+      "release_date": "2023-03-08T23:00:00.000+00:00",
+      "title": "CVE-2023-43767"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die GNU libc ist die Basis C Bibliothek unter Linux sowie anderen Unix-Betriebssystemen, welche die Systemaufrufe sowie Basisfunktionalität bereitstellt.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann eine Schwachstelle in GNU libc ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0295 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0295.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0295 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0295"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:1718-2 vom 2023-04-27",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-April/014620.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:1718-1 vom 2023-03-31",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-March/014292.html"
+      },
+      {
+        "category": "external",
+        "summary": "Github Advisory Database vom 2023-02-06",
+        "url": "https://github.com/advisories/GHSA-5r4p-4pqv-gqhw"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GNU libc: Schwachstelle ermöglicht nicht spezifizierten Angriff",
+    "tracking": {
+      "current_release_date": "2023-04-27T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:43:07.913+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0295",
+      "initial_release_date": "2023-02-06T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-02-06T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-04-02T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2023-04-27T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source GNU libc < 2.38",
+            "product": {
+              "name": "Open Source GNU libc < 2.38",
+              "product_id": "T026163",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:gnu:glibc:2.38"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-0687",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In GNU libc existiert eine Schwachstelle, die noch nicht im Detail beschrieben und veröffentlicht wurde. Der Fehler besteht aufgrund eines Pufferüberlaufs und betrifft die Funktion __monstartup in der Datei gmon.c der Komponente Call Graph Monitor. Ein Angreifer aus dem angrenzenden Netzwerk kann diese Schwachstelle ausnutzen, um nicht spezifizierte Auswirkungen zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T002207"
+        ]
+      },
+      "release_date": "2023-02-06T23:00:00.000+00:00",
+      "title": "CVE-2023-0687"
+    }
+  ]
+}

@@ -1,0 +1,912 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "BIND (Berkeley Internet Name Domain) ist ein Open-Source-Softwarepaket, das einen Domain-Name-System-Server implementiert.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Internet Systems Consortium BIND ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1182 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2015/wid-sec-w-2025-1182.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1182 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1182"
+      },
+      {
+        "category": "external",
+        "summary": "Meldung von Marcin Siodelski auf der oss-sec Mailing Liste vom 2015-09-02",
+        "url": "http://seclists.org/oss-sec/2015/q3/483"
+      },
+      {
+        "category": "external",
+        "summary": "ISC Knowledge Base AA-01287 vom 2015-09-02",
+        "url": "https://kb.isc.org/article/AA-01287"
+      },
+      {
+        "category": "external",
+        "summary": "ISC Knowledge Base AA-01291 vom 2015-09-02",
+        "url": "https://kb.isc.org/article/AA-01291"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2015:1481-1 vom 2015-09-02:",
+        "url": "http://lists.opensuse.org/opensuse-security-announce/2015-09/msg00006.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update  SUSE-SU-2015:1480-1 vom 2015-09-02:",
+        "url": "http://lists.opensuse.org/opensuse-security-announce/2015-09/msg00005.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2015:1705-1 vom 2015-09-03",
+        "url": "https://rhn.redhat.com/errata/RHSA-2015-1705.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2015:1706-1 vom 2015-09-03",
+        "url": "https://rhn.redhat.com/errata/RHSA-2015-1706.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2015:1707-1 vom 2015-09-03",
+        "url": "https://rhn.redhat.com/errata/RHSA-2015-1707.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-2728-1 vom 2015-09-02:",
+        "url": "http://www.ubuntu.com/usn/usn-2728-1/"
+      },
+      {
+        "category": "external",
+        "summary": "FreeBSD Security Advisory FreeBSD-SA-15:23.bind vom 2015-09-02",
+        "url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-15:23.bind.asc"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-3350 vom 2015-09-02",
+        "url": "https://www.debian.org/security/2015/dsa-3350"
+      },
+      {
+        "category": "external",
+        "summary": "CESA-2015:1706 Important CentOS 5 bind Security Update",
+        "url": "http://permalink.gmane.org/gmane.linux.centos.announce/9366"
+      },
+      {
+        "category": "external",
+        "summary": "CESA-2015:1705 Important CentOS 7 bind Security Update",
+        "url": "http://permalink.gmane.org/gmane.linux.centos.announce/9368"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2015:1496-1 vom 2015-09-07",
+        "url": "http://www.auscert.org.au/render.html?it=25758"
+      },
+      {
+        "category": "external",
+        "summary": "Bind 9.10.3 Release Notes",
+        "url": "ftp://ftp.isc.org/isc/bind9/9.10.3/RELEASE-NOTES.bind-9.10.3.html"
+      },
+      {
+        "category": "external",
+        "summary": "Release Notes für BIND Version 9.9.8",
+        "url": "ftp://ftp.isc.org/isc/bind9/9.9.8/RELEASE-NOTES.bind-9.9.8.html"
+      },
+      {
+        "category": "external",
+        "summary": "HP SECURITY BULLETIN HPSBUX03511 SSRT102248 rev.1",
+        "url": "http://h20564.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c04800156"
+      },
+      {
+        "category": "external",
+        "summary": "IBM SECURITY ADVISORY vom 2015-11-03",
+        "url": "http://aix.software.ibm.com/aix/efixes/security/bind_advisory9.asc"
+      },
+      {
+        "category": "external",
+        "summary": "HP SECURITY BULLETIN c04891218 vom 2015-11-19",
+        "url": "https://h20564.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c04891218"
+      },
+      {
+        "category": "external",
+        "summary": "HP Security Bulletin HPSBUX03529 vom 2015-12-16",
+        "url": "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04923105"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2016:0227-1 vom 2016-01-25",
+        "url": "https://www.suse.com/support/update/announcement/2016/suse-su-20160227-1.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2016:0078 vom 2016-01-29",
+        "url": "https://rhn.redhat.com/errata/RHSA-2016-0078.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2016:0079 vom 2016-01-29",
+        "url": "https://rhn.redhat.com/errata/RHSA-2016-0079.html"
+      },
+      {
+        "category": "external",
+        "summary": "HP Security Bulletin HPSBNS03585 vom 2016-04-26",
+        "url": "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05095918"
+      },
+      {
+        "category": "external",
+        "summary": "F5 Security Advisory SOL17181 vom 2015-11-06",
+        "url": "http://support.f5.com/kb/en-us/solutions/public/17000/100/sol17181.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2022-9117 vom 2022-02-03",
+        "url": "https://linux.oracle.com/errata/ELSA-2022-9117.html"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2025-213 vom 2025-05-30",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000326299/dsa-2025-213-security-update-for-dell-avamar-dell-networker-virtual-edition-nve-and-dell-powerprotect-dp-series-appliance-dell-integrated-data-protection-appliance-idpa-multiple-third-party-vulnerabilities"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Internet Systems Consortium BIND: Mehrere Schwachstellen ermöglichen Denial of Service",
+    "tracking": {
+      "current_release_date": "2025-05-29T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-05-30T10:54:52.968+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.12"
+        }
+      },
+      "id": "WID-SEC-W-2025-1182",
+      "initial_release_date": "2015-09-02T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2015-09-02T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2015-09-02T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2015-09-03T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-03T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-03T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2015-09-06T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-15T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-15T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-21T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-21T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2015-09-21T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-09-21T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2015-11-11T23:00:00.000+00:00",
+          "number": "13",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2015-11-11T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2015-11-11T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2015-12-16T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-01-25T23:00:00.000+00:00",
+          "number": "17",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-01-28T23:00:00.000+00:00",
+          "number": "18",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-04-25T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-04-25T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2016-09-01T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "New remediations available"
+        },
+        {
+          "date": "2016-09-01T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2022-02-03T23:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2025-05-29T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "24"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell Avamar",
+            "product": {
+              "name": "Dell Avamar",
+              "product_id": "T039664",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:dell:avamar:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Dell NetWorker",
+            "product": {
+              "name": "Dell NetWorker",
+              "product_id": "T034583",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:dell:networker:virtual"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "F5 BIG-IP",
+            "product": {
+              "name": "F5 BIG-IP",
+              "product_id": "T001663",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:big-ip:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "F5 Enterprise Manager",
+            "product": {
+              "name": "F5 Enterprise Manager",
+              "product_id": "T000125",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:enterprise_manager:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "F5"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "9.x",
+                "product": {
+                  "name": "FreeBSD Project FreeBSD OS 9.x",
+                  "product_id": "4035",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:freebsd:freebsd:-"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "FreeBSD OS"
+          }
+        ],
+        "category": "vendor",
+        "name": "FreeBSD Project"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "HPE HP-UX",
+            "product": {
+              "name": "HPE HP-UX",
+              "product_id": "4871",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:hp:hp-ux:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "HPE NonStop Server",
+            "product": {
+              "name": "HPE NonStop Server",
+              "product_id": "4918",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:hp:nonstop_server:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "HPE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "IBM AIX",
+            "product": {
+              "name": "IBM AIX",
+              "product_id": "5094",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:ibm:aix:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "9.10.2-P4",
+                "product": {
+                  "name": "Internet Systems Consortium BIND 9.10.2-P4",
+                  "product_id": "T005899",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:isc:bind:9.10.2-p4"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.9.7-P3",
+                "product": {
+                  "name": "Internet Systems Consortium BIND 9.9.7-P3",
+                  "product_id": "T005900",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:isc:bind:9.9.7-p3"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "9.0.0 ->9.8.8",
+                "product": {
+                  "name": "Internet Systems Consortium BIND 9.0.0 ->9.8.8",
+                  "product_id": "T005901"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.0.0 -9.8.8",
+                "product": {
+                  "name": "Internet Systems Consortium BIND 9.0.0 -9.8.8",
+                  "product_id": "T005901-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:isc:bind:9.8.8"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "BIND"
+          }
+        ],
+        "category": "vendor",
+        "name": "Internet Systems Consortium"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source CentOS",
+            "product": {
+              "name": "Open Source CentOS",
+              "product_id": "1727",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:centos:centos:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "5",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Server 5",
+                  "product_id": "74289",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:5::server"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Server 7",
+                  "product_id": "T003303",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:7"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Server 6",
+                  "product_id": "T005895",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "5",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Desktop 5",
+                  "product_id": "T000180",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_desktop:5"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Desktop 6",
+                  "product_id": "T000223",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_desktop:6"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Desktop 7",
+                  "product_id": "T003551",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_desktop:7::desktop"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux Desktop"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "6",
+                "product": {
+                  "name": "Red Hat Enterprise Linux HPC Node 6",
+                  "product_id": "T000395",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_hpc_node:6"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7",
+                "product": {
+                  "name": "Red Hat Enterprise Linux HPC Node 7",
+                  "product_id": "T003549",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_hpc_node:7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux HPC Node"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "6",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Workstation 6",
+                  "product_id": "T000396",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_workstation:6"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Workstation 5",
+                  "product_id": "T000622",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_workstation:5"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Workstation 7",
+                  "product_id": "T003565",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux_workstation:7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux Workstation"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "11-SP3",
+                "product": {
+                  "name": "SUSE Linux Enterprise Desktop 11-SP3",
+                  "product_id": "T002224",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_desktop:11:sp3"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "SUSE Linux Enterprise Desktop 12",
+                  "product_id": "T003855",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_desktop:12"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11-SP4",
+                "product": {
+                  "name": "SUSE Linux Enterprise Desktop 11-SP4",
+                  "product_id": "T005444",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_desktop:11_sp4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Linux Enterprise Desktop"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "11-SP4",
+                "product": {
+                  "name": "SUSE Linux Enterprise Server 11-SP4",
+                  "product_id": "T005583",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_server:11-sp4"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11-SP2-LTSS",
+                "product": {
+                  "name": "SUSE Linux Enterprise Server 11-SP2-LTSS",
+                  "product_id": "T005896",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_server:11-sp2-ltss"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11-SP3",
+                "product": {
+                  "name": "SUSE Linux Enterprise Server 11-SP3",
+                  "product_id": "T005897",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_server:11-sp3"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "SUSE Linux Enterprise Server 12",
+                  "product_id": "T005898",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:linux_enterprise_server:12"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Linux Enterprise Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "12.04 LTS",
+                "product": {
+                  "name": "Ubuntu Linux 12.04 LTS",
+                  "product_id": "170497",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:canonical:ubuntu_linux:12.04:-:lts"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14.04 LTS",
+                "product": {
+                  "name": "Ubuntu Linux 14.04 LTS",
+                  "product_id": "T003005",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:canonical:ubuntu_linux:14.04:-:lts"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.04",
+                "product": {
+                  "name": "Ubuntu Linux 15.04",
+                  "product_id": "T004961",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:canonical:ubuntu_linux:15.04"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2015-5722",
+      "product_status": {
+        "known_affected": [
+          "T005444",
+          "T003565",
+          "4035",
+          "4871",
+          "T003005",
+          "T003303",
+          "T005901",
+          "T034583",
+          "T005900",
+          "T003549",
+          "T004914",
+          "T001663",
+          "T000396",
+          "T000395",
+          "T005583",
+          "T000180",
+          "T003551",
+          "T005895",
+          "T004961",
+          "T005897",
+          "T005896",
+          "T005899",
+          "T005898",
+          "74289",
+          "T003855",
+          "5094",
+          "T039664",
+          "170497",
+          "4918",
+          "2951",
+          "T000622",
+          "T000125",
+          "T000223",
+          "T002224",
+          "1727"
+        ]
+      },
+      "release_date": "2015-09-02T22:00:00.000+00:00",
+      "title": "CVE-2015-5722"
+    },
+    {
+      "cve": "CVE-2015-5986",
+      "product_status": {
+        "known_affected": [
+          "4035",
+          "T005899",
+          "T034583",
+          "T005900",
+          "T004914",
+          "T039664"
+        ]
+      },
+      "release_date": "2015-09-02T22:00:00.000+00:00",
+      "title": "CVE-2015-5986"
+    }
+  ]
+}

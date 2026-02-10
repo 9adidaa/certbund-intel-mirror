@@ -1,0 +1,267 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "QNAP ist ein Hersteller von NAS (Network Attached Storage) Lösungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentifizierter Angreifer kann mehrere Schwachstellen in QNAP NAS ausnutzen, um Dateien zu manipulieren, beliebigen Code auszuführen oder Cross-Site Scripting Angriffe durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Hardware Appliance",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1195 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1195.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1195 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1195"
+      },
+      {
+        "category": "external",
+        "summary": "watchTowr Labs Report vom 2024-05-20",
+        "url": "https://labs.watchtowr.com/qnap-qts-qnapping-at-the-wheel-cve-2024-27130-and-friends/"
+      },
+      {
+        "category": "external",
+        "summary": "watchTowr Labs CVE-2024-27130 PoC vom 2024-05-20",
+        "url": "https://github.com/watchtowrlabs/CVE-2024-27130"
+      },
+      {
+        "category": "external",
+        "summary": "QNAP Security Advisory QSA-24-23 vom 2024-05-21",
+        "url": "https://www.qnap.com/go/security-advisory/qsa-24-23"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "QNAP NAS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-05-21T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:09:19.799+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1195",
+      "initial_release_date": "2024-05-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-05-21T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von QNAP aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "QTS",
+                "product": {
+                  "name": "QNAP NAS QTS",
+                  "product_id": "T034926",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:qnap:nas:qts"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "QTS <5.1.7.2770 build 20240520",
+                "product": {
+                  "name": "QNAP NAS QTS <5.1.7.2770 build 20240520",
+                  "product_id": "T034938"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "QuTS hero <h5.1.7.2770 build 20240520",
+                "product": {
+                  "name": "QNAP NAS QuTS hero <h5.1.7.2770 build 20240520",
+                  "product_id": "T034939"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NAS"
+          }
+        ],
+        "category": "vendor",
+        "name": "QNAP"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-21902",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in QNAP NAS. Dieser Fehler wird durch eine fehlende Prüfung verursacht, die es ermöglicht, Systemprotokolle anzuzeigen oder zu löschen. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um Dateien zu manipulieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2024-21902"
+    },
+    {
+      "cve": "CVE-2024-27127",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In QNAP NAS besteht eine Schwachstelle aufgrund eines Double-Free in \"utilRequest.cgi\" in Verbindung mit der Funktion \"delete_share\". Ein Angreifer kann diese Schwachstelle ausnutzen, um nicht näher spezifizierte Auswirkungen zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2024-27127"
+    },
+    {
+      "cve": "CVE-2024-27128",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in QNAP NAS. Sie werden durch einen Stack-Überlauf und unsichere Verwendungen der Funktion \"strcpy\" verursacht. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2024-27128"
+    },
+    {
+      "cve": "CVE-2024-27129",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in QNAP NAS. Sie werden durch einen Stack-Überlauf und unsichere Verwendungen der Funktion \"strcpy\" verursacht. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2024-27129"
+    },
+    {
+      "cve": "CVE-2024-27130",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in QNAP NAS. Sie werden durch einen Stack-Überlauf und unsichere Verwendungen der Funktion \"strcpy\" verursacht. Ein entfernter, authentifizierter Angreifer kann diese Schwachstellen zur Ausführung von beliebigem Code ausnutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2024-27130"
+    },
+    {
+      "cve": "CVE-2024-27131",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in QNAP NAS im Zusammenhang mit \"x-forwarded-for\" Headern verursacht. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um Logdaten zu fälschen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00",
+      "title": "CVE-2024-27131"
+    },
+    {
+      "notes": [
+        {
+          "category": "description",
+          "text": "In QNAP NAS existieren mehrere Cross-Site Scripting Schwachstellen. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstellen beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034939",
+          "T034938",
+          "T034926"
+        ]
+      },
+      "release_date": "2024-05-20T22:00:00.000+00:00"
+    }
+  ]
+}

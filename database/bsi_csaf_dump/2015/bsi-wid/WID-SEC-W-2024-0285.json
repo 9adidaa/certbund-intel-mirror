@@ -1,0 +1,223 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "RSA BSAFE ist eine Sicherheitssoftware, die Entwicklern ermöglicht weitreichende Sicherheitsziele ihrer Applikationen zu erreichen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in RSA BSAFE ausnutzen, um Sicherheitsvorkehrungen zu umgehen, einen Denial of Service Angriff oder weiter Angriffe mit nicht spezifizierten Auswirkungen durchführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0285 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2015/wid-sec-w-2024-0285.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0285 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0285"
+      },
+      {
+        "category": "external",
+        "summary": "EMC Security Advisory ESA-2015-081 vom 2015-08-20",
+        "url": "http://seclists.org/bugtraq/2015/Aug/att-84/ESA-2015-081.txt"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-070 vom 2024-02-03",
+        "url": "https://www.dell.com/support/kbdoc/000221770/dsa-2024-="
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "RSA BSAFE: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-02-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:04:49.231+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0285",
+      "initial_release_date": "2015-08-20T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2015-08-20T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initial Release"
+        },
+        {
+          "date": "2015-08-20T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Version nicht vorhanden"
+        },
+        {
+          "date": "2024-02-04T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Dell aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "EMC Avamar",
+            "product": {
+              "name": "EMC Avamar",
+              "product_id": "T014381",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:emc:avamar:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "EMC"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RSA BSAFE",
+            "product": {
+              "name": "RSA BSAFE",
+              "product_id": "T005813",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:rsa:bsafe_micro_edition_suite:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RSA"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2015-0533",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in verschiedenen Komponenten von RSA BSAFE. Ein Angreifer kann dieses ausnutzen und einen SSL Handshake bei Nutzung einer \"ephemeral ECDH ciphersuite\" durchzuführen. Zur erfolgreichen Ausnutzung dieser Schwachstelle ist eine Benutzeraktivität erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381",
+          "T005813"
+        ]
+      },
+      "release_date": "2015-08-20T22:00:00.000+00:00",
+      "title": "CVE-2015-0533"
+    },
+    {
+      "cve": "CVE-2015-0534",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in verschiedenen Komponenten von RSA BSAFE. Ein Angreifer kann die Schwachstelle ausnutzen und Kodierungen des Fingerprints eines Zertifikats verändern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381",
+          "T005813"
+        ]
+      },
+      "release_date": "2015-08-20T22:00:00.000+00:00",
+      "title": "CVE-2015-0534"
+    },
+    {
+      "cve": "CVE-2015-0535",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in verschiedenen Komponenten von RSA BSAFE. Ein Angreifer kann kann einen RSA-to-EXPORT_RSA Downgrade durchführen und so die Sicherheit der Verbindung schwächen. Zur erfolgreichen Ausnutzung dieser Schwachstelle muss der Angreifer den Benutzer dazu bringen einen manipulierten Server zu kontaktieren."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381",
+          "T005813"
+        ]
+      },
+      "release_date": "2015-08-20T22:00:00.000+00:00",
+      "title": "CVE-2015-0535"
+    },
+    {
+      "cve": "CVE-2015-0536",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Komponenten von RSA BSAFE. Ein Angreifer kann diese durch Übermitteln einer ClientKeyExchange Message der Länge Null nutzen, wenn Client Authentication und die \"Ephemeral Diffie-Hellman Cipher Suites\" genutzt werden.."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381",
+          "T005813"
+        ]
+      },
+      "release_date": "2015-08-20T22:00:00.000+00:00",
+      "title": "CVE-2015-0536"
+    },
+    {
+      "cve": "CVE-2015-0537",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in RSA BSAFE Komponenten. Die Schwachstelle beruht auf einem Pufferüberlauf in der base64-decoding Implementierung. Ein Angreifer kann diese zu einem Denial of Service Angriff oder zu anderen nicht spezifizierten Auswirkungen nutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T014381",
+          "T005813"
+        ]
+      },
+      "release_date": "2015-08-20T22:00:00.000+00:00",
+      "title": "CVE-2015-0537"
+    }
+  ]
+}

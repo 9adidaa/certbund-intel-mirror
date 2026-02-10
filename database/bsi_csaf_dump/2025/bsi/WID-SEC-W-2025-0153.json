@@ -1,0 +1,176 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Arista Extensible Operating System (EOS) ist ein modulares Linux basiertes Netzwerkbetriebssystem.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Arista EOS ausnutzen, um einen Denial of Service zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-0153 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-0153.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-0153 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0153"
+      },
+      {
+        "category": "external",
+        "summary": "Arista Security Advisory vom 2025-01-21",
+        "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/21092-security-advisory-0110"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Arista EOS: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2025-01-21T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-01-22T12:13:49.100+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2025-0153",
+      "initial_release_date": "2025-01-21T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-01-21T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.32.3M",
+                "product": {
+                  "name": "Arista EOS <4.32.3M",
+                  "product_id": "T039305"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.32.3M",
+                "product": {
+                  "name": "Arista EOS 4.32.3M",
+                  "product_id": "T039305-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.32.3m"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<4.30.9M",
+                "product": {
+                  "name": "Arista EOS <4.30.9M",
+                  "product_id": "T040529"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.30.9M",
+                "product": {
+                  "name": "Arista EOS 4.30.9M",
+                  "product_id": "T040529-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.30.9m"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<4.29.10M",
+                "product": {
+                  "name": "Arista EOS <4.29.10M",
+                  "product_id": "T040530"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.29.10M",
+                "product": {
+                  "name": "Arista EOS 4.29.10M",
+                  "product_id": "T040530-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.29.10m"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Arista"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-9135",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in Arista EOS. Sie tritt auf, wenn der BGP Link State konfiguriert is. Flapping eines BGP-Peers kann zu einem Speicherleck im BGP-Agent führen, was zum Abbruch der BGP-Routing-Verarbeitung und zur Instabilität der Route führt. Ein entfernter, anonymer Angreifer kann so Netzwerkrouten destabilisieren oder die BGP-Routing-Verarbeitung komplett lahmlegen, was zu einem Denial of Service führt."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T040529",
+          "T039305",
+          "T040530"
+        ]
+      },
+      "release_date": "2025-01-21T23:00:00.000+00:00",
+      "title": "CVE-2024-9135"
+    }
+  ]
+}

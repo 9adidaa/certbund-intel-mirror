@@ -1,0 +1,210 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "IBM QRadar Security Information and Event Management (SIEM) bietet Unterstützung bei der Erkennung und Priorisierung von Sicherheitsbedrohungen im Unternehmen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in IBM QRadar SIEM ausnutzen, um Phishing-Angriffe durchzuführen, Sicherheitsmaßnahmen zu umgehen, beliebigen Code auszuführen oder vertrauliche Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0858 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0858.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0858 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0858"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin vom 2024-04-14",
+        "url": "https://www.ibm.com/support/pages/node/7148190"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7159781 vom 2024-07-08",
+        "url": "https://www.ibm.com/support/pages/node/7159781"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "IBM QRadar SIEM: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-11-20T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-21T09:04:22.276+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-0858",
+      "initial_release_date": "2024-04-14T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-04-14T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-07-08T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-11-20T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Korrektur"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "2.32.1",
+                "product": {
+                  "name": "IBM QRadar SIEM 2.32.1",
+                  "product_id": "T034114",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:2.32.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Deployment Intelligence App <3.0.14",
+                "product": {
+                  "name": "IBM QRadar SIEM Deployment Intelligence App <3.0.14",
+                  "product_id": "T035903"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Deployment Intelligence App 3.0.14",
+                "product": {
+                  "name": "IBM QRadar SIEM Deployment Intelligence App 3.0.14",
+                  "product_id": "T035903-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:3.0.14::deployment_intelligence_app"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QRadar SIEM"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-26159",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM QRadar SIEM. Dieser Fehler besteht in der Komponente \"follow-redirects\" aufgrund eines offenen Umleitungsproblems, das es ermöglicht, einen Benutzer auf beliebige Websites umzuleiten. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Phishing-Angriff durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035903"
+        ]
+      },
+      "release_date": "2024-04-14T22:00:00.000+00:00",
+      "title": "CVE-2023-26159"
+    },
+    {
+      "cve": "CVE-2023-42282",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM QRadar SIEM. Dieser Fehler besteht im Node.js IP-Paket aufgrund eines serverseitigen Request Forgery-Problems in der Funktion ip.isPublic(). Durch das Senden einer speziell gestalteten Anfrage, die eine hexadezimale Darstellung einer privaten IP-Adresse verwendet, kann ein Angreifer diese Schwachstelle ausnutzen, um beliebigen Code auf dem System auszuführen und vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035903"
+        ]
+      },
+      "release_date": "2024-04-14T22:00:00.000+00:00",
+      "title": "CVE-2023-42282"
+    },
+    {
+      "cve": "CVE-2023-44270",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM QRadar SIEM. Dieser Fehler besteht in der Komponente PostCSS aufgrund einer unsachgemäßen Eingabevalidierung. Durch die Verwendung eines speziell gestalteten externen Cascading Style Sheets (CSS) kann ein entfernter, anonymer Angreifer diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035903"
+        ]
+      },
+      "release_date": "2024-04-14T22:00:00.000+00:00",
+      "title": "CVE-2023-44270"
+    },
+    {
+      "cve": "CVE-2024-28849",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in IBM QRadar SIEM. Dieser Fehler besteht im Node.js-Modul \"follow-redirects\" aufgrund eines unzulässigen Autorisierungs-Header-Clearings. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035903"
+        ]
+      },
+      "release_date": "2024-04-14T22:00:00.000+00:00",
+      "title": "CVE-2024-28849"
+    }
+  ]
+}

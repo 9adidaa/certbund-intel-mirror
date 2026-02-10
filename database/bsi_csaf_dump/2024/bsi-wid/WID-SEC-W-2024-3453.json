@@ -1,0 +1,294 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzeugen oder einen Cross-Site-Scripting-Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3453 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3453.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3453 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3453"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Patch Release: 17.5.2, 17.4.4, 17.3.7 vom 2024-11-12",
+        "url": "https://about.gitlab.com/releases/2024/11/13/patch-release-gitlab-17-5-2-released/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2025-02-06T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-02-07T09:05:28.795+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3453",
+      "initial_release_date": "2024-11-12T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-12T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-14T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "CVE ergänzt"
+        },
+        {
+          "date": "2025-02-06T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<17.5.2",
+                "product": {
+                  "name": "Open Source GitLab <17.5.2",
+                  "product_id": "T039125"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.5.2",
+                "product": {
+                  "name": "Open Source GitLab 17.5.2",
+                  "product_id": "T039125-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.5.2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.4.4",
+                "product": {
+                  "name": "Open Source GitLab <17.4.4",
+                  "product_id": "T039126"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.4.4",
+                "product": {
+                  "name": "Open Source GitLab 17.4.4",
+                  "product_id": "T039126-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.4.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.3.7",
+                "product": {
+                  "name": "Open Source GitLab <17.3.7",
+                  "product_id": "T039127"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.3.7",
+                "product": {
+                  "name": "Open Source GitLab 17.3.7",
+                  "product_id": "T039127-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:17.3.7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-10240",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2024-10240"
+    },
+    {
+      "cve": "CVE-2024-7404",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2024-7404"
+    },
+    {
+      "cve": "CVE-2024-8180",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2024-8180"
+    },
+    {
+      "cve": "CVE-2024-8648",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2024-8648"
+    },
+    {
+      "cve": "CVE-2024-9633",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2024-9633"
+    },
+    {
+      "cve": "CVE-2024-9693",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2024-9693"
+    },
+    {
+      "cve": "CVE-2025-1072",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in GitLab. Diese Fehler exitieren in mehreren Komponenten wie dem Kubernetes-Cluster-Agenten, dem Device OAuth oder den Analytics-Dashboards, unter anderem aufgrund mehrerer sicherheitsrelevanter Probleme wie einer HTML-Injektion, einer falschen Eingabevalidierung oder einer falschen Authentifizierung und mehr. Ein entfernter Angreifer kann diese Schwachstellen ausnutzen, um seine Privilegien zu erhöhen, vertrauliche Informationen offenzulegen, einen Denial-of-Service-Zustand zu erzaugen oder einen Cross-Site-Scripting-Angriff durchzuführen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T039127",
+          "T039126",
+          "T039125"
+        ]
+      },
+      "release_date": "2024-11-12T23:00:00.000+00:00",
+      "title": "CVE-2025-1072"
+    }
+  ]
+}

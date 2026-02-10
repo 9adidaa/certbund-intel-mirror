@@ -1,0 +1,181 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "XWiki ist eine Open-Source-Wiki-Software-Plattform, für die Erstellung und Verwaltung von Wikis und Knowledge-Management-Systemen",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann Schwachstellen in xwiki ausnutzen, um eine SQL Injection durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Sonstiges\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-1643 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-1643.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-1643 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1643"
+      },
+      {
+        "category": "external",
+        "summary": "XWiki GitHub Security Advisory GHSA-vr59-gm53-v7cq vom 2025-07-24",
+        "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-vr59-gm53-v7cq"
+      },
+      {
+        "category": "external",
+        "summary": "XWiki GitHub Security Advisory GHSA-p9qm-p942-q3w5",
+        "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-p9qm-p942-q3w5"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub vom 2025-07-28",
+        "url": "https://github.com/byteReaper77/CVE-2025-32429"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "xwiki: Mehrere Schwachstelle ermöglicht eine SQL Injection",
+    "tracking": {
+      "current_release_date": "2025-07-28T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-07-29T05:44:32.508+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-1643",
+      "initial_release_date": "2025-07-24T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-07-24T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2025-07-27T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2025-22764"
+        },
+        {
+          "date": "2025-07-28T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "PoC aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<17.3.0-rc-1",
+                "product": {
+                  "name": "Open Source xwiki <17.3.0-rc-1",
+                  "product_id": "T045652"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.3.0-rc-1",
+                "product": {
+                  "name": "Open Source xwiki 17.3.0-rc-1",
+                  "product_id": "T045652-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:17.3.0-rc-1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<16.10.6",
+                "product": {
+                  "name": "Open Source xwiki <16.10.6",
+                  "product_id": "T045654"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "16.10.6",
+                "product": {
+                  "name": "Open Source xwiki 16.10.6",
+                  "product_id": "T045654-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:open_source:xwiki:16.10.6"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "xwiki"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-32429",
+      "product_status": {
+        "known_affected": [
+          "T045654",
+          "T045652"
+        ]
+      },
+      "release_date": "2025-07-24T22:00:00.000+00:00",
+      "title": "CVE-2025-32429"
+    },
+    {
+      "cve": "CVE-2025-54385",
+      "product_status": {
+        "known_affected": [
+          "T045654",
+          "T045652"
+        ]
+      },
+      "release_date": "2025-07-24T22:00:00.000+00:00",
+      "title": "CVE-2025-54385"
+    }
+  ]
+}

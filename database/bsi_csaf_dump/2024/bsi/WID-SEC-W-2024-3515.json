@@ -1,0 +1,262 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Kubernetes ist ein Werkzeug zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von containerisierten Anwendungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Kubernetes ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3515 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3515.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3515 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3515"
+      },
+      {
+        "category": "external",
+        "summary": "Seclist Security dvisory vom 2024-11-20",
+        "url": "https://seclists.org/oss-sec/2024/q4/109"
+      },
+      {
+        "category": "external",
+        "summary": "Google Cloud Platform Security Bulletin GCP-2024-061 vom 2024-11-25",
+        "url": "https://cloud.google.com/support/bulletins#gcp-2024-061"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7185402 vom 2025-03-29",
+        "url": "https://www.ibm.com/support/pages/node/7185402"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit auf GitHub vom 2025-09-07",
+        "url": "https://github.com/mrk336/CVE-2024-10220-Kubernetes-gitRepo-Volume-Vulnerability"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Kubernetes (kubelet): Schwachstelle ermöglicht Codeausführung",
+    "tracking": {
+      "current_release_date": "2025-09-07T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-09-08T06:56:07.823+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-3515",
+      "initial_release_date": "2024-11-20T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-20T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-25T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Google aufgenommen"
+        },
+        {
+          "date": "2025-03-30T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-09-07T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Exploit aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Google Cloud Platform",
+            "product": {
+              "name": "Google Cloud Platform",
+              "product_id": "393401",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:google:cloud_platform:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "11.7",
+                "product": {
+                  "name": "IBM InfoSphere Information Server 11.7",
+                  "product_id": "444803",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:infosphere_information_server:11.7"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "InfoSphere Information Server"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "kubelet <v1.31.0",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet <v1.31.0",
+                  "product_id": "T039354"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kubelet v1.31.0",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet v1.31.0",
+                  "product_id": "T039354-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:kubelet__v1.31.0"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "kubelet <v1.30.3",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet <v1.30.3",
+                  "product_id": "T039355"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kubelet v1.30.3",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet v1.30.3",
+                  "product_id": "T039355-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:kubelet__v1.30.3"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "kubelet <v1.29.7",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet <v1.29.7",
+                  "product_id": "T039356"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kubelet v1.29.7",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet v1.29.7",
+                  "product_id": "T039356-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:kubelet__v1.29.7"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "kubelet <v1.28.12",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet <v1.28.12",
+                  "product_id": "T039357"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "kubelet v1.28.12",
+                "product": {
+                  "name": "Open Source Kubernetes kubelet v1.28.12",
+                  "product_id": "T039357-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kubernetes:kubernetes:kubelet__v1.28.12"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Kubernetes"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-10220",
+      "product_status": {
+        "known_affected": [
+          "444803",
+          "393401",
+          "T039355",
+          "T039354",
+          "T039357",
+          "T039356"
+        ]
+      },
+      "release_date": "2024-11-20T23:00:00.000+00:00",
+      "title": "CVE-2024-10220"
+    }
+  ]
+}

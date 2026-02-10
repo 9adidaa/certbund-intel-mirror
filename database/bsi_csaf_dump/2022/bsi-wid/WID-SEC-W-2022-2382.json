@@ -1,0 +1,179 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Avira Internet Security Suite ist ein Antivirenprodukt zur Entdeckung und Verhinderung der Ausführung von Schadcode.\r\nAvast ist ein Antivirus Produkt.\r\nAVG Anti-Virus ist eine Lösung zum Schutz vor Computerviren.\r\nNorton AntiVirus ist ein Antivirenprogramm.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Avira Internet Security Suite, Avast Antivirus, AVG Anti-Virus und Norton Antivirus ausnutzen, um seine Privilegien zu erhöhen und um einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2382 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2382.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2382 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2382"
+      },
+      {
+        "category": "external",
+        "summary": "Norton Security Advisories vom 2022-12-20",
+        "url": "https://support.norton.com/sp/static/external/tools/security-advisories.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Norton Antivirus-Produkte: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2022-12-20T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:40:17.636+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-2382",
+      "initial_release_date": "2022-12-20T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-12-20T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "AVG Anti-Virus < 22.10",
+            "product": {
+              "name": "AVG Anti-Virus < 22.10",
+              "product_id": "T025671",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:avg:anti-virus:22.10::windows"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "AVG"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Avast Antivirus < 22.10",
+            "product": {
+              "name": "Avast Antivirus < 22.10",
+              "product_id": "T025498",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:avast:avast_antivirus_free:22.10"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Avast"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Avira Internet Security Suite for Windows < 1.1.78",
+            "product": {
+              "name": "Avira Internet Security Suite for Windows < 1.1.78",
+              "product_id": "T025670",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:avira:premium_security_suite:1.1.78::windows"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Avira"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Norton Antivirus Windows Eraser Engine < 119.1.5.1",
+            "product": {
+              "name": "Norton Antivirus Windows Eraser Engine < 119.1.5.1",
+              "product_id": "T025673",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:norton:antivirus:119.1.5.1::windows_eraser_engine"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Norton"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-4429",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es gibt eine Schwachstelle in Avira Internet Security Suite, Avast Antivirus, AVG Anti-Virus und Norton Antivirus. Sie ist auf ein \"unquoted service path\" Problem zurückzuführen. Ein lokaler Angreifer mit bestimmten Rechten kann dies ausnutzen, um einen Denial of Service-Zustand herbeizuführen."
+        }
+      ],
+      "release_date": "2022-12-20T23:00:00.000+00:00",
+      "title": "CVE-2022-4429"
+    },
+    {
+      "cve": "CVE-2022-4294",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine nicht näher beschriebene Schwachstelle in Avira Internet Security Suite, Avast Antivirus, AVG Anti-Virus und Norton Antivirus. Ein lokaler Angreifer kann dadurch seine Privilegien erhöhen."
+        }
+      ],
+      "release_date": "2022-12-20T23:00:00.000+00:00",
+      "title": "CVE-2022-4294"
+    }
+  ]
+}

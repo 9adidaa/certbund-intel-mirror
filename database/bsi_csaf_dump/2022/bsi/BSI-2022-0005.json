@@ -1,0 +1,307 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Daniel Szameitat"
+        ],
+        "organization": "E.ON Pentesting",
+        "summary": "finding and reporting the vulnerabilities"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "As a content provider, BSI is responsible under general law for its own content distributed for use. However, it remains your responsibility to carefully check usage and/or implementation of information provided with the content.",
+        "title": "Legal disclaimer"
+      },
+      {
+        "category": "summary",
+        "text": "E.ON Pentesting Team has found several vulnerabilities in the firmware of GE Grid Solution's MS 3000. These include an unprotected and open debug service, web service access without authentication or encryption and directory traversal.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "The MS 3000 is an online condition monitoring and expert system for transformers. It includes a web-based interface as well as a wide range of communication protocols (including IEC 61850).",
+        "title": "Product description"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "BSI-2022-0005 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/bsi-2022-0005.json"
+      },
+      {
+        "category": "external",
+        "summary": "GE Grid Solutions advisory - GES-2021-011",
+        "url": "https://www.gegridsolutions.com/app/viewfiles.aspx?prod=ms3000&type=21"
+      },
+      {
+        "category": "external",
+        "summary": "GE Grid Solutions - Product page",
+        "url": "https://www.gegridsolutions.com/md/catalog/ms3000.htm"
+      }
+    ],
+    "title": "Multiple Vulnerabilities in GE MS 3000",
+    "tracking": {
+      "aliases": [
+        "GES-2021-011"
+      ],
+      "current_release_date": "2022-11-02T21:00:00.000Z",
+      "generator": {
+        "date": "2022-11-02T20:56:53.444Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.0.0"
+        }
+      },
+      "id": "BSI-2022-0005",
+      "initial_release_date": "2022-11-02T21:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-11-02T21:00:00.000Z",
+          "number": "1",
+          "summary": "Initial version."
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "MS 3000",
+            "product": {
+              "name": "GE Grid Solutions MS 3000",
+              "product_id": "CSAFPID-0001"
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.7.6.25p0_3.2.2.17p0_4.7p0",
+                "product": {
+                  "name": "GE Grid Solutions MS 3000 firmware <3.7.6.25p0_3.2.2.17p0_4.7p0",
+                  "product_id": "CSAFPID-0002"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.7.6.25p0_3.2.2.17p0_4.7p0",
+                "product": {
+                  "name": "GE Grid Solutions MS 3000 firmware 3.7.6.25p0_3.2.2.17p0_4.7p0",
+                  "product_id": "CSAFPID-0003"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MS 3000 firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "GE Grid Solutions"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "GE Grid Solutions MS 3000 firmware <3.7.6.25p0_3.2.2.17p0_4.7p0 installed on GE Grid Solutions MS 3000",
+          "product_id": "CSAFPID-0004"
+        },
+        "product_reference": "CSAFPID-0002",
+        "relates_to_product_reference": "CSAFPID-0001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "GE Grid Solutions MS 3000 firmware 3.7.6.25p0_3.2.2.17p0_4.7p0 installed on GE Grid Solutions MS 3000",
+          "product_id": "CSAFPID-0005"
+        },
+        "product_reference": "CSAFPID-0003",
+        "relates_to_product_reference": "CSAFPID-0001"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-43975",
+      "cwe": {
+        "id": "CWE-23",
+        "name": "Relative Path Traversal"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A vulnerability in the web server allows arbitrary files and configurations to be read via directory traversal over TCP port 8888.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0005"
+        ],
+        "known_affected": [
+          "CSAFPID-0004"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to the latest firmware version, at least 3.7.6.25p0_3.2.2.17p0_4.7p0.",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0004"
+          ]
+        }
+      ],
+      "title": "Directory Traversal Vulnerability in the Web Server"
+    },
+    {
+      "cve": "CVE-2022-43976",
+      "cwe": {
+        "id": "CWE-288",
+        "name": "Authentication Bypass Using an Alternate Path or Channel"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Direct access to the API is possible on TCP port 8888 via programs located in the cgi-bin folder without any authentication.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0005"
+        ],
+        "known_affected": [
+          "CSAFPID-0004"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to the latest firmware version, at least 3.7.6.25p0_3.2.2.17p0_4.7p0.",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 8.3,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0004"
+          ]
+        }
+      ],
+      "title": "Web Service Access Without Authentication and Encryption"
+    },
+    {
+      "cve": "CVE-2022-43977",
+      "cwe": {
+        "id": "CWE-1244",
+        "name": "Internal Asset Exposed to Unsafe Debug Access Level or State"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The debug port accessible via TCP (a qconn service) lacks access control.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0005"
+        ],
+        "known_affected": [
+          "CSAFPID-0004"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to the latest firmware version, at least 3.7.6.25p0_3.2.2.17p0_4.7p0.",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 10,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "CHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0004"
+          ]
+        }
+      ],
+      "title": "Unprotected and Open qconn Service"
+    }
+  ]
+}

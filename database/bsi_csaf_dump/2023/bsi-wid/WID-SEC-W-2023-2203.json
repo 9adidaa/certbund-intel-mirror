@@ -1,0 +1,203 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Ein Switch ist ein aktives Netzwerkgerät, das Datenpakete auf dem Data Link Layer (Layer 2) des OSI-Modells weiterleitet.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter anonymer Angreifer kann mehrere Schwachstellen in Aruba Switch ausnutzen, um einen Cross-Site-Scripting-Angriff zu starten, einen Denial-of-Service-Zustand zu verursachen und beliebigen Code als privilegierter Benutzer auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-2203 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-2203.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-2203 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-2203"
+      },
+      {
+        "category": "external",
+        "summary": "HPE SecurityBulletin",
+        "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-hpesbnw04533en_us"
+      },
+      {
+        "category": "external",
+        "summary": "Proof of Concept für CVE-2023-39266",
+        "url": "https://cybir.com/2022/cve/layer7mattersatlayer2-coolhandluke/"
+      },
+      {
+        "category": "external",
+        "summary": "HPE Aruba Networking Product Security Advisory vom 2023-08-29",
+        "url": "https://www.arubanetworks.com/security-advisory/arubaos-switch-switches-multiple-vulnerabilities/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Aruba Switch: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2023-08-30T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:57:47.243+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-2203",
+      "initial_release_date": "2023-08-29T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-08-29T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2023-08-30T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von HP aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Aruba ArubaOS",
+            "product": {
+              "name": "Aruba ArubaOS",
+              "product_id": "T016785",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:arubanetworks:arubaos:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Aruba Switch",
+            "product": {
+              "name": "Aruba Switch",
+              "product_id": "T029625",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:arubanetworks:switch:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Aruba"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "HPE Switch Aruba",
+            "product": {
+              "name": "HPE Switch Aruba",
+              "product_id": "T029645",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:hp:switch:aruba"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "HPE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-39268",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Aruba Switch. Dieser Fehler ist auf eine Speicherbeschädigung zurückzuführen. Ein entfernter Angreifer kann beliebigen Code als privilegierter Benutzer des zugrunde liegenden Betriebssystems ausführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T029625",
+          "T029645",
+          "T016785"
+        ]
+      },
+      "release_date": "2023-08-29T22:00:00.000+00:00",
+      "title": "CVE-2023-39268"
+    },
+    {
+      "cve": "CVE-2023-39267",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Aruba Switch. Dieser Fehler besteht in der Befehlszeilenschnittstelle. Ein entfernter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T029625",
+          "T029645",
+          "T016785"
+        ]
+      },
+      "release_date": "2023-08-29T22:00:00.000+00:00",
+      "title": "CVE-2023-39267"
+    },
+    {
+      "cve": "CVE-2023-39266",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Aruba Switch wurde eine Cross-Site Scripting-Schwachstelle festgestellt. Dieses Problem wird durch eine unsachgemäße Filterung der vom Benutzer bereitgestellten Daten in der Webverwaltungsschnittstelle vor der Anzeige der Eingaben verursacht. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Skriptcode im Sicherheitskontext einer betroffenen Site auszuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T029625",
+          "T029645",
+          "T016785"
+        ]
+      },
+      "release_date": "2023-08-29T22:00:00.000+00:00",
+      "title": "CVE-2023-39266"
+    }
+  ]
+}

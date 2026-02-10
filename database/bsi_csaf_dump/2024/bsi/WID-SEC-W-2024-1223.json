@@ -1,0 +1,182 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Snort ist ein freies Network Intrusion Prevention System (NIPS) und ein Network Intrusion Detection System (NIDS) der Firma Sourcefire.\r\nFirepower ist eine Firewall-Plattform von Cisco\r\nCisco Internetwork Operating System (IOS) ist ein Betriebssystem, das für Cisco Geräte wie z. B. Router und Switches eingesetzt wird.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Snort, Cisco Firepower und Cisco IOS XE ausnutzen, um Sicherheitsvorkehrungen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1223 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1223.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1223 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1223"
+      },
+      {
+        "category": "external",
+        "summary": "Cisco Security Advisory cisco-sa-snort3-ips-bypass-uE69KBMd vom 2024-05-22",
+        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-ips-bypass-uE69KBMd"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Mehrere Cisco-Produkte: Schwachstelle ermöglicht Umgehung von Sicherheitsmaßnahmen",
+    "tracking": {
+      "current_release_date": "2024-05-22T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:09:29.131+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-1223",
+      "initial_release_date": "2024-05-22T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-05-22T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Cisco Firepower",
+                "product": {
+                  "name": "Cisco Firepower",
+                  "product_id": "T035024",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:firepower:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Threat Defense Software",
+                "product": {
+                  "name": "Cisco Firepower Threat Defense Software",
+                  "product_id": "T035025",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cisco:firepower:threat_defense_software"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firepower"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<17.12.3",
+                "product": {
+                  "name": "Cisco IOS XE <17.12.3",
+                  "product_id": "T035028"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.13.1",
+                "product": {
+                  "name": "Cisco IOS XE <17.13.1",
+                  "product_id": "T035029"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "IOS XE"
+          }
+        ],
+        "category": "vendor",
+        "name": "Cisco"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.1.69.0",
+                "product": {
+                  "name": "Open Source Snort <3.1.69.0",
+                  "product_id": "T035027"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Snort"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-20363",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Snort, Cisco Firepower und Cisco IOS XE. Dieser Fehler besteht in der Regel-Engine des Snort Intrusion Prevention Systems (IPS) aufgrund einer fehlerhaften Behandlung von HTTP-Paketen. Durch das Senden von manipulierten HTTP-Paketen kann ein entfernter, anonymer Angreifer diese Schwachstelle ausnutzen, um die konfigurierten IPS-Regeln zu umgehen und somit die Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T035025",
+          "T035024"
+        ]
+      },
+      "release_date": "2024-05-22T22:00:00.000+00:00",
+      "title": "CVE-2024-20363"
+    }
+  ]
+}

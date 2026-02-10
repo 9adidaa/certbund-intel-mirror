@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "ManageEngine ServiceDesk Plus ist eine Helpdesk- und Asset-Management-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann eine Schwachstelle in Zoho ManageEngine ServiceDesk Plus ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1915 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1915.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1915 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1915"
+      },
+      {
+        "category": "external",
+        "summary": "ManageEngine Security Advisory CVE-2024-41150 vom 2024-08-22",
+        "url": "https://www.manageengine.com/products/service-desk/CVE-2024-41150.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Zoho ManageEngine ServiceDesk Plus: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2024-08-22T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-23T09:34:48.718+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-1915",
+      "initial_release_date": "2024-08-22T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-08-22T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<14820",
+                "product": {
+                  "name": "Zoho ManageEngine ServiceDesk Plus <14820",
+                  "product_id": "T037050"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "14820",
+                "product": {
+                  "name": "Zoho ManageEngine ServiceDesk Plus 14820",
+                  "product_id": "T037050-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zohocorp:servicedesk_plus:14820"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "MSP <14810",
+                "product": {
+                  "name": "Zoho ManageEngine ServiceDesk Plus MSP <14810",
+                  "product_id": "T037051"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "MSP 14810",
+                "product": {
+                  "name": "Zoho ManageEngine ServiceDesk Plus MSP 14810",
+                  "product_id": "T037051-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:zohocorp:servicedesk_plus:msp__14810"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ManageEngine ServiceDesk Plus"
+          }
+        ],
+        "category": "vendor",
+        "name": "Zoho"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-41150",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Zoho ManageEngine ServiceDesk Plus existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037051",
+          "T037050"
+        ]
+      },
+      "release_date": "2024-08-22T22:00:00.000+00:00",
+      "title": "CVE-2024-41150"
+    }
+  ]
+}

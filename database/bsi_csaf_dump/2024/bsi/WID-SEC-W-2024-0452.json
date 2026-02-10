@@ -1,0 +1,128 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "PostgreSQL ist eine frei verfügbare Datenbank für unterschiedliche Betriebssysteme.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in PostgreSQL ausnutzen, um seine Privilegien zu erhöhen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0452 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0452.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0452 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0452"
+      },
+      {
+        "category": "external",
+        "summary": "Google Security Research GitHub vom 2024-02-21",
+        "url": "https://github.com/google/security-research/security/advisories/GHSA-r7m9-grw7-vcc4"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "PostgreSQL: Schwachstelle ermöglicht Privilegieneskalation",
+    "tracking": {
+      "current_release_date": "2024-02-21T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:05:35.247+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0452",
+      "initial_release_date": "2024-02-21T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-02-21T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "3.2.1",
+                "product": {
+                  "name": "Open Source PostgreSQL 3.2.1",
+                  "product_id": "T033042",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:postgresql:postgresql:3.2.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PostgreSQL"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-1713",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in PostgreSQL. Dieser Fehler besteht in der PLV8-Komponente, die es ermöglicht, dass verzögerte Trigger während des Autovakuums als Superuser ausgeführt werden. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um seine Privilegien zu erweitern."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T033042"
+        ]
+      },
+      "release_date": "2024-02-21T23:00:00.000+00:00",
+      "title": "CVE-2024-1713"
+    }
+  ]
+}

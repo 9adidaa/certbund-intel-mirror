@@ -1,0 +1,180 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Firmware ist eine in die Geräte fest eingebettete Software, die dort grundlegende Funktionen leistet.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Intel UEFI Server Firmware ausnutzen, um seine Privilegien zu erhöhen und einen Denial-of-Service-Zustand zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2025-2552 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2552.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2025-2552 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2552"
+      },
+      {
+        "category": "external",
+        "summary": "Intel Security Advisory INTEL-SA-01378 vom 2025-11-11",
+        "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01378.html"
+      },
+      {
+        "category": "external",
+        "summary": "Lenovo Security Advisory LEN-207908 vom 2025-11-12",
+        "url": "https://support.lenovo.com/us/en/product_security/LEN-207908"
+      },
+      {
+        "category": "external",
+        "summary": "HP Security Bulletin HPESBHF04965 vom 2025-11-12",
+        "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbhf04965en_us&docLocale=en_US"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "UEFI Server Firmware (Xeon 6): Schwachstelle ermöglicht Privilegieneskalation und DoS",
+    "tracking": {
+      "current_release_date": "2025-11-11T23:00:00.000+00:00",
+      "generator": {
+        "date": "2025-11-12T07:02:35.876+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2025-2552",
+      "initial_release_date": "2025-11-11T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2025-11-11T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "HP Computer",
+            "product": {
+              "name": "HP Computer",
+              "product_id": "T048140",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:hp:computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "HP"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Xeon 6  processors  with E-cores",
+                "product": {
+                  "name": "Intel Firmware Xeon 6  processors  with E-cores",
+                  "product_id": "T048316",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:intel:firmware:xeon_6__processors__with_e-cores"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Xeon 6  processors  with P-cores",
+                "product": {
+                  "name": "Intel Firmware Xeon 6  processors  with P-cores",
+                  "product_id": "T048317",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:intel:firmware:xeon_6__processors__with_p-cores"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Intel"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Lenovo Computer",
+            "product": {
+              "name": "Lenovo Computer",
+              "product_id": "T036869",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:lenovo:computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Lenovo"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-30185",
+      "product_status": {
+        "known_affected": [
+          "T036869",
+          "T048317",
+          "T048316",
+          "T048140"
+        ]
+      },
+      "release_date": "2025-11-11T23:00:00.000+00:00",
+      "title": "CVE-2025-30185"
+    }
+  ]
+}

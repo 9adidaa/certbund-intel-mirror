@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Zyxel ist ein Hersteller von Netzwerkkomponenten, u.a. von Firewalls.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Zyxel Firewall ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- BIOS/Firmware",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-2233 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-2233.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-2233 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-2233"
+      },
+      {
+        "category": "external",
+        "summary": "Zyxel security advisory for XSS vulnerability in firewalls vom 2022-12-05",
+        "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-xss-vulnerability-in-firewalls"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Zyxel Firewall: Schwachstelle ermöglicht Cross-Site Scripting",
+    "tracking": {
+      "current_release_date": "2022-12-05T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:39:12.168+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-2233",
+      "initial_release_date": "2022-12-05T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-12-05T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Zyxel Firewall ATP < ZLD 5.32",
+                "product": {
+                  "name": "Zyxel Firewall ATP < ZLD 5.32",
+                  "product_id": "T025491",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:zyxel:firewall:atp__zld_5.32"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Zyxel Firewall USG Flex < ZLD 5.32",
+                "product": {
+                  "name": "Zyxel Firewall USG Flex < ZLD 5.32",
+                  "product_id": "T025492",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:zyxel:firewall:usg_flex__zld_5.32"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Zyxel Firewall VPN < ZLD 5.32",
+                "product": {
+                  "name": "Zyxel Firewall VPN < ZLD 5.32",
+                  "product_id": "T025493",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:zyxel:firewall:vpn__zld_5.32"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Zyxel Firewall ZyWALL < ZLD 4.73",
+                "product": {
+                  "name": "Zyxel Firewall ZyWALL < ZLD 4.73",
+                  "product_id": "T025494",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:zyxel:firewall:zywall__zld_4.73"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Firewall"
+          }
+        ],
+        "category": "vendor",
+        "name": "Zyxel"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-40603",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Zyxel Firewall existiert eine Cross-Site Scripting Schwachstelle. HTML und Script-Eingaben werden im CGI Programm nicht ordnungsgemäß überprüft, bevor sie an den Benutzer zurückgegeben werden. Ein entfernter, anonymer Angreifer kann durch Ausnutzung dieser Schwachstelle beliebigen HTML- und Script-Code durch den Browser des Benutzers im Kontext der betroffenen Seite ausführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "release_date": "2022-12-05T23:00:00.000+00:00",
+      "title": "CVE-2022-40603"
+    }
+  ]
+}

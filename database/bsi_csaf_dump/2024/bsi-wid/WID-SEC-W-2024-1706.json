@@ -1,0 +1,987 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Der Kernel stellt den Kern des Linux Betriebssystems dar.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann mehrere Schwachstellen in Linux Kernel ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-1706 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-1706.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-1706 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-1706"
+      },
+      {
+        "category": "external",
+        "summary": "OSS Security Mailing List vom 2024-07-24",
+        "url": "https://seclists.org/oss-sec/2024/q3/110"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12546 vom 2024-07-25",
+        "url": "http://linux.oracle.com/errata/ELSA-2024-12546.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12547 vom 2024-07-25",
+        "url": "http://linux.oracle.com/errata/ELSA-2024-12547.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12548 vom 2024-07-25",
+        "url": "http://linux.oracle.com/errata/ELSA-2024-12548.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12549 vom 2024-07-25",
+        "url": "http://linux.oracle.com/errata/ELSA-2024-12549.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12551 vom 2024-07-25",
+        "url": "http://linux.oracle.com/errata/ELSA-2024-12551.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12552 vom 2024-07-25",
+        "url": "http://linux.oracle.com/errata/ELSA-2024-12552.html"
+      },
+      {
+        "category": "external",
+        "summary": "ORACLE OVMSA-2024-0009 vom 2024-07-25",
+        "url": "https://oss.oracle.com/pipermail/oraclevm-errata/2024-July/001097.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12570 vom 2024-08-06",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12570.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12571 vom 2024-08-06",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12571.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2802-1 vom 2024-08-07",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019133.html"
+      },
+      {
+        "category": "external",
+        "summary": "ORACLE OVMSA-2024-0010 vom 2024-08-08",
+        "url": "https://oss.oracle.com/pipermail/oraclevm-errata/2024-August/001098.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5256 vom 2024-08-13",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5256"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-5747 vom 2024-08-12",
+        "url": "https://security-tracker.debian.org/tracker/DSA-5747-1"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5257 vom 2024-08-13",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5257"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12583 vom 2024-08-13",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12583.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12584 vom 2024-08-13",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12584.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12581 vom 2024-08-13",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12581.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12585 vom 2024-08-13",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12585.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2893-1 vom 2024-08-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019187.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASKERNEL-5.4-2024-080 vom 2024-08-13",
+        "url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.4-2024-080.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12582 vom 2024-08-13",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12582.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2896-1 vom 2024-08-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019185.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5281 vom 2024-08-13",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5281"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASKERNEL-5.10-2024-066 vom 2024-08-13",
+        "url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.10-2024-066.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2892-1 vom 2024-08-13",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019188.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2902-1 vom 2024-08-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019193.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2901-1 vom 2024-08-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019194.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2923-1 vom 2024-08-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019201.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2929-1 vom 2024-08-15",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019209.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2948-1 vom 2024-08-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019219.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2947-1 vom 2024-08-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019220.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2940-1 vom 2024-08-16",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019212.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5582 vom 2024-08-20",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5582"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2024:2973-1 vom 2024-08-20",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-August/019280.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5672 vom 2024-08-21",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5672"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5673 vom 2024-08-21",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5673"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASLIVEPATCH-2024-188 vom 2024-08-21",
+        "url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2024-188.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASLIVEPATCH-2024-186 vom 2024-08-21",
+        "url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2024-186.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASLIVEPATCH-2024-185 vom 2024-08-21",
+        "url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2024-185.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASLIVEPATCH-2024-187 vom 2024-08-21",
+        "url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2024-187.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASLIVEPATCH-2024-184 vom 2024-08-21",
+        "url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2024-184.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASLIVEPATCH-2024-183 vom 2024-08-21",
+        "url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2024-183.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:5858 vom 2024-08-26",
+        "url": "https://access.redhat.com/errata/RHSA-2024:5858"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-5928 vom 2024-08-29",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-5928.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6156 vom 2024-09-03",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6156"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6242 vom 2024-09-04",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6242"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6206 vom 2024-09-03",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6206"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6160 vom 2024-09-03",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6160"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6313 vom 2024-09-04",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6313"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6560 vom 2024-09-11",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6560"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6663 vom 2024-09-13",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6663"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:7001 vom 2024-09-24",
+        "url": "https://access.redhat.com/errata/RHSA-2024:7001"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:6992 vom 2024-09-24",
+        "url": "https://access.redhat.com/errata/RHSA-2024:6992"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-7000 vom 2024-09-26",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-7000.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:7429 vom 2024-10-01",
+        "url": "https://access.redhat.com/errata/RHSA-2024:7429"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2024:7001 vom 2024-09-30",
+        "url": "https://errata.build.resf.org/RLSA-2024:7001"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2024-422 vom 2024-10-10",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000234730/dsa-2024-422-security-update-for-dell-networker-vproxy-multiple-component-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12782 vom 2024-10-14",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12782.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12780 vom 2024-10-14",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12780.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:8318 vom 2024-10-23",
+        "url": "https://access.redhat.com/errata/RHSA-2024:8318"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7090-1 vom 2024-11-01",
+        "url": "https://ubuntu.com/security/notices/USN-7090-1"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7088-3 vom 2024-11-06",
+        "url": "https://ubuntu.com/security/notices/USN-7088-3"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7095-1 vom 2024-11-07",
+        "url": "https://ubuntu.com/security/notices/USN-7095-1"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7100-1 vom 2024-11-11",
+        "url": "https://ubuntu.com/security/notices/USN-7100-1"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7100-2 vom 2024-11-12",
+        "url": "https://ubuntu.com/security/notices/USN-7100-2"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2024-12815 vom 2024-11-13",
+        "url": "https://linux.oracle.com/errata/ELSA-2024-12815.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7089-4 vom 2024-11-13",
+        "url": "https://ubuntu.com/security/notices/USN-7089-4"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7088-5 vom 2024-11-14",
+        "url": "https://ubuntu.com/security/notices/USN-7088-5"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7089-5 vom 2024-11-14",
+        "url": "https://ubuntu.com/security/notices/USN-7089-5"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7089-6 vom 2024-11-15",
+        "url": "https://ubuntu.com/security/notices/USN-7089-6"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7089-7 vom 2024-11-20",
+        "url": "https://ubuntu.com/security/notices/USN-7089-7"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7119-1 vom 2024-11-20",
+        "url": "https://ubuntu.com/security/notices/USN-7119-1"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7176961 vom 2024-11-22",
+        "url": "https://www.ibm.com/support/pages/node/7176961"
+      },
+      {
+        "category": "external",
+        "summary": "F5 Security Advisory K000148830 vom 2024-12-04",
+        "url": "https://my.f5.com/manage/s/article/K000148830"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7144-1 vom 2024-12-09",
+        "url": "https://ubuntu.com/security/notices/USN-7144-1"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4008 vom 2025-01-03",
+        "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-7194-1 vom 2025-01-09",
+        "url": "https://ubuntu.com/security/notices/USN-7194-1"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7185244 vom 2025-03-10",
+        "url": "https://www.ibm.com/support/pages/node/7185244"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1213-1 vom 2025-04-14",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/64D5YFJLDESGQOR3OGPOEV5S4M3DYYAU/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1207-1 vom 2025-04-14",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/DECHNUXZTJLZSS6KYZ73PAZINXEFVAXW/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1257-1 vom 2025-04-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-April/020699.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1232-1 vom 2025-04-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-April/020692.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1231-1 vom 2025-04-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-April/020693.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1252-1 vom 2025-04-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-April/020696.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1254-1 vom 2025-04-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-April/020695.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1260-1 vom 2025-04-15",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/5C772I5KLAAUMXFCSPXGHE5ETFPZGIIY/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:1262-1 vom 2025-04-15",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/YQ5OGGLUK4JYNQDMHQJCE7NAM5KWAUQ6/"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:20008-1 vom 2025-06-04",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-June/021403.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2025:20028-1 vom 2025-06-04",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-June/021386.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2025-20480 vom 2025-07-18",
+        "url": "https://linux.oracle.com/errata/ELSA-2025-20480.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Linux Kernel: Mehrere Schwachstellen ermöglichen Denial of Service",
+    "tracking": {
+      "current_release_date": "2025-07-20T22:00:00.000+00:00",
+      "generator": {
+        "date": "2025-07-21T08:22:20.631+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.4.0"
+        }
+      },
+      "id": "WID-SEC-W-2024-1706",
+      "initial_release_date": "2024-07-24T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-07-24T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-07-25T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Oracle Linux und ORACLE aufgenommen"
+        },
+        {
+          "date": "2024-08-05T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-08-06T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-08-08T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von ORACLE aufgenommen"
+        },
+        {
+          "date": "2024-08-12T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Red Hat und Debian aufgenommen"
+        },
+        {
+          "date": "2024-08-13T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von SUSE, Amazon, Oracle Linux und Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-08-14T22:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-08-15T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-08-18T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2024-08-19T22:00:00.000+00:00",
+          "number": "11",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-08-20T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-08-21T22:00:00.000+00:00",
+          "number": "13",
+          "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2024-08-26T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-08-29T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-09-02T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-09-03T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-09-04T22:00:00.000+00:00",
+          "number": "18",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-09-10T22:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-09-12T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-09-23T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-09-25T22:00:00.000+00:00",
+          "number": "22",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-09-30T22:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Red Hat und Rocky Enterprise Software Foundation aufgenommen"
+        },
+        {
+          "date": "2024-10-09T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2024-10-14T22:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2024-10-23T22:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2024-11-03T23:00:00.000+00:00",
+          "number": "27",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-05T23:00:00.000+00:00",
+          "number": "28",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-06T23:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-11T23:00:00.000+00:00",
+          "number": "30",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-12T23:00:00.000+00:00",
+          "number": "31",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-14T23:00:00.000+00:00",
+          "number": "32",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-19T23:00:00.000+00:00",
+          "number": "33",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2024-11-24T23:00:00.000+00:00",
+          "number": "34",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2024-12-03T23:00:00.000+00:00",
+          "number": "35",
+          "summary": "Neue Updates von F5 aufgenommen"
+        },
+        {
+          "date": "2024-12-09T23:00:00.000+00:00",
+          "number": "36",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2025-01-02T23:00:00.000+00:00",
+          "number": "37",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2025-01-09T23:00:00.000+00:00",
+          "number": "38",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2025-03-10T23:00:00.000+00:00",
+          "number": "39",
+          "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2025-04-13T22:00:00.000+00:00",
+          "number": "40",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-04-14T22:00:00.000+00:00",
+          "number": "41",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-04-15T22:00:00.000+00:00",
+          "number": "42",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-06-04T22:00:00.000+00:00",
+          "number": "43",
+          "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2025-07-20T22:00:00.000+00:00",
+          "number": "44",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "44"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "F5 BIG-IP",
+            "product": {
+              "name": "F5 BIG-IP",
+              "product_id": "T001663",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:f5:big-ip:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "F5"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "IBM Security Guardium 12.0",
+                  "product_id": "T031092",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:security_guardium:12.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Security Guardium"
+          }
+        ],
+        "category": "vendor",
+        "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Linux Kernel",
+            "product": {
+              "name": "Open Source Linux Kernel",
+              "product_id": "T033208",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:linux:linux_kernel:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "SUSE Linux",
+                "product": {
+                  "name": "SUSE Linux",
+                  "product_id": "T002207",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:suse_linux:-"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SUSE Linux",
+                "product": {
+                  "name": "SUSE Linux",
+                  "product_id": "T042775",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:suse:suse_linux:-"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-41090",
+      "product_status": {
+        "known_affected": [
+          "T042775",
+          "2951",
+          "T002207",
+          "T033208",
+          "67646",
+          "T000126",
+          "T031092",
+          "T001663",
+          "398363",
+          "T004914",
+          "T032255"
+        ]
+      },
+      "release_date": "2024-07-24T22:00:00.000+00:00",
+      "title": "CVE-2024-41090"
+    },
+    {
+      "cve": "CVE-2024-41091",
+      "product_status": {
+        "known_affected": [
+          "T042775",
+          "2951",
+          "T002207",
+          "T033208",
+          "67646",
+          "T000126",
+          "T031092",
+          "T001663",
+          "398363",
+          "T004914",
+          "T032255"
+        ]
+      },
+      "release_date": "2024-07-24T22:00:00.000+00:00",
+      "title": "CVE-2024-41091"
+    }
+  ]
+}

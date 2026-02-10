@@ -1,0 +1,816 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Apple iOS (vormals iPhone OS) ist das Betriebssystem für das von Apple entwickelte Smartphone iPhone, iPad und iPod Touch.\r\nDas Apple iPadOS ist das Betriebssystem für das von Apple entwickelte iPad.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Apple iOS und Apple iPadOS ausnutzen, um seine Privilegien zu erhöhen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu erzeugen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- iPhoneOS",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3288 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3288.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3288 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3288"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security ADvisory vom 2024-10-28",
+        "url": "https://lists.apple.com/archives/security-announce/2024/Oct/msg00001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Apple Security ADvisory vom 2024-10-28",
+        "url": "https://lists.apple.com/archives/security-announce/2024/Oct/msg00002.html"
+      },
+      {
+        "category": "external",
+        "summary": "PoC GitHub vom 2024-11-05",
+        "url": "https://github.com/ifpdz/CVE-2024-44258"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Apple iOS und iPadOS: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-12-19T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-12-20T09:13:16.047+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.10"
+        }
+      },
+      "id": "WID-SEC-W-2024-3288",
+      "initial_release_date": "2024-10-28T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-10-28T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2024-11-05T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "PoC aufgenommen"
+        },
+        {
+          "date": "2024-11-19T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE-Nummern ergänzt"
+        },
+        {
+          "date": "2024-12-19T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "CVE-2024-54538 ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<18.1",
+                "product": {
+                  "name": "Apple iOS <18.1",
+                  "product_id": "T038642"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "18.1",
+                "product": {
+                  "name": "Apple iOS 18.1",
+                  "product_id": "T038642-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:iphone_os:18.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.7.1",
+                "product": {
+                  "name": "Apple iOS <17.7.1",
+                  "product_id": "T038644"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.7.1",
+                "product": {
+                  "name": "Apple iOS 17.7.1",
+                  "product_id": "T038644-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:iphone_os:17.7.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iOS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<18.1",
+                "product": {
+                  "name": "Apple iPadOS <18.1",
+                  "product_id": "T038643"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "18.1",
+                "product": {
+                  "name": "Apple iPadOS 18.1",
+                  "product_id": "T038643-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:ipados:18.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<17.7.1",
+                "product": {
+                  "name": "Apple iPadOS <17.7.1",
+                  "product_id": "T038645"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.7.1",
+                "product": {
+                  "name": "Apple iPadOS 17.7.1",
+                  "product_id": "T038645-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:apple:ipados:17.7.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "iPadOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Apple"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-40851",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-40851"
+    },
+    {
+      "cve": "CVE-2024-40867",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-40867"
+    },
+    {
+      "cve": "CVE-2024-44194",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44194"
+    },
+    {
+      "cve": "CVE-2024-44215",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44215"
+    },
+    {
+      "cve": "CVE-2024-44218",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44218"
+    },
+    {
+      "cve": "CVE-2024-44229",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44229"
+    },
+    {
+      "cve": "CVE-2024-44232",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44232"
+    },
+    {
+      "cve": "CVE-2024-44233",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44233"
+    },
+    {
+      "cve": "CVE-2024-44234",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44234"
+    },
+    {
+      "cve": "CVE-2024-44235",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44235"
+    },
+    {
+      "cve": "CVE-2024-44239",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44239"
+    },
+    {
+      "cve": "CVE-2024-44240",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44240"
+    },
+    {
+      "cve": "CVE-2024-44244",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44244"
+    },
+    {
+      "cve": "CVE-2024-44251",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44251"
+    },
+    {
+      "cve": "CVE-2024-44252",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44252"
+    },
+    {
+      "cve": "CVE-2024-44254",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44254"
+    },
+    {
+      "cve": "CVE-2024-44255",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44255"
+    },
+    {
+      "cve": "CVE-2024-44258",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44258"
+    },
+    {
+      "cve": "CVE-2024-44259",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44259"
+    },
+    {
+      "cve": "CVE-2024-44261",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44261"
+    },
+    {
+      "cve": "CVE-2024-44263",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44263"
+    },
+    {
+      "cve": "CVE-2024-44269",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44269"
+    },
+    {
+      "cve": "CVE-2024-44273",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44273"
+    },
+    {
+      "cve": "CVE-2024-44274",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44274"
+    },
+    {
+      "cve": "CVE-2024-44277",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44277"
+    },
+    {
+      "cve": "CVE-2024-44278",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44278"
+    },
+    {
+      "cve": "CVE-2024-44282",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44282"
+    },
+    {
+      "cve": "CVE-2024-44285",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44285"
+    },
+    {
+      "cve": "CVE-2024-44296",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44296"
+    },
+    {
+      "cve": "CVE-2024-44297",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44297"
+    },
+    {
+      "cve": "CVE-2024-44302",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-44302"
+    },
+    {
+      "cve": "CVE-2024-54538",
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Apple iOS und Apple iPadOS bestehen mehrere Schwachstellen. Diese Fehler existieren wegen unzureichender Eingabevalidierung, Speicherverwaltungsproblemen und unzureichenden Berechtigungsprüfungen in verschiedenen Komponenten wie WebKit, Siri oder iTunes und anderen, die unbefugten Zugriff und unbeabsichtigtes Systemverhalten ermöglichen. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen zu erlangen, beliebigen Code auszuführen, Privilegien zu erhöhen oder Denial-of-Service (DoS) zu verursachen. Für einige dieser Schwachstellen ist eine Benutzerinteraktion erforderlich, um sie erfolgreich auszunutzen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038644",
+          "T038643",
+          "T038645",
+          "T038642"
+        ]
+      },
+      "release_date": "2024-10-28T23:00:00.000+00:00",
+      "title": "CVE-2024-54538"
+    }
+  ]
+}

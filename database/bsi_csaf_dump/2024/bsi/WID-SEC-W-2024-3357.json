@@ -1,0 +1,136 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "RabbitMQ ist ein Open-Source Message Broker.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in RabbitMQ ausnutzen, um Sicherheitsvorkehrungen zu umgehen und Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- MacOS X\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-3357 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3357.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-3357 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3357"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2024-11-06",
+        "url": "https://github.com/advisories/GHSA-pj33-75x5-32j4"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "RabbitMQ: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+    "tracking": {
+      "current_release_date": "2024-11-06T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-11-07T09:33:31.730+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.8"
+        }
+      },
+      "id": "WID-SEC-W-2024-3357",
+      "initial_release_date": "2024-11-06T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-11-06T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.12.11",
+                "product": {
+                  "name": "Open Source RabbitMQ <3.12.11",
+                  "product_id": "T038813"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.12.11",
+                "product": {
+                  "name": "Open Source RabbitMQ 3.12.11",
+                  "product_id": "T038813-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:rabbitmq-c_project:rabbitmq-c:3.12.11"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RabbitMQ"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-51988",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in RabbitMQ aufgrund einer nicht funktionierenden Zugriffskontrolle bezüglich der \"configure\" Berechtigung eines Benutzers. Ein entfernter, authentisierter Angreifer kann dies ausnutzen, um die Zugriffskontrolle zu umgehen und in der Folge Queues zu löschen, ohne die Berechtigung dafür zu haben."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T038813"
+        ]
+      },
+      "release_date": "2024-11-06T23:00:00.000+00:00",
+      "title": "CVE-2024-51988"
+    }
+  ]
+}

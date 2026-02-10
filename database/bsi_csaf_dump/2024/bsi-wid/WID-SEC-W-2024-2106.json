@@ -1,0 +1,173 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Lenovo ist ein Hersteller u. a. von Computern.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Lenovo Computer ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Hardware Appliance\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-2106 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-2106.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-2106 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-2106"
+      },
+      {
+        "category": "external",
+        "summary": "Lenovo Security Advisory vom 2024-09-10",
+        "url": "https://support.lenovo.com/us/en/product_security/LEN-165230"
+      },
+      {
+        "category": "external",
+        "summary": "Qualcomm Security Bulletin",
+        "url": "https://docs.qualcomm.com/product/publicresources/securitybulletin/september-2024-bulletin.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Lenovo Computer: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2024-09-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-09-11T09:08:43.133+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.6"
+        }
+      },
+      "id": "WID-SEC-W-2024-2106",
+      "initial_release_date": "2024-09-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-09-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Qualcomm WLAN driver",
+                "product": {
+                  "name": "Lenovo Computer Qualcomm WLAN driver",
+                  "product_id": "T037472",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:lenovo:computer:qualcomm_wlan_driver"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Qualcomm WLAN driver <1.0.0.1671",
+                "product": {
+                  "name": "Lenovo Computer Qualcomm WLAN driver <1.0.0.1671",
+                  "product_id": "T037473"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Qualcomm WLAN driver 1.0.0.1671",
+                "product": {
+                  "name": "Lenovo Computer Qualcomm WLAN driver 1.0.0.1671",
+                  "product_id": "T037473-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:lenovo:computer:qualcomm_wlan_driver__1.0.0.1671"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Qualcomm WLAN driver <2.0.0.1193",
+                "product": {
+                  "name": "Lenovo Computer Qualcomm WLAN driver <2.0.0.1193",
+                  "product_id": "T037474"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Qualcomm WLAN driver 2.0.0.1193",
+                "product": {
+                  "name": "Lenovo Computer Qualcomm WLAN driver 2.0.0.1193",
+                  "product_id": "T037474-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:lenovo:computer:qualcomm_wlan_driver__2.0.0.1193"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Computer"
+          }
+        ],
+        "category": "vendor",
+        "name": "Lenovo"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-33051",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in Lenovo Computer. Dieser Fehler existiert in der Qualcomm WLAN-Firmware wegen eines Pufferüberleseproblems bei der Verarbeitung von TIM IE aus Beacon Frames. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T037472",
+          "T037473",
+          "T037474"
+        ]
+      },
+      "release_date": "2024-09-10T22:00:00.000+00:00",
+      "title": "CVE-2024-33051"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "ownCloud ist eine \"on-premise\" Plattform für Dateifreigabe und Zusammenarbeit.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter Angreifer kann mehrere Schwachstellen in ownCloud ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen oder Sicherheitsmaßnahmen zu umgehen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Android\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2024-0933 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-0933.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2024-0933 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-0933"
+      },
+      {
+        "category": "external",
+        "summary": "ownCloud Security Advisory vom 2024-04-18",
+        "url": "https://owncloud.com/security-advisories/denial-of-service-in-comments-api/"
+      },
+      {
+        "category": "external",
+        "summary": "ownCloud Security Advisory vom 2024-04-18",
+        "url": "https://owncloud.com/security-advisories/authentiation-bypass-using-pre-signed-urls/"
+      },
+      {
+        "category": "external",
+        "summary": "ownCloud Security Advisory vom 2024-04-18",
+        "url": "https://owncloud.com/security-advisories/biometric-authentication-bypass/"
+      },
+      {
+        "category": "external",
+        "summary": "ownCloud Security Advisory vom 2024-04-18",
+        "url": "https://owncloud.com/security-advisories/improper-validation-in-the-user-profile-metadata/"
+      },
+      {
+        "category": "external",
+        "summary": "ownCloud Security Advisory vom 2024-04-18",
+        "url": "https://owncloud.com/security-advisories/improper-validation-in-the-users-avatar-mechanism/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "ownCloud: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2024-04-18T22:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T18:08:00.814+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2024-0933",
+      "initial_release_date": "2024-04-18T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2024-04-18T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<10.13.2",
+                "product": {
+                  "name": "ownCloud ownCloud <10.13.2",
+                  "product_id": "T034317"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Infinite Scale <4.0.6",
+                "product": {
+                  "name": "ownCloud ownCloud Infinite Scale <4.0.6",
+                  "product_id": "T034318"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<4.2.0",
+                "product": {
+                  "name": "ownCloud ownCloud <4.2.0",
+                  "product_id": "T034319"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<10.14.0",
+                "product": {
+                  "name": "ownCloud ownCloud <10.14.0",
+                  "product_id": "T034320"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ownCloud"
+          }
+        ],
+        "category": "vendor",
+        "name": "ownCloud"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-26320",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in ownCloud. Dieser Fehler besteht aufgrund einer unzureichenden Eingabevalidierung im Comments Plugin. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034319"
+        ]
+      },
+      "release_date": "2024-04-18T22:00:00.000+00:00",
+      "title": "CVE-2024-26320"
+    },
+    {
+      "cve": "CVE-2024-26321",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in ownCloud. Dieser Fehler besteht aufgrund einer unsachgemäßen Validierung, die es ermöglicht, Zugriff auf die Dateien von Benutzern zu erhalten. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "release_date": "2024-04-18T22:00:00.000+00:00",
+      "title": "CVE-2024-26321"
+    },
+    {
+      "cve": "CVE-2024-26322",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es besteht eine Schwachstelle in ownCloud. Dieser Fehler besteht aufgrund einer unsachgemäßen Validierung im biometrischen Authentifizierungsprozess. Ein physischer, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um die Sicherheitsmaßnahmen zu umgehen."
+        }
+      ],
+      "release_date": "2024-04-18T22:00:00.000+00:00",
+      "title": "CVE-2024-26322"
+    },
+    {
+      "cve": "CVE-2024-26325",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in ownCloud. Diese Fehler bestehen aufgrund einer unsachgemäßen Validierung in den Metadaten des Benutzerprofils und im Avatar-Mechanismus des Benutzers. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034317"
+        ]
+      },
+      "release_date": "2024-04-18T22:00:00.000+00:00",
+      "title": "CVE-2024-26325"
+    },
+    {
+      "cve": "CVE-2024-26326",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es bestehen mehrere Schwachstellen in ownCloud. Diese Fehler bestehen aufgrund einer unsachgemäßen Validierung in den Metadaten des Benutzerprofils und im Avatar-Mechanismus des Benutzers. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T034317"
+        ]
+      },
+      "release_date": "2024-04-18T22:00:00.000+00:00",
+      "title": "CVE-2024-26326"
+    }
+  ]
+}

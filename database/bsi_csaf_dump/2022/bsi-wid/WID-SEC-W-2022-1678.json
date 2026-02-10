@@ -1,0 +1,155 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Checkmk ist eine IT-Monitoring-Software.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in tribe29 checkmk ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2022-1678 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2022/wid-sec-w-2022-1678.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2022-1678 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-1678"
+      },
+      {
+        "category": "external",
+        "summary": "CheckMK Werk #14916 vom 2022-10-11",
+        "url": "https://checkmk.com/de/werk/14916"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "tribe29 checkmk: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2023-02-20T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:36:17.854+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2022-1678",
+      "initial_release_date": "2022-10-11T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2022-10-11T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2022-10-13T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Anpassung im Text"
+        },
+        {
+          "date": "2023-02-20T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "CVE-2022-48319 ergänzt"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.2.0i1",
+                "product": {
+                  "name": "tribe29 checkmk < 2.2.0i1",
+                  "product_id": "T023614",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.2.0i1"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.1.0p14",
+                "product": {
+                  "name": "tribe29 checkmk < 2.1.0p14",
+                  "product_id": "T024781",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.1.0p14"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "tribe29 checkmk < 2.0.0p30",
+                "product": {
+                  "name": "tribe29 checkmk < 2.0.0p30",
+                  "product_id": "T024782",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tribe29:checkmk:2.0.0p30"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "checkmk"
+          }
+        ],
+        "category": "vendor",
+        "name": "tribe29"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-48319",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in tribe29 checkmk in der Komponente Agent bakery. Der Fehler besteht, weil das generierte Hostgeheimnis in die Datei cmk-update-agent.log geschrieben wird, die nicht geschützt und normalerweise für die ganze Welt lesbar ist. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
+        }
+      ],
+      "release_date": "2022-10-11T22:00:00.000+00:00",
+      "title": "CVE-2022-48319"
+    }
+  ]
+}

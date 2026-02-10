@@ -1,0 +1,162 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GNU Emacs ist Texteditor, welcher durch eine Programmierschnittstelle in der Programmiersprache Emacs Lisp mit beliebigen Erweiterungen ausgestattet werden kann.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in GNU Emacs ausnutzen, um beliebigen Programmcode auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2023-0608 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2023/wid-sec-w-2023-0608.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2023-0608 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2023-0608"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2023-03-08",
+        "url": "https://github.com/advisories/GHSA-whwp-m746-hx6w"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Advisory Database vom 2023-03-08",
+        "url": "https://github.com/advisories/GHSA-f5fq-43fc-vgcr"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GNU Emacs: Mehrere Schwachstellen ermöglichen Codeausführung",
+    "tracking": {
+      "current_release_date": "2023-03-08T23:00:00.000+00:00",
+      "generator": {
+        "date": "2024-08-15T17:46:23.768+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.3.5"
+        }
+      },
+      "id": "WID-SEC-W-2023-0608",
+      "initial_release_date": "2023-03-08T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2023-03-08T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source GNU Emacs 28.2",
+                "product": {
+                  "name": "Open Source GNU Emacs 28.2",
+                  "product_id": "T026445",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gnu:emacs:28.2"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Open Source GNU Emacs 28.1",
+                "product": {
+                  "name": "Open Source GNU Emacs 28.1",
+                  "product_id": "T026691",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gnu:emacs:28.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GNU Emacs"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-27986",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GNU Emacs. Ein entfernter, anonymer Angreifer kann ds ausnutzen, um durch einen manipulierten mailto: URI mit unescapten doppelten Anführungszeichen beliebigen Lisp Code zu injizieren. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T026691",
+          "T026445"
+        ]
+      },
+      "release_date": "2023-03-08T23:00:00.000+00:00",
+      "title": "CVE-2023-27986"
+    },
+    {
+      "cve": "CVE-2023-27985",
+      "notes": [
+        {
+          "category": "description",
+          "text": "Es existiert eine Schwachstelle in GNU Emacs. Die Desktop Entry Spezifikation werden nur ungenügend eingehalten. Ein Angreifer kann diese Schwachstelle ausnutzen, um durch einen manipulierten mailto: URI beliebige Shell Befehle zu injizieren. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "T026691",
+          "T026445"
+        ]
+      },
+      "release_date": "2023-03-08T23:00:00.000+00:00",
+      "title": "CVE-2023-27985"
+    }
+  ]
+}
