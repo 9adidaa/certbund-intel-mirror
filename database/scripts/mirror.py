@@ -186,6 +186,8 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
             save_json(out_file, obj)
         else:
             skipped += 1
+            print(f"[=] {year}/{feed_name}/{adv_id}")
+
 
         # download signature + hash if present
         links = entry.get("link", [])
