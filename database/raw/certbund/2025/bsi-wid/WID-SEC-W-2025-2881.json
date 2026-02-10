@@ -64,14 +64,24 @@
         "category": "external",
         "summary": "Ubuntu Security Notice USN-7983-1 vom 2026-01-29",
         "url": "https://ubuntu.com/security/notices/USN-7983-1"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4467 vom 2026-02-05",
+        "url": "https://lists.debian.org/debian-lts-announce/2026/02/msg00006.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:2343 vom 2026-02-09",
+        "url": "https://access.redhat.com/errata/RHSA-2026:2343"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux (multicluster global hub): Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2026-01-28T23:00:00.000+00:00",
+      "current_release_date": "2026-02-09T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-01-29T11:51:03.553+00:00",
+        "date": "2026-02-10T09:18:26.608+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -94,14 +104,41 @@
           "date": "2026-01-28T23:00:00.000+00:00",
           "number": "3",
           "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2026-02-04T23:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2026-02-09T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "5"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
       {
         "branches": [
           {
@@ -139,6 +176,23 @@
             ],
             "category": "product_name",
             "name": "Enterprise Linux"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "API for Data Protection",
+                "product": {
+                  "name": "Red Hat OpenShift API for Data Protection",
+                  "product_id": "T050615",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:api_for_data_protection"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenShift"
           }
         ],
         "category": "vendor",
@@ -168,8 +222,10 @@
       "cve": "CVE-2024-25621",
       "product_status": {
         "known_affected": [
+          "2951",
           "67646",
           "T000126",
+          "T050615",
           "T049547"
         ]
       },

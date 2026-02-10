@@ -204,14 +204,29 @@
         "category": "external",
         "summary": "Amazon Linux Security Advisory ALAS2ECS-2026-094 vom 2026-01-22",
         "url": "https://alas.aws.amazon.com/AL2/ALAS2ECS-2026-094.html"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:20132-1 vom 2026-02-03",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/2FXTOXAC757VML52GPMWYDR74WCC54GY/"
+      },
+      {
+        "category": "external",
+        "summary": "HCL Security Bulletin vom 2026-02-03",
+        "url": "https://support.hcl-software.com/community?id=community_blog&sys_id=0750fd5a3b7e361028f8f547f4e45abb"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7260042 vom 2026-02-06",
+        "url": "https://www.ibm.com/support/pages/node/7260042"
       }
     ],
     "source_lang": "en-US",
     "title": "Golang Go: Mehrere Schwachstellen ermöglichen Denial of Service",
     "tracking": {
-      "current_release_date": "2026-01-21T23:00:00.000+00:00",
+      "current_release_date": "2026-02-08T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-01-22T08:56:28.969+00:00",
+        "date": "2026-02-09T09:53:27.512+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -284,10 +299,20 @@
           "date": "2026-01-21T23:00:00.000+00:00",
           "number": "13",
           "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2026-02-03T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von openSUSE und HCL aufgenommen"
+        },
+        {
+          "date": "2026-02-08T23:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von IBM aufgenommen"
         }
       ],
       "status": "final",
-      "version": "13"
+      "version": "15"
     }
   },
   "product_tree": {
@@ -346,6 +371,29 @@
             "branches": [
               {
                 "category": "product_version",
+                "name": "SaaS",
+                "product": {
+                  "name": "HCL BigFix SaaS",
+                  "product_id": "T049035",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hcltech:bigfix:saas"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "BigFix"
+          }
+        ],
+        "category": "vendor",
+        "name": "HCL"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
                 "name": "Operator",
                 "product": {
                   "name": "IBM MQ Operator",
@@ -369,6 +417,50 @@
             ],
             "category": "product_name",
             "name": "MQ"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.2.3.6",
+                "product": {
+                  "name": "IBM Storage Scale <5.2.3.6",
+                  "product_id": "T050604"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.2.3.6",
+                "product": {
+                  "name": "IBM Storage Scale 5.2.3.6",
+                  "product_id": "T050604-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:spectrum_scale:5.2.3.6"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<6.0.0.1",
+                "product": {
+                  "name": "IBM Storage Scale <6.0.0.1",
+                  "product_id": "T050605"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.0.0.1",
+                "product": {
+                  "name": "IBM Storage Scale 6.0.0.1",
+                  "product_id": "T050605-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:spectrum_scale:6.0.0.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Storage Scale"
           }
         ],
         "category": "vendor",
@@ -409,9 +501,12 @@
       "cve": "CVE-2025-47914",
       "product_status": {
         "known_affected": [
+          "T050605",
           "T002207",
+          "T050604",
           "T027843",
           "398363",
+          "T049035",
           "T036688",
           "T040640",
           "T048785"
@@ -424,9 +519,12 @@
       "cve": "CVE-2025-58181",
       "product_status": {
         "known_affected": [
+          "T050605",
           "T002207",
+          "T050604",
           "T027843",
           "398363",
+          "T049035",
           "T036688",
           "T040640",
           "T048785"

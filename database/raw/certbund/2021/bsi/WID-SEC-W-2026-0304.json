@@ -1,0 +1,149 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "niedrig"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Das Unix-Programm patch manipuliert Quelltext anhand einer Patch-Datei.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in patch ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-0304 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2021/wid-sec-w-2026-0304.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-0304 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0304"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugzilla - Bug 2035081 vom 2021-12-22",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2035081"
+      },
+      {
+        "category": "external",
+        "summary": "GNU patch - Bugs vom 2021-12-22",
+        "url": "https://savannah.gnu.org/bugs/?61685"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:10140-1 vom 2026-02-04",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/VPKBCJ4CA2TCQMUPKWIBMBF4U7KIFLI4/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "patch: Schwachstelle ermöglicht Denial of Service",
+    "tracking": {
+      "current_release_date": "2026-02-04T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-02-05T09:59:20.638+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-0304",
+      "initial_release_date": "2021-12-22T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2021-12-22T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-02-04T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von openSUSE aufgenommen"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source patch",
+            "product": {
+              "name": "Open Source patch",
+              "product_id": "T004401",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:gnu:patch:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-45261",
+      "product_status": {
+        "known_affected": [
+          "T004401",
+          "T027843"
+        ]
+      },
+      "release_date": "2021-12-22T23:00:00.000+00:00",
+      "title": "CVE-2021-45261"
+    }
+  ]
+}
