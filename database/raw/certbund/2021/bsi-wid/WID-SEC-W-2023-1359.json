@@ -169,17 +169,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7163496 vom 2024-08-07",
         "url": "https://www.ibm.com/support/pages/node/7163496"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7260353 vom 2026-02-11",
+        "url": "https://www.ibm.com/support/pages/node/7260353"
       }
     ],
     "source_lang": "en-US",
     "title": "Apache Commons: Schwachstelle ermöglicht Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2024-08-06T22:00:00.000+00:00",
+      "current_release_date": "2026-02-10T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:51:46.840+00:00",
+        "date": "2026-02-11T12:13:11.249+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2023-1359",
@@ -264,10 +269,15 @@
           "date": "2024-08-06T22:00:00.000+00:00",
           "number": "16",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-02-10T23:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von IBM aufgenommen"
         }
       ],
       "status": "final",
-      "version": "16"
+      "version": "17"
     }
   },
   "product_tree": {
@@ -299,6 +309,17 @@
                 "product": {
                   "name": "Apache Commons <IO 2.7",
                   "product_id": "T018841"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "IO 2.7",
+                "product": {
+                  "name": "Apache Commons IO 2.7",
+                  "product_id": "T018841-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:commons:io_2.7"
+                  }
                 }
               }
             ],
@@ -407,6 +428,17 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "9.2.1",
+                "product": {
+                  "name": "Splunk Splunk Enterprise 9.2.1",
+                  "product_id": "T033705-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:splunk:splunk:9.2.1"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<9.1.4",
                 "product": {
@@ -415,11 +447,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "9.1.4",
+                "product": {
+                  "name": "Splunk Splunk Enterprise 9.1.4",
+                  "product_id": "T033718-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:splunk:splunk:9.1.4"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<9.0.9",
                 "product": {
                   "name": "Splunk Splunk Enterprise <9.0.9",
                   "product_id": "T033720"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.0.9",
+                "product": {
+                  "name": "Splunk Splunk Enterprise 9.0.9",
+                  "product_id": "T033720-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:splunk:splunk:9.0.9"
+                  }
                 }
               }
             ],
@@ -452,14 +506,9 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2021-29425",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Apache Commons. Es handelt sich um eine limitierte Path-Traverseral-Schwachstelle, welche es ermöglicht einen Path-Traversal-Angriff durchzuführen, bei dem nur das direkte Eltern-Verzeichnis offengelegt wird. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T018841",
           "T033720",
           "2951",
           "T002207",
