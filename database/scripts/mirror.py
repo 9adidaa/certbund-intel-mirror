@@ -19,7 +19,7 @@ RETRIES = 3
 SLEEP_ON_ERROR = 1.0
 
 HEADERS = {
-    "User-Agent": "CERTBund-Mirror/4.0 (+mokda project)",
+    "User-Agent": "CERTBund-Mirror/5.0 (+mokda project)",
     "Accept": "application/json, */*",
 }
 
@@ -54,6 +54,18 @@ def json_should_update(path: Path, new_obj: Dict[str, Any]) -> bool:
 def save_json(path: Path, obj: Dict[str, Any]):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def read_text_safe(path: Path) -> Optional[str]:
+    try:
+        return path.read_text(encoding="utf-8").strip()
+    except Exception:
+        return None
+
+
+def write_text_safe(path: Path, text: str):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
 
 
 # ==========================================================
@@ -112,8 +124,22 @@ def parse_entries(feed: Dict[str, Any]) -> List[Dict[str, Any]]:
     return feed.get("feed", {}).get("entry", [])
 
 
+def extract_links(entry: Dict[str, Any]) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Returns: (hash_url, signature_url)
+    """
+    hash_url = None
+    sig_url = None
+    for l in entry.get("link", []):
+        if l.get("rel") == "hash":
+            hash_url = l.get("href")
+        elif l.get("rel") == "signature":
+            sig_url = l.get("href")
+    return hash_url, sig_url
+
+
 # ==========================================================
-# CORE
+# CORE — TIMESTAMP FIRST
 # ==========================================================
 
 def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests.Session):
@@ -126,13 +152,13 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
 
     feed_index = base_dir / "_feeds" / f"{feed_name}.json"
 
+    # optional: skip entire run if feed unchanged
     if not json_should_update(feed_index, feed_obj):
         print("Feed unchanged → skipping.")
         return
 
     save_json(feed_index, feed_obj)
     entries = parse_entries(feed_obj)
-
     print("Entries:", len(entries))
 
     new = updated = skipped = errors = sigs = hashes = 0
@@ -146,81 +172,27 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
         adv_id = normalize_id(entry, src)
 
         out_file = base_dir / year / feed_name / f"{adv_id}.json"
-        hash_file = out_file.with_suffix(".json.sha512")
+        sha_file = out_file.with_suffix(".json.sha512")
+        sig_file = out_file.with_suffix(".json.asc")
 
-        provider_hash_url = None
-        provider_sig_url = None
+        # meta file stores entry.updated (fast decision)
+        meta_file = out_file.with_suffix(".meta")
+        remote_updated = entry.get("updated")
 
-        for l in entry.get("link", []):
-            if l.get("rel") == "hash":
-                provider_hash_url = l.get("href")
-            elif l.get("rel") == "signature":
-                provider_sig_url = l.get("href")
-
-        # --------------------------------------------------
-        # NEW FILE
-        # --------------------------------------------------
-        if not out_file.exists():
-            obj, st = fetch_json(session, src)
-            if st != 200 or not obj:
-                errors += 1
-                print(f"[!] {idx}/{len(entries)} {adv_id}: {st}")
-                time.sleep(SLEEP_ON_ERROR)
+        # ==================================================
+        # FAST SKIP: timestamp matches
+        # ==================================================
+        if out_file.exists() and remote_updated:
+            local_updated = read_text_safe(meta_file)
+            if local_updated == remote_updated:
+                skipped += 1
+                # keep output style
+                print(f"[=] {year}/{feed_name}/{adv_id}")
                 continue
 
-            save_json(out_file, obj)
-            new += 1
-            print(f"[+] {year}/{feed_name}/{adv_id}")
-
-            if provider_hash_url:
-                if download_binary(session, provider_hash_url, hash_file) == 200:
-                    hashes += 1
-
-            if provider_sig_url:
-                if download_binary(session, provider_sig_url, out_file.with_suffix(".json.asc")) == 200:
-                    sigs += 1
-
-            continue
-
-        # --------------------------------------------------
-        # EXISTING FILE → CHECK HASH
-        # --------------------------------------------------
-        if not provider_hash_url:
-            # fallback
-            obj, st = fetch_json(session, src)
-            if st == 200 and obj and json_should_update(out_file, obj):
-                save_json(out_file, obj)
-                updated += 1
-                print(f"[U] {year}/{feed_name}/{adv_id}")
-            else:
-                skipped += 1
-                print(f"[=] {year}/{feed_name}/{adv_id}")
-            continue
-
-        tmp_hash = hash_file.with_suffix(".tmp")
-        st = download_binary(session, provider_hash_url, tmp_hash)
-
-        if st != 200:
-            errors += 1
-            print(f"[!] hash {adv_id}: {st}")
-            tmp_hash.unlink(missing_ok=True)
-            continue
-
-        provider_hash = tmp_hash.read_text().strip()
-        tmp_hash.unlink(missing_ok=True)
-
-        local_hash = None
-        if hash_file.exists():
-            local_hash = hash_file.read_text().strip()
-
-        if local_hash == provider_hash:
-            skipped += 1
-            print(f"[=] {year}/{feed_name}/{adv_id}")
-            continue
-
-        # --------------------------------------------------
-        # HASH DIFFERENT → DOWNLOAD
-        # --------------------------------------------------
+        # ==================================================
+        # NEW or UPDATED: download JSON
+        # ==================================================
         obj, st = fetch_json(session, src)
         if st != 200 or not obj:
             errors += 1
@@ -228,15 +200,30 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
             time.sleep(SLEEP_ON_ERROR)
             continue
 
+        if out_file.exists():
+            updated += 1
+            print(f"[U] {year}/{feed_name}/{adv_id}")
+        else:
+            new += 1
+            print(f"[+] {year}/{feed_name}/{adv_id}")
+
         save_json(out_file, obj)
-        updated += 1
-        print(f"[U] {year}/{feed_name}/{adv_id}")
 
-        hash_file.write_text(provider_hash, encoding="utf-8")
-        hashes += 1
+        # store updated timestamp for future runs
+        if remote_updated:
+            write_text_safe(meta_file, remote_updated)
 
-        if provider_sig_url:
-            if download_binary(session, provider_sig_url, out_file.with_suffix(".json.asc")) == 200:
+        # ==================================================
+        # Download hash & signature (optional but you want them)
+        # ==================================================
+        hash_url, sig_url = extract_links(entry)
+
+        if hash_url:
+            if download_binary(session, hash_url, sha_file) == 200:
+                hashes += 1
+
+        if sig_url:
+            if download_binary(session, sig_url, sig_file) == 200:
                 sigs += 1
 
     print(
