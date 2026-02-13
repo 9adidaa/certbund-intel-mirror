@@ -57,3 +57,6 @@ Elle vise à permettre aux équipes techniques, CTI et SOC de comprendre, collec
 3. [Structure des données et Parsing](./03-data-structure-parsing.md)
 4. [Accès aux données (Portail, RSS, endpoints)](./04-data-access.md)
 5. [Cycle de vie et Mises à jour](./05-lifecycle.md)
+
+   <!-- STATUS:START -->
+   <!-- STATUS:END -->
