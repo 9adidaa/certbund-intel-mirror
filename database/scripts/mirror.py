@@ -19,7 +19,7 @@ RETRIES = 3
 SLEEP_ON_ERROR = 1.0
 
 HEADERS = {
-    "User-Agent": "CERTBund-Mirror/5.0 (+mokda project)",
+    "User-Agent": "CERTBund-Mirror/6.0 (+mokda project)",
     "Accept": "application/json, */*",
 }
 
@@ -33,7 +33,7 @@ OUT_DIR = Path("database/raw/certbund")
 
 
 # ==========================================================
-# HASH / IO
+# IO / HASH
 # ==========================================================
 
 def stable_hash(obj: Dict[str, Any]) -> str:
@@ -125,9 +125,6 @@ def parse_entries(feed: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 def extract_links(entry: Dict[str, Any]) -> Tuple[Optional[str], Optional[str]]:
-    """
-    Returns: (hash_url, signature_url)
-    """
     hash_url = None
     sig_url = None
     for l in entry.get("link", []):
@@ -138,8 +135,20 @@ def extract_links(entry: Dict[str, Any]) -> Tuple[Optional[str], Optional[str]]:
     return hash_url, sig_url
 
 
+def extract_local_timestamp_from_json(path: Path) -> Optional[str]:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return (
+            data.get("document", {})
+            .get("tracking", {})
+            .get("current_release_date")
+        )
+    except Exception:
+        return None
+
+
 # ==========================================================
-# CORE — TIMESTAMP FIRST
+# CORE
 # ==========================================================
 
 def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests.Session):
@@ -152,7 +161,6 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
 
     feed_index = base_dir / "_feeds" / f"{feed_name}.json"
 
-    # optional: skip entire run if feed unchanged
     if not json_should_update(feed_index, feed_obj):
         print("Feed unchanged → skipping.")
         return
@@ -174,24 +182,30 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
         out_file = base_dir / year / feed_name / f"{adv_id}.json"
         sha_file = out_file.with_suffix(".json.sha512")
         sig_file = out_file.with_suffix(".json.asc")
-
-        # meta file stores entry.updated (fast decision)
         meta_file = out_file.with_suffix(".meta")
+
         remote_updated = entry.get("updated")
 
         # ==================================================
-        # FAST SKIP: timestamp matches
+        # FAST SKIP LOGIC
         # ==================================================
         if out_file.exists() and remote_updated:
+
             local_updated = read_text_safe(meta_file)
+
+            # if meta missing → bootstrap from JSON
+            if not local_updated:
+                local_updated = extract_local_timestamp_from_json(out_file)
+                if local_updated:
+                    write_text_safe(meta_file, local_updated)
+
             if local_updated == remote_updated:
                 skipped += 1
-                # keep output style
                 print(f"[=] {year}/{feed_name}/{adv_id}")
                 continue
 
         # ==================================================
-        # NEW or UPDATED: download JSON
+        # DOWNLOAD REQUIRED
         # ==================================================
         obj, st = fetch_json(session, src)
         if st != 200 or not obj:
@@ -209,13 +223,9 @@ def mirror_feed(feed_name: str, feed_url: str, base_dir: Path, session: requests
 
         save_json(out_file, obj)
 
-        # store updated timestamp for future runs
         if remote_updated:
             write_text_safe(meta_file, remote_updated)
 
-        # ==================================================
-        # Download hash & signature (optional but you want them)
-        # ==================================================
         hash_url, sig_url = extract_links(entry)
 
         if hash_url:
