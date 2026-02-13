@@ -2,7 +2,7 @@ name: Daily CERT-Bund Intelligence Update
 
 on:
   schedule:
-    - cron: "20 3 * * *"   # every day
+    - cron: "0 23 * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,10 +22,14 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: pip install requests
+        run: pip install requests pytest
 
       - name: Run pipeline
         run: python database/scripts/run_pipeline.py
+
+      # ⭐ THE IMPORTANT PART
+      - name: Run tests
+        run: pytest -v
 
       - name: Commit changes
         run: |
