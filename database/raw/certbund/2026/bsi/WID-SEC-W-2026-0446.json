@@ -1,0 +1,216 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "libssh ist eine C Bibliothek für das Anbieten von SSH Diensten auf Client- und Serverseite. Sie kann genutzt werden, um aus der Ferne Programme auszuführen, Dateien zu übertragen oder als sicherer und transparenter Tunnel für entfernte Programme genutzt werden.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in libssh ausnutzen, um Dateien zu manipulieren oder um einen Denial-of-Service-Zustand zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-0446 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-0446.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-0446 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0446"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:0567-1 vom 2026-02-17",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-February/024334.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "libssh: Mehrere Schwachstellen ermöglichen Manipulation von Dateien und DoS",
+    "tracking": {
+      "current_release_date": "2026-02-17T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-02-18T12:15:29.423+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-0446",
+      "initial_release_date": "2026-02-17T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-02-17T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<0.11.4",
+                "product": {
+                  "name": "Open Source libssh <0.11.4",
+                  "product_id": "T050989"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "0.11.4",
+                "product": {
+                  "name": "Open Source libssh 0.11.4",
+                  "product_id": "T050989-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:libssh:libssh:0.11.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<0.12.0",
+                "product": {
+                  "name": "Open Source libssh <0.12.0",
+                  "product_id": "T050990"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "0.12.0",
+                "product": {
+                  "name": "Open Source libssh 0.12.0",
+                  "product_id": "T050990-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:libssh:libssh:0.12.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "libssh"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T048869",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0964",
+      "product_status": {
+        "known_affected": [
+          "T048869",
+          "T050989",
+          "T050990"
+        ]
+      },
+      "release_date": "2026-02-17T23:00:00.000+00:00",
+      "title": "CVE-2026-0964"
+    },
+    {
+      "cve": "CVE-2026-0965",
+      "product_status": {
+        "known_affected": [
+          "T048869",
+          "T050989",
+          "T050990"
+        ]
+      },
+      "release_date": "2026-02-17T23:00:00.000+00:00",
+      "title": "CVE-2026-0965"
+    },
+    {
+      "cve": "CVE-2026-0966",
+      "product_status": {
+        "known_affected": [
+          "T048869",
+          "T050989",
+          "T050990"
+        ]
+      },
+      "release_date": "2026-02-17T23:00:00.000+00:00",
+      "title": "CVE-2026-0966"
+    },
+    {
+      "cve": "CVE-2026-0967",
+      "product_status": {
+        "known_affected": [
+          "T048869",
+          "T050989",
+          "T050990"
+        ]
+      },
+      "release_date": "2026-02-17T23:00:00.000+00:00",
+      "title": "CVE-2026-0967"
+    },
+    {
+      "cve": "CVE-2026-0968",
+      "product_status": {
+        "known_affected": [
+          "T048869",
+          "T050989",
+          "T050990"
+        ]
+      },
+      "release_date": "2026-02-17T23:00:00.000+00:00",
+      "title": "CVE-2026-0968"
+    }
+  ]
+}
