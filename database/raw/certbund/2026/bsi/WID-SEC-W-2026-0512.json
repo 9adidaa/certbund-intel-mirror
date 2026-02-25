@@ -1,0 +1,156 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "mittel"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Die Configuration Manager REST API ermöglicht die programmatische Verwaltung von Hitachi-Speichersystemen.\r\nHitachi Ops Center ist eine Softwarelösung für Rechenzentren zur Verwaltung, Optimierung, Orchestrierung und zum Schutz von Daten.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Hitachi Configuration Manager und Hitachi Ops Center ausnutzen, um Informationen offenzulegen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-0512 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-0512.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-0512 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0512"
+      },
+      {
+        "category": "external",
+        "summary": "Hitachi Software Vulnerability Information vom 2026-02-24",
+        "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2026-111/index.html"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Hitachi Configuration Manager: Schwachstelle ermöglicht Offenlegung von Informationen",
+    "tracking": {
+      "current_release_date": "2026-02-24T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-02-25T12:22:12.453+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.5.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-0512",
+      "initial_release_date": "2026-02-24T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-02-24T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<11.0.5-00",
+                "product": {
+                  "name": "Hitachi Configuration Manager <11.0.5-00",
+                  "product_id": "T051142"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "11.0.5-00",
+                "product": {
+                  "name": "Hitachi Configuration Manager 11.0.5-00",
+                  "product_id": "T051142-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hitachi:configuration_manager:11.0.5-00"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Configuration Manager"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "API Configuration Manager <11.0.5-00",
+                "product": {
+                  "name": "Hitachi Ops Center API Configuration Manager <11.0.5-00",
+                  "product_id": "T051177"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "API Configuration Manager 11.0.5-00",
+                "product": {
+                  "name": "Hitachi Ops Center API Configuration Manager 11.0.5-00",
+                  "product_id": "T051177-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hitachi:ops_center:api_configuration_manager__11.0.5-00"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Ops Center"
+          }
+        ],
+        "category": "vendor",
+        "name": "Hitachi"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-5781",
+      "product_status": {
+        "known_affected": [
+          "T051142",
+          "T051177"
+        ]
+      },
+      "release_date": "2026-02-24T23:00:00.000+00:00",
+      "title": "CVE-2025-5781"
+    }
+  ]
+}
