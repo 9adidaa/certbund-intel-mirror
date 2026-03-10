@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux",
+        "text": "- Linux\n- UNIX",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -49,11 +49,6 @@
         "category": "self",
         "summary": "WID-SEC-2022-0299 - Portal Version",
         "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0299"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2022:4617-1 vom 2022-12-23",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-December/013342.html"
       },
       {
         "category": "external",
@@ -204,17 +199,27 @@
         "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2022:3844-1 vom 2022-11-02",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-November/012797.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2022:4617-1 vom 2022-12-23",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-December/013342.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:4128 vom 2026-03-09",
+        "url": "https://access.redhat.com/errata/RHSA-2026:4128"
       }
     ],
     "source_lang": "en-US",
     "title": "Linux Kernel: Schwachstelle ermöglicht Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2022-12-26T23:00:00.000+00:00",
+      "current_release_date": "2026-03-09T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:27:53.682+00:00",
+        "date": "2026-03-10T09:31:28.370+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2022-0299",
@@ -329,10 +334,15 @@
           "date": "2022-12-26T23:00:00.000+00:00",
           "number": "22",
           "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2026-03-09T23:00:00.000+00:00",
+          "number": "23",
+          "summary": "Neue Updates von Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "22"
+      "version": "23"
     }
   },
   "product_tree": {
@@ -374,19 +384,50 @@
       {
         "branches": [
           {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.17.9",
+                "product": {
+                  "name": "Open Source Linux Kernel <5.17.9",
+                  "product_id": "T023505"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.17.9",
+                "product": {
+                  "name": "Open Source Linux Kernel 5.17.9",
+                  "product_id": "T023505-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:linux:linux_kernel:5.17.9"
+                  }
+                }
+              }
+            ],
             "category": "product_name",
-            "name": "Open Source Linux Kernel < 5.17.9",
+            "name": "Linux Kernel"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
             "product": {
-              "name": "Open Source Linux Kernel < 5.17.9",
-              "product_id": "T023505",
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
               "product_identification_helper": {
-                "cpe": "cpe:/o:linux:linux_kernel:5.17.9"
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
               }
             }
           }
         ],
         "category": "vendor",
-        "name": "Open Source"
+        "name": "Red Hat"
       },
       {
         "branches": [
@@ -427,16 +468,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-32296",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle imn Linux Kernel. Der Fehler besteht darin, dass TCP-Server in der Lage sind, Clients zu identifizieren, indem sie beobachten, welche Quellports verwendet wurden. Ein entfernter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T023505",
           "2951",
           "T002207",
+          "67646",
           "T000126",
           "398363"
         ]
