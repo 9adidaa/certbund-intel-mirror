@@ -99,17 +99,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7160975 vom 2024-07-30",
         "url": "https://www.ibm.com/support/pages/node/7160975"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7263239 vom 2026-03-11",
+        "url": "https://www.ibm.com/support/pages/node/7263239"
       }
     ],
     "source_lang": "en-US",
     "title": "IBM HTTP Server: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2024-07-30T22:00:00.000+00:00",
+      "current_release_date": "2026-03-11T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:51:25.747+00:00",
+        "date": "2026-03-12T10:16:40.809+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2023-1302",
@@ -159,10 +164,15 @@
           "date": "2024-07-30T22:00:00.000+00:00",
           "number": "9",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-03-11T23:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von IBM aufgenommen"
         }
       ],
       "status": "final",
-      "version": "9"
+      "version": "10"
     }
   },
   "product_tree": {
@@ -191,11 +201,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "9.0.1.21",
+                "product": {
+                  "name": "HCL Commerce 9.0.1.21",
+                  "product_id": "T035061-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hcltechsw:commerce:9.0.1.21"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<9.1.13",
                 "product": {
                   "name": "HCL Commerce <9.1.13",
                   "product_id": "T035062"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.1.13",
+                "product": {
+                  "name": "HCL Commerce 9.1.13",
+                  "product_id": "T035062-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:hcltechsw:commerce:9.1.13"
+                  }
                 }
               }
             ],
@@ -363,6 +395,17 @@
             ],
             "category": "product_name",
             "name": "Tivoli Monitoring"
+          },
+          {
+            "category": "product_name",
+            "name": "IBM Workload Scheduler",
+            "product": {
+              "name": "IBM Workload Scheduler",
+              "product_id": "T051657",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:ibm:workload_scheduler:-"
+              }
+            }
           }
         ],
         "category": "vendor",
@@ -373,12 +416,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-32342",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle im IBM HTTP Server. Unter bestimmten Umständen kommt es zu einem zeitbasierten Seitenkanal in der RSA-Entschlüsselungsimplementierung. Wenn eine große Anzahl von Versuchsnachrichten für die Entschlüsselung an das System gesendet wird, können aufgrund der Verarbeitungszeit Rückschlüsse auf den privaten RSA-Schlüssel gezogen werden. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Kryptographie zu umgehen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "433842",
@@ -392,6 +429,7 @@
           "T019704",
           "T021437",
           "T035061",
+          "T051657",
           "T001650",
           "T008162",
           "342008",

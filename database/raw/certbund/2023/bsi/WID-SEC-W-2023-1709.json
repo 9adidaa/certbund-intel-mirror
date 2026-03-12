@@ -52,26 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "Red Hat Security Advisory RHSA-2024:0404 vom 2024-01-25",
-        "url": "https://access.redhat.com/errata/RHSA-2024:0404"
-      },
-      {
-        "category": "external",
-        "summary": "Ubuntu Security Notice USN-6567-1 vom 2024-01-08",
-        "url": "https://ubuntu.com/security/notices/USN-6567-1"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2023:4662-1 vom 2023-12-14",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-December/017395.html"
-      },
-      {
-        "category": "external",
-        "summary": "Debian Security Advisory DLA-3759 vom 2024-03-11",
-        "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00012.html"
-      },
-      {
-        "category": "external",
         "summary": "Red Hat Bugzilla – Bug 2216478 vom 2023-07-11",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2216478"
       },
@@ -147,13 +127,33 @@
       },
       {
         "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-6980 vom 2023-11-21",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-6980.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2023:4662-1 vom 2023-12-14",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2023-December/017395.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-6567-1 vom 2024-01-08",
+        "url": "https://ubuntu.com/security/notices/USN-6567-1"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0404 vom 2024-01-25",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0404"
+      },
+      {
+        "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2024:0589-1 vom 2024-02-22",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-February/017988.html"
       },
       {
         "category": "external",
-        "summary": "Oracle Linux Security Advisory ELSA-2023-6980 vom 2023-11-21",
-        "url": "https://linux.oracle.com/errata/ELSA-2023-6980.html"
+        "summary": "Debian Security Advisory DLA-3759 vom 2024-03-11",
+        "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00012.html"
       },
       {
         "category": "external",
@@ -179,17 +179,22 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2024-12604 vom 2024-09-02",
         "url": "https://linux.oracle.com/errata/ELSA-2024-12604.html"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:5264 vom 2026-03-11",
+        "url": "https://errata.build.resf.org/RLSA-2023:5264"
       }
     ],
     "source_lang": "en-US",
     "title": "QEMU: Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2024-09-02T22:00:00.000+00:00",
+      "current_release_date": "2026-03-11T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-09-03T08:15:13.099+00:00",
+        "date": "2026-03-12T10:16:41.353+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.6"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2023-1709",
@@ -314,10 +319,15 @@
           "date": "2024-09-02T22:00:00.000+00:00",
           "number": "24",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-03-11T23:00:00.000+00:00",
+          "number": "25",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
         }
       ],
       "status": "final",
-      "version": "24"
+      "version": "25"
     }
   },
   "product_tree": {
@@ -394,6 +404,23 @@
         "branches": [
           {
             "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
             "name": "Red Hat Enterprise Linux",
             "product": {
               "name": "Red Hat Enterprise Linux",
@@ -446,12 +473,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-3354",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in QEMU. Der Fehler besteht aufgrund einer NULL-Zeiger-Dereferenz beim Bereinigen von Verbindungen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -460,6 +481,7 @@
           "T000126",
           "T007150",
           "T004914",
+          "T032255",
           "74185"
         ]
       },
