@@ -19,12 +19,12 @@
       },
       {
         "category": "description",
-        "text": "Chrome ist ein Internet-Browser von Google.",
+        "text": "Chrome ist ein Internet-Browser von Google.\r\nEdge ist ein Internet-Browser von Microsoft.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome ausnutzen, um beliebigen Programmcode auszuführen und um weitere, nicht näher spezifizierte Auswirkungen zu erzielen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome/Microsoft Edge ausnutzen, um beliebigen Programmcode auszuführen und um weitere, nicht näher spezifizierte Auswirkungen zu erzielen.",
         "title": "Angriff"
       },
       {
@@ -54,14 +54,24 @@
         "category": "external",
         "summary": "Google Chrome Stable Channel Update for Desktop vom 2026-03-12",
         "url": "https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_12.html"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-03-15",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#march-13-2026"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6165 vom 2026-03-16",
+        "url": "https://lists.debian.org/debian-security-announce/2026/msg00074.html"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Mehrere Schwachstellen",
+    "title": "Google Chrome/Microsoft Edge: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-03-12T23:00:00.000+00:00",
+      "current_release_date": "2026-03-15T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-03-13T12:01:41.019+00:00",
+        "date": "2026-03-16T09:38:15.921+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -74,14 +84,36 @@
           "date": "2026-03-12T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-03-15T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Edge Update aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
       {
         "branches": [
           {
@@ -112,6 +144,37 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<146.0.3856.59",
+                "product": {
+                  "name": "Microsoft Edge <146.0.3856.59",
+                  "product_id": "T051740"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "146.0.3856.59",
+                "product": {
+                  "name": "Microsoft Edge 146.0.3856.59",
+                  "product_id": "T051740-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:146.0.3856.59"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
       }
     ]
   },
@@ -120,7 +183,9 @@
       "cve": "CVE-2026-3909",
       "product_status": {
         "known_affected": [
-          "T051727"
+          "T051727",
+          "2951",
+          "T051740"
         ]
       },
       "release_date": "2026-03-12T23:00:00.000+00:00",
@@ -130,7 +195,8 @@
       "cve": "CVE-2026-3910",
       "product_status": {
         "known_affected": [
-          "T051727"
+          "T051727",
+          "2951"
         ]
       },
       "release_date": "2026-03-12T23:00:00.000+00:00",
