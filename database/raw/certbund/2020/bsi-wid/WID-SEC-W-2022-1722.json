@@ -52,38 +52,8 @@
       },
       {
         "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1829-1 vom 2021-06-02",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008910.html"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1837-1 vom 2021-06-02",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008916.html"
-      },
-      {
-        "category": "external",
-        "summary": "Red Hat Security Advisory RHSA-2021:1064 vom 2021-04-05",
-        "url": "https://access.redhat.com/errata/RHSA-2021:1064"
-      },
-      {
-        "category": "external",
         "summary": "Red Hat Security Adivisory:RHSA-2020:3586 vom 2020-08-31",
         "url": "https://access.redhat.com/errata/RHSA-2020:3586"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1918-1 vom 2021-06-09",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008972.html"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1947-1 vom 2021-06-10",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008990.html"
-      },
-      {
-        "category": "external",
-        "summary": "Oracle Linux Security Advisory ELSA-2021-1064 vom 2021-04-09",
-        "url": "https://linux.oracle.com/errata/ELSA-2021-1064.html"
       },
       {
         "category": "external",
@@ -112,6 +82,26 @@
       },
       {
         "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2021:1064 vom 2021-04-05",
+        "url": "https://access.redhat.com/errata/RHSA-2021:1064"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2021-1064 vom 2021-04-09",
+        "url": "https://linux.oracle.com/errata/ELSA-2021-1064.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1829-1 vom 2021-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008910.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1837-1 vom 2021-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008916.html"
+      },
+      {
+        "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2021:1895-1 vom 2021-06-08",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008959.html"
       },
@@ -124,6 +114,16 @@
         "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2021:1893-1 vom 2021-06-08",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008949.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1918-1 vom 2021-06-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008972.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1947-1 vom 2021-06-10",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008990.html"
       },
       {
         "category": "external",
@@ -149,17 +149,22 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2024-12605 vom 2024-09-02",
         "url": "https://linux.oracle.com/errata/ELSA-2024-12605.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-4672 vom 2026-03-18",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-4672.html"
       }
     ],
     "source_lang": "en-US",
     "title": "QEMU und libvirt: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-09-02T22:00:00.000+00:00",
+      "current_release_date": "2026-03-17T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-09-03T08:16:01.200+00:00",
+        "date": "2026-03-18T09:33:13.526+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.6"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2022-1722",
@@ -239,10 +244,15 @@
           "date": "2024-09-02T22:00:00.000+00:00",
           "number": "15",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-03-17T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "15"
+      "version": "16"
     }
   },
   "product_tree": {
@@ -370,12 +380,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2020-10756",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in QEMU bezüglich der \"SLiRP\" Netzwerkimplementierung. Die Funktion \"icmp6_send_echoreply()\" überprüft die IPv6-Nutzdatenlänge nicht. Bei einem nachfolgenden Aufruf von \"memcpy ()\" kann dadurch ein Teil des Speicherinhalts in das Antwortpaket kopiert werden. Ein Angreifer aus einer Gastmaschine kann dies ausnutzen, um Teile des Host-Speichers offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T015361",
@@ -391,12 +395,6 @@
     },
     {
       "cve": "CVE-2020-14339",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in libvirt. Ein Dateideskriptor für \"/dev/mapper/control\" wird in den QEMU-Prozess übertragen. Ein Angreifer aus einem Gastsystem kann dies ausnutzen, um Sicherheitsmechanismen zu umgehen und den Device-Mapper auf dem Host zu bedienen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T015361",

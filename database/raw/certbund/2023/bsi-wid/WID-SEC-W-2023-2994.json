@@ -89,17 +89,22 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2024-0131 vom 2024-01-11",
         "url": "https://linux.oracle.com/errata/ELSA-2024-0131.html"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:7754 vom 2026-03-18",
+        "url": "https://errata.build.resf.org/RLSA-2023:7754"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-01-11T23:00:00.000+00:00",
+      "current_release_date": "2026-03-17T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:01:59.921+00:00",
+        "date": "2026-03-18T09:29:06.782+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2023-2994",
@@ -129,10 +134,15 @@
           "date": "2024-01-11T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-03-17T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -157,6 +167,23 @@
       {
         "branches": [
           {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
             "branches": [
               {
                 "category": "product_name",
@@ -170,33 +197,57 @@
                 }
               },
               {
-                "category": "product_name",
-                "name": "Red Hat Enterprise Linux < 9.2",
+                "category": "product_version_range",
+                "name": "<9.2",
                 "product": {
-                  "name": "Red Hat Enterprise Linux < 9.2",
-                  "product_id": "T031319",
+                  "name": "Red Hat Enterprise Linux <9.2",
+                  "product_id": "T031319"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9.2",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 9.2",
+                  "product_id": "T031319-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/o:redhat:enterprise_linux:9.2"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "Red Hat Enterprise Linux < 9.0",
+                "category": "product_version_range",
+                "name": "<9.0",
                 "product": {
-                  "name": "Red Hat Enterprise Linux < 9.0",
-                  "product_id": "T031320",
+                  "name": "Red Hat Enterprise Linux <9.0",
+                  "product_id": "T031320"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "9",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 9.0",
+                  "product_id": "T031320-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/o:redhat:enterprise_linux:9.0"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "Red Hat Enterprise Linux < 8.6",
+                "category": "product_version_range",
+                "name": "<8.6",
                 "product": {
-                  "name": "Red Hat Enterprise Linux < 8.6",
-                  "product_id": "T031321",
+                  "name": "Red Hat Enterprise Linux <8.6",
+                  "product_id": "T031321"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.6",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 8.6",
+                  "product_id": "T031321-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/o:redhat:enterprise_linux:8.6"
                   }
@@ -215,16 +266,14 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-44638",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Red Hat Enterprise Linux. Dieser Fehler besteht in der pixman-Komponente aufgrund eines Out-of-bounds-Write in rasterize_edges_8, der zu einem Integer-Überlauf führt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code auszuführen, einen Denial-of-Service-Zustand zu verursachen oder Dateien zu manipulieren. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T031321",
           "67646",
-          "T004914"
+          "T031319",
+          "T004914",
+          "T032255",
+          "T031320"
         ]
       },
       "release_date": "2023-11-21T23:00:00.000+00:00",
@@ -232,16 +281,14 @@
     },
     {
       "cve": "CVE-2023-39976",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Red Hat Enterprise Linux. Dieser Fehler besteht in der log_blackbox.c in der libqb-Komponente aufgrund einer unsachgemäßen Beschränkung der Header-Größe, die es erlaubt, einen Pufferüberlauf über lange Log-Meldungen auszulösen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code oder zur Manipulation von Dateien ausnutzen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T031321",
           "67646",
-          "T004914"
+          "T031319",
+          "T004914",
+          "T032255",
+          "T031320"
         ]
       },
       "release_date": "2023-11-21T23:00:00.000+00:00",
