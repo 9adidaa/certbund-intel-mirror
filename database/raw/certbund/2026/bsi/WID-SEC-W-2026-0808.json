@@ -19,12 +19,12 @@
       },
       {
         "category": "description",
-        "text": "Chrome ist ein Internet-Browser von Google.",
+        "text": "Chrome ist ein Internet-Browser von Google.\r\nEdge ist ein Internet-Browser von Microsoft.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome ausnutzen, um nicht näher definierte Angriffe durchzuführen, darunter möglicherweise Codeausführung, Umgehung von Sicherheitsmaßnahmen, Denial-of-Service, Offenlegung von Informationen und Datenmanipulation.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome/Microsoft Edge ausnutzen, um nicht näher definierte Angriffe durchzuführen, darunter möglicherweise Codeausführung, Umgehung von Sicherheitsmaßnahmen, Denial-of-Service, Offenlegung von Informationen und Datenmanipulation.",
         "title": "Angriff"
       },
       {
@@ -54,14 +54,34 @@
         "category": "external",
         "summary": "Google Chrome Stable Channel Update for Desktop vom 2026-03-19",
         "url": "https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_18.html"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:0094-1 vom 2026-03-23",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/BCTTERHAVCFNL74BDMNIICR6XU4DGM4X/"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6171 vom 2026-03-21",
+        "url": "https://security-tracker.debian.org/tracker/DSA-6171-1"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:0093-1 vom 2026-03-23",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/D3XIUZWBA7TDMH67RP6ORSMKVH5WT5IQ/"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-03-22",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#march-20-2026"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Mehrere Schwachstellen",
+    "title": "Google Chrome/Microsoft Edge: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-03-19T23:00:00.000+00:00",
+      "current_release_date": "2026-03-22T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-03-20T11:18:11.539+00:00",
+        "date": "2026-03-23T10:55:58.655+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -74,14 +94,36 @@
           "date": "2026-03-19T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-03-22T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Microsoft, openSUSE und Debian aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
       {
         "branches": [
           {
@@ -131,6 +173,54 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<146.0.3856.72",
+                "product": {
+                  "name": "Microsoft Edge <146.0.3856.72",
+                  "product_id": "T052001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "146.0.3856.72",
+                "product": {
+                  "name": "Microsoft Edge 146.0.3856.72",
+                  "product_id": "T052001-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:146.0.3856.72"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
       }
     ]
   },
@@ -139,7 +229,10 @@
       "cve": "CVE-2026-4439",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -150,7 +243,10 @@
       "cve": "CVE-2026-4440",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -161,7 +257,10 @@
       "cve": "CVE-2026-4441",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -172,7 +271,10 @@
       "cve": "CVE-2026-4442",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -183,7 +285,10 @@
       "cve": "CVE-2026-4443",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -194,7 +299,10 @@
       "cve": "CVE-2026-4444",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -205,7 +313,10 @@
       "cve": "CVE-2026-4445",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -216,7 +327,10 @@
       "cve": "CVE-2026-4446",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -227,7 +341,10 @@
       "cve": "CVE-2026-4447",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -238,7 +355,10 @@
       "cve": "CVE-2026-4448",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -249,7 +369,10 @@
       "cve": "CVE-2026-4449",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -260,7 +383,10 @@
       "cve": "CVE-2026-4450",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -271,7 +397,10 @@
       "cve": "CVE-2026-4451",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -282,7 +411,10 @@
       "cve": "CVE-2026-4452",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -293,7 +425,10 @@
       "cve": "CVE-2026-4453",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -304,7 +439,10 @@
       "cve": "CVE-2026-4454",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -315,7 +453,10 @@
       "cve": "CVE-2026-4455",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -326,7 +467,10 @@
       "cve": "CVE-2026-4456",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -337,7 +481,10 @@
       "cve": "CVE-2026-4457",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -348,7 +495,10 @@
       "cve": "CVE-2026-4458",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -359,7 +509,10 @@
       "cve": "CVE-2026-4459",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -370,7 +523,10 @@
       "cve": "CVE-2026-4460",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -381,7 +537,10 @@
       "cve": "CVE-2026-4461",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -392,7 +551,10 @@
       "cve": "CVE-2026-4462",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -403,7 +565,10 @@
       "cve": "CVE-2026-4463",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
@@ -414,7 +579,10 @@
       "cve": "CVE-2026-4464",
       "product_status": {
         "known_affected": [
+          "2951",
           "T051979",
+          "T027843",
+          "T052001",
           "T051980"
         ]
       },
