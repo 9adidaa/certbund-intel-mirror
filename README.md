@@ -61,7 +61,7 @@ Elle vise à permettre aux équipes techniques, CTI et SOC de comprendre, collec
    ---
 
    <!-- STATUS:START -->
-Last CI success: 2026-04-04 23:33 UTC
+Last CI success: 2026-04-05 23:36 UTC
 
 ### Validation
 | Check | Status |
