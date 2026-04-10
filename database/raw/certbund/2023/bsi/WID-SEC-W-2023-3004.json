@@ -104,17 +104,22 @@
         "category": "external",
         "summary": "Ubuntu Security Notice USN-6644-2 vom 2024-02-27",
         "url": "https://ubuntu.com/security/notices/USN-6644-2"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:7304 vom 2026-04-09",
+        "url": "https://access.redhat.com/errata/RHSA-2026:7304"
       }
     ],
     "source_lang": "en-US",
     "title": "libTIFF: Mehrere Schwachstellen ermöglichen Denial of Service",
     "tracking": {
-      "current_release_date": "2024-02-27T23:00:00.000+00:00",
+      "current_release_date": "2026-04-09T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:02:03.412+00:00",
+        "date": "2026-04-10T07:15:16.046+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2023-3004",
@@ -149,10 +154,15 @@
           "date": "2024-02-27T23:00:00.000+00:00",
           "number": "6",
           "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2026-04-09T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -212,6 +222,23 @@
         "branches": [
           {
             "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
             "name": "Ubuntu Linux",
             "product": {
               "name": "Ubuntu Linux",
@@ -230,15 +257,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-6277",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in libTIFF. Diese Fehler bestehen in mehreren APIs aufgrund von Out-of-Memory-Problemen und einem Segmentfehler. Durch Übergabe einer Craft-Tiff-Datei an die betroffene API kann ein entfernter, anonymer Angreifer diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T031344",
+          "67646",
           "T000126",
           "398363",
           "74185"

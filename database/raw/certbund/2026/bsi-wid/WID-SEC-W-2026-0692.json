@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "mittel"
+      "text": "niedrig"
     },
     "category": "csaf_base",
     "csaf_version": "2.0",
@@ -24,12 +24,12 @@
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Mattermost Plugins ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen im Mattermost MS Teams plugin ausnutzen, um einen Denial of Service Angriff durchzuführen.",
         "title": "Angriff"
       },
       {
         "category": "general",
-        "text": "- Sonstiges\n- UNIX\n- Windows",
+        "text": "- Linux\n- UNIX",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -57,11 +57,11 @@
       }
     ],
     "source_lang": "en-US",
-    "title": "Mattermost Plugins: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
+    "title": "Mattermost MS Teams plugin: Mehrere Schwachstellen ermöglichen Denial of Service",
     "tracking": {
-      "current_release_date": "2026-03-10T23:00:00.000+00:00",
+      "current_release_date": "2026-04-09T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-03-11T10:41:38.089+00:00",
+        "date": "2026-04-10T07:15:08.622+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -74,10 +74,15 @@
           "date": "2026-03-10T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-04-09T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Informationen von Mattermost aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -88,20 +93,20 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "Plugins <2.3.2.0",
+                "name": "MS Teams plugin <2.3.2.0",
                 "product": {
-                  "name": "Mattermost Mattermost Plugins <2.3.2.0",
-                  "product_id": "T051619"
+                  "name": "Mattermost Mattermost MS Teams plugin <2.3.2.0",
+                  "product_id": "T052613"
                 }
               },
               {
                 "category": "product_version",
-                "name": "Plugins 2.3.2.0",
+                "name": "MS Teams plugin 2.3.2.0",
                 "product": {
-                  "name": "Mattermost Mattermost Plugins 2.3.2.0",
-                  "product_id": "T051619-fixed",
+                  "name": "Mattermost Mattermost MS Teams plugin 2.3.2.0",
+                  "product_id": "T052613-fixed",
                   "product_identification_helper": {
-                    "cpe": "cpe:/a:mattermost:mattermost_server:plugins__2.3.2.0"
+                    "cpe": "cpe:/a:mattermost:mattermost_server:ms_teams_plugin__2.3.2.0"
                   }
                 }
               }
@@ -117,12 +122,24 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2026-21388",
       "product_status": {
         "known_affected": [
-          "T051619"
+          "T052613"
         ]
       },
-      "release_date": "2026-03-10T23:00:00.000+00:00"
+      "release_date": "2026-03-10T23:00:00.000+00:00",
+      "title": "CVE-2026-21388"
+    },
+    {
+      "cve": "CVE-2026-24661",
+      "product_status": {
+        "known_affected": [
+          "T052613"
+        ]
+      },
+      "release_date": "2026-03-10T23:00:00.000+00:00",
+      "title": "CVE-2026-24661"
     }
   ]
 }
