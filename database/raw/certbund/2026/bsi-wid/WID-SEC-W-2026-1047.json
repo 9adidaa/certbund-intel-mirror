@@ -69,14 +69,19 @@
         "category": "external",
         "summary": "Sophos Blog vom 2026-04-09",
         "url": "https://www.sophos.com/en-us/blog/adobe-reader-zero-day-vulnerability-in-active-exploitation"
+      },
+      {
+        "category": "external",
+        "summary": "Adobe Security Bulletin vom 2026-04-12",
+        "url": "https://helpx.adobe.com/security/products/acrobat/apsb26-43.html"
       }
     ],
     "source_lang": "en-US",
-    "title": "Adobe Acrobat Reader: Schwachstelle ermöglicht Erlangen von Administratorrechten",
+    "title": "Adobe Acrobat Reader: Schwachstelle ermöglicht Offenlegung von Informationen und Codeausführung",
     "tracking": {
-      "current_release_date": "2026-04-09T22:00:00.000+00:00",
+      "current_release_date": "2026-04-12T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-10T09:59:26.045+00:00",
+        "date": "2026-04-13T06:04:14.326+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -89,16 +94,90 @@
           "date": "2026-04-09T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-04-12T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Patch eingetragen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
       {
         "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Windows <24.001.30362",
+                "product": {
+                  "name": "Adobe Acrobat Windows <24.001.30362",
+                  "product_id": "T052665"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Windows 24.001.30362",
+                "product": {
+                  "name": "Adobe Acrobat Windows 24.001.30362",
+                  "product_id": "T052665-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:acrobat:windows__24.001.30362"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Mac <24.001.30360",
+                "product": {
+                  "name": "Adobe Acrobat Mac <24.001.30360",
+                  "product_id": "T052666"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Mac 24.001.30360",
+                "product": {
+                  "name": "Adobe Acrobat Mac 24.001.30360",
+                  "product_id": "T052666-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:acrobat:mac__24.001.30360"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Acrobat"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<26.001.21411",
+                "product": {
+                  "name": "Adobe Acrobat DC <26.001.21411",
+                  "product_id": "T052663"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.001.21411",
+                "product": {
+                  "name": "Adobe Acrobat DC 26.001.21411",
+                  "product_id": "T052663-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:acrobat_dc:26.001.21411"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Acrobat DC"
+          },
           {
             "branches": [
               {
@@ -120,6 +199,31 @@
             ],
             "category": "product_name",
             "name": "Acrobat Reader"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<26.001.21411",
+                "product": {
+                  "name": "Adobe Acrobat Reader DC <26.001.21411",
+                  "product_id": "T052664"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.001.21411",
+                "product": {
+                  "name": "Adobe Acrobat Reader DC 26.001.21411",
+                  "product_id": "T052664-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:adobe:acrobat_reader_dc:26.001.21411"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Acrobat Reader DC"
           }
         ],
         "category": "vendor",
@@ -129,12 +233,20 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2026-34621",
       "product_status": {
+        "known_affected": [
+          "T052665",
+          "T052666",
+          "T052663",
+          "T052664"
+        ],
         "last_affected": [
           "T052646"
         ]
       },
-      "release_date": "2026-04-09T22:00:00.000+00:00"
+      "release_date": "2026-04-09T22:00:00.000+00:00",
+      "title": "CVE-2026-34621"
     }
   ]
 }
