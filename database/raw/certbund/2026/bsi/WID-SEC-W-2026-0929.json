@@ -19,12 +19,12 @@
       },
       {
         "category": "description",
-        "text": "IBM Semeru Runtime ist ein Java Runtime Environment.\r\nIBM DB2 ist ein relationales Datenbanksystem (RDBS) von IBM.",
+        "text": "IBM Semeru Runtime ist ein Java Runtime Environment.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in IBM Semeru Runtime und IBM DB2 ausnutzen, um beliebigen Programmcode auszuführen.",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in IBM Semeru, wie es u.a. in der Power Hardware Management Console und IBM DB2 genutzt wird, ausnutzen, um beliebigen Programmcode auszuführen.",
         "title": "Angriff"
       },
       {
@@ -64,9 +64,9 @@
     "source_lang": "en-US",
     "title": "IBM Semeru Runtime: Schwachstelle ermöglicht Codeausführung",
     "tracking": {
-      "current_release_date": "2026-04-09T22:00:00.000+00:00",
+      "current_release_date": "2026-04-13T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-10T08:19:08.666+00:00",
+        "date": "2026-04-14T09:19:19.315+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -89,10 +89,15 @@
           "date": "2026-04-09T22:00:00.000+00:00",
           "number": "3",
           "summary": "Präzisierung Semeru Versionsangaben"
+        },
+        {
+          "date": "2026-04-13T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Ergänzung PHMC Details in Text und Produktangaben"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -103,12 +108,12 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "12.1.4",
+                "name": "12.1.0-12.1.4",
                 "product": {
-                  "name": "IBM DB2 12.1.4",
-                  "product_id": "T052309",
+                  "name": "IBM DB2 12.1.0-12.1.4",
+                  "product_id": "T052712",
                   "product_identification_helper": {
-                    "cpe": "cpe:/a:ibm:db2:12.1.4"
+                    "cpe": "cpe:/a:ibm:db2:12.1.0_-_12.1.4"
                   }
                 }
               }
@@ -117,15 +122,32 @@
             "name": "DB2"
           },
           {
-            "category": "product_name",
-            "name": "IBM Power Hardware Management Console",
-            "product": {
-              "name": "IBM Power Hardware Management Console",
-              "product_id": "5114",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:ibm:hardware_management_console:-"
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "V10.3.1050.0-V10.3.1063.1",
+                "product": {
+                  "name": "IBM Power Hardware Management Console V10.3.1050.0-V10.3.1063.1",
+                  "product_id": "T052713",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:hardware_management_console:v10.3.1050.0_-_v10.3.1063.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "V11.1.1110.0-V11.1.1111.4",
+                "product": {
+                  "name": "IBM Power Hardware Management Console V11.1.1110.0-V11.1.1111.4",
+                  "product_id": "T052715",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:hardware_management_console:v11.1.1110.0_-_v11.1.1111.4"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Power Hardware Management Console"
           },
           {
             "branches": [
@@ -202,8 +224,9 @@
           "T052582",
           "T052583",
           "T052581",
-          "T052309",
-          "5114",
+          "T052715",
+          "T052713",
+          "T052712",
           "T052584",
           "T052585"
         ]
