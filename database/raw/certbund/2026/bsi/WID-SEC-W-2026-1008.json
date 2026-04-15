@@ -24,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Microsoft Windows ausnutzen, um seine Privilegien auf „NT AUTHORITYSYSTEM“ zu erweitern.",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle in Microsoft Defender ausnutzen, um seine Privilegien auf „NT AUTHORITYSYSTEM“ zu erweitern.",
         "title": "Angriff"
       },
       {
@@ -69,14 +69,19 @@
         "category": "external",
         "summary": "SOC-Radar Analysis vom 2026-04-07",
         "url": "https://socradar.io/blog/bluehammer-windows-zero-day-privilege-escalation-risk/"
+      },
+      {
+        "category": "external",
+        "summary": "infosec.exchange user Will Dormann vom 2026-04-14",
+        "url": "https://infosec.exchange/@wdormann/116404516592597593"
       }
     ],
     "source_lang": "en-US",
-    "title": "Microsoft Windows: Schwachstelle ermöglicht Privilegieneskalation",
+    "title": "Microsoft Defender: Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2026-04-07T22:00:00.000+00:00",
+      "current_release_date": "2026-04-14T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-08T11:49:11.960+00:00",
+        "date": "2026-04-15T08:29:13.154+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -89,16 +94,38 @@
           "date": "2026-04-07T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-04-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Microsoft aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
       {
         "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Antimalware Platform",
+                "product": {
+                  "name": "Microsoft Defender Antimalware Platform",
+                  "product_id": "T052753",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:defender:antimalware_platform"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Defender"
+          },
           {
             "category": "product_name",
             "name": "Microsoft Windows",
@@ -118,12 +145,15 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2026-33825",
       "product_status": {
         "known_affected": [
-          "T052522"
+          "T052522",
+          "T052753"
         ]
       },
-      "release_date": "2026-04-07T22:00:00.000+00:00"
+      "release_date": "2026-04-07T22:00:00.000+00:00",
+      "title": "CVE-2026-33825"
     }
   ]
 }

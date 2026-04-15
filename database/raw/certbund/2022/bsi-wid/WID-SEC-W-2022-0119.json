@@ -194,17 +194,22 @@
         "category": "external",
         "summary": "openSUSE Security Update OPENSUSE-SU-2025:14621-1 vom 2025-01-08",
         "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/4CUQQ6QHKQ66CAQFISBEQ34A2SLDQ5JS/"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:7025 vom 2026-04-14",
+        "url": "https://errata.build.resf.org/RLSA-2023:7025"
       }
     ],
     "source_lang": "en-US",
     "title": "Ruby: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2025-01-08T23:00:00.000+00:00",
+      "current_release_date": "2026-04-14T22:00:00.000+00:00",
       "generator": {
-        "date": "2025-01-09T09:21:15.677+00:00",
+        "date": "2026-04-15T07:18:58.047+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.10"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2022-0119",
@@ -304,10 +309,15 @@
           "date": "2025-01-08T23:00:00.000+00:00",
           "number": "19",
           "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2026-04-14T22:00:00.000+00:00",
+          "number": "20",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
         }
       ],
       "status": "final",
-      "version": "19"
+      "version": "20"
     }
   },
   "product_tree": {
@@ -472,6 +482,23 @@
         "branches": [
           {
             "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
             "name": "Red Hat Enterprise Linux",
             "product": {
               "name": "Red Hat Enterprise Linux",
@@ -535,12 +562,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-28738",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby. Diese besteht aufgrund eines Begrenzungsfehlers im Regexp-Kompilierungsprozess in Ruby. Ein entfernter Angreifer kann speziell gestaltete Daten an die Anwendung übergeben, einen Double-Free-Fehler auslösen und beliebigen Code auf dem Zielsystem ausführen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T022658",
@@ -552,7 +573,8 @@
           "398363",
           "T021040",
           "T012167",
-          "T004914"
+          "T004914",
+          "T032255"
         ]
       },
       "release_date": "2022-04-12T22:00:00.000+00:00",
@@ -560,26 +582,21 @@
     },
     {
       "cve": "CVE-2022-28739",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby. Es besteht ein Fehler in in einer internen Funktion, die einen String in einen Float konvertiert. Dadurch können einige Konvertierungsmethoden wie Kernel#Float und String#to_f dazu führen, dass ein Puffer überlesen wird. Ein entfernter anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service zu verursachen oder Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "67646",
+          "T012167",
+          "T004914",
+          "T032255",
           "T022657",
           "T022658",
           "2951",
           "T002207",
-          "67646",
           "T000126",
           "T022656",
           "T027843",
           "398363",
-          "T021040",
-          "T012167",
-          "T004914"
+          "T021040"
         ]
       },
       "release_date": "2022-04-12T22:00:00.000+00:00",
