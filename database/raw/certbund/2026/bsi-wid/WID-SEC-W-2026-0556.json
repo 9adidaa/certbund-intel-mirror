@@ -284,14 +284,34 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2026:8259 vom 2026-04-15",
         "url": "https://access.redhat.com/errata/RHSA-2026:8259"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:7711 vom 2026-04-15",
+        "url": "https://errata.build.resf.org/RLSA-2026:7711"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-8259 vom 2026-04-15",
+        "url": "https://linux.oracle.com/errata/ELSA-2026-8259.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:7239 vom 2026-04-16",
+        "url": "https://access.redhat.com/errata/RHSA-2026:7239"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:7243 vom 2026-04-16",
+        "url": "https://access.redhat.com/errata/RHSA-2026:7243"
       }
     ],
     "source_lang": "en-US",
     "title": "vim: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-04-14T22:00:00.000+00:00",
+      "current_release_date": "2026-04-15T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-15T07:49:35.449+00:00",
+        "date": "2026-04-16T11:19:01.018+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -379,10 +399,15 @@
           "date": "2026-04-14T22:00:00.000+00:00",
           "number": "16",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-04-15T22:00:00.000+00:00",
+          "number": "17",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation und Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "16"
+      "version": "17"
     }
   },
   "product_tree": {
@@ -576,6 +601,50 @@
                 "cpe": "cpe:/o:redhat:enterprise_linux:-"
               }
             }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.13.65",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.13.65",
+                  "product_id": "T052914"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.13.65",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.13.65",
+                  "product_id": "T052914-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.13.65"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.19.28",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.19.28",
+                  "product_id": "T052919"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.19.28",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.19.28",
+                  "product_id": "T052919-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.19.28"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenShift"
           }
         ],
         "category": "vendor",
@@ -635,12 +704,14 @@
         "known_affected": [
           "T002207",
           "67646",
+          "T052914",
           "T000126",
           "T027843",
           "T051315",
           "T004914",
           "T032255",
-          "74185"
+          "74185",
+          "T052919"
         ]
       },
       "release_date": "2026-03-01T23:00:00.000+00:00",
@@ -653,12 +724,14 @@
           "T002207",
           "67646",
           "T051316",
+          "T052914",
           "T000126",
           "T027843",
           "T051315",
           "T004914",
           "T032255",
-          "74185"
+          "74185",
+          "T052919"
         ]
       },
       "release_date": "2026-03-01T23:00:00.000+00:00",
@@ -672,12 +745,14 @@
           "T051317",
           "67646",
           "T051316",
+          "T052914",
           "T000126",
           "T027843",
           "T051315",
           "T004914",
           "T032255",
-          "74185"
+          "74185",
+          "T052919"
         ]
       },
       "release_date": "2026-03-01T23:00:00.000+00:00",
@@ -687,17 +762,19 @@
       "cve": "CVE-2026-28420",
       "product_status": {
         "known_affected": [
-          "T002207",
-          "T051317",
           "67646",
-          "T051316",
-          "T000126",
-          "T051318",
-          "T027843",
           "T051315",
           "T004914",
           "T032255",
-          "74185"
+          "74185",
+          "T002207",
+          "T051317",
+          "T051316",
+          "T052914",
+          "T000126",
+          "T051318",
+          "T027843",
+          "T052919"
         ]
       },
       "release_date": "2026-03-01T23:00:00.000+00:00",
@@ -707,18 +784,20 @@
       "cve": "CVE-2026-28421",
       "product_status": {
         "known_affected": [
+          "67646",
+          "T051315",
+          "T004914",
+          "T032255",
+          "74185",
           "T002207",
           "T051317",
-          "67646",
           "T051316",
+          "T052914",
           "T000126",
           "T051319",
           "T051318",
           "T027843",
-          "T051315",
-          "T004914",
-          "T032255",
-          "74185"
+          "T052919"
         ]
       },
       "release_date": "2026-03-01T23:00:00.000+00:00",
@@ -737,10 +816,12 @@
           "T002207",
           "T051317",
           "T051316",
+          "T052914",
           "T000126",
           "T051319",
           "T051318",
-          "T027843"
+          "T027843",
+          "T052919"
         ]
       },
       "release_date": "2026-03-01T23:00:00.000+00:00",
