@@ -61,7 +61,7 @@ Elle vise à permettre aux équipes techniques, CTI et SOC de comprendre, collec
    ---
 
    <!-- STATUS:START -->
-Last CI success: 2026-04-19 23:39 UTC
+Last CI success: 2026-04-20 23:45 UTC
 
 ### Validation
 | Check | Status |
@@ -72,7 +72,7 @@ Last CI success: 2026-04-19 23:39 UTC
 | Tests executed | **11 passed** |
 
 ### Dataset size
-- Advisories: **22629**
+- Advisories: **22657**
 - Unique CVEs: **46702**
 
 <!-- STATUS:END -->
