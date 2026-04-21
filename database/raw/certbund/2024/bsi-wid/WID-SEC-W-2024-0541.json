@@ -69,17 +69,22 @@
         "category": "external",
         "summary": "Rapid7 Report",
         "url": "https://www.rapid7.com/blog/post/2024/03/04/etr-cve-2024-27198-and-cve-2024-27199-jetbrains-teamcity-multiple-authentication-bypass-vulnerabilities-fixed/"
+      },
+      {
+        "category": "external",
+        "summary": "CISA Known Exploited Vulnerabilities Catalog vom 2026-04-20",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
       }
     ],
     "source_lang": "en-US",
     "title": "JetBrains TeamCity: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-03-04T23:00:00.000+00:00",
+      "current_release_date": "2026-04-20T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:06:02.849+00:00",
+        "date": "2026-04-21T08:04:10.166+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2024-0541",
@@ -89,10 +94,15 @@
           "date": "2024-03-04T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-04-20T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Aktive Ausnutzung gemeldet"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -103,10 +113,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 2023.11.4",
+                "name": "<2023.11.4",
                 "product": {
-                  "name": "JetBrains TeamCity < 2023.11.4",
+                  "name": "JetBrains TeamCity <2023.11.4",
                   "product_id": "T033232"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2023.11.4",
+                "product": {
+                  "name": "JetBrains TeamCity 2023.11.4",
+                  "product_id": "T033232-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:jetbrains:teamcity:2023.11.4"
+                  }
                 }
               }
             ],
@@ -121,26 +142,24 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2024-27199",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in JetBrains TeamCity. Aufgrund von Implementierungsfehlern kann eine Authentisierung umgangen und ein Path-Traversal ausgenutzt werden. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um bestimmte Aktionen mit administrativen Rechten auszuführen."
-        }
-      ],
-      "release_date": "2024-03-04T23:00:00.000+00:00",
-      "title": "CVE-2024-27199"
-    },
-    {
       "cve": "CVE-2024-27198",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in JetBrains TeamCity. Aufgrund von Implementierungsfehlern kann eine Authentisierung umgangen und ein Path-Traversal ausgenutzt werden. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um bestimmte Aktionen mit administrativen Rechten auszuführen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T033232"
+        ]
+      },
       "release_date": "2024-03-04T23:00:00.000+00:00",
       "title": "CVE-2024-27198"
+    },
+    {
+      "cve": "CVE-2024-27199",
+      "product_status": {
+        "known_affected": [
+          "T033232"
+        ]
+      },
+      "release_date": "2024-03-04T23:00:00.000+00:00",
+      "title": "CVE-2024-27199"
     }
   ]
 }
