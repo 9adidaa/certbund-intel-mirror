@@ -64,14 +64,54 @@
         "category": "external",
         "summary": "GitHub Security Advisory GHSA-f55j-vvr9-69xv vom 2026-04-22",
         "url": "https://github.com/PackageKit/PackageKit/security/advisories/GHSA-f55j-vvr9-69xv"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4545 vom 2026-04-23",
+        "url": "https://lists.debian.org/debian-lts-announce/2026/04/msg00026.html"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-41926FE792 vom 2026-04-22",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-41926fe792"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-6C121B3D4C vom 2026-04-22",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-6c121b3d4c"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6226 vom 2026-04-23",
+        "url": "https://lists.debian.org/debian-security-announce/2026/msg00136.html"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-7463CD3C32 vom 2026-04-22",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-7463cd3c32"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu CVE Tracker",
+        "url": "https://bugs.launchpad.net/bugs/cve/2026-41651"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Customer Portal",
+        "url": "https://access.redhat.com/security/cve/cve-2026-41651"
+      },
+      {
+        "category": "external",
+        "summary": "PoC vom 2026-04-22",
+        "url": "https://github.com/Vozec/CVE-2026-41651/"
       }
     ],
     "source_lang": "en-US",
     "title": "PackageKit: Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2026-04-21T22:00:00.000+00:00",
+      "current_release_date": "2026-04-22T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-22T11:34:16.886+00:00",
+        "date": "2026-04-23T11:34:11.159+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -84,14 +124,53 @@
           "date": "2026-04-21T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-04-22T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Debian, Fedora und Ubuntu aufgenommen, Red Hat ebenfalls betroffen, PoC verfügbar"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Fedora Linux",
+            "product": {
+              "name": "Fedora Linux",
+              "product_id": "74185",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:fedoraproject:fedora:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
       {
         "branches": [
           {
@@ -122,17 +201,57 @@
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
       }
     ]
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2026-41651",
       "product_status": {
         "known_affected": [
-          "T053227"
+          "2951",
+          "67646",
+          "T000126",
+          "T053227",
+          "74185"
         ]
       },
-      "release_date": "2026-04-21T22:00:00.000+00:00"
+      "release_date": "2026-04-21T22:00:00.000+00:00",
+      "title": "CVE-2026-41651"
     }
   ]
 }
