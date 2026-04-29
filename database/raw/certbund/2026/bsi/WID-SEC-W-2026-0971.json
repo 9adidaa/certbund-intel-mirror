@@ -129,14 +129,29 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2026-10758 vom 2026-04-28",
         "url": "https://linux.oracle.com/errata/ELSA-2026-10758.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:21369-1 vom 2026-04-28",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-April/025737.html"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:10758 vom 2026-04-28",
+        "url": "https://errata.build.resf.org/RLSA-2026:10758"
+      },
+      {
+        "category": "external",
+        "summary": "RedHat Security Advisory",
+        "url": "https://access.redhat.com/errata/RHSA-2026:11521"
       }
     ],
     "source_lang": "en-US",
     "title": "sudo: Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2026-04-27T22:00:00.000+00:00",
+      "current_release_date": "2026-04-28T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-28T08:31:06.657+00:00",
+        "date": "2026-04-29T09:41:22.581+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -189,10 +204,15 @@
           "date": "2026-04-27T22:00:00.000+00:00",
           "number": "9",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-04-28T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von SUSE, Rocky Enterprise Software Foundation und Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "9"
+      "version": "10"
     }
   },
   "product_tree": {
@@ -275,14 +295,48 @@
         "branches": [
           {
             "category": "product_name",
-            "name": "Red Hat Enterprise Linux",
+            "name": "RESF Rocky Linux",
             "product": {
-              "name": "Red Hat Enterprise Linux",
-              "product_id": "67646",
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
               "product_identification_helper": {
-                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                "cpe": "cpe:/o:resf:rocky_linux:-"
               }
             }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Red Hat Enterprise Linux",
+                "product": {
+                  "name": "Red Hat Enterprise Linux",
+                  "product_id": "67646",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Red Hat Enterprise Linux",
+                "product": {
+                  "name": "Red Hat Enterprise Linux",
+                  "product_id": "T035798",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
           }
         ],
         "category": "vendor",
@@ -323,12 +377,14 @@
       "cve": "CVE-2026-35535",
       "product_status": {
         "known_affected": [
+          "T035798",
           "T002207",
           "67646",
           "T052416",
           "T027843",
           "T049210",
           "T004914",
+          "T032255",
           "74185"
         ]
       },
