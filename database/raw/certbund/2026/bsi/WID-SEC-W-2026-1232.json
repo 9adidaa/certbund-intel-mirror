@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "mittel"
+      "text": "hoch"
     },
     "category": "csaf_base",
     "csaf_version": "2.0",
@@ -24,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Linux Kernel ausnutzen, um einen Denial of Service Zustand oder andere, nicht näher spezifizierte Auswirkungen zu erzielen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Linux Kernel ausnutzen, um seine Privilegien zu erhöhen, um einen Denial of Service Zustand oder andere, nicht näher spezifizierte Auswirkungen zu erzielen.",
         "title": "Angriff"
       },
       {
@@ -69,14 +69,24 @@
         "category": "external",
         "summary": "Linux Kernel CVE Announcement CVE-2026-31433",
         "url": "https://lore.kernel.org/linux-cve-announce/2026042216-CVE-2026-31433-51e6@gregkh/"
+      },
+      {
+        "category": "external",
+        "summary": "CopyFail (CVE-2026-31431) Exploit-Code vom 2026-04-29",
+        "url": "https://github.com/badsectorlabs/copyfail-go"
+      },
+      {
+        "category": "external",
+        "summary": "CopyFail (CVE-2026-31431) Webseite vom 2026-04-29",
+        "url": "https://copy.fail/"
       }
     ],
     "source_lang": "en-US",
-    "title": "Linux Kernel: Mehrere Schwachstellen ermöglichen Denial of Service",
+    "title": "Linux Kernel: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-04-22T22:00:00.000+00:00",
+      "current_release_date": "2026-04-29T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-23T09:05:57.114+00:00",
+        "date": "2026-04-30T11:19:53.075+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -94,10 +104,15 @@
           "date": "2026-04-22T22:00:00.000+00:00",
           "number": "2",
           "summary": "Referenz(en) aufgenommen: EUVD-2026-24639, EUVD-2026-24641"
+        },
+        {
+          "date": "2026-04-29T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Beschreibung CVE-2026-31431 angepasst, Exploit verfügbar"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -123,16 +138,6 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-31431",
-      "product_status": {
-        "known_affected": [
-          "T028462"
-        ]
-      },
-      "release_date": "2026-04-21T22:00:00.000+00:00",
-      "title": "CVE-2026-31431"
-    },
-    {
       "cve": "CVE-2026-31432",
       "product_status": {
         "known_affected": [
@@ -151,6 +156,16 @@
       },
       "release_date": "2026-04-21T22:00:00.000+00:00",
       "title": "CVE-2026-31433"
+    },
+    {
+      "cve": "CVE-2026-31431",
+      "product_status": {
+        "known_affected": [
+          "T028462"
+        ]
+      },
+      "release_date": "2026-04-29T22:00:00.000+00:00",
+      "title": "CVE-2026-31431"
     }
   ]
 }
