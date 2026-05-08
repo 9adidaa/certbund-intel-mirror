@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux\n- Windows",
+        "text": "- Linux\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -142,13 +142,18 @@
       },
       {
         "category": "external",
+        "summary": "Ubuntu Security Notice USN-3685-1 vom 2021-03-25",
+        "url": "https://ubuntu.com/security/notices/USN-3685-2"
+      },
+      {
+        "category": "external",
         "summary": "Debian Security Advisory DLA-2330 vom 2020-08-16",
         "url": "https://lists.debian.org/debian-lts-announce/2020/debian-lts-announce-202008/msg00027.html"
       },
       {
         "category": "external",
-        "summary": "Ubuntu Security Notice USN-3685-1 vom 2021-03-25",
-        "url": "https://ubuntu.com/security/notices/USN-3685-2"
+        "summary": "Amazon Linux Security Advisory ALAS-2024-2486 vom 2024-03-05",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2486.html"
       },
       {
         "category": "external",
@@ -162,19 +167,29 @@
       },
       {
         "category": "external",
-        "summary": "Amazon Linux Security Advisory ALAS-2024-2486 vom 2024-03-05",
-        "url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2486.html"
+        "summary": "Red Hat Security Advisory RHSA-2026:8838 vom 2026-05-08",
+        "url": "https://access.redhat.com/errata/RHSA-2026:8838"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:7305 vom 2026-05-08",
+        "url": "https://access.redhat.com/errata/RHSA-2026:7305"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:7307 vom 2026-05-08",
+        "url": "https://access.redhat.com/errata/RHSA-2026:7307"
       }
     ],
     "source_lang": "en-US",
     "title": "Ruby: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-03-04T23:00:00.000+00:00",
+      "current_release_date": "2026-05-07T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:50:11.038+00:00",
+        "date": "2026-05-08T10:51:46.733+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.5.0"
         }
       },
       "id": "WID-SEC-W-2023-1111",
@@ -294,10 +309,15 @@
           "date": "2024-03-04T23:00:00.000+00:00",
           "number": "23",
           "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2026-05-07T22:00:00.000+00:00",
+          "number": "24",
+          "summary": "Neue Updates von Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "23"
+      "version": "24"
     }
   },
   "product_tree": {
@@ -353,34 +373,66 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<= 2.2.9",
+                "name": "<=2.2.9",
                 "product": {
-                  "name": "Open Source Ruby <= 2.2.9",
+                  "name": "Open Source Ruby <=2.2.9",
                   "product_id": "T012006"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "<= 2.3.6",
+                "name": "<=2.2.9",
                 "product": {
-                  "name": "Open Source Ruby <= 2.3.6",
+                  "name": "Open Source Ruby <=2.2.9",
+                  "product_id": "T012006-fixed"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.3.6",
+                "product": {
+                  "name": "Open Source Ruby <=2.3.6",
                   "product_id": "T012007"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "<= 2.4.3",
+                "name": "<=2.3.6",
                 "product": {
-                  "name": "Open Source Ruby <= 2.4.3",
+                  "name": "Open Source Ruby <=2.3.6",
+                  "product_id": "T012007-fixed"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.4.3",
+                "product": {
+                  "name": "Open Source Ruby <=2.4.3",
                   "product_id": "T012008"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "<= 2.5.0",
+                "name": "<=2.4.3",
                 "product": {
-                  "name": "Open Source Ruby <= 2.5.0",
+                  "name": "Open Source Ruby <=2.4.3",
+                  "product_id": "T012008-fixed"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.5.0",
+                "product": {
+                  "name": "Open Source Ruby <=2.5.0",
                   "product_id": "T012009"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.5.0",
+                "product": {
+                  "name": "Open Source Ruby <=2.5.0",
+                  "product_id": "T012009-fixed"
                 }
               },
               {
@@ -483,12 +535,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2017-17742",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby im Zusammenhang mit WEBrick. Diese Schwachstelle ermöglicht HTTP Response Splitting Angriffe und beruht darauf, dass ein Skript externe Eingaben annimmt und ohne Veränderung als Teil einer HTTP-Antwort weitergibt. Dadurch ist ein entfernter anonymer Angreifer in der Lage diese Schwachstelle auszunutzen, sodass er Daten in HTTP Antworten injizieren kann. In der Folge kann der Angreifer Web Cache-Poisoning Angriffe durchführen, um vertrauliche Informationen von Requests anderer Benutzer zu ermitteln bzw. Cross-Site Scripting Angriffe zu starten."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -513,12 +559,6 @@
     },
     {
       "cve": "CVE-2018-6914",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby im Zusammenhang mit der tmpdir Bibliothek. Die Schwachstelle befindet sich in Dir.mktmpdir. Ein Angreifer kann dieses nutzen und beliebige Verzeichnisse und Dateien einzusehen oder zu manipulieren. Zur erfolgreichen Ausnutzung dieser Schwachstelle ist eine Benutzerinteraktion erforderlich."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -543,12 +583,6 @@
     },
     {
       "cve": "CVE-2018-8777",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby in WEBrick. Die Schwachstelle tritt bei der Verarbeitung großer HTTPS Header auf und beruht darauf, dass der vorhandene Speicher vollständig belegt werden kann. Ein Angreifer kann dieses durch Übermittlung geeignet gestalteter Daten zu einem Denial of Service Angriff nutzen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -573,12 +607,6 @@
     },
     {
       "cve": "CVE-2018-8778",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby in der Methode String#unpack. Die Schwachstelle beruht auf einem Fehler bei der Verarbeitung von Eingaben. Ein Angreifer kann dieses durch Übermittlung geeignet gestalteter Daten nutzen und einen Pufferunterlauf herbeiführen. In der Folge ist es möglich, Teile des Speichers einzusehen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -603,12 +631,6 @@
     },
     {
       "cve": "CVE-2018-8779",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby im Zusammenhang mit der Methode UNIXServer.open. Die Schwachstelle beruht auf einem Fehler bei der Verarbeitung von Benutzereingaben. Ein Angreifer kann dieses nutzen und Sockets zu beliebigen Verzeichnissen erstellen. Zur erfolgreichen Ausnutzung dieser Schwachstelle ist eine Benutzerinteraktion erforderlich."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -633,12 +655,6 @@
     },
     {
       "cve": "CVE-2018-8780",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Ruby im Zusammenhang mit Dir.open, Dir.new, Dir.entries und Dir.empty?. Die Schwachstelle beruht auf einem Fehler bei der Verarbeitung von Benutzereingaben. Ein Angreifer kann dieses durch Übermittlung geeignet gestalteter Daten nutzen und beliebige Verzeichnisse durchsuchen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
