@@ -74,14 +74,24 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2026-15968 vom 2026-05-11",
         "url": "https://linux.oracle.com/errata/ELSA-2026-15968.html"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:15968 vom 2026-05-13",
+        "url": "https://errata.build.resf.org/RLSA-2026:15968"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:17482 vom 2026-05-14",
+        "url": "https://access.redhat.com/errata/RHSA-2026:17482"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux (libsoup): Schwachstelle ermöglicht Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2026-05-11T22:00:00.000+00:00",
+      "current_release_date": "2026-05-14T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-05-12T08:14:29.940+00:00",
+        "date": "2026-05-15T08:33:40.605+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -109,10 +119,15 @@
           "date": "2026-05-11T22:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-05-14T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation und Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -137,15 +152,32 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "RESF Rocky Linux",
-            "product": {
-              "name": "RESF Rocky Linux",
-              "product_id": "T032255",
-              "product_identification_helper": {
-                "cpe": "cpe:/o:resf:rocky_linux:-"
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "RESF Rocky Linux",
+                "product": {
+                  "name": "RESF Rocky Linux",
+                  "product_id": "T032255",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:resf:rocky_linux:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10",
+                "product": {
+                  "name": "RESF Rocky Linux 10",
+                  "product_id": "T054074",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:resf:rocky_linux:10"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Rocky Linux"
           }
         ],
         "category": "vendor",
@@ -176,6 +208,17 @@
                     "cpe": "cpe:/o:redhat:enterprise_linux:9"
                   }
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "10.0 Extended Update Support",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 10.0 Extended Update Support",
+                  "product_id": "T054067",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:10.0_extended_update_support"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -192,7 +235,9 @@
       "cve": "CVE-2026-5119",
       "product_status": {
         "known_affected": [
+          "T054067",
           "67646",
+          "T054074",
           "T038902",
           "T004914",
           "T032255"

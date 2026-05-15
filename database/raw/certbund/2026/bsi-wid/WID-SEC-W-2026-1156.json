@@ -59,14 +59,24 @@
         "category": "external",
         "summary": "OSS Security Mailing List vom 2026-04-15",
         "url": "https://www.openwall.com/lists/oss-security/2026/04/16/2"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-17481 vom 2026-05-15",
+        "url": "https://linux.oracle.com/errata/ELSA-2026-17481.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:17481 vom 2026-05-14",
+        "url": "https://access.redhat.com/errata/RHSA-2026:17481"
       }
     ],
     "source_lang": "en-US",
     "title": "Rsync: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2026-04-15T22:00:00.000+00:00",
+      "current_release_date": "2026-05-14T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-16T11:44:12.899+00:00",
+        "date": "2026-05-15T08:40:11.111+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.5.0"
@@ -79,10 +89,15 @@
           "date": "2026-04-15T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-05-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Oracle Linux und Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -109,6 +124,46 @@
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "8",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 8",
+                  "product_id": "T054066",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:8"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
       }
     ]
   },
@@ -117,7 +172,9 @@
       "cve": "CVE-2026-41035",
       "product_status": {
         "known_affected": [
-          "T052928"
+          "T052928",
+          "T054066",
+          "T004914"
         ]
       },
       "release_date": "2026-04-15T22:00:00.000+00:00",
