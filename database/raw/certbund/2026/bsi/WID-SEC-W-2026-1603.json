@@ -1,0 +1,191 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Microsoft Defender ist eine Software zur Erkennung von schädlicher Software (Malware).\r\nDie Malware Protection Engine ist Bestandteil verschiedener Sicherheitsprodukte von Microsoft und stellt selbigen das Scannen sowie Erkennen und Entfernen von Schadprogrammen zur Verfügung.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Microsoft Defender und Microsoft Malware Protection Engine ausnutzen, um seine Privilegien zu erhöhen, um beliebigen Code auszuführen und um einen Denial of Service Zustand herbeizuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-1603 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-1603.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-1603 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-1603"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates vom 2026-05-19",
+        "url": "https://msrc.microsoft.com/update-guide/"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft CVE-2026-45498 vom 2026-05-19",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft CVE-2026-41091 vom 2026-05-19",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft CVE-2026-45584 vom 2026-05-19",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45584"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Defender und Malware Protection Engine: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-05-19T22:00:00.000+00:00",
+      "generator": {
+        "date": "2026-05-20T11:00:39.017+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.6.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-1603",
+      "initial_release_date": "2026-05-19T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-05-19T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Antimalware Platform <4.18.26040.7",
+                "product": {
+                  "name": "Microsoft Defender Antimalware Platform <4.18.26040.7",
+                  "product_id": "T054345"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Antimalware Platform 4.18.26040.7",
+                "product": {
+                  "name": "Microsoft Defender Antimalware Platform 4.18.26040.7",
+                  "product_id": "T054345-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:defender:4.18.26040.7::antimalware_platform"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Defender"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.1.26040.8",
+                "product": {
+                  "name": "Microsoft Malware Protection Engine <1.1.26040.8",
+                  "product_id": "T054347"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.1.26040.8",
+                "product": {
+                  "name": "Microsoft Malware Protection Engine 1.1.26040.8",
+                  "product_id": "T054347-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:malware_protection_engine:1.1.26040.8"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Malware Protection Engine"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-41091",
+      "product_status": {
+        "known_affected": [
+          "T054347"
+        ]
+      },
+      "release_date": "2026-05-19T22:00:00.000+00:00",
+      "title": "CVE-2026-41091"
+    },
+    {
+      "cve": "CVE-2026-45498",
+      "product_status": {
+        "known_affected": [
+          "T054345"
+        ]
+      },
+      "release_date": "2026-05-19T22:00:00.000+00:00",
+      "title": "CVE-2026-45498"
+    },
+    {
+      "cve": "CVE-2026-45584",
+      "product_status": {
+        "known_affected": [
+          "T054347",
+          "T054345"
+        ]
+      },
+      "release_date": "2026-05-19T22:00:00.000+00:00",
+      "title": "CVE-2026-45584"
+    }
+  ]
+}
