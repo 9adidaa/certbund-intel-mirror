@@ -54,17 +54,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7269255 vom 2026-04-12",
         "url": "https://www.ibm.com/support/pages/node/7269255"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:17448 vom 2026-05-20",
+        "url": "https://access.redhat.com/errata/RHSA-2026:17448"
       }
     ],
     "source_lang": "en-US",
     "title": "IBM App Connect Enterprise: Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2026-04-12T22:00:00.000+00:00",
+      "current_release_date": "2026-05-20T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-04-13T10:39:04.964+00:00",
+        "date": "2026-05-21T07:57:08.497+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.5.0"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2026-1058",
@@ -74,10 +79,15 @@
           "date": "2026-04-12T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-05-20T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -131,6 +141,37 @@
         ],
         "category": "vendor",
         "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.18.42",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.18.42",
+                  "product_id": "T054401"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.18.42",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.18.42",
+                  "product_id": "T054401-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.18.42"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenShift"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
       }
     ]
   },
@@ -139,6 +180,7 @@
       "cve": "CVE-2026-34043",
       "product_status": {
         "known_affected": [
+          "T054401",
           "T052683",
           "T052684"
         ]
