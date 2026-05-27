@@ -139,14 +139,24 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2026:19145 vom 2026-05-19",
         "url": "https://access.redhat.com/errata/RHSA-2026:19145"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6293 vom 2026-05-23",
+        "url": "https://security-tracker.debian.org/tracker/DSA-6293-1"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:17789 vom 2026-05-26",
+        "url": "https://access.redhat.com/errata/RHSA-2026:17789"
       }
     ],
     "source_lang": "en-US",
     "title": "MIT Kerberos: Mehrere Schwachstellen ermöglichen Denial of Service",
     "tracking": {
-      "current_release_date": "2026-05-19T22:00:00.000+00:00",
+      "current_release_date": "2026-05-25T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-05-20T07:25:34.808+00:00",
+        "date": "2026-05-26T12:16:42.425+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -194,14 +204,36 @@
           "date": "2026-05-19T22:00:00.000+00:00",
           "number": "8",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-05-25T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Debian und Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "8"
+      "version": "9"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "T054613",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
       {
         "branches": [
           {
@@ -284,15 +316,40 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Red Hat Enterprise Linux",
-            "product": {
-              "name": "Red Hat Enterprise Linux",
-              "product_id": "67646",
-              "product_identification_helper": {
-                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Red Hat Enterprise Linux",
+                "product": {
+                  "name": "Red Hat Enterprise Linux",
+                  "product_id": "67646",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "Cryostat <4.2.0",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Cryostat <4.2.0",
+                  "product_id": "T054651"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Cryostat 4.2.0",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Cryostat 4.2.0",
+                  "product_id": "T054651-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:cryostat__4.2.0"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
           }
         ],
         "category": "vendor",
@@ -333,9 +390,11 @@
       "cve": "CVE-2026-40355",
       "product_status": {
         "known_affected": [
+          "T054651",
           "T002207",
           "67646",
           "T027843",
+          "T054613",
           "T004914",
           "T032255",
           "74185"
@@ -348,9 +407,11 @@
       "cve": "CVE-2026-40356",
       "product_status": {
         "known_affected": [
+          "T054651",
           "T002207",
           "67646",
           "T027843",
+          "T054613",
           "T004914",
           "T032255",
           "74185"

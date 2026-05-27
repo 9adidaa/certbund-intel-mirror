@@ -199,17 +199,22 @@
         "category": "external",
         "summary": "Gentoo Linux Security Advisory GLSA-202405-22 vom 2024-05-08",
         "url": "https://security.gentoo.org/glsa/202405-22"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:21726-1 vom 2026-05-22",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-May/026245.html"
       }
     ],
     "source_lang": "en-US",
     "title": "Rsync: Schwachstelle ermöglicht Manipulation von Dateien",
     "tracking": {
-      "current_release_date": "2024-05-07T22:00:00.000+00:00",
+      "current_release_date": "2026-05-25T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:32:44.792+00:00",
+        "date": "2026-05-26T11:50:36.634+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0891",
@@ -314,10 +319,15 @@
           "date": "2024-05-07T22:00:00.000+00:00",
           "number": "20",
           "summary": "Neue Updates von Gentoo aufgenommen"
+        },
+        {
+          "date": "2026-05-25T22:00:00.000+00:00",
+          "number": "21",
+          "summary": "Neue Updates von SUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "20"
+      "version": "21"
     }
   },
   "product_tree": {
@@ -491,6 +501,17 @@
                   "name": "Open Source Rsync <3.2.5",
                   "product_id": "T024152"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2.5",
+                "product": {
+                  "name": "Open Source Rsync 3.2.5",
+                  "product_id": "T024152-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gnu:rsync:3.2.5"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -584,12 +605,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-29154",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Rsync. Der Fehler besteht aufgrund einer unzureichenden Validierung von Dateinamen. Ein böswilliger rsync-Server oder ein Man-in-The-Middle-Angreifer kann diese Schwachstelle ausnutzen, um beliebige Dateien im Zielverzeichnis des rsync-Clients und in Unterverzeichnissen zu überschreiben oder um beliebige Dateien in die Verzeichnisse der verbindenden Peers zu schreiben."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T003343",
@@ -606,6 +621,7 @@
           "398363",
           "T024775",
           "1727",
+          "T024152",
           "T026399"
         ]
       },

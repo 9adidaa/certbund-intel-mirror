@@ -164,17 +164,22 @@
         "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2025:0152-1 vom 2025-01-17",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2025-January/020152.html"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20260522-0015 vom 2026-05-22",
+        "url": "https://security.netapp.com/advisory/NTAP-20260522-0015"
       }
     ],
     "source_lang": "en-US",
     "title": "Linux Kernel: Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2025-01-19T23:00:00.000+00:00",
+      "current_release_date": "2026-05-25T22:00:00.000+00:00",
       "generator": {
-        "date": "2025-01-20T09:28:12.301+00:00",
+        "date": "2026-05-26T11:50:35.801+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.10"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-2078",
@@ -244,14 +249,42 @@
           "date": "2025-01-19T23:00:00.000+00:00",
           "number": "13",
           "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2026-05-25T22:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von NetApp aufgenommen"
         }
       ],
       "status": "final",
-      "version": "13"
+      "version": "14"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Edge",
+                "product": {
+                  "name": "NetApp Data ONTAP Edge",
+                  "product_id": "T054611",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:data_ontap:edge"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Data ONTAP"
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
       {
         "branches": [
           {
@@ -508,12 +541,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2017-1000253",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle im Linux Kernel in der Art und Weise wie die Linux-Kernel ELF-Executables geladen werden. Ein lokaler Angreifer mit Zugriff auf SUID oder eine anderweitig privilegierte Position Independent Executable (PIE)-Binärdatei kann diese Schwachstelle ausnutzen, um seine Privilegien auf dem System zu erweitern."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T010855",
@@ -530,6 +557,7 @@
           "67748",
           "T010860",
           "T004914",
+          "T054611",
           "T002207",
           "1727",
           "T010859",
