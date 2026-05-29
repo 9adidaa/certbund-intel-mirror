@@ -52,6 +52,11 @@
       },
       {
         "category": "external",
+        "summary": "IBM Security Bulletin 7100884 vom 2023-12-20",
+        "url": "https://www.ibm.com/support/pages/node/7100884"
+      },
+      {
+        "category": "external",
         "summary": "Spring Security Advisories vom 2023-09-18",
         "url": "https://spring.io/blog/2023/09/18/spring-security-5-8-7-6-0-7-6-1-4-6-2-0-m1-released-including-fixes-for-cve"
       },
@@ -67,19 +72,19 @@
       },
       {
         "category": "external",
-        "summary": "IBM Security Bulletin 7100884 vom 2023-12-20",
-        "url": "https://www.ibm.com/support/pages/node/7100884"
+        "summary": "NetApp Security Advisory NTAP-20241129-0010 vom 2026-05-27",
+        "url": "https://security.netapp.com/advisory/NTAP-20241129-0010"
       }
     ],
     "source_lang": "en-US",
     "title": "VMware Tanzu Spring Security: Schwachstelle ermöglicht Manipulation von Dateien",
     "tracking": {
-      "current_release_date": "2023-12-20T23:00:00.000+00:00",
+      "current_release_date": "2026-05-27T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:58:35.309+00:00",
+        "date": "2026-05-28T07:25:40.178+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-2385",
@@ -99,10 +104,15 @@
           "date": "2023-12-20T23:00:00.000+00:00",
           "number": "3",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-05-27T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von NetApp aufgenommen"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -121,15 +131,21 @@
             }
           },
           {
-            "category": "product_name",
-            "name": "IBM Security Guardium 12.0",
-            "product": {
-              "name": "IBM Security Guardium 12.0",
-              "product_id": "T031092",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:ibm:security_guardium:12.0"
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "12",
+                "product": {
+                  "name": "IBM Security Guardium 12.0",
+                  "product_id": "T031092",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:security_guardium:12.0"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Security Guardium"
           }
         ],
         "category": "vendor",
@@ -140,44 +156,110 @@
           {
             "branches": [
               {
-                "category": "product_name",
-                "name": "VMware Tanzu Spring Security < 5.8.7",
+                "category": "product_version",
+                "name": "for Linux",
                 "product": {
-                  "name": "VMware Tanzu Spring Security < 5.8.7",
-                  "product_id": "T029959",
+                  "name": "NetApp ActiveIQ Unified Manager for Linux",
+                  "product_id": "T023548",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_linux"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "for Microsoft Windows",
+                "product": {
+                  "name": "NetApp ActiveIQ Unified Manager for Microsoft Windows",
+                  "product_id": "T025631",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:netapp:active_iq_unified_manager:for_microsoft_windows"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "ActiveIQ Unified Manager"
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.8.7",
+                "product": {
+                  "name": "VMware Tanzu Spring Security <5.8.7",
+                  "product_id": "T029959"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.8.7",
+                "product": {
+                  "name": "VMware Tanzu Spring Security 5.8.7",
+                  "product_id": "T029959-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:vmware_tanzu:spring_security:5.8.7"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "VMware Tanzu Spring Security < 6.0.7",
+                "category": "product_version_range",
+                "name": "<6.0.7",
                 "product": {
-                  "name": "VMware Tanzu Spring Security < 6.0.7",
-                  "product_id": "T029960",
+                  "name": "VMware Tanzu Spring Security <6.0.7",
+                  "product_id": "T029960"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.0.7",
+                "product": {
+                  "name": "VMware Tanzu Spring Security 6.0.7",
+                  "product_id": "T029960-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:vmware_tanzu:spring_security:6.0.7"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "VMware Tanzu Spring Security < 6.1.4",
+                "category": "product_version_range",
+                "name": "<6.1.4",
                 "product": {
-                  "name": "VMware Tanzu Spring Security < 6.1.4",
-                  "product_id": "T029961",
+                  "name": "VMware Tanzu Spring Security <6.1.4",
+                  "product_id": "T029961"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.1.4",
+                "product": {
+                  "name": "VMware Tanzu Spring Security 6.1.4",
+                  "product_id": "T029961-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:vmware_tanzu:spring_security:6.1.4"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "VMware Tanzu Spring Security < 6.2.0-M1",
+                "category": "product_version_range",
+                "name": "<6.2.0-M1",
                 "product": {
-                  "name": "VMware Tanzu Spring Security < 6.2.0-M1",
-                  "product_id": "T029962",
+                  "name": "VMware Tanzu Spring Security <6.2.0-M1",
+                  "product_id": "T029962"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "6.2.0-M1",
+                "product": {
+                  "name": "VMware Tanzu Spring Security 6.2.0-M1",
+                  "product_id": "T029962-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:vmware_tanzu:spring_security:6.2.0-m1"
                   }
@@ -196,16 +278,16 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-34042",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in VMware Tanzu Spring Security. Dieser Fehler besteht im spring-security-config jar, da die Datei spring-security.xsd weltweit schreibbar ist. Ein lokaler Angreifer mit Zugriff auf das Dateisystem kann diese Schwachstelle ausnutzen, um Dateien zu manipulieren."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T023548",
+          "T029959",
           "T031092",
-          "T005180"
+          "T025631",
+          "T005180",
+          "T029962",
+          "T029961",
+          "T029960"
         ]
       },
       "release_date": "2023-09-18T22:00:00.000+00:00",
