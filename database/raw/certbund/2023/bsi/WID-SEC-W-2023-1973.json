@@ -139,17 +139,22 @@
         "category": "external",
         "summary": "Dell Security Advisory DSA-2024-239 vom 2024-07-18",
         "url": "https://www.dell.com/support/kbdoc/de-de/000227051/dsa-2024-239-security-update-dell-ecs-3-8-1-1-for-multiple-security-vulnerabilities"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2023:6699 vom 2026-05-28",
+        "url": "https://errata.build.resf.org/RLSA-2023:6699"
       }
     ],
     "source_lang": "en-US",
     "title": "MIT Kerberos: Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2024-07-18T22:00:00.000+00:00",
+      "current_release_date": "2026-05-28T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:56:37.360+00:00",
+        "date": "2026-05-29T07:16:09.642+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-1973",
@@ -224,10 +229,15 @@
           "date": "2024-07-18T22:00:00.000+00:00",
           "number": "14",
           "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2026-05-28T22:00:00.000+00:00",
+          "number": "15",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
         }
       ],
       "status": "final",
-      "version": "14"
+      "version": "15"
     }
   },
   "product_tree": {
@@ -277,6 +287,17 @@
                   "name": "Dell ECS <3.8.1.1",
                   "product_id": "T036366"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "3.8.1.1",
+                "product": {
+                  "name": "Dell ECS 3.8.1.1",
+                  "product_id": "T036366-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:dell:ecs:3.8.1.1"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -316,11 +337,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "1.20.2",
+                "product": {
+                  "name": "MIT Kerberos 1.20.2",
+                  "product_id": "T029109-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:mit:kerberos:1.20.2"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<1.21.1",
                 "product": {
                   "name": "MIT Kerberos <1.21.1",
                   "product_id": "T029110"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.21.1",
+                "product": {
+                  "name": "MIT Kerberos 1.21.1",
+                  "product_id": "T029110-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:mit:kerberos:1.21.1"
+                  }
                 }
               }
             ],
@@ -364,6 +407,23 @@
         ],
         "category": "vendor",
         "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T032255",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
       },
       {
         "branches": [
@@ -455,25 +515,22 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-36054",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in MIT Kerberos. Dieser Fehler besteht in der Datei lib/kadm5/kadm_rpc_xdr.c aufgrund der Funktion \"_xdr_kadm5_principal_ent_rec\", die die Beziehung zwischen der Variablen \"n_key_data\" und der Anzahl des Arrays \"key_data\" nicht ordnungsgemäß validiert. Ein entfernter, authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T025152",
-          "2951",
-          "T002207",
+          "T029110",
           "67646",
-          "T000126",
           "7654",
           "T036366",
-          "398363",
           "T015632",
           "T012167",
-          "T015631"
+          "T015631",
+          "T032255",
+          "2951",
+          "T002207",
+          "T000126",
+          "T029109",
+          "398363"
         ]
       },
       "release_date": "2023-08-07T22:00:00.000+00:00",
