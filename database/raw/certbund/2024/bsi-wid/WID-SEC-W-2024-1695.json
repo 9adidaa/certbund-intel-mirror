@@ -64,12 +64,12 @@
     "source_lang": "en-US",
     "title": "Arista EOS: Mehrere Schwachstellen ermöglichen Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2024-07-23T22:00:00.000+00:00",
+      "current_release_date": "2026-06-04T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:11:40.975+00:00",
+        "date": "2026-06-05T06:42:25.427+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-1695",
@@ -79,10 +79,15 @@
           "date": "2024-07-23T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-06-04T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2024-55610, EUVD-2024-55611"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -100,11 +105,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "4.32.1F",
+                "product": {
+                  "name": "Arista EOS 4.32.1F",
+                  "product_id": "T036416-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.32.1f"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<4.31.3M",
                 "product": {
                   "name": "Arista EOS <4.31.3M",
                   "product_id": "T036417"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.31.3M",
+                "product": {
+                  "name": "Arista EOS 4.31.3M",
+                  "product_id": "T036417-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.31.3m"
+                  }
                 }
               },
               {
@@ -116,11 +143,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "4.30.7M",
+                "product": {
+                  "name": "Arista EOS 4.30.7M",
+                  "product_id": "T036418-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.30.7m"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<4.29.8M",
                 "product": {
                   "name": "Arista EOS <4.29.8M",
                   "product_id": "T036419"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.29.8M",
+                "product": {
+                  "name": "Arista EOS 4.29.8M",
+                  "product_id": "T036419-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.29.8m"
+                  }
                 }
               },
               {
@@ -132,6 +181,17 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "4.28.11M",
+                "product": {
+                  "name": "Arista EOS 4.28.11M",
+                  "product_id": "T036420-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.28.11m"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<4.31.2F",
                 "product": {
@@ -140,11 +200,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "4.31.2F",
+                "product": {
+                  "name": "Arista EOS 4.31.2F",
+                  "product_id": "T036430-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.31.2f"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<4.30.6M",
                 "product": {
                   "name": "Arista EOS <4.30.6M",
                   "product_id": "T036431"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.30.6M",
+                "product": {
+                  "name": "Arista EOS 4.30.6M",
+                  "product_id": "T036431-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:arista:arista_eos:4.30.6m"
+                  }
                 }
               }
             ],
@@ -160,23 +242,28 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-27891",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Arista EO, die auf eine unsachgemäße Zugriffskontrolle zurückzuführen ist, die zu einer falschen Zulassung oder Verweigerung ausgehender Pakete führt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um die Sicherheitskontrollen zu umgehen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T036418",
+          "T036419",
+          "T036416",
+          "T036417",
+          "T036420"
+        ]
+      },
       "release_date": "2024-07-23T22:00:00.000+00:00",
       "title": "CVE-2024-27891"
     },
     {
       "cve": "CVE-2024-6858",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Arista EOS aufgrund einer unsachgemäßen Authentifizierung im 802.1X-Modus. Nicht authentifizierte Hosts können Zugriff auf einen Switch-Port erhalten, wenn ein EAPOL-fähiges Gerät im Fallback-VLAN vorhanden ist. Ein Angreifer aus dem angrenzenden Netzwerk kann dies ausnutzen, um die Sicherheitskontrollen zu umgehen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T036419",
+          "T036430",
+          "T036420",
+          "T036431"
+        ]
+      },
       "release_date": "2024-07-23T22:00:00.000+00:00",
       "title": "CVE-2024-6858"
     }

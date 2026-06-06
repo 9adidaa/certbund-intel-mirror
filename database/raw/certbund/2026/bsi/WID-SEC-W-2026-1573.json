@@ -59,17 +59,22 @@
         "category": "external",
         "summary": "RedHat Customer Portal vom 2026-05-18",
         "url": "https://access.redhat.com/security/cve/cve-2026-8830"
+      },
+      {
+        "category": "external",
+        "summary": "Keycloak 26.6.3 release vom 2026-06-04",
+        "url": "https://www.keycloak.org/2026/06/keycloak-2663-released"
       }
     ],
     "source_lang": "en-US",
     "title": "Keycloak: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2026-05-18T22:00:00.000+00:00",
+      "current_release_date": "2026-06-04T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-05-19T10:00:58.991+00:00",
+        "date": "2026-06-05T07:48:55.785+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.5.0"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2026-1573",
@@ -79,10 +84,15 @@
           "date": "2026-05-18T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-06-04T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -90,15 +100,40 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Open Source Keycloak",
-            "product": {
-              "name": "Open Source Keycloak",
-              "product_id": "T054277",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:keycloak:keycloak:-"
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source Keycloak",
+                "product": {
+                  "name": "Open Source Keycloak",
+                  "product_id": "T054277",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:keycloak:keycloak:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<26.6.3",
+                "product": {
+                  "name": "Open Source Keycloak <26.6.3",
+                  "product_id": "T054992"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.6.3",
+                "product": {
+                  "name": "Open Source Keycloak 26.6.3",
+                  "product_id": "T054992-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:keycloak:keycloak:26.6.3"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Keycloak"
           }
         ],
         "category": "vendor",
@@ -111,7 +146,8 @@
       "cve": "CVE-2026-8830",
       "product_status": {
         "known_affected": [
-          "T054277"
+          "T054277",
+          "T054992"
         ]
       },
       "release_date": "2026-05-18T22:00:00.000+00:00",
