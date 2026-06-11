@@ -52,28 +52,18 @@
       },
       {
         "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1837-1 vom 2021-06-02",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008916.html"
+        "summary": "Mailing list OSS Security vom 2021-02-25",
+        "url": "https://www.openwall.com/lists/oss-security/2021/02/25/2"
       },
       {
         "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1829-1 vom 2021-06-02",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008910.html"
+        "summary": "QEMU-Devel Mailinglist",
+        "url": "https://lists.gnu.org/archive/html/qemu-devel/2021-02/msg07428.html"
       },
       {
         "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2021:1023-1 vom 2021-04-06",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008585.html"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1918-1 vom 2021-06-09",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008972.html"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:1947-1 vom 2021-06-10",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008990.html"
       },
       {
         "category": "external",
@@ -137,6 +127,16 @@
       },
       {
         "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1837-1 vom 2021-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008916.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:1829-1 vom 2021-06-02",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008910.html"
+      },
+      {
+        "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2021:1895-1 vom 2021-06-08",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008959.html"
       },
@@ -152,13 +152,13 @@
       },
       {
         "category": "external",
-        "summary": "Mailing list OSS Security vom 2021-02-25",
-        "url": "https://www.openwall.com/lists/oss-security/2021/02/25/2"
+        "summary": "SUSE Security Update SUSE-SU-2021:1918-1 vom 2021-06-09",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008972.html"
       },
       {
         "category": "external",
-        "summary": "QEMU-Devel Mailinglist",
-        "url": "https://lists.gnu.org/archive/html/qemu-devel/2021-02/msg07428.html"
+        "summary": "SUSE Security Update SUSE-SU-2021:1947-1 vom 2021-06-10",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-June/008990.html"
       },
       {
         "category": "external",
@@ -244,17 +244,22 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2024-12604 vom 2024-09-02",
         "url": "https://linux.oracle.com/errata/ELSA-2024-12604.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-8412-1 vom 2026-06-09",
+        "url": "https://ubuntu.com/security/notices/USN-8412-1"
       }
     ],
     "source_lang": "en-US",
     "title": "QEMU: Mehrere Schwachstellen ermöglichten Denial of Service",
     "tracking": {
-      "current_release_date": "2024-09-02T22:00:00.000+00:00",
+      "current_release_date": "2026-06-09T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-09-03T08:15:46.492+00:00",
+        "date": "2026-06-10T08:01:34.460+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.6"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-1097",
@@ -399,10 +404,15 @@
           "date": "2024-09-02T22:00:00.000+00:00",
           "number": "28",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-06-09T22:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
         }
       ],
       "status": "final",
-      "version": "28"
+      "version": "29"
     }
   },
   "product_tree": {
@@ -565,12 +575,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2021-20203",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In QEMU existieren mehrere Schwachstellen im \"vmxnet3\" NIC-Emulator und im \"e1000\" NIC-Emulator. Sie können durch die Verwendung ungültiger Werte für die Warteschlange \"rx/tx\" oder bei der Verarbeitung von Transmissions- (tx) Deskriptoren in \"process_tx_desc\" ausgelöst werden. Ein lokaler Angreifer in einer Gastmaschine kann diese Schwachstellen ausnutzen, um einen Denial of Service Zustand auszulösen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -589,12 +593,6 @@
     },
     {
       "cve": "CVE-2021-20257",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In QEMU existieren mehrere Schwachstellen im \"vmxnet3\" NIC-Emulator und im \"e1000\" NIC-Emulator. Sie können durch die Verwendung ungültiger Werte für die Warteschlange \"rx/tx\" oder bei der Verarbeitung von Transmissions- (tx) Deskriptoren in \"process_tx_desc\" ausgelöst werden. Ein lokaler Angreifer in einer Gastmaschine kann diese Schwachstellen ausnutzen, um einen Denial of Service Zustand auszulösen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",

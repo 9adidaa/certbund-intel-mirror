@@ -52,6 +52,31 @@
       },
       {
         "category": "external",
+        "summary": "Red Hat Customer Portal vom 2021-02-10",
+        "url": "https://access.redhat.com/security/cve/cve-2021-20181"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-2560 vom 2021-02-18",
+        "url": "https://lists.debian.org/debian-lts-announce/2021/02/msg00024.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2021:0521-1 vom 2021-02-19",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-February/008346.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2021-9104 vom 2021-03-12",
+        "url": "https://linux.oracle.com/errata/ELSA-2021-9104.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2021-9109 vom 2021-03-16",
+        "url": "https://linux.oracle.com/errata/ELSA-2021-9109.html"
+      },
+      {
+        "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2021:1240-1 vom 2021-04-16",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-April/008648.html"
       },
@@ -92,31 +117,6 @@
       },
       {
         "category": "external",
-        "summary": "Red Hat Customer Portal vom 2021-02-10",
-        "url": "https://access.redhat.com/security/cve/cve-2021-20181"
-      },
-      {
-        "category": "external",
-        "summary": "Debian Security Advisory DLA-2560 vom 2021-02-18",
-        "url": "https://lists.debian.org/debian-lts-announce/2021/02/msg00024.html"
-      },
-      {
-        "category": "external",
-        "summary": "SUSE Security Update SUSE-SU-2021:0521-1 vom 2021-02-19",
-        "url": "https://lists.suse.com/pipermail/sle-security-updates/2021-February/008346.html"
-      },
-      {
-        "category": "external",
-        "summary": "Oracle Linux Security Advisory ELSA-2021-9104 vom 2021-03-12",
-        "url": "https://linux.oracle.com/errata/ELSA-2021-9104.html"
-      },
-      {
-        "category": "external",
-        "summary": "Oracle Linux Security Advisory ELSA-2021-9109 vom 2021-03-16",
-        "url": "https://linux.oracle.com/errata/ELSA-2021-9109.html"
-      },
-      {
-        "category": "external",
         "summary": "Debian Security Advisory DLA-3099 vom 2022-09-05",
         "url": "https://lists.debian.org/debian-lts-announce/2022/09/msg00008.html"
       },
@@ -129,17 +129,22 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2024-12605 vom 2024-09-02",
         "url": "https://linux.oracle.com/errata/ELSA-2024-12605.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-8412-1 vom 2026-06-09",
+        "url": "https://ubuntu.com/security/notices/USN-8412-1"
       }
     ],
     "source_lang": "en-US",
     "title": "QEMU: Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2024-09-02T22:00:00.000+00:00",
+      "current_release_date": "2026-06-09T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-09-03T08:15:47.265+00:00",
+        "date": "2026-06-10T08:01:34.005+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.6"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-1279",
@@ -199,10 +204,15 @@
           "date": "2024-09-02T22:00:00.000+00:00",
           "number": "11",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-06-09T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
         }
       ],
       "status": "final",
-      "version": "11"
+      "version": "12"
     }
   },
   "product_tree": {
@@ -288,22 +298,34 @@
         ],
         "category": "vendor",
         "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2021-20181",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in der \"9pfs\"-Serverimplementierung von QEMU aufgrund eines Use-after-free-Fehlers. Authentifizierte Angreifer können dies durch Nutzung eines bösartigen 9p-Clients ausnutzen, um ihre Privilegien auf dem System zu erweitern."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
           "T002207",
+          "T000126",
           "T018319",
           "T004914"
         ]
