@@ -1,0 +1,302 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "GitLab ist eine Webanwendung zur Versionsverwaltung für Softwareprojekte auf Basis von git.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in GitLab ausnutzen, um Sicherheitsvorkehrungen zu umgehen, Daten zu manipulieren, serverseitige Request-Forgery- und Cross-Site-Scripting-Angriffe durchzuführen, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand zu verursachen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-1886 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-1886.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-1886 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-1886"
+      },
+      {
+        "category": "external",
+        "summary": "GitLab Patch Release vom 2026-06-10",
+        "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-0-2-released/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "GitLab: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-06-10T22:00:00.000+00:00",
+      "generator": {
+        "date": "2026-06-11T11:06:02.145+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.6.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-1886",
+      "initial_release_date": "2026-06-10T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-06-10T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<19.0.2",
+                "product": {
+                  "name": "Open Source GitLab <19.0.2",
+                  "product_id": "T055259"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.0.2",
+                "product": {
+                  "name": "Open Source GitLab 19.0.2",
+                  "product_id": "T055259-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:19.0.2"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<18.11.5",
+                "product": {
+                  "name": "Open Source GitLab <18.11.5",
+                  "product_id": "T055260"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "18.11.5",
+                "product": {
+                  "name": "Open Source GitLab 18.11.5",
+                  "product_id": "T055260-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:18.11.5"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<18.10.8",
+                "product": {
+                  "name": "Open Source GitLab <18.10.8",
+                  "product_id": "T055261"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "18.10.8",
+                "product": {
+                  "name": "Open Source GitLab 18.10.8",
+                  "product_id": "T055261-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gitlab:gitlab:18.10.8"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "GitLab"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-10087",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-10087"
+    },
+    {
+      "cve": "CVE-2026-10733",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-10733"
+    },
+    {
+      "cve": "CVE-2026-1500",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-1500"
+    },
+    {
+      "cve": "CVE-2026-3553",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-3553"
+    },
+    {
+      "cve": "CVE-2026-6269",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-6269"
+    },
+    {
+      "cve": "CVE-2026-6277",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-6277"
+    },
+    {
+      "cve": "CVE-2026-6552",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-6552"
+    },
+    {
+      "cve": "CVE-2026-6976",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-6976"
+    },
+    {
+      "cve": "CVE-2026-7250",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-7250"
+    },
+    {
+      "cve": "CVE-2026-8589",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-8589"
+    },
+    {
+      "cve": "CVE-2026-9204",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-9204"
+    },
+    {
+      "cve": "CVE-2026-9694",
+      "product_status": {
+        "known_affected": [
+          "T055261",
+          "T055260",
+          "T055259"
+        ]
+      },
+      "release_date": "2026-06-10T22:00:00.000+00:00",
+      "title": "CVE-2026-9694"
+    }
+  ]
+}

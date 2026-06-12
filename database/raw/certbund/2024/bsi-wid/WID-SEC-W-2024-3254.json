@@ -119,17 +119,22 @@
         "category": "external",
         "summary": "Amazon Linux Security Advisory ALAS-2024-2703 vom 2024-12-20",
         "url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2703.html"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:0200-1 vom 2026-06-11",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/LRVV2NYMMXKOJNMMHN64DM2MOUGYOIWD/"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux (NetworkManager-libreswan): Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2024-12-19T23:00:00.000+00:00",
+      "current_release_date": "2026-06-10T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-12-20T09:13:18.743+00:00",
+        "date": "2026-06-11T11:20:58.985+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.10"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-3254",
@@ -159,10 +164,15 @@
           "date": "2024-12-19T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2026-06-10T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von openSUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -262,21 +272,33 @@
         ],
         "category": "vendor",
         "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T027843",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2024-9050",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat Enterprise Linux im NetworkManager-libreswan-Paket. In einer VPN-Konfiguration, die aus einem Schlüssel-Wert-Format besteht, kann das Plugin Sonderzeichen nicht maskieren, sodass die Anwendung Werte als Schlüssel interpretiert. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen und durch das Einschleusen bösartiger Befehle Sicherheitsmaßnahmen umgehen und seine Privilegien auf Root Rechte erweitern."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "67646",
+          "T027843",
           "1174004",
           "T033890",
           "398363",
