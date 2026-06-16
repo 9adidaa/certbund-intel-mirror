@@ -19,12 +19,12 @@
       },
       {
         "category": "description",
-        "text": "Chrome ist ein Internet-Browser von Google.",
+        "text": "Chrome ist ein Internet-Browser von Google.\r\nEdge ist ein Internet-Browser von Microsoft.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome ausnutzen, um potenziell beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, Informationen offenzulegen, Daten zu manipulieren, einen Denial-of-Service-Zustand zu verursachen oder andere, nicht näher spezifizierte Angriffe durchzuführen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome / Microsoft Edge ausnutzen, um potenziell beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, Informationen offenzulegen, Daten zu manipulieren, einen Denial-of-Service-Zustand zu verursachen oder andere, nicht näher spezifizierte Angriffe durchzuführen.",
         "title": "Angriff"
       },
       {
@@ -54,14 +54,49 @@
         "category": "external",
         "summary": "Chrome Releases: Stable Channel Update for Desktop vom 2026-06-11",
         "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_01962725236.html"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-06-14",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#june-12-2026"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6344 vom 2026-06-13",
+        "url": "https://security-tracker.debian.org/tracker/DSA-6344-1"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-40CF884AC9 vom 2026-06-15",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-40cf884ac9"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-59F46C195F vom 2026-06-15",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-59f46c195f"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-5AEB8C1179 vom 2026-06-15",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-5aeb8c1179"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-A73D14656E vom 2026-06-15",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-a73d14656e"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-DFE06D2851 vom 2026-06-15",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-dfe06d2851"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Mehrere Schwachstellen",
+    "title": "Google Chrome / Microsoft Edge: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-06-11T22:00:00.000+00:00",
+      "current_release_date": "2026-06-14T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-06-12T08:50:56.495+00:00",
+        "date": "2026-06-15T08:59:52.438+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -74,14 +109,53 @@
           "date": "2026-06-11T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-06-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Edge Update aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Fedora Linux",
+            "product": {
+              "name": "Fedora Linux",
+              "product_id": "74185",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:fedoraproject:fedora:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
       {
         "branches": [
           {
@@ -131,6 +205,37 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<149.0.4022.69",
+                "product": {
+                  "name": "Microsoft Edge <149.0.4022.69",
+                  "product_id": "T055347"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "149.0.4022.69",
+                "product": {
+                  "name": "Microsoft Edge 149.0.4022.69",
+                  "product_id": "T055347-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:149.0.4022.69"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
       }
     ]
   },
@@ -139,8 +244,11 @@
       "cve": "CVE-2026-12007",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -150,8 +258,11 @@
       "cve": "CVE-2026-12008",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -161,8 +272,11 @@
       "cve": "CVE-2026-12009",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -172,8 +286,11 @@
       "cve": "CVE-2026-12010",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -183,8 +300,11 @@
       "cve": "CVE-2026-12011",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -194,8 +314,11 @@
       "cve": "CVE-2026-12012",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -205,8 +328,11 @@
       "cve": "CVE-2026-12013",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -216,8 +342,11 @@
       "cve": "CVE-2026-12014",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -227,8 +356,11 @@
       "cve": "CVE-2026-12015",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -238,8 +370,11 @@
       "cve": "CVE-2026-12016",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -249,8 +384,11 @@
       "cve": "CVE-2026-12017",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -260,8 +398,11 @@
       "cve": "CVE-2026-12018",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -271,8 +412,11 @@
       "cve": "CVE-2026-12019",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -282,8 +426,11 @@
       "cve": "CVE-2026-12020",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -293,8 +440,11 @@
       "cve": "CVE-2026-12022",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -304,8 +454,11 @@
       "cve": "CVE-2026-12023",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -315,8 +468,11 @@
       "cve": "CVE-2026-12024",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -326,8 +482,11 @@
       "cve": "CVE-2026-12025",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -337,8 +496,11 @@
       "cve": "CVE-2026-12026",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -348,8 +510,11 @@
       "cve": "CVE-2026-12027",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -359,8 +524,11 @@
       "cve": "CVE-2026-12028",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -370,8 +538,11 @@
       "cve": "CVE-2026-12029",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -381,8 +552,11 @@
       "cve": "CVE-2026-12030",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -392,8 +566,11 @@
       "cve": "CVE-2026-12031",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -403,8 +580,11 @@
       "cve": "CVE-2026-12032",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -414,8 +594,11 @@
       "cve": "CVE-2026-12033",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -425,8 +608,11 @@
       "cve": "CVE-2026-12034",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
@@ -436,8 +622,11 @@
       "cve": "CVE-2026-12035",
       "product_status": {
         "known_affected": [
+          "2951",
           "T055293",
-          "T055292"
+          "T055292",
+          "T055347",
+          "74185"
         ]
       },
       "release_date": "2026-06-11T22:00:00.000+00:00",
