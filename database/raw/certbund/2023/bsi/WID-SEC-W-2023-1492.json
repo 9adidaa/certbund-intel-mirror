@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -74,17 +74,22 @@
         "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2023:2823-1 vom 2024-02-27",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2024-February/018036.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-8437-1 vom 2026-06-16",
+        "url": "https://ubuntu.com/security/notices/USN-8437-1"
       }
     ],
     "source_lang": "en-US",
     "title": "RabbitMQ: Schwachstelle ermöglicht Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2024-02-27T23:00:00.000+00:00",
+      "current_release_date": "2026-06-16T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:52:41.084+00:00",
+        "date": "2026-06-17T08:39:51.861+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-1492",
@@ -109,10 +114,15 @@
           "date": "2024-02-27T23:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von SUSE aufgenommen"
+        },
+        {
+          "date": "2026-06-16T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -123,10 +133,18 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<= 0.13.0",
+                "name": "<=0.13.0",
                 "product": {
-                  "name": "Open Source RabbitMQ <= 0.13.0",
+                  "name": "Open Source RabbitMQ <=0.13.0",
                   "product_id": "T028190"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=0.13.0",
+                "product": {
+                  "name": "Open Source RabbitMQ <=0.13.0",
+                  "product_id": "T028190-fixed"
                 }
               }
             ],
@@ -170,22 +188,34 @@
         ],
         "category": "vendor",
         "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T000126",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2023-35789",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in RabbitMQ. Der Fehler besteht in der C AMQP Client Bibliothek. Berechtigungsnachweise können nur in der Befehlszeile eingegeben werden und ein lokaler Angreifer kann diese Schwachstelle ausnutzen, indem er einen Prozess und seine Argumente auflistet, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T002207",
-          "67646"
+          "67646",
+          "T000126"
         ],
         "last_affected": [
           "T028190"
