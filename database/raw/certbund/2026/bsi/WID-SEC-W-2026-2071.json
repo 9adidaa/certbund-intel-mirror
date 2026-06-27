@@ -19,12 +19,12 @@
       },
       {
         "category": "description",
-        "text": "Chrome ist ein Internet-Browser von Google.",
+        "text": "Chrome ist ein Internet-Browser von Google.\r\nEdge ist ein Internet-Browser von Microsoft.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome ausnutzen, um nicht näher spezifizierte Auswirkungen zu verursachen, darunter möglicherweise die Ausführung von beliebigem Code, die Erzeugung einer Denial-of-Service-Situation, die Umgehung von Sicherheitsmaßnahmen oder die Manipulation oder Offenlegung vertraulicher Daten.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome / Microsoft Edge ausnutzen, um nicht näher spezifizierte Auswirkungen zu verursachen, darunter möglicherweise die Ausführung von beliebigem Code, die Erzeugung einer Denial-of-Service-Situation, die Umgehung von Sicherheitsmaßnahmen oder die Manipulation oder Offenlegung vertraulicher Daten.",
         "title": "Angriff"
       },
       {
@@ -64,14 +64,39 @@
         "category": "external",
         "summary": "Fedora Security Advisory FEDORA-2026-DDD87CB1DB vom 2026-06-25",
         "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-ddd87cb1db"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-B2D0FA716D vom 2026-06-25",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-b2d0fa716d"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6364 vom 2026-06-25",
+        "url": "https://security-tracker.debian.org/tracker/DSA-6364-1"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-262F68B5B5 vom 2026-06-25",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-262f68b5b5"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-B9CF5268BD vom 2026-06-25",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-b9cf5268bd"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-06-25",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#june-25-2026"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
+    "title": "Google Chrome / Microsoft Edge: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
     "tracking": {
-      "current_release_date": "2026-06-24T22:00:00.000+00:00",
+      "current_release_date": "2026-06-25T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-06-25T10:56:32.440+00:00",
+        "date": "2026-06-26T11:41:33.639+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -84,14 +109,36 @@
           "date": "2026-06-24T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-06-25T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Edge Update aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
       {
         "branches": [
           {
@@ -139,6 +186,37 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<149.0.4022.96",
+                "product": {
+                  "name": "Microsoft Edge <149.0.4022.96",
+                  "product_id": "T055858"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "149.0.4022.96",
+                "product": {
+                  "name": "Microsoft Edge 149.0.4022.96",
+                  "product_id": "T055858-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:149.0.4022.96"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
       }
     ]
   },
@@ -148,6 +226,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -159,6 +239,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -170,6 +252,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -181,6 +265,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -192,6 +278,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -203,6 +291,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -214,6 +304,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -225,6 +317,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -236,6 +330,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -247,6 +343,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -258,6 +356,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -269,6 +369,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -280,6 +382,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -291,6 +395,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -302,6 +408,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -313,6 +421,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -324,6 +434,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
@@ -335,6 +447,8 @@
       "product_status": {
         "known_affected": [
           "T055771",
+          "2951",
+          "T055858",
           "74185"
         ]
       },
