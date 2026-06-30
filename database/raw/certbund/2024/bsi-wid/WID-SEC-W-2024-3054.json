@@ -94,17 +94,22 @@
         "category": "external",
         "summary": "Splunk Security Advisory SVD-2024-1015 vom 2024-10-30",
         "url": "https://advisory.splunk.com//advisories/SVD-2024-1015"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:2643-1 vom 2026-06-26",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-June/027016.html"
       }
     ],
     "source_lang": "en-US",
     "title": "Splunk Add-on for Amazon Web Services: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-10-30T23:00:00.000+00:00",
+      "current_release_date": "2026-06-28T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-10-31T09:11:52.361+00:00",
+        "date": "2026-06-29T09:16:02.435+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.8"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-3054",
@@ -134,14 +139,36 @@
           "date": "2024-10-30T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Splunk-SVD aufgenommen"
+        },
+        {
+          "date": "2026-06-28T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von SUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T002207",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
       {
         "branches": [
           {
@@ -289,15 +316,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-39326",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Splunk Add-on for Amazon Web Services. Dieser Fehler betrifft das Drittanbieter-Paket golang aufgrund einer unsachgemäßen Behandlung von Chunk-Erweiterungen in HTTP-Anfragen und -Antworten, wodurch die Verwendung von Chunk-Erweiterungen den Server zwingen kann, deutlich mehr Daten als erwartet zu lesen, was zu einer Erschöpfung der Ressourcen führt. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T037937",
+          "T002207",
           "T038314",
           "T038315",
           "T038701",
@@ -311,15 +333,10 @@
     },
     {
       "cve": "CVE-2024-3651",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Splunk Add-on for Amazon Web Services. Dieser Fehler betrifft ein Drittanbieter-Paket aufgrund einer unsachgemäßen Behandlung von beliebig großen Eingaben, die an die Funktion idna.encode() übergeben werden, was zu einem übermäßigen Ressourcenverbrauch führen kann. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu erzeugen, indem er ein speziell präpariertes Argument bereitstellt."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T037937",
+          "T002207",
           "T038314",
           "T038315",
           "T038701",
@@ -333,15 +350,10 @@
     },
     {
       "cve": "CVE-2024-37891",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Splunk Add-on for Amazon Web Services. Dieser Fehler betrifft die Komponente urllib3 aufgrund einer falschen Behandlung des Proxy-Autorisierungs-Headers. Wenn der Proxy-Authorization-Header versehentlich in Anfragen enthalten ist, die keinen Proxy verwenden, entfernt die Bibliothek den Header nicht bei herkunftsübergreifenden Umleitungen, wodurch sensible Authentifizierungsinformationen möglicherweise unbeabsichtigten Domänen zugänglich gemacht werden. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T037937",
+          "T002207",
           "T038314",
           "T038315",
           "T038701",
@@ -355,15 +367,10 @@
     },
     {
       "cve": "CVE-2024-39689",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Splunk Add-on for Amazon Web Services. Dieser Fehler betrifft die Komponente Certifi aufgrund langjähriger und ungelöster Compliance-Probleme mit von GLOBALTRUST ausgestellten Root-Zertifikaten. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um SSL-Zertifikate zu manipulieren oder zu missbrauchen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T037937",
+          "T002207",
           "T038314",
           "T038315",
           "T038701",

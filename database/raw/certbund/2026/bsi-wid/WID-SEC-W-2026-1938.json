@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "mittel"
+      "text": "hoch"
     },
     "category": "csaf_base",
     "csaf_version": "2.0",
@@ -24,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Ein lokaler Angreifer kann eine Schwachstelle im Linux Kernel ausnutzen, um einen Denial of Service Angriff durchzuführen.",
+        "text": "Ein lokaler Angreifer kann eine Schwachstelle im Linux Kernel ausnutzen, um Root-Rechte zu erlangen.",
         "title": "Angriff"
       },
       {
@@ -129,14 +129,24 @@
         "category": "external",
         "summary": "Rocky Linux Security Advisory RLSA-2026:27789 vom 2026-06-25",
         "url": "https://errata.build.resf.org/RLSA-2026:27789"
+      },
+      {
+        "category": "external",
+        "summary": "PoC  vom 2026-06-15",
+        "url": "https://github.com/sgkdev/packet_edit_meme"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-27789 vom 2026-06-27",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-27789.html"
       }
     ],
     "source_lang": "en-US",
-    "title": "Linux Kernel: Schwachstelle ermöglicht Denial of Service",
+    "title": "Linux Kernel: Schwachstelle ermöglicht Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2026-06-25T22:00:00.000+00:00",
+      "current_release_date": "2026-06-28T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-06-26T07:24:07.715+00:00",
+        "date": "2026-06-29T09:15:58.370+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -159,10 +169,15 @@
           "date": "2026-06-25T22:00:00.000+00:00",
           "number": "3",
           "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
+        },
+        {
+          "date": "2026-06-28T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Korrektur + PoC"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -200,6 +215,23 @@
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
       },
       {
         "branches": [
@@ -244,6 +276,7 @@
         "known_affected": [
           "2951",
           "67646",
+          "T004914",
           "T032255",
           "T055433"
         ]
