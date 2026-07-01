@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux",
+        "text": "- Linux\n- UNIX",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -52,11 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "IBM Security Bulletin 7008449 vom 2023-06-29",
-        "url": "https://www.ibm.com/support/pages/node/7008449"
-      },
-      {
-        "category": "external",
         "summary": "NIST Database vom 2019-12-30",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-19234"
       },
@@ -74,17 +69,22 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2020:3194 vom 2020-07-28",
         "url": "https://access.redhat.com/errata/RHSA-2020:3194"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7008449 vom 2023-06-29",
+        "url": "https://www.ibm.com/support/pages/node/7008449"
       }
     ],
     "source_lang": "en-US",
     "title": "sudo: Mehrere Schwachstellen ermöglichen Privilegieneskalation",
     "tracking": {
-      "current_release_date": "2023-06-29T22:00:00.000+00:00",
+      "current_release_date": "2026-06-29T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:53:55.490+00:00",
+        "date": "2026-06-30T06:55:54.773+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-1600",
@@ -114,10 +114,15 @@
           "date": "2023-06-29T22:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-06-29T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Tippfehler Versionsangabe korrigiert"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -142,15 +147,29 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Open Source sudo < 1.30",
-            "product": {
-              "name": "Open Source sudo < 1.30",
-              "product_id": "T015619",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:todd_miller:sudo:1.30"
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<1.8.30",
+                "product": {
+                  "name": "Open Source sudo <1.8.30",
+                  "product_id": "T015619"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.8.30",
+                "product": {
+                  "name": "Open Source sudo 1.8.30",
+                  "product_id": "T015619-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:todd_miller:sudo:1.30"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "sudo"
           }
         ],
         "category": "vendor",
@@ -178,14 +197,9 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2019-19232",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In sudo existieren mehrere Schwachstellen. Ein Angreifer mit Zugang zu einem \"Runas ALL\" sudoer-Konto kann diese Schwachstelle ausnutzen, um sich als nicht existierender Benutzer oder geblockter Nutzer ausgeben. Auf diese Weise kann er seine Rechte erweitern."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T015619",
           "67646",
           "5104"
         ]
@@ -195,14 +209,9 @@
     },
     {
       "cve": "CVE-2019-19234",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In sudo existieren mehrere Schwachstellen. Ein Angreifer mit Zugang zu einem \"Runas ALL\" sudoer-Konto kann diese Schwachstelle ausnutzen, um sich als nicht existierender Benutzer oder geblockter Nutzer ausgeben. Auf diese Weise kann er seine Rechte erweitern."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T015619",
           "67646",
           "5104"
         ]

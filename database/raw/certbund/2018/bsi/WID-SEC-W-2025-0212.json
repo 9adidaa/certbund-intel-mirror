@@ -99,17 +99,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7181897 vom 2025-01-29",
         "url": "https://www.ibm.com/support/pages/node/7181897"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-30852 vom 2026-06-29",
+        "url": "https://linux.oracle.com/errata/ELSA-2026-30852.html"
       }
     ],
     "source_lang": "en-US",
     "title": "Perl: Schwachstelle ermöglicht Manipulation von Dateien",
     "tracking": {
-      "current_release_date": "2025-01-28T23:00:00.000+00:00",
+      "current_release_date": "2026-06-29T22:00:00.000+00:00",
       "generator": {
-        "date": "2025-01-29T13:21:07.918+00:00",
+        "date": "2026-06-30T08:20:52.434+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.10"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2025-0212",
@@ -159,10 +164,15 @@
           "date": "2025-01-28T23:00:00.000+00:00",
           "number": "9",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-06-29T22:00:00.000+00:00",
+          "number": "10",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "9"
+      "version": "10"
     }
   },
   "product_tree": {
@@ -222,6 +232,23 @@
         "branches": [
           {
             "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
             "name": "Red Hat Enterprise Linux",
             "product": {
               "name": "Red Hat Enterprise Linux",
@@ -274,12 +301,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2018-12015",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Perl aufgrund einer \"Directory Traversal\" Problematik im \"Archive::Tar\" Modul. Ein Angreifer kann dies mit einem manipulierten \"tar\" Archiv ausnutzen, um beliebige Dateien zu erstellen und zu überschreiben, auf die der Benutzer Schreibzugriff hat. Zur erfolgreichen Ausnutzung dieser Schwachstelle muss der Angreifer den Benutzer dazu bringen, eine modifizierte \"tar\" Archivdatei zu öffnen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
@@ -287,7 +308,8 @@
           "67646",
           "T002190",
           "T000126",
-          "T012578"
+          "T012578",
+          "T004914"
         ]
       },
       "release_date": "2018-06-12T22:00:00.000+00:00",
