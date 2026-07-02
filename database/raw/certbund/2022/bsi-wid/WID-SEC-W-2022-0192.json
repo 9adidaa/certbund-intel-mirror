@@ -52,11 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "Ubuntu Security Notice USN-5487-1 vom 2022-06-21",
-        "url": "https://ubuntu.com/security/notices/USN-5487-1"
-      },
-      {
-        "category": "external",
         "summary": "Apache Security Advisory vom 2022-06-07",
         "url": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.54"
       },
@@ -74,6 +69,11 @@
         "category": "external",
         "summary": "IBM Security Bulletin 6595149 vom 2022-06-16",
         "url": "https://www.ibm.com/blogs/psirt/security-bulletin-multiple-vulnerabilities-in-ibm-http-server-used-by-ibm-websphere-application-server-2/"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5487-1 vom 2022-06-21",
+        "url": "https://ubuntu.com/security/notices/USN-5487-1"
       },
       {
         "category": "external",
@@ -249,17 +249,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7145265 vom 2024-03-26",
         "url": "https://www.ibm.com/support/pages/node/7145265"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:2686-1 vom 2026-06-30",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-June/027074.html"
       }
     ],
     "source_lang": "en-US",
     "title": "Apache HTTP Server: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-03-26T23:00:00.000+00:00",
+      "current_release_date": "2026-06-30T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:27:11.815+00:00",
+        "date": "2026-07-01T08:20:56.339+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0192",
@@ -429,10 +434,15 @@
           "date": "2024-03-26T23:00:00.000+00:00",
           "number": "33",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-06-30T22:00:00.000+00:00",
+          "number": "34",
+          "summary": "Neue Updates von SUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "33"
+      "version": "34"
     }
   },
   "product_tree": {
@@ -460,10 +470,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 2.4.54",
+                "name": "<2.4.54",
                 "product": {
-                  "name": "Apache HTTP Server < 2.4.54",
+                  "name": "Apache HTTP Server <2.4.54",
                   "product_id": "T023434"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.4.54",
+                "product": {
+                  "name": "Apache HTTP Server 2.4.54",
+                  "product_id": "T023434-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apache:http_server:2.4.54"
+                  }
                 }
               }
             ],
@@ -525,10 +546,21 @@
               },
               {
                 "category": "product_version_range",
-                "name": "< 15.1.9",
+                "name": "<15.1.9",
                 "product": {
-                  "name": "F5 BIG-IP < 15.1.9",
+                  "name": "F5 BIG-IP <15.1.9",
                   "product_id": "T028287"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "15.1.9",
+                "product": {
+                  "name": "F5 BIG-IP 15.1.9",
+                  "product_id": "T028287-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:f5:big-ip:15.1.9"
+                  }
                 }
               }
             ],
@@ -657,10 +689,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 7.5.0 UP8",
+                "name": "<7.5.0 UP8",
                 "product": {
-                  "name": "IBM QRadar SIEM < 7.5.0 UP8",
+                  "name": "IBM QRadar SIEM <7.5.0 UP8",
                   "product_id": "T033681"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.5.0 UP8",
+                "product": {
+                  "name": "IBM QRadar SIEM 7.5.0 UP8",
+                  "product_id": "T033681-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:qradar_siem:7.5.0_up8"
+                  }
                 }
               }
             ],
@@ -671,10 +714,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 8.0.0.24",
+                "name": "<8.0.0.24",
                 "product": {
-                  "name": "IBM Rational Build Forge < 8.0.0.24",
+                  "name": "IBM Rational Build Forge <8.0.0.24",
                   "product_id": "T030689"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.0.0.24",
+                "product": {
+                  "name": "IBM Rational Build Forge 8.0.0.24",
+                  "product_id": "T030689-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:rational_build_forge:8.0.0.24"
+                  }
                 }
               }
             ],
@@ -803,12 +857,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-26377",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Apache HTTP Server. Der Fehler besteht aufgrund einer unsachgemäßen Validierung von HTTP-Anfragen in mod_proxy_ajp. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um HTTP-Request-Schmuggel-Angriffe durchzuführen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "5198",
@@ -826,6 +874,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -839,14 +888,9 @@
     },
     {
       "cve": "CVE-2022-28330",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Apache HTTP Server existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund mehrerer Out-of-Bounds-Reads. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T028287",
           "5198",
           "T003674",
           "67646",
@@ -862,6 +906,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -875,14 +920,9 @@
     },
     {
       "cve": "CVE-2022-28614",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Apache HTTP Server existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund mehrerer Out-of-Bounds-Reads. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T028287",
           "5198",
           "T003674",
           "67646",
@@ -898,6 +938,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -911,14 +952,9 @@
     },
     {
       "cve": "CVE-2022-28615",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Apache HTTP Server existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund mehrerer Out-of-Bounds-Reads. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T028287",
           "5198",
           "T003674",
           "67646",
@@ -934,6 +970,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -947,14 +984,9 @@
     },
     {
       "cve": "CVE-2022-30556",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Apache HTTP Server existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund mehrerer Out-of-Bounds-Reads. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T028287",
           "5198",
           "T003674",
           "67646",
@@ -970,6 +1002,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -983,12 +1016,6 @@
     },
     {
       "cve": "CVE-2022-29404",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Apache HTTP Server existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund eines Eingabevalidierungsfehlers und einer Ressourcenerschöpfung. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "5198",
@@ -1006,6 +1033,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -1019,12 +1047,6 @@
     },
     {
       "cve": "CVE-2022-30522",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Apache HTTP Server existieren mehrere Schwachstellen. Die Fehler bestehen aufgrund eines Eingabevalidierungsfehlers und einer Ressourcenerschöpfung. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "5198",
@@ -1042,6 +1064,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
@@ -1055,12 +1078,6 @@
     },
     {
       "cve": "CVE-2022-31813",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Apache HTTP Server. Der Fehler besteht aufgrund eines Fehlers in der mod_proxy-Implementierung, bei dem der Webserver möglicherweise die X-Forwarded-*-Header nicht an den Ursprungsserver sendet, basierend auf dem clientseitigen Connection-Header-Hop-by-Hop-Mechanismus. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsmaßnahmen zu umgehen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "5198",
@@ -1078,6 +1095,7 @@
           "T004914",
           "T017100",
           "T002207",
+          "T023434",
           "T000126",
           "T001663",
           "398363",
