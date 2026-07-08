@@ -74,14 +74,24 @@
         "category": "external",
         "summary": "Debian Security Advisory DSA-6381 vom 2026-07-05",
         "url": "https://security-tracker.debian.org/tracker/DSA-6381-1"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-50372 vom 2026-07-07",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-50372.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36186 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36186"
       }
     ],
     "source_lang": "en-US",
     "title": "Linux Kernel: Schwachstelle ermöglicht Privilegieneskalation und Denial of Service",
     "tracking": {
-      "current_release_date": "2026-07-05T22:00:00.000+00:00",
+      "current_release_date": "2026-07-06T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-07-06T10:22:31.271+00:00",
+        "date": "2026-07-07T11:17:10.715+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -104,10 +114,15 @@
           "date": "2026-07-05T22:00:00.000+00:00",
           "number": "3",
           "summary": "Exploit aufgenommen, Beschreibung und Bewertung ergänzt"
+        },
+        {
+          "date": "2026-07-06T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -202,6 +217,46 @@
         "branches": [
           {
             "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "10",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 10",
+                  "product_id": "T056204",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:10"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
             "name": "SUSE openSUSE",
             "product": {
               "name": "SUSE openSUSE",
@@ -222,10 +277,12 @@
       "cve": "CVE-2026-46242",
       "product_status": {
         "known_affected": [
+          "T056204",
           "2951",
           "T027843",
           "T054899",
           "T054898",
+          "T004914",
           "T054897"
         ]
       },
