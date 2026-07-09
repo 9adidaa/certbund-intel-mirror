@@ -64,14 +64,69 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2026:36198 vom 2026-07-06",
         "url": "https://access.redhat.com/errata/RHSA-2026:36198"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36206 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36206"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36208 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36208"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36209 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36209"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-36195 vom 2026-07-08",
+        "url": "https://linux.oracle.com/errata/ELSA-2026-36195.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36585 vom 2026-07-08",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36585"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALAS2-2026-3796 vom 2026-07-08",
+        "url": "https://alas.aws.amazon.com/AL2/ALAS2-2026-3796.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36204 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36204"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36200 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36200"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36205 vom 2026-07-07",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36205"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36641 vom 2026-07-08",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36641"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:36670 vom 2026-07-08",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36670"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux (389-ds-base): Mehrere Schwachstellen ermöglichen Codeausführung und DoS",
     "tracking": {
-      "current_release_date": "2026-07-06T22:00:00.000+00:00",
+      "current_release_date": "2026-07-07T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-07-07T11:36:41.566+00:00",
+        "date": "2026-07-08T11:26:45.135+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -84,10 +139,15 @@
           "date": "2026-07-06T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-07-07T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Red Hat, Oracle Linux, Amazon und European Union Vulnerability Database aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -95,7 +155,52 @@
       {
         "branches": [
           {
+            "category": "product_name",
+            "name": "Amazon Linux 2",
+            "product": {
+              "name": "Amazon Linux 2",
+              "product_id": "398363",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:amazon:linux_2:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Amazon"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T004914",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
             "branches": [
+              {
+                "category": "product_name",
+                "name": "Red Hat Enterprise Linux",
+                "product": {
+                  "name": "Red Hat Enterprise Linux",
+                  "product_id": "67646",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                  }
+                }
+              },
               {
                 "category": "product_version",
                 "name": "9",
@@ -139,6 +244,17 @@
                     "cpe": "cpe:/o:redhat:enterprise_linux:8.8_telecommunications_update_service"
                   }
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "7 Extended Lifecycle Support",
+                "product": {
+                  "name": "Red Hat Enterprise Linux 7 Extended Lifecycle Support",
+                  "product_id": "T056227",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:7_extended_lifecycle_support"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -156,8 +272,12 @@
       "product_status": {
         "known_affected": [
           "T056216",
+          "T056227",
           "T056217",
           "T056218",
+          "67646",
+          "398363",
+          "T004914",
           "T056213"
         ]
       },
@@ -169,8 +289,12 @@
       "product_status": {
         "known_affected": [
           "T056216",
+          "T056227",
           "T056217",
           "T056218",
+          "67646",
+          "398363",
+          "T004914",
           "T056213"
         ]
       },
