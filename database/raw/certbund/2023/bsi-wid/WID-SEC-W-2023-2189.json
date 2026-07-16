@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux",
+        "text": "- Linux\n- UNIX",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -54,17 +54,22 @@
         "category": "external",
         "summary": "Pentagrid Vulnerability Advisory vom 2023-08-27",
         "url": "https://www.pentagrid.ch/en/blog/busybox-cpio-directory-traversal-vulnerability/"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:11256-1 vom 2026-07-14",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/XISYFOS7SNXYN3SXCKNAVGGMWK36JYIJ/"
       }
     ],
     "source_lang": "en-US",
     "title": "BusyBox: Schwachstelle ermöglicht Manipulation von Dateien",
     "tracking": {
-      "current_release_date": "2023-08-27T22:00:00.000+00:00",
+      "current_release_date": "2026-07-14T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:57:43.353+00:00",
+        "date": "2026-07-15T06:36:48.345+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-2189",
@@ -74,10 +79,15 @@
           "date": "2023-08-27T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-07-14T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von openSUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -87,8 +97,8 @@
           {
             "branches": [
               {
-                "category": "product_name",
-                "name": "Open Source BusyBox 1.33.2",
+                "category": "product_version",
+                "name": "1.33.2",
                 "product": {
                   "name": "Open Source BusyBox 1.33.2",
                   "product_id": "T029582",
@@ -98,8 +108,8 @@
                 }
               },
               {
-                "category": "product_name",
-                "name": "Open Source BusyBox 1.30.1",
+                "category": "product_version",
+                "name": "1.30.1",
                 "product": {
                   "name": "Open Source BusyBox 1.30.1",
                   "product_id": "T029583",
@@ -109,11 +119,19 @@
                 }
               },
               {
-                "category": "product_name",
-                "name": "Open Source BusyBox cpio < 2.6-6",
+                "category": "product_version_range",
+                "name": "cpio <2.6-6",
                 "product": {
-                  "name": "Open Source BusyBox cpio < 2.6-6",
-                  "product_id": "T029584",
+                  "name": "Open Source BusyBox cpio <2.6-6",
+                  "product_id": "T029584"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "cpio 2.6-6",
+                "product": {
+                  "name": "Open Source BusyBox cpio 2.6-6",
+                  "product_id": "T029584-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:busybox:busybox:cpio__2.6-6"
                   }
@@ -126,22 +144,35 @@
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T055946",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2023-39810",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in BusyBox. Dieser Fehler besteht im cpio-Tool aufgrund eines Directory-Traversals, der es erlaubt, Dateien außerhalb des Zielverzeichnisses zu schreiben. Ein Angreifer kann diese Schwachstelle ausnutzen, um Dateien zu manipulieren. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T029584",
           "T029583",
-          "T029582"
+          "T029582",
+          "T055946"
         ]
       },
       "release_date": "2023-08-27T22:00:00.000+00:00",
