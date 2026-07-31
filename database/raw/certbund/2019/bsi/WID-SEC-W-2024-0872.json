@@ -144,17 +144,22 @@
         "category": "external",
         "summary": "Dell Security Advisory DSA-2024-198 vom 2024-05-08",
         "url": "https://www.dell.com/support/kbdoc/000224827/dsa-2024-="
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2019:3702 vom 2026-07-30",
+        "url": "https://errata.build.resf.org/RLSA-2019:3702"
       }
     ],
     "source_lang": "en-US",
     "title": "OpenSSH: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2024-05-07T22:00:00.000+00:00",
+      "current_release_date": "2026-07-29T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:07:41.112+00:00",
+        "date": "2026-07-30T09:22:58.983+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-0872",
@@ -234,10 +239,15 @@
           "date": "2024-05-07T22:00:00.000+00:00",
           "number": "15",
           "summary": "Neue Updates von Dell aufgenommen"
+        },
+        {
+          "date": "2026-07-29T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation aufgenommen"
         }
       ],
       "status": "final",
-      "version": "15"
+      "version": "16"
     }
   },
   "product_tree": {
@@ -388,9 +398,9 @@
         "branches": [
           {
             "category": "product_name",
-            "name": "PaloAlto Networks PAN-OS",
+            "name": "Palo Alto Networks PAN-OS",
             "product": {
-              "name": "PaloAlto Networks PAN-OS",
+              "name": "Palo Alto Networks PAN-OS",
               "product_id": "T012790",
               "product_identification_helper": {
                 "cpe": "cpe:/o:paloaltonetworks:pan-os:-"
@@ -399,7 +409,24 @@
           }
         ],
         "category": "vendor",
-        "name": "PaloAlto Networks"
+        "name": "Palo Alto Networks"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T054581",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
       },
       {
         "branches": [
@@ -446,6 +473,17 @@
                   "name": "SolarWinds Security Event Manager <2024.2",
                   "product_id": "T034244"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "2024.2",
+                "product": {
+                  "name": "SolarWinds Security Event Manager 2024.2",
+                  "product_id": "T034244-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:solarwinds:security_event_manager:2024.2"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -477,15 +515,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2018-20685",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine nicht näher beschriebene Schwachstelle in OpenSSH. Die Schwachstelle befindet sich in SCP Client in [scp.c]. Ein Angreifer kann diese nutzen und durch Übermittlung des Dateinamens \".\" oder eines leeren Dateinamens Zugriffsbeschränkungen umgehen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "8223",
+          "T054581",
           "67646",
           "4871",
           "T013312",
