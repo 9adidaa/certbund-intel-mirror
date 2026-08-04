@@ -52,16 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "Red Hat Security Advisory RHSA-2024:0190 vom 2024-01-17",
-        "url": "https://access.redhat.com/errata/RHSA-2024:0190"
-      },
-      {
-        "category": "external",
-        "summary": "Red Hat Security Advisory RHSA-2024:0215 vom 2024-01-17",
-        "url": "https://access.redhat.com/errata/RHSA-2024:0215"
-      },
-      {
-        "category": "external",
         "summary": "Salt Security Advisory vom 2023-09-21",
         "url": "https://docs.saltproject.io/en/3005/topics/releases/3005.3.html"
       },
@@ -82,29 +72,44 @@
       },
       {
         "category": "external",
-        "summary": "Red Hat Security Advisory RHSA-2024:0322 vom 2024-01-22",
-        "url": "https://access.redhat.com/errata/RHSA-2024:0322"
-      },
-      {
-        "category": "external",
         "summary": "Fedora Security Advisory FEDORA-2023-7B78427A7D vom 2023-11-09",
         "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2023-7b78427a7d"
       },
       {
         "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0190 vom 2024-01-17",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0190"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0215 vom 2024-01-17",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0215"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2024:0322 vom 2024-01-22",
+        "url": "https://access.redhat.com/errata/RHSA-2024:0322"
+      },
+      {
+        "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2024:1640 vom 2024-04-02",
         "url": "https://access.redhat.com/errata/RHSA-2024:1640"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:11419-1 vom 2026-08-02",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/FKBHKB6DXO53DRKOI3FPE7C3QEMLSRPN/"
       }
     ],
     "source_lang": "en-US",
     "title": "SaltStack Salt: Mehre Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-04-02T22:00:00.000+00:00",
+      "current_release_date": "2026-08-02T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:58:46.520+00:00",
+        "date": "2026-08-03T10:11:08.903+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-2428",
@@ -139,10 +144,15 @@
           "date": "2024-04-02T22:00:00.000+00:00",
           "number": "6",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-08-02T22:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von openSUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -215,10 +225,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 17.1",
+                "name": "<17.1",
                 "product": {
-                  "name": "Red Hat OpenStack < 17.1",
+                  "name": "Red Hat OpenStack <17.1",
                   "product_id": "T029321"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.1",
+                "product": {
+                  "name": "Red Hat OpenStack 17.1",
+                  "product_id": "T029321-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openstack:17.1"
+                  }
                 }
               }
             ],
@@ -232,13 +253,41 @@
       {
         "branches": [
           {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T055946",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "gitpython < 3.1.36",
+                "name": "gitpython <3.1.36",
                 "product": {
-                  "name": "SaltStack Salt gitpython < 3.1.36",
+                  "name": "SaltStack Salt gitpython <3.1.36",
                   "product_id": "T030045"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "gitpython 3.1.36",
+                "product": {
+                  "name": "SaltStack Salt gitpython 3.1.36",
+                  "product_id": "T030045-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:saltstack:salt:gitpython__3.1.36"
+                  }
                 }
               }
             ],
@@ -254,17 +303,13 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-40590",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in SaltStack Salt. Dieser Fehler besteht in der gitpython Komponente aufgrund eines nicht vertrauenswürdigen Suchpfades. Ein entfernter, anonymer Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T029321",
+          "T030045",
           "2951",
           "67646",
+          "T055946",
           "1496312",
           "74185"
         ]
@@ -274,17 +319,13 @@
     },
     {
       "cve": "CVE-2023-41040",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in SaltStack Salt. Dieser Fehler besteht in der Komponente gitpython aufgrund einer blinden lokalen Dateieinbindung. Ein lokaler Angreifer kann diese Sicherheitslücke ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T029321",
+          "T030045",
           "2951",
           "67646",
+          "T055946",
           "1496312",
           "74185"
         ]
