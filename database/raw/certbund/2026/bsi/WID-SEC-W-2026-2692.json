@@ -1,0 +1,225 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Microsoft Teams ist ein Kollaborations-, Kommunikations- und Videokonferenz-Tool.\r\nAzure ist eine Cloud Computing-Plattform von Microsoft.\r\nMicrosoft Service Bus for Windows Server ist eine installierbare Komponente, die Messaging-Funktionen in Windows bereitstellt. Sie ermöglicht Endbenutzern das Erstellen, Testen und Ausführen von Anwendungen in selbst verwalteten Umgebungen.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Microsoft Teams, Microsoft Azure Managed Instance und Microsoft Service Bus ausnutzen, um beliebigen Code auszuführen, erweiterte Berechtigungen zu erlangen oder Daten zu manipulieren.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-2692 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-2692.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-2692 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-2692"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Leitfaden für Sicherheitsupdates",
+        "url": "https://msrc.microsoft.com/update-guide/"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Security Advisory CVE-2026-62896",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62896"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Security Advisory CVE-2026-62918",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62918"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Security Advisory CVE-2026-65667",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65667"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Security Advisory CVE-2026-62836",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62836"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft Security Advisory CVE-2026-50515",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50515"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Office: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-08-06T22:00:00.000+00:00",
+      "generator": {
+        "date": "2026-08-07T09:06:12.289+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.6.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-2692",
+      "initial_release_date": "2026-08-06T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-08-06T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "SQL Managed Instance",
+                "product": {
+                  "name": "Microsoft Azure SQL Managed Instance",
+                  "product_id": "T043740",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:azure:windows_hlk_for_windows_server_2022"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Azure"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Azure Service Bus",
+                "product": {
+                  "name": "Microsoft Service Bus Azure Service Bus",
+                  "product_id": "271877",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:service_bus:1.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Service Bus"
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Teams",
+            "product": {
+              "name": "Microsoft Teams",
+              "product_id": "T053909",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:microsoft:teams:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-50515",
+      "product_status": {
+        "known_affected": [
+          "T043740",
+          "271877",
+          "T053909"
+        ]
+      },
+      "release_date": "2026-08-06T22:00:00.000+00:00",
+      "title": "CVE-2026-50515"
+    },
+    {
+      "cve": "CVE-2026-62836",
+      "product_status": {
+        "known_affected": [
+          "T043740",
+          "271877",
+          "T053909"
+        ]
+      },
+      "release_date": "2026-08-06T22:00:00.000+00:00",
+      "title": "CVE-2026-62836"
+    },
+    {
+      "cve": "CVE-2026-62896",
+      "product_status": {
+        "known_affected": [
+          "T043740",
+          "271877",
+          "T053909"
+        ]
+      },
+      "release_date": "2026-08-06T22:00:00.000+00:00",
+      "title": "CVE-2026-62896"
+    },
+    {
+      "cve": "CVE-2026-62918",
+      "product_status": {
+        "known_affected": [
+          "T043740",
+          "271877",
+          "T053909"
+        ]
+      },
+      "release_date": "2026-08-06T22:00:00.000+00:00",
+      "title": "CVE-2026-62918"
+    },
+    {
+      "cve": "CVE-2026-65667",
+      "product_status": {
+        "known_affected": [
+          "T043740",
+          "271877",
+          "T053909"
+        ]
+      },
+      "release_date": "2026-08-06T22:00:00.000+00:00",
+      "title": "CVE-2026-65667"
+    }
+  ]
+}
