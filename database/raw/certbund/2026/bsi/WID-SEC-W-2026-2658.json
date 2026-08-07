@@ -54,14 +54,24 @@
         "category": "external",
         "summary": "X.Org Security Advisory vom 2026-08-04",
         "url": "https://seclists.org/oss-sec/2026/q3/436"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:3500-1 vom 2026-08-05",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-August/028147.html"
+      },
+      {
+        "category": "external",
+        "summary": "SUSE Security Update SUSE-SU-2026:3499-1 vom 2026-08-05",
+        "url": "https://lists.suse.com/pipermail/sle-security-updates/2026-August/028148.html"
       }
     ],
     "source_lang": "en-US",
-    "title": "X.Org X11: Mehrere Schwachstellen ermöglichen Privilegieneskalation und Denial of Service",
+    "title": "X.Org X11 (libXfont2): Mehrere Schwachstellen ermöglichen Privilegieneskalation und Denial of Service",
     "tracking": {
-      "current_release_date": "2026-08-04T22:00:00.000+00:00",
+      "current_release_date": "2026-08-05T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-08-05T11:21:07.600+00:00",
+        "date": "2026-08-06T08:52:37.373+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -74,10 +84,15 @@
           "date": "2026-08-04T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-08-05T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von SUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -87,13 +102,21 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "libXfont2",
+                "category": "product_version_range",
+                "name": "libXfont2 <2.0.9",
                 "product": {
-                  "name": "Open Source X.Org X11 libXfont2",
-                  "product_id": "T057545",
+                  "name": "Open Source X.Org X11 libXfont2 <2.0.9",
+                  "product_id": "T057547"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libXfont2 2.0.9",
+                "product": {
+                  "name": "Open Source X.Org X11 libXfont2 2.0.9",
+                  "product_id": "T057547-fixed",
                   "product_identification_helper": {
-                    "cpe": "cpe:/a:x:x.org_x11:libxfont2"
+                    "cpe": "cpe:/a:x:x.org_x11:libxfont2__2.0.9"
                   }
                 }
               }
@@ -104,6 +127,23 @@
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE Linux",
+            "product": {
+              "name": "SUSE Linux",
+              "product_id": "T054646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:suse_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
       }
     ]
   },
@@ -112,7 +152,8 @@
       "cve": "CVE-2026-44950",
       "product_status": {
         "known_affected": [
-          "T057545"
+          "T057547",
+          "T054646"
         ]
       },
       "release_date": "2026-08-04T22:00:00.000+00:00",
@@ -122,7 +163,8 @@
       "cve": "CVE-2026-59679",
       "product_status": {
         "known_affected": [
-          "T057545"
+          "T057547",
+          "T054646"
         ]
       },
       "release_date": "2026-08-04T22:00:00.000+00:00",
