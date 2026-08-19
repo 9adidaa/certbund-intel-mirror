@@ -69,14 +69,29 @@
         "category": "external",
         "summary": "Red Hat Bugtracker 2506746 vom 2026-07-26",
         "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2506746"
+      },
+      {
+        "category": "external",
+        "summary": "Keycloak 26.7.2 release vom 2026-08-19",
+        "url": "https://www.keycloak.org/2026/08/keycloak-2672-released"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:56524 vom 2026-08-18",
+        "url": "https://access.redhat.com/errata/RHSA-2026:56524"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:56523 vom 2026-08-19",
+        "url": "https://access.redhat.com/errata/RHSA-2026:56523"
       }
     ],
     "source_lang": "en-US",
     "title": "Keycloak: Mehrere Schwachstellen ermöglichen Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2026-07-26T22:00:00.000+00:00",
+      "current_release_date": "2026-08-18T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-07-27T09:17:57.604+00:00",
+        "date": "2026-08-19T10:31:17.575+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -89,10 +104,15 @@
           "date": "2026-07-26T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-08-18T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -100,19 +120,78 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Open Source Keycloak",
-            "product": {
-              "name": "Open Source Keycloak",
-              "product_id": "T057212",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:keycloak:keycloak:-"
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Open Source Keycloak",
+                "product": {
+                  "name": "Open Source Keycloak",
+                  "product_id": "T057212",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:keycloak:keycloak:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<26.7.2",
+                "product": {
+                  "name": "Open Source Keycloak <26.7.2",
+                  "product_id": "T058290"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.7.2",
+                "product": {
+                  "name": "Open Source Keycloak 26.7.2",
+                  "product_id": "T058290-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:keycloak:keycloak:26.7.2"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Keycloak"
           }
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Red Hat Enterprise Linux",
+                "product": {
+                  "name": "Red Hat Enterprise Linux",
+                  "product_id": "67646",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Keycloak",
+                "product": {
+                  "name": "Red Hat Enterprise Linux Keycloak",
+                  "product_id": "T050024",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:keycloak"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Enterprise Linux"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
       }
     ]
   },
@@ -121,7 +200,10 @@
       "cve": "CVE-2026-17048",
       "product_status": {
         "known_affected": [
-          "T057212"
+          "T058290",
+          "67646",
+          "T057212",
+          "T050024"
         ]
       },
       "release_date": "2026-07-26T22:00:00.000+00:00",
@@ -131,7 +213,10 @@
       "cve": "CVE-2026-17059",
       "product_status": {
         "known_affected": [
-          "T057212"
+          "T058290",
+          "67646",
+          "T057212",
+          "T050024"
         ]
       },
       "release_date": "2026-07-26T22:00:00.000+00:00",
