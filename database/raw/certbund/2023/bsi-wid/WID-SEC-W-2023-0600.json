@@ -52,24 +52,29 @@
       },
       {
         "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2023:1033 vom 2023-03-08",
+        "url": "https://access.redhat.com/errata/RHSA-2023:1033"
+      },
+      {
+        "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2023:1503 vom 2023-04-08",
         "url": "https://access.redhat.com/errata/RHSA-2023:1503"
       },
       {
         "category": "external",
-        "summary": "Red Hat Security Advisory RHSA-2023:1033 vom 2023-03-08",
-        "url": "https://access.redhat.com/errata/RHSA-2023:1033"
+        "summary": "Red Hat Security Advisory RHSA-2026:57361 vom 2026-08-25",
+        "url": "https://access.redhat.com/errata/RHSA-2026:57361"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat OpenShift: Schwachstelle ermöglicht Manipulation von Dateien",
     "tracking": {
-      "current_release_date": "2023-04-10T22:00:00.000+00:00",
+      "current_release_date": "2026-08-24T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:46:21.941+00:00",
+        "date": "2026-08-25T11:11:06.642+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-0600",
@@ -84,10 +89,15 @@
           "date": "2023-04-10T22:00:00.000+00:00",
           "number": "2",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-08-24T22:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -97,8 +107,8 @@
           {
             "branches": [
               {
-                "category": "product_name",
-                "name": "Red Hat OpenShift Container Platform 4.11",
+                "category": "product_version",
+                "name": "Container Platform 4.11",
                 "product": {
                   "name": "Red Hat OpenShift Container Platform 4.11",
                   "product_id": "T025990",
@@ -108,13 +118,32 @@
                 }
               },
               {
-                "category": "product_name",
-                "name": "Red Hat OpenShift < 4.12.6",
+                "category": "product_version_range",
+                "name": "<4.12.6",
                 "product": {
-                  "name": "Red Hat OpenShift < 4.12.6",
-                  "product_id": "T026057",
+                  "name": "Red Hat OpenShift <4.12.6",
+                  "product_id": "T026057"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.12.6",
+                "product": {
+                  "name": "Red Hat OpenShift 4.12.6",
+                  "product_id": "T026057-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:redhat:openshift:container_platform__4.12.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform",
+                  "product_id": "T040130",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform"
                   }
                 }
               }
@@ -131,15 +160,11 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-4318",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat OpenShift. Diese besteht in der Komponente \"cri-o\" und ist darauf zurückzuführen, dass mithilfe einer speziellen Umgebungvariable die \"etc/passwd\"-Datei verändert werden kann. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um Dateien zu manipulieren."
-        }
-      ],
       "product_status": {
         "known_affected": [
-          "T025990"
+          "T040130",
+          "T025990",
+          "T026057"
         ]
       },
       "release_date": "2023-03-08T23:00:00.000+00:00",
