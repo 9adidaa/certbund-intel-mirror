@@ -99,17 +99,22 @@
         "category": "external",
         "summary": "IGEL Security Advisory vom 2024-06-18",
         "url": "https://kb.igel.com/securitysafety/en/isn-2024-14-chromium-vulnerabilities-129827213.html"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202608-28 vom 2026-08-27",
+        "url": "https://security.gentoo.org/glsa/202608-28"
       }
     ],
     "source_lang": "en-US",
     "title": "Google Chrome und Microsoft Edge: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-06-17T22:00:00.000+00:00",
+      "current_release_date": "2026-08-26T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:09:23.258+00:00",
+        "date": "2026-08-27T10:11:09.522+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-1198",
@@ -134,10 +139,15 @@
           "date": "2024-06-17T22:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von IGEL aufgenommen"
+        },
+        {
+          "date": "2026-08-26T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Gentoo aufgenommen"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -179,6 +189,23 @@
       {
         "branches": [
           {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T033788",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
             "branches": [
               {
                 "category": "product_version_range",
@@ -189,11 +216,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "125.0.6422.76",
+                "product": {
+                  "name": "Google Chrome 125.0.6422.76",
+                  "product_id": "T034935-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:google:chrome:125.0.6422.76"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<125.0.6422.77",
                 "product": {
                   "name": "Google Chrome <125.0.6422.77",
                   "product_id": "T034936"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "125.0.6422.77",
+                "product": {
+                  "name": "Google Chrome 125.0.6422.77",
+                  "product_id": "T034936-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:google:chrome:125.0.6422.77"
+                  }
                 }
               }
             ],
@@ -260,16 +309,13 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-5157",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Google Chrome und Microsoft Edge wurden mehrere Schwachstellen gemeldet. Sie bestehen in den Komponenten V8, Scheduling, ANGLE und Dawn aufgrund eines Use-after-free, einer Typverwechslung und eines Heap-basierten Pufferüberlaufs. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um nicht spezifizierte Auswirkungen zu verursachen, möglicherweise bis hin zur Codeausführung. Ein erfolgreiches Ausnutzen erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
           "2951",
+          "T034936",
           "T017865",
+          "T034935",
           "T027843",
           "T005922",
           "74185"
@@ -280,16 +326,13 @@
     },
     {
       "cve": "CVE-2024-5158",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Google Chrome und Microsoft Edge wurden mehrere Schwachstellen gemeldet. Sie bestehen in den Komponenten V8, Scheduling, ANGLE und Dawn aufgrund eines Use-after-free, einer Typverwechslung und eines Heap-basierten Pufferüberlaufs. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um nicht spezifizierte Auswirkungen zu verursachen, möglicherweise bis hin zur Codeausführung. Ein erfolgreiches Ausnutzen erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
           "2951",
+          "T034936",
           "T017865",
+          "T034935",
           "T027843",
           "T005922",
           "74185"
@@ -300,16 +343,13 @@
     },
     {
       "cve": "CVE-2024-5159",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Google Chrome und Microsoft Edge wurden mehrere Schwachstellen gemeldet. Sie bestehen in den Komponenten V8, Scheduling, ANGLE und Dawn aufgrund eines Use-after-free, einer Typverwechslung und eines Heap-basierten Pufferüberlaufs. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um nicht spezifizierte Auswirkungen zu verursachen, möglicherweise bis hin zur Codeausführung. Ein erfolgreiches Ausnutzen erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
           "2951",
+          "T034936",
           "T017865",
+          "T034935",
           "T027843",
           "T005922",
           "74185"
@@ -320,16 +360,13 @@
     },
     {
       "cve": "CVE-2024-5160",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In Google Chrome und Microsoft Edge wurden mehrere Schwachstellen gemeldet. Sie bestehen in den Komponenten V8, Scheduling, ANGLE und Dawn aufgrund eines Use-after-free, einer Typverwechslung und eines Heap-basierten Pufferüberlaufs. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um nicht spezifizierte Auswirkungen zu verursachen, möglicherweise bis hin zur Codeausführung. Ein erfolgreiches Ausnutzen erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
           "2951",
+          "T034936",
           "T017865",
+          "T034935",
           "T027843",
           "T005922",
           "74185"

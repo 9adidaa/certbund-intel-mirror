@@ -99,17 +99,22 @@
         "category": "external",
         "summary": "openSUSE Security Update OPENSUSE-SU-2024:0223-1 vom 2024-07-26",
         "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/message/TVYUZCKNUHHW5G5BDWQLUBT3PJ65O7JM/"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202608-28 vom 2026-08-27",
+        "url": "https://security.gentoo.org/glsa/202608-28"
       }
     ],
     "source_lang": "en-US",
     "title": "Google Chrome: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-07-28T22:00:00.000+00:00",
+      "current_release_date": "2026-08-26T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:10:31.865+00:00",
+        "date": "2026-08-27T10:11:10.396+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-1445",
@@ -134,10 +139,15 @@
           "date": "2024-07-28T22:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von openSUSE aufgenommen"
+        },
+        {
+          "date": "2026-08-26T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Gentoo aufgenommen"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -179,6 +189,23 @@
       {
         "branches": [
           {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T033788",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
             "branches": [
               {
                 "category": "product_version_range",
@@ -189,11 +216,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "126.0.6478.126",
+                "product": {
+                  "name": "Google Chrome 126.0.6478.126",
+                  "product_id": "T035623-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:google:chrome:126.0.6478.126"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<126.0.6478.127",
                 "product": {
                   "name": "Google Chrome <126.0.6478.127",
                   "product_id": "T035624"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "126.0.6478.127",
+                "product": {
+                  "name": "Google Chrome 126.0.6478.127",
+                  "product_id": "T035624-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:google:chrome:126.0.6478.127"
+                  }
                 }
               }
             ],
@@ -226,14 +275,11 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-6290",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Google Chrome. Diese Fehler bestehen in den Dawn- und Swiftshader-Komponenten aufgrund mehrerer use after free-Probleme. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um möglicherweise beliebigen Code auszuführen und unspezifische Angriffe durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
+          "T035624",
+          "T035623",
           "2951",
           "T027843",
           "74185"
@@ -244,14 +290,11 @@
     },
     {
       "cve": "CVE-2024-6291",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Google Chrome. Diese Fehler bestehen in den Dawn- und Swiftshader-Komponenten aufgrund mehrerer use after free-Probleme. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um möglicherweise beliebigen Code auszuführen und unspezifische Angriffe durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
+          "T035624",
+          "T035623",
           "2951",
           "T027843",
           "74185"
@@ -262,14 +305,11 @@
     },
     {
       "cve": "CVE-2024-6292",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Google Chrome. Diese Fehler bestehen in den Dawn- und Swiftshader-Komponenten aufgrund mehrerer use after free-Probleme. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um möglicherweise beliebigen Code auszuführen und unspezifische Angriffe durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
+          "T035624",
+          "T035623",
           "2951",
           "T027843",
           "74185"
@@ -280,14 +320,11 @@
     },
     {
       "cve": "CVE-2024-6293",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Google Chrome. Diese Fehler bestehen in den Dawn- und Swiftshader-Komponenten aufgrund mehrerer use after free-Probleme. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um möglicherweise beliebigen Code auszuführen und unspezifische Angriffe durchzuführen. Eine erfolgreiche Ausnutzung erfordert eine Benutzerinteraktion."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T033788",
+          "T035624",
+          "T035623",
           "2951",
           "T027843",
           "74185"
