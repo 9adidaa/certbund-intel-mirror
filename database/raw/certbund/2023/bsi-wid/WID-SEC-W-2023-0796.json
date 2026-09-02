@@ -129,17 +129,22 @@
         "category": "external",
         "summary": "HPE Security Bulletin vom 2024-10-25",
         "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbux04724en_us&docLocale=en_US"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-386 vom 2026-09-01",
+        "url": "https://www.dell.com/support/kbdoc/000503504/dsa-2026-386-security-update-f"
       }
     ],
     "source_lang": "en-US",
     "title": "Samba: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-10-27T23:00:00.000+00:00",
+      "current_release_date": "2026-08-31T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-10-28T09:09:31.388+00:00",
+        "date": "2026-09-01T10:53:30.947+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.8"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-0796",
@@ -169,14 +174,50 @@
           "date": "2024-10-27T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von HP aufgenommen"
+        },
+        {
+          "date": "2026-08-31T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Dell aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway <5.36.00.16",
+                  "product_id": "T058878"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway 5.36.00.16",
+                  "product_id": "T058878-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:secure_connect_gateway:5.36.00.16"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Secure Connect Gateway"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
       {
         "branches": [
           {
@@ -417,14 +458,9 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-0225",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Der Fehler besteht aufgrund einer unvollständigen Zugriffsprüfung auf das Attribut dnsHostName. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um dieses Attribut von jedem Objekt im Verzeichnis zu löschen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "T010641",
           "T038611",
           "T012167",
@@ -445,14 +481,9 @@
     },
     {
       "cve": "CVE-2023-0614",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Der Fehler besteht, weil die Zugriffskontrollregeln für ein bestimmtes Attribut zwischen Objekten nicht konsistent sind. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche BitLocker-Wiederherstellungsschlüssel von einem Samba AD DC zu erhalten."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "T010641",
           "T038611",
           "T012167",
@@ -473,14 +504,9 @@
     },
     {
       "cve": "CVE-2023-0922",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Der Fehler besteht, weil das Samba AD DC-Verwaltungstool, wenn es gegen einen entfernten LDAP-Server arbeitet, standardmäßig neue oder zurückgesetzte Passwörter über eine nur signierte Verbindung sendet. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, indem er den Netzwerkverkehr zwischen samba-tool und dem Samba AD DC beobachtet, um Passwörter im Klartext zu erhalten."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "T010641",
           "T038611",
           "T012167",

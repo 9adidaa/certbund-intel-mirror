@@ -234,17 +234,22 @@
         "category": "external",
         "summary": "HPE Security Bulletin vom 2024-10-25",
         "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbux04724en_us&docLocale=en_US"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-386 vom 2026-09-01",
+        "url": "https://www.dell.com/support/kbdoc/000503504/dsa-2026-386-security-update-f"
       }
     ],
     "source_lang": "en-US",
     "title": "Samba: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-10-27T23:00:00.000+00:00",
+      "current_release_date": "2026-08-31T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-10-28T09:09:34.551+00:00",
+        "date": "2026-09-01T10:53:28.780+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.8"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0842",
@@ -374,10 +379,15 @@
           "date": "2024-10-27T23:00:00.000+00:00",
           "number": "25",
           "summary": "Neue Updates von HP aufgenommen"
+        },
+        {
+          "date": "2026-08-31T22:00:00.000+00:00",
+          "number": "26",
+          "summary": "Neue Updates von Dell aufgenommen"
         }
       ],
       "status": "final",
-      "version": "25"
+      "version": "26"
     }
   },
   "product_tree": {
@@ -415,6 +425,37 @@
         ],
         "category": "vendor",
         "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway <5.36.00.16",
+                  "product_id": "T058878"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway 5.36.00.16",
+                  "product_id": "T058878-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:secure_connect_gateway:5.36.00.16"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Secure Connect Gateway"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
       },
       {
         "branches": [
@@ -640,17 +681,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-2031",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Das KDC und der kpasswd-Dienst nutzen ein gemeinsames Konto und einen gemeinsamen Schlüsselsatz, so dass sie die Tickets des jeweils anderen entschlüsseln können. Ein Benutzer, der aufgefordert wurde, sein Passwort zu ändern, kann dies ausnutzen, um Tickets für andere Dienste zu erhalten und zu verwenden. Ein authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024094",
           "T024093",
           "T024095",
+          "T058878",
           "67646",
           "T038611",
           "T012167",
@@ -668,17 +704,12 @@
     },
     {
       "cve": "CVE-2022-32742",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Ein SMB1-Client mit Schreibzugriff auf eine Freigabe kann bewirken, dass Speicherinhalte des Servers in eine Datei oder einen Drucker geschrieben werden. Ein authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024094",
           "T024093",
           "T024095",
+          "T058878",
           "67646",
           "T038611",
           "T012167",
@@ -696,17 +727,12 @@
     },
     {
       "cve": "CVE-2022-32744",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Das KDC akzeptiert kpasswd-Anfragen, die mit einem beliebigen, ihm bekannten Schlüssel verschlüsselt sind. Durch die Verschlüsselung von gefälschten kpasswd-Anfragen mit seinem eigenen Schlüssel kann ein Benutzer die Kennwörter anderer Benutzer ändern und so die vollständige Übernahme der Domäne ermöglichen. Ein authentisierter Angreifer kann diese Schwachstelle ausnutzen, um seine Rechte zu erweitern."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024094",
           "T024093",
           "T024095",
+          "T058878",
           "67646",
           "T038611",
           "T012167",
@@ -724,17 +750,12 @@
     },
     {
       "cve": "CVE-2022-32745",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Der Server kann unter Umständen mit einer LDAP-Anfrage zum Hinzufügen oder Ändern auf nicht initialisierte Daten zugreifen, was ein Segmentierungsfehler zur Folge hat. Ein authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen oder einen Denial of Service zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024094",
           "T024093",
           "T024095",
+          "T058878",
           "67646",
           "T038611",
           "T012167",
@@ -752,17 +773,12 @@
     },
     {
       "cve": "CVE-2022-32746",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Samba. Unter bestimmten Umständen kann das Audit-Protokollierungsmodul der AD DC-Datenbank dazu gebracht werden, auf LDAP-Nachrichtenwerte zuzugreifen, die von einem vorhergehenden Datenbankmodul freigegeben wurden. Ein authentisierter Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024094",
           "T024093",
           "T024095",
+          "T058878",
           "67646",
           "T038611",
           "T012167",

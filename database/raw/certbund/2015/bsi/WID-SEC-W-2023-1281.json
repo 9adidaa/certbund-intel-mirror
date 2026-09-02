@@ -52,11 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "Oracle Linux Security Advisory ELSA-2023-2903 vom 2023-05-24",
-        "url": "https://linux.oracle.com/errata/ELSA-2023-2903.html"
-      },
-      {
-        "category": "external",
         "summary": "PHP 5 ChangeLog (Version 5.4.39) vom 2015-03-19",
         "url": "http://www.php.net/ChangeLog-5.php#5.4.39"
       },
@@ -109,17 +104,27 @@
         "category": "external",
         "summary": "HP-UX  Security Bulletin HPSBUX03337 SSRT102066 rev.1",
         "url": "http://h20564.www2.hp.com/hpsc/doc/public/display?docId=emr_na-c04686230"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2023-2903 vom 2023-05-24",
+        "url": "https://linux.oracle.com/errata/ELSA-2023-2903.html"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-386 vom 2026-09-01",
+        "url": "https://www.dell.com/support/kbdoc/000503504/dsa-2026-386-security-update-f"
       }
     ],
     "source_lang": "en-US",
     "title": "PHP: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2023-05-23T22:00:00.000+00:00",
+      "current_release_date": "2026-08-31T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:51:18.962+00:00",
+        "date": "2026-09-01T10:51:56.489+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-1281",
@@ -199,10 +204,15 @@
           "date": "2023-05-23T22:00:00.000+00:00",
           "number": "15",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-08-31T22:00:00.000+00:00",
+          "number": "16",
+          "summary": "Neue Updates von Dell aufgenommen"
         }
       ],
       "status": "final",
-      "version": "15"
+      "version": "16"
     }
   },
   "product_tree": {
@@ -229,33 +239,88 @@
           {
             "branches": [
               {
-                "category": "product_name",
-                "name": "Open Source PHP < 5.4.39",
+                "category": "product_version_range",
+                "name": "<5.36.00.16",
                 "product": {
-                  "name": "Open Source PHP < 5.4.39",
-                  "product_id": "T004683",
+                  "name": "Dell Secure Connect Gateway <5.36.00.16",
+                  "product_id": "T058878"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway 5.36.00.16",
+                  "product_id": "T058878-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:secure_connect_gateway:5.36.00.16"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Secure Connect Gateway"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.4.39",
+                "product": {
+                  "name": "Open Source PHP <5.4.39",
+                  "product_id": "T004683"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.4.39",
+                "product": {
+                  "name": "Open Source PHP 5.4.39",
+                  "product_id": "T004683-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:php:php:5.4.39"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "Open Source PHP < 5.5.23",
+                "category": "product_version_range",
+                "name": "<5.5.23",
                 "product": {
-                  "name": "Open Source PHP < 5.5.23",
-                  "product_id": "T004684",
+                  "name": "Open Source PHP <5.5.23",
+                  "product_id": "T004684"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.5.23",
+                "product": {
+                  "name": "Open Source PHP 5.5.23",
+                  "product_id": "T004684-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:php:php:5.5.23"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "Open Source PHP < 5.6.7",
+                "category": "product_version_range",
+                "name": "<5.6.7",
                 "product": {
-                  "name": "Open Source PHP < 5.6.7",
-                  "product_id": "T004685",
+                  "name": "Open Source PHP <5.6.7",
+                  "product_id": "T004685"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.6.7",
+                "product": {
+                  "name": "Open Source PHP 5.6.7",
+                  "product_id": "T004685-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/a:php:php:5.6.7"
                   }
@@ -291,14 +356,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2015-2305",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in PHP. Ein entfernter, anonymer Angreifer kann eine Heap Overflow Schwachstelle in \"regcomp.c\" ausnutzen, um beliebigen Code mit den Rechten des Dienstes zur Ausführung zu bringen oder um einen Denial of Service Zustand hervorzurufen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T004683",
+          "T004684",
+          "T004685",
+          "T058878",
           "T004914"
         ]
       },
@@ -307,14 +370,12 @@
     },
     {
       "cve": "CVE-2015-2331",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in PHP. Ein entfernter, anonymer Angreifer kann eine Integer Overflow Schwachstelle in ZIP ausnutzen, um beliebigen Code mit den Rechten des Dienstes zur Ausführung zu bringen oder um einen Denial of Service Zustand hervorzurufen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T004683",
+          "T004684",
+          "T004685",
+          "T058878",
           "2951",
           "T004914"
         ]

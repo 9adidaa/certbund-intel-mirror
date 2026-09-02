@@ -74,17 +74,22 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2024-2910 vom 2024-05-23",
         "url": "https://linux.oracle.com/errata/ELSA-2024-2910.html"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-386 vom 2026-09-01",
+        "url": "https://www.dell.com/support/kbdoc/000503504/dsa-2026-386-security-update-f"
       }
     ],
     "source_lang": "en-US",
     "title": "Tenable Security Nessus Network Monitor: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-05-22T22:00:00.000+00:00",
+      "current_release_date": "2026-08-31T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:08:17.980+00:00",
+        "date": "2026-09-01T10:53:57.193+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-0992",
@@ -114,14 +119,50 @@
           "date": "2024-05-22T22:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Oracle Linux aufgenommen"
+        },
+        {
+          "date": "2026-08-31T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Dell aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway <5.36.00.16",
+                  "product_id": "T058878"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway 5.36.00.16",
+                  "product_id": "T058878-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:secure_connect_gateway:5.36.00.16"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Secure Connect Gateway"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
       {
         "branches": [
           {
@@ -167,6 +208,17 @@
                   "name": "Tenable Security Nessus Network Monitor <6.4.0",
                   "product_id": "T034461"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "6.4.0",
+                "product": {
+                  "name": "Tenable Security Nessus Network Monitor 6.4.0",
+                  "product_id": "T034461-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:tenable:nessus_network_monitor:6.4.0"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -181,15 +233,11 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-28711",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Tenable Security Nessus Network Monitor. Diese Fehler bestehen in den Drittanbieter-Komponenten Hyperscan Library und c-ares aufgrund eines unzureichenden Kontrollfluss-Managements und eines NULL-Zeiger-Dereferenz-Problems. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "67646",
+          "T034461",
           "T004914"
         ]
       },
@@ -198,15 +246,11 @@
     },
     {
       "cve": "CVE-2024-25629",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Tenable Security Nessus Network Monitor. Diese Fehler bestehen in den Drittanbieter-Komponenten Hyperscan Library und c-ares aufgrund eines unzureichenden Kontrollfluss-Managements und eines NULL-Zeiger-Dereferenz-Problems. Ein lokaler Angreifer kann diese Schwachstellen ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "67646",
+          "T034461",
           "T004914"
         ]
       },
@@ -215,15 +259,11 @@
     },
     {
       "cve": "CVE-2023-46218",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Tenable Security Nessus Network Monitor. Diese Fehler bestehen in der \"Curl\"-Komponente aufgrund einer unsachgemäßen Cookie-Behandlung und einer unsachgemäßen Neutralisierung von Eingaben. Dies ermöglicht es einer Website, Cookies zu setzen und sie an verschiedene und nicht verwandte Websites und Domänen zu senden oder beliebige Dateiinhalte zu löschen, wenn HSTS-Daten gespeichert werden. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen oder um Dateien zu manipulieren."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "67646",
+          "T034461",
           "T004914"
         ]
       },
@@ -232,15 +272,11 @@
     },
     {
       "cve": "CVE-2023-46219",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es bestehen mehrere Schwachstellen in Tenable Security Nessus Network Monitor. Diese Fehler bestehen in der \"Curl\"-Komponente aufgrund einer unsachgemäßen Cookie-Behandlung und einer unsachgemäßen Neutralisierung von Eingaben. Dies ermöglicht es einer Website, Cookies zu setzen und sie an verschiedene und nicht verwandte Websites und Domänen zu senden oder beliebige Dateiinhalte zu löschen, wenn HSTS-Daten gespeichert werden. Ein entfernter, anonymer Angreifer kann diese Schwachstellen ausnutzen, um Sicherheitsmaßnahmen zu umgehen oder um Dateien zu manipulieren."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T058878",
           "67646",
+          "T034461",
           "T004914"
         ]
       },

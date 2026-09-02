@@ -104,14 +104,34 @@
         "category": "external",
         "summary": "Ubuntu Security Notice USN-8477-3 vom 2026-07-22",
         "url": "https://ubuntu.com/security/notices/USN-8477-3"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-386 vom 2026-09-01",
+        "url": "https://www.dell.com/support/kbdoc/000503504/dsa-2026-386-security-update-f"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:61581 vom 2026-09-01",
+        "url": "https://errata.build.resf.org/RLSA-2026:61581"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:61783 vom 2026-09-01",
+        "url": "https://access.redhat.com/errata/RHSA-2026:61783"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-385 vom 2026-08-31",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000503592/dsa-2026-385-security-update-for-dell-secure-connect-gateway-policy-manager-multiple-vulnerabilities"
       }
     ],
     "source_lang": "en-US",
     "title": "GNU tar: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2026-07-22T22:00:00.000+00:00",
+      "current_release_date": "2026-08-31T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-07-23T09:03:02.756+00:00",
+        "date": "2026-09-01T10:58:34.837+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -159,14 +179,50 @@
           "date": "2026-07-22T22:00:00.000+00:00",
           "number": "8",
           "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2026-08-31T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von Dell, Rocky Enterprise Software Foundation und Red Hat aufgenommen"
         }
       ],
       "status": "final",
-      "version": "8"
+      "version": "9"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway <5.36.00.16",
+                  "product_id": "T058878"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.36.00.16",
+                "product": {
+                  "name": "Dell Secure Connect Gateway 5.36.00.16",
+                  "product_id": "T058878-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:dell:secure_connect_gateway:5.36.00.16"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Secure Connect Gateway"
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
       {
         "branches": [
           {
@@ -183,6 +239,40 @@
         ],
         "category": "vendor",
         "name": "Open Source"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T054581",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
       },
       {
         "branches": [
@@ -236,7 +326,10 @@
       "cve": "CVE-2026-5704",
       "product_status": {
         "known_affected": [
+          "T058878",
           "T002207",
+          "T054581",
+          "67646",
           "T000126",
           "T027843",
           "T052685"
