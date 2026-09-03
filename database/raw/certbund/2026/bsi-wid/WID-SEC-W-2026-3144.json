@@ -1,0 +1,154 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "kritisch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Proxmox Virtual Environment (PVE) ist eine Virtualisierungsplattform für Server.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Proxmox Virtual Environment ausnutzen, um Administratorrechte zu erlangen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-3144 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3144.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-3144 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3144"
+      },
+      {
+        "category": "external",
+        "summary": "Proxmox Security Advisory vom 2026-09-01",
+        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-security-advisories.149331/page-4#post-867929"
+      },
+      {
+        "category": "external",
+        "summary": "EU Vulnerability Database vom 2026-09-01",
+        "url": "https://euvd.enisa.europa.eu/enisa/EUVD-2023-60613"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit + PoC",
+        "url": "https://nebusec.ai/buglist/PSA-2026-00043-1/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Proxmox Virtual Environment: Schwachstelle ermöglicht Erlangen von Administratorrechten",
+    "tracking": {
+      "current_release_date": "2026-09-01T22:00:00.000+00:00",
+      "generator": {
+        "date": "2026-09-02T10:46:10.756+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.6.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-3144",
+      "initial_release_date": "2026-09-01T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-01T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "libpve-access-control <8.0.4",
+                "product": {
+                  "name": "Proxmox Virtual Environment libpve-access-control <8.0.4",
+                  "product_id": "T058932"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libpve-access-control 8.0.4",
+                "product": {
+                  "name": "Proxmox Virtual Environment libpve-access-control 8.0.4",
+                  "product_id": "T058932-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:proxmox:virtual_environment:libpve-access-control__8.0.4"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.0-7.4",
+                "product": {
+                  "name": "Proxmox Virtual Environment 7.0-7.4",
+                  "product_id": "T058934",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:proxmox:virtual_environment:7.4"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Virtual Environment"
+          }
+        ],
+        "category": "vendor",
+        "name": "Proxmox"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-54391",
+      "product_status": {
+        "known_affected": [
+          "T058932"
+        ],
+        "last_affected": [
+          "T058934"
+        ]
+      },
+      "release_date": "2026-09-01T22:00:00.000+00:00",
+      "title": "CVE-2023-54391"
+    }
+  ]
+}
