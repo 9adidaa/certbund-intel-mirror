@@ -1,0 +1,546 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Jenkins ist ein erweiterbarer, webbasierter Integration Server zur kontinuierlichen Unterstützung bei Softwareentwicklungen aller Art.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Jenkins und verschiedenen Plugins ausnutzen, um Daten offenzulegen oder zu manipulieren, Cross-Site Scripting (XSS) durchzuführen, beliebigen Code auszuführen oder die Sitzung eines anderen Benutzers zu übernehmen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-3166 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3166.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-3166 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3166"
+      },
+      {
+        "category": "external",
+        "summary": "Jenkins Security Advisory 2026-09-02 vom 2026-09-02",
+        "url": "https://www.jenkins.io/security/advisory/2026-09-02/"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Jenkins: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-09-02T22:00:00.000+00:00",
+      "generator": {
+        "date": "2026-09-03T11:26:29.940+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.6.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-3166",
+      "initial_release_date": "2026-09-02T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-02T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Plugins",
+                "product": {
+                  "name": "Jenkins Jenkins Plugins",
+                  "product_id": "T013614",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:plugins"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<2.580",
+                "product": {
+                  "name": "Jenkins Jenkins <2.580",
+                  "product_id": "T058994"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.58",
+                "product": {
+                  "name": "Jenkins Jenkins 2.580",
+                  "product_id": "T058994-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:2.580"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<LTS 2.568.3",
+                "product": {
+                  "name": "Jenkins Jenkins <LTS 2.568.3",
+                  "product_id": "T058995"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "LTS 2.568.3",
+                "product": {
+                  "name": "Jenkins Jenkins LTS 2.568.3",
+                  "product_id": "T058995-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:cloudbees:jenkins:lts_2.568.3"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Jenkins"
+          }
+        ],
+        "category": "vendor",
+        "name": "Jenkins"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-84645",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84645"
+    },
+    {
+      "cve": "CVE-2026-84646",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84646"
+    },
+    {
+      "cve": "CVE-2026-84647",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84647"
+    },
+    {
+      "cve": "CVE-2026-84648",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84648"
+    },
+    {
+      "cve": "CVE-2026-84649",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84649"
+    },
+    {
+      "cve": "CVE-2026-84650",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84650"
+    },
+    {
+      "cve": "CVE-2026-84651",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84651"
+    },
+    {
+      "cve": "CVE-2026-84652",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84652"
+    },
+    {
+      "cve": "CVE-2026-84653",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84653"
+    },
+    {
+      "cve": "CVE-2026-84654",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84654"
+    },
+    {
+      "cve": "CVE-2026-84655",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84655"
+    },
+    {
+      "cve": "CVE-2026-84656",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84656"
+    },
+    {
+      "cve": "CVE-2026-84657",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84657"
+    },
+    {
+      "cve": "CVE-2026-84658",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84658"
+    },
+    {
+      "cve": "CVE-2026-84659",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84659"
+    },
+    {
+      "cve": "CVE-2026-84660",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84660"
+    },
+    {
+      "cve": "CVE-2026-84661",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84661"
+    },
+    {
+      "cve": "CVE-2026-84662",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84662"
+    },
+    {
+      "cve": "CVE-2026-84663",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84663"
+    },
+    {
+      "cve": "CVE-2026-84664",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84664"
+    },
+    {
+      "cve": "CVE-2026-84665",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84665"
+    },
+    {
+      "cve": "CVE-2026-84666",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84666"
+    },
+    {
+      "cve": "CVE-2026-84667",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84667"
+    },
+    {
+      "cve": "CVE-2026-84668",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84668"
+    },
+    {
+      "cve": "CVE-2026-84669",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84669"
+    },
+    {
+      "cve": "CVE-2026-84670",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84670"
+    },
+    {
+      "cve": "CVE-2026-84671",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84671"
+    },
+    {
+      "cve": "CVE-2026-84672",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84672"
+    },
+    {
+      "cve": "CVE-2026-84673",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84673"
+    },
+    {
+      "cve": "CVE-2026-84674",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84674"
+    },
+    {
+      "cve": "CVE-2026-84675",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84675"
+    },
+    {
+      "cve": "CVE-2026-84676",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84676"
+    },
+    {
+      "cve": "CVE-2026-84677",
+      "product_status": {
+        "known_affected": [
+          "T013614",
+          "T058994",
+          "T058995"
+        ]
+      },
+      "release_date": "2026-09-02T22:00:00.000+00:00",
+      "title": "CVE-2026-84677"
+    }
+  ]
+}
