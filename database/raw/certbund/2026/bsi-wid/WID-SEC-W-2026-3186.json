@@ -1,0 +1,294 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Azure ist eine Cloud Computing-Plattform von Microsoft.\r\nAzure Cosmos DB ist ein NoSQL-Datenbankdienst von Microsoft.\r\nMicrosoft Copilot ist ein KI-Assistent, der in verschiedene Microsoft-Produkte integriert werden kann.\r\nMicrosoft Entra ID (früher Azure Active Directory) ist ein cloudbasierter Identitäts- und Zugriffsverwaltungsdienst von Microsoft.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in verschiedenen Microsoft Clouddiensten ausnutzen, um Sicherheitsmechanismen zu umgehen, Berechtigungen zu erhöhen, vertrauliche Informationen offenzulegen sowie Daten oder Dienste zu beeinträchtigen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- Windows",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-3186 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3186.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-3186 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3186"
+      },
+      {
+        "category": "external",
+        "summary": "Microsoft September 2026 Early Security Updates vom 2026-09-03",
+        "url": "https://msrc.microsoft.com/update-guide/releaseNote/2026-Sep"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Microsoft Clouddienste: Mehrere Schwachstellen",
+    "tracking": {
+      "current_release_date": "2026-09-03T22:00:00.000+00:00",
+      "generator": {
+        "date": "2026-09-04T12:16:11.885+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.6.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-3186",
+      "initial_release_date": "2026-09-03T22:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-09-03T22:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Studio",
+                "product": {
+                  "name": "Microsoft 365 Copilot Studio",
+                  "product_id": "T050331",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:365_copilot:studio"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "365 Copilot"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Active Directory B2C",
+                "product": {
+                  "name": "Microsoft Azure Active Directory B2C",
+                  "product_id": "T054516",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:azure:active_directory_b2c"
+                  }
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "AI Language",
+                "product": {
+                  "name": "Microsoft Azure AI Language",
+                  "product_id": "T059049",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:azure:ai_language"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Azure"
+          },
+          {
+            "category": "product_name",
+            "name": "Microsoft Azure Cosmos DB",
+            "product": {
+              "name": "Microsoft Azure Cosmos DB",
+              "product_id": "T057469",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:microsoft:azure_cosmos_db:-"
+              }
+            }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "ID",
+                "product": {
+                  "name": "Microsoft Entra ID",
+                  "product_id": "T058437",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:entra:id"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Entra"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-62906",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-62906"
+    },
+    {
+      "cve": "CVE-2026-62916",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-62916"
+    },
+    {
+      "cve": "CVE-2026-65818",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-65818"
+    },
+    {
+      "cve": "CVE-2026-69857",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-69857"
+    },
+    {
+      "cve": "CVE-2026-70178",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-70178"
+    },
+    {
+      "cve": "CVE-2026-70352",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-70352"
+    },
+    {
+      "cve": "CVE-2026-80098",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-80098"
+    },
+    {
+      "cve": "CVE-2026-83711",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-83711"
+    },
+    {
+      "cve": "CVE-2026-83941",
+      "product_status": {
+        "known_affected": [
+          "T058437",
+          "T057469",
+          "T054516",
+          "T059049",
+          "T050331"
+        ]
+      },
+      "release_date": "2026-09-03T22:00:00.000+00:00",
+      "title": "CVE-2026-83941"
+    }
+  ]
+}
