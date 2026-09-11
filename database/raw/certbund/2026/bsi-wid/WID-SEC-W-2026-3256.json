@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "mittel"
+      "text": "hoch"
     },
     "category": "csaf_base",
     "csaf_version": "2.0",
@@ -24,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in ConnectWise ScreenConnect ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "text": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in ConnectWise ScreenConnect ausnutzen, um Code auszuführen.",
         "title": "Angriff"
       },
       {
@@ -54,14 +54,19 @@
         "category": "external",
         "summary": "Connectwise Advisory vom 2026-09-08",
         "url": "https://www.connectwise.com/company/trust/advisories#:~:text=September%203%2C%202026%3A"
+      },
+      {
+        "category": "external",
+        "summary": "Connectwise Security Bulletin vom 2026-09-09",
+        "url": "https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin"
       }
     ],
     "source_lang": "en-US",
-    "title": "ConnectWise ScreenConnect: Schwachstelle ermöglicht nicht spezifizierten Angriff",
+    "title": "ConnectWise ScreenConnect: Schwachstelle ermöglicht Codeausführung",
     "tracking": {
-      "current_release_date": "2026-09-08T22:00:00.000+00:00",
+      "current_release_date": "2026-09-09T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-09-09T09:54:20.351+00:00",
+        "date": "2026-09-10T05:46:34.207+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -74,10 +79,15 @@
           "date": "2026-09-08T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-09-09T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Meldung aufgrund neuer Informationen angepasst"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -85,15 +95,40 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "ConnectWise ScreenConnect",
-            "product": {
-              "name": "ConnectWise ScreenConnect",
-              "product_id": "1601441",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:connectwise:screenconnect:-"
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "ConnectWise ScreenConnect",
+                "product": {
+                  "name": "ConnectWise ScreenConnect",
+                  "product_id": "1601441",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:connectwise:screenconnect:-"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<26.6.5",
+                "product": {
+                  "name": "ConnectWise ScreenConnect <26.6.5",
+                  "product_id": "T059297"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.6.5",
+                "product": {
+                  "name": "ConnectWise ScreenConnect 26.6.5",
+                  "product_id": "T059297-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:connectwise:screenconnect:26.6.5"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "ScreenConnect"
           }
         ],
         "category": "vendor",
@@ -103,12 +138,15 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2026-84869",
       "product_status": {
         "known_affected": [
-          "1601441"
+          "1601441",
+          "T059297"
         ]
       },
-      "release_date": "2026-09-08T22:00:00.000+00:00"
+      "release_date": "2026-09-08T22:00:00.000+00:00",
+      "title": "CVE-2026-84869"
     }
   ]
 }
