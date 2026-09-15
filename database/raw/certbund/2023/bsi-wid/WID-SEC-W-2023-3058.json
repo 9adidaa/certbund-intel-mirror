@@ -52,8 +52,8 @@
       },
       {
         "category": "external",
-        "summary": "Extreme Networks Security Advisory SA-2023-135 vom 2023-12-05",
-        "url": "https://extreme-networks.my.site.com/ExtrArticleDetail?an=000115356"
+        "summary": "Extreme Networks Security Advisory SA-2023-133 vom 2023-12-05",
+        "url": "https://extreme-networks.my.site.com/ExtrArticleDetail?an=000115354"
       },
       {
         "category": "external",
@@ -62,19 +62,19 @@
       },
       {
         "category": "external",
-        "summary": "Extreme Networks Security Advisory SA-2023-133 vom 2023-12-05",
-        "url": "https://extreme-networks.my.site.com/ExtrArticleDetail?an=000115354"
+        "summary": "Extreme Networks Security Advisory SA-2023-135 vom 2023-12-05",
+        "url": "https://extreme-networks.my.site.com/ExtrArticleDetail?an=000115356"
       }
     ],
     "source_lang": "en-US",
     "title": "Extreme Networks IQ Engine: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2023-12-05T23:00:00.000+00:00",
+      "current_release_date": "2026-09-13T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:02:21.219+00:00",
+        "date": "2026-09-14T11:07:13.040+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-3058",
@@ -84,10 +84,15 @@
           "date": "2023-12-05T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-09-13T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2023-60670"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -97,22 +102,38 @@
           {
             "branches": [
               {
-                "category": "product_name",
-                "name": "Extreme Networks IQ Engine < 10.6r1a",
+                "category": "product_version_range",
+                "name": "<10.6r1a",
                 "product": {
-                  "name": "Extreme Networks IQ Engine < 10.6r1a",
-                  "product_id": "T031491",
+                  "name": "Extreme Networks IQ Engine <10.6r1a",
+                  "product_id": "T031491"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.6r1a",
+                "product": {
+                  "name": "Extreme Networks IQ Engine 10.6r1a",
+                  "product_id": "T031491-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/o:extremenetworks:iq_engine:10.6r1a"
                   }
                 }
               },
               {
-                "category": "product_name",
-                "name": "Extreme Networks IQ Engine < 10.6r5",
+                "category": "product_version_range",
+                "name": "<10.6r5",
                 "product": {
-                  "name": "Extreme Networks IQ Engine < 10.6r5",
-                  "product_id": "T031492",
+                  "name": "Extreme Networks IQ Engine <10.6r5",
+                  "product_id": "T031492"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.6r5",
+                "product": {
+                  "name": "Extreme Networks IQ Engine 10.6r5",
+                  "product_id": "T031492-fixed",
                   "product_identification_helper": {
                     "cpe": "cpe:/o:extremenetworks:iq_engine:10.6r5"
                   }
@@ -130,37 +151,37 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-46273",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Extreme Networks IQ Engine. Dieser Fehler besteht im Bonjour Gateway Daemon aufgrund eines stapelbasierten Pufferüberlaufs, der es erlaubt, die Funktion 'ah_event_send' mit einer manipulierten 'event_id' und 'event_message' aufzurufen und den 'ah_scd' Daemon anzugreifen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
-        }
-      ],
+      "cve": "CVE-2023-46271",
+      "product_status": {
+        "known_affected": [
+          "T031492",
+          "T031491"
+        ]
+      },
       "release_date": "2023-12-05T23:00:00.000+00:00",
-      "title": "CVE-2023-46273"
+      "title": "CVE-2023-46271"
     },
     {
       "cve": "CVE-2023-46272",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Extreme Networks IQ Engine. Dieser Fehler besteht aufgrund eines Pufferüberlaufs in der Implementierung des ah_auth-Dienstes. Ein entfernter, anonymer Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Code ausnutzen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T031492",
+          "T031491"
+        ]
+      },
       "release_date": "2023-12-05T23:00:00.000+00:00",
       "title": "CVE-2023-46272"
     },
     {
-      "cve": "CVE-2023-46271",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Extreme Networks IQ Engine. Dieser Fehler besteht im ah_webui-Dienst, da er Remote-Peers auf Port 3009 nicht authentifiziert. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
+      "cve": "CVE-2023-46273",
+      "product_status": {
+        "known_affected": [
+          "T031492",
+          "T031491"
+        ]
+      },
       "release_date": "2023-12-05T23:00:00.000+00:00",
-      "title": "CVE-2023-46271"
+      "title": "CVE-2023-46273"
     }
   ]
 }

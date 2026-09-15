@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux\n- Windows",
+        "text": "- Linux\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -59,12 +59,12 @@
     "source_lang": "en-US",
     "title": "TYPO3 Extension(Femanager): Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2023-10-03T22:00:00.000+00:00",
+      "current_release_date": "2026-09-13T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:59:22.925+00:00",
+        "date": "2026-09-14T11:06:54.282+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-2546",
@@ -74,10 +74,15 @@
           "date": "2023-10-03T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-09-13T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2023-60667"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -85,15 +90,29 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "TYPO3 Extension < Femanager 7.2.2",
-            "product": {
-              "name": "TYPO3 Extension < Femanager 7.2.2",
-              "product_id": "T030213",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:typo3:typo3_extension:femanager_7.2.2"
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<Femanager 7.2.2",
+                "product": {
+                  "name": "TYPO3 Extension <Femanager 7.2.2",
+                  "product_id": "T030213"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Femanager 7.2.2",
+                "product": {
+                  "name": "TYPO3 Extension Femanager 7.2.2",
+                  "product_id": "T030213-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:typo3:typo3_extension:femanager_7.2.2"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Extension"
           }
         ],
         "category": "vendor",
@@ -104,12 +123,11 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-45023",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in der TYPO3 Extension \"Femanager\". Diese besteht aufgrund einer fehlerhaften Zugriffskontrolle in der Invitation-Komponente. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T030213"
+        ]
+      },
       "release_date": "2023-10-03T22:00:00.000+00:00",
       "title": "CVE-2023-45023"
     }

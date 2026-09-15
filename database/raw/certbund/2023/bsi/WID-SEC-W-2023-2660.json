@@ -59,12 +59,12 @@
     "source_lang": "en-US",
     "title": "Paessler PRTG: Schwachstelle ermöglicht Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2023-10-16T22:00:00.000+00:00",
+      "current_release_date": "2026-09-13T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:59:56.043+00:00",
+        "date": "2026-09-14T11:07:11.852+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-2660",
@@ -74,10 +74,15 @@
           "date": "2023-10-16T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-09-13T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Referenz(en) aufgenommen: EUVD-2023-60668"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -85,15 +90,29 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Paessler PRTG < 23.4.88.1429",
-            "product": {
-              "name": "Paessler PRTG < 23.4.88.1429",
-              "product_id": "T030547",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:paessler_ag:prtg:23.4.88.1429"
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<23.4.88.1429",
+                "product": {
+                  "name": "Paessler PRTG <23.4.88.1429",
+                  "product_id": "T030547"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "23.4.88.1429",
+                "product": {
+                  "name": "Paessler PRTG 23.4.88.1429",
+                  "product_id": "T030547-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:paessler_ag:prtg:23.4.88.1429"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "PRTG"
           }
         ],
         "category": "vendor",
@@ -104,12 +123,11 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-45858",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Paessler PRTG. Dieser Fehler besteht im Webserver des Netzwerkmonitors aufgrund eines Path Traversal Problems. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um vertrauliche Informationen offenzulegen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T030547"
+        ]
+      },
       "release_date": "2023-10-16T22:00:00.000+00:00",
       "title": "CVE-2023-45858"
     }
