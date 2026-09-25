@@ -74,14 +74,29 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2026:69553 vom 2026-09-22",
         "url": "https://access.redhat.com/errata/RHSA-2026:69553"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:69553 vom 2026-09-23",
+        "url": "https://errata.build.resf.org/RLSA-2026:69553"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-69553 vom 2026-09-23",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-69553.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-69553 vom 2026-09-23",
+        "url": "https://oss.oracle.com/pipermail/el-errata/2026-September/022130.html"
       }
     ],
     "source_lang": "en-US",
     "title": "libarchive: Schwachstelle ermöglicht nicht spezifizierten Angriff",
     "tracking": {
-      "current_release_date": "2026-09-21T22:00:00.000+00:00",
+      "current_release_date": "2026-09-23T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-09-22T10:48:40.919+00:00",
+        "date": "2026-09-24T10:25:13.519+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -109,10 +124,15 @@
           "date": "2026-09-21T22:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-09-23T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation und Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -155,6 +175,40 @@
         "branches": [
           {
             "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T056236",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T054581",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
             "name": "Red Hat Enterprise Linux",
             "product": {
               "name": "Red Hat Enterprise Linux",
@@ -175,8 +229,10 @@
       "cve": "CVE-2026-16517",
       "product_status": {
         "known_affected": [
+          "T056236",
           "T057006",
           "2951",
+          "T054581",
           "67646"
         ]
       },
