@@ -74,17 +74,22 @@
         "category": "external",
         "summary": "Gentoo Linux Security Advisory GLSA-202407-20 vom 2024-07-06",
         "url": "https://security.gentoo.org/glsa/202407-20"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-8829-1 vom 2026-09-28",
+        "url": "https://ubuntu.com/security/notices/USN-8829-1"
       }
     ],
     "source_lang": "en-US",
     "title": "KDE: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode",
     "tracking": {
-      "current_release_date": "2024-07-07T22:00:00.000+00:00",
+      "current_release_date": "2026-09-28T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:09:43.690+00:00",
+        "date": "2026-09-29T09:32:06.377+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-1266",
@@ -114,10 +119,15 @@
           "date": "2024-07-07T22:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Gentoo aufgenommen"
+        },
+        {
+          "date": "2026-09-28T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -169,11 +179,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "plasma-workspace 6.0.5.1",
+                "product": {
+                  "name": "Open Source KDE plasma-workspace 6.0.5.1",
+                  "product_id": "T035131-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kde:kdelibs:plasma-workspace__6.0.5.1"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "plasma-workspace <5.27.11.1",
                 "product": {
                   "name": "Open Source KDE plasma-workspace <5.27.11.1",
                   "product_id": "T035132"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "plasma-workspace 5.27.11.1",
+                "product": {
+                  "name": "Open Source KDE plasma-workspace 5.27.11.1",
+                  "product_id": "T035132-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:kde:kdelibs:plasma-workspace__5.27.11.1"
+                  }
                 }
               }
             ],
@@ -206,16 +238,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-36041",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in KDE. Dieser Fehler besteht in der KSmserver-Komponente aufgrund einer unsachgemäßen Sitzungsverwaltung, die es erlaubt, beim nächsten Start Zugriff auf den Benutzer zu erhalten. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Code als Sitzungsmanager auszuführen"
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
           "T000126",
+          "T035132",
+          "T035131",
           "T012167"
         ]
       },
