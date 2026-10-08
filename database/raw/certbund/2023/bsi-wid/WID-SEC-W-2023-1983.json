@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows",
+        "text": "- Linux\n- MacOS X\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -79,17 +79,22 @@
         "category": "external",
         "summary": "Amazon Linux Security Advisory ALAS-2024-2449 vom 2024-02-06",
         "url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2449.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6530 vom 2026-10-04",
+        "url": "https://security-tracker.debian.org/tracker/pcre2"
       }
     ],
     "source_lang": "en-US",
     "title": "PCRE (Perl Compatible Regular Expressions): Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2024-02-05T23:00:00.000+00:00",
+      "current_release_date": "2026-10-06T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:56:39.932+00:00",
+        "date": "2026-10-07T11:56:53.229+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-1983",
@@ -114,10 +119,15 @@
           "date": "2024-02-05T23:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2026-10-06T22:00:00.000+00:00",
+          "number": "5",
+          "summary": "Neue Updates von Debian aufgenommen"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -143,14 +153,45 @@
         "branches": [
           {
             "category": "product_name",
-            "name": "Open Source PCRE (Perl Compatible Regular Expressions) < 10.42",
+            "name": "Debian Linux",
             "product": {
-              "name": "Open Source PCRE (Perl Compatible Regular Expressions) < 10.42",
-              "product_id": "T029117",
+              "name": "Debian Linux",
+              "product_id": "2951",
               "product_identification_helper": {
-                "cpe": "cpe:/a:pcre:perl_compatible_regular_expression_library:10.42:pcre2"
+                "cpe": "cpe:/o:debian:debian_linux:-"
               }
             }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<10.42",
+                "product": {
+                  "name": "Open Source PCRE (Perl Compatible Regular Expressions) <10.42",
+                  "product_id": "T029117"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.42",
+                "product": {
+                  "name": "Open Source PCRE (Perl Compatible Regular Expressions) 10.42",
+                  "product_id": "T029117-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:pcre:perl_compatible_regular_expression_library:10.42:pcre2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PCRE (Perl Compatible Regular Expressions)"
           }
         ],
         "category": "vendor",
@@ -178,16 +219,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-41409",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in PCRE (Perl Compatible Regular Expressions). Dieser Fehler besteht aufgrund eines Integer-Überlaufs in der Komponente pcre2test, der es ermöglicht, speziell gestaltete Daten an die Anwendung zu übermitteln. Ein Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "2951",
           "T002207",
-          "398363"
+          "398363",
+          "T029117"
         ]
       },
       "release_date": "2023-08-07T22:00:00.000+00:00",

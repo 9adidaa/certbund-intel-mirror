@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux\n- MacOS X\n- Windows",
+        "text": "- Linux\n- MacOS X\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -49,11 +49,6 @@
         "category": "self",
         "summary": "WID-SEC-2022-0897 - Portal Version",
         "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0897"
-      },
-      {
-        "category": "external",
-        "summary": "Debian Security Advisory DLA-3363 vom 2023-03-16",
-        "url": "https://lists.debian.org/debian-lts-announce/2023/03/msg00014.html"
       },
       {
         "category": "external",
@@ -104,17 +99,27 @@
         "category": "external",
         "summary": "SUSE Security Update SUSE-SU-2022:2649-1 vom 2022-08-03",
         "url": "https://lists.suse.com/pipermail/sle-security-updates/2022-August/011755.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-3363 vom 2023-03-16",
+        "url": "https://lists.debian.org/debian-lts-announce/2023/03/msg00014.html"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6530 vom 2026-10-04",
+        "url": "https://security-tracker.debian.org/tracker/pcre2"
       }
     ],
     "source_lang": "en-US",
     "title": "PCRE (Perl Compatible Regular Expressions): Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2023-03-15T23:00:00.000+00:00",
+      "current_release_date": "2026-10-06T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:32:45.723+00:00",
+        "date": "2026-10-07T11:56:49.887+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0897",
@@ -174,10 +179,15 @@
           "date": "2023-03-15T23:00:00.000+00:00",
           "number": "11",
           "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2026-10-06T22:00:00.000+00:00",
+          "number": "12",
+          "summary": "Neue Updates von Debian aufgenommen"
         }
       ],
       "status": "final",
-      "version": "11"
+      "version": "12"
     }
   },
   "product_tree": {
@@ -219,15 +229,29 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Open Source PCRE (Perl Compatible Regular Expressions) < 10.34",
-            "product": {
-              "name": "Open Source PCRE (Perl Compatible Regular Expressions) < 10.34",
-              "product_id": "305961",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:pcre:perl_compatible_regular_expression_library:8.36"
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<10.34",
+                "product": {
+                  "name": "Open Source PCRE (Perl Compatible Regular Expressions) <10.34",
+                  "product_id": "305961"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "10.34",
+                "product": {
+                  "name": "Open Source PCRE (Perl Compatible Regular Expressions) 10.34",
+                  "product_id": "305961-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:pcre:perl_compatible_regular_expression_library:8.36"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "PCRE (Perl Compatible Regular Expressions)"
           }
         ],
         "category": "vendor",
@@ -272,17 +296,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2019-20454",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in PCRE (Perl Compatible Regular Expressions), die aufgrund eines Fehlers bei der Verarbeitung eines \"\\X\"-Musters auftritt, wenn dieses JIT-kompiliert wird. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service Angriff durchzuführen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
           "T002207",
           "67646",
+          "305961",
           "T012167"
         ]
       },
