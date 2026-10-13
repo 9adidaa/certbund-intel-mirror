@@ -79,17 +79,22 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2024:9194 vom 2024-11-12",
         "url": "https://access.redhat.com/errata/RHSA-2024:9194"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:11995-1 vom 2026-10-11",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/X354I25NF26KZJ34PPL57HEUPRIWKKYW/"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux (PyMySQL): Schwachstelle ermöglicht SQL Injection",
     "tracking": {
-      "current_release_date": "2024-11-11T23:00:00.000+00:00",
+      "current_release_date": "2026-10-11T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-11-12T12:16:51.036+00:00",
+        "date": "2026-10-12T08:29:42.003+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.8"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2024-1513",
@@ -109,10 +114,15 @@
           "date": "2024-11-11T23:00:00.000+00:00",
           "number": "3",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-10-11T22:00:00.000+00:00",
+          "number": "4",
+          "summary": "Neue Updates von openSUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -175,22 +185,34 @@
         ],
         "category": "vendor",
         "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
+            "product": {
+              "name": "SUSE openSUSE",
+              "product_id": "T055946",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:suse:opensuse:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "SUSE"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2024-36039",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat Enterprise Linux, die PyMySQL betrifft, da die Eingaben nicht ausreichend bereinigt werden. Dieser Fehler führt dazu, dass die Schlüssel von der escape_dict-Funktion nicht entschlüsselt werden, was die Einspeisung von bösartigen SQL-Abfragen ermöglicht. Ein entfernter, authentisierter Angreifer kann diese Schwachstelle ausnutzen, um einen SQL-Injection Angriff durchzuführen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T035779",
           "67646",
+          "T055946",
           "T004914"
         ]
       },
