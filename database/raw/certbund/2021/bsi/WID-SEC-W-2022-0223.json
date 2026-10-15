@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux",
+        "text": "- Linux\n- UNIX",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -49,11 +49,6 @@
         "category": "self",
         "summary": "WID-SEC-2022-0223 - Portal Version",
         "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2022-0223"
-      },
-      {
-        "category": "external",
-        "summary": "Amazon Linux Security Advisory ALASMICROVM-KERNEL-4.14-2023-001 vom 2023-09-27",
-        "url": "https://alas.aws.amazon.com/AL2/ALASMICROVM-KERNEL-4.14-2023-001.html"
       },
       {
         "category": "external",
@@ -289,17 +284,27 @@
         "category": "external",
         "summary": "Oracle Linux Security Advisory ELSA-2022-9999 vom 2022-11-16",
         "url": "http://linux.oracle.com/errata/ELSA-2022-9999.html"
+      },
+      {
+        "category": "external",
+        "summary": "Amazon Linux Security Advisory ALASMICROVM-KERNEL-4.14-2023-001 vom 2023-09-27",
+        "url": "https://alas.aws.amazon.com/AL2/ALASMICROVM-KERNEL-4.14-2023-001.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-8924-1 vom 2026-10-13",
+        "url": "https://ubuntu.com/security/notices/USN-8924-1"
       }
     ],
     "source_lang": "en-US",
     "title": "Linux Kernel: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2023-09-27T22:00:00.000+00:00",
+      "current_release_date": "2026-10-13T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:27:25.792+00:00",
+        "date": "2026-10-14T10:59:23.661+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0223",
@@ -444,10 +449,15 @@
           "date": "2023-09-27T22:00:00.000+00:00",
           "number": "28",
           "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2026-10-13T22:00:00.000+00:00",
+          "number": "29",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
         }
       ],
       "status": "final",
-      "version": "28"
+      "version": "29"
     }
   },
   "product_tree": {
@@ -550,15 +560,29 @@
       {
         "branches": [
           {
-            "category": "product_name",
-            "name": "Juniper Junos Space < 22.2R1",
-            "product": {
-              "name": "Juniper Junos Space < 22.2R1",
-              "product_id": "T003343",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:juniper:junos_space:-"
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<22.2R1",
+                "product": {
+                  "name": "Juniper Junos Space <22.2R1",
+                  "product_id": "T003343"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "22.2R1",
+                "product": {
+                  "name": "Juniper Junos Space 22.2R1",
+                  "product_id": "T003343-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:juniper:junos_space:-"
+                  }
+                }
               }
-            }
+            ],
+            "category": "product_name",
+            "name": "Junos Space"
           }
         ],
         "category": "vendor",
@@ -654,12 +678,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2021-3752",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle im Linux Kernel. Die Schwachstelle besteht aufgrund eines Use-after-Free im Bluetooth-Modul. Ein lokaler Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand auszulösen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T003343",
@@ -682,12 +700,6 @@
     },
     {
       "cve": "CVE-2021-38300",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle im Linux Kernel. Der Fehler besteht, weil der JIT-Compiler bei der Übersetzung bestimmter cBPF-Programme Verzweigungen außerhalb des Bereichs ausgibt. Ein lokaler Angreifer kann diese Schwachstelle zur Ausführung von beliebigem Kernel-Code ausnutzen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T003343",
