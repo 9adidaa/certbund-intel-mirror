@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux",
+        "text": "- Linux\n- UNIX",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -52,11 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "Ubuntu Security Notice USN-5812-1 vom 2023-01-19",
-        "url": "https://ubuntu.com/security/notices/USN-5812-1"
-      },
-      {
-        "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2021:4162 vom 2021-11-10",
         "url": "https://access.redhat.com/errata/RHSA-2021:4162"
       },
@@ -74,17 +69,32 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2021:4702 vom 2021-11-16",
         "url": "https://access.redhat.com/errata/RHSA-2021:4702"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-5812-1 vom 2023-01-19",
+        "url": "https://ubuntu.com/security/notices/USN-5812-1"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:12045-1 vom 2026-10-16",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/6AQJ7NC2BIYMG7F6X7TVVABMLYUZM2KW/"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:12044-1 vom 2026-10-16",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/USQRU25ZGXREBNHZ74LCOTNVBMDSHKLX/"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat OpenShift: Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2023-01-19T23:00:00.000+00:00",
+      "current_release_date": "2026-10-18T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:42:00.877+00:00",
+        "date": "2026-10-19T13:12:05.144+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2023-0156",
@@ -114,10 +124,15 @@
           "date": "2023-01-19T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Ubuntu aufgenommen"
+        },
+        {
+          "date": "2026-10-18T22:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von openSUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -136,19 +151,50 @@
             }
           },
           {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Container Platform <4.6",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform <4.6",
+                  "product_id": "T020335"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Container Platform 4.6",
+                "product": {
+                  "name": "Red Hat OpenShift Container Platform 4.6",
+                  "product_id": "T020335-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:container_platform__4.6"
+                  }
+                }
+              }
+            ],
             "category": "product_name",
-            "name": "Red Hat OpenShift Container Platform < 4.6",
+            "name": "OpenShift"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
             "product": {
-              "name": "Red Hat OpenShift Container Platform < 4.6",
-              "product_id": "T020335",
+              "name": "SUSE openSUSE",
+              "product_id": "T055946",
               "product_identification_helper": {
-                "cpe": "cpe:/a:redhat:openshift:container_platform__4.6"
+                "cpe": "cpe:/o:suse:opensuse:-"
               }
             }
           }
         ],
         "category": "vendor",
-        "name": "Red Hat"
+        "name": "SUSE"
       },
       {
         "branches": [
@@ -172,17 +218,12 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2021-33503",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat OpenShift. Der Fehler besteht aufgrund einer Endlosschleife in der Komponente python-urllib3. Ein entfernter anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand auszulösen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T020335",
           "67646",
-          "T000126"
+          "T000126",
+          "T055946"
         ]
       },
       "release_date": "2021-09-08T22:00:00.000+00:00",

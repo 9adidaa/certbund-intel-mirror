@@ -52,11 +52,6 @@
       },
       {
         "category": "external",
-        "summary": "IBM Security Bulletin 6999317 vom 2023-05-30",
-        "url": "https://www.ibm.com/support/pages/node/6999317"
-      },
-      {
-        "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2021:1631 vom 2021-05-18",
         "url": "https://access.redhat.com/errata/RHSA-2021:1631"
       },
@@ -94,17 +89,32 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2022:5235 vom 2022-06-28",
         "url": "https://access.redhat.com/errata/RHSA-2022:5235"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 6999317 vom 2023-05-30",
+        "url": "https://www.ibm.com/support/pages/node/6999317"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:12045-1 vom 2026-10-16",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/6AQJ7NC2BIYMG7F6X7TVVABMLYUZM2KW/"
+      },
+      {
+        "category": "external",
+        "summary": "openSUSE Security Update OPENSUSE-SU-2026:12044-1 vom 2026-10-16",
+        "url": "https://lists.opensuse.org/archives/list/security-announce@lists.opensuse.org/thread/USQRU25ZGXREBNHZ74LCOTNVBMDSHKLX/"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat OpenShift: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2023-05-30T22:00:00.000+00:00",
+      "current_release_date": "2026-10-18T22:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:29:28.108+00:00",
+        "date": "2026-10-19T13:12:04.721+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0496",
@@ -149,10 +159,15 @@
           "date": "2023-05-30T22:00:00.000+00:00",
           "number": "8",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-10-18T22:00:00.000+00:00",
+          "number": "9",
+          "summary": "Neue Updates von openSUSE aufgenommen"
         }
       ],
       "status": "final",
-      "version": "8"
+      "version": "9"
     }
   },
   "product_tree": {
@@ -179,8 +194,8 @@
           {
             "branches": [
               {
-                "category": "product_name",
-                "name": "IBM Security Guardium 11.4",
+                "category": "product_version",
+                "name": "11.4",
                 "product": {
                   "name": "IBM Security Guardium 11.4",
                   "product_id": "1076561",
@@ -190,8 +205,8 @@
                 }
               },
               {
-                "category": "product_name",
-                "name": "IBM Security Guardium 11.5",
+                "category": "product_version",
+                "name": "11.5",
                 "product": {
                   "name": "IBM Security Guardium 11.5",
                   "product_id": "T026399",
@@ -222,35 +237,53 @@
             }
           },
           {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "3.11.374",
+                "product": {
+                  "name": "Red Hat OpenShift 3.11.374",
+                  "product_id": "T018141",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:redhat:openshift:3.11.374"
+                  }
+                }
+              }
+            ],
             "category": "product_name",
-            "name": "Red Hat OpenShift 3.11.374",
+            "name": "OpenShift"
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "SUSE openSUSE",
             "product": {
-              "name": "Red Hat OpenShift 3.11.374",
-              "product_id": "T018141",
+              "name": "SUSE openSUSE",
+              "product_id": "T055946",
               "product_identification_helper": {
-                "cpe": "cpe:/a:redhat:openshift:3.11.374"
+                "cpe": "cpe:/o:suse:opensuse:-"
               }
             }
           }
         ],
         "category": "vendor",
-        "name": "Red Hat"
+        "name": "SUSE"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2019-11840",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat OpenShift in den verwendeten zusätzlichen Go-Kryptografie-Bibliotheken. Zur Schlüsselerstellung werden nur unzureichend zufällige Werte genutzt. Ein entfernter anonymer Angreifer kann diese Schwachstelle ausnutzen, um Informationen offenzulegen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "67646",
           "1076561",
+          "T055946",
           "398363",
           "T018141",
           "T026399"
@@ -261,16 +294,11 @@
     },
     {
       "cve": "CVE-2020-26137",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat OpenShift. urllib3 erlaubt eine CRLF-Injektion, über die HTTP-Request Methode. Ein entfernter anonymer Angreifer kann diese Schwachstelle ausnutzen, um Sicherheitsvorkehrungen zu umgehen und HTTP-Header zu injizieren."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "67646",
           "1076561",
+          "T055946",
           "398363",
           "T018141",
           "T026399"
