@@ -19,17 +19,17 @@
       },
       {
         "category": "description",
-        "text": "Chrome ist ein Internet-Browser von Google.",
+        "text": "Chrome ist ein Internet-Browser von Google.\r\nEdge ist ein Internet-Browser von Microsoft.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome ausnutzen, um beliebigen Code auszuführen, Berechtigungen zu erweitern, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, einen Denial-of-Service-Zustand auszulösen oder andere, nicht näher spezifizierte Angriffe durchzuführen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome / Microsoft Edge ausnutzen, um beliebigen Code auszuführen, Berechtigungen zu erweitern, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, einen Denial-of-Service-Zustand auszulösen oder andere, nicht näher spezifizierte Angriffe durchzuführen.",
         "title": "Angriff"
       },
       {
         "category": "general",
-        "text": "- Linux\n- MacOS X\n- Windows",
+        "text": "- Android\n- Linux\n- MacOS X\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -54,14 +54,44 @@
         "category": "external",
         "summary": "Google Chrome Stable Channel Update vom 2026-10-20",
         "url": "http://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-10-22",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#october-22-2026"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-5F3E283077 vom 2026-10-23",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-5f3e283077"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-E61285733F vom 2026-10-23",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-e61285733f"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-2026-C38CC5881E vom 2026-10-23",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-2026-c38cc5881e"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DSA-6577 vom 2026-10-22",
+        "url": "https://security-tracker.debian.org/tracker/DSA-6577-1"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-11316455F2 vom 2026-10-23",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-11316455f2"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Mehrere Schwachstellen",
+    "title": "Google Chrome / Microsoft Edge: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-10-20T22:00:00.000+00:00",
+      "current_release_date": "2026-10-22T22:00:00.000+00:00",
       "generator": {
-        "date": "2026-10-21T11:27:19.024+00:00",
+        "date": "2026-10-23T09:15:56.332+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.6.0"
@@ -74,14 +104,53 @@
           "date": "2026-10-20T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-10-22T22:00:00.000+00:00",
+          "number": "2",
+          "summary": "Edge Update aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Debian Linux",
+            "product": {
+              "name": "Debian Linux",
+              "product_id": "2951",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:debian:debian_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Fedora Linux",
+            "product": {
+              "name": "Fedora Linux",
+              "product_id": "74178",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:fedoraproject:fedora:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
       {
         "branches": [
           {
@@ -131,6 +200,37 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<156.0.4314.42",
+                "product": {
+                  "name": "Microsoft Edge <156.0.4314.42",
+                  "product_id": "T061744"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "156.0.4314.42",
+                "product": {
+                  "name": "Microsoft Edge 156.0.4314.42",
+                  "product_id": "T061744-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:156.0.4314.42"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
       }
     ]
   },
@@ -139,8 +239,11 @@
       "cve": "CVE-2026-112992",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -150,8 +253,11 @@
       "cve": "CVE-2026-112993",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -161,8 +267,11 @@
       "cve": "CVE-2026-112994",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -172,8 +281,11 @@
       "cve": "CVE-2026-112995",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -183,8 +295,11 @@
       "cve": "CVE-2026-112996",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -194,8 +309,11 @@
       "cve": "CVE-2026-112997",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -205,8 +323,11 @@
       "cve": "CVE-2026-112998",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -216,8 +337,11 @@
       "cve": "CVE-2026-112999",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -227,8 +351,11 @@
       "cve": "CVE-2026-113000",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -238,8 +365,11 @@
       "cve": "CVE-2026-113001",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -249,8 +379,11 @@
       "cve": "CVE-2026-113002",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -260,8 +393,11 @@
       "cve": "CVE-2026-113003",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -271,8 +407,11 @@
       "cve": "CVE-2026-113004",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -282,8 +421,11 @@
       "cve": "CVE-2026-113005",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -293,8 +435,11 @@
       "cve": "CVE-2026-113006",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -304,8 +449,11 @@
       "cve": "CVE-2026-113007",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -315,8 +463,11 @@
       "cve": "CVE-2026-113008",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -326,8 +477,11 @@
       "cve": "CVE-2026-113009",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -337,8 +491,11 @@
       "cve": "CVE-2026-113010",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -348,8 +505,11 @@
       "cve": "CVE-2026-113011",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -359,8 +519,11 @@
       "cve": "CVE-2026-113012",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -370,8 +533,11 @@
       "cve": "CVE-2026-113013",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -381,8 +547,11 @@
       "cve": "CVE-2026-113014",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -392,8 +561,11 @@
       "cve": "CVE-2026-113015",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -403,8 +575,11 @@
       "cve": "CVE-2026-113016",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -414,8 +589,11 @@
       "cve": "CVE-2026-113017",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -425,8 +603,11 @@
       "cve": "CVE-2026-113018",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -436,8 +617,11 @@
       "cve": "CVE-2026-113019",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -447,8 +631,11 @@
       "cve": "CVE-2026-113020",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -458,8 +645,11 @@
       "cve": "CVE-2026-113021",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -469,8 +659,11 @@
       "cve": "CVE-2026-113022",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -480,8 +673,11 @@
       "cve": "CVE-2026-113023",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -491,8 +687,11 @@
       "cve": "CVE-2026-113024",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -502,8 +701,11 @@
       "cve": "CVE-2026-113025",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -513,8 +715,11 @@
       "cve": "CVE-2026-113026",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -524,8 +729,11 @@
       "cve": "CVE-2026-113027",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -535,8 +743,11 @@
       "cve": "CVE-2026-113028",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -546,8 +757,11 @@
       "cve": "CVE-2026-113029",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -557,8 +771,11 @@
       "cve": "CVE-2026-113030",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -568,8 +785,11 @@
       "cve": "CVE-2026-113031",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -579,8 +799,11 @@
       "cve": "CVE-2026-113032",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -590,8 +813,11 @@
       "cve": "CVE-2026-113033",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -601,8 +827,11 @@
       "cve": "CVE-2026-113034",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -612,8 +841,11 @@
       "cve": "CVE-2026-113035",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -623,8 +855,11 @@
       "cve": "CVE-2026-113036",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -634,8 +869,11 @@
       "cve": "CVE-2026-113037",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -645,8 +883,11 @@
       "cve": "CVE-2026-113038",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -656,8 +897,11 @@
       "cve": "CVE-2026-113039",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -667,8 +911,11 @@
       "cve": "CVE-2026-113040",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -678,8 +925,11 @@
       "cve": "CVE-2026-113041",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -689,8 +939,11 @@
       "cve": "CVE-2026-113042",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -700,8 +953,11 @@
       "cve": "CVE-2026-113043",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -711,8 +967,11 @@
       "cve": "CVE-2026-113044",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -722,8 +981,11 @@
       "cve": "CVE-2026-113045",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -733,8 +995,11 @@
       "cve": "CVE-2026-113046",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -744,8 +1009,11 @@
       "cve": "CVE-2026-113047",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -755,8 +1023,11 @@
       "cve": "CVE-2026-113048",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -766,8 +1037,11 @@
       "cve": "CVE-2026-113049",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -777,8 +1051,11 @@
       "cve": "CVE-2026-113050",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -788,8 +1065,11 @@
       "cve": "CVE-2026-113051",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -799,8 +1079,11 @@
       "cve": "CVE-2026-113052",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -810,8 +1093,11 @@
       "cve": "CVE-2026-113053",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -821,8 +1107,11 @@
       "cve": "CVE-2026-113054",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -832,8 +1121,11 @@
       "cve": "CVE-2026-113055",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -843,8 +1135,11 @@
       "cve": "CVE-2026-113056",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -854,8 +1149,11 @@
       "cve": "CVE-2026-113057",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -865,8 +1163,11 @@
       "cve": "CVE-2026-113058",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -876,8 +1177,11 @@
       "cve": "CVE-2026-113059",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -887,8 +1191,11 @@
       "cve": "CVE-2026-113060",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -898,8 +1205,11 @@
       "cve": "CVE-2026-113061",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -909,8 +1219,11 @@
       "cve": "CVE-2026-113062",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -920,8 +1233,11 @@
       "cve": "CVE-2026-113063",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -931,8 +1247,11 @@
       "cve": "CVE-2026-113064",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -942,8 +1261,11 @@
       "cve": "CVE-2026-113065",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -953,8 +1275,11 @@
       "cve": "CVE-2026-113066",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -964,8 +1289,11 @@
       "cve": "CVE-2026-113067",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -975,8 +1303,11 @@
       "cve": "CVE-2026-113068",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -986,8 +1317,11 @@
       "cve": "CVE-2026-113069",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -997,8 +1331,11 @@
       "cve": "CVE-2026-113070",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1008,8 +1345,11 @@
       "cve": "CVE-2026-113071",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1019,8 +1359,11 @@
       "cve": "CVE-2026-113072",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1030,8 +1373,11 @@
       "cve": "CVE-2026-113073",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1041,8 +1387,11 @@
       "cve": "CVE-2026-113074",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1052,8 +1401,11 @@
       "cve": "CVE-2026-113075",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1063,8 +1415,11 @@
       "cve": "CVE-2026-113076",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1074,8 +1429,11 @@
       "cve": "CVE-2026-113077",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1085,8 +1443,11 @@
       "cve": "CVE-2026-113078",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1096,8 +1457,11 @@
       "cve": "CVE-2026-113079",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1107,8 +1471,11 @@
       "cve": "CVE-2026-113080",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1118,8 +1485,11 @@
       "cve": "CVE-2026-113081",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1129,8 +1499,11 @@
       "cve": "CVE-2026-113082",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1140,8 +1513,11 @@
       "cve": "CVE-2026-113083",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1151,8 +1527,11 @@
       "cve": "CVE-2026-113084",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1162,8 +1541,11 @@
       "cve": "CVE-2026-113085",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1173,8 +1555,11 @@
       "cve": "CVE-2026-113086",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1184,8 +1569,11 @@
       "cve": "CVE-2026-113087",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1195,8 +1583,11 @@
       "cve": "CVE-2026-113088",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1206,8 +1597,11 @@
       "cve": "CVE-2026-113089",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1217,8 +1611,11 @@
       "cve": "CVE-2026-113090",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1228,8 +1625,11 @@
       "cve": "CVE-2026-113091",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1239,8 +1639,11 @@
       "cve": "CVE-2026-113092",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1250,8 +1653,11 @@
       "cve": "CVE-2026-113093",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1261,8 +1667,11 @@
       "cve": "CVE-2026-113094",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1272,8 +1681,11 @@
       "cve": "CVE-2026-113095",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1283,8 +1695,11 @@
       "cve": "CVE-2026-113096",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1294,8 +1709,11 @@
       "cve": "CVE-2026-113097",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1305,8 +1723,11 @@
       "cve": "CVE-2026-113098",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1316,8 +1737,11 @@
       "cve": "CVE-2026-113099",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1327,8 +1751,11 @@
       "cve": "CVE-2026-113100",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1338,8 +1765,11 @@
       "cve": "CVE-2026-113101",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1349,8 +1779,11 @@
       "cve": "CVE-2026-113102",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1360,8 +1793,11 @@
       "cve": "CVE-2026-113103",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1371,8 +1807,11 @@
       "cve": "CVE-2026-113104",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1382,8 +1821,11 @@
       "cve": "CVE-2026-113105",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1393,8 +1835,11 @@
       "cve": "CVE-2026-113106",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1404,8 +1849,11 @@
       "cve": "CVE-2026-113107",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1415,8 +1863,11 @@
       "cve": "CVE-2026-113108",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1426,8 +1877,11 @@
       "cve": "CVE-2026-113109",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1437,8 +1891,11 @@
       "cve": "CVE-2026-113110",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1448,8 +1905,11 @@
       "cve": "CVE-2026-113111",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1459,8 +1919,11 @@
       "cve": "CVE-2026-113112",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1470,8 +1933,11 @@
       "cve": "CVE-2026-113113",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1481,8 +1947,11 @@
       "cve": "CVE-2026-113114",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1492,8 +1961,11 @@
       "cve": "CVE-2026-113115",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1503,8 +1975,11 @@
       "cve": "CVE-2026-113116",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1514,8 +1989,11 @@
       "cve": "CVE-2026-113117",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1525,8 +2003,11 @@
       "cve": "CVE-2026-113118",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1536,8 +2017,11 @@
       "cve": "CVE-2026-113119",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1547,8 +2031,11 @@
       "cve": "CVE-2026-113120",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1558,8 +2045,11 @@
       "cve": "CVE-2026-113121",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1569,8 +2059,11 @@
       "cve": "CVE-2026-113122",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1580,8 +2073,11 @@
       "cve": "CVE-2026-113123",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1591,8 +2087,11 @@
       "cve": "CVE-2026-113124",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1602,8 +2101,11 @@
       "cve": "CVE-2026-113125",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1613,8 +2115,11 @@
       "cve": "CVE-2026-113126",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1624,8 +2129,11 @@
       "cve": "CVE-2026-113127",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1635,8 +2143,11 @@
       "cve": "CVE-2026-113128",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1646,8 +2157,11 @@
       "cve": "CVE-2026-113129",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1657,8 +2171,11 @@
       "cve": "CVE-2026-113130",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1668,8 +2185,11 @@
       "cve": "CVE-2026-113131",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1679,8 +2199,11 @@
       "cve": "CVE-2026-113132",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1690,8 +2213,11 @@
       "cve": "CVE-2026-113133",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1701,8 +2227,11 @@
       "cve": "CVE-2026-113134",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1712,8 +2241,11 @@
       "cve": "CVE-2026-113135",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1723,8 +2255,11 @@
       "cve": "CVE-2026-113136",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1734,8 +2269,11 @@
       "cve": "CVE-2026-113137",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1745,8 +2283,11 @@
       "cve": "CVE-2026-113138",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1756,8 +2297,11 @@
       "cve": "CVE-2026-113139",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1767,8 +2311,11 @@
       "cve": "CVE-2026-113140",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1778,8 +2325,11 @@
       "cve": "CVE-2026-113141",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1789,8 +2339,11 @@
       "cve": "CVE-2026-113142",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1800,8 +2353,11 @@
       "cve": "CVE-2026-113143",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1811,8 +2367,11 @@
       "cve": "CVE-2026-113144",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1822,8 +2381,11 @@
       "cve": "CVE-2026-113145",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1833,8 +2395,11 @@
       "cve": "CVE-2026-113146",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1844,8 +2409,11 @@
       "cve": "CVE-2026-113147",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1855,8 +2423,11 @@
       "cve": "CVE-2026-113148",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1866,8 +2437,11 @@
       "cve": "CVE-2026-113149",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1877,8 +2451,11 @@
       "cve": "CVE-2026-113150",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1888,8 +2465,11 @@
       "cve": "CVE-2026-113151",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1899,8 +2479,11 @@
       "cve": "CVE-2026-113152",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1910,8 +2493,11 @@
       "cve": "CVE-2026-113153",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1921,8 +2507,11 @@
       "cve": "CVE-2026-113154",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1932,8 +2521,11 @@
       "cve": "CVE-2026-113155",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1943,8 +2535,11 @@
       "cve": "CVE-2026-113156",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1954,8 +2549,11 @@
       "cve": "CVE-2026-113157",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1965,8 +2563,11 @@
       "cve": "CVE-2026-113158",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1976,8 +2577,11 @@
       "cve": "CVE-2026-113159",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1987,8 +2591,11 @@
       "cve": "CVE-2026-113160",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -1998,8 +2605,11 @@
       "cve": "CVE-2026-113161",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2009,8 +2619,11 @@
       "cve": "CVE-2026-113162",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2020,8 +2633,11 @@
       "cve": "CVE-2026-113163",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2031,8 +2647,11 @@
       "cve": "CVE-2026-113164",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2042,8 +2661,11 @@
       "cve": "CVE-2026-113165",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2053,8 +2675,11 @@
       "cve": "CVE-2026-113166",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2064,8 +2689,11 @@
       "cve": "CVE-2026-113167",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2075,8 +2703,11 @@
       "cve": "CVE-2026-113168",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2086,8 +2717,11 @@
       "cve": "CVE-2026-113169",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2097,8 +2731,11 @@
       "cve": "CVE-2026-113170",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2108,8 +2745,11 @@
       "cve": "CVE-2026-113171",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2119,8 +2759,11 @@
       "cve": "CVE-2026-113172",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2130,8 +2773,11 @@
       "cve": "CVE-2026-113173",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2141,8 +2787,11 @@
       "cve": "CVE-2026-113174",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2152,8 +2801,11 @@
       "cve": "CVE-2026-113175",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2163,8 +2815,11 @@
       "cve": "CVE-2026-113176",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2174,8 +2829,11 @@
       "cve": "CVE-2026-113177",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2185,8 +2843,11 @@
       "cve": "CVE-2026-113178",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2196,8 +2857,11 @@
       "cve": "CVE-2026-113179",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2207,8 +2871,11 @@
       "cve": "CVE-2026-113180",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2218,8 +2885,11 @@
       "cve": "CVE-2026-113181",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2229,8 +2899,11 @@
       "cve": "CVE-2026-113182",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2240,8 +2913,11 @@
       "cve": "CVE-2026-113183",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2251,8 +2927,11 @@
       "cve": "CVE-2026-113184",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2262,8 +2941,11 @@
       "cve": "CVE-2026-113185",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2273,8 +2955,11 @@
       "cve": "CVE-2026-113186",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2284,8 +2969,11 @@
       "cve": "CVE-2026-113187",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2295,8 +2983,11 @@
       "cve": "CVE-2026-113188",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2306,8 +2997,11 @@
       "cve": "CVE-2026-113189",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2317,8 +3011,11 @@
       "cve": "CVE-2026-113190",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2328,8 +3025,11 @@
       "cve": "CVE-2026-113191",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2339,8 +3039,11 @@
       "cve": "CVE-2026-113192",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2350,8 +3053,11 @@
       "cve": "CVE-2026-113193",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2361,8 +3067,11 @@
       "cve": "CVE-2026-113194",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2372,8 +3081,11 @@
       "cve": "CVE-2026-113195",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2383,8 +3095,11 @@
       "cve": "CVE-2026-113196",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2394,8 +3109,11 @@
       "cve": "CVE-2026-113197",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2405,8 +3123,11 @@
       "cve": "CVE-2026-113198",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2416,8 +3137,11 @@
       "cve": "CVE-2026-113199",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2427,8 +3151,11 @@
       "cve": "CVE-2026-113200",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2438,8 +3165,11 @@
       "cve": "CVE-2026-113201",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2449,8 +3179,11 @@
       "cve": "CVE-2026-113202",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2460,8 +3193,11 @@
       "cve": "CVE-2026-113203",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2471,8 +3207,11 @@
       "cve": "CVE-2026-113204",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2482,8 +3221,11 @@
       "cve": "CVE-2026-113205",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2493,8 +3235,11 @@
       "cve": "CVE-2026-113206",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2504,8 +3249,11 @@
       "cve": "CVE-2026-113207",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2515,8 +3263,11 @@
       "cve": "CVE-2026-113208",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2526,8 +3277,11 @@
       "cve": "CVE-2026-113209",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2537,8 +3291,11 @@
       "cve": "CVE-2026-113210",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2548,8 +3305,11 @@
       "cve": "CVE-2026-113211",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2559,8 +3319,11 @@
       "cve": "CVE-2026-113212",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2570,8 +3333,11 @@
       "cve": "CVE-2026-113213",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2581,8 +3347,11 @@
       "cve": "CVE-2026-113214",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2592,8 +3361,11 @@
       "cve": "CVE-2026-113215",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2603,8 +3375,11 @@
       "cve": "CVE-2026-113216",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2614,8 +3389,11 @@
       "cve": "CVE-2026-113217",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2625,8 +3403,11 @@
       "cve": "CVE-2026-113218",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2636,8 +3417,11 @@
       "cve": "CVE-2026-113219",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2647,8 +3431,11 @@
       "cve": "CVE-2026-113220",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2658,8 +3445,11 @@
       "cve": "CVE-2026-113221",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2669,8 +3459,11 @@
       "cve": "CVE-2026-113222",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2680,8 +3473,11 @@
       "cve": "CVE-2026-113223",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2691,8 +3487,11 @@
       "cve": "CVE-2026-113224",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2702,8 +3501,11 @@
       "cve": "CVE-2026-113225",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2713,8 +3515,11 @@
       "cve": "CVE-2026-113226",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2724,8 +3529,11 @@
       "cve": "CVE-2026-113227",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2735,8 +3543,11 @@
       "cve": "CVE-2026-113228",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2746,8 +3557,11 @@
       "cve": "CVE-2026-113229",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2757,8 +3571,11 @@
       "cve": "CVE-2026-113230",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2768,8 +3585,11 @@
       "cve": "CVE-2026-113231",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2779,8 +3599,11 @@
       "cve": "CVE-2026-113232",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2790,8 +3613,11 @@
       "cve": "CVE-2026-113233",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2801,8 +3627,11 @@
       "cve": "CVE-2026-113234",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2812,8 +3641,11 @@
       "cve": "CVE-2026-113235",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2823,8 +3655,11 @@
       "cve": "CVE-2026-113236",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2834,8 +3669,11 @@
       "cve": "CVE-2026-113237",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2845,8 +3683,11 @@
       "cve": "CVE-2026-113238",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2856,8 +3697,11 @@
       "cve": "CVE-2026-113239",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2867,8 +3711,11 @@
       "cve": "CVE-2026-113240",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2878,8 +3725,11 @@
       "cve": "CVE-2026-113241",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2889,8 +3739,11 @@
       "cve": "CVE-2026-113242",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2900,8 +3753,11 @@
       "cve": "CVE-2026-113243",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2911,8 +3767,11 @@
       "cve": "CVE-2026-113244",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2922,8 +3781,11 @@
       "cve": "CVE-2026-113245",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2933,8 +3795,11 @@
       "cve": "CVE-2026-113246",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2944,8 +3809,11 @@
       "cve": "CVE-2026-113247",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2955,8 +3823,11 @@
       "cve": "CVE-2026-113248",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2966,8 +3837,11 @@
       "cve": "CVE-2026-113249",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2977,8 +3851,11 @@
       "cve": "CVE-2026-113250",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2988,8 +3865,11 @@
       "cve": "CVE-2026-113251",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -2999,8 +3879,11 @@
       "cve": "CVE-2026-113252",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3010,8 +3893,11 @@
       "cve": "CVE-2026-113253",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3021,8 +3907,11 @@
       "cve": "CVE-2026-113254",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3032,8 +3921,11 @@
       "cve": "CVE-2026-113255",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3043,8 +3935,11 @@
       "cve": "CVE-2026-113256",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3054,8 +3949,11 @@
       "cve": "CVE-2026-113257",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3065,8 +3963,11 @@
       "cve": "CVE-2026-113258",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3076,8 +3977,11 @@
       "cve": "CVE-2026-113259",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3087,8 +3991,11 @@
       "cve": "CVE-2026-113260",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3098,8 +4005,11 @@
       "cve": "CVE-2026-113261",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3109,8 +4019,11 @@
       "cve": "CVE-2026-113262",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3120,8 +4033,11 @@
       "cve": "CVE-2026-113263",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3131,8 +4047,11 @@
       "cve": "CVE-2026-113264",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3142,8 +4061,11 @@
       "cve": "CVE-2026-113265",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3153,8 +4075,11 @@
       "cve": "CVE-2026-113266",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3164,8 +4089,11 @@
       "cve": "CVE-2026-113267",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3175,8 +4103,11 @@
       "cve": "CVE-2026-113268",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3186,8 +4117,11 @@
       "cve": "CVE-2026-113269",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3197,8 +4131,11 @@
       "cve": "CVE-2026-113270",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3208,8 +4145,11 @@
       "cve": "CVE-2026-113271",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3219,8 +4159,11 @@
       "cve": "CVE-2026-113272",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3230,8 +4173,11 @@
       "cve": "CVE-2026-113273",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3241,8 +4187,11 @@
       "cve": "CVE-2026-113274",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3252,8 +4201,11 @@
       "cve": "CVE-2026-113275",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3263,8 +4215,11 @@
       "cve": "CVE-2026-113276",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3274,8 +4229,11 @@
       "cve": "CVE-2026-113277",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3285,8 +4243,11 @@
       "cve": "CVE-2026-113278",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3296,8 +4257,11 @@
       "cve": "CVE-2026-113279",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3307,8 +4271,11 @@
       "cve": "CVE-2026-113280",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3318,8 +4285,11 @@
       "cve": "CVE-2026-113281",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3329,8 +4299,11 @@
       "cve": "CVE-2026-113282",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3340,8 +4313,11 @@
       "cve": "CVE-2026-113283",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3351,8 +4327,11 @@
       "cve": "CVE-2026-113284",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3362,8 +4341,11 @@
       "cve": "CVE-2026-113285",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3373,8 +4355,11 @@
       "cve": "CVE-2026-113286",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3384,8 +4369,11 @@
       "cve": "CVE-2026-113287",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3395,8 +4383,11 @@
       "cve": "CVE-2026-113288",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3406,8 +4397,11 @@
       "cve": "CVE-2026-113289",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3417,8 +4411,11 @@
       "cve": "CVE-2026-113290",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3428,8 +4425,11 @@
       "cve": "CVE-2026-113291",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3439,8 +4439,11 @@
       "cve": "CVE-2026-113292",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3450,8 +4453,11 @@
       "cve": "CVE-2026-113293",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3461,8 +4467,11 @@
       "cve": "CVE-2026-113294",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3472,8 +4481,11 @@
       "cve": "CVE-2026-113295",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3483,8 +4495,11 @@
       "cve": "CVE-2026-113296",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3494,8 +4509,11 @@
       "cve": "CVE-2026-113297",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3505,8 +4523,11 @@
       "cve": "CVE-2026-113298",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3516,8 +4537,11 @@
       "cve": "CVE-2026-113299",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3527,8 +4551,11 @@
       "cve": "CVE-2026-113300",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3538,8 +4565,11 @@
       "cve": "CVE-2026-113301",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3549,8 +4579,11 @@
       "cve": "CVE-2026-113302",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3560,8 +4593,11 @@
       "cve": "CVE-2026-113303",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3571,8 +4607,11 @@
       "cve": "CVE-2026-113304",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3582,8 +4621,11 @@
       "cve": "CVE-2026-113305",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3593,8 +4635,11 @@
       "cve": "CVE-2026-113306",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3604,8 +4649,11 @@
       "cve": "CVE-2026-113307",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3615,8 +4663,11 @@
       "cve": "CVE-2026-113308",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3626,8 +4677,11 @@
       "cve": "CVE-2026-113309",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3637,8 +4691,11 @@
       "cve": "CVE-2026-113310",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3648,8 +4705,11 @@
       "cve": "CVE-2026-113311",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3659,8 +4719,11 @@
       "cve": "CVE-2026-113312",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3670,8 +4733,11 @@
       "cve": "CVE-2026-113313",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3681,8 +4747,11 @@
       "cve": "CVE-2026-113314",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3692,8 +4761,11 @@
       "cve": "CVE-2026-113315",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3703,8 +4775,11 @@
       "cve": "CVE-2026-113316",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3714,8 +4789,11 @@
       "cve": "CVE-2026-113317",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3725,8 +4803,11 @@
       "cve": "CVE-2026-113318",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3736,8 +4817,11 @@
       "cve": "CVE-2026-113319",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3747,8 +4831,11 @@
       "cve": "CVE-2026-113320",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3758,8 +4845,11 @@
       "cve": "CVE-2026-113321",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3769,8 +4859,11 @@
       "cve": "CVE-2026-113322",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3780,8 +4873,11 @@
       "cve": "CVE-2026-113323",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3791,8 +4887,11 @@
       "cve": "CVE-2026-113324",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3802,8 +4901,11 @@
       "cve": "CVE-2026-113325",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3813,8 +4915,11 @@
       "cve": "CVE-2026-113326",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3824,8 +4929,11 @@
       "cve": "CVE-2026-113327",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3835,8 +4943,11 @@
       "cve": "CVE-2026-113328",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3846,8 +4957,11 @@
       "cve": "CVE-2026-113329",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3857,8 +4971,11 @@
       "cve": "CVE-2026-113330",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3868,8 +4985,11 @@
       "cve": "CVE-2026-113331",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3879,8 +4999,11 @@
       "cve": "CVE-2026-113332",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3890,8 +5013,11 @@
       "cve": "CVE-2026-113333",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3901,8 +5027,11 @@
       "cve": "CVE-2026-113334",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3912,8 +5041,11 @@
       "cve": "CVE-2026-113335",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3923,8 +5055,11 @@
       "cve": "CVE-2026-113336",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3934,8 +5069,11 @@
       "cve": "CVE-2026-113337",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3945,8 +5083,11 @@
       "cve": "CVE-2026-113338",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3956,8 +5097,11 @@
       "cve": "CVE-2026-113339",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3967,8 +5111,11 @@
       "cve": "CVE-2026-113340",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3978,8 +5125,11 @@
       "cve": "CVE-2026-113341",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -3989,8 +5139,11 @@
       "cve": "CVE-2026-113342",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -4000,8 +5153,11 @@
       "cve": "CVE-2026-113343",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
@@ -4011,8 +5167,11 @@
       "cve": "CVE-2026-113344",
       "product_status": {
         "known_affected": [
+          "2951",
           "T061568",
-          "T061569"
+          "T061744",
+          "T061569",
+          "74178"
         ]
       },
       "release_date": "2026-10-20T22:00:00.000+00:00",
