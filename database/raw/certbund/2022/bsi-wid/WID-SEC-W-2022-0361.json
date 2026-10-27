@@ -29,7 +29,7 @@
       },
       {
         "category": "general",
-        "text": "- UNIX\n- Linux\n- Windows\n- Sonstiges",
+        "text": "- Linux\n- Sonstiges\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -52,13 +52,13 @@
       },
       {
         "category": "external",
-        "summary": "Spring Blog vom 2022-05-10",
-        "url": "https://spring.io/blog/2022/05/11/spring-framework-5-3-20-and-5-2-22-available-now"
+        "summary": "NetApp Security Advisory NTAP-20220616-0006 vom 2022-06-16",
+        "url": "https://security.netapp.com/advisory/ntap-20220616-0006/"
       },
       {
         "category": "external",
-        "summary": "NetApp Security Advisory NTAP-20220616-0006 vom 2022-06-16",
-        "url": "https://security.netapp.com/advisory/ntap-20220616-0006/"
+        "summary": "Spring Blog vom 2022-05-10",
+        "url": "https://spring.io/blog/2022/05/11/spring-framework-5-3-20-and-5-2-22-available-now"
       },
       {
         "category": "external",
@@ -69,17 +69,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7144861 vom 2024-03-20",
         "url": "https://www.ibm.com/support/pages/node/7144861"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7293838 vom 2026-10-23",
+        "url": "https://www.ibm.com/support/pages/node/7293838"
       }
     ],
     "source_lang": "en-US",
     "title": "VMware Tanzu Spring Framework: Mehrere Schwachstellen ermöglichen Denial of Service",
     "tracking": {
-      "current_release_date": "2024-03-20T23:00:00.000+00:00",
+      "current_release_date": "2026-10-25T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:28:44.906+00:00",
+        "date": "2026-10-26T12:29:45.214+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.6.0"
         }
       },
       "id": "WID-SEC-W-2022-0361",
@@ -109,16 +114,38 @@
           "date": "2024-03-20T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-10-25T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von IBM aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
     "branches": [
       {
         "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "Collaboration and Deployment Services",
+                "product": {
+                  "name": "IBM SPSS Collaboration and Deployment Services",
+                  "product_id": "T037766",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:spss:collaboration_and_deployment_services"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SPSS"
+          },
           {
             "branches": [
               {
@@ -146,10 +173,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 7.42.1",
+                "name": "<7.42.1",
                 "product": {
-                  "name": "JFrog Artifactory < 7.42.1",
+                  "name": "JFrog Artifactory <7.42.1",
                   "product_id": "T024614"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.42.1",
+                "product": {
+                  "name": "JFrog Artifactory 7.42.1",
+                  "product_id": "T024614-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:jfrog:artifactory:7.42.1"
+                  }
                 }
               }
             ],
@@ -183,18 +221,40 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "< 5.3.20",
+                "name": "<5.3.20",
                 "product": {
-                  "name": "VMware Tanzu Spring Framework < 5.3.20",
+                  "name": "VMware Tanzu Spring Framework <5.3.20",
                   "product_id": "T023178"
                 }
               },
               {
-                "category": "product_version_range",
-                "name": "< 5.2.22",
+                "category": "product_version",
+                "name": "5.3.20",
                 "product": {
-                  "name": "VMware Tanzu Spring Framework < 5.2.22",
+                  "name": "VMware Tanzu Spring Framework 5.3.20",
+                  "product_id": "T023178-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:vmware_tanzu:spring_framework:5.3.20"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<5.2.22",
+                "product": {
+                  "name": "VMware Tanzu Spring Framework <5.2.22",
                   "product_id": "T023179"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "5.2.22",
+                "product": {
+                  "name": "VMware Tanzu Spring Framework 5.2.22",
+                  "product_id": "T023179-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:vmware_tanzu:spring_framework:5.2.22"
+                  }
                 }
               }
             ],
@@ -210,16 +270,13 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2022-22970",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In VMware Tanzu Spring Framework existieren mehrere Schwachstellen. Diese können in Spring MVC- oder Spring WebFlux-Anwendungen oder mit STOMP über WebSocket ausgenutzt werden. Ein authentisierter Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024614",
+          "T023178",
+          "T023179",
           "T015895",
+          "T037766",
           "T016960"
         ]
       },
@@ -228,16 +285,13 @@
     },
     {
       "cve": "CVE-2022-22971",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In VMware Tanzu Spring Framework existieren mehrere Schwachstellen. Diese können in Spring MVC- oder Spring WebFlux-Anwendungen oder mit STOMP über WebSocket ausgenutzt werden. Ein authentisierter Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T024614",
+          "T023178",
+          "T023179",
           "T015895",
+          "T037766",
           "T016960"
         ]
       },
