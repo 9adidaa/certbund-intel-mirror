@@ -1,7 +1,7 @@
 {
   "document": {
     "aggregate_severity": {
-      "text": "mittel"
+      "text": "kritisch"
     },
     "category": "csaf_base",
     "csaf_version": "2.0",
@@ -184,14 +184,69 @@
         "category": "external",
         "summary": "Palo Alto Security Advisory",
         "url": "https://security.paloaltonetworks.com/CVE-2026-111497"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit CVE-2026-111497",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:89206 vom 2026-10-28",
+        "url": "https://access.redhat.com/errata/RHSA-2026:89206"
+      },
+      {
+        "category": "external",
+        "summary": "National Vulnerability Database CVE-2026-28330 vom 2026-10-27",
+        "url": "https://documentation.solarwinds.com/en/success_center/orionplatform/content/release_notes/solarwinds_platform_2026-4-1_release_notes.htm"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:90893 vom 2026-10-28",
+        "url": "https://access.redhat.com/errata/RHSA-2026:90893"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:90914 vom 2026-10-27",
+        "url": "https://access.redhat.com/errata/RHSA-2026:90914"
+      },
+      {
+        "category": "external",
+        "summary": "VMware Security Advisory VMSA-2026-0008 vom 2026-10-28",
+        "url": "https://app.sw.broadcom.com/e/er?utm_content=VCF_FY26_VCF_VMSA-2026-0008_6932_SecurityAlert_MKT_TRANS_EM_14419&s=3805888&lid=15186&elqTrackId=694685E6DA8205B11F1CE8D2643AF3F4&elq=52cf0ef17e344c04a8ca0714bf95a772&elqaid=14419&elqat=1&elqak=8AF5120EAAFB11729B015FB40A016A9CD159ABE36BB05B3C2B383233A22C02602D8E"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:87702 vom 2026-10-28",
+        "url": "https://access.redhat.com/errata/RHSA-2026:87702"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-90449 vom 2026-10-27",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-90449.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:90888 vom 2026-10-28",
+        "url": "https://access.redhat.com/errata/RHSA-2026:90888"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:90892 vom 2026-10-28",
+        "url": "https://access.redhat.com/errata/RHSA-2026:90892"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-90501 vom 2026-10-27",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-90501.html"
       }
     ],
     "source_lang": "en-US",
     "title": "Node.js: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-10-26T23:00:00.000+00:00",
+      "current_release_date": "2026-10-27T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-10-27T12:16:33.561+00:00",
+        "date": "2026-10-28T12:41:50.814+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -219,10 +274,15 @@
           "date": "2026-10-26T23:00:00.000+00:00",
           "number": "4",
           "summary": "Neue Updates von Oracle Linux, Red Hat, Fedora und Ubuntu aufgenommen"
+        },
+        {
+          "date": "2026-10-27T23:00:00.000+00:00",
+          "number": "5",
+          "summary": "Exploit aufgenommen CVE-2026-111497, Bewertung angepasst"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -342,17 +402,6 @@
             ],
             "category": "product_name",
             "name": "Node.js"
-          },
-          {
-            "category": "product_name",
-            "name": "Open Source OpenJDK",
-            "product": {
-              "name": "Open Source OpenJDK",
-              "product_id": "T061787",
-              "product_identification_helper": {
-                "cpe": "cpe:/a:oracle:openjdk:-"
-              }
-            }
           }
         ],
         "category": "vendor",
@@ -719,6 +768,37 @@
       {
         "branches": [
           {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2026.4.1",
+                "product": {
+                  "name": "SolarWinds Platform <2026.4.1",
+                  "product_id": "T061942"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2026.4.1",
+                "product": {
+                  "name": "SolarWinds Platform 2026.4.1",
+                  "product_id": "T061942-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:solarwinds:orion_platform:2026.4.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Platform"
+          }
+        ],
+        "category": "vendor",
+        "name": "SolarWinds"
+      },
+      {
+        "branches": [
+          {
             "category": "product_name",
             "name": "Ubuntu Linux",
             "product": {
@@ -732,6 +812,23 @@
         ],
         "category": "vendor",
         "name": "Ubuntu"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "VMware Cloud Foundation",
+            "product": {
+              "name": "VMware Cloud Foundation",
+              "product_id": "T035644",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:vmware:cloud_foundation:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "VMware"
       }
     ]
   },
@@ -741,6 +838,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -762,14 +860,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -780,6 +878,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -801,14 +900,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -819,6 +918,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -840,14 +940,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -858,6 +958,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -879,14 +980,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -897,6 +998,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -918,14 +1020,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -936,6 +1038,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -957,14 +1060,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -975,6 +1078,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -996,14 +1100,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -1014,6 +1118,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -1035,14 +1140,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -1053,6 +1158,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -1074,14 +1180,14 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -1092,6 +1198,7 @@
       "product_status": {
         "known_affected": [
           "T056236",
+          "T061942",
           "67646",
           "T061800",
           "T061801",
@@ -1113,18 +1220,58 @@
           "T061913",
           "T061914",
           "T061915",
+          "T035644",
           "T061799",
           "T061910",
           "T061911",
           "T061912",
           "T052840",
           "2951",
-          "T055947",
-          "T061787"
+          "T055947"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
       "title": "CVE-2026-111497"
+    },
+    {
+      "cve": "CVE-2026-28330",
+      "product_status": {
+        "known_affected": [
+          "T056236",
+          "T061942",
+          "67646",
+          "T061800",
+          "T061801",
+          "T061802",
+          "74178",
+          "T061609",
+          "T061906",
+          "T061907",
+          "T061908",
+          "T061909",
+          "T061795",
+          "T061796",
+          "T061797",
+          "T061610",
+          "T061798",
+          "T061611",
+          "T061793",
+          "T061794",
+          "T061913",
+          "T061914",
+          "T061915",
+          "T035644",
+          "T061799",
+          "T061910",
+          "T061911",
+          "T061912",
+          "T052840",
+          "2951",
+          "T055947"
+        ]
+      },
+      "release_date": "2026-10-21T22:00:00.000+00:00",
+      "title": "CVE-2026-28330"
     }
   ]
 }
