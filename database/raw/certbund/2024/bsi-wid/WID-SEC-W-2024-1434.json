@@ -179,17 +179,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7162077 vom 2024-07-31",
         "url": "https://www.ibm.com/support/pages/node/7162077"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-90492 vom 2026-10-27",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-90492.html"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Enterprise Linux (pki and Libreswan): Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2024-07-31T22:00:00.000+00:00",
+      "current_release_date": "2026-10-27T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:10:28.328+00:00",
+        "date": "2026-10-29T09:06:25.921+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2024-1434",
@@ -259,10 +264,15 @@
           "date": "2024-07-31T22:00:00.000+00:00",
           "number": "13",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-10-27T23:00:00.000+00:00",
+          "number": "14",
+          "summary": "Neue Updates von Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "13"
+      "version": "14"
     }
   },
   "product_tree": {
@@ -294,6 +304,17 @@
                 "product": {
                   "name": "OTRS OTRS SaaS platform <2024-07",
                   "product_id": "T036136"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "SaaS platform 2024-07",
+                "product": {
+                  "name": "OTRS OTRS SaaS platform 2024-07",
+                  "product_id": "T036136-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:otrs:otrs:2024-07::saas_platform"
+                  }
                 }
               }
             ],
@@ -384,11 +405,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "libreswan 4.15",
+                "product": {
+                  "name": "Red Hat Enterprise Linux libreswan 4.15",
+                  "product_id": "T035611-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:libreswan__4.15"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "libreswan <5.0",
                 "product": {
                   "name": "Red Hat Enterprise Linux libreswan <5.0",
                   "product_id": "T035612"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "libreswan 5.0",
+                "product": {
+                  "name": "Red Hat Enterprise Linux libreswan 5.0",
+                  "product_id": "T035612-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/o:redhat:enterprise_linux:libreswan__5.0"
+                  }
                 }
               }
             ],
@@ -404,12 +447,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-4727",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Red Hat Enterprise Linux. Dieser Fehler besteht in den Komponenten dogtag-pki und pki-core aufgrund eines LDAP-Injektionsproblems. Durch Übergabe des Query-String-Parameters sessionID=* kann sich ein Angreifer aus einem angrenzenden Netzwerk mit einer bestehenden, im LDAP-Verzeichnis-Server gespeicherten Sitzung authentifizieren und so Sicherheitsmaßnahmen umgehen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "67646",
@@ -426,14 +463,10 @@
     },
     {
       "cve": "CVE-2024-3652",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Red Hat Enterprise Linux. Dieser Fehler besteht in der Libreswan-Komponente aufgrund eines Assertion-Failure-Problems in der Funktion compute_proto_keymat(), das in bestimmten Szenarien zu einem Absturz und Neustart führt. Ein entfernter authentifizierter Angreifer kann diese Schwachstelle ausnutzen, um einen Denial-of-Service-Zustand zu verursachen."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T035612",
+          "T035611",
           "67646",
           "T036136",
           "398363",
