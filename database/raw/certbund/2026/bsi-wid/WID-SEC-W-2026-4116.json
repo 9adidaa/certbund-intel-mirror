@@ -79,17 +79,37 @@
         "category": "external",
         "summary": "Amazon Linux Security Advisory ALAS2-2026-4038 vom 2026-10-25",
         "url": "https://alas.aws.amazon.com/AL2/ALAS2-2026-4038.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:92419 vom 2026-10-30",
+        "url": "https://access.redhat.com/errata/RHSA-2026:92419"
+      },
+      {
+        "category": "external",
+        "summary": "NetApp Security Advisory NTAP-20261030-0018 vom 2026-10-30",
+        "url": "https://security.netapp.com/advisory/NTAP-20261030-0018"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-92419 vom 2026-10-30",
+        "url": "http://linux.oracle.com/errata/ELSA-2026-92419.html"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:92419 vom 2026-10-30",
+        "url": "https://errata.build.resf.org/RLSA-2026:92419"
       }
     ],
     "source_lang": "en-US",
     "title": "Internet Systems Consortium BIND: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-10-25T23:00:00.000+00:00",
+      "current_release_date": "2026-10-29T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-10-26T07:19:21.781+00:00",
+        "date": "2026-10-30T14:48:27.278+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.6.0"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2026-4116",
@@ -104,10 +124,15 @@
           "date": "2026-10-25T23:00:00.000+00:00",
           "number": "2",
           "summary": "Neue Updates von Amazon aufgenommen"
+        },
+        {
+          "date": "2026-10-29T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Neue Updates von Red Hat, NetApp und Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -230,6 +255,96 @@
         ],
         "category": "vendor",
         "name": "Internet Systems Consortium"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "NetApp AFF",
+            "product": {
+              "name": "NetApp AFF",
+              "product_id": "T027702",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:netapp:aff:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "NetApp Data ONTAP",
+            "product": {
+              "name": "NetApp Data ONTAP",
+              "product_id": "T054610",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:netapp:data_ontap:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "NetApp FAS",
+            "product": {
+              "name": "NetApp FAS",
+              "product_id": "T027701",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:netapp:fas:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "NetApp"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T056236",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T054581",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Red Hat Enterprise Linux",
+            "product": {
+              "name": "Red Hat Enterprise Linux",
+              "product_id": "67646",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:redhat:enterprise_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Red Hat"
       }
     ]
   },
@@ -238,12 +353,18 @@
       "cve": "CVE-2026-19630",
       "product_status": {
         "known_affected": [
+          "T056236",
           "T061617",
           "T061618",
           "T061619",
           "2951",
+          "T054581",
+          "67646",
+          "T027702",
+          "T027701",
           "T061620",
-          "398363"
+          "398363",
+          "T054610"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -253,12 +374,18 @@
       "cve": "CVE-2026-96888",
       "product_status": {
         "known_affected": [
+          "T056236",
           "T061617",
           "T061618",
           "T061619",
           "2951",
+          "T054581",
+          "67646",
+          "T027702",
+          "T027701",
           "T061620",
-          "398363"
+          "398363",
+          "T054610"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -268,12 +395,18 @@
       "cve": "CVE-2026-97313",
       "product_status": {
         "known_affected": [
+          "T056236",
           "T061617",
           "T061618",
           "T061619",
           "2951",
+          "T054581",
+          "67646",
+          "T027702",
+          "T027701",
           "T061620",
-          "398363"
+          "398363",
+          "T054610"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
@@ -283,12 +416,18 @@
       "cve": "CVE-2026-94300",
       "product_status": {
         "known_affected": [
+          "T056236",
           "T061617",
           "T061618",
           "T061619",
           "2951",
+          "T054581",
+          "67646",
+          "T027702",
+          "T027701",
           "T061620",
-          "398363"
+          "398363",
+          "T054610"
         ]
       },
       "release_date": "2026-10-21T22:00:00.000+00:00",
