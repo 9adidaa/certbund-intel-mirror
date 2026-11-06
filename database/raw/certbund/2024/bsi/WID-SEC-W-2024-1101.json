@@ -54,17 +54,22 @@
         "category": "external",
         "summary": "Apple Security Advisory vom 2024-05-13",
         "url": "https://support.apple.com/en-us/HT214103"
+      },
+      {
+        "category": "external",
+        "summary": "Exploit CVE-2024-27834",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
       }
     ],
     "source_lang": "en-US",
     "title": "Apple Safari: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
     "tracking": {
-      "current_release_date": "2024-05-13T22:00:00.000+00:00",
+      "current_release_date": "2026-11-04T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:08:49.703+00:00",
+        "date": "2026-11-05T12:09:59.161+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2024-1101",
@@ -74,10 +79,15 @@
           "date": "2024-05-13T22:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-11-04T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Exploit aufgenommen CVE-2024-27834"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -93,6 +103,17 @@
                   "name": "Apple Safari <17.5",
                   "product_id": "T034707"
                 }
+              },
+              {
+                "category": "product_version",
+                "name": "17.5",
+                "product": {
+                  "name": "Apple Safari 17.5",
+                  "product_id": "T034707-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:apple:safari:17.5"
+                  }
+                }
               }
             ],
             "category": "product_name",
@@ -107,12 +128,11 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2024-27834",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es besteht eine Schwachstelle in Apple Safari. Dieser Fehler besteht aufgrund einer unsachgemäßen Authentifizierungsprüfung. Ein lokaler Angreifer mit beliebigen Lese- und Schreibrechten kann diese Schwachstelle ausnutzen, um die Pointer-Authentifizierung zu umgehen."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T034707"
+        ]
+      },
       "release_date": "2024-05-13T22:00:00.000+00:00",
       "title": "CVE-2024-27834"
     }
