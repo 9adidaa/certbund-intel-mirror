@@ -144,12 +144,12 @@
     "source_lang": "en-US",
     "title": "dbus: Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2024-07-18T22:00:00.000+00:00",
+      "current_release_date": "2026-11-05T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T17:52:07.674+00:00",
+        "date": "2026-11-06T12:45:06.075+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2023-1402",
@@ -229,10 +229,15 @@
           "date": "2024-07-18T22:00:00.000+00:00",
           "number": "15",
           "summary": "Neue Updates von Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-11-05T23:00:00.000+00:00",
+          "number": "16",
+          "summary": "Referenz(en) aufgenommen: EUVD-2026-117967"
         }
       ],
       "status": "final",
-      "version": "15"
+      "version": "16"
     }
   },
   "product_tree": {
@@ -301,11 +306,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "OPF RV 23.08",
+                "product": {
+                  "name": "Insyde UEFI Firmware OPF RV 23.08",
+                  "product_id": "T029937-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:insyde:uefi:opf_rv_23.08"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<SPF RV 23.11",
                 "product": {
                   "name": "Insyde UEFI Firmware <SPF RV 23.11",
                   "product_id": "T029938"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "SPF RV 23.11",
+                "product": {
+                  "name": "Insyde UEFI Firmware SPF RV 23.11",
+                  "product_id": "T029938-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:insyde:uefi:spf_rv_23.11"
+                  }
                 }
               }
             ],
@@ -326,6 +353,17 @@
                 "product": {
                   "name": "Meinberg LANTIME <7.08.007",
                   "product_id": "T032435"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "7.08.007",
+                "product": {
+                  "name": "Meinberg LANTIME 7.08.007",
+                  "product_id": "T032435-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/h:meinberg:lantime:7.08.007"
+                  }
                 }
               }
             ],
@@ -366,6 +404,17 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "1.14.8",
+                "product": {
+                  "name": "Open Source dbus 1.14.8",
+                  "product_id": "T028000-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:freedesktop:libdbus:1.14.8"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<1.12.28",
                 "product": {
@@ -374,11 +423,33 @@
                 }
               },
               {
+                "category": "product_version",
+                "name": "1.12.28",
+                "product": {
+                  "name": "Open Source dbus 1.12.28",
+                  "product_id": "T028009-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:freedesktop:libdbus:1.12.28"
+                  }
+                }
+              },
+              {
                 "category": "product_version_range",
                 "name": "<1.15.6",
                 "product": {
                   "name": "Open Source dbus <1.15.6",
                   "product_id": "T028010"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.15.6",
+                "product": {
+                  "name": "Open Source dbus 1.15.6",
+                  "product_id": "T028010-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:freedesktop:libdbus:1.15.6"
+                  }
                 }
               }
             ],
@@ -462,24 +533,21 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2023-34969",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in dbus. Wenn ein privilegierter Benutzer mit Kontrolle über den dbus-Daemon die org.freedesktop.DBus.Monitoring-Schnittstelle verwendet, um den Nachrichtenbusverkehr zu überwachen, kann ein unprivilegierter Benutzer mit der Fähigkeit, sich mit demselben dbus-Daemon zu verbinden, unter bestimmten Umständen einen Absturz des dbus-Daemons durch eine nicht beantwortbare Nachricht verursachen. Ein Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service zu verursachen. Zur erfolgreichen Ausnutzung ist eine Benutzeraktion erforderlich."
-        }
-      ],
       "product_status": {
         "known_affected": [
+          "T028000",
           "T032435",
+          "T028010",
+          "67646",
+          "T004914",
+          "74185",
           "2951",
           "T002207",
           "T029938",
-          "67646",
           "T029937",
           "T000126",
+          "T028009",
           "398363",
-          "T004914",
-          "74185",
           "T026333"
         ]
       },
