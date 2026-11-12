@@ -54,14 +54,24 @@
         "category": "external",
         "summary": "GitHub Security Advisory GHSA-979r-6wfh-gq4h vom 2026-11-02",
         "url": "https://github.com/tianocore/edk2/security/advisories/GHSA-979r-6wfh-gq4h"
+      },
+      {
+        "category": "external",
+        "summary": "Lenovo Security Advisory LEN-231052 vom 2026-11-11",
+        "url": "https://support.lenovo.com/us/en/product_security/LEN-231052"
+      },
+      {
+        "category": "external",
+        "summary": "Dell Security Advisory DSA-2026-333 vom 2026-11-11",
+        "url": "https://www.dell.com/support/kbdoc/de-de/000532159/dsa-2026-333-security-update-for-dell-client-platform-for-multiple-am-pc1-1-d-ryzen-and-ryzen-embedded-integrated-graphics-driver-vulnerabilities"
       }
     ],
     "source_lang": "en-US",
     "title": "TianoCore EDK2: Schwachstelle ermöglicht Codeausführung",
     "tracking": {
-      "current_release_date": "2026-11-02T23:00:00.000+00:00",
+      "current_release_date": "2026-11-10T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-11-03T11:52:35.723+00:00",
+        "date": "2026-11-11T11:27:12.777+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -74,14 +84,64 @@
           "date": "2026-11-02T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-11-10T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von LENOVO und Dell aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Dell Computer",
+            "product": {
+              "name": "Dell Computer",
+              "product_id": "T056167",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:dell:dell_computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Dell"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Lenovo BIOS",
+            "product": {
+              "name": "Lenovo BIOS",
+              "product_id": "T059273",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:lenovo:bios:-"
+              }
+            }
+          },
+          {
+            "category": "product_name",
+            "name": "Lenovo Computer",
+            "product": {
+              "name": "Lenovo Computer",
+              "product_id": "T048897",
+              "product_identification_helper": {
+                "cpe": "cpe:/h:lenovo:computer:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Lenovo"
+      },
       {
         "branches": [
           {
@@ -106,6 +166,9 @@
       "cve": "CVE-2026-14968",
       "product_status": {
         "known_affected": [
+          "T059273",
+          "T048897",
+          "T056167",
           "T062366"
         ]
       },
