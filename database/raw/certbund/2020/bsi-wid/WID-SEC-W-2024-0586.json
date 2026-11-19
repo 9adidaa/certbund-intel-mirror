@@ -74,17 +74,22 @@
         "category": "external",
         "summary": "Debian Security Advisory DLA-3754 vom 2024-03-08",
         "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00007.html"
+      },
+      {
+        "category": "external",
+        "summary": "Ubuntu Security Notice USN-9138-1 vom 2026-11-18",
+        "url": "https://ubuntu.com/security/notices/USN-9138-1"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat fontforge: Schwachstelle ermöglicht Codeausführung",
     "tracking": {
-      "current_release_date": "2024-03-07T23:00:00.000+00:00",
+      "current_release_date": "2026-11-17T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:06:15.966+00:00",
+        "date": "2026-11-18T11:27:08.928+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2024-0586",
@@ -114,10 +119,15 @@
           "date": "2024-03-07T23:00:00.000+00:00",
           "number": "5",
           "summary": "Neue Updates von Debian aufgenommen"
+        },
+        {
+          "date": "2026-11-17T23:00:00.000+00:00",
+          "number": "6",
+          "summary": "Neue Updates von Ubuntu aufgenommen"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -178,21 +188,33 @@
         ],
         "category": "vendor",
         "name": "Red Hat"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Ubuntu Linux",
+            "product": {
+              "name": "Ubuntu Linux",
+              "product_id": "T055947",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:canonical:ubuntu_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Ubuntu"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2020-5395",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in Red Hat Enterprise Linux in der Komponente \"fontforge\". Die Schwachstelle basiert auf einem Out-of-Bounds-Schreibfehler der beim Parsen von speziellen SFD-Dateien auftreten kann. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um beliebigen Programmcode auszuführen oder einen Denial of Service Zustand herbeizuführen. Zur erfolgreichen Ausnutzung dieser Schwachstelle muss der Angreifer den Benutzer dazu bringen eine modifizierte SFD-Datei zu öffnen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "2951",
+          "T055947",
           "T012167",
           "T014111"
         ]
