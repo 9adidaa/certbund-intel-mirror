@@ -174,17 +174,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7179156 vom 2024-12-17",
         "url": "https://www.ibm.com/support/pages/node/7179156"
+      },
+      {
+        "category": "external",
+        "summary": "Splunk Security Advisory SVD-2026-1109 vom 2026-11-19",
+        "url": "https://advisory.splunk.com/advisories/SVD-2026-1109"
       }
     ],
     "source_lang": "en-US",
     "title": "python-setuptools: Schwachstelle ermöglicht Denial of Service",
     "tracking": {
-      "current_release_date": "2024-12-17T23:00:00.000+00:00",
+      "current_release_date": "2026-11-18T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-12-18T10:29:16.768+00:00",
+        "date": "2026-11-19T09:22:02.508+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.10"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2023-0444",
@@ -279,10 +284,15 @@
           "date": "2024-12-17T23:00:00.000+00:00",
           "number": "18",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-11-18T23:00:00.000+00:00",
+          "number": "19",
+          "summary": "Neue Updates von Splunk-SVD aufgenommen"
         }
       ],
       "status": "final",
-      "version": "18"
+      "version": "19"
     }
   },
   "product_tree": {
@@ -528,18 +538,43 @@
         ],
         "category": "vendor",
         "name": "SUSE"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.8.0",
+                "product": {
+                  "name": "Splunk SOAR <8.8.0",
+                  "product_id": "T063359"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.8.0",
+                "product": {
+                  "name": "Splunk SOAR 8.8.0",
+                  "product_id": "T063359-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:splunk:soar:8.8.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SOAR"
+          }
+        ],
+        "category": "vendor",
+        "name": "Splunk"
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2022-40897",
-      "notes": [
-        {
-          "category": "description",
-          "text": "Es existiert eine Schwachstelle in \"python-setuptools\", wie es z.B. in Red Hat Enterprise Linux und Oracle Linux vorkommt. Sie ist auf einen Anfälligkeit für einen Regular Expression Denial of Service-Angriff zurückzuführen. Ein entfernter, anonymer Angreifer kann diese Schwachstelle ausnutzen, um einen Denial of Service Zustand herbeizuführen."
-        }
-      ],
       "product_status": {
         "known_affected": [
           "T026681",
@@ -552,6 +587,7 @@
           "T038741",
           "T002207",
           "398363",
+          "T063359",
           "T026468",
           "T026684",
           "T026682",
