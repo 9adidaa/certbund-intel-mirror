@@ -24,12 +24,12 @@
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in PHP ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in PHP ausnutzen, um beliebigen Code über den PHP-Worker-Prozess auszuführen, Berechtigungen zu erweitern – einschließlich auf Root-Ebene –, einen Denial-of-Service-Zustand herbeizuführen, Daten offenzulegen und zu manipulieren, Sicherheitsmaßnahmen zu umgehen sowie Cross-Site-Scripting-Angriffe durchzuführen.",
         "title": "Angriff"
       },
       {
         "category": "general",
-        "text": "- Linux\n- MacOS X\n- Windows",
+        "text": "- Sonstiges\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -54,14 +54,39 @@
         "category": "external",
         "summary": "Upcoming Critical PHP Security Release vom 2026-11-18",
         "url": "https://www.php.net/archive/2026.php#2026-11-18-1"
+      },
+      {
+        "category": "external",
+        "summary": "SecList",
+        "url": "https://seclists.org/oss-sec/2026/q4/793"
+      },
+      {
+        "category": "external",
+        "summary": "PHP 8 ChangeLog",
+        "url": "https://www.php.net/ChangeLog-8.php"
+      },
+      {
+        "category": "external",
+        "summary": "Poc CVE-2026-126714 phpAfterShell",
+        "url": "https://depthfirst.com/research/phpaftershell"
+      },
+      {
+        "category": "external",
+        "summary": "PoC auf GitHub",
+        "url": "https://github.com/al4n4n/achilles-heel/tree/main/CVE-2026-115560"
+      },
+      {
+        "category": "external",
+        "summary": "Debian Security Advisory DLA-4916 vom 2026-11-19",
+        "url": "https://lists.debian.org/debian-lts-announce/2026/11/msg00043.html"
       }
     ],
     "source_lang": "en-US",
-    "title": "PHP: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
+    "title": "PHP: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-11-18T23:00:00.000+00:00",
+      "current_release_date": "2026-11-19T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-11-19T12:32:05.155+00:00",
+        "date": "2026-11-20T12:27:04.159+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -74,10 +99,15 @@
           "date": "2026-11-18T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-11-19T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Ergänzung"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -86,14 +116,121 @@
         "branches": [
           {
             "category": "product_name",
-            "name": "Open Source PHP",
+            "name": "Debian Linux",
             "product": {
-              "name": "Open Source PHP",
-              "product_id": "T061814",
+              "name": "Debian Linux",
+              "product_id": "2951",
               "product_identification_helper": {
-                "cpe": "cpe:/a:php:php:-"
+                "cpe": "cpe:/o:debian:debian_linux:-"
               }
             }
+          }
+        ],
+        "category": "vendor",
+        "name": "Debian"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<8.2.36",
+                "product": {
+                  "name": "Open Source PHP <8.2.36",
+                  "product_id": "T063528"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.2.36",
+                "product": {
+                  "name": "Open Source PHP 8.2.36",
+                  "product_id": "T063528-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:php:php:8.2.36"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.3.37",
+                "product": {
+                  "name": "Open Source PHP <8.3.37",
+                  "product_id": "T063529"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.3.37",
+                "product": {
+                  "name": "Open Source PHP 8.3.37",
+                  "product_id": "T063529-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:php:php:8.3.37"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.4.28",
+                "product": {
+                  "name": "Open Source PHP <8.4.28",
+                  "product_id": "T063530"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.4.28",
+                "product": {
+                  "name": "Open Source PHP 8.4.28",
+                  "product_id": "T063530-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:php:php:8.4.28"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.5.13",
+                "product": {
+                  "name": "Open Source PHP <8.5.13",
+                  "product_id": "T063531"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.5.13",
+                "product": {
+                  "name": "Open Source PHP 8.5.13",
+                  "product_id": "T063531-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:php:php:8.5.13"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<8.6.0",
+                "product": {
+                  "name": "Open Source PHP <8.6.0",
+                  "product_id": "T063576"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "8.6.0",
+                "product": {
+                  "name": "Open Source PHP 8.6.0",
+                  "product_id": "T063576-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:php:php:8.6.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PHP"
           }
         ],
         "category": "vendor",
@@ -103,12 +240,259 @@
   },
   "vulnerabilities": [
     {
+      "cve": "CVE-2026-126714",
       "product_status": {
         "known_affected": [
-          "T061814"
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
         ]
       },
-      "release_date": "2026-11-18T23:00:00.000+00:00"
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-126714"
+    },
+    {
+      "cve": "CVE-2026-115560",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-115560"
+    },
+    {
+      "cve": "CVE-2026-127960",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-127960"
+    },
+    {
+      "cve": "CVE-2026-128064",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-128064"
+    },
+    {
+      "cve": "CVE-2026-128090",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-128090"
+    },
+    {
+      "cve": "CVE-2026-129182",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129182"
+    },
+    {
+      "cve": "CVE-2026-129289",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129289"
+    },
+    {
+      "cve": "CVE-2026-129291",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129291"
+    },
+    {
+      "cve": "CVE-2026-129292",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129292"
+    },
+    {
+      "cve": "CVE-2026-129474",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129474"
+    },
+    {
+      "cve": "CVE-2026-129481",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129481"
+    },
+    {
+      "cve": "CVE-2026-129496",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129496"
+    },
+    {
+      "cve": "CVE-2026-129501",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129501"
+    },
+    {
+      "cve": "CVE-2026-129506",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129506"
+    },
+    {
+      "cve": "CVE-2026-129538",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-129538"
+    },
+    {
+      "cve": "CVE-2026-15353",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-15353"
+    },
+    {
+      "cve": "CVE-2026-48841",
+      "product_status": {
+        "known_affected": [
+          "2951",
+          "T063529",
+          "T063528",
+          "T063530",
+          "T063576",
+          "T063531"
+        ]
+      },
+      "release_date": "2026-11-19T23:00:00.000+00:00",
+      "title": "CVE-2026-48841"
     }
   ]
 }
