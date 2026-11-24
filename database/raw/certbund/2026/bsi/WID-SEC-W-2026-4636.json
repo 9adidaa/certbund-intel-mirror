@@ -24,12 +24,12 @@
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome ausnutzen, um beliebigen Programmcode auszuführen, Berechtigungen zu erweitern, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, einen Denial-of-Service-Zustand auszulösen, Spoofing-Angriffe durchzuführen oder andere, nicht näher spezifizierte Angriffe auszuführen.",
+        "text": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome und Microsoft Edge ausnutzen, um beliebigen Programmcode auszuführen, Berechtigungen zu erweitern, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, einen Denial-of-Service-Zustand auszulösen, Spoofing-Angriffe durchzuführen oder andere, nicht näher spezifizierte Angriffe auszuführen.",
         "title": "Angriff"
       },
       {
         "category": "general",
-        "text": "- Linux\n- MacOS X\n- Windows",
+        "text": "- Android\n- Linux\n- MacOS X\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -54,14 +54,29 @@
         "category": "external",
         "summary": "Google Chrome Stable Channel Update vom 2026-11-17",
         "url": "http://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01699533288.html"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-11EAA4BC50 vom 2026-11-23",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-11eaa4bc50"
+      },
+      {
+        "category": "external",
+        "summary": "Fedora Security Advisory FEDORA-EPEL-2026-87B66377DE vom 2026-11-23",
+        "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-87b66377de"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-11-22",
+        "url": "https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#november-19-2026"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Mehrere Schwachstellen",
+    "title": "Google Chrome und Microsoft Edge: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-11-17T23:00:00.000+00:00",
+      "current_release_date": "2026-11-22T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-11-18T11:27:07.862+00:00",
+        "date": "2026-11-23T11:32:04.250+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -74,14 +89,36 @@
           "date": "2026-11-17T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-11-22T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von Fedora und Microsoft aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Fedora Linux",
+            "product": {
+              "name": "Fedora Linux",
+              "product_id": "74178",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:fedoraproject:fedora:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Fedora"
+      },
       {
         "branches": [
           {
@@ -131,6 +168,56 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<158.0.4370.33",
+                "product": {
+                  "name": "Microsoft Edge <158.0.4370.33",
+                  "product_id": "T063710"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "158.0.4370.33",
+                "product": {
+                  "name": "Microsoft Edge 158.0.4370.33",
+                  "product_id": "T063710-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:158.0.4370.33"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<156.0.4314.98",
+                "product": {
+                  "name": "Microsoft Edge <156.0.4314.98",
+                  "product_id": "T063711"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "156.0.4314.98",
+                "product": {
+                  "name": "Microsoft Edge 156.0.4314.98",
+                  "product_id": "T063711-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:156.0.4314.98"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
       }
     ]
   },
@@ -140,7 +227,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -151,7 +241,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -162,7 +255,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -173,7 +269,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -184,7 +283,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -195,7 +297,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -206,7 +311,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -217,7 +325,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -228,7 +339,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -239,7 +353,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -250,7 +367,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -261,7 +381,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -272,7 +395,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -283,7 +409,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -294,7 +423,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -305,7 +437,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -316,7 +451,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -327,7 +465,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -338,7 +479,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -349,7 +493,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -360,7 +507,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -371,7 +521,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -382,7 +535,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -393,7 +549,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -404,7 +563,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -415,7 +577,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -426,7 +591,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -437,7 +605,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -448,7 +619,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -459,7 +633,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -470,7 +647,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -481,7 +661,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -492,7 +675,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -503,7 +689,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -514,7 +703,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -525,7 +717,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -536,7 +731,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -547,7 +745,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -558,7 +759,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -569,7 +773,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -580,7 +787,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -591,7 +801,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -602,7 +815,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -613,7 +829,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -624,7 +843,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -635,7 +857,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -646,7 +871,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -657,7 +885,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -668,7 +899,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -679,7 +913,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -690,7 +927,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -701,7 +941,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -712,7 +955,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -723,7 +969,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -734,7 +983,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -745,7 +997,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -756,7 +1011,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -767,7 +1025,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -778,7 +1039,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -789,7 +1053,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -800,7 +1067,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -811,7 +1081,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -822,7 +1095,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -833,7 +1109,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -844,7 +1123,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -855,7 +1137,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -866,7 +1151,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -877,7 +1165,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -888,7 +1179,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -899,7 +1193,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -910,7 +1207,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -921,7 +1221,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -932,7 +1235,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -943,7 +1249,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -954,7 +1263,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -965,7 +1277,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -976,7 +1291,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -987,7 +1305,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -998,7 +1319,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1009,7 +1333,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1020,7 +1347,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1031,7 +1361,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1042,7 +1375,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1053,7 +1389,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1064,7 +1403,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1075,7 +1417,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1086,7 +1431,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1097,7 +1445,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1108,7 +1459,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1119,7 +1473,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1130,7 +1487,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1141,7 +1501,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1152,7 +1515,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1163,7 +1529,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1174,7 +1543,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1185,7 +1557,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1196,7 +1571,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1207,7 +1585,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1218,7 +1599,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1229,7 +1613,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1240,7 +1627,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1251,7 +1641,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1262,7 +1655,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1273,7 +1669,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1284,7 +1683,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1295,7 +1697,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1306,7 +1711,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1317,7 +1725,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1328,7 +1739,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1339,7 +1753,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1350,7 +1767,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1361,7 +1781,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1372,7 +1795,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1383,7 +1809,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1394,7 +1823,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1405,7 +1837,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1416,7 +1851,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1427,7 +1865,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1438,7 +1879,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1449,7 +1893,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1460,7 +1907,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1471,7 +1921,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1482,7 +1935,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1493,7 +1949,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1504,7 +1963,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1515,7 +1977,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1526,7 +1991,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1537,7 +2005,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1548,7 +2019,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1559,7 +2033,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1570,7 +2047,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1581,7 +2061,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1592,7 +2075,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1603,7 +2089,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1614,7 +2103,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1625,7 +2117,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1636,7 +2131,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1647,7 +2145,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1658,7 +2159,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1669,7 +2173,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1680,7 +2187,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1691,7 +2201,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1702,7 +2215,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1713,7 +2229,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1724,7 +2243,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1735,7 +2257,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1746,7 +2271,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1757,7 +2285,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1768,7 +2299,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1779,7 +2313,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1790,7 +2327,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1801,7 +2341,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1812,7 +2355,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1823,7 +2369,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1834,7 +2383,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1845,7 +2397,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1856,7 +2411,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1867,7 +2425,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1878,7 +2439,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1889,7 +2453,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1900,7 +2467,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1911,7 +2481,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1922,7 +2495,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1933,7 +2509,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1944,7 +2523,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1955,7 +2537,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1966,7 +2551,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1977,7 +2565,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1988,7 +2579,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -1999,7 +2593,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2010,7 +2607,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2021,7 +2621,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2032,7 +2635,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2043,7 +2649,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2054,7 +2663,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2065,7 +2677,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2076,7 +2691,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2087,7 +2705,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2098,7 +2719,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2109,7 +2733,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2120,7 +2747,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2131,7 +2761,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2142,7 +2775,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2153,7 +2789,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2164,7 +2803,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2175,7 +2817,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2186,7 +2831,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2197,7 +2845,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2208,7 +2859,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2219,7 +2873,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2230,7 +2887,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2241,7 +2901,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2252,7 +2915,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2263,7 +2929,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2274,7 +2943,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2285,7 +2957,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2296,7 +2971,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2307,7 +2985,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2318,7 +2999,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2329,7 +3013,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2340,7 +3027,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2351,7 +3041,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2362,7 +3055,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
@@ -2373,7 +3069,10 @@
       "product_status": {
         "known_affected": [
           "T063294",
-          "T063293"
+          "T063293",
+          "T063710",
+          "74178",
+          "T063711"
         ]
       },
       "release_date": "2026-11-17T23:00:00.000+00:00",
