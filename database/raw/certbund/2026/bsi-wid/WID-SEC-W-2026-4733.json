@@ -24,12 +24,12 @@
       },
       {
         "category": "summary",
-        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in g10 Code GnuPG VS-Desktop ausnutzen, um vertrauliche Informationen aus betroffenen Anwendungen offenzulegen und möglicherweise beliebigen Code auszuführen.",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in der GPGME Bibliothek und davon abhängigen Produkten wie Gpg4win oder GnuPG VS-Desktop ausnutzen, um vertrauliche Informationen aus betroffenen Anwendungen offenzulegen und möglicherweise beliebigen Code auszuführen.",
         "title": "Angriff"
       },
       {
         "category": "general",
-        "text": "- Sonstiges\n- UNIX\n- Windows",
+        "text": "- Linux\n- MacOS X\n- Sonstiges\n- UNIX\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -59,14 +59,19 @@
         "category": "external",
         "summary": "GnuPG Security Advisory vom 2026-11-22",
         "url": "https://seclists.org/oss-sec/2026/q4/804"
+      },
+      {
+        "category": "external",
+        "summary": "Gentoo Linux Security Advisory GLSA-202611-14 vom 2026-11-24",
+        "url": "https://security.gentoo.org/glsa/202611-14"
       }
     ],
     "source_lang": "en-US",
-    "title": "g10 Code GnuPG VS-Desktop: Schwachstelle ermöglicht Codeausführung und Offenlegung von Informationen",
+    "title": "GPGME: Schwachstelle ermöglicht Codeausführung und Offenlegung von Informationen",
     "tracking": {
-      "current_release_date": "2026-11-22T23:00:00.000+00:00",
+      "current_release_date": "2026-11-23T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-11-23T12:22:08.066+00:00",
+        "date": "2026-11-24T12:26:00.049+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -79,14 +84,53 @@
           "date": "2026-11-22T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-11-23T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Produkte ergänzt, Updates von Gentoo aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Gentoo Linux",
+            "product": {
+              "name": "Gentoo Linux",
+              "product_id": "T033788",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:gentoo:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Gentoo"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Open Source Gpg4win",
+            "product": {
+              "name": "Open Source Gpg4win",
+              "product_id": "4486",
+              "product_identification_helper": {
+                "cpe": "cpe:/a:gpg4win:gpg4win:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      },
       {
         "branches": [
           {
@@ -117,6 +161,37 @@
         ],
         "category": "vendor",
         "name": "g10 Code"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2.3.1",
+                "product": {
+                  "name": "Open Source GPGME <2.3.1",
+                  "product_id": "T063851"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.3.1",
+                "product": {
+                  "name": "Open Source GPGME 2.3.1",
+                  "product_id": "T063851-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:gnu:gpgme:2.3.1"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "gpgme"
+          }
+        ],
+        "category": "vendor",
+        "name": "gnu"
       }
     ]
   },
@@ -125,7 +200,10 @@
       "cve": "CVE-2026-129975",
       "product_status": {
         "known_affected": [
-          "T063690"
+          "T033788",
+          "T063690",
+          "4486",
+          "T063851"
         ]
       },
       "release_date": "2026-11-22T23:00:00.000+00:00",
