@@ -54,17 +54,22 @@
         "category": "external",
         "summary": "IBM Security Bulletin 7096558 vom 2023-12-13",
         "url": "https://www.ibm.com/support/pages/node/7096558"
+      },
+      {
+        "category": "external",
+        "summary": "IBM Security Bulletin 7297798 vom 2026-11-25",
+        "url": "https://www.ibm.com/support/pages/node/7297798"
       }
     ],
     "source_lang": "en-US",
     "title": "IBM MQ Operator and Queue manager: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2023-12-13T23:00:00.000+00:00",
+      "current_release_date": "2026-11-25T23:00:00.000+00:00",
       "generator": {
-        "date": "2024-08-15T18:02:48.819+00:00",
+        "date": "2026-11-26T10:22:54.743+00:00",
         "engine": {
           "name": "BSI-WID",
-          "version": "1.3.5"
+          "version": "1.7.0"
         }
       },
       "id": "WID-SEC-W-2023-3146",
@@ -74,10 +79,15 @@
           "date": "2023-12-13T23:00:00.000+00:00",
           "number": "1",
           "summary": "Initiale Fassung"
+        },
+        {
+          "date": "2026-11-25T23:00:00.000+00:00",
+          "number": "2",
+          "summary": "Neue Updates von IBM aufgenommen"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -86,14 +96,39 @@
         "branches": [
           {
             "category": "product_name",
-            "name": "IBM MQ Operator < v3.0.0",
+            "name": "IBM DB2",
             "product": {
-              "name": "IBM MQ Operator < v3.0.0",
-              "product_id": "T031689",
+              "name": "IBM DB2",
+              "product_id": "T060943",
               "product_identification_helper": {
-                "cpe": "cpe:/a:ibm:mq:operator__v3.0.0"
+                "cpe": "cpe:/a:ibm:db2:-"
               }
             }
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Operator <v3.0.0",
+                "product": {
+                  "name": "IBM MQ Operator <v3.0.0",
+                  "product_id": "T031689"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "Operator v3.0.0",
+                "product": {
+                  "name": "IBM MQ Operator v3.0.0",
+                  "product_id": "T031689-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:ibm:mq:operator__v3.0.0"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MQ"
           }
         ],
         "category": "vendor",
@@ -103,169 +138,169 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-4641",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
+      "cve": "CVE-2022-23471",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
       "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-4641"
-    },
-    {
-      "cve": "CVE-2023-44487",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-44487"
-    },
-    {
-      "cve": "CVE-2023-43804",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-43804"
-    },
-    {
-      "cve": "CVE-2023-4016",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-4016"
-    },
-    {
-      "cve": "CVE-2023-3978",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-3978"
-    },
-    {
-      "cve": "CVE-2023-39325",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-39325"
-    },
-    {
-      "cve": "CVE-2023-39319",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-39319"
-    },
-    {
-      "cve": "CVE-2023-39318",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-39318"
-    },
-    {
-      "cve": "CVE-2023-29409",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-29409"
-    },
-    {
-      "cve": "CVE-2023-25173",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-25173"
-    },
-    {
-      "cve": "CVE-2023-25153",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2023-25153"
-    },
-    {
-      "cve": "CVE-2022-41723",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2022-41723"
-    },
-    {
-      "cve": "CVE-2022-41717",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
-      "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2022-41717"
+      "title": "CVE-2022-23471"
     },
     {
       "cve": "CVE-2022-31030",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
       "release_date": "2023-12-13T23:00:00.000+00:00",
       "title": "CVE-2022-31030"
     },
     {
-      "cve": "CVE-2022-23471",
-      "notes": [
-        {
-          "category": "description",
-          "text": "In IBM MQ Operator and Queue manager existieren mehrere Schwachstellen. Diese basieren auf Schwachstellen in mehreren Komponenten von RedHat Open Shift. Im Einzelnen sind dies: containerd, shadow-maint, shadow-utils, Golang Go, urllib3, procps-ng procps und das HTTP/2 Protokoll. Ein Angreifer kann diese Schwachstellen ausnutzen, um einen Denial of Service zu verursachen, Informationen offenzulegen oder Sicherheitsmaßnahmen zu umgehen. Zur Ausnutzung einiger dieser Schwachstellen ist eine Anmeldung oder Benutzerinteraktion erforderlich."
-        }
-      ],
+      "cve": "CVE-2022-41717",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
       "release_date": "2023-12-13T23:00:00.000+00:00",
-      "title": "CVE-2022-23471"
+      "title": "CVE-2022-41717"
+    },
+    {
+      "cve": "CVE-2022-41723",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2022-41723"
+    },
+    {
+      "cve": "CVE-2023-25153",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-25153"
+    },
+    {
+      "cve": "CVE-2023-25173",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-25173"
+    },
+    {
+      "cve": "CVE-2023-29409",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-29409"
+    },
+    {
+      "cve": "CVE-2023-39318",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-39318"
+    },
+    {
+      "cve": "CVE-2023-39319",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-39319"
+    },
+    {
+      "cve": "CVE-2023-39325",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-39325"
+    },
+    {
+      "cve": "CVE-2023-3978",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-3978"
+    },
+    {
+      "cve": "CVE-2023-4016",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-4016"
+    },
+    {
+      "cve": "CVE-2023-43804",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-43804"
+    },
+    {
+      "cve": "CVE-2023-44487",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-44487"
+    },
+    {
+      "cve": "CVE-2023-4641",
+      "product_status": {
+        "known_affected": [
+          "T060943",
+          "T031689"
+        ]
+      },
+      "release_date": "2023-12-13T23:00:00.000+00:00",
+      "title": "CVE-2023-4641"
     }
   ]
 }

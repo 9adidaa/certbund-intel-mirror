@@ -19,17 +19,17 @@
       },
       {
         "category": "description",
-        "text": "Chrome ist ein Internet-Browser von Google.",
+        "text": "Chrome ist ein Internet-Browser von Google.\r\nEdge ist ein Internet-Browser von Microsoft.",
         "title": "Produktbeschreibung"
       },
       {
         "category": "summary",
-        "text": "Ein Angreifer kann eine Schwachstelle in Google Chrome ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
+        "text": "Ein Angreifer kann eine Schwachstelle in Google Chrome / Microsoft Edge ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen.",
         "title": "Angriff"
       },
       {
         "category": "general",
-        "text": "- Linux\n- MacOS X\n- Windows",
+        "text": "- Android\n- Linux\n- MacOS X\n- Windows",
         "title": "Betroffene Betriebssysteme"
       }
     ],
@@ -84,14 +84,19 @@
         "category": "external",
         "summary": "Fedora Security Advisory FEDORA-EPEL-2026-F9D95F5DD5 vom 2026-11-25",
         "url": "https://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2026-f9d95f5dd5"
+      },
+      {
+        "category": "external",
+        "summary": "Release notes for Microsoft Edge Security Updates vom 2026-11-25",
+        "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#november-25-2026"
       }
     ],
     "source_lang": "en-US",
-    "title": "Google Chrome: Schwachstelle ermöglicht nicht spezifizierten Angriff",
+    "title": "Google Chrome / Microsoft Edge: Schwachstelle ermöglicht nicht spezifizierten Angriff",
     "tracking": {
-      "current_release_date": "2026-11-24T23:00:00.000+00:00",
+      "current_release_date": "2026-11-25T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-11-25T11:27:06.756+00:00",
+        "date": "2026-11-26T09:27:01.747+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -109,10 +114,15 @@
           "date": "2026-11-24T23:00:00.000+00:00",
           "number": "2",
           "summary": "Neue Updates von Fedora aufgenommen"
+        },
+        {
+          "date": "2026-11-25T23:00:00.000+00:00",
+          "number": "3",
+          "summary": "Edge Update aufgenommen"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -183,6 +193,56 @@
         ],
         "category": "vendor",
         "name": "Google"
+      },
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<158.0.4370.45",
+                "product": {
+                  "name": "Microsoft Edge <158.0.4370.45",
+                  "product_id": "T064029"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "158.0.4370.45",
+                "product": {
+                  "name": "Microsoft Edge 158.0.4370.45",
+                  "product_id": "T064029-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:158.0.4370.45"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<156.0.4314.110",
+                "product": {
+                  "name": "Microsoft Edge <156.0.4314.110",
+                  "product_id": "T064030"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "156.0.4314.110",
+                "product": {
+                  "name": "Microsoft Edge 156.0.4314.110",
+                  "product_id": "T064030-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:microsoft:edge:156.0.4314.110"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Microsoft"
       }
     ]
   },
@@ -191,7 +251,9 @@
       "cve": "CVE-2026-134401",
       "product_status": {
         "known_affected": [
+          "T064030",
           "T063754",
+          "T064029",
           "T063753",
           "74178"
         ]
