@@ -1,0 +1,152 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "hoch"
+    },
+    "category": "csaf_base",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "de-DE",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+      },
+      {
+        "category": "description",
+        "text": "Exim (EXperimental Internet Mailer) ist ein Mailserver und Mail Transfer Agent.",
+        "title": "Produktbeschreibung"
+      },
+      {
+        "category": "summary",
+        "text": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Exim ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen.",
+        "title": "Angriff"
+      },
+      {
+        "category": "general",
+        "text": "- Sonstiges\n- UNIX",
+        "title": "Betroffene Betriebssysteme"
+      }
+    ],
+    "publisher": {
+      "category": "other",
+      "contact_details": "csaf-provider@cert-bund.de",
+      "name": "Bundesamt für Sicherheit in der Informationstechnik",
+      "namespace": "https://www.bsi.bund.de"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "WID-SEC-W-2026-4830 - CSAF Version",
+        "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4830.json"
+      },
+      {
+        "category": "self",
+        "summary": "WID-SEC-2026-4830 - Portal Version",
+        "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4830"
+      },
+      {
+        "category": "external",
+        "summary": "Exim Security Advisory for EXIM-Security-2026-11-19.1 / GCVE-25-2026-11-82-1 vom 2026-11-26",
+        "url": "https://www.exim.org/static/doc/security/EXIM-Security-2026-11-19.1/EXIM-Security-2026-11-19.1.txt"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Bugtracker 2585290 vom 2026-11-26",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2585290"
+      },
+      {
+        "category": "external",
+        "summary": "GitHub Security Advisory GHSA-6pvv-hhpx-fh6r vom 2026-11-26",
+        "url": "https://github.com/advisories/GHSA-6pvv-hhpx-fh6r"
+      }
+    ],
+    "source_lang": "en-US",
+    "title": "Exim: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit Administratorrechten",
+    "tracking": {
+      "current_release_date": "2026-11-26T23:00:00.000+00:00",
+      "generator": {
+        "date": "2026-11-27T09:25:52.015+00:00",
+        "engine": {
+          "name": "BSI-WID",
+          "version": "1.7.0"
+        }
+      },
+      "id": "WID-SEC-W-2026-4830",
+      "initial_release_date": "2026-11-26T23:00:00.000+00:00",
+      "revision_history": [
+        {
+          "date": "2026-11-26T23:00:00.000+00:00",
+          "number": "1",
+          "summary": "Initiale Fassung"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "4.100-4.100.1",
+                "product": {
+                  "name": "Open Source Exim 4.100-4.100.1",
+                  "product_id": "T064092",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:exim:exim:4.100_-_4.100.1"
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<4.100.2",
+                "product": {
+                  "name": "Open Source Exim <4.100.2",
+                  "product_id": "T064093"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.100.2",
+                "product": {
+                  "name": "Open Source Exim 4.100.2",
+                  "product_id": "T064093-fixed",
+                  "product_identification_helper": {
+                    "cpe": "cpe:/a:exim:exim:4.100.2"
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Exim"
+          }
+        ],
+        "category": "vendor",
+        "name": "Open Source"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-137702",
+      "product_status": {
+        "known_affected": [
+          "T064093",
+          "T064092"
+        ]
+      },
+      "release_date": "2026-11-26T23:00:00.000+00:00",
+      "title": "CVE-2026-137702"
+    }
+  ]
+}
